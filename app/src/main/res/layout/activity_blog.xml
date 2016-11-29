@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:appa="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        appa:title="Post"
+        appa:titleTextColor="#fff"/>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/mSelectImage"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_image_add"
+        android:adjustViewBounds="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:singleLine="true"
+        android:lines="3"
+        android:id="@+id/mdesc"
+        android:layout_below="@id/mSelectImage"
+        android:background="@drawable/input_outline"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:maxLength="120"
+        android:padding="15dp"
+        android:hint="Post Description..."
+        android:focusable="true"
+        android:allowUndo="true" />
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttondone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:text="Submit post"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="21"
+    density="xhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="14997781538507"
+    token="7133247474188882234"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="280" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="40" />
+    <task
+        name="verifier"
+        duration="38" />
+
+    <artifact
+        location="/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+        type="DEX" />
+
+    <build
+        timestamp="12197909602476"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/amit/Uniconnexample/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="13175117299206"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="14442304078885"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/amit/Uniconnexample/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+    <build
+        timestamp="14997781538507"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

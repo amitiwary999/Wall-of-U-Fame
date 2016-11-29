@@ -1,0 +1,1128 @@
+[
+    {
+        "outputFile": "/home/amit/Uniconnexample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-el/values-el.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 117,
+                    "endOffset": 218
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 117,
+                        "endOffset": 168
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 223,
+                    "endColumn": 107,
+                    "endOffset": 326
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 173,
+                        "endColumn": 107,
+                        "endOffset": 276
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 331,
+                    "endColumn": 122,
+                    "endOffset": 449
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 281,
+                        "endColumn": 122,
+                        "endOffset": 399
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 454,
+                    "endColumn": 110,
+                    "endOffset": 560
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 404,
+                        "endColumn": 110,
+                        "endOffset": 510
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 565,
+                    "endColumn": 116,
+                    "endOffset": 677
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 515,
+                        "endColumn": 116,
+                        "endOffset": 627
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 682,
+                    "endColumn": 84,
+                    "endOffset": 762
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 632,
+                        "endColumn": 84,
+                        "endOffset": 712
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 767,
+                    "endColumn": 104,
+                    "endOffset": 867
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 717,
+                        "endColumn": 104,
+                        "endOffset": 817
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 872,
+                    "endColumn": 125,
+                    "endOffset": 993
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 822,
+                        "endColumn": 125,
+                        "endOffset": 943
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 998,
+                    "endColumn": 87,
+                    "endOffset": 1081
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 948,
+                        "endColumn": 87,
+                        "endOffset": 1031
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1086,
+                    "endColumn": 85,
+                    "endOffset": 1167
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1036,
+                        "endColumn": 85,
+                        "endOffset": 1117
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1172,
+                    "endColumn": 84,
+                    "endOffset": 1252
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1122,
+                        "endColumn": 84,
+                        "endOffset": 1202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1257,
+                    "endColumn": 110,
+                    "endOffset": 1363
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1207,
+                        "endColumn": 110,
+                        "endOffset": 1313
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1368,
+                    "endColumn": 109,
+                    "endOffset": 1473
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1318,
+                        "endColumn": 109,
+                        "endOffset": 1423
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1478,
+                    "endColumn": 101,
+                    "endOffset": 1575
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1428,
+                        "endColumn": 101,
+                        "endOffset": 1525
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1580,
+                    "endColumn": 110,
+                    "endOffset": 1686
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1530,
+                        "endColumn": 110,
+                        "endOffset": 1636
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1691,
+                    "endColumn": 108,
+                    "endOffset": 1795
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1641,
+                        "endColumn": 108,
+                        "endOffset": 1745
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1800,
+                    "endColumn": 107,
+                    "endOffset": 1903
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1750,
+                        "endColumn": 107,
+                        "endOffset": 1853
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1908,
+                    "endColumn": 122,
+                    "endOffset": 2026
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1858,
+                        "endColumn": 122,
+                        "endOffset": 1976
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2031,
+                    "endColumn": 99,
+                    "endOffset": 2126
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1981,
+                        "endColumn": 99,
+                        "endOffset": 2076
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2131,
+                    "endColumn": 209,
+                    "endOffset": 2336
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 209,
+                        "endOffset": 260
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2341,
+                    "endColumn": 127,
+                    "endOffset": 2464
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 265,
+                        "endColumn": 127,
+                        "endOffset": 388
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2469,
+                    "endColumn": 129,
+                    "endOffset": 2594
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 393,
+                        "endColumn": 129,
+                        "endOffset": 518
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2599,
+                    "endColumn": 95,
+                    "endOffset": 2690
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 523,
+                        "endColumn": 95,
+                        "endOffset": 614
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2695,
+                    "endColumn": 69,
+                    "endOffset": 2760
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 619,
+                        "endColumn": 69,
+                        "endOffset": 684
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2765,
+                    "endColumn": 74,
+                    "endOffset": 2835
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 689,
+                        "endColumn": 74,
+                        "endOffset": 759
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2840,
+                    "endColumn": 59,
+                    "endOffset": 2895
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 764,
+                        "endColumn": 59,
+                        "endOffset": 819
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2900,
+                    "endColumn": 70,
+                    "endOffset": 2966
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 824,
+                        "endColumn": 70,
+                        "endOffset": 890
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2971,
+                    "endColumn": 72,
+                    "endOffset": 3039
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 895,
+                        "endColumn": 72,
+                        "endOffset": 963
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 3044,
+                    "endColumn": 91,
+                    "endOffset": 3131
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 968,
+                        "endColumn": 91,
+                        "endOffset": 1055
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3136,
+                    "endColumn": 76,
+                    "endOffset": 3208
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1060,
+                        "endColumn": 76,
+                        "endOffset": 1132
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 3213,
+                    "endColumn": 76,
+                    "endOffset": 3285
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1137,
+                        "endColumn": 76,
+                        "endOffset": 1209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 3290,
+                    "endColumn": 91,
+                    "endOffset": 3377
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1214,
+                        "endColumn": 91,
+                        "endOffset": 1301
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 3382,
+                    "endColumn": 108,
+                    "endOffset": 3486
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1306,
+                        "endColumn": 108,
+                        "endOffset": 1410
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 3491,
+                    "endColumn": 66,
+                    "endOffset": 3553
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1415,
+                        "endColumn": 66,
+                        "endOffset": 1477
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 3558,
+                    "endColumn": 70,
+                    "endOffset": 3624
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1482,
+                        "endColumn": 70,
+                        "endOffset": 1548
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 3629,
+                    "endColumn": 148,
+                    "endOffset": 3773
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1553,
+                        "endColumn": 148,
+                        "endOffset": 1697
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3778,
+                    "endColumn": 112,
+                    "endOffset": 3886
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 329,
+                        "endColumn": 112,
+                        "endOffset": 437
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 3891,
+                    "endColumn": 217,
+                    "endOffset": 4104
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 442,
+                        "endColumn": 217,
+                        "endOffset": 655
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 4109,
+                    "endColumn": 133,
+                    "endOffset": 4238
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 660,
+                        "endColumn": 133,
+                        "endOffset": 789
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 4243,
+                    "endColumn": 127,
+                    "endOffset": 4366
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 794,
+                        "endColumn": 127,
+                        "endOffset": 917
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 4371,
+                    "endColumn": 239,
+                    "endOffset": 4606
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 922,
+                        "endColumn": 239,
+                        "endOffset": 1157
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 4611,
+                    "endColumn": 238,
+                    "endOffset": 4845
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 1162,
+                        "endColumn": 238,
+                        "endOffset": 1396
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 4850,
+                    "endColumn": 126,
+                    "endOffset": 4972
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1401,
+                        "endColumn": 126,
+                        "endOffset": 1523
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 4977,
+                    "endColumn": 133,
+                    "endOffset": 5106
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1528,
+                        "endColumn": 133,
+                        "endOffset": 1657
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 5111,
+                    "endColumn": 298,
+                    "endOffset": 5405
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 331,
+                        "endColumn": 298,
+                        "endOffset": 625
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 5410,
+                    "endColumn": 281,
+                    "endOffset": 5687
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1662,
+                        "endColumn": 281,
+                        "endOffset": 1939
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 5692,
+                    "endColumn": 124,
+                    "endOffset": 5812
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1944,
+                        "endColumn": 124,
+                        "endOffset": 2064
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 5817,
+                    "endColumn": 109,
+                    "endOffset": 5922
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 2069,
+                        "endColumn": 109,
+                        "endOffset": 2174
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 5927,
+                    "endColumn": 200,
+                    "endOffset": 6123
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 2179,
+                        "endColumn": 200,
+                        "endOffset": 2375
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 6128,
+                    "endColumn": 130,
+                    "endOffset": 6254
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 2380,
+                        "endColumn": 130,
+                        "endOffset": 2506
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 6259,
+                    "endColumn": 236,
+                    "endOffset": 6491
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 2511,
+                        "endColumn": 236,
+                        "endOffset": 2743
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 6496,
+                    "endColumn": 136,
+                    "endOffset": 6628
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 2748,
+                        "endColumn": 136,
+                        "endOffset": 2880
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 6633,
+                    "endColumn": 174,
+                    "endOffset": 6803
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 2885,
+                        "endColumn": 174,
+                        "endOffset": 3055
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 6808,
+                    "endColumn": 98,
+                    "endOffset": 6902
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 3060,
+                        "endColumn": 98,
+                        "endOffset": 3154
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 6907,
+                    "endColumn": 91,
+                    "endOffset": 6994
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 3159,
+                        "endColumn": 91,
+                        "endOffset": 3246
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 6999,
+                    "endColumn": 111,
+                    "endOffset": 7106
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-el/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 3251,
+                        "endColumn": 111,
+                        "endOffset": 3358
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 7111,
+                    "endColumn": 63,
+                    "endOffset": 7170
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1702,
+                        "endColumn": 63,
+                        "endOffset": 1761
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 7175,
+                    "endColumn": 84,
+                    "endOffset": 7255
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2081,
+                        "endColumn": 84,
+                        "endOffset": 2161
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 7260,
+                    "endColumn": 100,
+                    "endOffset": 7356
+                },
+                "from": {
+                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-el/values-el.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2166,
+                        "endColumn": 100,
+                        "endOffset": 2262
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/layout-ldrtl-v17/md_listitem_multichoice.xml",
+        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout-ldrtl-v17/md_listitem_multichoice.xml"
+    },
+    {
+        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/layout-ldrtl-v17/md_listitem_singlechoice.xml",
+        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout-ldrtl-v17/md_listitem_singlechoice.xml"
+    }
+]

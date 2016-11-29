@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Uniconnexample</string>
+    <string name="username">User Name(at least 4 character)</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone">Phone</string>
+    <string name="sign_up">Lets Begin</string>
+    <string name="activity_login_log_in">Login</string>
+    <string name="activity_login_sing_up">Sign Up</string>
+    <string name="activity_sign_up">Join your Community</string>
+    <string name="activity_login_forgot_pass">Forgot Password?</string>
+</resources>

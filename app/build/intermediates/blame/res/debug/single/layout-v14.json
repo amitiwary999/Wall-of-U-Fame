@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/layout-v14/md_stub_progress.xml",
+        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout-v14/md_stub_progress.xml"
+    },
+    {
+        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/layout-v14/md_stub_progress_indeterminate_horizontal.xml",
+        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout-v14/md_stub_progress_indeterminate_horizontal.xml"
+    },
+    {
+        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/layout-v14/md_stub_progress_indeterminate.xml",
+        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout-v14/md_stub_progress_indeterminate.xml"
+    }
+]

@@ -1,0 +1,7 @@
+#Tue Nov 29 01:57:31 IST 2016
+base.0=/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_fafda1dd93fdfe8d83a8eec975786757a1205525
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_86b620e2095cbab562874c2e9c466e32a2c1cfe0/classes.dex
+base.1=/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_86b620e2095cbab562874c2e9c466e32a2c1cfe0
+file.0=/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_fafda1dd93fdfe8d83a8eec975786757a1205525/classes.dex
