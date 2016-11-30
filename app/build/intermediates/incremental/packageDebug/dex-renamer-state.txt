@@ -1,7 +1,7 @@
-#Tue Nov 29 01:57:31 IST 2016
-base.0=/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_fafda1dd93fdfe8d83a8eec975786757a1205525
+#Wed Nov 30 19:02:46 IST 2016
+base.0=/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_83a4dc6c9c7f3d880ffa9a5902f87e83f1bed7ed
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_86b620e2095cbab562874c2e9c466e32a2c1cfe0/classes.dex
-base.1=/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_86b620e2095cbab562874c2e9c466e32a2c1cfe0
-file.0=/home/amit/Uniconnexample/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_fafda1dd93fdfe8d83a8eec975786757a1205525/classes.dex
+file.1=/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_15c388f90427f9a331ecb3e0865ab5d2b228a4db/classes.dex
+base.1=/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_15c388f90427f9a331ecb3e0865ab5d2b228a4db
+file.0=/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_83a4dc6c9c7f3d880ffa9a5902f87e83f1bed7ed/classes.dex

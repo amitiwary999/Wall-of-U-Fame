@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_facebook.xml",
-        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-anydpi-v21/ic_facebook.xml"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_facebook.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-anydpi-v21/ic_facebook.xml"
     },
     {
-        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/md_nav_back.xml",
-        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable-anydpi-v21/md_nav_back.xml"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/md_nav_back.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable-anydpi-v21/md_nav_back.xml"
     },
     {
-        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_google.xml",
-        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-anydpi-v21/ic_google.xml"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_twitter.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-anydpi-v21/ic_twitter.xml"
     },
     {
-        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_twitter.xml",
-        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-anydpi-v21/ic_twitter.xml"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_google.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-anydpi-v21/ic_google.xml"
     }
 ]

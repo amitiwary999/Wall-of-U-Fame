@@ -1,22 +1,22 @@
 [
     {
-        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
-        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_google.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_google.png"
     },
     {
-        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_twitter.png",
-        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_twitter.png"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
     },
     {
-        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/md_nav_back.png",
-        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable-ldpi-v4/md_nav_back.png"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_twitter.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_twitter.png"
     },
     {
-        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_google.png",
-        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_google.png"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/md_nav_back.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable-ldpi-v4/md_nav_back.png"
     },
     {
-        "merged": "/home/amit/Uniconnexample/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_facebook.png",
-        "source": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_facebook.png"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_facebook.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_facebook.png"
     }
 ]

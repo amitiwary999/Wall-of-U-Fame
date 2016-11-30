@@ -35,6 +35,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+import com.tt.whorlviewlibrary.WhorlView;
 
 import timber.log.Timber;
 
@@ -46,6 +47,7 @@ public class MainActivity extends Fragment {
     FirebaseUser user;
     String mal,check;
     UserData userdata;
+    WhorlView whorlView;
     FloatingActionButton fab;
     private ProgressDialog mProgress;
     public MainActivity() {
@@ -55,6 +57,9 @@ public class MainActivity extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_main, container, false);
+         whorlView = (WhorlView) view.findViewById(R.id.whorl2);
+        whorlView.setVisibility(View.VISIBLE);
+        whorlView.start();
         userdata=new UserData();
         user = FirebaseAuth.getInstance().getCurrentUser();
         mProgress=new ProgressDialog(getActivity());
@@ -65,7 +70,7 @@ public class MainActivity extends Fragment {
         fab=(FloatingActionButton)view.findViewById(R.id.fab);
         String n=auth.getCurrentUser().getEmail();
         check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
-        mProgress.show();
+       // mProgress.show();
         mDatabase= FirebaseDatabase.getInstance().getReference().child(check);
         mBlogList=(RecyclerView)view.findViewById(R.id.mblog_list);
         mBlogList.setHasFixedSize(true);
@@ -87,7 +92,9 @@ public class MainActivity extends Fragment {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     userdata = dataSnapshot.getValue(UserData.class);
-                    mProgress.dismiss();
+                    whorlView.stop();
+                    whorlView.setVisibility(View.GONE);
+                  //  mProgress.dismiss();
                  //   Toast.makeText(MainActivity.this,userdata.name,Toast.LENGTH_LONG).show();
                  //   mProgress.dismiss();
                     // updateUI();
@@ -129,7 +136,7 @@ public class MainActivity extends Fragment {
     public void writeblog(){
         startActivity(new Intent(getActivity(),Blog.class).putExtra("user",userdata));
     }
-    public  static class BlogViewHolder extends RecyclerView.ViewHolder{
+    public  static class BlogViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         View mView;
 
         public BlogViewHolder(View itemView) {
@@ -165,6 +172,11 @@ public class MainActivity extends Fragment {
            // byte[] decodestring= Base64.decode(photo, Base64.DEFAULT);
            // Bitmap bitmap= BitmapFactory.decodeByteArray(decodestring,0,decodestring.length);
             pro_pic.setImageBitmap(Utils.decodeBase64(photo));
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 

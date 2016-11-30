@@ -19,6 +19,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.amit.uniconnexample.MainActivity">
 
+    <com.tt.whorlviewlibrary.WhorlView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/whorl2"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:whorlview_circle_colors="#F14336_#fb8c00_#5677fc_#F44336_#4CAF50"
+        app:whorlview_circle_speed="270"
+        app:whorlview_parallax="fast"
+        app:whorlview_strokeWidth="10"
+        app:whorlview_sweepAngle="90">
+    </com.tt.whorlviewlibrary.WhorlView>
 
 
     <android.support.v7.widget.RecyclerView

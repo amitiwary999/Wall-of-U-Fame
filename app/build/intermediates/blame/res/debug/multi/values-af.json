@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/amit/Uniconnexample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml",
+        "outputFile": "/home/amit/Buildapk/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 204
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 312
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 435
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 535
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 641
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 726
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 829
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 947
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 1023
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 1100
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 1181
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 1288
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 1391
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 1488
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -277,7 +277,7 @@
                     "endOffset": 1596
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -296,7 +296,7 @@
                     "endOffset": 1698
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -315,7 +315,7 @@
                     "endOffset": 1800
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -334,7 +334,7 @@
                     "endOffset": 1917
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -353,7 +353,7 @@
                     "endOffset": 2015
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -372,7 +372,7 @@
                     "endOffset": 2183
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -392,7 +392,7 @@
                     "endOffset": 2303
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -412,7 +412,7 @@
                     "endOffset": 2428
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -431,7 +431,7 @@
                     "endOffset": 2522
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -450,7 +450,7 @@
                     "endOffset": 2589
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -469,7 +469,7 @@
                     "endOffset": 2660
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -488,7 +488,7 @@
                     "endOffset": 2722
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -507,7 +507,7 @@
                     "endOffset": 2798
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -526,7 +526,7 @@
                     "endOffset": 2872
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -545,7 +545,7 @@
                     "endOffset": 2964
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -564,7 +564,7 @@
                     "endOffset": 3038
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -583,7 +583,7 @@
                     "endOffset": 3112
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -602,7 +602,7 @@
                     "endOffset": 3195
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -621,7 +621,7 @@
                     "endOffset": 3294
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -640,7 +640,7 @@
                     "endOffset": 3358
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -659,7 +659,7 @@
                     "endOffset": 3422
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -678,7 +678,7 @@
                     "endOffset": 3554
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -697,7 +697,7 @@
                     "endOffset": 3663
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -716,7 +716,7 @@
                     "endOffset": 3851
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -735,7 +735,7 @@
                     "endOffset": 3979
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -754,7 +754,7 @@
                     "endOffset": 4104
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -773,7 +773,7 @@
                     "endOffset": 4316
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -792,7 +792,7 @@
                     "endOffset": 4531
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -811,7 +811,7 @@
                     "endOffset": 4655
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -830,7 +830,7 @@
                     "endOffset": 4786
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -849,7 +849,7 @@
                     "endOffset": 5037
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -868,7 +868,7 @@
                     "endOffset": 5292
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -887,7 +887,7 @@
                     "endOffset": 5415
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -906,7 +906,7 @@
                     "endOffset": 5525
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -925,7 +925,7 @@
                     "endOffset": 5713
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -944,7 +944,7 @@
                     "endOffset": 5842
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -963,7 +963,7 @@
                     "endOffset": 6040
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -982,7 +982,7 @@
                     "endOffset": 6176
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -1001,7 +1001,7 @@
                     "endOffset": 6360
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1020,7 +1020,7 @@
                     "endOffset": 6456
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1039,7 +1039,7 @@
                     "endOffset": 6549
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -1058,7 +1058,7 @@
                     "endOffset": 6657
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-af/values.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -1077,7 +1077,7 @@
                     "endOffset": 6718
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1096,7 +1096,7 @@
                     "endOffset": 6798
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -1115,7 +1115,7 @@
                     "endOffset": 6899
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,

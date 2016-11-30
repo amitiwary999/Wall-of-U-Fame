@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/amit/Uniconnexample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+        "outputFile": "/home/amit/Buildapk/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/home/amit/Uniconnexample/app/src/main/res/values-w820dp/dimens.xml",
+                    "file": "/home/amit/Buildapk/app/src/main/res/values-w820dp/dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
