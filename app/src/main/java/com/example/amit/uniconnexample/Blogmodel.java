@@ -14,16 +14,24 @@ public class Blogmodel {
     private String image;
     private String uname;
     private String propic;
-
+    private int like;
+    private int unlike;
+    private String cityname;
+    private String time,date;
     public Blogmodel(){
 
     }
-    public Blogmodel( String desc, String image,String uname,String propic) {
+    public Blogmodel( String desc, String image,String uname,String propic,int like,int unlike,String cityname,String time,String date) {
        // this.title = title;
         this.desc = desc;
         this.image = image;
         this.uname=uname;
         this.propic=propic;
+        this.like=like;
+        this.unlike=unlike;
+        this.cityname=cityname;
+        this.time=time;
+        this.date=date;
     }
 
     public String getDesc() {
@@ -56,6 +64,30 @@ public class Blogmodel {
 
     public void setName(String uname) {
         this.uname = uname;
+    }
+    public void setLike(int like){
+        this.like=like;
+    }
+ public int getLike(){
+     return like;
+ }
+    public void setUnlike(int like){
+        this.unlike=like;
+    }
+    public int getUnlike(){
+        return unlike;
+    }
+
+    public String getCityname() {
+        return cityname;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
     }
 
     public String getPropic() {

@@ -64,6 +64,7 @@ dependencies {
     compile 'com.pkmmte.view:circularimageview:1.1'
     compile 'com.tt:whorlviewlibrary:1.0.3'
     compile 'com.github.jd-alexander:LikeButton:0.2.0'
+    compile 'com.google.android.gms:play-services:10.0.1'
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'

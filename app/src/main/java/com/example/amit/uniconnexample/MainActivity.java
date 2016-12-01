@@ -16,11 +16,13 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -114,16 +116,20 @@ public class MainActivity extends Fragment {
 
             ) {
 
+
                 @Override
                 protected void populateViewHolder(BlogViewHolder viewHolder, Blogmodel model, int position) {
                     //  model=new Blogmodel();
                   //  viewHolder.setTitle(model.getTitle());
-                    viewHolder.setDesc(model.getDesc());
+                    viewHolder.bindData(model);
+                  /*  viewHolder.setDesc(model.getDesc());
                     viewHolder.setName(model.getName());
                     viewHolder.setImage(getActivity().getApplicationContext(), model.getImage());
 
                 //    Toast.makeText(MainActivity.this,"hi"+model.getName()+model.getDesc(),Toast.LENGTH_LONG).show();
                     viewHolder.setPropic(model.getPropic());
+                    viewHolder.setLike(model.getLike());
+                    viewHolder.setUnlike(model.getUnlike());*/
 
                 }
             };
@@ -138,10 +144,48 @@ public class MainActivity extends Fragment {
     }
     public  static class BlogViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         View mView;
-
+        ImageButton lk,unlk;
         public BlogViewHolder(View itemView) {
             super(itemView);
             mView=itemView;
+             lk=(ImageButton)itemView.findViewById(R.id.like);
+             unlk=(ImageButton)itemView.findViewById(R.id.unlike);
+            itemView.setOnClickListener(this);
+            lk.setOnClickListener(this);
+            unlk.setOnClickListener(this);
+        }
+
+        public void bindData(Blogmodel model){
+            TextView post_desc=(TextView)mView.findViewById(R.id.post_desc);
+            ImageView post_image =(ImageView)mView.findViewById(R.id.postimage);
+            TextView post_name=(TextView)mView.findViewById(R.id.bname);
+            ImageView pro_pic=(ImageView)mView.findViewById(R.id.pimage);
+            TextView txtLike=(TextView)mView.findViewById(R.id.txtlike);
+            TextView txtUnlike=(TextView)mView.findViewById(R.id.txtunlike);
+            TextView txtPlace=(TextView)mView.findViewById(R.id.txtPlace);
+            TextView txtTime=(TextView)mView.findViewById(R.id.txtTime);
+            TextView txtDate=(TextView)mView.findViewById(R.id.txtDate);
+            post_desc.setText(model.getDesc());
+            if(model.getImage()==null){
+                post_image.setVisibility(View.GONE);
+            }else{
+                post_image.setVisibility(View.VISIBLE);
+                Picasso.with(mView.getContext()).load(model.getImage()).into(post_image);
+            }
+            if(model.getName()==null){
+                post_name.setText("Anonyms");
+            }else{
+                post_name.setText(model.getName());
+            }
+            pro_pic.setImageBitmap(Utils.decodeBase64(model.getPropic()));
+            String likE=Integer.toString(model.getLike());
+            txtLike.setText(likE);
+            String txtUnlik=Integer.toString(model.getUnlike());
+            txtUnlike.setText(txtUnlik);
+            txtPlace.setText(model.getCityname());
+            txtTime.setText(model.getTime());
+            txtDate.setText(model.getDate());
+
         }
         public   void  setDesc(String desc){
             TextView post_desc=(TextView)mView.findViewById(R.id.post_desc);
@@ -174,9 +218,27 @@ public class MainActivity extends Fragment {
             pro_pic.setImageBitmap(Utils.decodeBase64(photo));
         }
 
+        public void setLike(int like){
+            TextView txt=(TextView)mView.findViewById(R.id.txtlike);
+            String likE=Integer.toString(like);
+            txt.setText(likE);
+        }
+
+        public void setUnlike(int unlike){
+            TextView txt=(TextView)mView.findViewById(R.id.txtunlike);
+            String unlikE=Integer.toString(unlike);
+            txt.setText(unlikE);
+        }
+
         @Override
         public void onClick(View v) {
-
+            int itemPosition = getLayoutPosition();
+            Log.d("Right","show"+itemPosition);
+            Toast.makeText(mView.getContext(),"right"+itemPosition,Toast.LENGTH_LONG).show();
+        //   if(v==lk)
+              // Toast.makeText(mView.getContext(),"right",Toast.LENGTH_LONG).show();
+           // if(v==unlk)
+              //  Toast.makeText(mView.getContext(),"unright",Toast.LENGTH_LONG).show();
         }
     }
 
