@@ -9,7 +9,7 @@ import android.os.Parcelable;
 
 public class UserData implements Parcelable {
     public String phone,  name;
-    public String email , photo = ""; //extras
+    public String email , photo = "",clg; //extras
 
 
     @Override

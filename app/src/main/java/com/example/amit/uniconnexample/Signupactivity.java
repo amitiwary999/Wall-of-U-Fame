@@ -64,6 +64,8 @@ public class Signupactivity extends AppCompatActivity {
     TextInputLayout confrmpassword;
     @BindView(R.id.iview)
     ImageView iv;
+    @BindView(R.id.clg)
+    TextInputLayout clg;
     @BindView(R.id.sign_up)
     Button signup;
     FirebaseUser user;
@@ -71,7 +73,7 @@ public class Signupactivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     UserData userData;
-    String mal,pass,confrmpass,phn,nam;
+    String mal,pass,confrmpass,phn,nam,clgname;
     int flag=0;
     String check;
     @Override
@@ -86,6 +88,7 @@ public class Signupactivity extends AppCompatActivity {
         confrmpass=confrmpassword.getEditText().getText().toString().trim();
         nam=name.getEditText().getText().toString().trim();
         mal=email.getEditText().getText().toString().trim();
+        clgname=clg.getEditText().getText().toString().trim();
         mAuth = FirebaseAuth.getInstance();
      //    user=FirebaseAuth.getInstance().getCurrentUser();
        mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -138,6 +141,11 @@ public class Signupactivity extends AppCompatActivity {
                      name.setError(null);
                      if (phone.getEditText().getText().toString().trim().length() == 10) {
                          phone.setError(null);
+                         if(clg.getEditText().getText().toString().trim().length()!=0){
+                             clg.setError(null);
+                         }else{
+                             clg.setError("Enter college name");
+                         }
                          attemptSignup(password.getEditText().getText().toString().trim(), email.getEditText().getText().toString().trim());
                          signup.setEnabled(false);
                      } else
@@ -210,6 +218,7 @@ public class Signupactivity extends AppCompatActivity {
         userData.phone = phone.getEditText().getText().toString();
         userData.name = name.getEditText().getText().toString();
         userData.email=email.getEditText().getText().toString();
+        userData.clg=clg.getEditText().getText().toString();
         Bitmap icon = BitmapFactory.decodeResource(getResources(),
                 R.drawable.default_account);
         if(flag!=1) {

@@ -63,6 +63,8 @@ public class Profile extends AppCompatActivity {
     EditText email;
     @BindView(R.id.phone)
     EditText phone;
+    @BindView(R.id.clg)
+    EditText clg;
     @BindView(R.id.photo)
     ImageView photo;
     @BindView(R.id.loading)
@@ -125,15 +127,17 @@ public class Profile extends AppCompatActivity {
     }
 
     void updateUI(){
-        String nam,phn,phot,mail;
+        String nam,phn,phot,mail,clgname;
         nam=userData.name;
         phn=userData.phone;
         phot=userData.photo;
         mail=userData.email;
+        clgname=userData.clg;
         name.setText(nam);
         phone.setText(phn);
         photo.setImageBitmap(Utils.decodeBase64(phot));
         email.setText(mail);
+        clg.setText(clgname);
     }
     @OnClick(R.id.photo)
     void pickPhoto() {
@@ -206,6 +210,7 @@ public class Profile extends AppCompatActivity {
                 .show();
         userData.name=name.getText().toString();
         userData.phone=phone.getText().toString();
+        userData.clg=clg.getText().toString();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
         myRef.child("Userdetail").child(uid).setValue(userData, new DatabaseReference.CompletionListener() {
