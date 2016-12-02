@@ -21,7 +21,7 @@ public class Blogmodel {
     public Blogmodel(){
 
     }
-    public Blogmodel( String desc, String image,String uname,String propic,int like,int unlike,String cityname,String time,String date) {
+    public Blogmodel( String desc, String image,String uname,String propic,int like,int unlike,String time,String date) {
        // this.title = title;
         this.desc = desc;
         this.image = image;

@@ -41,6 +41,7 @@ import android.widget.Toast;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+//import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -67,6 +68,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
     private DatabaseReference mDatabase;
     EditText titlefield,mDesc;
     Toolbar toolbar;
+    private TrackGPS gps;
     SharedPreferences sprfnc;
     private ProgressDialog mProgress;
     String mal,check,name,photo,bitimage,cityname=null,date=null,time=null;
@@ -85,15 +87,45 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
         mProgress = new ProgressDialog(this);
-     /*   if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
+       /* gps = new TrackGPS(this);
+        if(gps.canGetLocation()){
+
+
+            longitude = gps.getLongitude();
+            latitude = gps .getLatitude();
+
+            Toast.makeText(getApplicationContext(),"Longitude:"+Double.toString(longitude)+"\nLatitude:"+Double.toString(latitude),Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+
+            gps.showSettingsAlert();
+        }*/
+
+      /*  if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
             if (ContextCompat.checkSelfPermission(Blog.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(Blog.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(Blog.this,
                         new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},12345);
                 return;
             }
+
             geocoder = new Geocoder(this, Locale.getDefault());
             try {
-        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+                 gps = new TrackGPS(this);
+        if(gps.canGetLocation()){
+
+
+            longitude = gps.getLongitude();
+            latitude = gps .getLatitude();
+
+            Toast.makeText(getApplicationContext(),"Longitude:"+Double.toString(longitude)+"\nLatitude:"+Double.toString(latitude),Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+
+            gps.showSettingsAlert();
+        }
+       /* locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
          List<String> providers = locationManager.getProviders(true);
             Criteria cri=new Criteria();
 
@@ -123,15 +155,36 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
         else
         {
             Toast.makeText(this,"ADDRESS NOT FOUND",Toast.LENGTH_SHORT).show();
-        }
+        } */
+       /*         addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                cityname = addresses.get(0).getAddressLine(0);
             }catch (IOException e){
                 e.printStackTrace();
             }
-            cityname = addresses.get(0).getAddressLine(0);
+
     }else if(Build.VERSION.SDK_INT<Build.VERSION_CODES.M) {
             geocoder = new Geocoder(this, Locale.getDefault());
             try {
-                if (mGoogleApiClient == null) {
+                gps = new TrackGPS(this);
+        if(gps.canGetLocation()){
+
+
+            longitude = gps.getLongitude();
+            latitude = gps .getLatitude();
+            try {
+                addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                cityname = addresses.get(0).getAddressLine(0);
+            }catch (IndexOutOfBoundsException e){
+                e.printStackTrace();
+            }
+            Toast.makeText(getApplicationContext(),"Longitude:"+Double.toString(longitude)+"\nLatitude:"+Double.toString(latitude),Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"location not found",Toast.LENGTH_LONG ).show();
+            gps.showSettingsAlert();
+        }
+             /*   if (mGoogleApiClient == null) {
                   mGoogleApiClient = new GoogleApiClient.Builder(this)
              .addConnectionCallbacks(this)
              .addOnConnectionFailedListener(this)
@@ -174,18 +227,19 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
                  else {
                Toast.makeText(this,"ADDRESS NOT FOUND",Toast.LENGTH_SHORT).show();
              }
+
             }catch (IOException e){
                 e.printStackTrace();
             }
 
         }*/
-        if (mGoogleApiClient == null) {
+      /*  if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(this)
                     .addConnectionCallbacks(this)
                     .addOnConnectionFailedListener(this)
                     .addApi(LocationServices.API)
                     .build();
-        }
+        }*/
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
       //  mal=sharedPreferences.getString("email","");
        // userdata=new UserData();
@@ -245,14 +299,20 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
 
     @Override
     protected void onStart() {
-        mGoogleApiClient.connect();
+//        mGoogleApiClient.connect();
         super.onStart();
     }
 
     @Override
     protected void onStop() {
-        mGoogleApiClient.disconnect();
+     //   mGoogleApiClient.disconnect();
         super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        gps.stopUsingGPS();
     }
 
 
@@ -265,7 +325,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
             final String desc_val = mDesc.getText().toString().trim();
             final String name_val=name;
             final String photo_val=photo;
-            final  String city_Name=cityname;
+        //    final  String city_Name=cityname;
             final String time_val=time;
             final String date_val=date;
             // bl=new Blog(title_val,desc_val,mImageUri.toString());
@@ -277,7 +337,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             Uri downloadUrl = taskSnapshot.getDownloadUrl();
                             DatabaseReference newPost = mDatabase.push();
-                            newPost.setValue(new Blogmodel(desc_val, downloadUrl.toString(), name_val, photo_val,0,0,city_Name,time_val,date_val));
+                            newPost.setValue(new Blogmodel(desc_val, downloadUrl.toString(), name_val, photo_val,0,0,time_val,date_val));
                        /* newPost.child("title").setValue(title_val);
                         newPost.child("desc").setValue(desc_val);
                         newPost.child("image").setValue(downloadUrl.toString());
@@ -291,7 +351,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
 
                 }else{
                     DatabaseReference newPost=mDatabase.push();
-                    newPost.setValue(new Blogmodel(desc_val,null,name_val,photo_val,0,0,city_Name,time_val,date_val));
+                    newPost.setValue(new Blogmodel(desc_val,null,name_val,photo_val,0,0,time_val,date_val));
                     mProgress.dismiss();
                     startActivity(new Intent(Blog.this, MainActivity.class));
                     finish();
@@ -349,8 +409,11 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
 
     @Override
     public void onLocationChanged(Location location) {
-          latitude=location.getLatitude();
-        longitude=location.getLongitude();
+      //  this.location=location;
+
+       //   latitude=location. getLatitude();
+
+       // longitude=location.getLongitude();
     }
 
     @Override
@@ -370,12 +433,12 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
-        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+       /* mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
                 mGoogleApiClient);
         if (mLastLocation != null) {
           //  mLatitudeText.setText(String.valueOf(mLastLocation.getLatitude()));
           //  mLongitudeText.setText(String.valueOf(mLastLocation.getLongitude()));
-        }
+        }*/
     }
 
     @Override

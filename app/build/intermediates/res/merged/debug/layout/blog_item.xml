@@ -48,11 +48,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:layout_marginLeft="4dp"
                     android:id="@+id/txtTime"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:textSize="8dp"
                     android:id="@+id/txtDate"/>
                 </LinearLayout>
                 <TextView

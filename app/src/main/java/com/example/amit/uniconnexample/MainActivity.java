@@ -39,6 +39,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 import com.tt.whorlviewlibrary.WhorlView;
 
+import java.util.ArrayList;
+
 import timber.log.Timber;
 
 public class MainActivity extends Fragment {
@@ -51,6 +53,8 @@ public class MainActivity extends Fragment {
     UserData userdata;
     WhorlView whorlView;
     FloatingActionButton fab;
+    private Boolean processlike=false;
+    private ArrayList<String> keysArray;
     private ProgressDialog mProgress;
     public MainActivity() {
         super();
@@ -60,6 +64,7 @@ public class MainActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_main, container, false);
          whorlView = (WhorlView) view.findViewById(R.id.whorl2);
+        keysArray = new ArrayList<>();
         whorlView.setVisibility(View.VISIBLE);
         whorlView.start();
         userdata=new UserData();
@@ -116,12 +121,19 @@ public class MainActivity extends Fragment {
 
             ) {
 
-
                 @Override
                 protected void populateViewHolder(BlogViewHolder viewHolder, Blogmodel model, int position) {
                     //  model=new Blogmodel();
                   //  viewHolder.setTitle(model.getTitle());
+
+                   String pos= getRef(position).getKey();
                     viewHolder.bindData(model);
+                    viewHolder.lk.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                         processlike=true;
+                        }
+                    });
                   /*  viewHolder.setDesc(model.getDesc());
                     viewHolder.setName(model.getName());
                     viewHolder.setImage(getActivity().getApplicationContext(), model.getImage());
@@ -145,9 +157,16 @@ public class MainActivity extends Fragment {
     public  static class BlogViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         View mView;
         ImageButton lk,unlk;
+        private FirebaseAuth auth;
+        String check;
+        DatabaseReference df;
         public BlogViewHolder(View itemView) {
             super(itemView);
             mView=itemView;
+            auth=FirebaseAuth.getInstance();
+            String n=auth.getCurrentUser().getEmail();
+            check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
+            df=FirebaseDatabase.getInstance().getReference().child(check);
              lk=(ImageButton)itemView.findViewById(R.id.like);
              unlk=(ImageButton)itemView.findViewById(R.id.unlike);
             itemView.setOnClickListener(this);
@@ -162,7 +181,7 @@ public class MainActivity extends Fragment {
             ImageView pro_pic=(ImageView)mView.findViewById(R.id.pimage);
             TextView txtLike=(TextView)mView.findViewById(R.id.txtlike);
             TextView txtUnlike=(TextView)mView.findViewById(R.id.txtunlike);
-            TextView txtPlace=(TextView)mView.findViewById(R.id.txtPlace);
+          //  TextView txtPlace=(TextView)mView.findViewById(R.id.txtPlace);
             TextView txtTime=(TextView)mView.findViewById(R.id.txtTime);
             TextView txtDate=(TextView)mView.findViewById(R.id.txtDate);
             post_desc.setText(model.getDesc());
@@ -182,7 +201,7 @@ public class MainActivity extends Fragment {
             txtLike.setText(likE);
             String txtUnlik=Integer.toString(model.getUnlike());
             txtUnlike.setText(txtUnlik);
-            txtPlace.setText(model.getCityname());
+         //   txtPlace.setText(model.getCityname());
             txtTime.setText(model.getTime());
             txtDate.setText(model.getDate());
 
@@ -233,10 +252,14 @@ public class MainActivity extends Fragment {
         @Override
         public void onClick(View v) {
             int itemPosition = getLayoutPosition();
-            Log.d("Right","show"+itemPosition);
-            Toast.makeText(mView.getContext(),"right"+itemPosition,Toast.LENGTH_LONG).show();
-        //   if(v==lk)
-              // Toast.makeText(mView.getContext(),"right",Toast.LENGTH_LONG).show();
+           // String p=Integer.toString(itemPosition);
+          // int c=df.child(p).getKey().hashCode();
+          //  String a= Integer.toString(c);
+
+           // Log.d("Right","show"+c+itemPosition);
+          //  Toast.makeText(mView.getContext(),"right"+a+c+itemPosition,Toast.LENGTH_LONG).show();
+           if(v==lk)
+               Toast.makeText(mView.getContext(),"right",Toast.LENGTH_LONG).show();
            // if(v==unlk)
               //  Toast.makeText(mView.getContext(),"unright",Toast.LENGTH_LONG).show();
         }
