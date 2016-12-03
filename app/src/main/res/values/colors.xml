@@ -14,4 +14,6 @@
     <color name="md_indigo_800">#283593</color>
     <color name="md_blue_900">#003366</color>
     <color name="md_blue">#003366</color>
+    <color name="Black">#000000</color>
+    <color name="Grenn">#ffff00</color>
 </resources>

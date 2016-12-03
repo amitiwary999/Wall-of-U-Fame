@@ -62,6 +62,8 @@
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
     <bool name="md_is_tablet">false</bool>
+    <color name="Black">#000000</color>
+    <color name="Grenn">#ffff00</color>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -92,9 +94,9 @@
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <color name="colorAccent">#536DFE</color>
-    <color name="colorPrimary">#536DFE</color>
-    <color name="colorPrimaryDark">#536DFE</color>
+    <color name="colorAccent">#003366</color>
+    <color name="colorPrimary">#003366</color>
+    <color name="colorPrimaryDark">#003366</color>
     <color name="com_facebook_blue">#3B5998</color>
     <color name="com_facebook_button_background_color">#415dae</color>
     <color name="com_facebook_button_background_color_disabled">#bdc1c9</color>
@@ -166,8 +168,8 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
-    <color name="md_blue">#003F87</color>
-    <color name="md_blue_900">#0D47A1</color>
+    <color name="md_blue">#003366</color>
+    <color name="md_blue_900">#003366</color>
     <color name="md_blue_grey_500">#607D8B</color>
     <color name="md_blue_grey_600">#546E7A</color>
     <color name="md_blue_grey_700">#455A64</color>
@@ -182,7 +184,7 @@
     <color name="md_indigo_800">#283593</color>
     <color name="md_material_blue_600">#1E88E5</color>
     <color name="md_material_blue_800">#1565C0</color>
-    <color name="md_orange_600">#FB8C00</color>
+    <color name="md_orange_600">#Ff6600</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>

@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -53,6 +54,8 @@ public class MainActivity extends Fragment {
     UserData userdata;
     WhorlView whorlView;
     FloatingActionButton fab;
+    int lik,unlike;
+    int unlik,lyk;
     private Boolean processlike=false,processunlike=false;
     private ArrayList<String> keysArray;
     private ProgressDialog mProgress;
@@ -83,6 +86,8 @@ public class MainActivity extends Fragment {
         mDatabaseunlike=FirebaseDatabase.getInstance().getReference().child("unlike");
         pdata.keepSynced(true);
         mDatabase.keepSynced(true);
+        mDatabaselike.keepSynced(true);
+        mDatabaselike.keepSynced(true);
         mBlogList=(RecyclerView)view.findViewById(R.id.mblog_list);
         mBlogList.setHasFixedSize(true);
         mBlogList.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -132,8 +137,8 @@ public class MainActivity extends Fragment {
 
                   final String post_key= getRef(position).getKey();
                     viewHolder.bindData(model);
-                    viewHolder.setLiked(post_key);
-                    viewHolder.setUnliked(post_key);
+                  //  viewHolder.setLiked(post_key);
+                  //  viewHolder.setUnliked(post_key);
                     viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -144,26 +149,71 @@ public class MainActivity extends Fragment {
                         @Override
                         public void onClick(View v) {
                             processlike=true;
-                            mDatabaselike.addValueEventListener(new ValueEventListener() {
+                            mDatabaselike.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                     if(processlike) {
                                         if (dataSnapshot.child(post_key).hasChild(user.getUid())) {
+
+                                            // int
+                                                     if(model.getLike()>0) {
+                                                         lik = model.getLike() - 1;
+                                                     }else{
+                                                         lik=0;
+                                                     }
                                             mDatabaselike.child(post_key).child(user.getUid()).removeValue();
+                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                                              /*  final MaterialDialog dialog = new MaterialDialog.Builder(getActivity())
+                                                        .progress(true, 100)
+                                                        .content("Saving..")
+                                                        .show();*/
+                                                @Override
+                                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                        @Override
+                                                        public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                      //      dialog.dismiss();
+                                                            Toast.makeText(getActivity(), "Saved successfullyll!", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
+                                                  //  processlike=false;
+                                                }
+
+                                                @Override
+                                                public void onCancelled(DatabaseError databaseError) {
+
+                                                }
+                                            });
+
+                                            //   processlike=true;
                                               processlike=false;
 
                                         } else {
-                                           mDatabaseunlike.addValueEventListener(new ValueEventListener() {
+                                           mDatabaseunlike.addListenerForSingleValueEvent(new ValueEventListener() {
                                                @Override
                                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                                   Toast.makeText(getActivity(),"Hi"+dataSnapshot.child(post_key).child(user.getUid()).getValue(),Toast.LENGTH_LONG).show();
-                                                   if(dataSnapshot.child(post_key).child(user.getUid()).getValue()=="Unliked"){
+                                                   Toast.makeText(getActivity(),(String)dataSnapshot.child(post_key).child(user.getUid()).getValue(),Toast.LENGTH_LONG).show();
+                                                   if(dataSnapshot.child(post_key).hasChild(user.getUid())){
                                                     //   if( mDatabaseunlike.child(post_key).child(user.getUid()).equals("Unliked")){
-                                                           final int unlike=model.getUnlike()-1;
+                                                      // int unlik=model.getUnlike();
+                                                       Toast.makeText(getActivity(),dataSnapshot.child(post_key).child(user.getUid()).getValue(String.class),Toast.LENGTH_LONG).show();
+                                                       if(model.getUnlike()>0) {
+                                                             unlik = model.getUnlike() - 1;
+                                                       }else{
+                                                           unlik=0;
+                                                       }
+                                                       mDatabaseunlike.child(post_key).child(user.getUid()).removeValue();
                                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                @Override
                                                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                   mDatabase.child(post_key).setValue(new Blogmodel(viewHolder.desc,viewHolder.pic,viewHolder.nam,viewHolder.photo,viewHolder.lke,unlike,viewHolder.time,viewHolder.date));
+                                                                   mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlik,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                                       @Override
+                                                                       public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                                           Toast.makeText(getActivity(), "Saved successfully like!", Toast.LENGTH_SHORT).show();
+                                                                       }
+                                                                   });
                                                                   // processunlike=false;
                                                                }
 
@@ -172,6 +222,7 @@ public class MainActivity extends Fragment {
 
                                                                }
                                                            });
+                                                       mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlik,model.getTime(),model.getDate()));
 
                                                    }
                                                }
@@ -182,22 +233,63 @@ public class MainActivity extends Fragment {
                                                }
                                            });
                                             mDatabaselike.child(post_key).child(user.getUid()).setValue("Liked");
-                                            final int lik = model.getLike() + 1;
+                                          //  final int
+                                                    lik = model.getLike() + 1;
 
                                             //   processlike=true;
-                                            mDatabase.addValueEventListener(new ValueEventListener() {
+                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                    mDatabase.child(post_key).setValue(new Blogmodel(viewHolder.desc, viewHolder.pic, viewHolder.nam, viewHolder.photo, lik, viewHolder.unlke, viewHolder.time, viewHolder.date));
-                                                        processlike=false;
+                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                        @Override
+                                                        public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                            Toast.makeText(getActivity(), "Saved successfullyli!", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
+                                                    processlike=false;
+
                                                 }
 
                                                 @Override
                                                 public void onCancelled(DatabaseError databaseError) {
 
                                                 }
+
                                             });
+                                          /*  mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                @Override
+                                                public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                    Toast.makeText(getActivity(), "Saved successfullyli!", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });*/
+                                            processlike=false;
                                         }
+
+                                     /*   mDatabase.addValueEventListener(new ValueEventListener() {
+                                            final MaterialDialog dialog = new MaterialDialog.Builder(getActivity())
+                                                    .progress(true, 100)
+                                                    .content("Saving..")
+                                                    .show();
+                                            @Override
+                                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                                mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                    @Override
+                                                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                        dialog.dismiss();
+                                                        Toast.makeText(getActivity(), "Saved successfullyl!", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                });
+                                                processlike=false;
+                                            }
+
+                                            @Override
+                                            public void onCancelled(DatabaseError databaseError) {
+
+                                            }
+                                        });*/
                                     }
                                 }
 
@@ -214,25 +306,65 @@ public class MainActivity extends Fragment {
                         @Override
                         public void onClick(View v) {
                             processunlike=true;
-                            mDatabaseunlike.addValueEventListener(new ValueEventListener() {
+                         //   unlike=model.getUnlike();
+                            mDatabaseunlike.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                     if(processunlike){
                                         if(dataSnapshot.child(post_key).hasChild(user.getUid())){
-                                               mDatabaseunlike.child(post_key).child(user.getUid()).removeValue();
-                                            processunlike=false;
-                                        }else{
-                                            mDatabaselike.addValueEventListener(new ValueEventListener() {
+
+                                          //  final int
+                                            if(model.getUnlike()>0) {
+                                                unlike = model.getUnlike() - 1;
+                                            }else{
+                                                unlike=0;
+                                            }
+                                            mDatabaseunlike.child(post_key).child(user.getUid()).removeValue();
+                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                    Toast.makeText(getActivity(),"Hi"+dataSnapshot.child(post_key).child(user.getUid()).getValue(),Toast.LENGTH_LONG).show();
-                                                    if(dataSnapshot.child(post_key).child(user.getUid()).getValue()=="Liked"){
+                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                        @Override
+                                                        public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                            Toast.makeText(getActivity(), "Saved successfullyul!", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
+                                                    processunlike=false;
+                                                }
+
+                                                @Override
+                                                public void onCancelled(DatabaseError databaseError) {
+
+                                                }
+                                            });
+                                            processunlike=false;
+                                        }else{
+
+                                            mDatabaselike.addListenerForSingleValueEvent(new ValueEventListener() {
+                                                @Override
+                                                public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                                    if(dataSnapshot.child(post_key).hasChild(user.getUid())){
                                                         //   if( mDatabaseunlike.child(post_key).child(user.getUid()).equals("Unliked")){
-                                                        final int like=model.getLike()-1;
+
+                                                        Toast.makeText(getActivity(),(String)dataSnapshot.child(post_key).child(user.getUid()).getValue(),Toast.LENGTH_LONG).show();
+                                                        if(model.getLike()>0) {
+                                                            lyk = model.getLike() - 1;
+                                                        }else{
+                                                            lyk=0;
+                                                        }
+                                                        mDatabaselike.child(post_key).child(user.getUid()).removeValue();
                                                         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                             @Override
                                                             public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                mDatabase.child(post_key).setValue(new Blogmodel(viewHolder.desc,viewHolder.pic,viewHolder.nam,viewHolder.photo,like,viewHolder.unlke,viewHolder.time,viewHolder.date));
+                                                                mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lyk,unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                                    @Override
+                                                                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                                        Toast.makeText(getActivity(), "Saved successfully!", Toast.LENGTH_SHORT).show();
+                                                                    }
+                                                                });
                                                                 // processunlike=false;
                                                             }
 
@@ -241,7 +373,13 @@ public class MainActivity extends Fragment {
 
                                                             }
                                                         });
+                                                    /*    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lyk,model.getUnlike(),model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
 
+                                                            @Override
+                                                            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                                Toast.makeText(getActivity(), "Saved successfully!", Toast.LENGTH_SHORT).show();
+                                                            }
+                                                        });*/
                                                     }
                                                 }
 
@@ -251,11 +389,18 @@ public class MainActivity extends Fragment {
                                                 }
                                             });
                                             mDatabaseunlike.child(post_key).child(user.getUid()).setValue("Unliked");
-                                            final int unlike=model.getUnlike()+1;
+                                            // final int
+                                            unlike=model.getUnlike()+1;
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                    mDatabase.child(post_key).setValue(new Blogmodel(viewHolder.desc,viewHolder.pic,viewHolder.nam,viewHolder.photo,viewHolder.lke,unlike,viewHolder.time,viewHolder.date));
+                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                        @Override
+                                                        public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                            Toast.makeText(getActivity(), "Saved successfullyu!", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
                                                     processunlike=false;
                                                 }
 
@@ -264,7 +409,34 @@ public class MainActivity extends Fragment {
 
                                                 }
                                             });
+                                          /*  mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                @Override
+                                                public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                    Toast.makeText(getActivity(), "Saved successfullyu!", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });*/
+                                            processunlike=false;
                                         }
+                                     /*   mDatabase.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                                mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+
+                                                    @Override
+                                                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                                        Toast.makeText(getActivity(), "Saved successfullyu!", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                });
+                                                      processunlike=false;
+                                            }
+
+                                            @Override
+                                            public void onCancelled(DatabaseError databaseError) {
+
+                                            }
+                                        });*/
+                                        processunlike=false;
                                     }
 
                                 }
@@ -365,9 +537,9 @@ public class MainActivity extends Fragment {
                        @Override
                        public void onDataChange(DataSnapshot dataSnapshot) {
                          if(dataSnapshot.child(post_liked).hasChild(auth.getCurrentUser().getUid())){
-
+                                        lk.setColorFilter(mView.getResources().getColor(R.color.Grenn));
                          }else{
-
+                                     lk.setColorFilter(mView.getResources().getColor(R.color.Black));
                          }
                        }
 
@@ -383,9 +555,9 @@ public class MainActivity extends Fragment {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if(dataSnapshot.child(post_key).hasChild(auth.getCurrentUser().getUid())){
-
+                          unlk.setColorFilter(mView.getResources().getColor(R.color.Grenn));
                     }else{
-
+                       unlk.setColorFilter(mView.getResources().getColor(R.color.Black));
                     }
                 }
 

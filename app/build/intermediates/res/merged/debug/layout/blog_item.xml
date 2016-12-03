@@ -108,7 +108,7 @@
                 android:id="@+id/unlike"
                 android:adjustViewBounds="true"
                 android:layout_marginLeft="20dp"
-                android:background="#ffffff"
+                android:backgroundTint="#ffffff"
                 android:src="@drawable/unlike"/>
             <TextView
                 android:layout_width="25dp"

@@ -18,7 +18,7 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
 
   private View view2131558550;
 
-  private View view2131558554;
+  private View view2131558555;
 
   public Profile_ViewBinding(final T target, Finder finder, Object source) {
     this.target = target;
@@ -28,6 +28,7 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
     target.name = finder.findRequiredViewAsType(source, R.id.name, "field 'name'", EditText.class);
     target.email = finder.findRequiredViewAsType(source, R.id.email, "field 'email'", EditText.class);
     target.phone = finder.findRequiredViewAsType(source, R.id.phone, "field 'phone'", EditText.class);
+    target.clg = finder.findRequiredViewAsType(source, R.id.clg, "field 'clg'", EditText.class);
     view = finder.findRequiredView(source, R.id.photo, "field 'photo' and method 'pickPhoto'");
     target.photo = finder.castView(view, R.id.photo, "field 'photo'", ImageView.class);
     view2131558550 = view;
@@ -39,7 +40,7 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
     });
     target.loading = finder.findRequiredViewAsType(source, R.id.loading, "field 'loading'", LinearLayout.class);
     view = finder.findRequiredView(source, R.id.save, "method 'save'");
-    view2131558554 = view;
+    view2131558555 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,13 +58,14 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
     target.name = null;
     target.email = null;
     target.phone = null;
+    target.clg = null;
     target.photo = null;
     target.loading = null;
 
     view2131558550.setOnClickListener(null);
     view2131558550 = null;
-    view2131558554.setOnClickListener(null);
-    view2131558554 = null;
+    view2131558555.setOnClickListener(null);
+    view2131558555 = null;
 
     this.target = null;
   }

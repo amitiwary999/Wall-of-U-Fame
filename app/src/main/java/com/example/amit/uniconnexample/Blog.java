@@ -344,7 +344,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
                         newPost.child("uname").setValue(name_val);
                         newPost.child("profpic").setValue(photo);*/
                             mProgress.dismiss();
-                            startActivity(new Intent(Blog.this, MainActivity.class));
+                            startActivity(new Intent(Blog.this, Tabs.class));
                             finish();
                         }
                     });
@@ -353,7 +353,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
                     DatabaseReference newPost=mDatabase.push();
                     newPost.setValue(new Blogmodel(desc_val,null,name_val,photo_val,0,0,time_val,date_val));
                     mProgress.dismiss();
-                    startActivity(new Intent(Blog.this, MainActivity.class));
+                    startActivity(new Intent(Blog.this, Tabs.class));
                     finish();
 
                 }
