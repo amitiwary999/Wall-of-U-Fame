@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Dec 04 02:38:57 IST 2016
+#Sun Dec 04 03:05:11 IST 2016
 20.base=/home/amit/Buildapk/app/build/intermediates/res/resources-debug.ap_
 143.base=/home/amit/Buildapk/app/build/intermediates/res/resources-debug.ap_
 340.file=/home/amit/Buildapk/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ic_go_search_api_material.xml
