@@ -5,7 +5,7 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="653937524663"
+    timestamp="3968116194223"
     token="2814086315392108154"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -30,7 +30,14 @@
             type="MAIN" />
     </build>
     <build
-        timestamp="653937524663"
+        timestamp="3811307600747"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="3968116194223"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

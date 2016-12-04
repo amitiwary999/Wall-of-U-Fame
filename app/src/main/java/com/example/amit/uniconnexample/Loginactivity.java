@@ -26,6 +26,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.ProviderQueryResult;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -83,6 +84,16 @@ public class Loginactivity extends AppCompatActivity{
                     @Override
                     public void onInput(@NonNull MaterialDialog dialog, CharSequence input) {
                         String mail = dialog.getInputEditText().getText().toString();
+                        auth.fetchProvidersForEmail(mail).addOnCompleteListener(new OnCompleteListener<ProviderQueryResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<ProviderQueryResult> task) {
+                                if(task.isSuccessful()){
+                                    ///////// getProviders() will return size 1. if email ID is available.
+                                   if( task.getResult().getProviders().size()==0)
+                                    Toast.makeText(Loginactivity.this,"Email id is not registered",Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
                         if (EmailValidator.getInstance(false).isValid(mail)) {
                             auth.sendPasswordResetEmail(mail);
                             dialog.dismiss();
