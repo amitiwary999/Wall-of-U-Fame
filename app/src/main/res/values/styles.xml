@@ -20,6 +20,8 @@
     <style name="AppTheme.NoactionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/White</item>
+        <item name="colorAccent">@color/White</item>
         <item name="colorPrimaryDark">@color/colorAccent</item>
     </style>
     <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">

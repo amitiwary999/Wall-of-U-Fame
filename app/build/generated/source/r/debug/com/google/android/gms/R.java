@@ -18,26 +18,26 @@ public final class R {
 		public static final int scopeUris = 0x7f01013d;
 	}
 	public static final class color {
-		public static final int common_google_signin_btn_text_dark = 0x7f0c00a5;
-		public static final int common_google_signin_btn_text_dark_default = 0x7f0c0035;
-		public static final int common_google_signin_btn_text_dark_disabled = 0x7f0c0036;
-		public static final int common_google_signin_btn_text_dark_focused = 0x7f0c0037;
-		public static final int common_google_signin_btn_text_dark_pressed = 0x7f0c0038;
-		public static final int common_google_signin_btn_text_light = 0x7f0c00a6;
-		public static final int common_google_signin_btn_text_light_default = 0x7f0c0039;
-		public static final int common_google_signin_btn_text_light_disabled = 0x7f0c003a;
-		public static final int common_google_signin_btn_text_light_focused = 0x7f0c003b;
-		public static final int common_google_signin_btn_text_light_pressed = 0x7f0c003c;
-		public static final int common_plus_signin_btn_text_dark = 0x7f0c00a7;
-		public static final int common_plus_signin_btn_text_dark_default = 0x7f0c003d;
-		public static final int common_plus_signin_btn_text_dark_disabled = 0x7f0c003e;
-		public static final int common_plus_signin_btn_text_dark_focused = 0x7f0c003f;
-		public static final int common_plus_signin_btn_text_dark_pressed = 0x7f0c0040;
-		public static final int common_plus_signin_btn_text_light = 0x7f0c00a8;
-		public static final int common_plus_signin_btn_text_light_default = 0x7f0c0041;
-		public static final int common_plus_signin_btn_text_light_disabled = 0x7f0c0042;
-		public static final int common_plus_signin_btn_text_light_focused = 0x7f0c0043;
-		public static final int common_plus_signin_btn_text_light_pressed = 0x7f0c0044;
+		public static final int common_google_signin_btn_text_dark = 0x7f0c00a6;
+		public static final int common_google_signin_btn_text_dark_default = 0x7f0c0036;
+		public static final int common_google_signin_btn_text_dark_disabled = 0x7f0c0037;
+		public static final int common_google_signin_btn_text_dark_focused = 0x7f0c0038;
+		public static final int common_google_signin_btn_text_dark_pressed = 0x7f0c0039;
+		public static final int common_google_signin_btn_text_light = 0x7f0c00a7;
+		public static final int common_google_signin_btn_text_light_default = 0x7f0c003a;
+		public static final int common_google_signin_btn_text_light_disabled = 0x7f0c003b;
+		public static final int common_google_signin_btn_text_light_focused = 0x7f0c003c;
+		public static final int common_google_signin_btn_text_light_pressed = 0x7f0c003d;
+		public static final int common_plus_signin_btn_text_dark = 0x7f0c00a8;
+		public static final int common_plus_signin_btn_text_dark_default = 0x7f0c003e;
+		public static final int common_plus_signin_btn_text_dark_disabled = 0x7f0c003f;
+		public static final int common_plus_signin_btn_text_dark_focused = 0x7f0c0040;
+		public static final int common_plus_signin_btn_text_dark_pressed = 0x7f0c0041;
+		public static final int common_plus_signin_btn_text_light = 0x7f0c00a9;
+		public static final int common_plus_signin_btn_text_light_default = 0x7f0c0042;
+		public static final int common_plus_signin_btn_text_light_disabled = 0x7f0c0043;
+		public static final int common_plus_signin_btn_text_light_focused = 0x7f0c0044;
+		public static final int common_plus_signin_btn_text_light_pressed = 0x7f0c0045;
 	}
 	public static final class dimen {
 	}

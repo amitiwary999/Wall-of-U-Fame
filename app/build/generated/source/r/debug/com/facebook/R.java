@@ -33,30 +33,30 @@ public final class R {
 		public static final int contentPaddingTop = 0x7f0100ca;
 	}
 	public static final class color {
-		public static final int cardview_dark_background = 0x7f0c001c;
-		public static final int cardview_light_background = 0x7f0c001d;
-		public static final int cardview_shadow_end_color = 0x7f0c001e;
-		public static final int cardview_shadow_start_color = 0x7f0c001f;
-		public static final int com_facebook_blue = 0x7f0c0023;
-		public static final int com_facebook_button_background_color = 0x7f0c0024;
-		public static final int com_facebook_button_background_color_disabled = 0x7f0c0025;
-		public static final int com_facebook_button_background_color_focused = 0x7f0c0026;
-		public static final int com_facebook_button_background_color_focused_disabled = 0x7f0c0027;
-		public static final int com_facebook_button_background_color_pressed = 0x7f0c0028;
-		public static final int com_facebook_button_background_color_selected = 0x7f0c0029;
-		public static final int com_facebook_button_border_color_focused = 0x7f0c002a;
-		public static final int com_facebook_button_login_silver_background_color = 0x7f0c002b;
-		public static final int com_facebook_button_login_silver_background_color_pressed = 0x7f0c002c;
-		public static final int com_facebook_button_send_background_color = 0x7f0c002d;
-		public static final int com_facebook_button_send_background_color_pressed = 0x7f0c002e;
-		public static final int com_facebook_button_text_color = 0x7f0c00a3;
-		public static final int com_facebook_device_auth_text = 0x7f0c002f;
-		public static final int com_facebook_likeboxcountview_border_color = 0x7f0c0030;
-		public static final int com_facebook_likeboxcountview_text_color = 0x7f0c0031;
-		public static final int com_facebook_likeview_text_color = 0x7f0c0032;
-		public static final int com_facebook_messenger_blue = 0x7f0c0033;
-		public static final int com_facebook_send_button_text_color = 0x7f0c00a4;
-		public static final int com_facebook_share_button_text_color = 0x7f0c0034;
+		public static final int cardview_dark_background = 0x7f0c001d;
+		public static final int cardview_light_background = 0x7f0c001e;
+		public static final int cardview_shadow_end_color = 0x7f0c001f;
+		public static final int cardview_shadow_start_color = 0x7f0c0020;
+		public static final int com_facebook_blue = 0x7f0c0024;
+		public static final int com_facebook_button_background_color = 0x7f0c0025;
+		public static final int com_facebook_button_background_color_disabled = 0x7f0c0026;
+		public static final int com_facebook_button_background_color_focused = 0x7f0c0027;
+		public static final int com_facebook_button_background_color_focused_disabled = 0x7f0c0028;
+		public static final int com_facebook_button_background_color_pressed = 0x7f0c0029;
+		public static final int com_facebook_button_background_color_selected = 0x7f0c002a;
+		public static final int com_facebook_button_border_color_focused = 0x7f0c002b;
+		public static final int com_facebook_button_login_silver_background_color = 0x7f0c002c;
+		public static final int com_facebook_button_login_silver_background_color_pressed = 0x7f0c002d;
+		public static final int com_facebook_button_send_background_color = 0x7f0c002e;
+		public static final int com_facebook_button_send_background_color_pressed = 0x7f0c002f;
+		public static final int com_facebook_button_text_color = 0x7f0c00a4;
+		public static final int com_facebook_device_auth_text = 0x7f0c0030;
+		public static final int com_facebook_likeboxcountview_border_color = 0x7f0c0031;
+		public static final int com_facebook_likeboxcountview_text_color = 0x7f0c0032;
+		public static final int com_facebook_likeview_text_color = 0x7f0c0033;
+		public static final int com_facebook_messenger_blue = 0x7f0c0034;
+		public static final int com_facebook_send_button_text_color = 0x7f0c00a5;
+		public static final int com_facebook_share_button_text_color = 0x7f0c0035;
 	}
 	public static final class dimen {
 		public static final int cardview_compat_inset_shadow = 0x7f070052;

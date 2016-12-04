@@ -80,6 +80,12 @@ public class Profile extends AppCompatActivity {
         email.setKeyListener(null);
         user = FirebaseAuth.getInstance().getCurrentUser();
         userData = new UserData();
+        name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                name.setCursorVisible(true);
+            }
+        });
     /*   final AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
         activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);

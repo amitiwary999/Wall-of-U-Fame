@@ -95,7 +95,7 @@ public class Loginactivity extends AppCompatActivity{
         if(auth.getCurrentUser()==null) {
             Intent i = new Intent(Loginactivity.this, Signupactivity.class);
             startActivity(i);
-            finish();
+            //finish();
         }
     }
 

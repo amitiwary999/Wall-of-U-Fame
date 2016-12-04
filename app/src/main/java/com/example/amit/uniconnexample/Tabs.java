@@ -1,6 +1,8 @@
 package com.example.amit.uniconnexample;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -9,10 +11,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -198,6 +202,33 @@ public class Tabs extends AppCompatActivity {
             Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Tabs.this, Loginactivity.class));
             finish();
+          /*  AlertDialog.Builder d = new AlertDialog.Builder(this);
+            d.setMessage("Are you sure ?").
+                    setCancelable(false).
+                    setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            FirebaseAuth.getInstance().signOut();
+                            Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(Tabs.this, Loginactivity.class));
+                            finish();
+
+                        }
+                    }).
+                    setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+            AlertDialog alert = d.create();
+            alert.setTitle("Logout");
+            alert.show();
+            Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
+            nbutton.setTextColor(Color.BLACK);
+            Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
+            pbutton.setTextColor(Color.BLACK);*/
         }
         return super.onOptionsItemSelected(item);
     }

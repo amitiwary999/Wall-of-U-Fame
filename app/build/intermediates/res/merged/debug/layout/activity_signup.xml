@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#003f87">
+    android:background="@color/colorAccent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -55,15 +55,14 @@
         android:textColorHint="#ffffff"
         android:shadowColor="#ffffff"
         android:textColor="#ffffff"
-        app:counterEnabled="true"
-        app:counterMaxLength="4"
         app:errorEnabled="true">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username"
-            android:inputType="textEmailAddress"
+            android:minEms="4"
+            android:inputType="textPersonName"
             android:textColorHint="#ffffff"
             android:textColor="#ffffff"
             android:shadowColor="#ffffff"
@@ -218,8 +217,6 @@
                 android:id="@+id/clg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:counterEnabled="true"
-                app:counterMaxLength="10"
                 android:textColorHint="#ffffff"
                 android:shadowColor="#ffffff"
                 android:textColor="#ffffff"
@@ -229,7 +226,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="College"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPersonName"
                     android:textColorHint="#ffffff"
                     android:shadowColor="#ffffff"
                     android:textColor="#ffffff"
@@ -270,7 +267,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/phone"
-        android:inputType="textEmailAddress"
+        android:maxLength="10"
+        android:inputType="number"
         android:textColorHint="#ffffff"
         android:shadowColor="#ffffff"
         android:textColor="#ffffff"
@@ -287,7 +285,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/cornerbutton"
         android:textColor="#ffffff"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         />
         </LinearLayout>
 </RelativeLayout>

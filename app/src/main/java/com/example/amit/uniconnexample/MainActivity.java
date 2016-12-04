@@ -137,8 +137,8 @@ public class MainActivity extends Fragment {
 
                   final String post_key= getRef(position).getKey();
                     viewHolder.bindData(model);
-                  //  viewHolder.setLiked(post_key);
-                  //  viewHolder.setUnliked(post_key);
+                    viewHolder.setLiked(post_key);
+                    viewHolder.setUnliked(post_key);
                     viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -207,7 +207,7 @@ public class MainActivity extends Fragment {
                                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                @Override
                                                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                   mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlik,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+                                                                   mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lik,unlik,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                                        @Override
                                                                        public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
@@ -222,7 +222,7 @@ public class MainActivity extends Fragment {
 
                                                                }
                                                            });
-                                                       mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlik,model.getTime(),model.getDate()));
+                                                     //  mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlik,model.getTime(),model.getDate()));
 
                                                    }
                                                }
@@ -533,11 +533,24 @@ public class MainActivity extends Fragment {
 
         }
         public void setLiked(final String post_liked){
-                   mDatabaseLike.addValueEventListener(new ValueEventListener() {
+                   mDatabaseLike.addListenerForSingleValueEvent(new ValueEventListener() {
                        @Override
                        public void onDataChange(DataSnapshot dataSnapshot) {
                          if(dataSnapshot.child(post_liked).hasChild(auth.getCurrentUser().getUid())){
                                         lk.setColorFilter(mView.getResources().getColor(R.color.Grenn));
+                             mDatabaseunlike.addListenerForSingleValueEvent(new ValueEventListener() {
+                                 @Override
+                                 public void onDataChange(DataSnapshot dataSnapshot) {
+                                     if(!(dataSnapshot.child(post_liked).hasChild(auth.getCurrentUser().getUid()))){
+                                         unlk.setColorFilter(mView.getResources().getColor(R.color.Black));
+                                     }
+                                 }
+
+                                 @Override
+                                 public void onCancelled(DatabaseError databaseError) {
+
+                                 }
+                             });
                          }else{
                                      lk.setColorFilter(mView.getResources().getColor(R.color.Black));
                          }
@@ -551,14 +564,29 @@ public class MainActivity extends Fragment {
         }
 
         public void setUnliked(final String post_key){
-            mDatabaseunlike.addValueEventListener(new ValueEventListener() {
+            mDatabaseunlike.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if(dataSnapshot.child(post_key).hasChild(auth.getCurrentUser().getUid())){
                           unlk.setColorFilter(mView.getResources().getColor(R.color.Grenn));
+                        mDatabaseLike.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                if(!(dataSnapshot.child(post_key).hasChild(auth.getCurrentUser().getUid()))){
+                                    lk.setColorFilter(mView.getResources().getColor(R.color.Black));
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
                     }else{
+
                        unlk.setColorFilter(mView.getResources().getColor(R.color.Black));
                     }
+
                 }
 
                 @Override

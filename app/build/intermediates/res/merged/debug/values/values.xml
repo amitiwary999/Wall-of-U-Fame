@@ -64,6 +64,7 @@
     <bool name="md_is_tablet">false</bool>
     <color name="Black">#000000</color>
     <color name="Grenn">#ffff00</color>
+    <color name="White">#ffffff</color>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -906,6 +907,8 @@
     <style name="AppTheme.NoactionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/White</item>
+        <item name="colorAccent">@color/White</item>
         <item name="colorPrimaryDark">@color/colorAccent</item>
     </style>
     <style name="Apptheme" parent="Theme.AppCompat.Light.DarkActionBar">

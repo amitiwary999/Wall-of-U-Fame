@@ -4,6 +4,7 @@ import android.*;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -19,6 +20,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -130,6 +132,11 @@ public class Signupactivity extends AppCompatActivity {
     }
  @OnClick(R.id.sign_up)
     void sup(){
+     InputMethodManager inputManager = (InputMethodManager)
+             getSystemService(Context.INPUT_METHOD_SERVICE);
+
+     inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+             InputMethodManager.HIDE_NOT_ALWAYS);
      pass=password.getEditText().getText().toString().trim();
      confrmpass=confrmpassword.getEditText().getText().toString().trim();
      if (EmailValidator.getInstance(false).isValid(email.getEditText().getText().toString().trim())) {
@@ -151,7 +158,7 @@ public class Signupactivity extends AppCompatActivity {
                      } else
                          phone.setError("Enter 10 digits");
                  } else
-                     name.setError("Enter at least 2 characters");
+                     name.setError("Enter at least 4 characters");
              }else{
                  AlertDialog.Builder d = new AlertDialog.Builder(Signupactivity.this);
                  d.setMessage("Password is not matching").
