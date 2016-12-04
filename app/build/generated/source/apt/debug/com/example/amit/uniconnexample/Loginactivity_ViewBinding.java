@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
 import butterknife.internal.Finder;
@@ -25,6 +26,7 @@ public class Loginactivity_ViewBinding<T extends Loginactivity> implements Unbin
     View view;
     target.email = finder.findRequiredViewAsType(source, R.id.email, "field 'email'", EditText.class);
     target.password = finder.findRequiredViewAsType(source, R.id.password, "field 'password'", EditText.class);
+    target.forgotpassword = finder.findRequiredViewAsType(source, R.id.forpass, "field 'forgotpassword'", TextView.class);
     view = finder.findRequiredView(source, R.id.log_in, "field 'login' and method 'login'");
     target.login = finder.castView(view, R.id.log_in, "field 'login'", Button.class);
     view2131558541 = view;
@@ -53,6 +55,7 @@ public class Loginactivity_ViewBinding<T extends Loginactivity> implements Unbin
 
     target.email = null;
     target.password = null;
+    target.forgotpassword = null;
     target.login = null;
     target.sign_up = null;
     target.loginProgress = null;

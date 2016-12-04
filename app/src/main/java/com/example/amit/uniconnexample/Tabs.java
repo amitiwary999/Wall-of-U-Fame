@@ -4,7 +4,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -32,12 +35,17 @@ import java.util.List;
 public class Tabs extends AppCompatActivity {
     private TabLayout tabLayout,tablayoutbottom;
     private ViewPager viewPager;
+    private CoordinatorLayout mainFrame;
+    boolean doubleBackToExitPressedOnce = false;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs);
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
+        mainFrame=(CoordinatorLayout)findViewById(R.id.coordinatorLayout);
         viewPager=(ViewPager)findViewById(R.id.viewPager);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
@@ -186,6 +194,26 @@ public class Tabs extends AppCompatActivity {
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.commit();
     }
+
+   /* @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Snackbar.make(mainFrame,"Please click again to exit",Snackbar.LENGTH_LONG).show();
+       // Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

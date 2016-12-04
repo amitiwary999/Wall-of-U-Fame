@@ -20,6 +20,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -30,6 +31,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.apache.commons.validator.routines.EmailValidator;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,6 +52,8 @@ public class Loginactivity extends AppCompatActivity{
     EditText email;
     @BindView(R.id.password)
     EditText password;
+    @BindView(R.id.forpass)
+    TextView forgotpassword;
     private FirebaseAuth auth;
     @BindView(R.id.log_in)
     Button login;
@@ -68,6 +73,29 @@ public class Loginactivity extends AppCompatActivity{
         setTitle("Login");
         auth = FirebaseAuth.getInstance();
         if (isNetworkConnected()) {
+            forgotpassword.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    new MaterialDialog.Builder(Loginactivity.this)
+                .content("You will receive an email on your ID to reset the password:")
+                .input("Enter your email", null, false, new MaterialDialog.InputCallback() {
+                    @Override
+                    public void onInput(@NonNull MaterialDialog dialog, CharSequence input) {
+                        String mail = dialog.getInputEditText().getText().toString();
+                        if (EmailValidator.getInstance(false).isValid(mail)) {
+                            auth.sendPasswordResetEmail(mail);
+                            dialog.dismiss();
+                        } else dialog.getInputEditText().setError("Enter a valid email");
+                    }
+                })
+                .autoDismiss(false)
+                .positiveText("Reset Password")
+                .show();
+
+
+                }
+            });
             if (auth.getCurrentUser() != null) {
              /*   signup = (TextView) findViewById(R.id.sign_up);
                 signup.setOnClickListener(new View.OnClickListener() {
