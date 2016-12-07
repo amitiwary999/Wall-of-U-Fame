@@ -112,7 +112,9 @@ public class Signupactivity extends AppCompatActivity {
     private void writeUserData(String uid) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
+        DatabaseReference myref=database.getReference();
         myRef.child("Userdetail").child(uid).setValue(userData);
+        myref.child("chat").child(uid).setValue(new Chatusermodel(userData.name,userData.photo));
     }
 
     @OnClick(R.id.iview)

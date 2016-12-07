@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.pkmmte.view.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:id="@+id/pimage"
+            android:src="@drawable/user"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bname"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="Anonyms"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="3dp"/>
+        </LinearLayout>
+
+</LinearLayout>
