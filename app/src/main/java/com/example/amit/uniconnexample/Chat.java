@@ -7,7 +7,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -28,6 +31,7 @@ public class Chat extends Fragment  {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.activity_chat,container,false);
+        mChat=(RecyclerView)view.findViewById(R.id.mchat_list);
         user = FirebaseAuth.getInstance().getCurrentUser();
         auth=FirebaseAuth.getInstance();
         mDatabase= FirebaseDatabase.getInstance().getReference().child("chat");
@@ -45,9 +49,10 @@ public class Chat extends Fragment  {
         ) {
             @Override
             protected void populateViewHolder(Chatviewholder viewHolder, Chatusermodel model, int position) {
-
+                viewHolder.bindData(model);
             }
         };
+        mChat.setAdapter(firebaseRecyclerAdapter);
     }
 
     public static class Chatviewholder extends RecyclerView.ViewHolder{
@@ -57,7 +62,17 @@ public class Chat extends Fragment  {
             mView=itemView;
         }
         public void bindData(Chatusermodel model){
-
+            TextView post_name=(TextView)mView.findViewById(R.id.bname);
+            ImageView pro_pic=(ImageView)mView.findViewById(R.id.pimage);
+            if(model.getName()==null){
+                post_name.setText("Anonyms");
+               // nam="Anonyms";
+            }else{
+                post_name.setText(model.getName());
+               // nam=model.getName();
+            }
+            if(model.getPropic()!=null)
+            pro_pic.setImageBitmap(Utils.decodeBase64(model.getPropic()));
         }
     }
 }
