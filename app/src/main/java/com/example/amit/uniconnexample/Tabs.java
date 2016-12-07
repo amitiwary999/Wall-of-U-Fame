@@ -115,6 +115,7 @@ public class Tabs extends AppCompatActivity {
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.myaccount));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.notifications));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.message));
+        tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.chati));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.settings));
        /* TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.tabtext, null);
         tabOne.setText("My Profile");
@@ -180,6 +181,9 @@ public class Tabs extends AppCompatActivity {
                 //replaceFragment(new Notification());
                 break;
             case 4:
+                startActivity(new Intent(Tabs.this,Chat.class));
+                break;
+            case 5:
                 startActivity(new Intent(Tabs.this,Settings.class));
                // finish();
                // replaceFragment(new Settings());

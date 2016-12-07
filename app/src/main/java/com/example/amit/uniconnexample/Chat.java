@@ -1,8 +1,11 @@
 package com.example.amit.uniconnexample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,21 +24,25 @@ import com.google.firebase.database.FirebaseDatabase;
  * Created by amit on 7/12/16.
  */
 
-public class Chat extends Fragment  {
+public class Chat extends AppCompatActivity {
     private RecyclerView mChat;
     private DatabaseReference mDatabase;
     private FirebaseAuth auth;
+    private TabLayout tablayoutbottom;
     FirebaseUser user;
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.activity_chat,container,false);
-        mChat=(RecyclerView)view.findViewById(R.id.mchat_list);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_chat);
+        tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
+        mChat=(RecyclerView)findViewById(R.id.mchat_list);
         user = FirebaseAuth.getInstance().getCurrentUser();
         auth=FirebaseAuth.getInstance();
         mDatabase= FirebaseDatabase.getInstance().getReference().child("chat");
-        return view;
+        setupTabIconsBottom();
+        bindWidgetsWithAnEvent();
+        //return view;
     }
 
     @Override
@@ -53,6 +60,67 @@ public class Chat extends Fragment  {
             }
         };
         mChat.setAdapter(firebaseRecyclerAdapter);
+    }
+
+    private void setupTabIconsBottom() {
+        tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.home), true);
+        tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.myaccount));
+        tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.notifications));
+        tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.message));
+        tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.chati));
+        tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.settings));
+    }
+
+    private void bindWidgetsWithAnEvent()
+    {
+        tablayoutbottom.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                setCurrentTabFragment(tab.getPosition());
+            }
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                setCurrentTabFragment(tab.getPosition());
+            }
+        });
+
+    }
+
+    private void setCurrentTabFragment(int tabPosition)
+    {
+        switch (tabPosition)
+        {
+            case 0:
+                startActivity(new Intent(Chat.this,Tabs.class));
+                finish();
+                break;
+            case 1 :
+                startActivity(new Intent(Chat.this,Profile.class));
+                finish();
+                //replaceFragment(new Profile());
+                break;
+            case 2 :
+                startActivity(new Intent(Chat.this,Notification.class));
+                finish();
+                // replaceFragment(new Message());
+                break;
+            case 3:
+                 startActivity(new Intent(Chat.this,Message.class));
+                //replaceFragment(new Notification());
+                break;
+            case 4:
+              //  startActivity(new Intent(Chat.this,Chat.class));
+             //   break;
+            case 5:
+                startActivity(new Intent(Chat.this,Settings.class));
+                finish();
+                // replaceFragment(new Settings());
+                break;
+        }
     }
 
     public static class Chatviewholder extends RecyclerView.ViewHolder{

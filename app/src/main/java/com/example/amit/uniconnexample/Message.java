@@ -43,6 +43,7 @@ public class Message extends AppCompatActivity {
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.myaccount));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.notifications));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.message),true);
+        tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.chati));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.settings));
     }
 
@@ -88,6 +89,9 @@ public class Message extends AppCompatActivity {
                 //replaceFragment(new Notification());
                 break;
             case 4:
+                startActivity(new Intent(Message.this,Chat.class));
+                break;
+            case 5:
                 startActivity(new Intent(Message.this,Settings.class));
                 finish();
                 // replaceFragment(new Settings());
