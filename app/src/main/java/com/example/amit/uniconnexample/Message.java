@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.amit.uniconnexample.utils.Utils;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 
 /**
  * Created by amit on 28/11/16.
@@ -20,6 +23,9 @@ import com.example.amit.uniconnexample.utils.Utils;
 public class Message extends AppCompatActivity {
     private TabLayout tablayoutbottom;
     private Toolbar toolbar;
+    private DatabaseReference mDatabase;
+    private FirebaseAuth auth;
+    FirebaseUser user;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

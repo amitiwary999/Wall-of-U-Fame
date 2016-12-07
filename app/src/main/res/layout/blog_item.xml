@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
- <ImageView
+ <com.pkmmte.view.CircularImageView
      android:layout_width="50dp"
      android:layout_height="45dp"
      android:id="@+id/pimage"
@@ -107,7 +107,7 @@
                 android:layout_height="20dp"
                 android:id="@+id/unlike"
                 android:adjustViewBounds="true"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="40dp"
                 android:backgroundTint="#ffffff"
                 android:src="@drawable/unlike"/>
             <TextView
@@ -123,14 +123,14 @@
                 android:layout_height="20dp"
                 android:id="@+id/chat"
                 android:adjustViewBounds="true"
-                android:layout_marginLeft="110dp"
+                android:layout_marginLeft="40dp"
                 android:background="#ffffff"
                 android:src="@drawable/chat"/>
             <ImageButton
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:id="@+id/bookmark"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="40dp"
                 android:background="#ffffff"
                 android:adjustViewBounds="true"
 

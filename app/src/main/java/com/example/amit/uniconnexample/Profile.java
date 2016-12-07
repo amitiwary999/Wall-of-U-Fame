@@ -204,8 +204,7 @@ public class Profile extends AppCompatActivity {
     @OnClick(R.id.save)
     void save() {
         writeUserData(user.getUid());
-        startActivity(new Intent(Profile.this, MainActivity.class));
-        finish();
+
        // MainActivity.user = userData;
     }
 
@@ -224,6 +223,7 @@ public class Profile extends AppCompatActivity {
             public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                 dialog.dismiss();
                 Toast.makeText(Profile.this, "Saved successfully!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Profile.this, MainActivity.class));
                 finish();
             }
         });

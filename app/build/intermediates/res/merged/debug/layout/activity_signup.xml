@@ -13,8 +13,8 @@
 
 
     <com.pkmmte.view.CircularImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/iview"
         android:adjustViewBounds="true"
         android:layout_marginLeft="140dp"
@@ -285,7 +285,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/cornerbutton"
         android:textColor="#ffffff"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         />
         </LinearLayout>
 </RelativeLayout>

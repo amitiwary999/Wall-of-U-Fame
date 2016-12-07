@@ -195,7 +195,7 @@ public class Tabs extends AppCompatActivity {
         ft.commit();
     }
 
-   /* @Override
+    @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
@@ -213,7 +213,7 @@ public class Tabs extends AppCompatActivity {
                 doubleBackToExitPressedOnce=false;
             }
         }, 2000);
-    }*/
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -226,11 +226,11 @@ public class Tabs extends AppCompatActivity {
 
 
         if(item.getItemId()==R.id.signout){
-            FirebaseAuth.getInstance().signOut();
+           /* FirebaseAuth.getInstance().signOut();
             Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Tabs.this, Loginactivity.class));
-            finish();
-          /*  AlertDialog.Builder d = new AlertDialog.Builder(this);
+            finish();*/
+            AlertDialog.Builder d = new AlertDialog.Builder(this);
             d.setMessage("Are you sure ?").
                     setCancelable(false).
                     setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -256,7 +256,7 @@ public class Tabs extends AppCompatActivity {
             Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
             nbutton.setTextColor(Color.BLACK);
             Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
-            pbutton.setTextColor(Color.BLACK);*/
+            pbutton.setTextColor(Color.BLACK);
         }
         return super.onOptionsItemSelected(item);
     }

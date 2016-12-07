@@ -9,7 +9,7 @@ import android.os.Parcelable;
 
 public class UserData implements Parcelable {
     public String phone,  name;
-    public String email , photo = "",clg; //extras
+    public String email , photo ,clg; //extras
 
 
     @Override
@@ -23,6 +23,7 @@ public class UserData implements Parcelable {
         dest.writeString(this.name);
       //  dest.writeString(this.location);
         dest.writeString(this.photo);
+        dest.writeString(this.clg);
     }
 
     public UserData() {
@@ -33,6 +34,7 @@ public class UserData implements Parcelable {
         this.name = in.readString();
       //  this.location = in.readString();
         this.photo = in.readString();
+        this.clg=in.readString();
     }
 
     public static final Creator<UserData> CREATOR = new Parcelable.Creator<UserData>() {
