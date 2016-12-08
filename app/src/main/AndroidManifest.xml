@@ -38,6 +38,8 @@
             android:theme="@style/AppTheme.NoactionBar" ></activity>
         <activity android:name=".Message"
             android:theme="@style/AppTheme.NoactionBar"></activity>
+        <activity android:name=".Chat"
+            android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Settings"
             android:theme="@style/AppTheme.NoactionBar"></activity>
     </application>

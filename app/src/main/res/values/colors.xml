@@ -16,5 +16,6 @@
     <color name="md_blue">#003366</color>
     <color name="Black">#000000</color>
     <color name="Grenn">#ffff00</color>
+    <color name="md_grey_300">#E0E0E0</color>
     <color name="White">#ffffff</color>
 </resources>

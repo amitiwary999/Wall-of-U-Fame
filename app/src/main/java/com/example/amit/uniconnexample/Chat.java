@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ public class Chat extends AppCompatActivity {
     private FirebaseAuth auth;
     private TabLayout tablayoutbottom;
     FirebaseUser user;
+    String check;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,7 +41,10 @@ public class Chat extends AppCompatActivity {
         mChat=(RecyclerView)findViewById(R.id.mchat_list);
         user = FirebaseAuth.getInstance().getCurrentUser();
         auth=FirebaseAuth.getInstance();
-        mDatabase= FirebaseDatabase.getInstance().getReference().child("chat");
+        String n=auth.getCurrentUser().getEmail();
+        check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
+        mDatabase= FirebaseDatabase.getInstance().getReference().child(check+"chat");
+        mChat.setLayoutManager(new LinearLayoutManager(this));
         setupTabIconsBottom();
         bindWidgetsWithAnEvent();
         //return view;
@@ -56,6 +61,7 @@ public class Chat extends AppCompatActivity {
         ) {
             @Override
             protected void populateViewHolder(Chatviewholder viewHolder, Chatusermodel model, int position) {
+                if(!mDatabase.equals(auth.getCurrentUser().getUid()))
                 viewHolder.bindData(model);
             }
         };

@@ -114,7 +114,7 @@ public class Signupactivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference();
         DatabaseReference myref=database.getReference();
         myRef.child("Userdetail").child(uid).setValue(userData);
-        myref.child("chat").child(uid).setValue(new Chatusermodel(userData.name,userData.photo));
+        myref.child(check+"chat").child(uid).setValue(new Chatusermodel(userData.name,userData.photo));
     }
 
     @OnClick(R.id.iview)
@@ -227,6 +227,8 @@ public class Signupactivity extends AppCompatActivity {
         userData.phone = phone.getEditText().getText().toString();
         userData.name = name.getEditText().getText().toString();
         userData.email=email.getEditText().getText().toString();
+        String n=userData.email;
+         check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
         userData.clg=clg.getEditText().getText().toString();
         Bitmap icon = BitmapFactory.decodeResource(getResources(),
                 R.drawable.default_account);

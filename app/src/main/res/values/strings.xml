@@ -5,6 +5,7 @@
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="phone">Phone</string>
+    <string name="send_msg_hint">Enter your message</string>
     <string name="sign_up">Lets Begin</string>
     <string name="activity_login_log_in">Login</string>
     <string name="activity_login_sing_up">Sign Up</string>
