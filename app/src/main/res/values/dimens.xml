@@ -3,5 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="pad_5dp">5dp</dimen>
+    <dimen name="messagelayout_minwidth">40dp</dimen>
+    <dimen name="message_layout_max_width">250dp</dimen>
+    <dimen name="message_text_size">16sp</dimen>
     <dimen name="fab_margin">12dp</dimen>
 </resources>

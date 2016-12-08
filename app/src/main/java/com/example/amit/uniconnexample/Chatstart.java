@@ -25,6 +25,7 @@ public class Chatstart extends AppCompatActivity {
     FirebaseUser user;
     String msg;
     EditText message;
+    DatabaseReference newMessage,newMesage;
     private RecyclerView mChat;
     ImageButton send;
     @Override
@@ -40,8 +41,12 @@ public class Chatstart extends AppCompatActivity {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabase.child(auth.getCurrentUser().getUid()).child("sent").child("")
+                 newMessage=mDatabase.child(auth.getCurrentUser().getUid()).child("sent").child("").push();
+                newMessage.setValue(msg);
+                 newMesage=mDatabase.child(" ").child("receive").child(auth.getCurrentUser().getUid()).push();
+                newMesage.setValue(msg);
             }
         });
     }
+
 }
