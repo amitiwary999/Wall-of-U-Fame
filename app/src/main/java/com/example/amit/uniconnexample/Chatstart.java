@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -51,11 +52,13 @@ public class Chatstart extends AppCompatActivity {
         newReply=FirebaseDatabase.getInstance().getReference().child("message").child(key).child(auth.getCurrentUser().getUid());
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message");
         mChat.setLayoutManager(new LinearLayoutManager(this));
-        final String msge=msg;
+
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Chatstart.this,msg,Toast.LENGTH_LONG).show();
+
+                final String msge=message.getText().toString();
+                Toast.makeText(Chatstart.this,msge,Toast.LENGTH_LONG).show();
                 if(msge.length()!=0) {
                     DatabaseReference newMessage = mDatabase.child(auth.getCurrentUser().getUid()).child(key).push();
                     newMessage.child("msg1").setValue(msge);
@@ -71,7 +74,15 @@ public class Chatstart extends AppCompatActivity {
 
     }
 
-    public synchronized void computeothermessage(){
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+        );
+    }
+
+    public  void computeothermessage(){
         FirebaseRecyclerAdapter<Chatstartmodel,Chatstartviewholder> firebaserecycleradapter=new FirebaseRecyclerAdapter<Chatstartmodel, Chatstartviewholder>(
                 Chatstartmodel.class,
                 R.layout.activity_startchatitem,
@@ -81,13 +92,15 @@ public class Chatstart extends AppCompatActivity {
             @Override
             protected void populateViewHolder(final Chatstartviewholder viewHolder, final Chatstartmodel model, int position) {
                 //  viewHolder.bindData(model);
-                newReply.addListenerForSingleValueEvent(new ValueEventListener() {
+                viewHolder.setMsg1(model.getMsg1());
+                viewHolder.setMsg2(model.getMsg2());
+              /*  newReply.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if(dataSnapshot.hasChild("msg2")) {
-                            viewHolder.setMsg1(model.getMsg1());
+
                         }  if(dataSnapshot.hasChild("msg1")) {
-                            viewHolder.setMsg2(model.getMsg2());
+
                         }
                     }
 
@@ -95,7 +108,7 @@ public class Chatstart extends AppCompatActivity {
                     public void onCancelled(DatabaseError databaseError) {
 
                     }
-                });
+                });*/
             }
         };
         mChat.setAdapter(firebaserecycleradapter);

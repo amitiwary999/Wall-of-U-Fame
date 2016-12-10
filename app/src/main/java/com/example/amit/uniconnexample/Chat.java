@@ -62,7 +62,7 @@ public class Chat extends AppCompatActivity {
         ) {
             @Override
             protected void populateViewHolder(Chatviewholder viewHolder, Chatusermodel model, int position) {
-                if(!mDatabase.equals(auth.getCurrentUser().getUid()))
+              //  if(!mDatabase.equals(auth.getCurrentUser().getUid()))
                 viewHolder.bindData(model);
                final String key=getRef(position).getKey();
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
