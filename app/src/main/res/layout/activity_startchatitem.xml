@@ -6,7 +6,7 @@
 
 <TextView
     android:id="@+id/sMessage"
-    android:layout_width="wrap_content"
+    android:layout_width="200dp"
     android:layout_height="wrap_content"
     android:layout_alignParentRight="true"
     android:layout_marginRight="8dp"
@@ -21,13 +21,12 @@
 
     <TextView
         android:id="@+id/rMessage"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/sMessage"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="5dp"
-        android:visibility="gone"
+        android:layout_marginTop="10dp"
         android:maxWidth="@dimen/message_layout_max_width"
         android:autoLink="all"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"

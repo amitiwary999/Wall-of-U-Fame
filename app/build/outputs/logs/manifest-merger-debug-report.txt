@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:2:1-47:12
+ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
@@ -44,7 +44,7 @@ ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:9:5-65
 	android:name
 		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:9:19-63
 application
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:10:5-45:19
+ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:10:5-47:19
 MERGED from [com.pkmmte.view:circularimageview:1.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.pkmmte.view/circularimageview/1.1/AndroidManifest.xml:11:5-20
 MERGED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:12:5-83:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/AndroidManifest.xml:28:5-37:19
@@ -150,12 +150,18 @@ ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:41:9-42:68
 		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:42:13-56
 	android:name
 		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:41:19-39
-activity#com.example.amit.uniconnexample.Settings
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:43:9-44:68
+activity#com.example.amit.uniconnexample.Chatstart
+ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:43:9-44:56
 	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:44:13-56
+		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:44:13-44
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:43:19-43
+		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:43:19-44
+activity#com.example.amit.uniconnexample.Settings
+ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:45:9-46:68
+	android:theme
+		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:46:13-56
+	android:name
+		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:45:19-43
 uses-sdk
 INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.pkmmte.view:circularimageview:1.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.pkmmte.view/circularimageview/1.1/AndroidManifest.xml:7:5-9:41

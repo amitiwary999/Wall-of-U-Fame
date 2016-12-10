@@ -180,6 +180,7 @@
     <color name="md_divider_black">#10000000</color>
     <color name="md_divider_white">#10FFFFFF</color>
     <color name="md_edittext_error">#DD2C00</color>
+    <color name="md_grey_300">#E0E0E0</color>
     <color name="md_grey_400">#BDBDBD</color>
     <color name="md_indigo_400">#5C6BC0</color>
     <color name="md_indigo_800">#283593</color>
@@ -699,6 +700,9 @@
     <dimen name="md_title_frame_margin_bottom">12dp</dimen>
     <dimen name="md_title_frame_margin_bottom_less">6dp</dimen>
     <dimen name="md_title_textsize">20sp</dimen>
+    <dimen name="message_layout_max_width">250dp</dimen>
+    <dimen name="message_text_size">16sp</dimen>
+    <dimen name="messagelayout_minwidth">40dp</dimen>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
@@ -859,6 +863,7 @@
     <string name="require_email_text">Please input email address</string>
     <string name="required_field">You can\'t leave this empty.</string>
     <string name="search_menu_title">Search</string>
+    <string name="send_msg_hint">Enter your message</string>
     <string name="sign_in">Sign in</string>
     <string name="sign_in_no_password_title">Put an email to use for sign in</string>
     <string name="sign_in_with_email">Sign in with email</string>

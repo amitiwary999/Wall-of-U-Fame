@@ -16,7 +16,7 @@
 
     <uses-feature android:name="android.hardware.location.gps" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Optional permission for App measurement to run. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
@@ -64,22 +64,18 @@
             android:name="com.example.amit.uniconnexample.Message"
             android:theme="@style/AppTheme.NoactionBar" />
         <activity
-            android:name="com.example.amit.uniconnexample.Settings"
+            android:name="com.example.amit.uniconnexample.Chat"
             android:theme="@style/AppTheme.NoactionBar" />
         <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:name="com.example.amit.uniconnexample.Chatstart"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.amit.uniconnexample.Settings"
+            android:theme="@style/AppTheme.NoactionBar" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
-        <provider
-            android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.example.amit.uniconnexample.firebaseinitprovider"
-            android:exported="false"
-            android:initOrder="100" />
 
         <activity
             android:name="com.firebase.ui.auth.ui.email.ConfirmRecoverPasswordActivity"
@@ -166,6 +162,24 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:name="com.google.firebase.crash.internal.service.FirebaseCrashSenderService"
             android:process=":background_crash" />
 
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
             android:exported="true"
@@ -196,18 +210,11 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             </intent-filter>
         </service>
 
-        <receiver
-            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-            android:enabled="true" >
-            <intent-filter>
-                <action android:name="com.google.android.gms.measurement.UPLOAD" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementService"
-            android:enabled="true"
-            android:exported="false" />
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.example.amit.uniconnexample.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
     </application>
 
 </manifest>

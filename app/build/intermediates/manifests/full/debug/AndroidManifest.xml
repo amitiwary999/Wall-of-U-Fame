@@ -66,6 +66,9 @@
             android:name="com.example.amit.uniconnexample.Chat"
             android:theme="@style/AppTheme.NoactionBar" />
         <activity
+            android:name="com.example.amit.uniconnexample.Chatstart"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="com.example.amit.uniconnexample.Settings"
             android:theme="@style/AppTheme.NoactionBar" />
 

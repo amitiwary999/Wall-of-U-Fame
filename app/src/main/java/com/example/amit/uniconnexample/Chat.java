@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -63,6 +64,16 @@ public class Chat extends AppCompatActivity {
             protected void populateViewHolder(Chatviewholder viewHolder, Chatusermodel model, int position) {
                 if(!mDatabase.equals(auth.getCurrentUser().getUid()))
                 viewHolder.bindData(model);
+               final String key=getRef(position).getKey();
+                viewHolder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(Chat.this,key,Toast.LENGTH_LONG).show();
+                        Intent i=new Intent(Chat.this,Chatstart.class);
+                        i.putExtra("chat",key);
+                        startActivity(i);
+                    }
+                });
             }
         };
         mChat.setAdapter(firebaseRecyclerAdapter);

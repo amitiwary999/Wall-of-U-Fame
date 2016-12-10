@@ -12,6 +12,10 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-anydpi-v21/ic_twitter.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/send_fab.xml",
+        "source": "/home/amit/Buildapk/app/build/generated/res/pngs/debug/drawable-anydpi-v21/send_fab.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_google.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-anydpi-v21/ic_google.xml"
     }
