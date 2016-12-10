@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -12,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.client.Firebase;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,7 +36,8 @@ public class Chatstart extends AppCompatActivity {
     EditText message;
     Bundle bundle;
     String key;
-   private DatabaseReference newMessage,newMesage,newReply;
+    Toolbar toolbar;
+   private DatabaseReference newMessage,newMesage,newReply,newSend;
     private RecyclerView mChat;
     ImageButton send;
     @Override
@@ -47,9 +50,12 @@ public class Chatstart extends AppCompatActivity {
             key=bundle.getString("chat");
         mChat=(RecyclerView)findViewById(R.id. rv_chat_feed);
         send=(ImageButton)findViewById(R.id.btnSend);
+        toolbar=(Toolbar)findViewById(R.id.toolbar);
+        Utils.setUpToolbarBackButton(this, toolbar);
         message=(EditText)findViewById(R.id.et_message);
         msg=message.getText().toString();
         newReply=FirebaseDatabase.getInstance().getReference().child("message").child(key).child(auth.getCurrentUser().getUid());
+        newSend=FirebaseDatabase.getInstance().getReference().child("message").child(auth.getCurrentUser().getUid()).child(key);
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message");
         mChat.setLayoutManager(new LinearLayoutManager(this));
 
@@ -65,13 +71,30 @@ public class Chatstart extends AppCompatActivity {
                     DatabaseReference newMesage = mDatabase.child(key).child(auth.getCurrentUser().getUid()).push();
                     newMesage.child("msg2").setValue(msge);
                     message.setText(" ");
-
+              /*  FirebaseRecyclerAdapter<Chatreceivermodel,Chatreceiverholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Chatreceivermodel, Chatreceiverholder>(
+                        Chatreceivermodel.class,
+                        R.layout.activity_startchatitem,
+                        Chatreceiverholder.class,
+                        newSend
+                ) {
+                    @Override
+                    protected void populateViewHolder(Chatreceiverholder viewHolder, Chatreceivermodel model, int position) {
+                        viewHolder.setMsg1(model.getMsg1());
+                    }
+                } ;*/
+                //    mChat.setAdapter(firebaseRecyclerAdapter);
                     //  new computeThread().start();
                     computeothermessage();
                 }
             }
         });
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        computeothermessage();
     }
 
     @Override
@@ -112,6 +135,18 @@ public class Chatstart extends AppCompatActivity {
             }
         };
         mChat.setAdapter(firebaserecycleradapter);
+    }
+
+    public static class Chatreceiverholder extends RecyclerView.ViewHolder{
+          View mView;
+        public Chatreceiverholder(View itemView) {
+            super(itemView);
+            mView=itemView;
+        }
+        public void setMsg1(String msg){
+            TextView rMessage=(TextView)mView.findViewById(R.id.rMessage);
+            rMessage.setText(msg);
+        }
     }
 
     public static class Chatstartviewholder extends RecyclerView.ViewHolder{

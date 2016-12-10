@@ -41,7 +41,7 @@
         <activity android:name=".Chat"
             android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Chatstart"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Settings"
             android:theme="@style/AppTheme.NoactionBar"></activity>
     </application>

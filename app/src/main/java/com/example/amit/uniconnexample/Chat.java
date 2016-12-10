@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,7 @@ public class Chat extends AppCompatActivity {
     private TabLayout tablayoutbottom;
     FirebaseUser user;
     String check;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +42,8 @@ public class Chat extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         mChat=(RecyclerView)findViewById(R.id.mchat_list);
+        toolbar=(Toolbar)findViewById(R.id.toolbar);
+        Utils.setUpToolbarBackButton(this, toolbar);
         user = FirebaseAuth.getInstance().getCurrentUser();
         auth=FirebaseAuth.getInstance();
         String n=auth.getCurrentUser().getEmail();
@@ -62,7 +66,7 @@ public class Chat extends AppCompatActivity {
         ) {
             @Override
             protected void populateViewHolder(Chatviewholder viewHolder, Chatusermodel model, int position) {
-              //  if(!mDatabase.equals(auth.getCurrentUser().getUid()))
+                if(!mDatabase.getKey().equals(auth.getCurrentUser().getUid()))
                 viewHolder.bindData(model);
                final String key=getRef(position).getKey();
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
