@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,11 +33,13 @@ public class Chatstart extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private FirebaseAuth auth;
     FirebaseUser user;
-    String msg;
+    String msg,name;
     EditText message;
     Bundle bundle;
     String key;
+    TextView text;
     Toolbar toolbar;
+    ImageView src;
    private DatabaseReference newMessage,newMesage,newReply,newSend;
     private RecyclerView mChat;
     ImageButton send;
@@ -44,16 +47,47 @@ public class Chatstart extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startchat);
+        src=(ImageView)findViewById(R.id.src);
+        text=(TextView)findViewById(R.id.text);
         auth=FirebaseAuth.getInstance();
         bundle=getIntent().getExtras();
         if(bundle.getString("chat")!=null)
             key=bundle.getString("chat");
+        setTitle("");
         mChat=(RecyclerView)findViewById(R.id. rv_chat_feed);
         send=(ImageButton)findViewById(R.id.btnSend);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
-        Utils.setUpToolbarBackButton(this, toolbar);
+        //Utils.setUpToolbarBackButton(this, toolbar);
         message=(EditText)findViewById(R.id.et_message);
         msg=message.getText().toString();
+        newMesage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("photo");
+        newMesage.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                src.setImageBitmap(Utils.decodeBase64(dataSnapshot.getValue(String.class)));
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        newMessage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("name");
+        newMessage.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+               name= dataSnapshot.getValue(String.class);
+                text.setText(name);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
         newReply=FirebaseDatabase.getInstance().getReference().child("message").child(key).child(auth.getCurrentUser().getUid());
         newSend=FirebaseDatabase.getInstance().getReference().child("message").child(auth.getCurrentUser().getUid()).child(key);
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message");
@@ -89,7 +123,7 @@ public class Chatstart extends AppCompatActivity {
                     newMessage.child("msg1").setValue(msge);
                     DatabaseReference newMesage = mDatabase.child(key).child(auth.getCurrentUser().getUid()).push();
                     newMesage.child("msg2").setValue(msge);
-                    message.setText(" ");
+                    message.setText("");
               /*  FirebaseRecyclerAdapter<Chatreceivermodel,Chatreceiverholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Chatreceivermodel, Chatreceiverholder>(
                         Chatreceivermodel.class,
                         R.layout.activity_startchatitem,

@@ -4,11 +4,20 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="80dp"
+        android:paddingStart="80dp"
+        android:background="@drawable/rounded_corner"
+        android:minWidth="@dimen/messagelayout_minwidth"
+        android:maxWidth="@dimen/message_layout_max_width"
+        android:id="@+id/ll">
 <TextView
     android:id="@+id/sMessage"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentRight="true"
     android:layout_marginRight="8dp"
     android:layout_marginTop="5dp"
     android:maxWidth="@dimen/message_layout_max_width"
@@ -18,12 +27,14 @@
     android:textColorLink="#3333FF"
     android:textSize="@dimen/message_text_size"
     tools:text="Hello!"/>
+</LinearLayout>
+
 
     <TextView
         android:id="@+id/rMessage"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sMessage"
+        android:layout_below="@id/ll"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="10dp"

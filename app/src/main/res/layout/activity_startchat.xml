@@ -18,7 +18,25 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorAccent"
             appa:title="Post"
-            appa:titleTextColor="#fff"/>
+            appa:titleTextColor="#fff">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+            <com.pkmmte.view.CircularImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/src"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="2dp"
+                   android:textSize="20sp"
+                   android:layout_marginTop="10dp"
+                   android:textColor="#ffffff"
+                   android:id="@+id/text"/>
+           </LinearLayout>
+            </android.support.v7.widget.Toolbar>
         <LinearLayout
             android:id="@+id/send_message_layout"
             android:layout_width="match_parent"
