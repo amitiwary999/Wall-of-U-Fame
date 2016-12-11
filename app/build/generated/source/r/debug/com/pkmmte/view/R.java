@@ -8,18 +8,18 @@ package com.pkmmte.view;
 
 public final class R {
 	public static final class attr {
-		public static final int border = 0x7f0100cc;
-		public static final int border_color = 0x7f0100cd;
-		public static final int border_width = 0x7f0100ce;
-		public static final int circularImageViewStyle = 0x7f0100f0;
-		public static final int selector = 0x7f0100cf;
-		public static final int selector_color = 0x7f0100d0;
-		public static final int selector_stroke_color = 0x7f0100d1;
-		public static final int selector_stroke_width = 0x7f0100d2;
-		public static final int shadow = 0x7f0100d3;
+		public static final int border = 0x7f0100d4;
+		public static final int border_color = 0x7f0100d5;
+		public static final int border_width = 0x7f0100d6;
+		public static final int circularImageViewStyle = 0x7f0100f8;
+		public static final int selector = 0x7f0100d7;
+		public static final int selector_color = 0x7f0100d8;
+		public static final int selector_stroke_color = 0x7f0100d9;
+		public static final int selector_stroke_width = 0x7f0100da;
+		public static final int shadow = 0x7f0100db;
 	}
 	public static final class styleable {
-		public static final int[] CircularImageView = { 0x7f0100cc, 0x7f0100cd, 0x7f0100ce, 0x7f0100cf, 0x7f0100d0, 0x7f0100d1, 0x7f0100d2, 0x7f0100d3 };
+		public static final int[] CircularImageView = { 0x7f0100d4, 0x7f0100d5, 0x7f0100d6, 0x7f0100d7, 0x7f0100d8, 0x7f0100d9, 0x7f0100da, 0x7f0100db };
 		public static final int CircularImageView_border = 0;
 		public static final int CircularImageView_border_color = 1;
 		public static final int CircularImageView_border_width = 2;
@@ -28,7 +28,7 @@ public final class R {
 		public static final int CircularImageView_selector_stroke_color = 5;
 		public static final int CircularImageView_selector_stroke_width = 6;
 		public static final int CircularImageView_shadow = 7;
-		public static final int[] CustomCircularImageViewTheme = { 0x7f0100f0 };
+		public static final int[] CustomCircularImageViewTheme = { 0x7f0100f8 };
 		public static final int CustomCircularImageViewTheme_circularImageViewStyle = 0;
 	}
 }
