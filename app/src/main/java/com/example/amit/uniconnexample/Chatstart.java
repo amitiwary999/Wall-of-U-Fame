@@ -57,7 +57,26 @@ public class Chatstart extends AppCompatActivity {
         newReply=FirebaseDatabase.getInstance().getReference().child("message").child(key).child(auth.getCurrentUser().getUid());
         newSend=FirebaseDatabase.getInstance().getReference().child("message").child(auth.getCurrentUser().getUid()).child(key);
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message");
-        mChat.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setStackFromEnd(true);
+        mChat.setLayoutManager(linearLayoutManager);
+        mChat.setHasFixedSize(false);
+        mChat.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+            @Override
+            public void onLayoutChange(View view, int left, int top, int right, int bottom,
+                                       int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                if (bottom < oldBottom) {
+                    mChat.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            int scrollTo = mChat.getAdapter().getItemCount() - 1;
+                            scrollTo = scrollTo >= 0 ? scrollTo : 0;
+                            mChat.scrollToPosition(scrollTo);
+                        }
+                    }, 10);
+                }
+            }
+        });
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,12 +180,12 @@ public class Chatstart extends AppCompatActivity {
         }
 
         public void setMsg1(String msg){
-            TextView sMessage=(TextView)mView.findViewById(R.id.sMessage);
+            TextView sMessage=(TextView)mView.findViewById(R.id.rMessage);
             sMessage.setText(msg);
         }
 
         public void setMsg2(String msg){
-            TextView rMessage=(TextView)mView.findViewById(R.id.rMessage);
+            TextView rMessage=(TextView)mView.findViewById(R.id.sMessage);
             rMessage.setText(msg);
         }
      /*   public void bindData(final Chatstartmodel model){

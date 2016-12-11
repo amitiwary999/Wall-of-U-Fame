@@ -20,8 +20,11 @@ import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * Created by amit on 7/12/16.
@@ -58,6 +61,33 @@ public class Chat extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+      /*  mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot snapshot:dataSnapshot.getChildren()){
+                  if(!snapshot.hasChild(user.getUid())){
+                      TextView post_name=(TextView)findViewById(R.id.bname);
+                      ImageView pro_pic=(ImageView)findViewById(R.id.pimage);
+                      if(model.getName()==null){
+                          post_name.setText("Anonyms");
+                          // nam="Anonyms";
+                      }else{
+                          post_name.setText(model.getName());
+                          // nam=model.getName();
+                      }
+                      if(model.getPropic()!=null)
+                          pro_pic.setImageBitmap(Utils.decodeBase64(model.getPropic()));
+                  }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });*/
+
+
         FirebaseRecyclerAdapter<Chatusermodel,Chatviewholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Chatusermodel, Chatviewholder>(
                 Chatusermodel.class,
                 R.layout.activity_chatitem,
@@ -66,16 +96,21 @@ public class Chat extends AppCompatActivity {
         ) {
             @Override
             protected void populateViewHolder(Chatviewholder viewHolder, Chatusermodel model, int position) {
-                if(!mDatabase.getKey().equals(auth.getCurrentUser().getUid()))
+                if(getRef(position).getKey()!=auth.getCurrentUser().getUid()){
                 viewHolder.bindData(model);
+                }
                final String key=getRef(position).getKey();
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(Chat.this,key,Toast.LENGTH_LONG).show();
-                        Intent i=new Intent(Chat.this,Chatstart.class);
-                        i.putExtra("chat",key);
-                        startActivity(i);
+                        if(!key.equals(user.getUid())) {
+                            Toast.makeText(Chat.this, user.getUid(), Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(Chat.this, Chatstart.class);
+                            i.putExtra("chat", key);
+                            startActivity(i);
+                        }else{
+                            Toast.makeText(Chat.this,"You can't chat with yourself",Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
             }
@@ -131,6 +166,7 @@ public class Chat extends AppCompatActivity {
                 break;
             case 3:
                  startActivity(new Intent(Chat.this,Message.class));
+                finish();
                 //replaceFragment(new Notification());
                 break;
             case 4:
@@ -146,11 +182,14 @@ public class Chat extends AppCompatActivity {
 
     public static class Chatviewholder extends RecyclerView.ViewHolder{
         View mView;
+        FirebaseAuth auth;
         public Chatviewholder(View itemView) {
             super(itemView);
             mView=itemView;
+            auth=FirebaseAuth.getInstance();
         }
         public void bindData(Chatusermodel model){
+          //  if()
             TextView post_name=(TextView)mView.findViewById(R.id.bname);
             ImageView pro_pic=(ImageView)mView.findViewById(R.id.pimage);
             if(model.getName()==null){

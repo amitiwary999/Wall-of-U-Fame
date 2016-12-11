@@ -280,6 +280,7 @@ public class Profile extends AppCompatActivity {
                 break;
             case 4:
                 startActivity(new Intent(Profile.this,Chat.class));
+                finish();
                 break;
             case 5:
                   startActivity(new Intent(Profile.this,Settings.class));
