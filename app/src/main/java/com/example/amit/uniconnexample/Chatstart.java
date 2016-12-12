@@ -91,6 +91,8 @@ public class Chatstart extends AppCompatActivity {
         newReply=FirebaseDatabase.getInstance().getReference().child("message").child(key).child(auth.getCurrentUser().getUid());
         newSend=FirebaseDatabase.getInstance().getReference().child("message").child(auth.getCurrentUser().getUid()).child(key);
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message");
+        newReply.keepSynced(true);
+        mDatabase.keepSynced(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
         mChat.setLayoutManager(linearLayoutManager);

@@ -52,6 +52,7 @@ public class Chat extends AppCompatActivity {
         String n=auth.getCurrentUser().getEmail();
         check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
         mDatabase= FirebaseDatabase.getInstance().getReference().child(check+"chat");
+        mDatabase.keepSynced(true);
         mChat.setLayoutManager(new LinearLayoutManager(this));
         setupTabIconsBottom();
         bindWidgetsWithAnEvent();
