@@ -32,12 +32,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-hdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-hdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_email_white_18dp.png",
@@ -112,16 +112,16 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_visibility_off_black_24dp.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/res/drawable-hdpi-v4/ic_visibility_off_black_24dp.png"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_button_send_round_shadow.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable-hdpi-v4/messenger_button_send_round_shadow.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-hdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/messenger_button_send_round_shadow.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable-hdpi-v4/messenger_button_send_round_shadow.png"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_visibility_off_black_24dp.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/res/drawable-hdpi-v4/ic_visibility_off_black_24dp.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_plus_signin_btn_icon_light_pressed.9.png",
@@ -400,12 +400,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-hdpi-v4/common_plus_signin_btn_icon_light_focused.9.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal.9.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal.9.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png",

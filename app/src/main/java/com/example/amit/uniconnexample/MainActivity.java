@@ -36,6 +36,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 import com.tt.whorlviewlibrary.WhorlView;
@@ -59,6 +60,7 @@ public class MainActivity extends Fragment {
     private Boolean processlike=false,processunlike=false;
     private ArrayList<String> keysArray;
     private ProgressDialog mProgress;
+    Query ref;
     public MainActivity() {
         super();
     }
@@ -68,8 +70,8 @@ public class MainActivity extends Fragment {
         View view = inflater.inflate(R.layout.activity_main, container, false);
          whorlView = (WhorlView) view.findViewById(R.id.whorl2);
         keysArray = new ArrayList<>();
-        whorlView.setVisibility(View.VISIBLE);
-        whorlView.start();
+      //  whorlView.setVisibility(View.VISIBLE);
+      //  whorlView.start();
         userdata=new UserData();
         user = FirebaseAuth.getInstance().getCurrentUser();
         mProgress=new ProgressDialog(getActivity());
@@ -82,6 +84,7 @@ public class MainActivity extends Fragment {
         check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
        // mProgress.show();
         mDatabase= FirebaseDatabase.getInstance().getReference().child(check);
+        //ref=mDatabase.orderByChild("date");
         mDatabaselike=FirebaseDatabase.getInstance().getReference().child("like");
         mDatabaseunlike=FirebaseDatabase.getInstance().getReference().child("unlike");
         pdata.keepSynced(true);
@@ -103,13 +106,15 @@ public class MainActivity extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        if(auth.getCurrentUser()!=null) {
+        whorlView.setVisibility(View.VISIBLE);
+        whorlView.start();
+     //   if(auth.getCurrentUser()!=null) {
             pdata.child("Userdetail").child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     userdata = dataSnapshot.getValue(UserData.class);
-                    whorlView.stop();
-                    whorlView.setVisibility(View.GONE);
+                  //  whorlView.stop();
+                  //  whorlView.setVisibility(View.GONE);
                   //  mProgress.dismiss();
                  //   Toast.makeText(MainActivity.this,userdata.name,Toast.LENGTH_LONG).show();
                  //   mProgress.dismiss();
@@ -134,6 +139,8 @@ public class MainActivity extends Fragment {
                 protected void populateViewHolder(final BlogViewHolder viewHolder, final Blogmodel model, int position) {
                     //  model=new Blogmodel();
                   //  viewHolder.setTitle(model.getTitle());
+                    whorlView.stop();
+                    whorlView.setVisibility(View.GONE);
 
                   final String post_key= getRef(position).getKey();
                     viewHolder.bindData(model);
@@ -459,11 +466,15 @@ public class MainActivity extends Fragment {
                     viewHolder.setUnlike(model.getUnlike());*/
 
                 }
+                @Override
+                public Blogmodel getItem(int position) {
+                    return super.getItem(getItemCount() - 1 - position);
+                }
             };
             mBlogList.setAdapter(firebaseRecyclerAdapter);
-        }else{
+      //  }else{
             //loadLoginView();
-        }
+       // }
     }
 
     public void writeblog(){

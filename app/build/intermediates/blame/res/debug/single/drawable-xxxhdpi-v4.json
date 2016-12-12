@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/logo_googleg_color_18dp.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/res/drawable-xxxhdpi-v4/logo_googleg_color_18dp.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/logo_googleg_color_18dp.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/res/drawable-xxxhdpi-v4/logo_googleg_color_18dp.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",

@@ -210,7 +210,7 @@ public class Chatstart extends AppCompatActivity {
             super(itemView);
             mView=itemView;
             auth=FirebaseAuth.getInstance();
-            newReply=FirebaseDatabase.getInstance().getReference().child("message").child(" ").child(auth.getCurrentUser().getUid());
+         //   newReply=FirebaseDatabase.getInstance().getReference().child("message").child(" ").child(auth.getCurrentUser().getUid());
         }
 
         public void setMsg1(String msg){
