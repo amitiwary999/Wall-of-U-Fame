@@ -1,8 +1,16 @@
 package com.example.amit.uniconnexample;
 
+import android.app.ActivityManager;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.ComponentName;
+import android.content.Context;
+import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -25,6 +33,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.List;
+
 /**
  * Created by amit on 8/12/16.
  */
@@ -39,7 +49,7 @@ public class Chatstart extends AppCompatActivity {
     String key;
     TextView text;
     Toolbar toolbar;
-    ImageView src;
+    ImageView src; MediaPlayer song;
    private DatabaseReference newMessage,newMesage,newReply,newSend;
     private RecyclerView mChat;
     ImageButton send;
@@ -146,6 +156,51 @@ public class Chatstart extends AppCompatActivity {
 
     }
 
+    public static boolean isAppIsInBackground(Context context) {
+        boolean isInBackground = true;
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT_WATCH) {
+            List<ActivityManager.RunningAppProcessInfo> runningProcesses = am.getRunningAppProcesses();
+            for (ActivityManager.RunningAppProcessInfo processInfo : runningProcesses) {
+                if (processInfo.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
+                    for (String activeProcess : processInfo.pkgList) {
+                        if (activeProcess.equals(context.getPackageName())) {
+                            isInBackground = false;
+                        }
+                    }
+                }
+            }
+        } else {
+            List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
+            ComponentName componentInfo = taskInfo.get(0).topActivity;
+            if (componentInfo.getPackageName().equals(context.getPackageName())) {
+                isInBackground = false;
+            }
+        }
+
+        return isInBackground;
+    }
+
+    public void notification(){
+        song=MediaPlayer.create(this,R.raw.internetfriends0);
+        song.start();
+        NotificationManager notificationManager = (NotificationManager)
+                this.getSystemService(this.NOTIFICATION_SERVICE);
+        Notification n= new Notification.Builder(this).setContentTitle("Location notifier notice")
+                .setContentText(" Just 1 km away from destination")
+                .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();
+        notificationManager.notify(0,n);
+       /* song= MediaPlayer.create(getApplicationContext(),R.raw.internetfriends0);
+        song.start();
+        NotificationManager notificationManager = (NotificationManager)
+                this.getSystemService(getApplicationContext().NOTIFICATION_SERVICE);
+        NotificationCompat.Builder n= new NotificationCompat.Builder(this).setContentTitle("Location notifier notice")
+                .setContentText(" Just 1 km away from destination")
+                .setSmallIcon(R.drawable.no).setAutoCancel(true).build();
+
+        notificationManager.notify(0,n.build());*/
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -161,6 +216,7 @@ public class Chatstart extends AppCompatActivity {
     }
 
     public  void computeothermessage(){
+        
         FirebaseRecyclerAdapter<Chatstartmodel,Chatstartviewholder> firebaserecycleradapter=new FirebaseRecyclerAdapter<Chatstartmodel, Chatstartviewholder>(
                 Chatstartmodel.class,
                 R.layout.activity_startchatitem,
