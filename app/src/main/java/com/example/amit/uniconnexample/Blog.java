@@ -25,6 +25,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -312,7 +313,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        gps.stopUsingGPS();
+     //   gps.stopUsingGPS();
     }
 
 
@@ -349,13 +350,22 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
                         }
                     });
 
-                }else{
+                }else if(desc_val.length()!=0){
                     DatabaseReference newPost=mDatabase.push();
                     newPost.setValue(new Blogmodel(desc_val,null,name_val,photo_val,0,0,time_val,date_val));
                     mProgress.dismiss();
                     startActivity(new Intent(Blog.this, Tabs.class));
                     finish();
 
+                }else{
+                    mProgress.dismiss();
+                   // Toast.makeText(Blog.this,"Post can't be empty",Toast.LENGTH_LONG).show();
+                    AlertDialog.Builder d = new AlertDialog.Builder(Blog.this);
+                    d.setMessage("Post can't be empty").
+                            setCancelable(true);
+                    AlertDialog alert = d.create();
+                    alert.setTitle("Alert...!");
+                    alert.show();
                 }
           //  }else{
              //   mProgress.dismiss();

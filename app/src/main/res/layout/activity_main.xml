@@ -57,7 +57,7 @@
         android:scaleType="center"
         android:src="@drawable/ic_add_white_24dp"
         app:layout_behavior="com.example.amit.uniconnexample.ScrollAwareFABBehavior"
-        app:layout_anchor="@id/mblog_list"
+
         app:layout_anchorGravity="bottom|right|end" />
 
 </android.support.design.widget.CoordinatorLayout>

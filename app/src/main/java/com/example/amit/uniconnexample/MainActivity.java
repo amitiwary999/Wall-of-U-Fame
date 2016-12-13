@@ -93,7 +93,10 @@ public class MainActivity extends Fragment {
         mDatabaselike.keepSynced(true);
         mBlogList=(RecyclerView)view.findViewById(R.id.mblog_list);
         mBlogList.setHasFixedSize(true);
-        mBlogList.setLayoutManager(new LinearLayoutManager(getActivity()));
+        LinearLayoutManager lm=new LinearLayoutManager(getActivity());
+        lm.setReverseLayout(true);
+        lm.setStackFromEnd(true);
+        mBlogList.setLayoutManager(lm);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -466,10 +469,10 @@ public class MainActivity extends Fragment {
                     viewHolder.setUnlike(model.getUnlike());*/
 
                 }
-                @Override
+              /*  @Override
                 public Blogmodel getItem(int position) {
                     return super.getItem(getItemCount() - 1 - position);
-                }
+                }*/
             };
             mBlogList.setAdapter(firebaseRecyclerAdapter);
       //  }else{
