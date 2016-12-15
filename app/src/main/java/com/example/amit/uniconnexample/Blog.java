@@ -62,7 +62,7 @@ import java.util.Locale;
  * Created by amit on 31/10/16.
  */
 
-public class Blog extends AppCompatActivity implements LocationListener,GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener{
+public class Blog extends AppCompatActivity {
     private FirebaseAuth auth;
     private Uri mImageUri = null;
     private StorageReference mStorage;
@@ -241,7 +241,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
                     .addApi(LocationServices.API)
                     .build();
         }*/
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+      //  SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
       //  mal=sharedPreferences.getString("email","");
        // userdata=new UserData();
         auth=FirebaseAuth.getInstance();
@@ -294,6 +294,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
                 }
             });
         }else{
+            Toast.makeText(Blog.this,"You are logged out...Please login ",Toast.LENGTH_LONG).show();
             loadLoginView();
         }
     }
@@ -373,6 +374,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
 //
            // }
         }else{
+            Toast.makeText(Blog.this,"You are logged out...Please login ",Toast.LENGTH_LONG).show();
             loadLoginView();
         }
     }
@@ -417,7 +419,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
     }
 
 
-    @Override
+   /* @Override
     public void onLocationChanged(Location location) {
       //  this.location=location;
 
@@ -449,7 +451,7 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
           //  mLatitudeText.setText(String.valueOf(mLastLocation.getLatitude()));
           //  mLongitudeText.setText(String.valueOf(mLastLocation.getLongitude()));
         }*/
-    }
+   /* }
 
     @Override
     public void onConnectionSuspended(int i) {
@@ -459,5 +461,5 @@ public class Blog extends AppCompatActivity implements LocationListener,GoogleAp
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
-    }
+    }*/
 }

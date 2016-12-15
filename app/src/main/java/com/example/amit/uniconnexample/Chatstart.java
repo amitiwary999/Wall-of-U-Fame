@@ -216,7 +216,9 @@ public class Chatstart extends AppCompatActivity {
     }
 
     public  void computeothermessage(){
-        
+        if(isAppIsInBackground(this)){
+            notification();
+        }
         FirebaseRecyclerAdapter<Chatstartmodel,Chatstartviewholder> firebaserecycleradapter=new FirebaseRecyclerAdapter<Chatstartmodel, Chatstartviewholder>(
                 Chatstartmodel.class,
                 R.layout.activity_startchatitem,
@@ -268,6 +270,7 @@ public class Chatstart extends AppCompatActivity {
             super(itemView);
             mView=itemView;
             auth=FirebaseAuth.getInstance();
+
          //   newReply=FirebaseDatabase.getInstance().getReference().child("message").child(" ").child(auth.getCurrentUser().getUid());
         }
 
