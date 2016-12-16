@@ -17,19 +17,20 @@ public class Blogmodel {
     private int like;
     private int unlike;
     private String cityname;
-    private String time,date;
+    private String time,date,key;
     public Blogmodel(){
 
     }
-    public Blogmodel( String desc, String image,String uname,String propic,int like,int unlike,String time,String date) {
+    public Blogmodel( String key,String desc, String image,String uname,String propic,int like,int unlike,String time,String date) {
        // this.title = title;
+        this.key=key;
         this.desc = desc;
         this.image = image;
         this.uname=uname;
         this.propic=propic;
         this.like=like;
         this.unlike=unlike;
-        this.cityname=cityname;
+    //    this.cityname=cityname;
         this.time=time;
         this.date=date;
     }
@@ -49,6 +50,10 @@ public class Blogmodel {
     public void setTitle(String title) {
         this.title = title;
     }*/
+
+    public String getKey() {
+        return key;
+    }
 
     public String getImage() {
         return image;

@@ -156,6 +156,23 @@ public class MainActivity extends Fragment {
                         }
                     });
 
+                    viewHolder.chat.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                          mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                              @Override
+                              public void onDataChange(DataSnapshot dataSnapshot) {
+                                  dataSnapshot.child(post_key).child("id").getValue();
+                              }
+
+                              @Override
+                              public void onCancelled(DatabaseError databaseError) {
+
+                              }
+                          });
+                        }
+                    });
+
                     viewHolder.lk.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -180,7 +197,7 @@ public class MainActivity extends Fragment {
                                                         .show();*/
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
+                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                         @Override
                                                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
@@ -218,7 +235,7 @@ public class MainActivity extends Fragment {
                                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                @Override
                                                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                   mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lik,unlik,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+                                                                   mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lik,unlik,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                                        @Override
                                                                        public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
@@ -251,7 +268,7 @@ public class MainActivity extends Fragment {
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
+                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                         @Override
                                                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
@@ -334,7 +351,7 @@ public class MainActivity extends Fragment {
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                         @Override
                                                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
@@ -369,7 +386,7 @@ public class MainActivity extends Fragment {
                                                         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                             @Override
                                                             public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lyk,unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+                                                                mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lyk,unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                                     @Override
                                                                     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
@@ -405,7 +422,7 @@ public class MainActivity extends Fragment {
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
-                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
+                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                         @Override
                                                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
@@ -496,9 +513,9 @@ public class MainActivity extends Fragment {
             super(itemView);
             mView=itemView;
             auth=FirebaseAuth.getInstance();
-            String n=auth.getCurrentUser().getEmail();
-            check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
-            df=FirebaseDatabase.getInstance().getReference().child(check);
+         //   String n=auth.getCurrentUser().getEmail();
+         //   check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
+       //     df=FirebaseDatabase.getInstance().getReference().child(check);
             mDatabaseLike=FirebaseDatabase.getInstance().getReference().child("like");
             mDatabaseunlike=FirebaseDatabase.getInstance().getReference().child("unlike");
              lk=(ImageButton)itemView.findViewById(R.id.like);

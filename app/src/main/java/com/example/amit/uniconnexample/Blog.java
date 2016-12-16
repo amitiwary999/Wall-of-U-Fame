@@ -327,6 +327,7 @@ public class Blog extends AppCompatActivity {
             final String desc_val = mDesc.getText().toString().trim();
             final String name_val=name;
             final String photo_val=photo;
+            final String id_val=auth.getCurrentUser().getUid();
         //    final  String city_Name=cityname;
             final String time_val=time;
             final String date_val=date;
@@ -339,7 +340,7 @@ public class Blog extends AppCompatActivity {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             Uri downloadUrl = taskSnapshot.getDownloadUrl();
                             DatabaseReference newPost = mDatabase.push();
-                            newPost.setValue(new Blogmodel(desc_val, downloadUrl.toString(), name_val, photo_val,0,0,time_val,date_val));
+                            newPost.setValue(new Blogmodel(id_val,desc_val, downloadUrl.toString(), name_val, photo_val,0,0,time_val,date_val));
                        /* newPost.child("title").setValue(title_val);
                         newPost.child("desc").setValue(desc_val);
                         newPost.child("image").setValue(downloadUrl.toString());
@@ -353,7 +354,7 @@ public class Blog extends AppCompatActivity {
 
                 }else if(desc_val.length()!=0){
                     DatabaseReference newPost=mDatabase.push();
-                    newPost.setValue(new Blogmodel(desc_val,null,name_val,photo_val,0,0,time_val,date_val));
+                    newPost.setValue(new Blogmodel(id_val,desc_val,null,name_val,photo_val,0,0,time_val,date_val));
                     mProgress.dismiss();
                     startActivity(new Intent(Blog.this, Tabs.class));
                     finish();
