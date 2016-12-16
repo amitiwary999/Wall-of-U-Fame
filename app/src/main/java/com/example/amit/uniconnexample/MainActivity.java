@@ -111,7 +111,7 @@ public class MainActivity extends Fragment {
         super.onStart();
         whorlView.setVisibility(View.VISIBLE);
         whorlView.start();
-     //   if(auth.getCurrentUser()!=null) {
+        if(auth.getCurrentUser()!=null) {
             pdata.child("Userdetail").child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
@@ -155,6 +155,7 @@ public class MainActivity extends Fragment {
                          //   Toast.makeText(getActivity(),"hi"+post_key,Toast.LENGTH_LONG).show();
                         }
                     });
+
                     viewHolder.lk.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -475,9 +476,9 @@ public class MainActivity extends Fragment {
                 }*/
             };
             mBlogList.setAdapter(firebaseRecyclerAdapter);
-      //  }else{
-            //loadLoginView();
-       // }
+        }else{
+            loadLoginView();
+       }
     }
 
     public void writeblog(){
@@ -485,7 +486,7 @@ public class MainActivity extends Fragment {
     }
     public  static class BlogViewHolder extends RecyclerView.ViewHolder {
         View mView;
-        ImageButton lk,unlk;
+        ImageButton lk,unlk,chat;
         private FirebaseAuth auth;
         DatabaseReference mDatabaseLike,mDatabaseunlike;
         String check,desc,pic,nam,photo,time,date;
@@ -502,6 +503,7 @@ public class MainActivity extends Fragment {
             mDatabaseunlike=FirebaseDatabase.getInstance().getReference().child("unlike");
              lk=(ImageButton)itemView.findViewById(R.id.like);
              unlk=(ImageButton)itemView.findViewById(R.id.unlike);
+            chat=(ImageButton)itemView.findViewById(R.id.chat);
         }
 
         public void bindData(Blogmodel model){
@@ -679,9 +681,9 @@ public class MainActivity extends Fragment {
         }
         return super.onOptionsItemSelected(item);
     }*/
-  /*  private void loadLoginView() {
-        Intent intent = new Intent(this, Loginactivity.class);
+    private void loadLoginView() {
+        Intent intent = new Intent(getActivity(), Loginactivity.class);
         startActivity(intent);
-        finish();
-    }*/
+       getActivity(). finish();
+    }
 }
