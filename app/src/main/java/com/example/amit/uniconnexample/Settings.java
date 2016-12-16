@@ -37,7 +37,7 @@ public class Settings extends AppCompatActivity {
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.myaccount));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.notifications));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.message));
-        tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.chati));
+     //   tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.chati));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.settings),true);
     }
 
@@ -83,10 +83,10 @@ public class Settings extends AppCompatActivity {
                 finish();
                 //replaceFragment(new Notification());
                 break;
-            case 4:
+          /*  case 4:
                 startActivity(new Intent(Settings.this,Chat.class));
                 finish();
-                break;
+                break;*/
             case 5:
               //  startActivity(new Intent(Notification.this,Settings.class));
                 // replaceFragment(new Settings());

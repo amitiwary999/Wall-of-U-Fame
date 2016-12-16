@@ -16,9 +16,9 @@ import java.lang.Override;
 public class Loginactivity_ViewBinding<T extends Loginactivity> implements Unbinder {
   protected T target;
 
-  private View view2131558545;
+  private View view2131624081;
 
-  private View view2131558546;
+  private View view2131624082;
 
   public Loginactivity_ViewBinding(final T target, Finder finder, Object source) {
     this.target = target;
@@ -29,7 +29,7 @@ public class Loginactivity_ViewBinding<T extends Loginactivity> implements Unbin
     target.forgotpassword = finder.findRequiredViewAsType(source, R.id.forpass, "field 'forgotpassword'", TextView.class);
     view = finder.findRequiredView(source, R.id.log_in, "field 'login' and method 'login'");
     target.login = finder.castView(view, R.id.log_in, "field 'login'", Button.class);
-    view2131558545 = view;
+    view2131624081 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -38,7 +38,7 @@ public class Loginactivity_ViewBinding<T extends Loginactivity> implements Unbin
     });
     view = finder.findRequiredView(source, R.id.signup, "field 'sign_up' and method 'signup'");
     target.sign_up = finder.castView(view, R.id.signup, "field 'sign_up'", Button.class);
-    view2131558546 = view;
+    view2131624082 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -60,10 +60,10 @@ public class Loginactivity_ViewBinding<T extends Loginactivity> implements Unbin
     target.sign_up = null;
     target.loginProgress = null;
 
-    view2131558545.setOnClickListener(null);
-    view2131558545 = null;
-    view2131558546.setOnClickListener(null);
-    view2131558546 = null;
+    view2131624081.setOnClickListener(null);
+    view2131624081 = null;
+    view2131624082.setOnClickListener(null);
+    view2131624082 = null;
 
     this.target = null;
   }

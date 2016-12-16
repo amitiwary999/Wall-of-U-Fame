@@ -162,7 +162,15 @@ public class MainActivity extends Fragment {
                           mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                               @Override
                               public void onDataChange(DataSnapshot dataSnapshot) {
-                                  dataSnapshot.child(post_key).child("id").getValue();
+                                 String key= model.getKey();
+                                  if(!key.equals(user.getUid())) {
+                                   //   Toast.makeText(getActivity(), key, Toast.LENGTH_LONG).show();
+                                      Intent i = new Intent(getActivity(), Chatstart.class);
+                                      i.putExtra("chat", key);
+                                      startActivity(i);
+                                  }else{
+                                      Toast.makeText(getActivity(),"You can't chat with yourself",Toast.LENGTH_LONG).show();
+                                  }
                               }
 
                               @Override
@@ -202,7 +210,7 @@ public class MainActivity extends Fragment {
                                                         @Override
                                                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                                                       //      dialog.dismiss();
-                                                            Toast.makeText(getActivity(), "Saved successfullyll!", Toast.LENGTH_SHORT).show();
+                                                          //  Toast.makeText(getActivity(), "Saved successfullyll!", Toast.LENGTH_SHORT).show();
                                                         }
                                                     });
                                                   //  processlike=false;
@@ -221,11 +229,11 @@ public class MainActivity extends Fragment {
                                            mDatabaseunlike.addListenerForSingleValueEvent(new ValueEventListener() {
                                                @Override
                                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                                   Toast.makeText(getActivity(),(String)dataSnapshot.child(post_key).child(user.getUid()).getValue(),Toast.LENGTH_LONG).show();
+                                                  // Toast.makeText(getActivity(),(String)dataSnapshot.child(post_key).child(user.getUid()).getValue(),Toast.LENGTH_LONG).show();
                                                    if(dataSnapshot.child(post_key).hasChild(user.getUid())){
                                                     //   if( mDatabaseunlike.child(post_key).child(user.getUid()).equals("Unliked")){
                                                       // int unlik=model.getUnlike();
-                                                       Toast.makeText(getActivity(),dataSnapshot.child(post_key).child(user.getUid()).getValue(String.class),Toast.LENGTH_LONG).show();
+                                                     //  Toast.makeText(getActivity(),dataSnapshot.child(post_key).child(user.getUid()).getValue(String.class),Toast.LENGTH_LONG).show();
                                                        if(model.getUnlike()>0) {
                                                              unlik = model.getUnlike() - 1;
                                                        }else{
@@ -239,7 +247,7 @@ public class MainActivity extends Fragment {
 
                                                                        @Override
                                                                        public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                                                                           Toast.makeText(getActivity(), "Saved successfully like!", Toast.LENGTH_SHORT).show();
+                                                                        //   Toast.makeText(getActivity(), "Saved successfully like!", Toast.LENGTH_SHORT).show();
                                                                        }
                                                                    });
                                                                   // processunlike=false;
@@ -272,7 +280,7 @@ public class MainActivity extends Fragment {
 
                                                         @Override
                                                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                                                            Toast.makeText(getActivity(), "Saved successfullyli!", Toast.LENGTH_SHORT).show();
+                                                           // Toast.makeText(getActivity(), "Saved successfullyli!", Toast.LENGTH_SHORT).show();
                                                         }
                                                     });
                                                     processlike=false;
@@ -355,7 +363,7 @@ public class MainActivity extends Fragment {
 
                                                         @Override
                                                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                                                            Toast.makeText(getActivity(), "Saved successfullyul!", Toast.LENGTH_SHORT).show();
+                                                          //  Toast.makeText(getActivity(), "Saved successfullyul!", Toast.LENGTH_SHORT).show();
                                                         }
                                                     });
                                                     processunlike=false;
@@ -376,7 +384,7 @@ public class MainActivity extends Fragment {
                                                     if(dataSnapshot.child(post_key).hasChild(user.getUid())){
                                                         //   if( mDatabaseunlike.child(post_key).child(user.getUid()).equals("Unliked")){
 
-                                                        Toast.makeText(getActivity(),(String)dataSnapshot.child(post_key).child(user.getUid()).getValue(),Toast.LENGTH_LONG).show();
+                                                     //   Toast.makeText(getActivity(),(String)dataSnapshot.child(post_key).child(user.getUid()).getValue(),Toast.LENGTH_LONG).show();
                                                         if(model.getLike()>0) {
                                                             lyk = model.getLike() - 1;
                                                         }else{
@@ -390,7 +398,7 @@ public class MainActivity extends Fragment {
 
                                                                     @Override
                                                                     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                                                                        Toast.makeText(getActivity(), "Saved successfully!", Toast.LENGTH_SHORT).show();
+                                                                     //   Toast.makeText(getActivity(), "Saved successfully!", Toast.LENGTH_SHORT).show();
                                                                     }
                                                                 });
                                                                 // processunlike=false;
@@ -426,7 +434,7 @@ public class MainActivity extends Fragment {
 
                                                         @Override
                                                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                                                            Toast.makeText(getActivity(), "Saved successfullyu!", Toast.LENGTH_SHORT).show();
+                                                         //   Toast.makeText(getActivity(), "Saved successfullyu!", Toast.LENGTH_SHORT).show();
                                                         }
                                                     });
                                                     processunlike=false;

@@ -129,7 +129,7 @@ public class Chatstart extends AppCompatActivity {
             public void onClick(View v) {
 
                 final String msge=message.getText().toString();
-                Toast.makeText(Chatstart.this,msge,Toast.LENGTH_LONG).show();
+              //  Toast.makeText(Chatstart.this,msge,Toast.LENGTH_LONG).show();
                 if(msge.length()!=0) {
                     DatabaseReference newMessage = mDatabase.child(auth.getCurrentUser().getUid()).child(key).push();
                     newMessage.child("msg1").setValue(msge);
