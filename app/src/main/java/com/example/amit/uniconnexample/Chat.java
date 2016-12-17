@@ -105,7 +105,7 @@ public class Chat extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         if(!key.equals(user.getUid())) {
-                            Toast.makeText(Chat.this, user.getUid(), Toast.LENGTH_LONG).show();
+                        //    Toast.makeText(Chat.this, user.getUid(), Toast.LENGTH_LONG).show();
                             Intent i = new Intent(Chat.this, Chatstart.class);
                             i.putExtra("chat", key);
                             startActivity(i);

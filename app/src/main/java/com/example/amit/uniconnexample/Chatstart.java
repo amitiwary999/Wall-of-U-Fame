@@ -228,7 +228,9 @@ public class Chatstart extends AppCompatActivity {
             @Override
             protected void populateViewHolder(final Chatstartviewholder viewHolder, final Chatstartmodel model, int position) {
                 //  viewHolder.bindData(model);
+               // if(model.getMsg1().length()!=0)
                 viewHolder.setMsg1(model.getMsg1());
+             //   if(model.getMsg2().length()!=0)
                 viewHolder.setMsg2(model.getMsg2());
               /*  newReply.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -276,11 +278,17 @@ public class Chatstart extends AppCompatActivity {
 
         public void setMsg1(String msg){
             TextView sMessage=(TextView)mView.findViewById(R.id.rMessage);
+            sMessage.setVisibility(View.GONE);
+            if(msg!=null)
+                sMessage.setVisibility(View.VISIBLE);
             sMessage.setText(msg);
         }
 
         public void setMsg2(String msg){
             TextView rMessage=(TextView)mView.findViewById(R.id.sMessage);
+            rMessage.setVisibility(View.GONE);
+            if(msg!=null)
+                rMessage.setVisibility(View.VISIBLE);
             rMessage.setText(msg);
         }
      /*   public void bindData(final Chatstartmodel model){

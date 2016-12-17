@@ -5,33 +5,47 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="10617420068046"
+    timestamp="10697719563523"
     token="2814086315392108154"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="11473" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="775" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="931" />
     <task
         name="verifier"
-        duration="0" />
+        duration="989" />
 
     <artifact
-        location="/home/amit/Buildapk/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/home/amit/Buildapk/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="10617420068046"
+        timestamp="8391563496274"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/amit/Buildapk/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="10400438552445"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="10697719563523"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/amit/Buildapk/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
