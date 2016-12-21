@@ -94,7 +94,7 @@ public class MainActivity extends Fragment {
         mBlogList=(RecyclerView)view.findViewById(R.id.mblog_list);
         mBlogList.setHasFixedSize(true);
         LinearLayoutManager lm=new LinearLayoutManager(getActivity());
-        lm.setReverseLayout(true);
+     //   lm.setReverseLayout(true);
         lm.setStackFromEnd(true);
         mBlogList.setLayoutManager(lm);
         fab.setOnClickListener(new View.OnClickListener() {
