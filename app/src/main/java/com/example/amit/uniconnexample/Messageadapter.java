@@ -44,7 +44,7 @@ public class Messageadapter extends RecyclerView.Adapter<Messageadapter.ViewHold
     public void onBindViewHolder(Messageadapter.ViewHolder holder, int position) {
       ImageView iview=holder.imageView;
       TextView tview=holder.mTextView;
-      iview.setImageBitmap(Utils.decodeBase64(dataset.get(position).getImage()));
+    //  iview.setImageBitmap(Utils.decodeBase64(dataset.get(position).getImage()));
       tview.setText(dataset.get(position).getMsg());
     }
 

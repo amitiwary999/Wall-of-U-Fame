@@ -7,7 +7,6 @@
         android:id="@+id/photo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_below="@id/loading"
         android:layout_centerHorizontal="true"
         android:layout_margin="4dp"/>
     <TextView
