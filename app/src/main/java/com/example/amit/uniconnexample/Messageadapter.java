@@ -21,7 +21,7 @@ public class Messageadapter extends RecyclerView.Adapter<Messageadapter.MyViewHo
     private ArrayList<Message_model> dataset;
 
     public Messageadapter(ArrayList<Message_model> data) {
-        dataset=data;
+        this.dataset=data;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -46,7 +46,7 @@ public class Messageadapter extends RecyclerView.Adapter<Messageadapter.MyViewHo
     public void onBindViewHolder(MyViewHolder holder, int position) {
       ImageView iview=holder.imageView;
       TextView tview=holder.mTextView;
-    //  iview.setImageBitmap(Utils.decodeBase64(dataset.get(position).getImage()));
+      iview.setImageBitmap(Utils.decodeBase64(dataset.get(position).getImage()));
       tview.setText(dataset.get(position).getMsg());
     }
 

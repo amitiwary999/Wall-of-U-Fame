@@ -51,8 +51,7 @@ public class Message extends AppCompatActivity {
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         newmessage=FirebaseDatabase.getInstance().getReference().child("Userdetail");
         data=new ArrayList<Message_model>();
-        adapter=new Messageadapter(data);
-        rview.setAdapter(adapter);
+
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         Utils.setUpToolbarBackButton(Message.this, toolbar);
@@ -62,6 +61,7 @@ public class Message extends AppCompatActivity {
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 for(DataSnapshot snapshot:dataSnapshot.getChildren()){
                     key=snapshot.getKey();
                     Toast.makeText(Message.this,key,Toast.LENGTH_SHORT).show();
@@ -98,6 +98,15 @@ public class Message extends AppCompatActivity {
                                         text=snapShot.child("msg2").getValue(String.class);
                                         Toast.makeText(Message.this,"iii  "+text,Toast.LENGTH_SHORT).show();
                                     }
+                                    final String msgt=text;
+                                    final String pict=pic;
+                                    try{
+                                        Toast.makeText(Message.this,"iiii  "+text,Toast.LENGTH_SHORT).show();
+                                        Message_model model=new Message_model(pict,msgt);
+                                        data.add(model);
+                                    }catch (Exception e){
+                                        e.printStackTrace();
+                                    }
                                     break;
                                 }
                             }
@@ -108,11 +117,7 @@ public class Message extends AppCompatActivity {
 
                         }
                     });
-                    try{
-                        data.add(new Message_model(pic,text));
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
+
                 }
 
             }
@@ -122,6 +127,8 @@ public class Message extends AppCompatActivity {
 
             }
         });
+        adapter=new Messageadapter(data);
+        rview.setAdapter(adapter);
     }
 
  /*   @Override
