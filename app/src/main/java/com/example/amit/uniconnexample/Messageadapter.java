@@ -25,12 +25,13 @@ public class Messageadapter extends RecyclerView.Adapter<Messageadapter.MyViewHo
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextView;
+        public TextView mTextView,mTextname;
         public ImageView imageView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             mTextView = (TextView) itemView.findViewById(R.id.txt);
+            mTextname=(TextView)itemView.findViewById(R.id.txtname);
             imageView=(ImageView)itemView.findViewById(R.id.photo);
         }
     }
@@ -46,8 +47,10 @@ public class Messageadapter extends RecyclerView.Adapter<Messageadapter.MyViewHo
     public void onBindViewHolder(MyViewHolder holder, int position) {
       ImageView iview=holder.imageView;
       TextView tview=holder.mTextView;
+        TextView tname=holder.mTextname;
       iview.setImageBitmap(Utils.decodeBase64(dataset.get(position).getImage()));
       tview.setText(dataset.get(position).getMsg());
+        tname.setText(dataset.get(position).getName());
     }
 
     @Override

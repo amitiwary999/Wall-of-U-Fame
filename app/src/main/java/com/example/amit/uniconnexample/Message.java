@@ -51,7 +51,7 @@ public class Message extends AppCompatActivity {
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         newmessage=FirebaseDatabase.getInstance().getReference().child("Userdetail");
         data=new ArrayList<Message_model>();
-
+         setTitle("");
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         Utils.setUpToolbarBackButton(Message.this, toolbar);
@@ -80,6 +80,17 @@ public class Message extends AppCompatActivity {
 
                         }
                     });
+                    newmessage.child(key).child("name").addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                           name=dataSnapshot.getValue(String.class);
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
                     num=snapshot.getChildrenCount();
 
                     mDatabase.child(key).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -100,9 +111,11 @@ public class Message extends AppCompatActivity {
                                     }
                                     final String msgt=text;
                                     final String pict=pic;
+                                    final String namet=name;
+                                    //final
                                     try{
                                         Toast.makeText(Message.this,"iiii  "+text,Toast.LENGTH_SHORT).show();
-                                        Message_model model=new Message_model(pict,msgt);
+                                        Message_model model=new Message_model(pict,msgt,namet);
                                         data.add(model);
                                     }catch (Exception e){
                                         e.printStackTrace();

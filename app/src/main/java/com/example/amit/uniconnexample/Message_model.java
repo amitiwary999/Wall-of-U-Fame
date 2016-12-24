@@ -5,11 +5,12 @@ package com.example.amit.uniconnexample;
  */
 
 public class Message_model {
-    String image,msg;
+    String image,msg,name;
 
-    public Message_model(String image, String msg){
+    public Message_model(String image, String msg,String name){
         this.image=image;
         this.msg=msg;
+        this.name=name;
     }
 
     public String getImage() {
@@ -18,5 +19,9 @@ public class Message_model {
 
     public String getMsg() {
         return msg;
+    }
+
+    public String getName() {
+        return name;
     }
 }
