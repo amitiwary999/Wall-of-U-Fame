@@ -59,16 +59,141 @@ public class Message extends AppCompatActivity {
         setupTabIconsBottom();
        // setupTabIcons();
         bindWidgetsWithAnEvent();
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot snapshot:dataSnapshot.getChildren()){
+                    key=snapshot.getKey();
+                    Toast.makeText(Message.this,key,Toast.LENGTH_SHORT).show();
+                    // newmessage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("photo");
+                    newmessage.child(key).child("photo").addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            pic= dataSnapshot.getValue(String.class);
+                            //   Toast.makeText(Message.this,"ii  "+pic,Toast.LENGTH_LONG).show();
+                            //    text.setText(name);
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+                    num=snapshot.getChildrenCount();
+
+                    mDatabase.child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            for(DataSnapshot snapShot:dataSnapshot.getChildren()) {
+
+                                num= num-1;
+                                if(num==0){
+
+                                    Toast.makeText(Message.this,"ii  "+snapShot.hasChild("msg2"),Toast.LENGTH_SHORT).show();
+                                    if(snapShot.hasChild("msg1")){
+                                        text=snapShot.child("msg1").getValue(String.class);
+                                        Toast.makeText(Message.this,"ii  "+text,Toast.LENGTH_SHORT).show();
+                                    }else if(snapShot.hasChild("msg2")){
+                                        text=snapShot.child("msg2").getValue(String.class);
+                                        Toast.makeText(Message.this,"iii  "+text,Toast.LENGTH_SHORT).show();
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+                    try{
+                        data.add(new Message_model(pic,text));
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
-    @Override
+ /*   @Override
     protected void onStart() {
         super.onStart();
-        mDatabase.addChildEventListener(new ChildEventListener() {
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot snapshot:dataSnapshot.getChildren()){
+                    key=snapshot.getKey();
+                    Toast.makeText(Message.this,key,Toast.LENGTH_SHORT).show();
+                    // newmessage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("photo");
+                    newmessage.child(key).child("photo").addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            pic= dataSnapshot.getValue(String.class);
+                         //   Toast.makeText(Message.this,"ii  "+pic,Toast.LENGTH_LONG).show();
+                            //    text.setText(name);
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+                    num=snapshot.getChildrenCount();
+
+                    mDatabase.child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            for(DataSnapshot snapShot:dataSnapshot.getChildren()) {
+
+                                num= num-1;
+                                if(num==0){
+
+                                    Toast.makeText(Message.this,"ii  "+snapShot.hasChild("msg2"),Toast.LENGTH_SHORT).show();
+                                    if(snapShot.hasChild("msg1")){
+                                        text=snapShot.child("msg1").getValue(String.class);
+                                        Toast.makeText(Message.this,"ii  "+text,Toast.LENGTH_SHORT).show();
+                                    }else if(snapShot.hasChild("msg2")){
+                                        text=snapShot.child("msg2").getValue(String.class);
+                                        Toast.makeText(Message.this,"iii  "+text,Toast.LENGTH_SHORT).show();
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+                    try{
+                        data.add(new Message_model(pic,text));
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    /*    mDatabase.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                for(final DataSnapshot snapshot:dataSnapshot.getChildren()){
-                  key=snapshot.getValue(String.class);
+                  key=dataSnapshot.getKey();
                     Toast.makeText(Message.this,key,Toast.LENGTH_SHORT).show();
                  // newmessage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("photo");
                     newmessage.child(key).child("photo").addValueEventListener(new ValueEventListener() {
@@ -84,7 +209,7 @@ public class Message extends AppCompatActivity {
 
                         }
                     });
-                    num=snapshot.getChildrenCount();
+                    num=dataSnapshot.getChildrenCount();
                     mDatabase.child(key).addChildEventListener(new ChildEventListener() {
                         @Override
                         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -122,7 +247,7 @@ public class Message extends AppCompatActivity {
 
                         }
                     });
-                }
+
                 try{
                     data.add(new Message_model(pic,text));
                 }catch (Exception e){
@@ -150,7 +275,7 @@ public class Message extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
 
     private void setupTabIconsBottom() {
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.home));

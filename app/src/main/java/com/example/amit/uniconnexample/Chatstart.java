@@ -46,7 +46,7 @@ public class Chatstart extends AppCompatActivity {
     String msg,name;
     EditText message;
     Bundle bundle;
-    String key;
+    String key,spic;
     TextView text;
     Toolbar toolbar;
     ImageView src; MediaPlayer song;
@@ -70,10 +70,12 @@ public class Chatstart extends AppCompatActivity {
         //Utils.setUpToolbarBackButton(this, toolbar);
         message=(EditText)findViewById(R.id.et_message);
         msg=message.getText().toString();
+        newSend=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid()).child(key);
         newMesage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("photo");
         newMesage.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                spic=dataSnapshot.getValue(String.class);
                 src.setImageBitmap(Utils.decodeBase64(dataSnapshot.getValue(String.class)));
             }
 
@@ -248,6 +250,7 @@ public class Chatstart extends AppCompatActivity {
                     }
                 });*/
             }
+
         };
         mChat.setAdapter(firebaserecycleradapter);
     }

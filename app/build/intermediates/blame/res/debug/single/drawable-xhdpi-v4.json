@@ -48,12 +48,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-xhdpi-v4/ic_facebook.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
