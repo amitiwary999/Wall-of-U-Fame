@@ -27,6 +27,7 @@ import com.firebase.client.Firebase;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -46,11 +47,11 @@ public class Chatstart extends AppCompatActivity {
     String msg,name;
     EditText message;
     Bundle bundle;
-    String key,spic;
+    String key,spic,txt;
     TextView text;
     Toolbar toolbar;
     ImageView src; MediaPlayer song;
-   private DatabaseReference newMessage,newMesage,newReply,newSend;
+   private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd;
     private RecyclerView mChat;
     ImageButton send;
     @Override
@@ -70,7 +71,7 @@ public class Chatstart extends AppCompatActivity {
         //Utils.setUpToolbarBackButton(this, toolbar);
         message=(EditText)findViewById(R.id.et_message);
         msg=message.getText().toString();
-        newSend=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid()).child(key);
+        newSnd=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid()).child(key);
         newMesage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("photo");
         newMesage.addValueEventListener(new ValueEventListener() {
             @Override
@@ -99,7 +100,6 @@ public class Chatstart extends AppCompatActivity {
 
             }
         });
-
         newReply=FirebaseDatabase.getInstance().getReference().child("message").child(key).child(auth.getCurrentUser().getUid());
         newSend=FirebaseDatabase.getInstance().getReference().child("message").child(auth.getCurrentUser().getUid()).child(key);
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message");
@@ -206,6 +206,44 @@ public class Chatstart extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+       newSend.addChildEventListener(new ChildEventListener() {
+           @Override
+           public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+               if(dataSnapshot.hasChild("msg1")) {
+                    txt = dataSnapshot.child("msg1").getValue(String.class);
+                   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
+               }else if(dataSnapshot.hasChild("msg2")){
+                    txt = dataSnapshot.child("msg2").getValue(String.class);
+                   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
+               }
+               newSnd.child("image").setValue(spic);
+               newSnd.child("name").setValue(name);
+               newSnd.child("key").setValue(key);
+               newSnd.child("msg").setValue(txt);
+             //  DatabaseReference newmg=newSnd.push();
+             //  newmg.setValue(new Message_model(spic,name,txt,key));
+           }
+
+           @Override
+           public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+           }
+
+           @Override
+           public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+           }
+
+           @Override
+           public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+           }
+
+           @Override
+           public void onCancelled(DatabaseError databaseError) {
+
+           }
+       });
         computeothermessage();
     }
 

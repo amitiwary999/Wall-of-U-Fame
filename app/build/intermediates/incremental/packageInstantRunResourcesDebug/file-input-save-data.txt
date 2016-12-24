@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Dec 24 21:04:44 IST 2016
+#Sat Dec 24 22:11:59 IST 2016
 20.base=/home/amit/Buildapk/app/build/intermediates/res/resources-debug.ap_
 143.base=/home/amit/Buildapk/app/build/intermediates/res/resources-debug.ap_
 340.file=/home/amit/Buildapk/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_popup_menu_item_layout.xml

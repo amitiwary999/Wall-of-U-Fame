@@ -12,9 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.amit.uniconnexample.utils.Utils;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -37,36 +40,63 @@ public class Message extends AppCompatActivity {
     private static RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager laymanager;
     private static ArrayList<Message_model> data;
-    private DatabaseReference mDatabase,newmessage;
-    String key,name,text,pic;
+    private DatabaseReference mDatabase,newmessage,newsnd;
+    String key,name,pic;
      long num;
+    static String text;
     private FirebaseAuth auth;
     FirebaseUser user;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
-        rview=(RecyclerView)findViewById(R.id.mchat_list);
+        rview = (RecyclerView) findViewById(R.id.mchat_list);
+        auth=FirebaseAuth.getInstance();
         rview.setLayoutManager(new LinearLayoutManager(this));
-        mDatabase= FirebaseDatabase.getInstance().getReference().child("message").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        newmessage=FirebaseDatabase.getInstance().getReference().child("Userdetail");
-        data=new ArrayList<Message_model>();
-         setTitle("");
-        tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
-        toolbar=(Toolbar)findViewById(R.id.toolbar);
+        newsnd=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid());
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("message").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        newmessage = FirebaseDatabase.getInstance().getReference().child("Userdetail");
+        data = new ArrayList<Message_model>();
+        setTitle("");
+        tablayoutbottom = (TabLayout) findViewById(R.id.tabLayoutbottom);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         Utils.setUpToolbarBackButton(Message.this, toolbar);
         setupTabIconsBottom();
-       // setupTabIcons();
+        // setupTabIcons();
         bindWidgetsWithAnEvent();
-        mDatabase.addValueEventListener(new ValueEventListener() {
+        FirebaseRecyclerAdapter<Message_model,MessageViewHolder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Message_model, MessageViewHolder>(
+                Message_model.class,
+                R.layout.activity_messageitem,
+                MessageViewHolder.class,
+                newsnd
+        ) {
+            @Override
+            protected void populateViewHolder(MessageViewHolder viewHolder, Message_model model, int position) {
+                final String msg_key=getRef(position).getKey();
+                Toast.makeText(Message.this,msg_key,Toast.LENGTH_LONG).show();
+               // mDatabase.add
+                 viewHolder.bindData(model);
+                viewHolder.view.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(Message.this, Chatstart.class);
+                        i.putExtra("chat", msg_key);
+                        startActivity(i);
+                    }
+                });
+            }
+        };
+      rview.setAdapter(firebaseRecyclerAdapter);
+       /* mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 for(DataSnapshot snapshot:dataSnapshot.getChildren()){
+                    Toast.makeText(Message.this,"iicc  "+dataSnapshot.getChildrenCount(),Toast.LENGTH_SHORT).show();
                     key=snapshot.getKey();
                     Toast.makeText(Message.this,key,Toast.LENGTH_SHORT).show();
                     // newmessage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("photo");
-                    newmessage.child(key).child("photo").addValueEventListener(new ValueEventListener() {
+                    newmessage.child(key).child("photo").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             pic= dataSnapshot.getValue(String.class);
@@ -80,10 +110,11 @@ public class Message extends AppCompatActivity {
 
                         }
                     });
-                    newmessage.child(key).child("name").addValueEventListener(new ValueEventListener() {
+                    newmessage.child(key).child("name").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                            name=dataSnapshot.getValue(String.class);
+                            Toast.makeText(Message.this,"name  "+name,Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
@@ -92,16 +123,17 @@ public class Message extends AppCompatActivity {
                         }
                     });
                     num=snapshot.getChildrenCount();
-
-                    mDatabase.child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+                    Toast.makeText(Message.this,"iiccc  "+num,Toast.LENGTH_SHORT).show();
+                    mDatabase.child(key).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             for(DataSnapshot snapShot:dataSnapshot.getChildren()) {
 
                                 num= num-1;
+                           //     Toast.makeText(Message.this,"iiccc  "+num,Toast.LENGTH_SHORT).show();
                                 if(num==0){
-
-                                    Toast.makeText(Message.this,"ii  "+snapShot.hasChild("msg2"),Toast.LENGTH_SHORT).show();
+                                   // Toast.makeText(Message.this,"iicccl  "+num,Toast.LENGTH_SHORT).show();
+                                 //   Toast.makeText(Message.this,"ii  "+snapShot.hasChild("msg2"),Toast.LENGTH_SHORT).show();
                                     if(snapShot.hasChild("msg1")){
                                         text=snapShot.child("msg1").getValue(String.class);
                                         Toast.makeText(Message.this,"ii  "+text,Toast.LENGTH_SHORT).show();
@@ -109,17 +141,7 @@ public class Message extends AppCompatActivity {
                                         text=snapShot.child("msg2").getValue(String.class);
                                         Toast.makeText(Message.this,"iii  "+text,Toast.LENGTH_SHORT).show();
                                     }
-                                    final String msgt=text;
-                                    final String pict=pic;
-                                    final String namet=name;
-                                    //final
-                                    try{
-                                        Toast.makeText(Message.this,"iiii  "+text,Toast.LENGTH_SHORT).show();
-                                        Message_model model=new Message_model(pict,msgt,namet);
-                                        data.add(model);
-                                    }catch (Exception e){
-                                        e.printStackTrace();
-                                    }
+
                                     break;
                                 }
                             }
@@ -130,7 +152,14 @@ public class Message extends AppCompatActivity {
 
                         }
                     });
+                    final String msgt=text;
+                    final String pict=pic;
+                    final String namet=name;
+                    final String keyt=key;
 
+                         Toast.makeText(Message.this,"iiii  "+msgt,Toast.LENGTH_SHORT).show();
+                        Message_model model=new Message_model(pict,msgt,namet,keyt);
+                        data.add(model);
                 }
 
             }
@@ -142,9 +171,10 @@ public class Message extends AppCompatActivity {
         });
         adapter=new Messageadapter(data);
         rview.setAdapter(adapter);
+    }*/
     }
 
- /*   @Override
+  /*  @Override
     protected void onStart() {
         super.onStart();
         mDatabase.addValueEventListener(new ValueEventListener() {
@@ -297,6 +327,24 @@ public class Message extends AppCompatActivity {
         });
     }*/
 
+    public static class MessageViewHolder extends RecyclerView.ViewHolder{
+        View view;
+        public MessageViewHolder(View itemView) {
+            super(itemView);
+            view=itemView;
+        }
+        public void bindData(Message_model model){
+            TextView tmsg=(TextView)view.findViewById(R.id.txt);
+            TextView tname=(TextView)view.findViewById(R.id.txtname);
+            ImageView iview=(ImageView)view.findViewById(R.id.photo);
+            tmsg.setText(model.getMsg());
+            tname.setText(model.getName());
+            if(model.getImage()!=null)
+            iview.setImageBitmap(Utils.decodeBase64(model.getImage()));
+            else{
+            }
+        }
+    }
     private void setupTabIconsBottom() {
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.home));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.myaccount));
