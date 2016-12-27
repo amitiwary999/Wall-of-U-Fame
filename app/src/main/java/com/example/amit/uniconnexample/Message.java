@@ -73,7 +73,7 @@ public class Message extends AppCompatActivity {
             @Override
             protected void populateViewHolder(MessageViewHolder viewHolder, Message_model model, int position) {
                 final String msg_key=getRef(position).getKey();
-                Toast.makeText(Message.this,msg_key,Toast.LENGTH_LONG).show();
+            //    Toast.makeText(Message.this,msg_key,Toast.LENGTH_LONG).show();
                // mDatabase.add
                  viewHolder.bindData(model);
                 viewHolder.view.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +82,7 @@ public class Message extends AppCompatActivity {
                         Intent i = new Intent(Message.this, Chatstart.class);
                         i.putExtra("chat", msg_key);
                         startActivity(i);
+                        finish();
                     }
                 });
             }

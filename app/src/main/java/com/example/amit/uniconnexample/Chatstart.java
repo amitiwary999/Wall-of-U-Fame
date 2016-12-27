@@ -211,10 +211,10 @@ public class Chatstart extends AppCompatActivity {
            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                if(dataSnapshot.hasChild("msg1")) {
                     txt = dataSnapshot.child("msg1").getValue(String.class);
-                   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
+                //   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
                }else if(dataSnapshot.hasChild("msg2")){
                     txt = dataSnapshot.child("msg2").getValue(String.class);
-                   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
+                //   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
                }
                newSnd.child("image").setValue(spic);
                newSnd.child("name").setValue(name);
