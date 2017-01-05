@@ -5,22 +5,22 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="17497034118685"
+    timestamp="1214438753562"
     token="2814086315392108154"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="3438" />
+        duration="9121" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="906" />
+        duration="471" />
     <task
         name="verifier"
-        duration="48" />
+        duration="2" />
 
     <artifact
         location="/home/amit/Buildapk/app/build/outputs/apk/app-debug.apk"

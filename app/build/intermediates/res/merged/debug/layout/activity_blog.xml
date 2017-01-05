@@ -14,14 +14,16 @@
 
 
     <ImageView
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="10dp"
         android:layout_below="@id/toolbar"
         android:id="@+id/mSelectImage"
-        android:layout_centerHorizontal="true"
+        android:clickable="true"
         android:src="@drawable/ic_image_add"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:layout_alignEnd="@+id/mdesc"
+        android:layout_alignStart="@+id/mdesc" />
 
 
     <EditText
