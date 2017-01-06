@@ -1,3 +1,7 @@
+/*
+    This source code is result of my hardwork. If you want to use it, drop me a message.
+ */
+
 package com.example.amit.uniconnexample;
 
 import android.app.ActivityManager;
@@ -288,6 +292,8 @@ public class Chatstart extends AppCompatActivity {
                     }
                 });*/
             }
+
+
 
         };
         mChat.setAdapter(firebaserecycleradapter);
