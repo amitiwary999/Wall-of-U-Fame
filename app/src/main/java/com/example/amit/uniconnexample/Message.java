@@ -54,6 +54,7 @@ public class Message extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         rview.setLayoutManager(new LinearLayoutManager(this));
         newsnd=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid());
+
         mDatabase = FirebaseDatabase.getInstance().getReference().child("message").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         newmessage = FirebaseDatabase.getInstance().getReference().child("Userdetail");
         data = new ArrayList<Message_model>();

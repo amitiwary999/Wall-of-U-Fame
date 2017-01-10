@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c7ca2e2cac2228ca20653f8450a35396bd7d6c0b">
+        sha1="85518b3d3c0aa74a261f2bbd5a18843c035f743f">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_83a4dc6c9c7f3d880ffa9a5902f87e83f1bed7ed/classes.dex" />
     </item>
     <item
@@ -367,7 +367,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="55e8d7a7344f3d20c430706ddffa59956b79f50b">
+        sha1="9d26bfd8611b471a2568228edf3bf77c38336ccc">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_15c388f90427f9a331ecb3e0865ab5d2b228a4db/classes.dex" />
     </item>
     <item

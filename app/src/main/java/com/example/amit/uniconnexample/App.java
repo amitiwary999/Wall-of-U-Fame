@@ -12,6 +12,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Foreground.init(this);
         Timber.plant(new Timber.DebugTree());
     }
 }

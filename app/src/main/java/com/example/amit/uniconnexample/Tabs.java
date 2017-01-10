@@ -3,6 +3,8 @@ package com.example.amit.uniconnexample;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -228,7 +230,10 @@ public class Tabs extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-
+        Drawable drawable = item.getIcon();
+        if (drawable instanceof Animatable) {
+            ((Animatable) drawable).start();
+        }
         if(item.getItemId()==R.id.signout){
            /* FirebaseAuth.getInstance().signOut();
             Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();

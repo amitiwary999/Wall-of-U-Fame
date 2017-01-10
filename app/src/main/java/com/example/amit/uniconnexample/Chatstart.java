@@ -55,7 +55,7 @@ public class Chatstart extends AppCompatActivity {
     TextView text;
     Toolbar toolbar;
     ImageView src; MediaPlayer song;
-   private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd;
+   private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd,checkBack,newrply;
     private RecyclerView mChat;
     ImageButton send;
     @Override
@@ -76,6 +76,21 @@ public class Chatstart extends AppCompatActivity {
         message=(EditText)findViewById(R.id.et_message);
         msg=message.getText().toString();
         newSnd=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid()).child(key);
+        newrply=FirebaseDatabase.getInstance().getReference().child("Smessage").child(key).child(auth.getCurrentUser().getUid());
+        checkBack=FirebaseDatabase.getInstance().getReference().child("message");
+        checkBack.child(auth.getCurrentUser().getUid()).child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(!Foreground.get().isForeground()){
+                    notification();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         newMesage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("photo");
         newMesage.addValueEventListener(new ValueEventListener() {
             @Override
@@ -133,7 +148,6 @@ public class Chatstart extends AppCompatActivity {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 final String msge=message.getText().toString();
               //  Toast.makeText(Chatstart.this,msge,Toast.LENGTH_LONG).show();
                 if(msge.length()!=0) {
@@ -142,6 +156,7 @@ public class Chatstart extends AppCompatActivity {
                     DatabaseReference newMesage = mDatabase.child(key).child(auth.getCurrentUser().getUid()).push();
                     newMesage.child("msg2").setValue(msge);
                     message.setText("");
+
               /*  FirebaseRecyclerAdapter<Chatreceivermodel,Chatreceiverholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Chatreceivermodel, Chatreceiverholder>(
                         Chatreceivermodel.class,
                         R.layout.activity_startchatitem,
@@ -213,6 +228,9 @@ public class Chatstart extends AppCompatActivity {
        newSend.addChildEventListener(new ChildEventListener() {
            @Override
            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+               if(!Foreground.get().isForeground()){
+                   notification();
+               }
                if(dataSnapshot.hasChild("msg1")) {
                     txt = dataSnapshot.child("msg1").getValue(String.class);
                 //   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
@@ -248,6 +266,48 @@ public class Chatstart extends AppCompatActivity {
 
            }
        });
+
+        newReply.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                if(!Foreground.get().isForeground()){
+                    notification();
+                }
+                if(dataSnapshot.hasChild("msg1")) {
+                    txt = dataSnapshot.child("msg1").getValue(String.class);
+                    //   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
+                }else if(dataSnapshot.hasChild("msg2")){
+                    txt = dataSnapshot.child("msg2").getValue(String.class);
+                    //   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
+                }
+                newrply.child("image").setValue(spic);
+                newrply.child("name").setValue(name);
+                newrply.child("key").setValue(key);
+                newrply.child("msg").setValue(txt);
+                //  DatabaseReference newmg=newSnd.push();
+                //  newmg.setValue(new Message_model(spic,name,txt,key));
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         computeothermessage();
     }
 
@@ -260,9 +320,9 @@ public class Chatstart extends AppCompatActivity {
     }
 
     public  void computeothermessage(){
-        if(isAppIsInBackground(this)){
+      /*  if(isAppIsInBackground(this)){
             notification();
-        }
+        }*/
         FirebaseRecyclerAdapter<Chatstartmodel,Chatstartviewholder> firebaserecycleradapter=new FirebaseRecyclerAdapter<Chatstartmodel, Chatstartviewholder>(
                 Chatstartmodel.class,
                 R.layout.activity_startchatitem,
