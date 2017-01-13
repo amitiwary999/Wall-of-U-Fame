@@ -72,8 +72,21 @@ public class Tabs extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot:dataSnapshot.getChildren()) {
-                    notification();
-                    snapshot.getRef().setValue(null);
+                    snapshot.getRef().addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            for(DataSnapshot snapshot:dataSnapshot.getChildren()) {
+                                notification();
+                                snapshot.getRef().setValue(null);
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+
 
                 }
             }

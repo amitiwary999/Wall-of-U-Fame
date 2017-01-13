@@ -274,7 +274,7 @@ public class MainActivity extends Fragment {
                                             mDatabaselike.child(post_key).child(user.getUid()).setValue("Liked");
                                           //  final int
                                                     lik = model.getLike() + 1;
-                                                     mDatabasenotif.child(model.getKey()).child(user.getUid()).setValue("Liked pic");
+                                                     mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue("Liked pic");
                                             //   processlike=true;
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
