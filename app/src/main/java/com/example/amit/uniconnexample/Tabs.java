@@ -37,6 +37,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -48,6 +49,7 @@ public class Tabs extends AppCompatActivity {
     private ViewPager viewPager;
     private CoordinatorLayout mainFrame;
     MediaPlayer song;
+    Handler handler1 = new Handler();
     private DatabaseReference mDatabasenotif;
     FirebaseUser user;
     boolean doubleBackToExitPressedOnce = false;
@@ -68,16 +70,22 @@ public class Tabs extends AppCompatActivity {
         setupTabIconsBottom();
         setupTabIcons();
         bindWidgetsWithAnEvent();
-        mDatabasenotif.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+        mDatabasenotif.child(user.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot snapshot:dataSnapshot.getChildren()) {
+                for( DataSnapshot snapshot:dataSnapshot.getChildren()) {
                     snapshot.getRef().addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
-                            for(DataSnapshot snapshot:dataSnapshot.getChildren()) {
-                                notification();
-                                snapshot.getRef().setValue(null);
+                            for(final DataSnapshot snapshot:dataSnapshot.getChildren()) {
+                                handler1.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        notification();
+                                        snapshot.getRef().setValue(null);
+                                    }
+                                },3000);
+
                             }
                         }
 
@@ -127,12 +135,13 @@ public class Tabs extends AppCompatActivity {
     public void notification(){
         song= MediaPlayer.create(this,R.raw.internetfriends0);
         song.start();
+        int m = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
         NotificationManager notificationManager = (NotificationManager)
                 this.getSystemService(this.NOTIFICATION_SERVICE);
         android.app.Notification n= new android.app.Notification.Builder(this).setContentTitle("Location notifier notice")
                 .setContentText(" Just 1 km away from destination")
                 .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();
-        notificationManager.notify(0,n);
+        notificationManager.notify(m,n);
        /* song= MediaPlayer.create(getApplicationContext(),R.raw.internetfriends0);
         song.start();
         NotificationManager notificationManager = (NotificationManager)
