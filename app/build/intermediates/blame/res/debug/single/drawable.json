@@ -260,10 +260,6 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/messenger_button_blue_bg_round.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/animexit.xml",
-        "source": "/home/amit/Buildapk/app/src/main/res/drawable/animexit.xml"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/home.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/home.png"
     },
@@ -348,12 +344,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_send_button_icon.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_cab_background_internal_bg.xml"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/star_off.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/res/drawable/star_off.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",

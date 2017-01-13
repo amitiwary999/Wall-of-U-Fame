@@ -32,6 +32,7 @@ import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,7 +49,7 @@ import timber.log.Timber;
 public class MainActivity extends Fragment {
     SharedPreferences sprfnc;
     private RecyclerView mBlogList;
-    private DatabaseReference mDatabase,pdata,mDatabaselike,mDatabaseunlike;
+    private DatabaseReference mDatabase,pdata,mDatabaselike,mDatabaseunlike,mDatabasenotif;
     private FirebaseAuth auth;
     FirebaseUser user;
     String mal,check;
@@ -87,6 +88,7 @@ public class MainActivity extends Fragment {
         //ref=mDatabase.orderByChild("date");
         mDatabaselike=FirebaseDatabase.getInstance().getReference().child("like");
         mDatabaseunlike=FirebaseDatabase.getInstance().getReference().child("unlike");
+        mDatabasenotif=FirebaseDatabase.getInstance().getReference().child("notification").child("like");
         pdata.keepSynced(true);
         mDatabase.keepSynced(true);
         mDatabaselike.keepSynced(true);
@@ -105,6 +107,7 @@ public class MainActivity extends Fragment {
         });
         return view;
     }
+
 
     @Override
     public void onStart() {
@@ -271,7 +274,7 @@ public class MainActivity extends Fragment {
                                             mDatabaselike.child(post_key).child(user.getUid()).setValue("Liked");
                                           //  final int
                                                     lik = model.getLike() + 1;
-
+                                                     mDatabasenotif.child(model.getKey()).child(user.getUid()).setValue("Liked pic");
                                             //   processlike=true;
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
@@ -501,6 +504,7 @@ public class MainActivity extends Fragment {
                 }*/
             };
             mBlogList.setAdapter(firebaseRecyclerAdapter);
+
         }else{
             loadLoginView();
        }

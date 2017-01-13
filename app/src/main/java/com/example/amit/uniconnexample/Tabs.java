@@ -1,10 +1,12 @@
 package com.example.amit.uniconnexample;
 
+import android.app.NotificationManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -26,6 +28,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +47,9 @@ public class Tabs extends AppCompatActivity {
     private TabLayout tabLayout,tablayoutbottom;
     private ViewPager viewPager;
     private CoordinatorLayout mainFrame;
+    MediaPlayer song;
+    private DatabaseReference mDatabasenotif;
+    FirebaseUser user;
     boolean doubleBackToExitPressedOnce = false;
 
 
@@ -45,17 +57,78 @@ public class Tabs extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs);
+        user=FirebaseAuth.getInstance().getCurrentUser();
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         mainFrame=(CoordinatorLayout)findViewById(R.id.coordinatorLayout);
         viewPager=(ViewPager)findViewById(R.id.viewPager);
         setupViewPager(viewPager);
+        mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like");
         tabLayout.setupWithViewPager(viewPager);
         setupTabIconsBottom();
         setupTabIcons();
         bindWidgetsWithAnEvent();
-    }
+        mDatabasenotif.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot snapshot:dataSnapshot.getChildren()) {
+                    notification();
+                    
+                }
+            }
 
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+       /* mDatabasenotif.child(user.getUid()).addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                notification();
+
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });*/
+    }
+    public void notification(){
+        song= MediaPlayer.create(this,R.raw.internetfriends0);
+        song.start();
+        NotificationManager notificationManager = (NotificationManager)
+                this.getSystemService(this.NOTIFICATION_SERVICE);
+        android.app.Notification n= new android.app.Notification.Builder(this).setContentTitle("Location notifier notice")
+                .setContentText(" Just 1 km away from destination")
+                .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();
+        notificationManager.notify(0,n);
+       /* song= MediaPlayer.create(getApplicationContext(),R.raw.internetfriends0);
+        song.start();
+        NotificationManager notificationManager = (NotificationManager)
+                this.getSystemService(getApplicationContext().NOTIFICATION_SERVICE);
+        NotificationCompat.Builder n= new NotificationCompat.Builder(this).setContentTitle("Location notifier notice")
+                .setContentText(" Just 1 km away from destination")
+                .setSmallIcon(R.drawable.no).setAutoCancel(true).build();
+
+        notificationManager.notify(0,n.build());*/
+    }
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new MainActivity(), "My Campus");
