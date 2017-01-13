@@ -73,7 +73,8 @@ public class Tabs extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot:dataSnapshot.getChildren()) {
                     notification();
-                    
+                    snapshot.getRef().setValue(null);
+
                 }
             }
 
