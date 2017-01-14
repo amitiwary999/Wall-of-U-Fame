@@ -70,31 +70,35 @@ public class Tabs extends AppCompatActivity {
         setupTabIconsBottom();
         setupTabIcons();
         bindWidgetsWithAnEvent();
-        mDatabasenotif.child(user.getUid()).addValueEventListener(new ValueEventListener() {
+        mDatabasenotif.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for( DataSnapshot snapshot:dataSnapshot.getChildren()) {
-                    snapshot.getRef().addValueEventListener(new ValueEventListener() {
+                for( final DataSnapshot snapshot:dataSnapshot.getChildren()) {
+                    handler1.postDelayed(new Runnable() {
                         @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            for(final DataSnapshot snapshot:dataSnapshot.getChildren()) {
-                                handler1.postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        notification();
-                                        snapshot.getRef().setValue(null);
+                        public void run() {
+                            snapshot.getRef().addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                        handler1.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                notification();
+                                                snapshot.getRef().setValue(null);
+                                            }
+                                        }, 2000);
+
                                     }
-                                },3000);
+                                }
 
-                            }
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
                         }
-
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-
-                        }
-                    });
-
+                    },3000);
 
                 }
             }
@@ -367,3 +371,6 @@ public class Tabs extends AppCompatActivity {
     }
 
 }
+/*
+
+ */
