@@ -178,6 +178,7 @@
                 android:textColorHint="#ffffff"
                 android:shadowColor="#ffffff"
                 android:textColor="#ffffff"
+                app:passwordToggleEnabled="true"
                 app:errorEnabled="true"
                 >
 

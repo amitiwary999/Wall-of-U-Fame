@@ -53,7 +53,7 @@ public class Tabs extends AppCompatActivity {
     private DatabaseReference mDatabasenotif;
     FirebaseUser user;
     boolean doubleBackToExitPressedOnce = false;
-
+    int m=0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,21 +74,23 @@ public class Tabs extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for( final DataSnapshot snapshot:dataSnapshot.getChildren()) {
-                    handler1.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            snapshot.getRef().addValueEventListener(new ValueEventListener() {
+                   // handler1.postDelayed(new Runnable() {
+                     //   @Override
+                     //   public void run() {
+                            snapshot.getRef().addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                     for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                        handler1.postDelayed(new Runnable() {
+
+                                      /*  handler1.postDelayed(new Runnable() {
                                             @Override
                                             public void run() {
-                                                notification();
-                                                snapshot.getRef().setValue(null);
+                                                notification(++m,snapshot.getRef());
+                                              //  snapshot.getRef().setValue(null);
+                                                Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
                                             }
-                                        }, 2000);
-
+                                        }, 2000);*/
+                                        notification(++m,snapshot.getRef());
                                     }
                                 }
 
@@ -97,8 +99,8 @@ public class Tabs extends AppCompatActivity {
 
                                 }
                             });
-                        }
-                    },3000);
+                       // }
+                   // },3000);
 
                 }
             }
@@ -136,16 +138,18 @@ public class Tabs extends AppCompatActivity {
             }
         });*/
     }
-    public void notification(){
-        song= MediaPlayer.create(this,R.raw.internetfriends0);
-        song.start();
-        int m = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
+    public void notification(int m,DatabaseReference notify){
+      //  song= MediaPlayer.create(this,R.raw.internetfriends0);
+      //  song.start();
+        //int m = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
+
         NotificationManager notificationManager = (NotificationManager)
                 this.getSystemService(this.NOTIFICATION_SERVICE);
         android.app.Notification n= new android.app.Notification.Builder(this).setContentTitle("Location notifier notice")
                 .setContentText(" Just 1 km away from destination")
                 .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();
         notificationManager.notify(m,n);
+        notify.setValue(null);
        /* song= MediaPlayer.create(getApplicationContext(),R.raw.internetfriends0);
         song.start();
         NotificationManager notificationManager = (NotificationManager)
