@@ -6,12 +6,18 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.amit.uniconnexample.utils.Utils;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * Created by amit on 28/11/16.
@@ -20,16 +26,35 @@ import com.example.amit.uniconnexample.utils.Utils;
 public class Notification extends AppCompatActivity {
     private TabLayout tablayoutbottom;
     private Toolbar toolbar;
+    private DatabaseReference mDatabasenotifdata;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
+        mDatabasenotifdata= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("data");
         Utils.setUpToolbarBackButton(Notification.this, toolbar);
         setupTabIconsBottom();
         // setupTabIcons();
         bindWidgetsWithAnEvent();
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseRecyclerAdapter<Notificationmodel,NotificationViewHolder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Notificationmodel, NotificationViewHolder>(
+                Notificationmodel.class,
+                R.layout.activity_notificationitem,
+                NotificationViewHolder.class,
+                mDatabasenotifdata
+        ) {
+            @Override
+            protected void populateViewHolder(NotificationViewHolder viewHolder, Notificationmodel model, int position) {
+                viewHolder.bindData(model);
+            }
+        };
     }
 
     private void setupTabIconsBottom() {
@@ -58,6 +83,22 @@ public class Notification extends AppCompatActivity {
             }
         });
 
+    }
+    public static class NotificationViewHolder extends RecyclerView.ViewHolder{
+        View view;
+        public NotificationViewHolder(View itemView) {
+            super(itemView);
+            view=itemView;
+        }
+        public void bindData(Notificationmodel model){
+            TextView tname=(TextView)view.findViewById(R.id.bname);
+            ImageView iview=(ImageView)view.findViewById(R.id.pimage);
+            tname.setText(model.getTxt());
+            if(model.getImg()!=null)
+                iview.setImageBitmap(Utils.decodeBase64(model.getImg()));
+            else{
+            }
+        }
     }
 
     private void setCurrentTabFragment(int tabPosition)

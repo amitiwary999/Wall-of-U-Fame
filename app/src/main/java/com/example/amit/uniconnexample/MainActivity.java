@@ -49,7 +49,7 @@ import timber.log.Timber;
 public class MainActivity extends Fragment {
     SharedPreferences sprfnc;
     private RecyclerView mBlogList;
-    private DatabaseReference mDatabase,pdata,mDatabaselike,mDatabaseunlike,mDatabasenotif,newMessage;
+    private DatabaseReference mDatabase,pdata,mDatabaselike,mDatabaseunlike,mDatabasenotif,newMessage,mDatabasenotifdata;
     private FirebaseAuth auth;
     FirebaseUser user;
     String mal,check;
@@ -89,6 +89,7 @@ public class MainActivity extends Fragment {
         mDatabaselike=FirebaseDatabase.getInstance().getReference().child("like");
         mDatabaseunlike=FirebaseDatabase.getInstance().getReference().child("unlike");
         mDatabasenotif=FirebaseDatabase.getInstance().getReference().child("notification").child("like");
+        mDatabasenotifdata=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("data");
         pdata.keepSynced(true);
         mDatabase.keepSynced(true);
         mDatabaselike.keepSynced(true);
@@ -271,10 +272,12 @@ public class MainActivity extends Fragment {
 
                                                }
                                            });
-                                            mDatabaselike.child(post_key).child(user.getUid()).setValue(userdata.name);
+                                            mDatabaselike.child(post_key).child(user.getUid()).setValue("Liked");
                                           //  final int
                                                     lik = model.getLike() + 1;
-                                                     mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue("Liked pic");
+                                                     mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue(userdata.name);
+                                                     DatabaseReference newpost=mDatabasenotifdata.push();
+                                                     newpost.setValue(new Notificationmodel(userdata.photo,userdata.name+" liked your post"));
                                             //   processlike=true;
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
