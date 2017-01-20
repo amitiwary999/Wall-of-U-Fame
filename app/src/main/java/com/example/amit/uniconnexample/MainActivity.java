@@ -49,7 +49,7 @@ import timber.log.Timber;
 public class MainActivity extends Fragment {
     SharedPreferences sprfnc;
     private RecyclerView mBlogList;
-    private DatabaseReference mDatabase,pdata,mDatabaselike,mDatabaseunlike,mDatabasenotif;
+    private DatabaseReference mDatabase,pdata,mDatabaselike,mDatabaseunlike,mDatabasenotif,newMessage;
     private FirebaseAuth auth;
     FirebaseUser user;
     String mal,check;
@@ -271,7 +271,7 @@ public class MainActivity extends Fragment {
 
                                                }
                                            });
-                                            mDatabaselike.child(post_key).child(user.getUid()).setValue("Liked");
+                                            mDatabaselike.child(post_key).child(user.getUid()).setValue(userdata.name);
                                           //  final int
                                                     lik = model.getLike() + 1;
                                                      mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue("Liked pic");

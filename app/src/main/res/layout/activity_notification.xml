@@ -13,15 +13,15 @@
         appa:title="Your Details"
         appa:titleTextColor="#fff"/>
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Notification is empty"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="60dp"
-        android:layout_below="@id/toolbar"
-        android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:layout_height="match_parent"
+        android:id="@+id/mblog_list"
+        android:layout_marginBottom="?android:attr/actionBarSize"
+        android:clipToPadding="false"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.TabLayout
         android:background="@color/colorPrimary"

@@ -90,7 +90,7 @@ public class Tabs extends AppCompatActivity {
                                                 Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
                                             }
                                         }, 2000);*/
-                                        notification(++m,snapshot.getRef());
+                                        notification(++m,snapshot.getRef(),snapshot);
                                     }
                                 }
 
@@ -138,15 +138,15 @@ public class Tabs extends AppCompatActivity {
             }
         });*/
     }
-    public void notification(int m,DatabaseReference notify){
+    public void notification(int m,DatabaseReference notify,DataSnapshot snapshot){
       //  song= MediaPlayer.create(this,R.raw.internetfriends0);
       //  song.start();
         //int m = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
 
         NotificationManager notificationManager = (NotificationManager)
                 this.getSystemService(this.NOTIFICATION_SERVICE);
-        android.app.Notification n= new android.app.Notification.Builder(this).setContentTitle("Location notifier notice")
-                .setContentText(" Just 1 km away from destination")
+        android.app.Notification n= new android.app.Notification.Builder(this).setContentTitle("UniConn Notification")
+                .setContentText(snapshot.getValue(String.class)+" liked your post")
                 .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();
         notificationManager.notify(m,n);
         notify.setValue(null);
