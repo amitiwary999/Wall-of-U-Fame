@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -35,6 +36,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.BottomBarTab;
+import com.roughike.bottombar.OnTabReselectListener;
+import com.roughike.bottombar.OnTabSelectListener;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -50,10 +55,11 @@ public class Tabs extends AppCompatActivity {
     private CoordinatorLayout mainFrame;
     MediaPlayer song;
     Handler handler1 = new Handler();
-    private DatabaseReference mDatabasenotif;
+    private DatabaseReference mDatabasenotif,mDatanotiflike;
     FirebaseUser user;
+    BottomBarTab bottomBarTab;
     boolean doubleBackToExitPressedOnce = false;
-    int m=0;
+    int m=0,count;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,15 +67,61 @@ public class Tabs extends AppCompatActivity {
         setContentView(R.layout.activity_tabs);
         user=FirebaseAuth.getInstance().getCurrentUser();
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
-        tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
+      //  tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         mainFrame=(CoordinatorLayout)findViewById(R.id.coordinatorLayout);
         viewPager=(ViewPager)findViewById(R.id.viewPager);
+        BottomBar bottomBar=(BottomBar)findViewById(R.id.bottomtab);
+         bottomBarTab=bottomBar.getTabWithId(R.id.tab_notification);
+
+        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelected(@IdRes int tabId) {
+                      if(tabId==R.id.tab_home){
+
+                      }
+                if(tabId==R.id.tab_account){
+                    startActivity(new Intent(Tabs.this,Profile.class));
+                }
+                if(tabId==R.id.tab_notification){
+                    startActivity(new Intent(Tabs.this,Notification.class));
+                }
+                if(tabId==R.id.tab_message){
+                    startActivity(new Intent(Tabs.this,Message.class));
+                }
+                if(tabId==R.id.tab_setting){
+                    startActivity(new Intent(Tabs.this,Settings.class));
+                }
+            }
+        });
+        bottomBar.setOnTabReselectListener(new OnTabReselectListener() {
+            @Override
+            public void onTabReSelected(@IdRes int tabId) {
+                if(tabId==R.id.tab_home){
+
+                }
+                if(tabId==R.id.tab_account){
+                    startActivity(new Intent(Tabs.this,Profile.class));
+                }
+                if(tabId==R.id.tab_notification){
+                    startActivity(new Intent(Tabs.this,Notification.class));
+                }
+                if(tabId==R.id.tab_message){
+                    startActivity(new Intent(Tabs.this,Message.class));
+                }
+                if(tabId==R.id.tab_setting){
+                    startActivity(new Intent(Tabs.this,Settings.class));
+                }
+            }
+        });
         setupViewPager(viewPager);
         mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like");
+        mDatanotiflike=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like").child(user.getUid());
+
+
         tabLayout.setupWithViewPager(viewPager);
-        setupTabIconsBottom();
+       // setupTabIconsBottom();
         setupTabIcons();
-        bindWidgetsWithAnEvent();
+      //  bindWidgetsWithAnEvent();
         mDatabasenotif.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -138,6 +190,28 @@ public class Tabs extends AppCompatActivity {
             }
         });*/
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mDatanotiflike.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                count=dataSnapshot.child("count").getValue(Integer.class);
+                if(count!=0){
+                   // Toast.makeText(Tabs.this,"Right",Toast.LENGTH_LONG).show();
+                    bottomBarTab.setBadgeCount(count);
+                }
+                Toast.makeText(Tabs.this,count+"Right",Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
     public void notification(int m,DatabaseReference notify,DataSnapshot snapshot){
       //  song= MediaPlayer.create(this,R.raw.internetfriends0);
       //  song.start();
@@ -216,7 +290,7 @@ public class Tabs extends AppCompatActivity {
         //  bottomtab();
     }
 
-    private void setupTabIconsBottom() {
+    /*private void setupTabIconsBottom() {
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.home),true);
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.myaccount));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.notifications));
@@ -243,7 +317,7 @@ public class Tabs extends AppCompatActivity {
         tabFour.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.settings, 0, 0);
         tablayoutbottom.getTabAt(3).setCustomView(tabFour);*/
         //  bottomtab();
-    }
+    /*}
 
     private void bindWidgetsWithAnEvent()
     {
@@ -289,13 +363,13 @@ public class Tabs extends AppCompatActivity {
            /* case 4:
                 startActivity(new Intent(Tabs.this,Chat.class));
                 break;*/
-            case 4:
+        /*    case 4:
                 startActivity(new Intent(Tabs.this,Settings.class));
                // finish();
                // replaceFragment(new Settings());
                 break;
         }
-    }
+    }*/
 
     public void replaceFragment(Fragment fragment) {
         FragmentManager fm = getSupportFragmentManager();

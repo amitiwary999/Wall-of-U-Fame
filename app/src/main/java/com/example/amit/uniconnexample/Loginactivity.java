@@ -63,6 +63,7 @@ public class Loginactivity extends AppCompatActivity{
     @BindView(R.id.login_progress)
     ProgressBar loginProgress;
     FirebaseUser user;
+    DatabaseReference mDatabasenotiflike;
     private FirebaseAuth.AuthStateListener mAuthListener;
     TextView signup;
     String TAG = "TAG";
@@ -73,6 +74,7 @@ public class Loginactivity extends AppCompatActivity{
         ButterKnife.bind(this);
         setTitle("Login");
         auth = FirebaseAuth.getInstance();
+
         if (isNetworkConnected()) {
             forgotpassword.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -166,9 +168,25 @@ public class Loginactivity extends AppCompatActivity{
                                   //  email.setError("id may be wrong ");
                                   //  password.setError("password may be wrong");
                                 } else {
-                                    Intent i = new Intent(Loginactivity.this, Tabs.class);
-                                    startActivity(i);
-                                    finish();
+                                    mDatabasenotiflike=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like");
+                                    mDatabasenotiflike.addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(DataSnapshot dataSnapshot) {
+                                            if(!dataSnapshot.hasChild(auth.getCurrentUser().getUid())){
+                                                mDatabasenotiflike.child(auth.getCurrentUser().getUid()).setValue(new Likemodel(0));
+
+                                            }
+                                            Intent i = new Intent(Loginactivity.this, Tabs.class);
+                                            startActivity(i);
+                                            finish();
+                                        }
+
+                                        @Override
+                                        public void onCancelled(DatabaseError databaseError) {
+
+                                        }
+                                    });
+
                                 }
                             }
                         });

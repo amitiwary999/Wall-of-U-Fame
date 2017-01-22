@@ -11,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.TextInputEditText;
@@ -38,6 +39,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
 
 import java.io.File;
 
@@ -86,6 +89,7 @@ public class Profile extends AppCompatActivity {
                 name.setCursorVisible(true);
             }
         });
+
     /*   final AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
         activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -119,7 +123,7 @@ public class Profile extends AppCompatActivity {
             }
         });
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
-        setupTabIconsBottom();
+       setupTabIconsBottom();
         // setupTabIcons();
         bindWidgetsWithAnEvent();
     }

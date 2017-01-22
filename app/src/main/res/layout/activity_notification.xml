@@ -16,13 +16,13 @@
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/mblog_list"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/mnotification_list"
         android:layout_marginBottom="?android:attr/actionBarSize"
         android:clipToPadding="false"
         android:scrollbars="vertical">
 
     </android.support.v7.widget.RecyclerView>
-
     <android.support.design.widget.TabLayout
         android:background="@color/colorPrimary"
         android:id="@+id/tabLayoutbottom"
@@ -34,5 +34,8 @@
         app:tabGravity="fill"
         >
     </android.support.design.widget.TabLayout>
+
+
+
 
 </RelativeLayout>

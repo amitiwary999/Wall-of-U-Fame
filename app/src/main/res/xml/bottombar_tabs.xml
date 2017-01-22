@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/hhome"
+        barColorWhenSelected="@color/colorPrimary"
+         />
+    <tab
+        id="@+id/tab_account"
+        icon="@drawable/haccount"
+        barColorWhenSelected="@color/colorPrimary"
+         />
+    <tab
+        id="@+id/tab_notification"
+        icon="@drawable/hnotification"
+        barColorWhenSelected="@color/colorPrimary"
+         />
+    <tab
+        id="@+id/tab_message"
+        icon="@drawable/hmessage"
+        barColorWhenSelected="@color/colorPrimary"
+         />
+    <tab
+        id="@+id/tab_setting"
+        icon="@drawable/hsetting"
+        barColorWhenSelected="@color/colorPrimary"
+         />
+
+</tabs>

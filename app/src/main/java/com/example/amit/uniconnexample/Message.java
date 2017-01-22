@@ -2,6 +2,7 @@ package com.example.amit.uniconnexample;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -26,6 +27,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
 
 import java.util.ArrayList;
 
@@ -63,6 +66,7 @@ public class Message extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         Utils.setUpToolbarBackButton(Message.this, toolbar);
         setupTabIconsBottom();
+
         // setupTabIcons();
         bindWidgetsWithAnEvent();
         FirebaseRecyclerAdapter<Message_model,MessageViewHolder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Message_model, MessageViewHolder>(

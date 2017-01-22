@@ -1,35 +1,43 @@
 [
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_seekbar_track_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_seekbar_track_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/google_button.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable/google_button.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_edit_text_material.xml"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_ab_back_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable/common_plus_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ic_ab_back_material.xml"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_edit_text_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_round.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/messenger_button_white_bg_round.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/notification_icon_background.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/like.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/like.png"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_text_cursor_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_text_cursor_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_btn_selector_dark.xml",
@@ -45,7 +53,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_btn_borderless_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_btn_borderless_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/thumb_off.png",
@@ -57,7 +65,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_tab_indicator_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_tab_indicator_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_arrow_back_white_18dp.png",
@@ -89,7 +97,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_btn_default_mtrl_shape.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/rounded_layout.xml",
@@ -101,19 +109,15 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/drawable/design_snackbar_background.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_snackbar_background.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/user.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/user.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/design_ic_visibility.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/drawable/design_ic_visibility.xml"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_icon.xml",
@@ -125,7 +129,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_textfield_search_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_textfield_search_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_arrow_back_black_24dp.png",
@@ -133,11 +137,11 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_btn_check_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_btn_check_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_item_background_holo_dark.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_silver_background.xml",
@@ -145,11 +149,11 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ic_clear_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_clear_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_item_background_holo_light.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_item_background_holo_light.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/heart_on.png",
@@ -157,7 +161,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/settings.png",
@@ -172,28 +176,40 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable/md_btn_selected.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/hhome.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/hhome.png"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_dark.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable/common_plus_signin_btn_icon_dark.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_password_eye.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/haccount.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/haccount.png"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_selector_dark.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable/md_selector_dark.xml"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_add_black_24dp.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_add_black_24dp.png"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_selector_dark.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable/md_selector_dark.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ic_menu_overflow_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
@@ -221,7 +237,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_vector_test.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_vector_test.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_transparent.xml",
@@ -236,8 +252,12 @@
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_add_white_24dp.png"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/bb_bottom_bar_top_shadow.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.1.1/res/drawable/bb_bottom_bar_top_shadow.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/drawable/design_fab_background.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_fab_background.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/password_button.xml",
@@ -245,11 +265,11 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_list_selector_holo_light.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_spinner_textfield_background_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_item_selected.xml",
@@ -260,8 +280,16 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/messenger_button_blue_bg_round.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/hnotification.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/hnotification.png"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/home.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/home.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/notification_bg_low.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_selector.xml",
@@ -270,6 +298,10 @@
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/idp_button_background_facebook.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/res/drawable/idp_button_background_facebook.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/hmessage.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/hmessage.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_background.xml",
@@ -281,7 +313,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/drawable/navigation_empty_icon.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/navigation_empty_icon.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/idp_button_background_google.xml",
@@ -293,7 +325,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ratingbar_indicator_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_btn_selected_dark.xml",
@@ -301,7 +333,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_list_selector_holo_dark.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/star_on.png",
@@ -309,11 +341,11 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_seekbar_thumb_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ratingbar_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ratingbar_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/phn.png",
@@ -321,11 +353,11 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_dialog_material_background.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_dialog_material_background.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_btn_radio_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_btn_radio_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_account_circle_white_48dp.png",
@@ -333,7 +365,11 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ic_go_search_api_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/design_bottom_navigation_item_background.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
@@ -344,20 +380,20 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_send_button_icon.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/star_off.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/res/drawable/star_off.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_cab_background_internal_bg.xml"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_seekbar_tick_mark_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_btn_colored_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/myaccount.png",
@@ -369,7 +405,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_switch_thumb_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_switch_thumb_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
@@ -386,6 +422,10 @@
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/heart_off.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/res/drawable/heart_off.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/notification_bg.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/twitter_button.xml",
@@ -437,7 +477,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_cab_background_top_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_cab_background_top_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/unlike.png",
@@ -449,7 +489,7 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ic_voice_search_api_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_voice_search_api_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/default_account.png",
@@ -465,7 +505,11 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ic_search_api_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/hsetting.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/hsetting.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/account.png",
@@ -473,6 +517,6 @@
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ratingbar_small_material.xml"
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ratingbar_small_material.xml"
     }
 ]

@@ -75,6 +75,7 @@ public class Signupactivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     UserData userData;
+    DatabaseReference mDatabasenotiflike;
     String mal,pass,confrmpass,phn,nam,clgname;
     int flag=0;
     String check;
@@ -85,6 +86,7 @@ public class Signupactivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mProgress = new ProgressDialog(this);
         userData = new UserData();
+        mDatabasenotiflike=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like");
         phn=phone.getEditText().getText().toString().trim();
         pass=password.getEditText().getText().toString().trim();
         confrmpass=confrmpassword.getEditText().getText().toString().trim();
@@ -100,6 +102,7 @@ public class Signupactivity extends AppCompatActivity {
                 if (user != null) {                    // User is signed in
                     Toast.makeText(Signupactivity.this, "Successfully signed up", Toast.LENGTH_SHORT).show();
                     writeUserData(user.getUid());
+                    mDatabasenotiflike.child(user.getUid()).setValue(new Likemodel(0));
                     startActivity(new Intent(Signupactivity.this, Tabs.class));
                            // .putExtra("user", userData));
                     finish();

@@ -7,11 +7,30 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 69,
-                    "endOffset": 120
+                    "endColumn": 60,
+                    "endOffset": 111
                 },
                 "from": {
-                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-land/values-land.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.1.1/res/values-land/values-land.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 60,
+                        "endOffset": 111
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 116,
+                    "endColumn": 69,
+                    "endOffset": 181
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -23,14 +42,14 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 125,
+                    "startOffset": 186,
                     "endColumn": 63,
-                    "endOffset": 184
+                    "endOffset": 245
                 },
                 "from": {
-                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-land/values-land.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -42,14 +61,14 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 189,
+                    "startOffset": 250,
                     "endColumn": 70,
-                    "endOffset": 255
+                    "endOffset": 316
                 },
                 "from": {
-                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-land/values-land.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -61,14 +80,14 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 260,
+                    "startOffset": 321,
                     "endColumn": 67,
-                    "endOffset": 323
+                    "endOffset": 384
                 },
                 "from": {
-                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/values-land/values-land.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -80,15 +99,15 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 328,
-                    "endLine": 9,
+                    "startOffset": 389,
+                    "endLine": 10,
                     "endColumn": 12,
-                    "endOffset": 505
+                    "endOffset": 566
                 },
                 "from": {
-                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/values-land/values-land.xml",
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-land/values-land.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

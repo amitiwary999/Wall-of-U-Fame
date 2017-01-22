@@ -25,9 +25,9 @@
         android:layout_height="5dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
-        app:whorlview_circle_colors="#F14336_#fb8c00_#5677fc_#F44336_#4CAF50"
-        app:whorlview_circle_speed="270"
-        app:whorlview_parallax="fast"
+        app:whorlview_circle_colors="#F14336_#fb8c00_#5677fc_#283593_#4CAF50"
+        app:whorlview_circle_speed="160"
+        app:whorlview_parallax="slow"
         app:whorlview_strokeWidth="10"
         app:whorlview_sweepAngle="90">
     </com.tt.whorlviewlibrary.WhorlView>
@@ -38,6 +38,7 @@
         android:layout_height="match_parent"
         android:id="@+id/mblog_list"
         android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_marginBottom="45dp"
         android:clipToPadding="false"
         android:scrollbars="vertical">
 

@@ -2,6 +2,7 @@ package com.example.amit.uniconnexample;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.amit.uniconnexample.utils.Utils;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
 
 /**
  * Created by amit on 28/11/16.
@@ -28,6 +31,27 @@ public class Settings extends AppCompatActivity {
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         Utils.setUpToolbarBackButton(Settings.this, toolbar);
         setupTabIconsBottom();
+        BottomBar bottomBar=(BottomBar)findViewById(R.id.bottomtab);
+        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelected(@IdRes int tabId) {
+                if(tabId==R.id.tab_setting){
+
+                }
+                if(tabId==R.id.tab_account){
+                    startActivity(new Intent(Settings.this,Profile.class));
+                }
+                if(tabId==R.id.tab_notification){
+                    startActivity(new Intent(Settings.this,Notification.class));
+                }
+                if(tabId==R.id.tab_message){
+                    startActivity(new Intent(Settings.this,Message.class));
+                }
+                if(tabId==R.id.tab_home){
+                    startActivity(new Intent(Settings.this,Tabs.class));
+                }
+            }
+        });
         // setupTabIcons();
         bindWidgetsWithAnEvent();
     }
