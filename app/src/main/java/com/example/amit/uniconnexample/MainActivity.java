@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -56,8 +57,9 @@ public class MainActivity extends Fragment {
     UserData userdata;
     WhorlView whorlView;
     FloatingActionButton fab;
-    int lik,unlike;
+    int lik,unlike,count;
     int unlik,lyk;
+    Handler handler1 = new Handler();
     private Boolean processlike=false,processunlike=false;
     private ArrayList<String> keysArray;
     private ProgressDialog mProgress;
@@ -135,6 +137,7 @@ public class MainActivity extends Fragment {
                     Timber.d("oncancelled");
                 }
             });
+
             FirebaseRecyclerAdapter<Blogmodel, BlogViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Blogmodel, BlogViewHolder>(
                     Blogmodel.class,
                     R.layout.blog_item,
@@ -154,6 +157,7 @@ public class MainActivity extends Fragment {
                     viewHolder.bindData(model);
                     viewHolder.setLiked(post_key);
                     viewHolder.setUnliked(post_key);
+
                     viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -273,24 +277,30 @@ public class MainActivity extends Fragment {
 
                                                }
                                            });
+                                            lik = model.getLike() + 1;
                                             mDatabaselike.child(post_key).child(user.getUid()).setValue("Liked");
                                           //  final int
-                                                    lik = model.getLike() + 1;
-                                                     mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue(userdata.name);
-                                                     mDatabasenotiflike.child(model.getKey()).addListenerForSingleValueEvent(new ValueEventListener() {
-                                                         @Override
-                                                         public void onDataChange(DataSnapshot dataSnapshot) {
-                                                           int  count=dataSnapshot.child("count").getValue(Integer.class);
-                                                             mDatabasenotiflike.child(model.getKey()).setValue(new Likemodel(++count));
-                                                         }
+                                            handler1.postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    mDatabasenotiflike.child(model.getKey()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                                        @Override
+                                                        public void onDataChange(DataSnapshot dataSnapshot) {
+                                                            count=dataSnapshot.child("count").getValue(Integer.class);
+                                                            mDatabasenotiflike.child(model.getKey()).setValue(new Likemodel(count+1));
+                                                        }
 
-                                                         @Override
-                                                         public void onCancelled(DatabaseError databaseError) {
+                                                        @Override
+                                                        public void onCancelled(DatabaseError databaseError) {
 
-                                                         }
-                                                     });
-                                                     DatabaseReference newpost=mDatabasenotifdata.child(model.getKey()).push();
-                                                     newpost.setValue(new Notificationmodel(userdata.photo,userdata.name+" liked your post"));
+                                                        }
+                                                    });
+                                                    mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue(userdata.name);
+                                                    DatabaseReference newpost=mDatabasenotifdata.child(model.getKey()).push();
+                                                    newpost.setValue(new Notificationmodel(userdata.photo,userdata.name+" liked your post"));
+                                                }
+                                            },2000);
+
                                             //   processlike=true;
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override

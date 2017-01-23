@@ -43,7 +43,7 @@ public class Utils {
         activity.setSupportActionBar(toolbar);
         activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         activity.getSupportActionBar().setDisplayShowHomeEnabled(true);
-        toolbar.setNavigationIcon(ContextCompat.getDrawable(activity, R.drawable.ic_arrow_back_white_18dp));
+        toolbar.setNavigationIcon(ContextCompat.getDrawable(activity, R.drawable.ic_arrow_back_white));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

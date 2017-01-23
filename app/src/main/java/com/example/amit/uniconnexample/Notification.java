@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -42,13 +43,14 @@ public class Notification extends AppCompatActivity {
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         mDatanotiflike= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        mDatanotiflike.child("count").setValue(0);
+        Toast.makeText(this,"check",Toast.LENGTH_LONG).show();
+
         mDatabasenotifdata= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("data").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         Utils.setUpToolbarBackButton(Notification.this, toolbar);
         LinearLayoutManager lm=new LinearLayoutManager(this);
         notificationrecycle.setLayoutManager(lm);
         setupTabIconsBottom();
-        
+
         // setupTabIcons();
         bindWidgetsWithAnEvent();
 
@@ -65,7 +67,14 @@ public class Notification extends AppCompatActivity {
         ) {
             @Override
             protected void populateViewHolder(NotificationViewHolder viewHolder, Notificationmodel model, int position) {
+                viewHolder.view.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mDatanotiflike.child("count").setValue(0);
+                    }
+                });
                 viewHolder.bindData(model);
+
             }
         };
         notificationrecycle.setAdapter(firebaseRecyclerAdapter);
@@ -100,9 +109,11 @@ public class Notification extends AppCompatActivity {
     }
     public static class NotificationViewHolder extends RecyclerView.ViewHolder{
         View view;
+        private DatabaseReference mDatabasenotifdata,mDatanotiflike;
         public NotificationViewHolder(View itemView) {
             super(itemView);
             view=itemView;
+            mDatanotiflike= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         }
         public void bindData(Notificationmodel model){
             TextView tname=(TextView)view.findViewById(R.id.bname);
@@ -113,6 +124,7 @@ public class Notification extends AppCompatActivity {
             else{
                 iview.setImageResource(R.drawable.account);
             }
+            // mDatanotiflike.child("count").setValue(0);
         }
     }
 

@@ -58,8 +58,9 @@ public class Tabs extends AppCompatActivity {
     private DatabaseReference mDatabasenotif,mDatanotiflike;
     FirebaseUser user;
     BottomBarTab bottomBarTab;
+
     boolean doubleBackToExitPressedOnce = false;
-    int m=0,count;
+    int m=0,count,flag=0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -73,22 +74,25 @@ public class Tabs extends AppCompatActivity {
         BottomBar bottomBar=(BottomBar)findViewById(R.id.bottomtab);
          bottomBarTab=bottomBar.getTabWithId(R.id.tab_notification);
 
+
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
                       if(tabId==R.id.tab_home){
 
                       }
-                if(tabId==R.id.tab_account){
+               else if(tabId==R.id.tab_account){
                     startActivity(new Intent(Tabs.this,Profile.class));
                 }
-                if(tabId==R.id.tab_notification){
+               else if(tabId==R.id.tab_notification){
+                         // bottomBarTab.removeBadge();
+                      //    mDatanotiflike.setValue(new Likemodel(0));
                     startActivity(new Intent(Tabs.this,Notification.class));
                 }
-                if(tabId==R.id.tab_message){
+               else if(tabId==R.id.tab_message){
                     startActivity(new Intent(Tabs.this,Message.class));
                 }
-                if(tabId==R.id.tab_setting){
+               else if(tabId==R.id.tab_setting){
                     startActivity(new Intent(Tabs.this,Settings.class));
                 }
             }
@@ -99,16 +103,16 @@ public class Tabs extends AppCompatActivity {
                 if(tabId==R.id.tab_home){
 
                 }
-                if(tabId==R.id.tab_account){
+               else if(tabId==R.id.tab_account){
                     startActivity(new Intent(Tabs.this,Profile.class));
                 }
-                if(tabId==R.id.tab_notification){
+              else  if(tabId==R.id.tab_notification){
                     startActivity(new Intent(Tabs.this,Notification.class));
                 }
-                if(tabId==R.id.tab_message){
+               else if(tabId==R.id.tab_message){
                     startActivity(new Intent(Tabs.this,Message.class));
                 }
-                if(tabId==R.id.tab_setting){
+                else if(tabId==R.id.tab_setting){
                     startActivity(new Intent(Tabs.this,Settings.class));
                 }
             }
@@ -162,6 +166,25 @@ public class Tabs extends AppCompatActivity {
 
             }
         });
+        mDatanotiflike.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+              //  count=dataSnapshot.child("count").getValue(Integer.class);
+                //  if(count!=0){
+                // Toast.makeText(Tabs.this,"Right",Toast.LENGTH_LONG).show();
+             //   bottomBarTab.setBadgeCount(count);
+                 mDatanotiflike.removeEventListener(this);
+                //  }else{
+                //   bottomBarTab.removeBadge();
+                //  }
+                //   Toast.makeText(Tabs.this,count+"Right",Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
        /* mDatabasenotif.child(user.getUid()).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -194,22 +217,13 @@ public class Tabs extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mDatanotiflike.addListenerForSingleValueEvent(new ValueEventListener() {
+        handler1.postDelayed(new Runnable() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                count=dataSnapshot.child("count").getValue(Integer.class);
-                if(count!=0){
-                   // Toast.makeText(Tabs.this,"Right",Toast.LENGTH_LONG).show();
-                    bottomBarTab.setBadgeCount(count);
-                }
-                Toast.makeText(Tabs.this,count+"Right",Toast.LENGTH_LONG).show();
+            public void run() {
+                bottomBarTab.setBadgeCount(flag);
             }
+        },3000);
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
     }
 
     public void notification(int m,DatabaseReference notify,DataSnapshot snapshot){
@@ -223,6 +237,7 @@ public class Tabs extends AppCompatActivity {
                 .setContentText(snapshot.getValue(String.class)+" liked your post")
                 .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();
         notificationManager.notify(m,n);
+        ++flag;
         notify.setValue(null);
        /* song= MediaPlayer.create(getApplicationContext(),R.raw.internetfriends0);
         song.start();
@@ -387,8 +402,7 @@ public class Tabs extends AppCompatActivity {
         }
 
         this.doubleBackToExitPressedOnce = true;
-        Snackbar.make(mainFrame,"Please click again to exit",Snackbar.LENGTH_LONG).show();
-       // Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
 
