@@ -74,7 +74,7 @@ public class Tabs extends AppCompatActivity {
         BottomBar bottomBar=(BottomBar)findViewById(R.id.bottomtab);
          bottomBarTab=bottomBar.getTabWithId(R.id.tab_notification);
 
-
+        startService(new Intent(this,Notificationservice.class));
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {

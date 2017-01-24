@@ -55,7 +55,7 @@ public class Chatstart extends AppCompatActivity {
     TextView text;
     Toolbar toolbar;
     ImageView src; MediaPlayer song;
-   private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd,checkBack,newrply;
+   private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd,checkBack,newrply,newnotifChat;
     private RecyclerView mChat;
     ImageButton send;
     @Override
@@ -75,6 +75,7 @@ public class Chatstart extends AppCompatActivity {
         //Utils.setUpToolbarBackButton(this, toolbar);
         message=(EditText)findViewById(R.id.et_message);
         msg=message.getText().toString();
+        newnotifChat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(auth.getCurrentUser().getUid()).child(key);
         newSnd=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid()).child(key);
         newrply=FirebaseDatabase.getInstance().getReference().child("Smessage").child(key).child(auth.getCurrentUser().getUid());
         checkBack=FirebaseDatabase.getInstance().getReference().child("message");
@@ -228,9 +229,9 @@ public class Chatstart extends AppCompatActivity {
        newSend.addChildEventListener(new ChildEventListener() {
            @Override
            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-               if(!Foreground.get().isForeground()){
+             /*  if(!Foreground.get().isForeground()){
                    notification();
-               }
+               }*/
                if(dataSnapshot.hasChild("msg1")) {
                     txt = dataSnapshot.child("msg1").getValue(String.class);
                 //   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();

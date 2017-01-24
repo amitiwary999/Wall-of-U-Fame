@@ -43,7 +43,7 @@ public class Notification extends AppCompatActivity {
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         mDatanotiflike= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        Toast.makeText(this,"check",Toast.LENGTH_LONG).show();
+      //  Toast.makeText(this,"check",Toast.LENGTH_LONG).show();
 
         mDatabasenotifdata= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("data").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         Utils.setUpToolbarBackButton(Notification.this, toolbar);
