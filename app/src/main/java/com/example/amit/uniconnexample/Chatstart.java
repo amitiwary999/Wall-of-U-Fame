@@ -54,8 +54,9 @@ public class Chatstart extends AppCompatActivity {
     String key,spic,txt;
     TextView text;
     Toolbar toolbar;
+    UserData userData;
     ImageView src; MediaPlayer song;
-   private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd,checkBack,newrply,newnotifChat;
+   private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd,checkBack,newrply,newnotifChat,newnotifchat;
     private RecyclerView mChat;
     ImageButton send;
     @Override
@@ -66,6 +67,7 @@ public class Chatstart extends AppCompatActivity {
         text=(TextView)findViewById(R.id.text);
         auth=FirebaseAuth.getInstance();
         bundle=getIntent().getExtras();
+        userData=new UserData();
         if(bundle.getString("chat")!=null)
             key=bundle.getString("chat");
         setTitle("");
@@ -75,7 +77,9 @@ public class Chatstart extends AppCompatActivity {
         //Utils.setUpToolbarBackButton(this, toolbar);
         message=(EditText)findViewById(R.id.et_message);
         msg=message.getText().toString();
-        newnotifChat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(auth.getCurrentUser().getUid()).child(key);
+        newnotifChat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(key).child(auth.getCurrentUser().getUid());
+        newnotifchat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(auth.getCurrentUser().getUid()).child(key);
+         newnotifchat.setValue(null);
         newSnd=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid()).child(key);
         newrply=FirebaseDatabase.getInstance().getReference().child("Smessage").child(key).child(auth.getCurrentUser().getUid());
         checkBack=FirebaseDatabase.getInstance().getReference().child("message");
@@ -125,6 +129,7 @@ public class Chatstart extends AppCompatActivity {
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message");
         newReply.keepSynced(true);
         mDatabase.keepSynced(true);
+        newnotifchat.keepSynced(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
         mChat.setLayoutManager(linearLayoutManager);
@@ -157,7 +162,7 @@ public class Chatstart extends AppCompatActivity {
                     DatabaseReference newMesage = mDatabase.child(key).child(auth.getCurrentUser().getUid()).push();
                     newMesage.child("msg2").setValue(msge);
                     message.setText("");
-
+                    newnotifChat.setValue(new Notifmsgmodel(msge,userData.name));
               /*  FirebaseRecyclerAdapter<Chatreceivermodel,Chatreceiverholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Chatreceivermodel, Chatreceiverholder>(
                         Chatreceivermodel.class,
                         R.layout.activity_startchatitem,
@@ -241,7 +246,7 @@ public class Chatstart extends AppCompatActivity {
                }
                newSnd.child("image").setValue(spic);
                newSnd.child("name").setValue(name);
-               newSnd.child("key").setValue(key);
+               newSnd.child("key").setValue(user.getUid());
                newSnd.child("msg").setValue(txt);
              //  DatabaseReference newmg=newSnd.push();
              //  newmg.setValue(new Message_model(spic,name,txt,key));
@@ -281,8 +286,8 @@ public class Chatstart extends AppCompatActivity {
                     txt = dataSnapshot.child("msg2").getValue(String.class);
                     //   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
                 }
-                newrply.child("image").setValue(spic);
-                newrply.child("name").setValue(name);
+                newrply.child("image").setValue(userData.photo);
+                newrply.child("name").setValue(userData.name);
                 newrply.child("key").setValue(key);
                 newrply.child("msg").setValue(txt);
                 //  DatabaseReference newmg=newSnd.push();
@@ -334,6 +339,7 @@ public class Chatstart extends AppCompatActivity {
             protected void populateViewHolder(final Chatstartviewholder viewHolder, final Chatstartmodel model, int position) {
                 //  viewHolder.bindData(model);
                // if(model.getMsg1().length()!=0)
+                newnotifchat.setValue(null);
                 viewHolder.setMsg1(model.getMsg1());
              //   if(model.getMsg2().length()!=0)
                 viewHolder.setMsg2(model.getMsg2());

@@ -33,7 +33,7 @@ public class Notificationservice extends Service {
         super.onCreate();
         user= FirebaseAuth.getInstance().getCurrentUser();
         mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like");
-        if(isAppIsInBackground(getBaseContext())){
+        if(!(Foreground.get().isForeground())){
             mDatabasenotif.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {

@@ -1,6 +1,8 @@
 package com.example.amit.uniconnexample;
 
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -18,9 +20,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -55,12 +59,13 @@ public class Tabs extends AppCompatActivity {
     private CoordinatorLayout mainFrame;
     MediaPlayer song;
     Handler handler1 = new Handler();
-    private DatabaseReference mDatabasenotif,mDatanotiflike;
+    private DatabaseReference mDatabasenotif,mDatanotiflike,newnotifchat;
     FirebaseUser user;
-    BottomBarTab bottomBarTab;
+    BottomBarTab bottomBarTab,bottomBarTabmsg;
 
     boolean doubleBackToExitPressedOnce = false;
-    int m=0,count,flag=0;
+    int m=0,m1=500,count,flag=0;
+    int msgcount=0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -73,7 +78,7 @@ public class Tabs extends AppCompatActivity {
         viewPager=(ViewPager)findViewById(R.id.viewPager);
         BottomBar bottomBar=(BottomBar)findViewById(R.id.bottomtab);
          bottomBarTab=bottomBar.getTabWithId(R.id.tab_notification);
-
+         bottomBarTabmsg=bottomBar.getTabWithId(R.id.tab_message);
         startService(new Intent(this,Notificationservice.class));
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
@@ -85,7 +90,8 @@ public class Tabs extends AppCompatActivity {
                     startActivity(new Intent(Tabs.this,Profile.class));
                 }
                else if(tabId==R.id.tab_notification){
-                         // bottomBarTab.removeBadge();
+                          bottomBarTab.removeBadge();
+                          flag=0;
                       //    mDatanotiflike.setValue(new Likemodel(0));
                     startActivity(new Intent(Tabs.this,Notification.class));
                 }
@@ -118,9 +124,26 @@ public class Tabs extends AppCompatActivity {
             }
         });
         setupViewPager(viewPager);
+        newnotifchat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(user.getUid());
         mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like");
         mDatanotiflike=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like").child(user.getUid());
+        newnotifchat.keepSynced(true);
+        mDatabasenotif.keepSynced(true);
+        mDatanotiflike.keepSynced(true);
+        newnotifchat.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+              //  msgcount=(int)dataSnapshot.getChildrenCount();
+                for(DataSnapshot snapshot:dataSnapshot.getChildren()){
+                    notifiy(++m1,snapshot.getRef(),snapshot);
+                }
+            }
 
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
         tabLayout.setupWithViewPager(viewPager);
        // setupTabIconsBottom();
@@ -166,7 +189,7 @@ public class Tabs extends AppCompatActivity {
 
             }
         });
-        mDatanotiflike.addListenerForSingleValueEvent(new ValueEventListener() {
+      /*  mDatanotiflike.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
               //  count=dataSnapshot.child("count").getValue(Integer.class);
@@ -184,7 +207,7 @@ public class Tabs extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        });*/
        /* mDatabasenotif.child(user.getUid()).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -212,17 +235,26 @@ public class Tabs extends AppCompatActivity {
 
             }
         });*/
+        handler1.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                bottomBarTab.setBadgeCount(flag);
+                bottomBarTabmsg.setBadgeCount(msgcount);
+
+            }
+        },1000);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        handler1.postDelayed(new Runnable() {
+       /* handler1.postDelayed(new Runnable() {
             @Override
             public void run() {
                 bottomBarTab.setBadgeCount(flag);
+                bottomBarTabmsg.setBadgeCount(msgcount);
             }
-        },3000);
+        },2000);*/
 
     }
 
@@ -248,6 +280,35 @@ public class Tabs extends AppCompatActivity {
                 .setSmallIcon(R.drawable.no).setAutoCancel(true).build();
 
         notificationManager.notify(0,n.build());*/
+    }
+    public void notifiy(int m,DatabaseReference ref,DataSnapshot snapshot){
+        String name=snapshot.child("name").getValue(String.class);
+        String text=snapshot.child("txt").getValue(String.class);
+        NotificationCompat.Builder n=new NotificationCompat.Builder(this)
+                .setContentTitle("Unread Message")
+                .setContentText(name+" : "+text)
+                .setSmallIcon(R.drawable.uniconn)
+                .setAutoCancel(true);
+        Intent intent=new Intent(this,Message.class);
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+        stackBuilder.addParentStack(Message.class);
+        stackBuilder.addNextIntent(intent);
+        PendingIntent resultPendingIntent =
+                stackBuilder.getPendingIntent(
+                        0,
+                        PendingIntent.FLAG_UPDATE_CURRENT
+                );
+          n.setContentIntent(resultPendingIntent);
+
+        // NotificationManager notificationManager=(NotificationManager)this.getSystemService(this.NOTIFICATION_SERVICE);
+       /* NotificationCompat.Builder n=new NotificationCompat.Builder(this).setContentTitle("Unread Message")
+                .setContentText(name+" : "+text)
+                .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();*/
+        NotificationManager mNotificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotificationManager.notify(m,n.build());
+        ++msgcount;
+        ref.setValue(null);
     }
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());

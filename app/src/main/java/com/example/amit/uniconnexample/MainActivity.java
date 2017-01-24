@@ -207,11 +207,8 @@ public class MainActivity extends Fragment {
                                                          lik=0;
                                                      }
                                             mDatabaselike.child(post_key).child(user.getUid()).removeValue();
+                                          //  mDatabaselike.child(post_key).child("like").setValue(lik);
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-                                              /*  final MaterialDialog dialog = new MaterialDialog.Builder(getActivity())
-                                                        .progress(true, 100)
-                                                        .content("Saving..")
-                                                        .show();*/
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                                     mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
@@ -280,26 +277,6 @@ public class MainActivity extends Fragment {
                                             lik = model.getLike() + 1;
                                             mDatabaselike.child(post_key).child(user.getUid()).setValue("Liked");
                                           //  final int
-                                            handler1.postDelayed(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    mDatabasenotiflike.child(model.getKey()).addListenerForSingleValueEvent(new ValueEventListener() {
-                                                        @Override
-                                                        public void onDataChange(DataSnapshot dataSnapshot) {
-                                                            count=dataSnapshot.child("count").getValue(Integer.class);
-                                                            mDatabasenotiflike.child(model.getKey()).setValue(new Likemodel(count+1));
-                                                        }
-
-                                                        @Override
-                                                        public void onCancelled(DatabaseError databaseError) {
-
-                                                        }
-                                                    });
-                                                    mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue(userdata.name);
-                                                    DatabaseReference newpost=mDatabasenotifdata.child(model.getKey()).push();
-                                                    newpost.setValue(new Notificationmodel(userdata.photo,userdata.name+" liked your post"));
-                                                }
-                                            },2000);
 
                                             //   processlike=true;
                                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -329,6 +306,30 @@ public class MainActivity extends Fragment {
                                                     Toast.makeText(getActivity(), "Saved successfullyli!", Toast.LENGTH_SHORT).show();
                                                 }
                                             });*/
+                                          //  handler1.postDelayed(new Runnable() {
+                                               // @Override
+                                               // public void run() {
+                                                    if(!(user.getUid().equals(model.getKey()))) {
+                                                       /* mDatabasenotiflike.child(model.getKey()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                                            @Override
+                                                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                                                count = dataSnapshot.child("count").getValue(Integer.class);
+
+                                                                mDatabasenotiflike.child(model.getKey()).setValue(new Likemodel(count + 1));
+                                                            }
+
+                                                            @Override
+                                                            public void onCancelled(DatabaseError databaseError) {
+
+                                                            }
+                                                        });*/
+                                                        mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue(userdata.name);
+                                                        DatabaseReference newpost = mDatabasenotifdata.child(model.getKey()).push();
+                                                        newpost.setValue(new Notificationmodel(userdata.photo, userdata.name + " liked your post"));
+                                                    }
+                                            //    }
+                                            //},1000);
+
                                             processlike=false;
                                         }
 

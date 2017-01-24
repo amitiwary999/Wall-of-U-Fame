@@ -49,6 +49,8 @@ public class Notification extends AppCompatActivity {
         Utils.setUpToolbarBackButton(Notification.this, toolbar);
         LinearLayoutManager lm=new LinearLayoutManager(this);
         notificationrecycle.setLayoutManager(lm);
+        mDatanotiflike.keepSynced(true);
+        mDatabasenotifdata.keepSynced(true);
         setupTabIconsBottom();
 
         // setupTabIcons();
@@ -70,7 +72,7 @@ public class Notification extends AppCompatActivity {
                 viewHolder.view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mDatanotiflike.child("count").setValue(0);
+                      //  mDatanotiflike.child("count").setValue(0);
                     }
                 });
                 viewHolder.bindData(model);

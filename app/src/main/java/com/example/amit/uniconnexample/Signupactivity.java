@@ -102,7 +102,7 @@ public class Signupactivity extends AppCompatActivity {
                 if (user != null) {                    // User is signed in
                     Toast.makeText(Signupactivity.this, "Successfully signed up", Toast.LENGTH_SHORT).show();
                     writeUserData(user.getUid());
-                    mDatabasenotiflike.child(user.getUid()).setValue(new Likemodel(0));
+              //      mDatabasenotiflike.child(user.getUid()).setValue(new Likemodel(0));
                     startActivity(new Intent(Signupactivity.this, Tabs.class));
                            // .putExtra("user", userData));
                     finish();
