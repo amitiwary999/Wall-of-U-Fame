@@ -43,6 +43,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
+import timber.log.Timber;
+
 /**
  * Created by amit on 8/12/16.
  */
@@ -54,13 +56,13 @@ public class Chatstart extends AppCompatActivity {
     String msg,name;
     EditText message;
     Bundle bundle;
-    String key,spic,txt;
+   public static String key,spic,txt;
     TextView text;
     Toolbar toolbar;
     UserData userData;
     ActionBar actionbar;
     ImageView src; MediaPlayer song;
-   private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd,checkBack,newrply,newnotifChat,newnotifchat;
+   private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd,checkBack,pdata,newrply,newnotifChat,newnotifchat;
     private RecyclerView mChat;
     ImageButton send;
     @Override
@@ -72,6 +74,7 @@ public class Chatstart extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         bundle=getIntent().getExtras();
         final Handler handler=new Handler();
+        pdata=FirebaseDatabase.getInstance().getReference();
         userData=new UserData();
         actionbar=getSupportActionBar();
         if(bundle.getString("chat")!=null)
@@ -114,6 +117,17 @@ public class Chatstart extends AppCompatActivity {
             }
         });
 
+        pdata.child("Userdetail").child(auth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                userData = dataSnapshot.getValue(UserData.class);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Timber.d("oncancelled");
+            }
+        });
         newMessage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("name");
         newMessage.addValueEventListener(new ValueEventListener() {
             @Override
@@ -128,6 +142,7 @@ public class Chatstart extends AppCompatActivity {
 
             }
         });
+
         newReply=FirebaseDatabase.getInstance().getReference().child("message").child(key).child(auth.getCurrentUser().getUid());
         newSend=FirebaseDatabase.getInstance().getReference().child("message").child(auth.getCurrentUser().getUid()).child(key);
         mDatabase= FirebaseDatabase.getInstance().getReference().child("message");
@@ -195,7 +210,7 @@ public class Chatstart extends AppCompatActivity {
 
     }
 
-    public static boolean isAppIsInBackground(Context context) {
+  /*  public static boolean isAppIsInBackground(Context context) {
         boolean isInBackground = true;
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT_WATCH) {
@@ -228,7 +243,7 @@ public class Chatstart extends AppCompatActivity {
         Notification n= new Notification.Builder(this).setContentTitle("Location notifier notice")
                 .setContentText(" Just 1 km away from destination")
                 .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();
-        notificationManager.notify(0,n);
+        notificationManager.notify(0,n);*/
        /* song= MediaPlayer.create(getApplicationContext(),R.raw.internetfriends0);
         song.start();
         NotificationManager notificationManager = (NotificationManager)
@@ -238,12 +253,12 @@ public class Chatstart extends AppCompatActivity {
                 .setSmallIcon(R.drawable.no).setAutoCancel(true).build();
 
         notificationManager.notify(0,n.build());*/
-    }
+  //  }
 
     @Override
     protected void onStart() {
-        newnotifchat.setValue(null);
         super.onStart();
+        newnotifchat.setValue(null);
       /* newSend.addChildEventListener(new ChildEventListener() {
            @Override
            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -393,12 +408,13 @@ public class Chatstart extends AppCompatActivity {
 
     public static class Chatstartviewholder extends RecyclerView.ViewHolder{
         View mView;
-        DatabaseReference newReply;
+        DatabaseReference newnotifchat;
         FirebaseAuth auth;
         public Chatstartviewholder(View itemView) {
             super(itemView);
             mView=itemView;
             auth=FirebaseAuth.getInstance();
+            newnotifchat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(auth.getCurrentUser().getUid()).child(key);
 
          //   newReply=FirebaseDatabase.getInstance().getReference().child("message").child(" ").child(auth.getCurrentUser().getUid());
         }
@@ -408,6 +424,7 @@ public class Chatstart extends AppCompatActivity {
             sMessage.setVisibility(View.GONE);
             if(msg!=null)
                 sMessage.setVisibility(View.VISIBLE);
+            newnotifchat.setValue(null);
             sMessage.setText(msg);
         }
 
@@ -416,6 +433,7 @@ public class Chatstart extends AppCompatActivity {
             rMessage.setVisibility(View.GONE);
             if(msg!=null)
                 rMessage.setVisibility(View.VISIBLE);
+            newnotifchat.setValue(null);
             rMessage.setText(msg);
         }
      /*   public void bindData(final Chatstartmodel model){

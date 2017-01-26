@@ -39,8 +39,8 @@ public class Notificationservice extends Service {
         super.onCreate();
         user= FirebaseAuth.getInstance().getCurrentUser();
         settings=new Settings();
-        switchflag=settings.flag;
-        switchvibrate=settings.vib;
+        switchflag=((App)this.getApplication()).getFlag();
+        switchvibrate=((App)this.getApplication()).getVib();
         mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like");
         newnotifchat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(user.getUid());
         if(!(Foreground.get().isForeground())){

@@ -82,7 +82,7 @@ public class Tabs extends AppCompatActivity {
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         settings=new Settings();
        // startActivityForResult((new Intent(this, Settings.class)),2);
-        Toast.makeText(Tabs.this,"hi"+switchflag,Toast.LENGTH_LONG).show();
+
        // myPrefs=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE);
       //  tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         mainFrame=(CoordinatorLayout)findViewById(R.id.coordinatorLayout);
@@ -203,6 +203,7 @@ public class Tabs extends AppCompatActivity {
 
         switchflag=((App)this.getApplication()).getFlag();
         switchvibrate=((App)this.getApplication()).getVib();
+       // Toast.makeText(Tabs.this,"hi"+switchflag,Toast.LENGTH_LONG).show();
        /* handler1.postDelayed(new Runnable() {
             @Override
             public void run() {

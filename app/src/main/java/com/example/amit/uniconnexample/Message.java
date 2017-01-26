@@ -43,7 +43,7 @@ public class Message extends AppCompatActivity {
     private static RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager laymanager;
     private static ArrayList<Message_model> data;
-    private DatabaseReference mDatabase,newmessage,newsnd;
+    private DatabaseReference mDatabase,newmessage,newsnd,pdata;
     String key,name,pic;
      long num;
     static String text;
@@ -55,6 +55,7 @@ public class Message extends AppCompatActivity {
         setContentView(R.layout.activity_message);
         rview = (RecyclerView) findViewById(R.id.mchat_list);
         auth=FirebaseAuth.getInstance();
+        pdata=FirebaseDatabase.getInstance().getReference();
         rview.setLayoutManager(new LinearLayoutManager(this));
         newsnd=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid());
 
