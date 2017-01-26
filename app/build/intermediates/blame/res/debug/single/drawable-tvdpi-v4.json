@@ -124,11 +124,11 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_focused.9.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_google_signin_btn_text_dark_normal.9.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-tvdpi-v4/common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-tvdpi-v4/common_plus_signin_btn_text_dark_pressed.9.png"
     }
 ]

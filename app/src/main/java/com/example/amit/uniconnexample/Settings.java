@@ -1,6 +1,7 @@
 package com.example.amit.uniconnexample;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.amit.uniconnexample.utils.Utils;
+import com.github.zagum.switchicon.SwitchIconView;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
@@ -23,39 +25,72 @@ import com.roughike.bottombar.OnTabSelectListener;
 public class Settings extends AppCompatActivity {
     private TabLayout tablayoutbottom;
     private Toolbar toolbar;
+    Boolean flag,vib;
+    private static SwitchIconView switchIconView1,switchIconView2;
+    private View button1,button2;
+    public static Settings settings;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+        settings=this;
+        button1=findViewById(R.id.notifsound);
+        button2=findViewById(R.id.notifvibrate);
+        switchIconView1=(SwitchIconView)findViewById(R.id.switchsound);
+        switchIconView2=(SwitchIconView)findViewById(R.id.switchvibrate);
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
+        SharedPreferences myPrefs=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE);
+       // SharedPreferences myPrefs2=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE);
+        switchIconView1.setIconEnabled(myPrefs.getBoolean("isChecked1",true));
+        switchIconView2.setIconEnabled(myPrefs.getBoolean("isChecked2",true));
         Utils.setUpToolbarBackButton(Settings.this, toolbar);
         setupTabIconsBottom();
-        BottomBar bottomBar=(BottomBar)findViewById(R.id.bottomtab);
-        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+         button1.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 switchIconView1.switchState();
+                 flag=switchIconView1.isIconEnabled();
+                 isEnabledswitch(flag);
+                 SharedPreferences.Editor editor1=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE).edit();
+                 editor1.putBoolean("isChecked1",switchIconView1.isIconEnabled());
+                 editor1.commit();
+             }
+         });
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onTabSelected(@IdRes int tabId) {
-                if(tabId==R.id.tab_setting){
-
-                }
-                if(tabId==R.id.tab_account){
-                    startActivity(new Intent(Settings.this,Profile.class));
-                }
-                if(tabId==R.id.tab_notification){
-                    startActivity(new Intent(Settings.this,Notification.class));
-                }
-                if(tabId==R.id.tab_message){
-                    startActivity(new Intent(Settings.this,Message.class));
-                }
-                if(tabId==R.id.tab_home){
-                    startActivity(new Intent(Settings.this,Tabs.class));
-                }
+            public void onClick(View v) {
+                switchIconView2.switchState();
+                vib=switchIconView2.isIconEnabled();
+                isEnabledvibrate(vib);
+                SharedPreferences.Editor editor2=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE).edit();
+                editor2.putBoolean("isChecked2",switchIconView2.isIconEnabled());
+                editor2.commit();
             }
         });
+        flag=switchIconView1.isIconEnabled();
+        vib=switchIconView2.isIconEnabled();
+        ((App)this.getApplication()).setFlag(flag);
+        ((App)this.getApplication()).setVib(vib);
+       // isEnabledswitch();
+       // isEnabledvibrate();
         // setupTabIcons();
         bindWidgetsWithAnEvent();
     }
 
+    public static Settings getInstance(){
+        return settings;
+    }
+   public  void isEnabledswitch(Boolean flag){
+     //  switchIconView1=(SwitchIconView)findViewById(R.id.switchsound);
+       ((App)this.getApplication()).setFlag(flag);
+   }
+    public  void isEnabledvibrate(Boolean flag){
+       // switchIconView2=(SwitchIconView)findViewById(R.id.switchvibrate);
+        ((App)this.getApplication()).setVib(flag);
+
+    }
     private void setupTabIconsBottom() {
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.home));
         tablayoutbottom.addTab(tablayoutbottom.newTab().setIcon(R.drawable.myaccount));

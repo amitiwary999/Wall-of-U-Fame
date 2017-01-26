@@ -65,8 +65,8 @@ public final class R {
 		public static final int background = 0x7f010028;
 		public static final int backgroundSplit = 0x7f01002a;
 		public static final int backgroundStacked = 0x7f010029;
-		public static final int backgroundTint = 0x7f010192;
-		public static final int backgroundTintMode = 0x7f010193;
+		public static final int backgroundTint = 0x7f010198;
+		public static final int backgroundTintMode = 0x7f010199;
 		public static final int barLength = 0x7f01010e;
 		public static final int borderlessButtonStyle = 0x7f010082;
 		public static final int buttonBarButtonStyle = 0x7f01007f;
@@ -83,8 +83,8 @@ public final class R {
 		public static final int checkedTextViewStyle = 0x7f0100b4;
 		public static final int closeIcon = 0x7f010148;
 		public static final int closeItemLayout = 0x7f01003a;
-		public static final int collapseContentDescription = 0x7f010189;
-		public static final int collapseIcon = 0x7f010188;
+		public static final int collapseContentDescription = 0x7f01018f;
+		public static final int collapseIcon = 0x7f01018e;
 		public static final int color = 0x7f010108;
 		public static final int colorAccent = 0x7f0100a0;
 		public static final int colorButtonNormal = 0x7f0100a4;
@@ -143,16 +143,16 @@ public final class R {
 		public static final int listPreferredItemPaddingLeft = 0x7f010094;
 		public static final int listPreferredItemPaddingRight = 0x7f010095;
 		public static final int logo = 0x7f010026;
-		public static final int logoDescription = 0x7f01018c;
-		public static final int maxButtonHeight = 0x7f010186;
+		public static final int logoDescription = 0x7f010192;
+		public static final int maxButtonHeight = 0x7f01018c;
 		public static final int measureWithLargestChild = 0x7f010122;
 		public static final int multiChoiceItemLayout = 0x7f01003f;
-		public static final int navigationContentDescription = 0x7f01018b;
-		public static final int navigationIcon = 0x7f01018a;
+		public static final int navigationContentDescription = 0x7f010191;
+		public static final int navigationIcon = 0x7f010190;
 		public static final int navigationMode = 0x7f010020;
 		public static final int overlapAnchor = 0x7f01013a;
-		public static final int paddingEnd = 0x7f010190;
-		public static final int paddingStart = 0x7f01018f;
+		public static final int paddingEnd = 0x7f010196;
+		public static final int paddingStart = 0x7f010195;
 		public static final int panelBackground = 0x7f01009a;
 		public static final int panelMenuListTheme = 0x7f01009c;
 		public static final int panelMenuListWidth = 0x7f01009b;
@@ -183,8 +183,8 @@ public final class R {
 		public static final int state_above_anchor = 0x7f01013b;
 		public static final int submitBackground = 0x7f010150;
 		public static final int subtitle = 0x7f010022;
-		public static final int subtitleTextAppearance = 0x7f01017f;
-		public static final int subtitleTextColor = 0x7f01018e;
+		public static final int subtitleTextAppearance = 0x7f010185;
+		public static final int subtitleTextColor = 0x7f010194;
 		public static final int subtitleTextStyle = 0x7f010024;
 		public static final int suggestionRowLayout = 0x7f01014e;
 		public static final int switchMinWidth = 0x7f01015c;
@@ -200,17 +200,17 @@ public final class R {
 		public static final int textAppearanceSmallPopupMenu = 0x7f010074;
 		public static final int textColorAlertDialogListItem = 0x7f0100ac;
 		public static final int textColorSearchUrl = 0x7f01008f;
-		public static final int theme = 0x7f010191;
+		public static final int theme = 0x7f010197;
 		public static final int thickness = 0x7f01010f;
 		public static final int thumbTextPadding = 0x7f01015a;
 		public static final int title = 0x7f01001f;
-		public static final int titleMarginBottom = 0x7f010184;
-		public static final int titleMarginEnd = 0x7f010182;
-		public static final int titleMarginStart = 0x7f010181;
-		public static final int titleMarginTop = 0x7f010183;
-		public static final int titleMargins = 0x7f010185;
-		public static final int titleTextAppearance = 0x7f01017e;
-		public static final int titleTextColor = 0x7f01018d;
+		public static final int titleMarginBottom = 0x7f01018a;
+		public static final int titleMarginEnd = 0x7f010188;
+		public static final int titleMarginStart = 0x7f010187;
+		public static final int titleMarginTop = 0x7f010189;
+		public static final int titleMargins = 0x7f01018b;
+		public static final int titleTextAppearance = 0x7f010184;
+		public static final int titleTextColor = 0x7f010193;
 		public static final int titleTextStyle = 0x7f010023;
 		public static final int toolbarNavigationButtonStyle = 0x7f010087;
 		public static final int toolbarStyle = 0x7f010086;
@@ -438,10 +438,10 @@ public final class R {
 		public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f02004f;
 		public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020050;
 		public static final int abc_textfield_search_material = 0x7f020051;
-		public static final int notification_template_icon_bg = 0x7f020103;
+		public static final int notification_template_icon_bg = 0x7f020105;
 	}
 	public static final class id {
-		public static final int action0 = 0x7f10010c;
+		public static final int action0 = 0x7f100111;
 		public static final int action_bar = 0x7f10007f;
 		public static final int action_bar_activity_content = 0x7f100000;
 		public static final int action_bar_container = 0x7f10007e;
@@ -450,7 +450,7 @@ public final class R {
 		public static final int action_bar_subtitle = 0x7f10005d;
 		public static final int action_bar_title = 0x7f10005c;
 		public static final int action_context_bar = 0x7f100080;
-		public static final int action_divider = 0x7f100110;
+		public static final int action_divider = 0x7f100115;
 		public static final int action_menu_divider = 0x7f100002;
 		public static final int action_menu_presenter = 0x7f100003;
 		public static final int action_mode_bar = 0x7f10007c;
@@ -461,9 +461,9 @@ public final class R {
 		public static final int always = 0x7f100042;
 		public static final int beginning = 0x7f10003c;
 		public static final int buttonPanel = 0x7f100066;
-		public static final int cancel_action = 0x7f10010d;
+		public static final int cancel_action = 0x7f100112;
 		public static final int checkbox = 0x7f100076;
-		public static final int chronometer = 0x7f100115;
+		public static final int chronometer = 0x7f10011a;
 		public static final int collapseActionView = 0x7f100043;
 		public static final int contentPanel = 0x7f100069;
 		public static final int custom = 0x7f100070;
@@ -473,7 +473,7 @@ public final class R {
 		public static final int disableHome = 0x7f100016;
 		public static final int edit_query = 0x7f100081;
 		public static final int end = 0x7f100011;
-		public static final int end_padder = 0x7f10011e;
+		public static final int end_padder = 0x7f100123;
 		public static final int expand_activities_button = 0x7f100060;
 		public static final int expanded_menu = 0x7f100075;
 		public static final int home = 0x7f100005;
@@ -481,12 +481,12 @@ public final class R {
 		public static final int icon = 0x7f100064;
 		public static final int ifRoom = 0x7f100044;
 		public static final int image = 0x7f100061;
-		public static final int info = 0x7f100116;
-		public static final int line1 = 0x7f10011b;
-		public static final int line3 = 0x7f10011d;
+		public static final int info = 0x7f10011b;
+		public static final int line1 = 0x7f100120;
+		public static final int line3 = 0x7f100122;
 		public static final int listMode = 0x7f100013;
 		public static final int list_item = 0x7f100063;
-		public static final int media_actions = 0x7f10010f;
+		public static final int media_actions = 0x7f100114;
 		public static final int middle = 0x7f10003d;
 		public static final int multiply = 0x7f100023;
 		public static final int never = 0x7f100045;
@@ -520,13 +520,13 @@ public final class R {
 		public static final int src_atop = 0x7f100025;
 		public static final int src_in = 0x7f100026;
 		public static final int src_over = 0x7f100027;
-		public static final int status_bar_latest_event_content = 0x7f10010e;
+		public static final int status_bar_latest_event_content = 0x7f100113;
 		public static final int submit_area = 0x7f10008a;
 		public static final int tabMode = 0x7f100015;
 		public static final int text = 0x7f1000a2;
-		public static final int text2 = 0x7f10011c;
+		public static final int text2 = 0x7f100121;
 		public static final int textSpacerNoButtons = 0x7f10006d;
-		public static final int time = 0x7f100114;
+		public static final int time = 0x7f100119;
 		public static final int title = 0x7f100065;
 		public static final int title_template = 0x7f100072;
 		public static final int topPanel = 0x7f100071;
@@ -567,17 +567,17 @@ public final class R {
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f040018;
 		public static final int abc_search_view = 0x7f040019;
 		public static final int abc_select_dialog_material = 0x7f04001a;
-		public static final int notification_media_action = 0x7f040063;
-		public static final int notification_media_cancel_action = 0x7f040064;
-		public static final int notification_template_big_media = 0x7f040065;
-		public static final int notification_template_big_media_narrow = 0x7f040067;
-		public static final int notification_template_media = 0x7f04006c;
-		public static final int notification_template_part_chronometer = 0x7f04006e;
-		public static final int notification_template_part_time = 0x7f04006f;
-		public static final int select_dialog_item_material = 0x7f040072;
-		public static final int select_dialog_multichoice_material = 0x7f040073;
-		public static final int select_dialog_singlechoice_material = 0x7f040074;
-		public static final int support_simple_spinner_dropdown_item = 0x7f040077;
+		public static final int notification_media_action = 0x7f040064;
+		public static final int notification_media_cancel_action = 0x7f040065;
+		public static final int notification_template_big_media = 0x7f040066;
+		public static final int notification_template_big_media_narrow = 0x7f040068;
+		public static final int notification_template_media = 0x7f04006d;
+		public static final int notification_template_part_chronometer = 0x7f04006f;
+		public static final int notification_template_part_time = 0x7f040070;
+		public static final int select_dialog_item_material = 0x7f040073;
+		public static final int select_dialog_multichoice_material = 0x7f040074;
+		public static final int select_dialog_singlechoice_material = 0x7f040075;
+		public static final int support_simple_spinner_dropdown_item = 0x7f040078;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f090000;
@@ -599,7 +599,7 @@ public final class R {
 		public static final int abc_shareactionprovider_share_with = 0x7f090010;
 		public static final int abc_shareactionprovider_share_with_application = 0x7f090011;
 		public static final int abc_toolbar_collapse_description = 0x7f090012;
-		public static final int app_name = 0x7f09004c;
+		public static final int app_name = 0x7f09004e;
 		public static final int status_bar_notification_info_overflow = 0x7f09003a;
 	}
 	public static final class style {
@@ -1081,7 +1081,7 @@ public final class R {
 		public static final int TextAppearance_android_textStyle = 2;
 		public static final int TextAppearance_android_typeface = 1;
 		public static final int TextAppearance_textAllCaps = 9;
-		public static final int[] Toolbar = { 0x010100af, 0x01010140, 0x7f01001f, 0x7f010022, 0x7f010026, 0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035, 0x7f010036, 0x7f010037, 0x7f010039, 0x7f01017e, 0x7f01017f, 0x7f010180, 0x7f010181, 0x7f010182, 0x7f010183, 0x7f010184, 0x7f010185, 0x7f010186, 0x7f010187, 0x7f010188, 0x7f010189, 0x7f01018a, 0x7f01018b, 0x7f01018c, 0x7f01018d, 0x7f01018e };
+		public static final int[] Toolbar = { 0x010100af, 0x01010140, 0x7f01001f, 0x7f010022, 0x7f010026, 0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035, 0x7f010036, 0x7f010037, 0x7f010039, 0x7f010184, 0x7f010185, 0x7f010186, 0x7f010187, 0x7f010188, 0x7f010189, 0x7f01018a, 0x7f01018b, 0x7f01018c, 0x7f01018d, 0x7f01018e, 0x7f01018f, 0x7f010190, 0x7f010191, 0x7f010192, 0x7f010193, 0x7f010194 };
 		public static final int Toolbar_android_gravity = 0;
 		public static final int Toolbar_android_minHeight = 1;
 		public static final int Toolbar_collapseContentDescription = 23;
@@ -1107,8 +1107,8 @@ public final class R {
 		public static final int Toolbar_titleMargins = 19;
 		public static final int Toolbar_titleTextAppearance = 12;
 		public static final int Toolbar_titleTextColor = 27;
-		public static final int[] View = { 0x01010000, 0x010100da, 0x7f01018f, 0x7f010190, 0x7f010191 };
-		public static final int[] ViewBackgroundHelper = { 0x010100d4, 0x7f010192, 0x7f010193 };
+		public static final int[] View = { 0x01010000, 0x010100da, 0x7f010195, 0x7f010196, 0x7f010197 };
+		public static final int[] ViewBackgroundHelper = { 0x010100d4, 0x7f010198, 0x7f010199 };
 		public static final int ViewBackgroundHelper_android_background = 0;
 		public static final int ViewBackgroundHelper_backgroundTint = 1;
 		public static final int ViewBackgroundHelper_backgroundTintMode = 2;

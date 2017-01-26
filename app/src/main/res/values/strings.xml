@@ -11,4 +11,6 @@
     <string name="activity_login_sing_up">Sign Up</string>
     <string name="activity_sign_up">Join your Community</string>
     <string name="activity_login_forgot_pass">Forgot Password?</string>
+    <string name="Notification_sound">Ring on Notification</string>
+    <string name="Notification_vibrate">Vibrate on Notification</string>
 </resources>

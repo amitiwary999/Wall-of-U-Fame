@@ -498,6 +498,7 @@
             
             <enum name="add" value="16"/>
         </attr><attr name="android:textOn"/><attr name="android:textOff"/><attr format="dimension" name="thumbTextPadding"/><attr format="reference" name="switchTextAppearance"/><attr format="dimension" name="switchMinWidth"/><attr format="dimension" name="switchPadding"/><attr format="boolean" name="splitTrack"/><attr format="boolean" name="showText"/></declare-styleable>
+    <declare-styleable name="SwitchIconView"><attr format="color" name="si_tint_color"/><attr format="integer" name="si_animation_duration"/><attr format="float" name="si_disabled_alpha"/><attr format="color" name="si_disabled_color"/><attr format="boolean" name="si_enabled"/><attr format="boolean" name="si_no_dash"/></declare-styleable>
     <declare-styleable name="TabItem"><attr name="android:text"/><attr name="android:icon"/><attr name="android:layout"/></declare-styleable>
     <declare-styleable name="TabLayout"><attr format="color" name="tabIndicatorColor"/><attr format="dimension" name="tabIndicatorHeight"/><attr format="dimension" name="tabContentStart"/><attr format="reference" name="tabBackground"/><attr name="tabMode">
             <enum name="scrollable" value="0"/>
@@ -782,6 +783,8 @@
     <integer name="min_password_length">6</integer>
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="Notification_sound">Ring on Notification</string>
+    <string name="Notification_vibrate">Vibrate on Notification</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>

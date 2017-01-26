@@ -18,7 +18,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginRight="4dp"
-    android:layout_marginTop="2dp"
+    android:layout_marginTop="4dp"
     android:layout_marginLeft="4dp"
     android:maxWidth="@dimen/message_layout_max_width"
     android:minWidth="@dimen/messagelayout_minwidth"

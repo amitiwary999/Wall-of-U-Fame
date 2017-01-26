@@ -9,10 +9,13 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -55,6 +58,7 @@ public class Chatstart extends AppCompatActivity {
     TextView text;
     Toolbar toolbar;
     UserData userData;
+    ActionBar actionbar;
     ImageView src; MediaPlayer song;
    private DatabaseReference newMessage,newMesage,newReply,newSend,newSnd,checkBack,newrply,newnotifChat,newnotifchat;
     private RecyclerView mChat;
@@ -67,35 +71,35 @@ public class Chatstart extends AppCompatActivity {
         text=(TextView)findViewById(R.id.text);
         auth=FirebaseAuth.getInstance();
         bundle=getIntent().getExtras();
+        final Handler handler=new Handler();
         userData=new UserData();
+        actionbar=getSupportActionBar();
         if(bundle.getString("chat")!=null)
             key=bundle.getString("chat");
         setTitle("");
         mChat=(RecyclerView)findViewById(R.id. rv_chat_feed);
         send=(ImageButton)findViewById(R.id.btnSend);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+           //     startActivity(new Intent(Chatstart.this,Tabs.class));
+                finish();
+            }
+        });
         //Utils.setUpToolbarBackButton(this, toolbar);
         message=(EditText)findViewById(R.id.et_message);
         msg=message.getText().toString();
         newnotifChat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(key).child(auth.getCurrentUser().getUid());
         newnotifchat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(auth.getCurrentUser().getUid()).child(key);
-         newnotifchat.setValue(null);
+
         newSnd=FirebaseDatabase.getInstance().getReference().child("Smessage").child(auth.getCurrentUser().getUid()).child(key);
         newrply=FirebaseDatabase.getInstance().getReference().child("Smessage").child(key).child(auth.getCurrentUser().getUid());
         checkBack=FirebaseDatabase.getInstance().getReference().child("message");
-        checkBack.child(auth.getCurrentUser().getUid()).child(key).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(!Foreground.get().isForeground()){
-                    notification();
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+      //  actionbar.setDisplayHomeAsUpEnabled(true);
+       // Utils.setUpToolbarBackButton(Chatstart.this,toolbar);
         newMesage=FirebaseDatabase.getInstance().getReference().child("Userdetail").child(key).child("photo");
         newMesage.addValueEventListener(new ValueEventListener() {
             @Override
@@ -162,7 +166,15 @@ public class Chatstart extends AppCompatActivity {
                     DatabaseReference newMesage = mDatabase.child(key).child(auth.getCurrentUser().getUid()).push();
                     newMesage.child("msg2").setValue(msge);
                     message.setText("");
-                    newnotifChat.setValue(new Notifmsgmodel(msge,userData.name));
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            newnotifChat.setValue(new Notifmsgmodel(msge,userData.name));
+                            newSnd.setValue(new Message_model(spic,msge,name,key));
+                            newrply.setValue(new Message_model(userData.photo,msge,userData.name,auth.getCurrentUser().getUid()));
+                        }
+                    },200);
+
               /*  FirebaseRecyclerAdapter<Chatreceivermodel,Chatreceiverholder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Chatreceivermodel, Chatreceiverholder>(
                         Chatreceivermodel.class,
                         R.layout.activity_startchatitem,
@@ -230,14 +242,15 @@ public class Chatstart extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+        newnotifchat.setValue(null);
         super.onStart();
-       newSend.addChildEventListener(new ChildEventListener() {
+      /* newSend.addChildEventListener(new ChildEventListener() {
            @Override
            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
              /*  if(!Foreground.get().isForeground()){
                    notification();
                }*/
-               if(dataSnapshot.hasChild("msg1")) {
+              /* if(dataSnapshot.hasChild("msg1")) {
                     txt = dataSnapshot.child("msg1").getValue(String.class);
                 //   Toast.makeText(Chatstart.this, txt, Toast.LENGTH_LONG).show();
                }else if(dataSnapshot.hasChild("msg2")){
@@ -246,7 +259,7 @@ public class Chatstart extends AppCompatActivity {
                }
                newSnd.child("image").setValue(spic);
                newSnd.child("name").setValue(name);
-               newSnd.child("key").setValue(user.getUid());
+               newSnd.child("key").setValue(auth.getCurrentUser().getUid());
                newSnd.child("msg").setValue(txt);
              //  DatabaseReference newmg=newSnd.push();
              //  newmg.setValue(new Message_model(spic,name,txt,key));
@@ -313,7 +326,7 @@ public class Chatstart extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        });*/
         computeothermessage();
     }
 
