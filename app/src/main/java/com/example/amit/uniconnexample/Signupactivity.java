@@ -101,6 +101,7 @@ public class Signupactivity extends AppCompatActivity {
                  user = firebaseAuth.getCurrentUser();
                 if (user != null) {                    // User is signed in
                     Toast.makeText(Signupactivity.this, "Successfully signed up", Toast.LENGTH_SHORT).show();
+
                     writeUserData(user.getUid());
               //      mDatabasenotiflike.child(user.getUid()).setValue(new Likemodel(0));
                     Intent intent=new Intent(Signupactivity.this, Tabs.class);

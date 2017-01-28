@@ -12,6 +12,10 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_twitter.png"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/toast_frame.9.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.GrenderG/Toasty/1.1.2/res/drawable-ldpi-v4/toast_frame.9.png"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/md_nav_back.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable-ldpi-v4/md_nav_back.png"
     },

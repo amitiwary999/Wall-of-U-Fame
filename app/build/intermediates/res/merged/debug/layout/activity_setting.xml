@@ -41,7 +41,7 @@
                 android:id="@+id/switchsound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="154dp"
+                android:layout_marginLeft="159dp"
                 app:srcCompat="@drawable/ic_volume_down_black_24dp"/>
             </LinearLayout>
         </LinearLayout>

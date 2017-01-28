@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorAccent"
-        appa:title="Your Details"
-        appa:titleTextColor="#fff"/>
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:id="@+id/switchsound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="154dp"
+                android:layout_marginLeft="159dp"
                 app:srcCompat="@drawable/ic_volume_down_black_24dp"/>
             </LinearLayout>
         </LinearLayout>
