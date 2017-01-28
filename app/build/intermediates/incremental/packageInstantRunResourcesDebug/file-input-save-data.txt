@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Jan 28 17:59:00 IST 2017
+#Sat Jan 28 18:02:37 IST 2017
 20.base=/home/amit/Buildapk/app/build/intermediates/res/resources-debug.ap_
 143.base=/home/amit/Buildapk/app/build/intermediates/res/resources-debug.ap_
 493.base=/home/amit/Buildapk/app/build/intermediates/res/resources-debug.ap_

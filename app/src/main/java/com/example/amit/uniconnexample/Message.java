@@ -406,7 +406,7 @@ public class Message extends AppCompatActivity {
                 startActivity(new Intent(Message.this,Chat.class));
                 finish();
                 break;*/
-            case 5:
+            case 4:
                 startActivity(new Intent(Message.this,Settings.class));
                 finish();
                 // replaceFragment(new Settings());

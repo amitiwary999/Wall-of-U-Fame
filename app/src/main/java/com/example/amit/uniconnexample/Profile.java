@@ -286,7 +286,7 @@ public class Profile extends AppCompatActivity {
                 startActivity(new Intent(Profile.this,Chat.class));
                 finish();
                 break;*/
-            case 5:
+            case 4:
                   startActivity(new Intent(Profile.this,Settings.class));
                 finish();
                 // replaceFragment(new Settings());

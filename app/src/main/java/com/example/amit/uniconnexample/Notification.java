@@ -194,7 +194,7 @@ public class Notification extends AppCompatActivity {
                 startActivity(new Intent(Notification.this,Chat.class));
                 finish();
                 break;*/
-            case 5:
+            case 4:
                 startActivity(new Intent(Notification.this,Settings.class));
                 finish();
                 // replaceFragment(new Settings());
