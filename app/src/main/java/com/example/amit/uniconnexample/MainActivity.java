@@ -325,7 +325,7 @@ public class MainActivity extends Fragment {
                                                         });*/
                                                         mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue(userdata.name);
                                                         DatabaseReference newpost = mDatabasenotifdata.child(model.getKey()).push();
-                                                        newpost.setValue(new Notificationmodel(userdata.photo, userdata.name + " liked your post"));
+                                                        newpost.setValue(new Notificationmodel(userdata.photo, userdata.name + " liked your post",user.getUid(),post_key));
                                                     }
                                             //    }
                                             //},1000);

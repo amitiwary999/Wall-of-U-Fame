@@ -211,7 +211,7 @@ public class Tabs extends AppCompatActivity {
                 bottomBarTabmsg.setBadgeCount(msgcount);
             }
         },2000);*/
-        newnotifchat.addListenerForSingleValueEvent(new ValueEventListener() {
+        newnotifchat.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 //  msgcount=(int)dataSnapshot.getChildrenCount();
@@ -226,14 +226,14 @@ public class Tabs extends AppCompatActivity {
             }
         });
 
-        mDatabasenotif.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+        mDatabasenotif.child(user.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for( final DataSnapshot snapshot:dataSnapshot.getChildren()) {
                     // handler1.postDelayed(new Runnable() {
                     //   @Override
                     //   public void run() {
-                    snapshot.getRef().addListenerForSingleValueEvent(new ValueEventListener() {
+                    snapshot.getRef().addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {

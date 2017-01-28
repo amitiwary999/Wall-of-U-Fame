@@ -1,11 +1,13 @@
 package com.example.amit.uniconnexample;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -32,6 +34,9 @@ import com.roughike.bottombar.OnTabSelectListener;
 public class Notification extends AppCompatActivity {
     private TabLayout tablayoutbottom;
     private Toolbar toolbar;
+    FirebaseAuth auth;
+    String key,post_key;
+    String tag;
     private DatabaseReference mDatabasenotifdata,mDatanotiflike;
     RecyclerView notificationrecycle;
 
@@ -39,9 +44,11 @@ public class Notification extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+        tag=this.getClass().getSimpleName();
         notificationrecycle=(RecyclerView) findViewById(R.id.mnotification_list);
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
+        auth=FirebaseAuth.getInstance();
         mDatanotiflike= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
       //  Toast.makeText(this,"check",Toast.LENGTH_LONG).show();
 
@@ -68,11 +75,38 @@ public class Notification extends AppCompatActivity {
                 mDatabasenotifdata
         ) {
             @Override
-            protected void populateViewHolder(NotificationViewHolder viewHolder, Notificationmodel model, int position) {
+            protected void populateViewHolder(NotificationViewHolder viewHolder, final Notificationmodel model, int position) {
                 viewHolder.view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                       //  mDatanotiflike.child("count").setValue(0);
+                    }
+                });
+                viewHolder.iview.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                       String key=model.getKey();
+                        if(!key.equals(auth.getCurrentUser().getUid())) {
+                            //   Toast.makeText(getActivity(), key, Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(Notification.this, Chatstart.class);
+                            i.putExtra("chat", key);
+                            startActivity(i);
+                            finish();
+                        }else{
+                            Toast.makeText(Notification.this,"You can't chat with yourself",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+                viewHolder.tname.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        android.support.v4.app.FragmentManager fragmentManager=getSupportFragmentManager();
+                        post_key=model.getPost_key();
+                      //  fragmentManager.beginTransaction().add(R.id.content_frame,new Notifclickfrag(),tag).commit();
+                     //   Notifclickfrag notifclickfrag=new Notifclickfrag();
+                        Intent i=new Intent(Notification.this,Notifclick.class);
+                        i.putExtra("postkey",post_key);
+                        startActivity(i);
                     }
                 });
                 viewHolder.bindData(model);
@@ -111,15 +145,19 @@ public class Notification extends AppCompatActivity {
     }
     public static class NotificationViewHolder extends RecyclerView.ViewHolder{
         View view;
+        ImageView iview;
+        TextView tname;
         private DatabaseReference mDatabasenotifdata,mDatanotiflike;
         public NotificationViewHolder(View itemView) {
             super(itemView);
             view=itemView;
+            tname=(TextView)view.findViewById(R.id.bname);
+            iview=(ImageView)view.findViewById(R.id.pimage);
             mDatanotiflike= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         }
         public void bindData(Notificationmodel model){
-            TextView tname=(TextView)view.findViewById(R.id.bname);
-            ImageView iview=(ImageView)view.findViewById(R.id.pimage);
+           // TextView tname=(TextView)view.findViewById(R.id.bname);
+           // ImageView iview=(ImageView)view.findViewById(R.id.pimage);
             tname.setText(model.getTxt());
             if(model.getImg()!=null)
                 iview.setImageBitmap(Utils.decodeBase64(model.getImg()));

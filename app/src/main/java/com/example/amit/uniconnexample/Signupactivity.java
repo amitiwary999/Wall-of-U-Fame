@@ -103,9 +103,11 @@ public class Signupactivity extends AppCompatActivity {
                     Toast.makeText(Signupactivity.this, "Successfully signed up", Toast.LENGTH_SHORT).show();
                     writeUserData(user.getUid());
               //      mDatabasenotiflike.child(user.getUid()).setValue(new Likemodel(0));
-                    startActivity(new Intent(Signupactivity.this, Tabs.class));
+                    Intent intent=new Intent(Signupactivity.this, Tabs.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
                            // .putExtra("user", userData));
-                    finish();
+                    //finish();
                 } else {                    // User is signed out
                     Timber.d("User is signed out");
                 }

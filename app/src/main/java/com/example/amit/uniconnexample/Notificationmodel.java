@@ -5,10 +5,12 @@ package com.example.amit.uniconnexample;
  */
 
 public class Notificationmodel {
-    String img,txt;
-    public Notificationmodel(String img,String txt){
+    String img,txt,key,post_key;
+    public Notificationmodel(String img,String txt,String key,String post_key){
         this.img=img;
         this.txt=txt;
+        this.key=key;
+        this.post_key=post_key;
     }
 
     public Notificationmodel() {
@@ -20,5 +22,13 @@ public class Notificationmodel {
 
     public String getTxt() {
         return txt;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public String getPost_key() {
+        return post_key;
     }
 }

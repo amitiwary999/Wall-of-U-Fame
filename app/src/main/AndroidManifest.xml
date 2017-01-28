@@ -47,6 +47,8 @@
             android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Settings"
             android:theme="@style/AppTheme.NoactionBar"></activity>
+        <activity android:name=".Notifclick"
+            android:theme="@style/AppTheme.NoactionBar"></activity>
     </application>
 
 </manifest>

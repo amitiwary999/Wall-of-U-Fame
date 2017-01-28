@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:2:1-52:12
+ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
@@ -48,7 +48,7 @@ ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:10:5-65
 	android:name
 		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:10:19-63
 application
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:11:5-50:19
+ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:11:5-52:19
 MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/me.himanshusoni.chatmessageview/chat-message-view/1.0.3/AndroidManifest.xml:11:5-14:19
 MERGED from [com.pkmmte.view:circularimageview:1.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.pkmmte.view/circularimageview/1.1/AndroidManifest.xml:11:5-20
 MERGED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:12:5-83:19
@@ -175,6 +175,12 @@ ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:48:9-49:68
 		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:49:13-56
 	android:name
 		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:48:19-43
+activity#com.example.amit.uniconnexample.Notifclick
+ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:50:9-51:68
+	android:theme
+		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:51:13-56
+	android:name
+		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:50:19-45
 uses-sdk
 INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/me.himanshusoni.chatmessageview/chat-message-view/1.0.3/AndroidManifest.xml:7:5-9:41

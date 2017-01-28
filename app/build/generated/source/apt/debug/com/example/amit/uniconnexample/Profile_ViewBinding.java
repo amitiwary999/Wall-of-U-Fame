@@ -18,7 +18,7 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
 
   private View view2131755171;
 
-  private View view2131755180;
+  private View view2131755191;
 
   public Profile_ViewBinding(final T target, Finder finder, Object source) {
     this.target = target;
@@ -40,7 +40,7 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
     });
     target.loading = finder.findRequiredViewAsType(source, R.id.loading, "field 'loading'", LinearLayout.class);
     view = finder.findRequiredView(source, R.id.save, "method 'save'");
-    view2131755180 = view;
+    view2131755191 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -64,8 +64,8 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
 
     view2131755171.setOnClickListener(null);
     view2131755171 = null;
-    view2131755180.setOnClickListener(null);
-    view2131755180 = null;
+    view2131755191.setOnClickListener(null);
+    view2131755191 = null;
 
     this.target = null;
   }

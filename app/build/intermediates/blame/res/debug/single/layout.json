@@ -32,6 +32,10 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/res/layout/idp_button_facebook.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_notificationclick.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_notificationclick.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/bb_bottom_bar_item_fixed_tablet.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.1.1/res/layout/bb_bottom_bar_item_fixed_tablet.xml"
     },
