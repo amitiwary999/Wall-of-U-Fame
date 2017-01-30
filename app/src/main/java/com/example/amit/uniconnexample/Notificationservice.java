@@ -43,6 +43,11 @@ public class Notificationservice extends Service {
         switchvibrate=((App)this.getApplication()).getVib();
         mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like");
         newnotifchat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(user.getUid());
+
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
         if(!(Foreground.get().isForeground())){
             newnotifchat.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -100,6 +105,7 @@ public class Notificationservice extends Service {
                 }
             });
         }
+        return START_REDELIVER_INTENT;
     }
 
     @Nullable
