@@ -20,7 +20,7 @@
         android:layout_below="@id/toolbar"
         android:id="@+id/mSelectImage"
         android:clickable="true"
-        android:src="@drawable/ic_image_add"
+        android:src="@drawable/click_me"
         android:adjustViewBounds="true"
         android:layout_alignEnd="@+id/mdesc"
         android:layout_alignStart="@+id/mdesc" />

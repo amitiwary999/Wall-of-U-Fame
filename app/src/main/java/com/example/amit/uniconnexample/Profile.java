@@ -265,8 +265,9 @@ public class Profile extends AppCompatActivity {
         switch (tabPosition)
         {
             case 0:
-                startActivity(new Intent(Profile.this,Tabs.class));
-                finish();
+                Intent intent=new Intent(Profile.this, Tabs.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 break;
             case 1 :
               //  startActivity(new Intent(Profile.this,Profile.class));

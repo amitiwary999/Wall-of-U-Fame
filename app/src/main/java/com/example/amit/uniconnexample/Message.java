@@ -385,8 +385,9 @@ public class Message extends AppCompatActivity {
         switch (tabPosition)
         {
             case 0:
-                startActivity(new Intent(Message.this,Tabs.class));
-                finish();
+                Intent intent=new Intent(Message.this, Tabs.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 break;
             case 1 :
                 startActivity(new Intent(Message.this,Profile.class));

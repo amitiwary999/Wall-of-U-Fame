@@ -173,8 +173,9 @@ public class Notification extends AppCompatActivity {
         switch (tabPosition)
         {
             case 0:
-                startActivity(new Intent(Notification.this,Tabs.class));
-                finish();
+                Intent intent=new Intent(Notification.this, Tabs.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 break;
             case 1 :
                 startActivity(new Intent(Notification.this,Profile.class));

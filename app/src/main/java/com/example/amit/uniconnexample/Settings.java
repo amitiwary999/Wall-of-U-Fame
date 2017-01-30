@@ -124,8 +124,9 @@ public class Settings extends AppCompatActivity {
         switch (tabPosition)
         {
             case 0:
-                startActivity(new Intent(Settings.this,Tabs.class));
-                finish();
+                Intent intent=new Intent(Settings.this, Tabs.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 break;
             case 1 :
                 startActivity(new Intent(Settings.this,Profile.class));
@@ -146,7 +147,7 @@ public class Settings extends AppCompatActivity {
                 startActivity(new Intent(Settings.this,Chat.class));
                 finish();
                 break;*/
-            case 5:
+            case 4:
               //  startActivity(new Intent(Notification.this,Settings.class));
                 // replaceFragment(new Settings());
                 break;
