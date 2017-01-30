@@ -52,6 +52,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import es.dmoral.toasty.Toasty;
+
 /**
  * Created by amit on 27/11/16.
  */
@@ -90,7 +92,7 @@ public class Tabs extends AppCompatActivity {
         BottomBar bottomBar=(BottomBar)findViewById(R.id.bottomtab);
          bottomBarTab=bottomBar.getTabWithId(R.id.tab_notification);
          bottomBarTabmsg=bottomBar.getTabWithId(R.id.tab_message);
-        startService(new Intent(this,Notificationservice.class));
+     //   startService(new Intent(this,Notificationservice.class));
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
@@ -198,12 +200,41 @@ public class Tabs extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+       Toast.makeText(Tabs.this, "checkpause", Toast.LENGTH_SHORT).show();
+        newnotifchat.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                newnotifchat.removeEventListener(this);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        mDatabasenotif.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                mDatabasenotif.removeEventListener(this);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
-
+        //startService(new Intent(this,Notificationservice.class));
         switchflag=((App)this.getApplication()).getFlag();
         switchvibrate=((App)this.getApplication()).getVib();
-       // Toast.makeText(Tabs.this,"hi"+switchflag,Toast.LENGTH_LONG).show();
+        Toast.makeText(Tabs.this,"hi"+switchflag,Toast.LENGTH_LONG).show();
+
        /* handler1.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -276,6 +307,12 @@ public class Tabs extends AppCompatActivity {
             }
         },1000);
 
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
     }
 
     public void notification(int m,DatabaseReference notify,DataSnapshot snapshot,Boolean switchflag,Boolean switchvibrate){
@@ -499,7 +536,8 @@ public class Tabs extends AppCompatActivity {
         }
 
         this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+        Toasty.info(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
 
@@ -534,6 +572,7 @@ public class Tabs extends AppCompatActivity {
                     setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+                          //  stopService(new Intent(Tabs.this,Notificationservice.class));
                             FirebaseAuth.getInstance().signOut();
                             Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
                            // myPrefs.edit().clear().commit();

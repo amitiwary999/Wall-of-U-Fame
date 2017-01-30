@@ -8,12 +8,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_twitter.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_twitter.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/toast_frame.9.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.GrenderG/Toasty/1.1.2/res/drawable-ldpi-v4/toast_frame.9.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_twitter.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_twitter.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/md_nav_back.png",

@@ -48,6 +48,7 @@ public class Notificationservice extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        
         if(!(Foreground.get().isForeground())){
             newnotifchat.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override

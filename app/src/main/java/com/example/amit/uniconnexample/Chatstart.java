@@ -357,6 +357,7 @@ public class Chatstart extends AppCompatActivity {
       /*  if(isAppIsInBackground(this)){
             notification();
         }*/
+        newnotifchat.setValue(null);
         FirebaseRecyclerAdapter<Chatstartmodel,Chatstartviewholder> firebaserecycleradapter=new FirebaseRecyclerAdapter<Chatstartmodel, Chatstartviewholder>(
                 Chatstartmodel.class,
                 R.layout.activity_startchatitem,
