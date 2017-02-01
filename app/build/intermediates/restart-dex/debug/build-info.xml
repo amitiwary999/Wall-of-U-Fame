@@ -5,7 +5,7 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="14092151924831"
+    timestamp="5883579315299"
     token="2814086315392108154"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,24 +23,24 @@
         duration="0" />
 
     <build
-        timestamp="13594207126670"
+        timestamp="5249440265346"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/amit/Buildapk/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="14051670993889"
+        timestamp="5850770875586"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="14092151924831"
+        timestamp="5883579315299"
         verifier="COLD_SWAP_REQUESTED" />
     <build
-        timestamp="19102192317246"
+        timestamp="7857211037035"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/amit/Buildapk/app/build/outputs/apk/app-debug.apk"

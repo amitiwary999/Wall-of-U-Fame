@@ -55,7 +55,7 @@ public class Notificationservice extends Service {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     //  msgcount=(int)dataSnapshot.getChildrenCount();
                     for(DataSnapshot snapshot:dataSnapshot.getChildren()){
-                        notifiy(++m1,snapshot.getRef(),snapshot,switchflag,switchvibrate);
+                      //  notifiy(++m1,snapshot.getRef(),snapshot,switchflag,switchvibrate);
                     }
                 }
 
@@ -85,7 +85,7 @@ public class Notificationservice extends Service {
                                                 Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
                                             }
                                         }, 2000);*/
-                                    notification(++m,snapshot.getRef(),snapshot,switchflag,switchvibrate);
+                                   // notification(++m,snapshot.getRef(),snapshot,switchflag,switchvibrate);
                                 }
                             }
 

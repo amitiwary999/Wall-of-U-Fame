@@ -168,7 +168,7 @@ public class Loginactivity extends AppCompatActivity{
                                   //  email.setError("id may be wrong ");
                                   //  password.setError("password may be wrong");
                                 } else {
-                                  /*  mDatabasenotiflike=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like");
+                                    mDatabasenotiflike=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like");
                                     mDatabasenotiflike.addValueEventListener(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -185,7 +185,7 @@ public class Loginactivity extends AppCompatActivity{
                                         public void onCancelled(DatabaseError databaseError) {
 
                                         }
-                                    });*/
+                                    });
                                     Intent i = new Intent(Loginactivity.this, Tabs.class);
                                     startActivity(i);
                                     finish();

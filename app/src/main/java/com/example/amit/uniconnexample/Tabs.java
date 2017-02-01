@@ -203,28 +203,7 @@ public class Tabs extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
        Toast.makeText(Tabs.this, "checkpause", Toast.LENGTH_SHORT).show();
-        newnotifchat.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                newnotifchat.removeEventListener(this);
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-        mDatabasenotif.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                mDatabasenotif.removeEventListener(this);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
     }
 
     @Override
@@ -242,32 +221,42 @@ public class Tabs extends AppCompatActivity {
                 bottomBarTabmsg.setBadgeCount(msgcount);
             }
         },2000);*/
-        newnotifchat.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                //  msgcount=(int)dataSnapshot.getChildrenCount();
-                for(DataSnapshot snapshot:dataSnapshot.getChildren()){
-                    notifiy(++m1,snapshot.getRef(),snapshot,switchflag,switchvibrate);
-                }
-            }
+              new Thread(){
+                  public void run(){
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
+                newnotifchat.addValueEventListener(new
 
-        mDatabasenotif.child(user.getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for( final DataSnapshot snapshot:dataSnapshot.getChildren()) {
-                    // handler1.postDelayed(new Runnable() {
-                    //   @Override
-                    //   public void run() {
-                    snapshot.getRef().addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                                           ValueEventListener() {
+                                                               @Override
+                                                               public void onDataChange(DataSnapshot dataSnapshot) {
+                                                                   //  msgcount=(int)dataSnapshot.getChildrenCount();
+                                                                   for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                                                       notifiy(++m1, snapshot.getRef(), snapshot, switchflag, switchvibrate);
+                                                                   }
+                                                               }
+
+                                                               @Override
+                                                               public void onCancelled(DatabaseError databaseError) {
+
+                                                               }
+                                                           }
+
+                );
+
+                mDatabasenotif.child(user.getUid()).
+
+                        addValueEventListener(new ValueEventListener() {
+                                                  @Override
+                                                  public void onDataChange(DataSnapshot dataSnapshot) {
+                                                      for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                                          // handler1.postDelayed(new Runnable() {
+                                                          //   @Override
+                                                          //   public void run() {
+                                                          snapshot.getRef().addValueEventListener(new ValueEventListener() {
+                                                              @Override
+                                                              public void onDataChange(DataSnapshot dataSnapshot) {
+                                                                  for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
                                       /*  handler1.postDelayed(new Runnable() {
                                             @Override
@@ -277,35 +266,44 @@ public class Tabs extends AppCompatActivity {
                                                 Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
                                             }
                                         }, 2000);*/
-                                notification(++m,snapshot.getRef(),snapshot,switchflag,switchvibrate);
-                            }
-                        }
+                                                                      notification(++m, snapshot.getRef(), snapshot, switchflag, switchvibrate);
+                                                                  }
+                                                              }
 
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
+                                                              @Override
+                                                              public void onCancelled(DatabaseError databaseError) {
 
-                        }
-                    });
-                    // }
-                    // },3000);
+                                                              }
+                                                          });
+                                                          // }
+                                                          // },3000);
 
-                }
-            }
+                                                      }
+                                                  }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                                                  @Override
+                                                  public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
+                                                  }
+                                              }
 
-        handler1.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                bottomBarTab.setBadgeCount(flag);
-                bottomBarTabmsg.setBadgeCount(msgcount);
+                        );
 
-            }
-        },1000);
+                handler1.postDelayed(new
+
+                                             Runnable() {
+                                                 @Override
+                                                 public void run() {
+                                                     bottomBarTab.setBadgeCount(flag);
+                                                     bottomBarTabmsg.setBadgeCount(msgcount);
+
+                                                 }
+                                             }
+
+                        , 1000);
+                  }
+              }.start();
+
 
     }
 
@@ -313,6 +311,28 @@ public class Tabs extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
+        newnotifchat.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                newnotifchat.removeEventListener(this);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        mDatabasenotif.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                mDatabasenotif.removeEventListener(this);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     public void notification(int m,DatabaseReference notify,DataSnapshot snapshot,Boolean switchflag,Boolean switchvibrate){

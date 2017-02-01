@@ -118,10 +118,13 @@ public class MainActivity extends Fragment {
         super.onStart();
         whorlView.setVisibility(View.VISIBLE);
         whorlView.start();
+
+
         if(auth.getCurrentUser()!=null) {
             pdata.child("Userdetail").child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
+                    whorlView.stop();
                     userdata = dataSnapshot.getValue(UserData.class);
                   //  whorlView.stop();
                   //  whorlView.setVisibility(View.GONE);
@@ -137,7 +140,8 @@ public class MainActivity extends Fragment {
                     Timber.d("oncancelled");
                 }
             });
-
+           // new Thread(){
+               // public void run(){
             FirebaseRecyclerAdapter<Blogmodel, BlogViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Blogmodel, BlogViewHolder>(
                     Blogmodel.class,
                     R.layout.blog_item,
@@ -150,7 +154,7 @@ public class MainActivity extends Fragment {
                 protected void populateViewHolder(final BlogViewHolder viewHolder, final Blogmodel model, int position) {
                     //  model=new Blogmodel();
                   //  viewHolder.setTitle(model.getTitle());
-                    whorlView.stop();
+
                     whorlView.setVisibility(View.GONE);
 
                   final String post_key= getRef(position).getKey();
@@ -207,8 +211,9 @@ public class MainActivity extends Fragment {
                                                          lik=0;
                                                      }
                                             mDatabaselike.child(post_key).child(user.getUid()).removeValue();
+                                            mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()));
                                           //  mDatabaselike.child(post_key).child("like").setValue(lik);
-                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                                           /* mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                                     mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
@@ -226,7 +231,7 @@ public class MainActivity extends Fragment {
                                                 public void onCancelled(DatabaseError databaseError) {
 
                                                 }
-                                            });
+                                            });*/
 
                                             //   processlike=true;
                                               processlike=false;
@@ -246,7 +251,8 @@ public class MainActivity extends Fragment {
                                                            unlik=0;
                                                        }
                                                        mDatabaseunlike.child(post_key).child(user.getUid()).removeValue();
-                                                           mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                                                       mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lik,unlik,model.getTime(),model.getDate()));
+                                                          /* mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                @Override
                                                                public void onDataChange(DataSnapshot dataSnapshot) {
                                                                    mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lik,unlik,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
@@ -263,7 +269,7 @@ public class MainActivity extends Fragment {
                                                                public void onCancelled(DatabaseError databaseError) {
 
                                                                }
-                                                           });
+                                                           });*/
                                                      //  mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlik,model.getTime(),model.getDate()));
 
                                                    }
@@ -276,10 +282,11 @@ public class MainActivity extends Fragment {
                                            });
                                             lik = model.getLike() + 1;
                                             mDatabaselike.child(post_key).child(user.getUid()).setValue("Liked");
+                                            mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()));
                                           //  final int
 
                                             //   processlike=true;
-                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                                          /*  mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                                     mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
@@ -298,7 +305,7 @@ public class MainActivity extends Fragment {
 
                                                 }
 
-                                            });
+                                            });*/
                                           /*  mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                 @Override
@@ -306,11 +313,11 @@ public class MainActivity extends Fragment {
                                                     Toast.makeText(getActivity(), "Saved successfullyli!", Toast.LENGTH_SHORT).show();
                                                 }
                                             });*/
-                                          //  handler1.postDelayed(new Runnable() {
-                                               // @Override
-                                               // public void run() {
+                                            handler1.postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
                                                     if(!(user.getUid().equals(model.getKey()))) {
-                                                       /* mDatabasenotiflike.child(model.getKey()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                                        mDatabasenotiflike.child(model.getKey()).addListenerForSingleValueEvent(new ValueEventListener() {
                                                             @Override
                                                             public void onDataChange(DataSnapshot dataSnapshot) {
                                                                 count = dataSnapshot.child("count").getValue(Integer.class);
@@ -322,13 +329,14 @@ public class MainActivity extends Fragment {
                                                             public void onCancelled(DatabaseError databaseError) {
 
                                                             }
-                                                        });*/
+                                                        });
                                                         mDatabasenotif.child(model.getKey()).child(post_key).child(user.getUid()).setValue(userdata.name);
+                                                       // Toast.makeText(getActivity(),model.getKey(),Toast.LENGTH_LONG).show();
                                                         DatabaseReference newpost = mDatabasenotifdata.child(model.getKey()).push();
                                                         newpost.setValue(new Notificationmodel(userdata.photo, userdata.name + " liked your post",user.getUid(),post_key));
                                                     }
-                                            //    }
-                                            //},1000);
+                                                }
+                                            },1000);
 
                                             processlike=false;
                                         }
@@ -386,7 +394,8 @@ public class MainActivity extends Fragment {
                                                 unlike=0;
                                             }
                                             mDatabaseunlike.child(post_key).child(user.getUid()).removeValue();
-                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                                            mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()));
+                                          /*  mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                                     mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
@@ -403,7 +412,7 @@ public class MainActivity extends Fragment {
                                                 public void onCancelled(DatabaseError databaseError) {
 
                                                 }
-                                            });
+                                            });*/
                                             processunlike=false;
                                         }else{
 
@@ -421,7 +430,8 @@ public class MainActivity extends Fragment {
                                                             lyk=0;
                                                         }
                                                         mDatabaselike.child(post_key).child(user.getUid()).removeValue();
-                                                        mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                                                        mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lyk,unlike,model.getTime(),model.getDate()));
+                                                      /*  mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                             @Override
                                                             public void onDataChange(DataSnapshot dataSnapshot) {
                                                                 mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lyk,unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
@@ -438,7 +448,7 @@ public class MainActivity extends Fragment {
                                                             public void onCancelled(DatabaseError databaseError) {
 
                                                             }
-                                                        });
+                                                        });*/
                                                     /*    mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lyk,model.getUnlike(),model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                             @Override
@@ -457,7 +467,8 @@ public class MainActivity extends Fragment {
                                             mDatabaseunlike.child(post_key).child(user.getUid()).setValue("Unliked");
                                             // final int
                                             unlike=model.getUnlike()+1;
-                                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                                            mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()));
+                                           /* mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                                     mDatabase.child(post_key).setValue(new Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
@@ -474,7 +485,7 @@ public class MainActivity extends Fragment {
                                                 public void onCancelled(DatabaseError databaseError) {
 
                                                 }
-                                            });
+                                            });*/
                                           /*  mDatabase.child(post_key).setValue(new Blogmodel(model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()),new DatabaseReference.CompletionListener(){
 
                                                 @Override
@@ -535,6 +546,8 @@ public class MainActivity extends Fragment {
         }else{
             loadLoginView();
        }
+
+
     }
 
     public void writeblog(){
