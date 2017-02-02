@@ -66,7 +66,7 @@ public class Tabs extends AppCompatActivity {
     SharedPreferences myPrefs;
     Handler handler1 = new Handler();
     Handler handler2=new Handler();
-    private DatabaseReference mDatabasenotif,mDatanotiflike,newnotifchat;
+    private DatabaseReference mDatabasenotif,mDatanotiflike,newnotifchat,mDatabasenotiflike;
     FirebaseUser user;
     Settings settings;
     Boolean switchflag,switchvibrate;
@@ -89,6 +89,7 @@ public class Tabs extends AppCompatActivity {
       //  tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         mainFrame=(CoordinatorLayout)findViewById(R.id.coordinatorLayout);
         viewPager=(ViewPager)findViewById(R.id.viewPager);
+        mDatabasenotiflike=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like");
         BottomBar bottomBar=(BottomBar)findViewById(R.id.bottomtab);
          bottomBarTab=bottomBar.getTabWithId(R.id.tab_notification);
          bottomBarTabmsg=bottomBar.getTabWithId(R.id.tab_message);
@@ -103,8 +104,19 @@ public class Tabs extends AppCompatActivity {
                     startActivity(new Intent(Tabs.this,Profile.class));
                 }
                else if(tabId==R.id.tab_notification){
-                          bottomBarTab.removeBadge();
-                          flag=0;
+                          mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                              @Override
+                              public void onDataChange(DataSnapshot dataSnapshot) {
+                                  mDatabasenotiflike.removeEventListener(this);
+                              }
+
+                              @Override
+                              public void onCancelled(DatabaseError databaseError) {
+
+                              }
+                          });
+                          mDatabasenotiflike.child(user.getUid()).setValue(0);
+                        //  flag=0;
                       //    mDatanotiflike.setValue(new Likemodel(0));
                     startActivity(new Intent(Tabs.this,Notification.class));
                 }
@@ -145,6 +157,7 @@ public class Tabs extends AppCompatActivity {
         newnotifchat.keepSynced(true);
         mDatabasenotif.keepSynced(true);
         mDatanotiflike.keepSynced(true);
+        mDatabasenotiflike.keepSynced(true);
         tabLayout.setupWithViewPager(viewPager);
        // setupTabIconsBottom();
         setupTabIcons();
@@ -209,6 +222,7 @@ public class Tabs extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        stopService(new Intent(Tabs.this,Notificationservice.class));
         //startService(new Intent(this,Notificationservice.class));
         switchflag=((App)this.getApplication()).getFlag();
         switchvibrate=((App)this.getApplication()).getVib();
@@ -225,9 +239,7 @@ public class Tabs extends AppCompatActivity {
                   public void run(){
 
 
-                newnotifchat.addValueEventListener(new
-
-                                                           ValueEventListener() {
+                newnotifchat.addValueEventListener(new ValueEventListener() {
                                                                @Override
                                                                public void onDataChange(DataSnapshot dataSnapshot) {
                                                                    //  msgcount=(int)dataSnapshot.getChildrenCount();
@@ -244,9 +256,7 @@ public class Tabs extends AppCompatActivity {
 
                 );
 
-                mDatabasenotif.child(user.getUid()).
-
-                        addValueEventListener(new ValueEventListener() {
+                mDatabasenotif.child(user.getUid()).addValueEventListener(new ValueEventListener() {
                                                   @Override
                                                   public void onDataChange(DataSnapshot dataSnapshot) {
                                                       for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -289,18 +299,26 @@ public class Tabs extends AppCompatActivity {
 
                         );
 
-                handler1.postDelayed(new
-
-                                             Runnable() {
+                handler1.postDelayed(new Runnable() {
                                                  @Override
                                                  public void run() {
-                                                     bottomBarTab.setBadgeCount(flag);
+                                                     mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                                                         @Override
+                                                         public void onDataChange(DataSnapshot dataSnapshot) {
+                                                             int notifcount=dataSnapshot.getValue(Integer.class);
+                                                             bottomBarTab.setBadgeCount(notifcount);
+                                                         }
+
+                                                         @Override
+                                                         public void onCancelled(DatabaseError databaseError) {
+
+                                                         }
+                                                     });
+                                                    // bottomBarTab.setBadgeCount(flag);
                                                      bottomBarTabmsg.setBadgeCount(msgcount);
 
                                                  }
-                                             }
-
-                        , 1000);
+                                             }, 500);
                   }
               }.start();
 
@@ -333,6 +351,12 @@ public class Tabs extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        startService(new Intent(Tabs.this,Notificationservice.class));
     }
 
     public void notification(int m,DatabaseReference notify,DataSnapshot snapshot,Boolean switchflag,Boolean switchvibrate){
@@ -592,7 +616,7 @@ public class Tabs extends AppCompatActivity {
                     setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                          //  stopService(new Intent(Tabs.this,Notificationservice.class));
+                            stopService(new Intent(Tabs.this,Notificationservice.class));
                             FirebaseAuth.getInstance().signOut();
                             Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
                            // myPrefs.edit().clear().commit();
