@@ -258,7 +258,7 @@ public class Chatstart extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        newnotifChat.addValueEventListener(new ValueEventListener() {
+      /*  newnotifChat.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 newnotifChat.removeEventListener(this);
@@ -268,11 +268,26 @@ public class Chatstart extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
-        newnotifchat.addValueEventListener(new ValueEventListener() {
+        });*/
+        newnotifchat.addChildEventListener(new ChildEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 dataSnapshot.getRef().setValue(null);
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
             }
 
             @Override
@@ -280,6 +295,17 @@ public class Chatstart extends AppCompatActivity {
 
             }
         });
+     /*   newnotifchat.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });*/
 
       /* newSend.addChildEventListener(new ChildEventListener() {
            @Override

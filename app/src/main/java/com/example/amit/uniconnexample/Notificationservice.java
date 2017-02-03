@@ -13,6 +13,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,7 +43,7 @@ public class Notificationservice extends Service {
         switchflag=((App)this.getApplication()).getFlag();
         switchvibrate=((App)this.getApplication()).getVib();
         mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like");
-        newnotifchat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(user.getUid());
+        newnotifchat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat");
 
     }
 
@@ -50,12 +51,13 @@ public class Notificationservice extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         
         if(!(Foreground.get().isForeground())){
-            newnotifchat.addListenerForSingleValueEvent(new ValueEventListener() {
+            newnotifchat.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
+                   // Toast.makeText(Notificationservice.this,"service",Toast.LENGTH_SHORT).show();
                     //  msgcount=(int)dataSnapshot.getChildrenCount();
                     for(DataSnapshot snapshot:dataSnapshot.getChildren()){
-                      //  notifiy(++m1,snapshot.getRef(),snapshot,switchflag,switchvibrate);
+                        notifiy(++m1,snapshot.getRef(),snapshot,switchflag,switchvibrate);
                     }
                 }
 
@@ -85,7 +87,7 @@ public class Notificationservice extends Service {
                                                 Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
                                             }
                                         }, 2000);*/
-                                   // notification(++m,snapshot.getRef(),snapshot,switchflag,switchvibrate);
+                                    notification(++m,snapshot.getRef(),snapshot,switchflag,switchvibrate);
                                 }
                             }
 

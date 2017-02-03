@@ -462,8 +462,8 @@ public class Blog extends AppCompatActivity {
 
 //      max Height and width values of the compressed image is taken as 816x612
 
-        float maxHeight = 816.0f;
-        float maxWidth = 612.0f;
+        float maxHeight = 616.0f;
+        float maxWidth = 412.0f;
         float imgRatio = actualWidth / actualHeight;
         float maxRatio = maxWidth / maxHeight;
 

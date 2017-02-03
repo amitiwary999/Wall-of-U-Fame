@@ -37,7 +37,7 @@
         android:layout_height="match_parent"
         android:id="@+id/mblog_list"
         android:layout_marginTop="?android:attr/actionBarSize"
-
+        android:layout_marginBottom="46dp"
         android:clipToPadding="false"
         android:scrollbars="vertical">
 
@@ -46,14 +46,14 @@
 </RelativeLayout>
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:elevation="6dp"
         android:layout_gravity="bottom|end"
         app:backgroundTint="@color/colorAccent"
         app:pressedTranslationZ="12dp"
-        android:layout_marginBottom="55dp"
-        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="54dp"
+        android:layout_marginRight="3dp"
         android:scaleType="center"
         android:src="@drawable/ic_add_white_24dp"
          />

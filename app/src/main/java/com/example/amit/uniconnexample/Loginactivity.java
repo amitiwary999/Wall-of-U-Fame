@@ -63,7 +63,7 @@ public class Loginactivity extends AppCompatActivity{
     @BindView(R.id.login_progress)
     ProgressBar loginProgress;
     FirebaseUser user;
-    DatabaseReference mDatabasenotiflike;
+   private DatabaseReference mDatabasenotiflike;
     private FirebaseAuth.AuthStateListener mAuthListener;
     TextView signup;
     String TAG = "TAG";
@@ -173,7 +173,7 @@ public class Loginactivity extends AppCompatActivity{
                                         @Override
                                         public void onDataChange(DataSnapshot dataSnapshot) {
                                             if(!dataSnapshot.hasChild(auth.getCurrentUser().getUid())){
-                                                mDatabasenotiflike.child(auth.getCurrentUser().getUid()).setValue(new Likemodel(0));
+                                                mDatabasenotiflike.child(auth.getCurrentUser().getUid()).child("count").setValue(0);
 
                                             }
                                             Intent i = new Intent(Loginactivity.this, Tabs.class);
@@ -186,9 +186,6 @@ public class Loginactivity extends AppCompatActivity{
 
                                         }
                                     });
-                                    Intent i = new Intent(Loginactivity.this, Tabs.class);
-                                    startActivity(i);
-                                    finish();
                                 }
                             }
                         });

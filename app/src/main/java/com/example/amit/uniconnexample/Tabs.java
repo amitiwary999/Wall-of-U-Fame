@@ -62,12 +62,14 @@ public class Tabs extends AppCompatActivity {
     private TabLayout tabLayout,tablayoutbottom;
     private ViewPager viewPager;
     private CoordinatorLayout mainFrame;
+    Likemodel likemodel;
     MediaPlayer song;
     SharedPreferences myPrefs;
     Handler handler1 = new Handler();
     Handler handler2=new Handler();
     private DatabaseReference mDatabasenotif,mDatanotiflike,newnotifchat,mDatabasenotiflike;
     FirebaseUser user;
+    ValueEventListener valueEventListener,valueventlistener;
     Settings settings;
     Boolean switchflag,switchvibrate;
     BottomBarTab bottomBarTab,bottomBarTabmsg;
@@ -82,6 +84,7 @@ public class Tabs extends AppCompatActivity {
         setContentView(R.layout.activity_tabs);
         user=FirebaseAuth.getInstance().getCurrentUser();
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
+        likemodel=new Likemodel();
         settings=new Settings();
        // startActivityForResult((new Intent(this, Settings.class)),2);
 
@@ -104,7 +107,9 @@ public class Tabs extends AppCompatActivity {
                     startActivity(new Intent(Tabs.this,Profile.class));
                 }
                else if(tabId==R.id.tab_notification){
-                          mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                          newnotifchat.removeEventListener(valueEventListener);
+                          mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                       /*   mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
                               @Override
                               public void onDataChange(DataSnapshot dataSnapshot) {
                                   mDatabasenotiflike.removeEventListener(this);
@@ -115,12 +120,14 @@ public class Tabs extends AppCompatActivity {
 
                               }
                           });
-                          mDatabasenotiflike.child(user.getUid()).setValue(0);
-                        //  flag=0;
+                          mDatabasenotiflike.child(user.getUid()).setValue(0);*/
+                          flag=0;
                       //    mDatanotiflike.setValue(new Likemodel(0));
                     startActivity(new Intent(Tabs.this,Notification.class));
                 }
                else if(tabId==R.id.tab_message){
+                          newnotifchat.removeEventListener(valueEventListener);
+                          mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
                           bottomBarTabmsg.removeBadge();
                           msgcount=0;
                     startActivity(new Intent(Tabs.this,Message.class));
@@ -143,6 +150,17 @@ public class Tabs extends AppCompatActivity {
                     startActivity(new Intent(Tabs.this,Notification.class));
                 }
                else if(tabId==R.id.tab_message){
+                    newnotifchat.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            newnotifchat.removeEventListener(this);
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
                     startActivity(new Intent(Tabs.this,Message.class));
                 }
                 else if(tabId==R.id.tab_setting){
@@ -215,7 +233,7 @@ public class Tabs extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-       Toast.makeText(Tabs.this, "checkpause", Toast.LENGTH_SHORT).show();
+       //Toast.makeText(Tabs.this, "checkpause", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -226,7 +244,7 @@ public class Tabs extends AppCompatActivity {
         //startService(new Intent(this,Notificationservice.class));
         switchflag=((App)this.getApplication()).getFlag();
         switchvibrate=((App)this.getApplication()).getVib();
-        Toast.makeText(Tabs.this,"hi"+switchflag,Toast.LENGTH_LONG).show();
+       // Toast.makeText(Tabs.this,"hi"+switchflag,Toast.LENGTH_LONG).show();
 
        /* handler1.postDelayed(new Runnable() {
             @Override
@@ -235,17 +253,30 @@ public class Tabs extends AppCompatActivity {
                 bottomBarTabmsg.setBadgeCount(msgcount);
             }
         },2000);*/
-              new Thread(){
-                  public void run(){
+             // new Thread(){
+                 // public void run(){
 
 
-                newnotifchat.addValueEventListener(new ValueEventListener() {
+                valueEventListener= new ValueEventListener() {
+                   @Override
+                   public void onDataChange(DataSnapshot dataSnapshot) {
+                       for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                         //  Toast.makeText(Tabs.this,"Tabs",Toast.LENGTH_LONG).show();
+                           notifiy(++m1, snapshot.getRef(), snapshot, switchflag, switchvibrate);
+                       }
+                   }
+
+                   @Override
+                   public void onCancelled(DatabaseError databaseError) {
+
+                   }
+               };
+                       newnotifchat.addValueEventListener(valueEventListener);
+                             /*  (new ValueEventListener() {
                                                                @Override
                                                                public void onDataChange(DataSnapshot dataSnapshot) {
                                                                    //  msgcount=(int)dataSnapshot.getChildrenCount();
-                                                                   for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                                                       notifiy(++m1, snapshot.getRef(), snapshot, switchflag, switchvibrate);
-                                                                   }
+
                                                                }
 
                                                                @Override
@@ -254,9 +285,49 @@ public class Tabs extends AppCompatActivity {
                                                                }
                                                            }
 
-                );
+                );*/
+                valueventlistener=new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            // handler1.postDelayed(new Runnable() {
+                            //   @Override
+                            //   public void run() {
+                            snapshot.getRef().addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
-                mDatabasenotif.child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                                      /*  handler1.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                notification(++m,snapshot.getRef());
+                                              //  snapshot.getRef().setValue(null);
+                                                Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
+                                            }
+                                        }, 2000);*/
+                                        notification(++m, snapshot.getRef(), snapshot, switchflag, switchvibrate);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+                            // }
+                            // },3000);
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                };
+                mDatabasenotif.child(user.getUid()).addValueEventListener(valueventlistener);
+                       /* (new ValueEventListener() {
                                                   @Override
                                                   public void onDataChange(DataSnapshot dataSnapshot) {
                                                       for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -275,7 +346,7 @@ public class Tabs extends AppCompatActivity {
                                               //  snapshot.getRef().setValue(null);
                                                 Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
                                             }
-                                        }, 2000);*/
+                                        }, 2000);
                                                                       notification(++m, snapshot.getRef(), snapshot, switchflag, switchvibrate);
                                                                   }
                                                               }
@@ -297,30 +368,30 @@ public class Tabs extends AppCompatActivity {
                                                   }
                                               }
 
-                        );
+                        );*/
 
                 handler1.postDelayed(new Runnable() {
                                                  @Override
                                                  public void run() {
-                                                     mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
+                                                   /*  mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
                                                          @Override
                                                          public void onDataChange(DataSnapshot dataSnapshot) {
-                                                             int notifcount=dataSnapshot.getValue(Integer.class);
-                                                             bottomBarTab.setBadgeCount(notifcount);
+                                                             int count=dataSnapshot.child("count").getValue(Integer.class);
+                                                             bottomBarTab.setBadgeCount(count);
                                                          }
 
                                                          @Override
                                                          public void onCancelled(DatabaseError databaseError) {
 
                                                          }
-                                                     });
-                                                    // bottomBarTab.setBadgeCount(flag);
+                                                     });*/
+                                                     bottomBarTab.setBadgeCount(flag);
                                                      bottomBarTabmsg.setBadgeCount(msgcount);
 
                                                  }
-                                             }, 500);
-                  }
-              }.start();
+                                             }, 200);
+                 // }
+            //  }.start();
 
 
     }
@@ -328,19 +399,21 @@ public class Tabs extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
-        newnotifchat.addValueEventListener(new ValueEventListener() {
+       // Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
+        newnotifchat.removeEventListener(valueEventListener);
+        mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+       /* newnotifchat.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                newnotifchat.removeEventListener(this);
+
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
-        mDatabasenotif.addValueEventListener(new ValueEventListener() {
+        });*/
+      /*  mDatabasenotif.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 mDatabasenotif.removeEventListener(this);
@@ -350,7 +423,7 @@ public class Tabs extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        });*/
     }
 
     @Override
@@ -401,6 +474,7 @@ public class Tabs extends AppCompatActivity {
                 .setContentText(name+" : "+text)
                 .setSmallIcon(R.drawable.uniconn)
                 .setAutoCancel(true);
+
         if(switchflag){
             n.setSound(Uri.parse("android.resource://com.example.amit.uniconnexample/"+R.raw.notifsound));
         }
@@ -617,11 +691,19 @@ public class Tabs extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             stopService(new Intent(Tabs.this,Notificationservice.class));
-                            FirebaseAuth.getInstance().signOut();
-                            Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
-                           // myPrefs.edit().clear().commit();
-                            startActivity(new Intent(Tabs.this, Loginactivity.class));
-                            finish();
+                            newnotifchat.removeEventListener(valueEventListener);
+                            mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                            handler1.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    FirebaseAuth.getInstance().signOut();
+                                    Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
+                                    // myPrefs.edit().clear().commit();
+                                    startActivity(new Intent(Tabs.this, Loginactivity.class));
+                                    finish();
+                                }
+                            },1000);
+
 
                         }
                     }).
