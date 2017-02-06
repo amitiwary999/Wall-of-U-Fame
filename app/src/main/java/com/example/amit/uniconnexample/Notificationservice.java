@@ -32,6 +32,7 @@ import java.util.List;
 public class Notificationservice extends Service {
     private DatabaseReference mDatabasenotif,newnotifchat;
     FirebaseUser user;
+    ValueEventListener valueEventListener,valueeventListener;
     Boolean switchflag,switchvibrate;
     Settings settings;
     int m=0,flag=0,m1=2000;
@@ -51,11 +52,9 @@ public class Notificationservice extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         
         if(!(Foreground.get().isForeground())){
-            newnotifchat.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            valueEventListener=new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-                   // Toast.makeText(Notificationservice.this,"service",Toast.LENGTH_SHORT).show();
-                    //  msgcount=(int)dataSnapshot.getChildrenCount();
                     for(DataSnapshot snapshot:dataSnapshot.getChildren()){
                         notifiy(++m1,snapshot.getRef(),snapshot,switchflag,switchvibrate);
                     }
@@ -65,9 +64,8 @@ public class Notificationservice extends Service {
                 public void onCancelled(DatabaseError databaseError) {
 
                 }
-            });
-
-            mDatabasenotif.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            };
+            valueeventListener=new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     for( final DataSnapshot snapshot:dataSnapshot.getChildren()) {
@@ -106,7 +104,65 @@ public class Notificationservice extends Service {
                 public void onCancelled(DatabaseError databaseError) {
 
                 }
-            });
+            };
+            newnotifchat.child(user.getUid()).addValueEventListener(valueEventListener);
+            mDatabasenotif.child(user.getUid()).addValueEventListener(valueeventListener);
+          /*  newnotifchat.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                   // Toast.makeText(Notificationservice.this,"service",Toast.LENGTH_SHORT).show();
+                    //  msgcount=(int)dataSnapshot.getChildrenCount();
+                    for(DataSnapshot snapshot:dataSnapshot.getChildren()){
+                        notifiy(++m1,snapshot.getRef(),snapshot,switchflag,switchvibrate);
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });*/
+
+           /* mDatabasenotif.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    for( final DataSnapshot snapshot:dataSnapshot.getChildren()) {
+                        // handler1.postDelayed(new Runnable() {
+                        //   @Override
+                        //   public void run() {
+                        snapshot.getRef().addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
+
+                                      /*  handler1.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                notification(++m,snapshot.getRef());
+                                              //  snapshot.getRef().setValue(null);
+                                                Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
+                                            }
+                                        }, 2000);
+                                    notification(++m,snapshot.getRef(),snapshot,switchflag,switchvibrate);
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
+                        // }
+                        // },3000);
+
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });*/
         }
         return START_REDELIVER_INTENT;
     }
@@ -209,5 +265,13 @@ public class Notificationservice extends Service {
         mNotificationManager.notify(m,n.build());
        // ++msgcount;
         ref.setValue(null);
+    }
+
+    @Override
+    public boolean stopService(Intent name) {
+        newnotifchat.child(user.getUid()).removeEventListener(valueEventListener);
+        mDatabasenotif.child(user.getUid()).removeEventListener(valueeventListener);
+        return super.stopService(name);
+
     }
 }

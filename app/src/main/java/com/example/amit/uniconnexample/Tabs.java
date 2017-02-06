@@ -370,7 +370,7 @@ public class Tabs extends AppCompatActivity {
 
                         );*/
 
-                handler1.postDelayed(new Runnable() {
+              handler1.postDelayed(new Runnable() {
                                                  @Override
                                                  public void run() {
                                                    /*  mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
@@ -388,8 +388,8 @@ public class Tabs extends AppCompatActivity {
                                                      bottomBarTab.setBadgeCount(flag);
                                                      bottomBarTabmsg.setBadgeCount(msgcount);
 
-                                                 }
-                                             }, 200);
+                                                }
+                                             }, 1000);
                  // }
             //  }.start();
 
@@ -429,6 +429,7 @@ public class Tabs extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
         startService(new Intent(Tabs.this,Notificationservice.class));
     }
 
@@ -436,7 +437,7 @@ public class Tabs extends AppCompatActivity {
       //  song= MediaPlayer.create(this,R.raw.internetfriends0);
       //  song.start();
         //int m = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
-
+        ++flag;
         NotificationManager notificationManager = (NotificationManager)
                 this.getSystemService(this.NOTIFICATION_SERVICE);
         NotificationCompat.Builder n=new NotificationCompat.Builder(this)
@@ -454,7 +455,7 @@ public class Tabs extends AppCompatActivity {
                 .setContentText(snapshot.getValue(String.class)+" liked your post")
                 .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();*/
         notificationManager.notify(m,n.build());
-        ++flag;
+
         notify.setValue(null);
        /* song= MediaPlayer.create(getApplicationContext(),R.raw.internetfriends0);
         song.start();
@@ -467,6 +468,7 @@ public class Tabs extends AppCompatActivity {
         notificationManager.notify(0,n.build());*/
     }
     public void notifiy(int m,DatabaseReference ref,DataSnapshot snapshot,Boolean switchflag,Boolean switchvibrate){
+        ++msgcount;
         String name=snapshot.child("name").getValue(String.class);
         String text=snapshot.child("txt").getValue(String.class);
         NotificationCompat.Builder n=new NotificationCompat.Builder(this)
@@ -499,7 +501,7 @@ public class Tabs extends AppCompatActivity {
         NotificationManager mNotificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(m,n.build());
-        ++msgcount;
+
         ref.setValue(null);
     }
     private void setupViewPager(ViewPager viewPager) {
@@ -702,7 +704,7 @@ public class Tabs extends AppCompatActivity {
                                     startActivity(new Intent(Tabs.this, Loginactivity.class));
                                     finish();
                                 }
-                            },1000);
+                            },2000);
 
 
                         }

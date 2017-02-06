@@ -516,12 +516,12 @@
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/input_outline.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_arrow_back_white.png",
-        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_arrow_back_white.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_item_selected_dark.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable/md_item_selected_dark.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_arrow_back_white.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_arrow_back_white.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",

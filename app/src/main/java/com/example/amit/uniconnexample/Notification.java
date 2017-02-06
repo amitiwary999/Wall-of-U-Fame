@@ -159,8 +159,9 @@ public class Notification extends AppCompatActivity {
            // TextView tname=(TextView)view.findViewById(R.id.bname);
            // ImageView iview=(ImageView)view.findViewById(R.id.pimage);
             tname.setText(model.getTxt());
-            if(model.getImg()!=null)
+            if(model.getImg()!=null) {
                 iview.setImageBitmap(Utils.decodeBase64(model.getImg()));
+            }
             else{
                 iview.setImageResource(R.drawable.account);
             }
