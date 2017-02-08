@@ -44,7 +44,7 @@
            android:layout_height="match_parent"
            android:layout_gravity="center"
            android:layout_marginLeft="3dp"
-           android:src="@drawable/mail"/>
+           android:src="@drawable/ic_action_local_post_office"/>
         <View
             android:layout_width="2dp"
             android:layout_marginTop="10dp"
@@ -78,7 +78,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="3dp"
-            android:src="@drawable/lock"/>
+            android:src="@drawable/ic_action_lock"/>
         <View
             android:layout_width="2dp"
             android:layout_marginTop="10dp"

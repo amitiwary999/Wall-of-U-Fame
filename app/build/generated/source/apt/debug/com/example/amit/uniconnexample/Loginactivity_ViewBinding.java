@@ -4,7 +4,6 @@ package com.example.amit.uniconnexample;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
@@ -45,7 +44,6 @@ public class Loginactivity_ViewBinding<T extends Loginactivity> implements Unbin
         target.signup();
       }
     });
-    target.loginProgress = finder.findRequiredViewAsType(source, R.id.login_progress, "field 'loginProgress'", ProgressBar.class);
   }
 
   @Override
@@ -58,7 +56,6 @@ public class Loginactivity_ViewBinding<T extends Loginactivity> implements Unbin
     target.forgotpassword = null;
     target.login = null;
     target.sign_up = null;
-    target.loginProgress = null;
 
     view2131755162.setOnClickListener(null);
     view2131755162 = null;

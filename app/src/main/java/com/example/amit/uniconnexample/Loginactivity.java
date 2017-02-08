@@ -1,5 +1,6 @@
 package com.example.amit.uniconnexample;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -61,8 +62,9 @@ public class Loginactivity extends AppCompatActivity{
     Button login;
     @BindView(R.id.signup)
     Button sign_up;
-    @BindView(R.id.login_progress)
-    ProgressBar loginProgress;
+    ProgressDialog mProgress;
+   // @BindView(R.id.login_progress)
+   // ProgressBar loginProgress;
     FirebaseUser user;
    private DatabaseReference mDatabasenotiflike;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -75,7 +77,7 @@ public class Loginactivity extends AppCompatActivity{
         ButterKnife.bind(this);
         setTitle("Login");
         auth = FirebaseAuth.getInstance();
-
+        mProgress = new ProgressDialog(this);
         if (isNetworkConnected()) {
             forgotpassword.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -148,7 +150,9 @@ public class Loginactivity extends AppCompatActivity{
 
         inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
                 InputMethodManager.HIDE_NOT_ALWAYS);
-        loginProgress.setVisibility(View.VISIBLE);
+        mProgress.setMessage("***Logging you***");
+        mProgress.show();
+      //  loginProgress.setVisibility(View.VISIBLE);
         final String cemail=email.getText().toString();
         String cpassword=password.getText().toString();
         Log.d("mail",cemail);
@@ -183,8 +187,10 @@ public class Loginactivity extends AppCompatActivity{
                                                 mDatabasenotiflike.child(auth.getCurrentUser().getUid()).child("count").setValue(0);
 
                                             }
-                                            loginProgress.setVisibility(View.GONE);
+                                           // loginProgress.setVisibility(View.GONE);
+                                            mProgress.dismiss();
                                             Intent i = new Intent(Loginactivity.this, Tabs.class);
+
                                             startActivity(i);
                                             finish();
                                         }

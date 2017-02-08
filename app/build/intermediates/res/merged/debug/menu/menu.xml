@@ -4,7 +4,7 @@
 
 
     <item android:id="@+id/signout"
-        android:icon="@drawable/exit"
+        android:icon="@drawable/exiti"
         android:title="Add Post"
         app:showAsAction="always"/>
 

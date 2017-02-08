@@ -40,7 +40,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="3dp"
-            android:src="@drawable/account"/>
+            android:src="@drawable/ic_action_account_circle"/>
         <View
             android:layout_width="2dp"
             android:layout_marginTop="20dp"
@@ -81,7 +81,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
-                android:src="@drawable/mail"/>
+                android:src="@drawable/ic_action_local_post_office"/>
             <View
                 android:layout_width="2dp"
                 android:layout_marginTop="20dp"
@@ -207,7 +207,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
-                android:src="@drawable/clgb"/>
+                android:src="@drawable/ic_action_account_balance"/>
             <View
                 android:layout_width="2dp"
                 android:layout_marginTop="20dp"
