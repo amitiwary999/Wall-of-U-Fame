@@ -92,12 +92,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_auth_dialog_header_background.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_background.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_button_background.xml"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/h_post_office.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/h_post_office.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_background.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_button_background.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
@@ -208,12 +208,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_add_black_24dp.png",
-        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_add_black_24dp.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_selector_dark.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable/md_selector_dark.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_add_black_24dp.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_add_black_24dp.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
@@ -234,6 +234,10 @@
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/bookmark.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/bookmark.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/exiti.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/exiti.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_btn_selector.xml",
@@ -324,6 +328,10 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/res/drawable/idp_button_background_facebook.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_action_local_post_office.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_action_local_post_office.png"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/h_notifications.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/h_notifications.png"
     },
@@ -404,12 +412,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable/common_google_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/star_off.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/res/drawable/star_off.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/com_facebook_send_button_icon.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_send_button_icon.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/star_off.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/res/drawable/star_off.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
@@ -440,16 +448,16 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_action_account_circle.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_action_account_circle.png"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_send_background.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_button_send_background.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_like_background.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_button_like_background.xml"
-    },
-    {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_action_account_circle.png",
-        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_action_account_circle.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_action_account_balance.png",
@@ -520,12 +528,16 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_cab_background_top_material.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/unlike.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/unlike.png"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/thumb_on.png",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/res/drawable/thumb_on.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/unlike.png",
-        "source": "/home/amit/Buildapk/app/src/main/res/drawable/unlike.png"
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_action_lock.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_action_lock.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
@@ -548,12 +560,12 @@
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_arrow_back_white.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_search_api_material.xml"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/h_account.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/h_account.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_search_api_material.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/hsetting.png",

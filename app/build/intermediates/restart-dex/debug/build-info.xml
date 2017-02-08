@@ -5,69 +5,33 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="13053744668088"
+    timestamp="8212786687202"
     token="2814086315392108154"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="9586" />
+        duration="39236" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="202" />
+        duration="2835" />
     <task
         name="verifier"
-        duration="29" />
+        duration="269" />
 
     <artifact
-        location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
-        type="DEX" />
+        location="/home/amit/Buildapk/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="9196977273110"
+        timestamp="8212786687202"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/amit/Buildapk/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="10281576670666"
-        verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/home/amit/Buildapk/app/build/outputs/apk/app-debug.apk"
-            type="MAIN" />
-    </build>
-    <build
-        timestamp="10486310730790"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="13053744668088"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>
