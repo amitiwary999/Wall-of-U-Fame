@@ -11,6 +11,7 @@ import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.media.audiofx.BassBoost;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -65,6 +66,7 @@ public class Tabs extends AppCompatActivity {
     Likemodel likemodel;
     MediaPlayer song;
     SharedPreferences myPrefs;
+    SharedPreferences.Editor editor1;
     Handler handler1 = new Handler();
     Handler handler2=new Handler();
     private DatabaseReference mDatabasenotif,mDatanotiflike,newnotifchat,mDatabasenotiflike;
@@ -82,10 +84,12 @@ public class Tabs extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs);
+       // FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         user=FirebaseAuth.getInstance().getCurrentUser();
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         likemodel=new Likemodel();
         settings=new Settings();
+        editor1=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE).edit();
        // startActivityForResult((new Intent(this, Settings.class)),2);
 
        // myPrefs=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE);
@@ -256,22 +260,22 @@ public class Tabs extends AppCompatActivity {
              // new Thread(){
                  // public void run(){
 
-
-                valueEventListener= new ValueEventListener() {
-                   @Override
-                   public void onDataChange(DataSnapshot dataSnapshot) {
-                       for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                         //  Toast.makeText(Tabs.this,"Tabs",Toast.LENGTH_LONG).show();
-                           notifiy(++m1, snapshot.getRef(), snapshot, switchflag, switchvibrate);
+               if(isNetworkConnected()) {
+                   valueEventListener = new ValueEventListener() {
+                       @Override
+                       public void onDataChange(DataSnapshot dataSnapshot) {
+                           for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                               //  Toast.makeText(Tabs.this,"Tabs",Toast.LENGTH_LONG).show();
+                               notifiy(++m1, snapshot.getRef(), snapshot, switchflag, switchvibrate);
+                           }
                        }
-                   }
 
-                   @Override
-                   public void onCancelled(DatabaseError databaseError) {
+                       @Override
+                       public void onCancelled(DatabaseError databaseError) {
 
-                   }
-               };
-                       newnotifchat.addValueEventListener(valueEventListener);
+                       }
+                   };
+                   newnotifchat.addValueEventListener(valueEventListener);
                              /*  (new ValueEventListener() {
                                                                @Override
                                                                public void onDataChange(DataSnapshot dataSnapshot) {
@@ -286,17 +290,17 @@ public class Tabs extends AppCompatActivity {
                                                            }
 
                 );*/
-                valueventlistener=new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            // handler1.postDelayed(new Runnable() {
-                            //   @Override
-                            //   public void run() {
-                            snapshot.getRef().addValueEventListener(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                    for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                   valueventlistener = new ValueEventListener() {
+                       @Override
+                       public void onDataChange(DataSnapshot dataSnapshot) {
+                           for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                               // handler1.postDelayed(new Runnable() {
+                               //   @Override
+                               //   public void run() {
+                               snapshot.getRef().addValueEventListener(new ValueEventListener() {
+                                   @Override
+                                   public void onDataChange(DataSnapshot dataSnapshot) {
+                                       for (final DataSnapshot snapshot : dataSnapshot.getChildren()) {
 
                                       /*  handler1.postDelayed(new Runnable() {
                                             @Override
@@ -306,27 +310,27 @@ public class Tabs extends AppCompatActivity {
                                                 Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
                                             }
                                         }, 2000);*/
-                                        notification(++m, snapshot.getRef(), snapshot, switchflag, switchvibrate);
-                                    }
-                                }
+                                           notification(++m, snapshot.getRef(), snapshot, switchflag, switchvibrate);
+                                       }
+                                   }
 
-                                @Override
-                                public void onCancelled(DatabaseError databaseError) {
+                                   @Override
+                                   public void onCancelled(DatabaseError databaseError) {
 
-                                }
-                            });
-                            // }
-                            // },3000);
+                                   }
+                               });
+                               // }
+                               // },3000);
 
-                        }
-                    }
+                           }
+                       }
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
+                       @Override
+                       public void onCancelled(DatabaseError databaseError) {
 
-                    }
-                };
-                mDatabasenotif.child(user.getUid()).addValueEventListener(valueventlistener);
+                       }
+                   };
+                   mDatabasenotif.child(user.getUid()).addValueEventListener(valueventlistener);
                        /* (new ValueEventListener() {
                                                   @Override
                                                   public void onDataChange(DataSnapshot dataSnapshot) {
@@ -370,9 +374,9 @@ public class Tabs extends AppCompatActivity {
 
                         );*/
 
-              handler1.postDelayed(new Runnable() {
-                                                 @Override
-                                                 public void run() {
+                   handler1.postDelayed(new Runnable() {
+                       @Override
+                       public void run() {
                                                    /*  mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
                                                          @Override
                                                          public void onDataChange(DataSnapshot dataSnapshot) {
@@ -385,23 +389,27 @@ public class Tabs extends AppCompatActivity {
 
                                                          }
                                                      });*/
-                                                     bottomBarTab.setBadgeCount(flag);
-                                                     bottomBarTabmsg.setBadgeCount(msgcount);
+                           bottomBarTab.setBadgeCount(flag);
+                           bottomBarTabmsg.setBadgeCount(msgcount);
 
-                                                }
-                                             }, 1000);
-                 // }
-            //  }.start();
+                       }
+                   }, 1000);
+                   // }
+                   //  }.start();
 
-
+               }else{
+                   Toast.makeText(Tabs.this,"No internet connection",Toast.LENGTH_LONG).show();
+               }
     }
 
     @Override
     protected void onStop() {
         super.onStop();
        // Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
-        newnotifchat.removeEventListener(valueEventListener);
-        mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+        if(isNetworkConnected()) {
+            newnotifchat.removeEventListener(valueEventListener);
+            mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+        }
        /* newnotifchat.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -692,21 +700,26 @@ public class Tabs extends AppCompatActivity {
                     setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            stopService(new Intent(Tabs.this,Notificationservice.class));
-                            newnotifchat.removeEventListener(valueEventListener);
-                            mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
-                            handler1.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    FirebaseAuth.getInstance().signOut();
-                                    Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
-                                    // myPrefs.edit().clear().commit();
-                                    startActivity(new Intent(Tabs.this, Loginactivity.class));
-                                    finish();
-                                }
-                            },2000);
+                            if(isNetworkConnected()) {
+                                stopService(new Intent(Tabs.this, Notificationservice.class));
+                                newnotifchat.removeEventListener(valueEventListener);
+                                mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                                handler1.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        FirebaseAuth.getInstance().signOut();
+                                        Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
+                                        // myPrefs.edit().clear().commit();
+                                        editor1.putBoolean("isLoggedin", false);
+                                        editor1.commit();
+                                        startActivity(new Intent(Tabs.this, Loginactivity.class));
+                                        finish();
+                                    }
+                                }, 2000);
 
-
+                            }else{
+                                Toast.makeText(Tabs.this,"No internet connection",Toast.LENGTH_LONG).show();
+                            }
                         }
                     }).
                     setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -726,7 +739,11 @@ public class Tabs extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        return cm.getActiveNetworkInfo() != null;
+    }
 }
 /*
 

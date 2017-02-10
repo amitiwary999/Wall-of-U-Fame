@@ -1,6 +1,8 @@
 package com.example.amit.uniconnexample;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
@@ -54,6 +56,7 @@ public class Message extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
         rview = (RecyclerView) findViewById(R.id.mchat_list);
+      //  FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         auth=FirebaseAuth.getInstance();
         pdata=FirebaseDatabase.getInstance().getReference();
         rview.setLayoutManager(new LinearLayoutManager(this));
@@ -61,6 +64,8 @@ public class Message extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("message").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         newmessage = FirebaseDatabase.getInstance().getReference().child("Userdetail");
+        newsnd.keepSynced(true);
+
         data = new ArrayList<Message_model>();
         setTitle("");
         tablayoutbottom = (TabLayout) findViewById(R.id.tabLayoutbottom);
@@ -70,30 +75,38 @@ public class Message extends AppCompatActivity {
 
         // setupTabIcons();
         bindWidgetsWithAnEvent();
-        FirebaseRecyclerAdapter<Message_model,MessageViewHolder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Message_model, MessageViewHolder>(
-                Message_model.class,
-                R.layout.activity_messageitem,
-                MessageViewHolder.class,
-                newsnd
-        ) {
-            @Override
-            protected void populateViewHolder(MessageViewHolder viewHolder, Message_model model, int position) {
-                final String msg_key=getRef(position).getKey();
-            //    Toast.makeText(Message.this,msg_key,Toast.LENGTH_LONG).show();
-               // mDatabase.add
-                 viewHolder.bindData(model);
-                viewHolder.view.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(Message.this, Chatstart.class);
-                        i.putExtra("chat", msg_key);
-                        startActivity(i);
-                        finish();
-                    }
-                });
-            }
-        };
-      rview.setAdapter(firebaseRecyclerAdapter);
+       // if(isNetworkConnected()) {
+            FirebaseRecyclerAdapter<Message_model, MessageViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Message_model, MessageViewHolder>(
+                    Message_model.class,
+                    R.layout.activity_messageitem,
+                    MessageViewHolder.class,
+                    newsnd
+            ) {
+                @Override
+                protected void populateViewHolder(MessageViewHolder viewHolder, Message_model model, int position) {
+                    final String msg_key = getRef(position).getKey();
+                    //    Toast.makeText(Message.this,msg_key,Toast.LENGTH_LONG).show();
+                    // mDatabase.add
+                    viewHolder.bindData(model);
+                    viewHolder.view.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if(isNetworkConnected()) {
+                                Intent i = new Intent(Message.this, Chatstart.class);
+                                i.putExtra("chat", msg_key);
+                                startActivity(i);
+                                finish();
+                            }else{
+                                Toast.makeText(Message.this,"No internet connection",Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
+            };
+            rview.setAdapter(firebaseRecyclerAdapter);
+      //  }else{
+        //    Toast.makeText(Message.this,"No internet connection",Toast.LENGTH_LONG).show();
+        //}
        /* mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -413,5 +426,10 @@ public class Message extends AppCompatActivity {
                 // replaceFragment(new Settings());
                 break;
         }
+    }
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        return cm.getActiveNetworkInfo() != null;
     }
 }

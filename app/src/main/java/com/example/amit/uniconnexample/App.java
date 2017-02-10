@@ -3,6 +3,8 @@ package com.example.amit.uniconnexample;
 import android.app.Application;
 import android.content.SharedPreferences;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 import timber.log.Timber;
 
 /**
@@ -16,6 +18,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         myPrefs=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE);
         flag=myPrefs.getBoolean("isChecked1",true);
         vib=myPrefs.getBoolean("isChecked2",true);

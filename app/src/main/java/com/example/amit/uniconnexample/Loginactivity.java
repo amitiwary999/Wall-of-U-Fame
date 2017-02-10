@@ -252,10 +252,6 @@ public class Loginactivity extends AppCompatActivity{
        // }
     }
 
-
-
-
-
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(
                 Context.CONNECTIVITY_SERVICE);

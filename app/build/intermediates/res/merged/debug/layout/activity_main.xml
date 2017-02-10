@@ -24,6 +24,7 @@
         android:layout_height="5dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
+        android:visibility="gone"
         app:whorlview_circle_colors="#F14336_#fb8c00_#5677fc_#283593_#4CAF50"
         app:whorlview_circle_speed="160"
         app:whorlview_parallax="slow"

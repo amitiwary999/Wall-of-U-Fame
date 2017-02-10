@@ -3,11 +3,13 @@ package com.example.amit.uniconnexample;
 import android.*;
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -81,6 +83,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
         email.setKeyListener(null);
+      //  FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         user = FirebaseAuth.getInstance().getCurrentUser();
         userData = new UserData();
         name.setOnClickListener(new View.OnClickListener() {
@@ -103,25 +106,31 @@ public class Profile extends AppCompatActivity {
         });*/
         Utils.setUpToolbarBackButton(Profile.this, toolbar);
         DatabaseReference mDatabase;
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Userdetail").child(user.getUid());
+        mDatabase.keepSynced(true);
+
         // mal=sprfnc.getString("mail"," ");
       //  SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
       //  mail=sharedPreferences.getString("email","");
       //  Toast.makeText(Profile.this,userData.name,Toast.LENGTH_LONG).show();
-        mDatabase.child("Userdetail").child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                userData = dataSnapshot.getValue(UserData.class);
-               // Toast.makeText(Profile.this,userData.name,Toast.LENGTH_LONG).show();
-                updateUI();
-                loading.setVisibility(View.GONE);
-            }
+        if(isNetworkConnected()) {
+            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    userData = dataSnapshot.getValue(UserData.class);
+                    // Toast.makeText(Profile.this,userData.name,Toast.LENGTH_LONG).show();
+                    updateUI();
+                    loading.setVisibility(View.GONE);
+                }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Timber.d("oncancelled");
-            }
-        });
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    Timber.d("oncancelled");
+                }
+            });
+        }else{
+            Toast.makeText(Profile.this,"No internet connection",Toast.LENGTH_LONG).show();
+        }
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
        setupTabIconsBottom();
         // setupTabIcons();
@@ -207,7 +216,11 @@ public class Profile extends AppCompatActivity {
     }
     @OnClick(R.id.save)
     void save() {
-        writeUserData(user.getUid());
+        if(isNetworkConnected()) {
+            writeUserData(user.getUid());
+        }else{
+            Toast.makeText(Profile.this, "No Internet connection", Toast.LENGTH_LONG).show();
+        }
 
        // MainActivity.user = userData;
     }
@@ -294,5 +307,9 @@ public class Profile extends AppCompatActivity {
                 break;
         }
     }
-
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        return cm.getActiveNetworkInfo() != null;
+    }
 }
