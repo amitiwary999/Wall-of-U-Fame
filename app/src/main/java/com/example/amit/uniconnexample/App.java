@@ -11,7 +11,7 @@ import timber.log.Timber;
 
 public class App extends Application {
     Settings settings;
-    Boolean flag,vib;
+    Boolean flag,vib,logincheck;
     SharedPreferences myPrefs;
     @Override
     public void onCreate() {
@@ -19,6 +19,7 @@ public class App extends Application {
         myPrefs=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE);
         flag=myPrefs.getBoolean("isChecked1",true);
         vib=myPrefs.getBoolean("isChecked2",true);
+        logincheck=myPrefs.getBoolean("isLoggedin",false);
         Foreground.init(this);
         Timber.plant(new Timber.DebugTree());
     }
@@ -38,5 +39,9 @@ public class App extends Application {
 
     public Boolean getVib() {
         return (myPrefs.getBoolean("isChecked2",true));
+    }
+
+    public Boolean getLogincheck() {
+        return myPrefs.getBoolean("isLoggedin",false);
     }
 }

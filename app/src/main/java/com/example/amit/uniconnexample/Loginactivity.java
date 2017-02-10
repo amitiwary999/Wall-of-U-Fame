@@ -63,6 +63,7 @@ public class Loginactivity extends AppCompatActivity{
     @BindView(R.id.signup)
     Button sign_up;
     ProgressDialog mProgress;
+    SharedPreferences.Editor editor1;
    // @BindView(R.id.login_progress)
    // ProgressBar loginProgress;
     FirebaseUser user;
@@ -78,6 +79,12 @@ public class Loginactivity extends AppCompatActivity{
         setTitle("Login");
         auth = FirebaseAuth.getInstance();
         mProgress = new ProgressDialog(this);
+        editor1=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE).edit();
+        if(((App)this.getApplication()).getLogincheck()){
+            Intent i = new Intent(Loginactivity.this, Tabs.class);
+            startActivity(i);
+            finish();
+        }
         if (isNetworkConnected()) {
             forgotpassword.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -157,6 +164,7 @@ public class Loginactivity extends AppCompatActivity{
         String cpassword=password.getText().toString();
         Log.d("mail",cemail);
         Log.d("pass",cpassword);
+
         if(cemail.length()!=0) {
             if(cpassword.length()!=0) {
                 if (isNetworkConnected()) {
@@ -188,6 +196,8 @@ public class Loginactivity extends AppCompatActivity{
 
                                             }
                                            // loginProgress.setVisibility(View.GONE);
+                                            editor1.putBoolean("isLoggedin",true);
+                                            editor1.commit();
                                             mProgress.dismiss();
                                             Intent i = new Intent(Loginactivity.this, Tabs.class);
 

@@ -21,6 +21,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.media.ExifInterface;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -298,7 +299,11 @@ public class Blog extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                   //  Toast.makeText(Blog.this,"right",Toast.LENGTH_LONG).show();
-                    startPosting();
+                    if(isNetworkConnected()) {
+                        startPosting();
+                    }else{
+                        Toast.makeText(Blog.this, "No Internet connection", Toast.LENGTH_LONG).show();
+                    }
                 }
             });
         }else{
@@ -612,6 +617,11 @@ public class Blog extends AppCompatActivity {
         }
 
         return inSampleSize;
+    }
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        return cm.getActiveNetworkInfo() != null;
     }
 
    /* @Override
