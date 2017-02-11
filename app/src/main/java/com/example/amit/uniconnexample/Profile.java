@@ -128,8 +128,8 @@ public class Profile extends AppCompatActivity {
                     Timber.d("oncancelled");
                 }
             });
-        }else{
-            Toast.makeText(Profile.this,"No internet connection",Toast.LENGTH_LONG).show();
+      //  }else{
+        //    Toast.makeText(Profile.this,"No internet connection",Toast.LENGTH_LONG).show();
         }
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
        setupTabIconsBottom();
@@ -278,9 +278,10 @@ public class Profile extends AppCompatActivity {
         switch (tabPosition)
         {
             case 0:
-                Intent intent=new Intent(Profile.this, Tabs.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
+                //Intent intent=new Intent(Profile.this, Tabs.class);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                //startActivity(intent);
+                finish();
                 break;
             case 1 :
               //  startActivity(new Intent(Profile.this,Profile.class));

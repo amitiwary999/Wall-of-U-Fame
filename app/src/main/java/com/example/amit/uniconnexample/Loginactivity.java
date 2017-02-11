@@ -119,7 +119,8 @@ public class Loginactivity extends AppCompatActivity{
 
                 }
             });
-            if (auth.getCurrentUser() != null) {
+            if(!((App)this.getApplication()).getLogincheck()) {
+                if (auth.getCurrentUser() != null) {
              /*   signup = (TextView) findViewById(R.id.sign_up);
                 signup.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -136,6 +137,7 @@ public class Loginactivity extends AppCompatActivity{
                     startActivity(new Intent(Loginactivity.this, Tabs.class));
                     finish();
                 }
+            }
         }else {
             Toast.makeText(Loginactivity.this, "No Internet connection", Toast.LENGTH_LONG).show();
         }

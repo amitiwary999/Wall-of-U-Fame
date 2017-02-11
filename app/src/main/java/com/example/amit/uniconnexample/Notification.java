@@ -72,7 +72,7 @@ public class Notification extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if(isNetworkConnected()) {
+      //  if(isNetworkConnected()) {
             FirebaseRecyclerAdapter<Notificationmodel, NotificationViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Notificationmodel, NotificationViewHolder>(
                     Notificationmodel.class,
                     R.layout.activity_notificationitem,
@@ -119,9 +119,9 @@ public class Notification extends AppCompatActivity {
                 }
             };
             notificationrecycle.setAdapter(firebaseRecyclerAdapter);
-        }else{
-            Toast.makeText(Notification.this, "No Internet connection", Toast.LENGTH_LONG).show();
-        }
+     //   }else{
+       //     Toast.makeText(Notification.this, "No Internet connection", Toast.LENGTH_LONG).show();
+        //}
     }
 
     private void setupTabIconsBottom() {

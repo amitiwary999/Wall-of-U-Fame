@@ -244,7 +244,9 @@ public class Tabs extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        stopService(new Intent(Tabs.this,Notificationservice.class));
+        if(isNetworkConnected()) {
+            stopService(new Intent(Tabs.this, Notificationservice.class));
+        }
         //startService(new Intent(this,Notificationservice.class));
         switchflag=((App)this.getApplication()).getFlag();
         switchvibrate=((App)this.getApplication()).getVib();
@@ -437,7 +439,7 @@ public class Tabs extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
         startService(new Intent(Tabs.this,Notificationservice.class));
     }
 
