@@ -44,9 +44,9 @@
            android:layout_height="match_parent"
            android:layout_gravity="center"
            android:layout_marginLeft="3dp"
-           android:src="@drawable/ic_action_local_post_office"/>
+           android:src="@drawable/ic_logemail"/>
         <View
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             android:layout_height="match_parent"
@@ -78,9 +78,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="3dp"
-            android:src="@drawable/ic_action_lock"/>
+            android:src="@drawable/ic_https_white_18dp"/>
         <View
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             android:layout_height="match_parent"

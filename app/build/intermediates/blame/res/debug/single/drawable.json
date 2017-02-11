@@ -8,6 +8,10 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable/google_button.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_log_lock_white.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_log_lock_white.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_edit_text_material.xml"
     },
@@ -216,6 +220,10 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable/md_selector_dark.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_logemail.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_logemail.png"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_ic_menu_overflow_material.xml"
     },
@@ -242,6 +250,10 @@
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/md_btn_selector.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable/md_btn_selector.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_log_white_.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_log_white_.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/h_settings.png",
@@ -298,6 +310,10 @@
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_round.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/messenger_button_blue_bg_round.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_log_email_white.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/ic_log_email_white.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/send_fab.xml",
