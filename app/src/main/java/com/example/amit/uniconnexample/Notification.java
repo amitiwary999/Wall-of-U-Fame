@@ -3,6 +3,7 @@ package com.example.amit.uniconnexample;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -10,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -142,7 +144,8 @@ public class Notification extends AppCompatActivity {
             }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                /*int tabIconColor = ContextCompat.getColor(getBaseContext(), R.color.White);
+                tab.getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);*/
             }
             @Override
             public void onTabReselected(TabLayout.Tab tab) {

@@ -98,6 +98,7 @@ public class Tabs extends AppCompatActivity {
         viewPager=(ViewPager)findViewById(R.id.viewPager);
         mDatabasenotiflike=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like");
         BottomBar bottomBar=(BottomBar)findViewById(R.id.bottomtab);
+       // bottomBar.setDefaultTab(R.id.tab_setting);
          bottomBarTab=bottomBar.getTabWithId(R.id.tab_notification);
          bottomBarTabmsg=bottomBar.getTabWithId(R.id.tab_message);
      //   startService(new Intent(this,Notificationservice.class));
