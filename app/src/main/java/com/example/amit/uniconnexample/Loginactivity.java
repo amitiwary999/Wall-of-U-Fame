@@ -55,7 +55,6 @@ public class Loginactivity extends AppCompatActivity{
     EditText email;
     @BindView(R.id.password)
     EditText password;
-    @BindView(R.id.forpass)
     TextView forgotpassword;
     private FirebaseAuth auth;
     @BindView(R.id.log_in)
@@ -77,7 +76,13 @@ public class Loginactivity extends AppCompatActivity{
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         setTitle("Login");
+        email=(EditText)findViewById(R.id.email);
+        password=(EditText)findViewById(R.id.password);
+        login=(Button)findViewById(R.id.log_in);
+        sign_up=(Button)findViewById(R.id.signup);
+        forgotpassword=(TextView)findViewById(R.id.forpass);
         auth = FirebaseAuth.getInstance();
+
         mProgress = new ProgressDialog(this);
         editor1=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE).edit();
         if(((App)this.getApplication()).getLogincheck()){

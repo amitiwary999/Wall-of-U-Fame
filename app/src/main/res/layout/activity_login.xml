@@ -17,7 +17,7 @@
 
 
     <ImageView
-         android:src="@drawable/uniconn"
+         android:src="@drawable/unicon"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="10dp"
@@ -25,22 +25,26 @@
         android:background="@color/md_blue_grey_700"
         android:adjustViewBounds="true"
         android:layout_gravity="center_horizontal" />
-    <ProgressBar
-        android:id="@+id/login_progress"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="18dp"
-        android:indeterminate="true"
-        android:visibility="gone"/>
+        android:layout_marginLeft="210dp"
+        android:id="@+id/forpass"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/White"
+        android:text="Forgot Password"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/md_blue_grey_600"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:orientation="horizontal">
        <ImageView
-           android:layout_width="35dp"
+           android:layout_width="25dp"
            android:layout_height="match_parent"
            android:layout_gravity="center"
            android:layout_marginLeft="3dp"
@@ -74,7 +78,7 @@
         android:layout_marginRight="20dp"
         android:orientation="horizontal">
         <ImageView
-            android:layout_width="35dp"
+            android:layout_width="25dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="3dp"
@@ -120,15 +124,6 @@
         android:padding="12dp"
         android:text="@string/activity_sign_up"
         android:textColor="#fff"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="120dp"
-        android:id="@+id/forpass"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:textColor="@color/White"
-        android:text="Forgot Password"/>
+
 </LinearLayout>
 </ScrollView>

@@ -15,9 +15,9 @@ import java.lang.Override;
 public class Signupactivity_ViewBinding<T extends Signupactivity> implements Unbinder {
   protected T target;
 
-  private View view2131755198;
+  private View view2131755197;
 
-  private View view2131755200;
+  private View view2131755199;
 
   public Signupactivity_ViewBinding(final T target, Finder finder, Object source) {
     this.target = target;
@@ -30,7 +30,7 @@ public class Signupactivity_ViewBinding<T extends Signupactivity> implements Unb
     target.confrmpassword = finder.findRequiredViewAsType(source, R.id.confirmpassword, "field 'confrmpassword'", TextInputLayout.class);
     view = finder.findRequiredView(source, R.id.iview, "field 'iv' and method 'pickPhoto'");
     target.iv = finder.castView(view, R.id.iview, "field 'iv'", ImageView.class);
-    view2131755198 = view;
+    view2131755197 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -40,7 +40,7 @@ public class Signupactivity_ViewBinding<T extends Signupactivity> implements Unb
     target.clg = finder.findRequiredViewAsType(source, R.id.clg, "field 'clg'", TextInputLayout.class);
     view = finder.findRequiredView(source, R.id.sign_up, "field 'signup' and method 'sup'");
     target.signup = finder.castView(view, R.id.sign_up, "field 'signup'", Button.class);
-    view2131755200 = view;
+    view2131755199 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,10 +63,10 @@ public class Signupactivity_ViewBinding<T extends Signupactivity> implements Unb
     target.clg = null;
     target.signup = null;
 
-    view2131755198.setOnClickListener(null);
-    view2131755198 = null;
-    view2131755200.setOnClickListener(null);
-    view2131755200 = null;
+    view2131755197.setOnClickListener(null);
+    view2131755197 = null;
+    view2131755199.setOnClickListener(null);
+    view2131755199 = null;
 
     this.target = null;
   }

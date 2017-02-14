@@ -88,6 +88,10 @@
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/message.png"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/unicon.png",
+        "source": "/home/amit/Buildapk/app/src/main/res/drawable/unicon.png"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_cancel_background.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
     },
@@ -552,12 +556,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable/abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/thumb_on.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/res/drawable/thumb_on.png"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/unlike.png",
         "source": "/home/amit/Buildapk/app/src/main/res/drawable/unlike.png"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/thumb_on.png",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/res/drawable/thumb_on.png"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable/ic_action_lock.png",
