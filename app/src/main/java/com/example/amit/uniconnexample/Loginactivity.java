@@ -84,6 +84,18 @@ public class Loginactivity extends AppCompatActivity{
         auth = FirebaseAuth.getInstance();
 
         mProgress = new ProgressDialog(this);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login();
+            }
+        });
+        sign_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signup();
+            }
+        });
         editor1=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE).edit();
         if(((App)this.getApplication()).getLogincheck()){
             Intent i = new Intent(Loginactivity.this, Tabs.class);
@@ -148,7 +160,7 @@ public class Loginactivity extends AppCompatActivity{
         }
     }
 
-    @OnClick(R.id.signup)
+   // @OnClick(R.id.signup)
     void signup(){
         if(auth.getCurrentUser()==null) {
             Intent i = new Intent(Loginactivity.this, Signupactivity.class);
@@ -157,7 +169,7 @@ public class Loginactivity extends AppCompatActivity{
         }
     }
 
-    @OnClick(R.id.log_in)
+   // @OnClick(R.id.log_in)
     void login(){
         InputMethodManager inputManager = (InputMethodManager)
                 getSystemService(Context.INPUT_METHOD_SERVICE);

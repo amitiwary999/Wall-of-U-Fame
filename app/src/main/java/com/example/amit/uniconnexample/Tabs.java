@@ -112,8 +112,9 @@ public class Tabs extends AppCompatActivity {
                     startActivity(new Intent(Tabs.this,Profile.class));
                 }
                else if(tabId==R.id.tab_notification){
-                          newnotifchat.removeEventListener(valueEventListener);
-                          mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                          if(isNetworkConnected()) {
+                              newnotifchat.removeEventListener(valueEventListener);
+                              mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
                        /*   mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
                               @Override
                               public void onDataChange(DataSnapshot dataSnapshot) {
@@ -126,15 +127,18 @@ public class Tabs extends AppCompatActivity {
                               }
                           });
                           mDatabasenotiflike.child(user.getUid()).setValue(0);*/
-                          flag=0;
+                              flag = 0;
+                          }
                       //    mDatanotiflike.setValue(new Likemodel(0));
                     startActivity(new Intent(Tabs.this,Notification.class));
                 }
                else if(tabId==R.id.tab_message){
-                          newnotifchat.removeEventListener(valueEventListener);
-                          mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
-                          bottomBarTabmsg.removeBadge();
-                          msgcount=0;
+                          if(isNetworkConnected()) {
+                              newnotifchat.removeEventListener(valueEventListener);
+                              mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                              bottomBarTabmsg.removeBadge();
+                              msgcount = 0;
+                          }
                     startActivity(new Intent(Tabs.this,Message.class));
                 }
                else if(tabId==R.id.tab_setting){

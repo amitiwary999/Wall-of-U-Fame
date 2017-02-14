@@ -12,6 +12,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -41,6 +42,7 @@ public class Notification extends AppCompatActivity {
     FirebaseAuth auth;
     String key,post_key;
     String tag;
+    SwipeRefreshLayout refresh;
     private DatabaseReference mDatabasenotifdata,mDatanotiflike;
     RecyclerView notificationrecycle;
 
@@ -52,6 +54,7 @@ public class Notification extends AppCompatActivity {
         notificationrecycle=(RecyclerView) findViewById(R.id.mnotification_list);
         tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
+        refresh=(SwipeRefreshLayout)findViewById(R.id.refresh);
        // FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         auth=FirebaseAuth.getInstance();
         mDatanotiflike= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
@@ -63,7 +66,12 @@ public class Notification extends AppCompatActivity {
         notificationrecycle.setLayoutManager(lm);
         mDatanotiflike.keepSynced(true);
         mDatabasenotifdata.keepSynced(true);
-
+         refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+             @Override
+             public void onRefresh() {
+                 refresh();
+             }
+         });
         setupTabIconsBottom();
 
         // setupTabIcons();
@@ -213,6 +221,59 @@ public class Notification extends AppCompatActivity {
                 // replaceFragment(new Settings());
                 break;
         }
+    }
+    public void refresh(){
+
+        FirebaseRecyclerAdapter<Notificationmodel, NotificationViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Notificationmodel, NotificationViewHolder>(
+                Notificationmodel.class,
+                R.layout.activity_notificationitem,
+                NotificationViewHolder.class,
+                mDatabasenotifdata
+        ) {
+            @Override
+            protected void populateViewHolder(NotificationViewHolder viewHolder, final Notificationmodel model, int position) {
+                viewHolder.view.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //  mDatanotiflike.child("count").setValue(0);
+                    }
+                });
+                viewHolder.iview.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String key = model.getKey();
+                        if (!key.equals(auth.getCurrentUser().getUid())) {
+                            //   Toast.makeText(getActivity(), key, Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(Notification.this, Chatstart.class);
+                            i.putExtra("chat", key);
+                            startActivity(i);
+                            finish();
+                        } else {
+                            Toast.makeText(Notification.this, "You can't chat with yourself", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+                viewHolder.tname.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+                        post_key = model.getPost_key();
+                        //  fragmentManager.beginTransaction().add(R.id.content_frame,new Notifclickfrag(),tag).commit();
+                        //   Notifclickfrag notifclickfrag=new Notifclickfrag();
+                        Intent i = new Intent(Notification.this, Notifclick.class);
+                        i.putExtra("postkey", post_key);
+                        startActivity(i);
+                    }
+                });
+                viewHolder.bindData(model);
+
+            }
+        };
+        notificationrecycle.setAdapter(firebaseRecyclerAdapter);
+        refreshcomplete();
+    }
+    public void refreshcomplete(){
+        refresh.setRefreshing(false);
     }
 
     private boolean isNetworkConnected() {
