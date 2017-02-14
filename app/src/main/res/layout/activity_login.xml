@@ -18,22 +18,23 @@
 
     <ImageView
          android:src="@drawable/unicon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="24dp"
         android:background="@color/md_blue_grey_700"
         android:adjustViewBounds="true"
+        android:scaleType="fitXY"
         android:layout_gravity="center_horizontal" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="210dp"
+        android:layout_marginLeft="180dp"
         android:id="@+id/forpass"
         android:textStyle="bold"
         android:textSize="18dp"
         android:textColor="@color/White"
-        android:text="Forgot Password"/>
+        android:text="Forgot Password?"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,7 +49,7 @@
            android:layout_height="match_parent"
            android:layout_gravity="center"
            android:layout_marginLeft="3dp"
-           android:src="@drawable/ic_action_email"/>
+           android:src="@drawable/mail"/>
         <View
             android:layout_width="1dp"
             android:layout_marginTop="10dp"
@@ -82,7 +83,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="3dp"
-            android:src="@drawable/ic_https_white_18dp"/>
+            android:src="@drawable/ic_lock_"/>
         <View
             android:layout_width="1dp"
             android:layout_marginTop="10dp"

@@ -51,15 +51,15 @@ import static com.facebook.internal.CallbackManagerImpl.RequestCodeOffset.Login;
 
 public class Loginactivity extends AppCompatActivity{
 
-    @BindView(R.id.email)
+  //  @BindView(R.id.email)
     EditText email;
-    @BindView(R.id.password)
+    //@BindView(R.id.password)
     EditText password;
     TextView forgotpassword;
     private FirebaseAuth auth;
-    @BindView(R.id.log_in)
+    //@BindView(R.id.log_in)
     Button login;
-    @BindView(R.id.signup)
+    //@BindView(R.id.signup)
     Button sign_up;
     ProgressDialog mProgress;
     SharedPreferences.Editor editor1;
@@ -74,7 +74,7 @@ public class Loginactivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
+       // ButterKnife.bind(this);
         setTitle("Login");
         email=(EditText)findViewById(R.id.email);
         password=(EditText)findViewById(R.id.password);
