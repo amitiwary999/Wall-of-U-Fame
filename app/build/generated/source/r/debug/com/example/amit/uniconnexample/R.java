@@ -3790,13 +3790,13 @@ containing a value of this type.
         public static final int account=0x7f020053;
         public static final int add=0x7f020054;
         public static final int avd_hide_password=0x7f020055;
-        public static final int avd_hide_password_1=0x7f020121;
-        public static final int avd_hide_password_2=0x7f020122;
-        public static final int avd_hide_password_3=0x7f020123;
+        public static final int avd_hide_password_1=0x7f020122;
+        public static final int avd_hide_password_2=0x7f020123;
+        public static final int avd_hide_password_3=0x7f020124;
         public static final int avd_show_password=0x7f020056;
-        public static final int avd_show_password_1=0x7f020124;
-        public static final int avd_show_password_2=0x7f020125;
-        public static final int avd_show_password_3=0x7f020126;
+        public static final int avd_show_password_1=0x7f020125;
+        public static final int avd_show_password_2=0x7f020126;
+        public static final int avd_show_password_3=0x7f020127;
         public static final int bb_bottom_bar_top_shadow=0x7f020057;
         public static final int bookmark=0x7f020058;
         public static final int chat=0x7f020059;
@@ -3975,8 +3975,8 @@ containing a value of this type.
         public static final int notification_bg_normal=0x7f020106;
         public static final int notification_bg_normal_pressed=0x7f020107;
         public static final int notification_icon_background=0x7f020108;
-        public static final int notification_template_icon_bg=0x7f02011f;
-        public static final int notification_template_icon_low_bg=0x7f020120;
+        public static final int notification_template_icon_bg=0x7f020120;
+        public static final int notification_template_icon_low_bg=0x7f020121;
         public static final int notification_tile_bg=0x7f020109;
         public static final int notifications=0x7f02010a;
         public static final int notify_panel_notification_icon_bg=0x7f02010b;
@@ -3997,8 +3997,9 @@ containing a value of this type.
         public static final int twitter_button=0x7f02011a;
         public static final int unicon=0x7f02011b;
         public static final int uniconn=0x7f02011c;
-        public static final int unlike=0x7f02011d;
-        public static final int user=0x7f02011e;
+        public static final int unicoon=0x7f02011d;
+        public static final int unlike=0x7f02011e;
+        public static final int user=0x7f02011f;
     }
     public static final class id {
         public static final int action0=0x7f100111;

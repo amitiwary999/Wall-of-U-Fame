@@ -17,11 +17,11 @@
 
 
     <ImageView
-         android:src="@drawable/unicon"
-        android:layout_width="160dp"
+         android:src="@drawable/unicoon"
+        android:layout_width="150dp"
         android:layout_height="130dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/md_blue_grey_700"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
@@ -29,9 +29,25 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="180dp"
-        android:id="@+id/forpass"
+        android:layout_marginLeft="140dp"
         android:textStyle="bold"
+        android:textSize="22dp"
+        android:textColor="@color/White"
+        android:text="UniConn"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18dp"
+        android:textColor="@color/White"
+        android:text="Where it all begins"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/forpass"
         android:textSize="18dp"
         android:textColor="@color/White"
         android:text="Forgot Password?"/>
