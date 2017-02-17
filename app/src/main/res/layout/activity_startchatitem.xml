@@ -11,6 +11,7 @@
         android:layout_marginRight="5dp"
         android:background="@drawable/rounded_corner"
         android:minWidth="@dimen/messagelayout_minwidth"
+
         android:maxWidth="@dimen/message_layout_max_width"
         android:id="@+id/ll">
 <TextView
@@ -23,6 +24,7 @@
     android:maxWidth="@dimen/message_layout_max_width"
     android:minWidth="@dimen/messagelayout_minwidth"
     android:autoLink="all"
+
     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
     android:textColor="@color/Black"
     android:textColorLink="#3333FF"
