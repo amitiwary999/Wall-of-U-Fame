@@ -17,6 +17,7 @@
     <color name="Black">#000000</color>
     <color name="Grenn">#ffff00</color>
     <color name="md_grey_300">#E0E0E0</color>
+    <color name="md_teal_100">#B2DFDB</color>
     <color name="White">#ffffff</color>
     <color name="user_message_bg">#DCF8C6</color>
     <color name="susi_message_bg">#FFFFFF</color>

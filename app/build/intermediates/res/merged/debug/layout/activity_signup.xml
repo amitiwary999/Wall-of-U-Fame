@@ -40,6 +40,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginLeft="3dp"
+            android:id="@+id/person"
             android:src="@drawable/ic_action_account_circle"/>
         <View
             android:layout_width="2dp"
@@ -81,6 +82,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
+                android:id="@+id/msg"
                 android:src="@drawable/ic_action_local_post_office"/>
             <View
                 android:layout_width="2dp"
@@ -121,6 +123,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
+                android:id="@+id/lock1"
                 android:src="@drawable/lock"/>
             <View
                 android:layout_width="2dp"
@@ -163,6 +166,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
+                android:id="@+id/lock2"
                 android:src="@drawable/lock"/>
             <View
                 android:layout_width="2dp"
@@ -207,6 +211,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
+                android:id="@+id/college"
                 android:src="@drawable/ic_action_account_balance"/>
             <View
                 android:layout_width="2dp"
@@ -246,6 +251,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
+                android:id="@+id/phn"
                 android:src="@drawable/phn"/>
             <View
                 android:layout_width="2dp"

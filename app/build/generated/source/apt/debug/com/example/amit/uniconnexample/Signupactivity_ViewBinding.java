@@ -15,9 +15,9 @@ import java.lang.Override;
 public class Signupactivity_ViewBinding<T extends Signupactivity> implements Unbinder {
   protected T target;
 
-  private View view2131755197;
+  private View view2131755203;
 
-  private View view2131755199;
+  private View view2131755211;
 
   public Signupactivity_ViewBinding(final T target, Finder finder, Object source) {
     this.target = target;
@@ -30,7 +30,7 @@ public class Signupactivity_ViewBinding<T extends Signupactivity> implements Unb
     target.confrmpassword = finder.findRequiredViewAsType(source, R.id.confirmpassword, "field 'confrmpassword'", TextInputLayout.class);
     view = finder.findRequiredView(source, R.id.iview, "field 'iv' and method 'pickPhoto'");
     target.iv = finder.castView(view, R.id.iview, "field 'iv'", ImageView.class);
-    view2131755197 = view;
+    view2131755203 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -40,13 +40,19 @@ public class Signupactivity_ViewBinding<T extends Signupactivity> implements Unb
     target.clg = finder.findRequiredViewAsType(source, R.id.clg, "field 'clg'", TextInputLayout.class);
     view = finder.findRequiredView(source, R.id.sign_up, "field 'signup' and method 'sup'");
     target.signup = finder.castView(view, R.id.sign_up, "field 'signup'", Button.class);
-    view2131755199 = view;
+    view2131755211 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.sup();
       }
     });
+    target.person = finder.findRequiredViewAsType(source, R.id.person, "field 'person'", ImageView.class);
+    target.msg = finder.findRequiredViewAsType(source, R.id.msg, "field 'msg'", ImageView.class);
+    target.lock1 = finder.findRequiredViewAsType(source, R.id.lock1, "field 'lock1'", ImageView.class);
+    target.lock2 = finder.findRequiredViewAsType(source, R.id.lock2, "field 'lock2'", ImageView.class);
+    target.college = finder.findRequiredViewAsType(source, R.id.college, "field 'college'", ImageView.class);
+    target.phonen = finder.findRequiredViewAsType(source, R.id.phn, "field 'phonen'", ImageView.class);
   }
 
   @Override
@@ -62,11 +68,17 @@ public class Signupactivity_ViewBinding<T extends Signupactivity> implements Unb
     target.iv = null;
     target.clg = null;
     target.signup = null;
+    target.person = null;
+    target.msg = null;
+    target.lock1 = null;
+    target.lock2 = null;
+    target.college = null;
+    target.phonen = null;
 
-    view2131755197.setOnClickListener(null);
-    view2131755197 = null;
-    view2131755199.setOnClickListener(null);
-    view2131755199 = null;
+    view2131755203.setOnClickListener(null);
+    view2131755203 = null;
+    view2131755211.setOnClickListener(null);
+    view2131755211 = null;
 
     this.target = null;
   }

@@ -21,11 +21,13 @@ import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +43,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Calendar;
 import java.util.List;
 
 import timber.log.Timber;
@@ -178,8 +181,10 @@ public class Chatstart extends AppCompatActivity {
                 if(msge.length()!=0) {
                     DatabaseReference newMessage = mDatabase.child(auth.getCurrentUser().getUid()).child(key).push();
                     newMessage.child("msg1").setValue(msge);
+                    newMessage.child("time1").setValue(getCurrentTime());
                     DatabaseReference newMesage = mDatabase.child(key).child(auth.getCurrentUser().getUid()).push();
                     newMesage.child("msg2").setValue(msge);
+                    newMesage.child("time2").setValue(getCurrentTime());
                     message.setText("");
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -408,7 +413,7 @@ public class Chatstart extends AppCompatActivity {
         newnotifchat.setValue(null);
         FirebaseRecyclerAdapter<Chatstartmodel,Chatstartviewholder> firebaserecycleradapter=new FirebaseRecyclerAdapter<Chatstartmodel, Chatstartviewholder>(
                 Chatstartmodel.class,
-                R.layout.activity_startchatitem,
+                R.layout.activity_chating_item,
                 Chatstartviewholder.class,
                 newReply
         ) {
@@ -418,8 +423,10 @@ public class Chatstart extends AppCompatActivity {
                // if(model.getMsg1().length()!=0)
                 newnotifchat.setValue(null);
                 viewHolder.setMsg1(model.getMsg1());
+                viewHolder.setTime1(model.getTime1());
              //   if(model.getMsg2().length()!=0)
                 viewHolder.setMsg2(model.getMsg2());
+                viewHolder.setTime2(model.getTime2());
               /*  newReply.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -470,21 +477,44 @@ public class Chatstart extends AppCompatActivity {
 
         public void setMsg1(String msg){
             TextView sMessage=(TextView)mView.findViewById(R.id.rMessage);
+            LinearLayout receiver=(LinearLayout)mView.findViewById(R.id.receiver);
+            receiver.setVisibility(View.GONE);
             sMessage.setVisibility(View.GONE);
             if(msg!=null)
+                receiver.setVisibility(View.VISIBLE);
                 sMessage.setVisibility(View.VISIBLE);
             newnotifchat.setValue(null);
             sMessage.setText(msg);
         }
+        public void setTime1(String time){
+            TextView time1=(TextView)mView.findViewById(R.id.rTime);
+            time1.setVisibility(View.GONE);
+            if(time!=null){
+                time1.setVisibility(View.VISIBLE);
+                time1.setText(time);
+            }
+        }
 
         public void setMsg2(String msg){
-            TextView rMessage=(TextView)mView.findViewById(R.id.sMessage);
-            rMessage.setVisibility(View.GONE);
+            TextView sMessage=(TextView)mView.findViewById(R.id.sMessage);
+            LinearLayout sender=(LinearLayout)mView.findViewById(R.id.sender);
+            sender.setVisibility(View.GONE);
+            sMessage.setVisibility(View.GONE);
             if(msg!=null)
-                rMessage.setVisibility(View.VISIBLE);
+                sender.setVisibility(View.VISIBLE);
+                sMessage.setVisibility(View.VISIBLE);
             newnotifchat.setValue(null);
-            rMessage.setText(msg);
+            sMessage.setText(msg);
         }
+        public void setTime2(String time){
+            TextView time1=(TextView)mView.findViewById(R.id.sTime);
+            time1.setVisibility(View.GONE);
+            if(time!=null){
+                time1.setVisibility(View.VISIBLE);
+                time1.setText(time);
+            }
+        }
+
      /*   public void bindData(final Chatstartmodel model){
           final  TextView sMessage=(TextView)mView.findViewById(R.id.sMessage);
            final TextView rMessage=(TextView)mView.findViewById(R.id.rMessage);
@@ -506,6 +536,10 @@ public class Chatstart extends AppCompatActivity {
             });
 
         }*/
+    }
+    public static String getCurrentTime() {
+        String delegate = "hh:mm aaa";
+        return (String) DateFormat.format(delegate, Calendar.getInstance().getTime());
     }
     private class computeThread extends Thread {
         public void run() {

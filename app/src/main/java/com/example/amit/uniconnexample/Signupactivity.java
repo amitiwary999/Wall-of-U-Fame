@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -70,6 +71,18 @@ public class Signupactivity extends AppCompatActivity {
     TextInputLayout clg;
     @BindView(R.id.sign_up)
     Button signup;
+    @BindView(R.id.person)
+     ImageView person;
+    @BindView(R.id.msg)
+    ImageView msg;
+    @BindView(R.id.lock1)
+    ImageView lock1;
+    @BindView(R.id.lock2)
+    ImageView lock2;
+    @BindView(R.id.college)
+    ImageView college;
+    @BindView(R.id.phn)
+    ImageView phonen;
     FirebaseUser user;
     private ProgressDialog mProgress;
     private FirebaseAuth mAuth;
@@ -94,6 +107,13 @@ public class Signupactivity extends AppCompatActivity {
         mal=email.getEditText().getText().toString().trim();
         clgname=clg.getEditText().getText().toString().trim();
         mAuth = FirebaseAuth.getInstance();
+        int tabIconColor = ContextCompat.getColor(getBaseContext(), R.color.md_orange_600);
+        person.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+        msg.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+        lock1.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+        lock2.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+        college.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+        phonen.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
      //    user=FirebaseAuth.getInstance().getCurrentUser();
        mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override

@@ -444,8 +444,10 @@ public class Tabs extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-      //  Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
-        startService(new Intent(Tabs.this,Notificationservice.class));
+    //    Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
+        if(isNetworkConnected()) {
+            startService(new Intent(Tabs.this, Notificationservice.class));
+        }
     }
 
     public void notification(int m,DatabaseReference notify,DataSnapshot snapshot,Boolean switchflag,Boolean switchvibrate){
