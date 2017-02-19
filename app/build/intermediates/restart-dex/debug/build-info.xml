@@ -5,9 +5,9 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="7285841121789"
+    timestamp="10815457755161"
     token="2814086315392108154"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
@@ -22,6 +22,10 @@
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="/home/amit/Buildapk/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
+
     <build
         timestamp="6777968398249"
         verifier="FULL_BUILD_REQUESTED" >
@@ -30,14 +34,25 @@
             type="MAIN" />
     </build>
     <build
-        timestamp="7250787396824"
+        timestamp="7902700667241"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="9868342421413"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="10815457755161"
+        verifier="COMPATIBLE" >
         <artifact
             location="/home/amit/Buildapk/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
             type="RESOURCES" />
     </build>
-    <build
-        timestamp="7285841121789"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

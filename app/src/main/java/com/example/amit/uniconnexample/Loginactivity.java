@@ -218,7 +218,7 @@ public class Loginactivity extends AppCompatActivity{
                                             editor1.putBoolean("isLoggedin",true);
                                             editor1.commit();
                                             mProgress.dismiss();
-                                            Intent i = new Intent(Loginactivity.this, Tabs.class);
+                                            Intent i = new Intent(Loginactivity.this, NewTabActivity.class);
 
                                             startActivity(i);
                                             finish();

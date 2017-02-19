@@ -110,48 +110,7 @@ public class NewTabActivity extends AppCompatActivity {
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder d = new AlertDialog.Builder(getBaseContext());
-                d.setMessage("Are you sure ?").
-                        setCancelable(false).
-                        setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                if(isNetworkConnected()) {
-                                    stopService(new Intent(NewTabActivity.this, Notificationservice.class));
-                                    newnotifchat.removeEventListener(valueEventListener);
-                                    mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
-                                    handler1.postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            FirebaseAuth.getInstance().signOut();
-                                            Toast.makeText(NewTabActivity.this, "Logging out..", Toast.LENGTH_SHORT).show();
-                                            // myPrefs.edit().clear().commit();
-                                            editor1.putBoolean("isLoggedin", false);
-                                            editor1.commit();
-                                            startActivity(new Intent(NewTabActivity.this, Loginactivity.class));
-                                            finish();
-                                        }
-                                    }, 2000);
-
-                                }else{
-                                    Toast.makeText(NewTabActivity.this,"No internet connection",Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        }).
-                        setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-
-                AlertDialog alert = d.create();
-                alert.setTitle("Logout");
-                alert.show();
-                Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
-                nbutton.setTextColor(Color.BLACK);
-                Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
-                pbutton.setTextColor(Color.BLACK);
+               signout(v);
             }
         });
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
@@ -645,6 +604,50 @@ public class NewTabActivity extends AppCompatActivity {
         }catch(IllegalStateException e) {
             fragmentTransaction.commit();
         }
+    }
+    public void signout(View v){
+        AlertDialog.Builder d = new AlertDialog.Builder(NewTabActivity.this);
+        d.setMessage("Are you sure ?").
+                setCancelable(false).
+                setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if(isNetworkConnected()) {
+                            stopService(new Intent(NewTabActivity.this, Notificationservice.class));
+                            newnotifchat.removeEventListener(valueEventListener);
+                            mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                            handler1.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    FirebaseAuth.getInstance().signOut();
+                                    Toast.makeText(NewTabActivity.this, "Logging out..", Toast.LENGTH_SHORT).show();
+                                    // myPrefs.edit().clear().commit();
+                                    editor1.putBoolean("isLoggedin", false);
+                                    editor1.commit();
+                                    startActivity(new Intent(NewTabActivity.this, Loginactivity.class));
+                                    finish();
+                                }
+                            }, 2000);
+
+                        }else{
+                            Toast.makeText(NewTabActivity.this,"No internet connection",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }).
+                setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alert = d.create();
+        alert.setTitle("Logout");
+        alert.show();
+        Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
+        nbutton.setTextColor(Color.BLACK);
+        Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
+        pbutton.setTextColor(Color.BLACK);
     }
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(

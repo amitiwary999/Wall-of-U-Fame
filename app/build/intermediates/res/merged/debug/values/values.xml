@@ -2385,7 +2385,7 @@
         <item name="tabSelectedTextColor">@color/md_orange_600</item>
     </style>
     <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">13sp</item>
         <item name="android:textColor">#fff</item>
         <item name="textAllCaps">false</item>
     </style>
