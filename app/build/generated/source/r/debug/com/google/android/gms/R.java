@@ -18,26 +18,26 @@ public final class R {
 		public static final int scopeUris = 0x7f010153;
 	}
 	public static final class color {
-		public static final int common_google_signin_btn_text_dark = 0x7f0e00b4;
-		public static final int common_google_signin_btn_text_dark_default = 0x7f0e003a;
-		public static final int common_google_signin_btn_text_dark_disabled = 0x7f0e003b;
-		public static final int common_google_signin_btn_text_dark_focused = 0x7f0e003c;
-		public static final int common_google_signin_btn_text_dark_pressed = 0x7f0e003d;
-		public static final int common_google_signin_btn_text_light = 0x7f0e00b5;
-		public static final int common_google_signin_btn_text_light_default = 0x7f0e003e;
-		public static final int common_google_signin_btn_text_light_disabled = 0x7f0e003f;
-		public static final int common_google_signin_btn_text_light_focused = 0x7f0e0040;
-		public static final int common_google_signin_btn_text_light_pressed = 0x7f0e0041;
-		public static final int common_plus_signin_btn_text_dark = 0x7f0e00b6;
-		public static final int common_plus_signin_btn_text_dark_default = 0x7f0e0042;
-		public static final int common_plus_signin_btn_text_dark_disabled = 0x7f0e0043;
-		public static final int common_plus_signin_btn_text_dark_focused = 0x7f0e0044;
-		public static final int common_plus_signin_btn_text_dark_pressed = 0x7f0e0045;
-		public static final int common_plus_signin_btn_text_light = 0x7f0e00b7;
-		public static final int common_plus_signin_btn_text_light_default = 0x7f0e0046;
-		public static final int common_plus_signin_btn_text_light_disabled = 0x7f0e0047;
-		public static final int common_plus_signin_btn_text_light_focused = 0x7f0e0048;
-		public static final int common_plus_signin_btn_text_light_pressed = 0x7f0e0049;
+		public static final int common_google_signin_btn_text_dark = 0x7f0e00b6;
+		public static final int common_google_signin_btn_text_dark_default = 0x7f0e003c;
+		public static final int common_google_signin_btn_text_dark_disabled = 0x7f0e003d;
+		public static final int common_google_signin_btn_text_dark_focused = 0x7f0e003e;
+		public static final int common_google_signin_btn_text_dark_pressed = 0x7f0e003f;
+		public static final int common_google_signin_btn_text_light = 0x7f0e00b7;
+		public static final int common_google_signin_btn_text_light_default = 0x7f0e0040;
+		public static final int common_google_signin_btn_text_light_disabled = 0x7f0e0041;
+		public static final int common_google_signin_btn_text_light_focused = 0x7f0e0042;
+		public static final int common_google_signin_btn_text_light_pressed = 0x7f0e0043;
+		public static final int common_plus_signin_btn_text_dark = 0x7f0e00b8;
+		public static final int common_plus_signin_btn_text_dark_default = 0x7f0e0044;
+		public static final int common_plus_signin_btn_text_dark_disabled = 0x7f0e0045;
+		public static final int common_plus_signin_btn_text_dark_focused = 0x7f0e0046;
+		public static final int common_plus_signin_btn_text_dark_pressed = 0x7f0e0047;
+		public static final int common_plus_signin_btn_text_light = 0x7f0e00b9;
+		public static final int common_plus_signin_btn_text_light_default = 0x7f0e0048;
+		public static final int common_plus_signin_btn_text_light_disabled = 0x7f0e0049;
+		public static final int common_plus_signin_btn_text_light_focused = 0x7f0e004a;
+		public static final int common_plus_signin_btn_text_light_pressed = 0x7f0e004b;
 	}
 	public static final class dimen {
 	}
@@ -98,11 +98,11 @@ public final class R {
 		public static final int light = 0x7f10004b;
 		public static final int none = 0x7f100018;
 		public static final int normal = 0x7f100014;
-		public static final int progressBar = 0x7f100107;
+		public static final int progressBar = 0x7f100108;
 		public static final int radio = 0x7f100078;
 		public static final int standard = 0x7f100048;
 		public static final int text = 0x7f1000ab;
-		public static final int text2 = 0x7f10012b;
+		public static final int text2 = 0x7f10012c;
 		public static final int toolbar = 0x7f10008e;
 		public static final int wide = 0x7f100049;
 		public static final int wrap_content = 0x7f100028;

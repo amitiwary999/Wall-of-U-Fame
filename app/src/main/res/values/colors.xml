@@ -20,6 +20,8 @@
     <color name="md_teal_100">#B2DFDB</color>
     <color name="White">#ffffff</color>
     <color name="user_message_bg">#DCF8C6</color>
+    <color name="colorText">#0e7166</color>
+    <color name="colorTextHint">#66ffffff</color>
     <color name="susi_message_bg">#FFFFFF</color>
     <color name="user_message_pressed_bg">#9DE1FE</color>
     <color name="susi_message_pressed_bg">#9DE1FE</color>

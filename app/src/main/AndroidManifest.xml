@@ -33,7 +33,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize"></activity>
        <activity android:name=".Blog"
            android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".NewTabActivity"
+        <activity android:name=".Tabs"
             android:theme="@style/AppTheme"></activity>
         <activity android:name=".Profile"
             android:theme="@style/AppTheme.NoactionBar"></activity>
@@ -48,6 +48,8 @@
         <activity android:name=".Settings"
             android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Notifclick"
+            android:theme="@style/AppTheme.NoactionBar"></activity>
+        <activity android:name=".NewTabActivity"
             android:theme="@style/AppTheme.NoactionBar"></activity>
     </application>
 

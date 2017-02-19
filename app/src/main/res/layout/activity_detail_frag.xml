@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:focusable="true">
-
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorAccent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <include layout="@layout/design_toolbar"></include>
+        </android.support.v7.widget.Toolbar>
     <android.support.design.widget.TabLayout
         android:background="@color/colorPrimary"
         android:id="@+id/tabLayout"
         style="@style/MyCustomTabLayout"
         android:layout_width= "match_parent"
         android:layout_height="?android:attr/actionBarSize"
+        android:layout_below="@id/toolbar"
         android:layout_alignParentLeft="true">
     </android.support.design.widget.TabLayout>
     <LinearLayout

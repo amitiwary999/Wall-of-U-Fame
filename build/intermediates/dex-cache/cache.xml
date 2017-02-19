@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="f7b9ec27f0fcccad5c451af2c30fb4489db0e648">
+        sha1="07e0dae90ebe4e01d144235225c8bc73e8835ed2">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_83a4dc6c9c7f3d880ffa9a5902f87e83f1bed7ed/classes.dex" />
     </item>
     <item
@@ -151,7 +151,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="f0abc71fdea5de4b9f0174ec3566597e7d237199">
+        sha1="2713dc9109d669a5cbdfa6278ed1afef455fd9e1">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_15c388f90427f9a331ecb3e0865ab5d2b228a4db/classes.dex" />
     </item>
     <item
@@ -309,15 +309,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/amit/.gradle/caches/modules-2/files-2.1/com.google.auto/auto-common/0.6/cf7212b0f8bfef12657b942df8f4f2cf032d3f41/auto-common-0.6.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="cf7212b0f8bfef12657b942df8f4f2cf032d3f41">
-        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/auto-common-0.6_8912037c98373ae34f3e28cbc540396aa09686b2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/amit/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.3.1/be29b24233711c419ce935aa0a1b12ebc49d1c9a/firebase-client-android-2.3.1.jar"
         jumboMode="true"
         optimize="true"
@@ -333,6 +324,15 @@
         revision="25.0.0"
         sha1="b9d48baf96c7e187991a9befa833bebd181960a9">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-9.4.0_44a13d20cb0f66aa1a1b07964100f631478341a0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/.gradle/caches/modules-2/files-2.1/com.google.auto/auto-common/0.6/cf7212b0f8bfef12657b942df8f4f2cf032d3f41/auto-common-0.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cf7212b0f8bfef12657b942df8f4f2cf032d3f41">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/auto-common-0.6_8912037c98373ae34f3e28cbc540396aa09686b2/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -426,21 +426,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.tt/whorlviewlibrary/1.0.3/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d237f051940b80f6176360a40ce45ffd0830779e">
-        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.tt-whorlviewlibrary-1.0.3_04f1fe0ed59b1c8f51ef2688c3d529298936e4fa/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="ca5e58104f56f918f0fb3a5b1b371ab599ae56b2">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.2.1_b7228343e6e5a6f4ced529d64021d59e38b33e78/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.tt/whorlviewlibrary/1.0.3/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d237f051940b80f6176360a40ce45ffd0830779e">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.tt-whorlviewlibrary-1.0.3_04f1fe0ed59b1c8f51ef2688c3d529298936e4fa/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -480,21 +480,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/me.zhanghai.android.materialprogressbar/library/1.1.6/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ab3193b438e37f7b0a634cc2dfebbf92892ea90c">
-        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/me.zhanghai.android.materialprogressbar-library-1.1.6_470089f1f6b35c040dbc6d9d0eb15f0db1a613d6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="d38084015027549951cbaea5d5f6fb795cc81151">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.0_b84d7397d6de605d2f989c99d40ab4d8ad429e22/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/me.zhanghai.android.materialprogressbar/library/1.1.6/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ab3193b438e37f7b0a634cc2dfebbf92892ea90c">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/me.zhanghai.android.materialprogressbar-library-1.1.6_470089f1f6b35c040dbc6d9d0eb15f0db1a613d6/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -516,21 +516,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/amit/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.2/7a87d845ad3a155297e8f67d9008f4c1e5656b71/commons-beanutils-1.9.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7a87d845ad3a155297e8f67d9008f4c1e5656b71">
-        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-beanutils-1.9.2_d61f8daaaca8fe17d92606695093a47be0074b7a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="fbed8999711c2ea4a32aebfb9541e9873b5a83ca">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.firebaseui-firebase-ui-0.5.3_74f549297a613ecfcc008881a33d05fc3ab7f6b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.2/7a87d845ad3a155297e8f67d9008f4c1e5656b71/commons-beanutils-1.9.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7a87d845ad3a155297e8f67d9008f4c1e5656b71">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-beanutils-1.9.2_d61f8daaaca8fe17d92606695093a47be0074b7a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -543,15 +543,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="42a3ae86dd3ae2876d3e95c2e6e104ae57a50a65">
-        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.14.1_9000e7d575fc697d45d3295dd2af0392fd4157be/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -561,12 +552,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/jars/classes.jar"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
-        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.4.0_2fbf5da361534cfb1c8784e633a36358e1397308/classes.dex" />
+        sha1="42a3ae86dd3ae2876d3e95c2e6e104ae57a50a65">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.14.1_9000e7d575fc697d45d3295dd2af0392fd4157be/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -579,12 +570,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.4.0/jars/classes.jar"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
-        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.4.0_413dbcf2d5686bb4b0ff3eb7dec80a17fdbe50be/classes.dex" />
+        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.4.0_2fbf5da361534cfb1c8784e633a36358e1397308/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -597,12 +588,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/amit/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_7bbb626821ae5d6ec5b03b5c081eb595804677d9/classes.dex" />
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.4.0_413dbcf2d5686bb4b0ff3eb7dec80a17fdbe50be/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -612,6 +603,15 @@
         revision="25.0.0"
         sha1="066193507a52d5bb253b13850f191294ad767bb9">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-compiler-8.2.1_bd8c413f9ee031c60bd43f89c6fc169a2791f416/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_7bbb626821ae5d6ec5b03b5c081eb595804677d9/classes.dex" />
     </item>
     <item
         is-multidex="true"

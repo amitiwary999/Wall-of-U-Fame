@@ -29,10 +29,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.amit.uniconnexample.Fragment.Mainfrag;
 import com.example.amit.uniconnexample.Fragment.Msgfrag;
 import com.example.amit.uniconnexample.Fragment.Notifrag;
 import com.example.amit.uniconnexample.Fragment.Profilefrag;
@@ -62,6 +65,8 @@ public class NewTabActivity extends AppCompatActivity {
     Toolbar toolbar;
   //  BottomBarTab bottomBarTab,bottomBarTabmsg;
     BottomBar bottomBar;
+    TextView title;
+    ImageView img;
     TabLayout tabLayout;
     SharedPreferences.Editor editor1;
     Handler handler1 = new Handler();
@@ -80,12 +85,14 @@ public class NewTabActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_tab);
+        title=(TextView)findViewById(R.id.title);
+        img=(ImageView)findViewById(R.id.img);
         user= FirebaseAuth.getInstance().getCurrentUser();
         editor1=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE).edit();
         viewPager=(ViewPager)findViewById(R.id.viewPager);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         bottomBar=(BottomBar)findViewById(R.id.bottomtab);
-        tabLayout=(TabLayout)findViewById(R.id.tabLayout);
+     //   tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         bottomBarTab=bottomBar.getTabWithId(R.id.tab_notification);
         bottomBarTabmsg=bottomBar.getTabWithId(R.id.tab_message);
         mDatabasenotiflike= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like");
@@ -96,16 +103,66 @@ public class NewTabActivity extends AppCompatActivity {
         mDatabasenotif.keepSynced(true);
         mDatanotiflike.keepSynced(true);
         mDatabasenotiflike.keepSynced(true);
-        tabLayout.setupWithViewPager(viewPager);
-        setupViewPager(viewPager);
-        setupTabIcons();
+      //  tabLayout.setupWithViewPager(viewPager);
+      //  setupViewPager(viewPager);
+        setSupportActionBar(toolbar);
+      //  setupTabIcons();
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder d = new AlertDialog.Builder(getBaseContext());
+                d.setMessage("Are you sure ?").
+                        setCancelable(false).
+                        setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                if(isNetworkConnected()) {
+                                    stopService(new Intent(NewTabActivity.this, Notificationservice.class));
+                                    newnotifchat.removeEventListener(valueEventListener);
+                                    mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                                    handler1.postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            FirebaseAuth.getInstance().signOut();
+                                            Toast.makeText(NewTabActivity.this, "Logging out..", Toast.LENGTH_SHORT).show();
+                                            // myPrefs.edit().clear().commit();
+                                            editor1.putBoolean("isLoggedin", false);
+                                            editor1.commit();
+                                            startActivity(new Intent(NewTabActivity.this, Loginactivity.class));
+                                            finish();
+                                        }
+                                    }, 2000);
+
+                                }else{
+                                    Toast.makeText(NewTabActivity.this,"No internet connection",Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        }).
+                        setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alert = d.create();
+                alert.setTitle("Logout");
+                alert.show();
+                Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
+                nbutton.setTextColor(Color.BLACK);
+                Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
+                pbutton.setTextColor(Color.BLACK);
+            }
+        });
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
                 if(tabId==R.id.tab_home){
-
+                    attachFragment(new Mainfrag());
+                 //  viewPager.setVisibility(View.VISIBLE);
                 }
                 else if(tabId==R.id.tab_account){
+                  //  viewPager.setVisibility(View.GONE);
                     attachFragment(new Profilefrag());
                 }
                 else if(tabId==R.id.tab_notification){
@@ -127,6 +184,7 @@ public class NewTabActivity extends AppCompatActivity {
                         flag = 0;
                     }
                     //    mDatanotiflike.setValue(new Likemodel(0));
+                  //  viewPager.setVisibility(View.GONE);
                     attachFragment(new Notifrag());
                 }
                 else if(tabId==R.id.tab_message){
@@ -136,9 +194,11 @@ public class NewTabActivity extends AppCompatActivity {
                         bottomBarTabmsg.removeBadge();
                         msgcount = 0;
                     }
+                  //  viewPager.setVisibility(View.GONE);
                     attachFragment(new Msgfrag());
                 }
                 else if(tabId==R.id.tab_setting){
+                  //  viewPager.setVisibility(View.GONE);
                     attachFragment(new Settingfrag());
                 }
             }
@@ -450,14 +510,14 @@ public class NewTabActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+      //  getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        Drawable drawable = item.getIcon();
+      /*  Drawable drawable = item.getIcon();
         if (drawable instanceof Animatable) {
             ((Animatable) drawable).start();
         }
@@ -465,7 +525,7 @@ public class NewTabActivity extends AppCompatActivity {
            /* FirebaseAuth.getInstance().signOut();
             Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Tabs.this, Loginactivity.class));
-            finish();*/
+            finish();
             AlertDialog.Builder d = new AlertDialog.Builder(this);
             d.setMessage("Are you sure ?").
                     setCancelable(false).
@@ -508,7 +568,7 @@ public class NewTabActivity extends AppCompatActivity {
             nbutton.setTextColor(Color.BLACK);
             Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
             pbutton.setTextColor(Color.BLACK);
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -575,6 +635,11 @@ public class NewTabActivity extends AppCompatActivity {
         Fragment fragment=fm;
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.content_frame,fragment);
+        try {
+            fragmentTransaction.commitAllowingStateLoss();
+        }catch(IllegalStateException e) {
+            fragmentTransaction.commit();
+        }
     }
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(

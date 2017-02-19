@@ -57,7 +57,7 @@
             android:name="com.example.amit.uniconnexample.Blog"
             android:theme="@style/AppTheme.NoactionBar" />
         <activity
-            android:name="com.example.amit.uniconnexample.NewTabActivity"
+            android:name="com.example.amit.uniconnexample.Tabs"
             android:theme="@style/AppTheme" />
         <activity
             android:name="com.example.amit.uniconnexample.Profile"
@@ -79,6 +79,9 @@
             android:theme="@style/AppTheme.NoactionBar" />
         <activity
             android:name="com.example.amit.uniconnexample.Notifclick"
+            android:theme="@style/AppTheme.NoactionBar" />
+        <activity
+            android:name="com.example.amit.uniconnexample.NewTabActivity"
             android:theme="@style/AppTheme.NoactionBar" />
 
         <meta-data

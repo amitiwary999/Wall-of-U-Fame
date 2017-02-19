@@ -29,6 +29,9 @@ public class Mainfrag extends Fragment {
     ViewPager viewPager;
     TabLayout tabLayout;
 
+    public Mainfrag() {
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -36,6 +39,7 @@ public class Mainfrag extends Fragment {
         viewPager=(ViewPager)view.findViewById(R.id.viewPager);
         tabLayout=(TabLayout)view.findViewById(R.id.tabLayout);
         setupViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
         return view;
     }
     private void setupViewPager(ViewPager viewPager) {

@@ -12,6 +12,19 @@
         <item name="windowNoTitle">true</item>
         <item name="colorPrimaryDark">@color/md_blue_grey_700</item>
     </style>
+    <style name="Appthemenew" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColorHint">@color/colorTextHint</item>
+        <item name="android:editTextColor">@color/colorText</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/colorTextHint</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">#22000000</item>
+    </style>
     <style name="Apptheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/md_blue_grey_700</item>
         <item name="colorPrimaryDark">@color/md_blue_grey_700</item>
@@ -35,7 +48,7 @@
         <item name="tabIndicatorHeight">0dp</item>
        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
         <item name="tabBackground">@color/colorPrimary</item>
-        <item name="tabSelectedTextColor">@color/colorPrimary</item>
+        <item name="tabSelectedTextColor">@color/md_orange_600</item>
     </style>
 
     <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
