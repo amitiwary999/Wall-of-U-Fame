@@ -1222,7 +1222,7 @@ int id checkbox 0x7f100076
 int id chronometer 0x7f100125
 int id circle 0x7f10010a
 int id circular 0x7f100040
-int id clg 0x7f1000bf
+int id clg 0x7f1000be
 int id clip_horizontal 0x7f100036
 int id clip_vertical 0x7f100037
 int id collapseActionView 0x7f100043
@@ -1261,7 +1261,7 @@ int id design_menu_item_action_area 0x7f1000fb
 int id design_menu_item_action_area_stub 0x7f1000fa
 int id design_menu_item_text 0x7f1000f9
 int id design_navigation_view 0x7f1000f8
-int id details_root 0x7f1000bd
+int id details_root 0x7f1000c2
 int id disableHome 0x7f100016
 int id display_always 0x7f100055
 int id do_delete 0x7f1000f0
@@ -1314,7 +1314,7 @@ int id line3 0x7f10012d
 int id listMode 0x7f100013
 int id list_item 0x7f100063
 int id ll 0x7f1000d6
-int id loading 0x7f1000c2
+int id loading 0x7f1000c1
 int id loading_section 0x7f100107
 int id lock1 0x7f1000cb
 int id lock2 0x7f1000cc
@@ -1335,7 +1335,7 @@ int id mini 0x7f10003b
 int id mnotification_list 0x7f1000b2
 int id msg 0x7f1000ca
 int id multiply 0x7f100023
-int id name 0x7f1000be
+int id name 0x7f1000bd
 int id name_layout 0x7f10012f
 int id navigation_header_container 0x7f1000f7
 int id never 0x7f100045
@@ -1358,7 +1358,7 @@ int id password_layout 0x7f100130
 int id password_section 0x7f100100
 int id person 0x7f1000c9
 int id phn 0x7f1000cf
-int id phone 0x7f1000c0
+int id phone 0x7f1000bf
 int id photo 0x7f1000ac
 int id pimage 0x7f10009a
 int id pin 0x7f100035
@@ -1380,7 +1380,7 @@ int id root 0x7f10010d
 int id rv_chat_feed 0x7f1000d5
 int id sMessage 0x7f100095
 int id sTime 0x7f100096
-int id save 0x7f1000c1
+int id save 0x7f1000c0
 int id screen 0x7f100024
 int id scroll 0x7f100020
 int id scrollIndicatorDown 0x7f10006e

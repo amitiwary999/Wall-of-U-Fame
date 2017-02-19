@@ -4076,7 +4076,7 @@ containing a value of this type.
         public static final int chronometer=0x7f100125;
         public static final int circle=0x7f10010a;
         public static final int circular=0x7f100040;
-        public static final int clg=0x7f1000bf;
+        public static final int clg=0x7f1000be;
         public static final int clip_horizontal=0x7f100036;
         public static final int clip_vertical=0x7f100037;
         public static final int collapseActionView=0x7f100043;
@@ -4115,7 +4115,7 @@ containing a value of this type.
         public static final int design_menu_item_action_area_stub=0x7f1000fa;
         public static final int design_menu_item_text=0x7f1000f9;
         public static final int design_navigation_view=0x7f1000f8;
-        public static final int details_root=0x7f1000bd;
+        public static final int details_root=0x7f1000c2;
         public static final int disableHome=0x7f100016;
         public static final int display_always=0x7f100055;
         public static final int do_delete=0x7f1000f0;
@@ -4168,7 +4168,7 @@ containing a value of this type.
         public static final int listMode=0x7f100013;
         public static final int list_item=0x7f100063;
         public static final int ll=0x7f1000d6;
-        public static final int loading=0x7f1000c2;
+        public static final int loading=0x7f1000c1;
         public static final int loading_section=0x7f100107;
         public static final int lock1=0x7f1000cb;
         public static final int lock2=0x7f1000cc;
@@ -4189,7 +4189,7 @@ containing a value of this type.
         public static final int mnotification_list=0x7f1000b2;
         public static final int msg=0x7f1000ca;
         public static final int multiply=0x7f100023;
-        public static final int name=0x7f1000be;
+        public static final int name=0x7f1000bd;
         public static final int name_layout=0x7f10012f;
         public static final int navigation_header_container=0x7f1000f7;
         public static final int never=0x7f100045;
@@ -4212,7 +4212,7 @@ containing a value of this type.
         public static final int password_section=0x7f100100;
         public static final int person=0x7f1000c9;
         public static final int phn=0x7f1000cf;
-        public static final int phone=0x7f1000c0;
+        public static final int phone=0x7f1000bf;
         public static final int photo=0x7f1000ac;
         public static final int pimage=0x7f10009a;
         public static final int pin=0x7f100035;
@@ -4234,7 +4234,7 @@ containing a value of this type.
         public static final int rv_chat_feed=0x7f1000d5;
         public static final int sMessage=0x7f100095;
         public static final int sTime=0x7f100096;
-        public static final int save=0x7f1000c1;
+        public static final int save=0x7f1000c0;
         public static final int screen=0x7f100024;
         public static final int scroll=0x7f100020;
         public static final int scrollIndicatorDown=0x7f10006e;

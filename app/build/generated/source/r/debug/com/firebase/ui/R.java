@@ -892,7 +892,7 @@ public final class R {
 		public static final int middle = 0x7f10003d;
 		public static final int mini = 0x7f10003b;
 		public static final int multiply = 0x7f100023;
-		public static final int name = 0x7f1000be;
+		public static final int name = 0x7f1000bd;
 		public static final int name_layout = 0x7f10012f;
 		public static final int navigation_header_container = 0x7f1000f7;
 		public static final int never = 0x7f100045;

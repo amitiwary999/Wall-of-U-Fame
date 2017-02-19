@@ -14,6 +14,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,6 +56,8 @@ public class Profilefrag extends Fragment {
     FirebaseUser user;
     UserData userData;
     Button save;
+    DatabaseReference mDatabase;
+    SwipeRefreshLayout refresh;
     ProgressDialog mProgress;
     public Profilefrag() {
     }
@@ -70,6 +73,7 @@ public class Profilefrag extends Fragment {
         photo=(ImageView)view.findViewById(R.id.photo);
         save=(Button)view.findViewById(R.id.save);
         email.setKeyListener(null);
+        refresh=(SwipeRefreshLayout)view.findViewById(R.id.refresh);
         mProgress=new ProgressDialog(getActivity());
         mProgress.setMessage("***Loading***");
         mProgress.show();
@@ -82,7 +86,7 @@ public class Profilefrag extends Fragment {
                 name.setCursorVisible(true);
             }
         });
-        DatabaseReference mDatabase;
+      //  DatabaseReference mDatabase;
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Userdetail").child(user.getUid());
         mDatabase.keepSynced(true);
         if(isNetworkConnected()) {
@@ -116,6 +120,12 @@ public class Profilefrag extends Fragment {
             @Override
             public void onClick(View v) {
                 pickPhoto();
+            }
+        });
+        refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refresh();
             }
         });
         return view;
@@ -228,6 +238,34 @@ public class Profilefrag extends Fragment {
                // finish();
             }
         });
+    }
+    public void refresh(){
+        mProgress.show();
+        if(isNetworkConnected()) {
+            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    userData = dataSnapshot.getValue(UserData.class);
+                    // Toast.makeText(Profile.this,userData.name,Toast.LENGTH_LONG).show();
+                    mProgress.dismiss();
+                    updateUI();
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    Timber.d("oncancelled");
+                }
+            });
+            //  }else{
+            //    Toast.makeText(Profile.this,"No internet connection",Toast.LENGTH_LONG).show();
+        }else{
+            mProgress.dismiss();
+            Toast.makeText(getActivity(),"No internet connection",Toast.LENGTH_LONG).show();
+        }
+        refreshcomplete();
+    }
+    public void refreshcomplete(){
+        refresh.setRefreshing(false);
     }
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(
