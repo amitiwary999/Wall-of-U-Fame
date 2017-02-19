@@ -58,8 +58,8 @@
         android:layout_gravity="bottom|end"
         app:backgroundTint="@color/colorAccent"
         app:pressedTranslationZ="12dp"
-        android:layout_marginBottom="54dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="6dp"
         android:scaleType="center"
         android:src="@drawable/ic_add_white_24dp"
          />

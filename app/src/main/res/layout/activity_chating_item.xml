@@ -10,6 +10,7 @@
         android:id="@+id/sender"
         android:layout_gravity="end"
         android:orientation="vertical"
+        android:maxWidth="200dp"
         android:background="@drawable/chtbubble1"
         android:layout_marginRight="5dp">
         <TextView

@@ -48,7 +48,7 @@
                 android:background="@android:color/transparent"
                 android:hint="@string/send_msg_hint"
                 android:imeOptions="actionSend"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:theme="@style/sendMessageEditTextTheme"
                 android:layout_gravity="center_vertical"/>
 

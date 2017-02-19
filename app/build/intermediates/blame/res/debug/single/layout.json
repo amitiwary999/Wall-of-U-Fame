@@ -20,12 +20,16 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_text_input_password_icon.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/md_listitem_multichoice.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout/md_listitem_multichoice.xml"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_chating_item.xml",
         "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_chating_item.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_new_tab.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_new_tab.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/md_listitem_multichoice.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout/md_listitem_multichoice.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
@@ -34,6 +38,10 @@
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/idp_button_facebook.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/res/layout/idp_button_facebook.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_setting_frag.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_setting_frag.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_notificationclick.xml",
@@ -84,12 +92,12 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/md_dialog_basic.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout/md_dialog_basic.xml"
-    },
-    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/md_dialog_basic.xml",
+        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout/md_dialog_basic.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
@@ -152,6 +160,10 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/layout/fragment_firebase_login.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_msg_frag.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_msg_frag.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_snackbar_include.xml"
     },
@@ -188,6 +200,10 @@
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/messenger_button_send_white_small.xml"
     },
     {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_main_frag.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_main_frag.xml"
+    },
+    {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_message.xml",
         "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_message.xml"
     },
@@ -206,6 +222,10 @@
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/bb_bottom_bar_item_container.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.1.1/res/layout/bb_bottom_bar_item_container.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_prof_frag.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_prof_frag.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
@@ -306,6 +326,10 @@
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/save_credentials_layout.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/res/layout/save_credentials_layout.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_notif_frag.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_notif_frag.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
@@ -430,6 +454,10 @@
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
         "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/activity_detail_frag.xml",
+        "source": "/home/amit/Buildapk/app/src/main/res/layout/activity_detail_frag.xml"
     },
     {
         "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_large.xml",

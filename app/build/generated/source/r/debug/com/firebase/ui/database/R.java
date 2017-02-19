@@ -615,7 +615,7 @@ public final class R {
 		public static final int status_bar_latest_event_content = 0x7f10011d;
 		public static final int submit_area = 0x7f10008a;
 		public static final int tabMode = 0x7f100015;
-		public static final int text = 0x7f1000a8;
+		public static final int text = 0x7f1000ab;
 		public static final int text2 = 0x7f10012b;
 		public static final int textSpacerNoButtons = 0x7f10006d;
 		public static final int time = 0x7f100123;
@@ -661,17 +661,17 @@ public final class R {
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f040018;
 		public static final int abc_search_view = 0x7f040019;
 		public static final int abc_select_dialog_material = 0x7f04001a;
-		public static final int notification_media_action = 0x7f040066;
-		public static final int notification_media_cancel_action = 0x7f040067;
-		public static final int notification_template_big_media = 0x7f040068;
-		public static final int notification_template_big_media_narrow = 0x7f04006a;
-		public static final int notification_template_media = 0x7f04006f;
-		public static final int notification_template_part_chronometer = 0x7f040071;
-		public static final int notification_template_part_time = 0x7f040072;
-		public static final int select_dialog_item_material = 0x7f040075;
-		public static final int select_dialog_multichoice_material = 0x7f040076;
-		public static final int select_dialog_singlechoice_material = 0x7f040077;
-		public static final int support_simple_spinner_dropdown_item = 0x7f04007a;
+		public static final int notification_media_action = 0x7f04006d;
+		public static final int notification_media_cancel_action = 0x7f04006e;
+		public static final int notification_template_big_media = 0x7f04006f;
+		public static final int notification_template_big_media_narrow = 0x7f040071;
+		public static final int notification_template_media = 0x7f040076;
+		public static final int notification_template_part_chronometer = 0x7f040078;
+		public static final int notification_template_part_time = 0x7f040079;
+		public static final int select_dialog_item_material = 0x7f04007c;
+		public static final int select_dialog_multichoice_material = 0x7f04007d;
+		public static final int select_dialog_singlechoice_material = 0x7f04007e;
+		public static final int support_simple_spinner_dropdown_item = 0x7f040081;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f090000;

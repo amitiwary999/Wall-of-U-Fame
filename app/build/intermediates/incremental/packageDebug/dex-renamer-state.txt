@@ -1,4 +1,4 @@
-#Sat Feb 18 14:10:39 IST 2017
+#Sun Feb 19 04:38:01 IST 2017
 base.0=/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_83a4dc6c9c7f3d880ffa9a5902f87e83f1bed7ed
 renamed.1=classes2.dex
 renamed.0=classes.dex

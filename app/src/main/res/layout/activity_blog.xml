@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:singleLine="true"
+        android:inputType="textMultiLine"
         android:lines="3"
         android:id="@+id/mdesc"
         android:layout_below="@id/mSelectImage"
