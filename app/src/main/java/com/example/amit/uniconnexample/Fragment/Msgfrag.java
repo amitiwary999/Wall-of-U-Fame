@@ -102,7 +102,7 @@ public class Msgfrag extends Fragment {
                             Intent i = new Intent(getActivity(), Chatstart.class);
                             i.putExtra("chat", msg_key);
                             startActivity(i);
-                           getActivity(). finish();
+                          // getActivity(). finish();
                         }else{
                             Toast.makeText(getActivity(),"No internet connection",Toast.LENGTH_LONG).show();
                         }
@@ -222,7 +222,7 @@ public class Msgfrag extends Fragment {
                             Intent i = new Intent(getActivity(), Chatstart.class);
                             i.putExtra("chat", msg_key);
                             startActivity(i);
-                            getActivity().finish();
+                          //  getActivity().finish();
                         }else{
                             Toast.makeText(getActivity(),"No internet connection",Toast.LENGTH_LONG).show();
                         }

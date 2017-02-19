@@ -83,7 +83,7 @@ public class Settingfrag extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((NewTabActivity)getActivity()).setTitle("    Setting       ");
+        ((NewTabActivity)getActivity()).setTitle("    Setting        ");
     }
 
     public static Settings getInstance(){

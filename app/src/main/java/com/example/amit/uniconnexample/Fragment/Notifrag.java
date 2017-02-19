@@ -103,7 +103,7 @@ public class Notifrag extends Fragment {
                             Intent i = new Intent(getActivity(), Chatstart.class);
                             i.putExtra("chat", key);
                             startActivity(i);
-                            getActivity().finish();
+                           // getActivity().finish();
                         } else {
                             Toast.makeText(getActivity(), "You can't chat with yourself", Toast.LENGTH_LONG).show();
                         }
@@ -184,7 +184,7 @@ public class Notifrag extends Fragment {
                             Intent i = new Intent(getActivity(), Chatstart.class);
                             i.putExtra("chat", key);
                             startActivity(i);
-                            getActivity().finish();
+                         //   getActivity().finish();
                         } else {
                             Toast.makeText(getActivity(), "You can't chat with yourself", Toast.LENGTH_LONG).show();
                         }

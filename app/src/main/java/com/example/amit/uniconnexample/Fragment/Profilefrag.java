@@ -123,7 +123,7 @@ public class Profilefrag extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((NewTabActivity)getActivity()).setTitle("    Profile     ");
+        ((NewTabActivity)getActivity()).setTitle("    Profile        ");
        getActivity().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
         );

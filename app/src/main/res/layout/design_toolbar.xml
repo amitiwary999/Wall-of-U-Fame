@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/title"
         android:layout_marginTop="10dp"
-        android:text="    Home        "
+        android:text="    Home          "
         android:textSize="18dp"
         android:textStyle="bold"
         android:textColor="#fff"/>
