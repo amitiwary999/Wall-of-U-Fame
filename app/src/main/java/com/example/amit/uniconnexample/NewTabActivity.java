@@ -158,11 +158,13 @@ public class NewTabActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(@IdRes int tabId) {
                 if(tabId==R.id.tab_home){
+                    title.setText("    Home        ");
                     attachFragment(new Mainfrag());
                  //  viewPager.setVisibility(View.VISIBLE);
                 }
                 else if(tabId==R.id.tab_account){
                   //  viewPager.setVisibility(View.GONE);
+                    title.setText("    Profile     ");
                     attachFragment(new Profilefrag());
                 }
                 else if(tabId==R.id.tab_notification){
@@ -185,6 +187,7 @@ public class NewTabActivity extends AppCompatActivity {
                     }
                     //    mDatanotiflike.setValue(new Likemodel(0));
                   //  viewPager.setVisibility(View.GONE);
+                    title.setText("    Notification");
                     attachFragment(new Notifrag());
                 }
                 else if(tabId==R.id.tab_message){
@@ -195,10 +198,12 @@ public class NewTabActivity extends AppCompatActivity {
                         msgcount = 0;
                     }
                   //  viewPager.setVisibility(View.GONE);
+                    title.setText("    Message     ");
                     attachFragment(new Msgfrag());
                 }
                 else if(tabId==R.id.tab_setting){
                   //  viewPager.setVisibility(View.GONE);
+                    title.setText("    Setting     ");
                     attachFragment(new Settingfrag());
                 }
             }
@@ -645,5 +650,8 @@ public class NewTabActivity extends AppCompatActivity {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(
                 Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo() != null;
+    }
+    public void setTitle(String tooltitle){
+        title.setText(tooltitle);
     }
 }

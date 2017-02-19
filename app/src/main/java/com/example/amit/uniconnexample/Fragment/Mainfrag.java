@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.example.amit.uniconnexample.Global;
 import com.example.amit.uniconnexample.MainActivity;
+import com.example.amit.uniconnexample.NewTabActivity;
 import com.example.amit.uniconnexample.R;
 import com.example.amit.uniconnexample.Tabs;
 import com.example.amit.uniconnexample.Trending;
@@ -40,8 +41,16 @@ public class Mainfrag extends Fragment {
         tabLayout=(TabLayout)view.findViewById(R.id.tabLayout);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
+
         return view;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((NewTabActivity)getActivity()).setTitle("    Home        ");
+    }
+
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity(),getChildFragmentManager());
         adapter.addFrag(new Detailfrag(), "My Campus");

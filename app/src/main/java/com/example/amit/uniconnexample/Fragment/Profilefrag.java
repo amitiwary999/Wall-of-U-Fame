@@ -24,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.example.amit.uniconnexample.NewTabActivity;
 import com.example.amit.uniconnexample.Profile;
 import com.example.amit.uniconnexample.R;
 import com.example.amit.uniconnexample.Tabs;
@@ -122,6 +123,7 @@ public class Profilefrag extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        ((NewTabActivity)getActivity()).setTitle("    Profile     ");
        getActivity().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
         );

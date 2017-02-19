@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.amit.uniconnexample.Chatstart;
 import com.example.amit.uniconnexample.Message;
+import com.example.amit.uniconnexample.NewTabActivity;
 import com.example.amit.uniconnexample.Notifclick;
 import com.example.amit.uniconnexample.Notification;
 import com.example.amit.uniconnexample.Notificationmodel;
@@ -125,6 +126,12 @@ public class Notifrag extends Fragment {
             }
         };
         notificationrecycle.setAdapter(firebaseRecyclerAdapter);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((NewTabActivity)getActivity()).setTitle("    Notification");
     }
 
     public static class NotificationViewHolder extends RecyclerView.ViewHolder{

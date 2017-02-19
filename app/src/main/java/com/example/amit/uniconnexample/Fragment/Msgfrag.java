@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.example.amit.uniconnexample.Chatstart;
 import com.example.amit.uniconnexample.Message;
 import com.example.amit.uniconnexample.Message_model;
+import com.example.amit.uniconnexample.NewTabActivity;
 import com.example.amit.uniconnexample.R;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -240,6 +241,13 @@ public class Msgfrag extends Fragment {
     public void onStart() {
         super.onStart();
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((NewTabActivity)getActivity()).setTitle("    Message     ");
+    }
+
     public static class MessageViewHolder extends RecyclerView.ViewHolder{
         View view;
         public MessageViewHolder(View itemView) {
