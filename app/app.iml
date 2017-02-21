@@ -219,6 +219,7 @@
     <orderEntry type="library" exported="" name="LikeButton-0.2.0" level="project" />
     <orderEntry type="library" exported="" name="auto-common-0.6" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.1.0" level="project" />
+    <orderEntry type="library" exported="" name="glide-3.5.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="jsr305-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-utils-25.1.0" level="project" />
     <orderEntry type="library" exported="" name="firebase-ui-database-0.5.3" level="project" />
