@@ -354,6 +354,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amit/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.5.2/ecf534dba3a8446ce84cbb797d314763be212a68/glide-3.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.5.2_e8c36600b1af82f5bf9ca67a85e2b5475af8bf99/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"

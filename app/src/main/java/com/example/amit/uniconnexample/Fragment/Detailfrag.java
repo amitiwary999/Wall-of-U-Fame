@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.amit.uniconnexample.Blog;
 import com.example.amit.uniconnexample.Blogmodel;
 import com.example.amit.uniconnexample.Chatstart;
@@ -1096,7 +1097,7 @@ public class Detailfrag extends Fragment {
                 pic=model.getImage();
             }else{
                 post_image.setVisibility(View.VISIBLE);
-                Picasso.with(mView.getContext()).load(model.getImage()).into(post_image);
+                Glide.with(mView.getContext()).load(model.getImage()).into(post_image);
                 pic=model.getImage();
             }
             if(model.getName()==null){
