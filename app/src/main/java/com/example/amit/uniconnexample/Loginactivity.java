@@ -98,7 +98,7 @@ public class Loginactivity extends AppCompatActivity{
         });
         editor1=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE).edit();
         if(((App)this.getApplication()).getLogincheck()){
-           // Intent i = new Intent(Loginactivity.this, Tabs.class);
+          //  Intent i = new Intent(Loginactivity.this, Tabs.class);
             Intent i = new Intent(Loginactivity.this, NewTabActivity.class);
             startActivity(i);
             finish();
@@ -152,7 +152,7 @@ public class Loginactivity extends AppCompatActivity{
             }
         else*/
                     startActivity(new Intent(Loginactivity.this, NewTabActivity.class));
-                  //  startActivity(new Intent(Loginactivity.this, Tabs.class));
+                   // startActivity(new Intent(Loginactivity.this, Tabs.class));
                     finish();
                 }
             }
@@ -219,7 +219,7 @@ public class Loginactivity extends AppCompatActivity{
                                             editor1.putBoolean("isLoggedin",true);
                                             editor1.commit();
                                             mProgress.dismiss();
-                                          //  Intent i = new Intent(Loginactivity.this, Tabs.class);
+                                           // Intent i = new Intent(Loginactivity.this, Tabs.class);
                                             Intent i = new Intent(Loginactivity.this, NewTabActivity.class);
                                             startActivity(i);
                                             finish();

@@ -257,7 +257,7 @@ public class Signupactivity extends AppCompatActivity {
          check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
         userData.clg=clg.getEditText().getText().toString();
         Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                R.drawable.default_account);
+                R.drawable.user);
         if(flag!=1) {
             userData.photo = com.example.amit.uniconnexample.utils.Utils.encodeToBase64(icon, Bitmap.CompressFormat.PNG, 100);
         }

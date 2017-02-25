@@ -46,6 +46,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.amit.uniconnexample.Model.BlogModel;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -74,14 +75,14 @@ public class Blog extends AppCompatActivity {
     private FirebaseAuth auth;
     private Uri mImageUri = null;
     private StorageReference mStorage;
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabase,mDatabas;
     EditText titlefield,mDesc;
     Toolbar toolbar;
     private TrackGPS gps;
     SharedPreferences sprfnc;
     private ProgressDialog mProgress;
     byte[] bytearray;
-    String mal,check,name,photo,bitimage,cityname=null,date=null,time=null;
+    String mal,check,name,photo,checkmail,bitimage,cityname=null,date=null,time=null;
     UserData userdata;
     LocationManager locationManager;
     int LOCATION_REFRESH_TIME=10;
@@ -256,6 +257,7 @@ public class Blog extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         String n=auth.getCurrentUser().getEmail();
         check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
+        checkmail=n.substring(n.indexOf("@")+1,n.lastIndexOf("."))+n.substring(n.lastIndexOf(".")+1);
       //  titlefield = (EditText) findViewById(R.id.titleField);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         Utils.setUpToolbarBackButton(this, toolbar);
@@ -266,6 +268,7 @@ public class Blog extends AppCompatActivity {
         mDesc = (EditText) findViewById(R.id.mdesc);
         Button buttondone = (Button) findViewById(R.id.buttondone);
         mDatabase= FirebaseDatabase.getInstance().getReference().child(check);
+        mDatabas=FirebaseDatabase.getInstance().getReference().child("Posts");
         userdata = getIntent().getExtras().getParcelable("user");
        // byte[] decodestring= Base64.decode(userdata.photo,Base64.DEFAULT);
         name=userdata.name;
@@ -344,6 +347,7 @@ public class Blog extends AppCompatActivity {
         //    final  String city_Name=cityname;
             final String time_val=time;
             final String date_val=date;
+            final String check_mail=checkmail;
             // bl=new Blog(title_val,desc_val,mImageUri.toString());
          //   if ( !TextUtils.isEmpty(desc_val) && mImageUri != null) {
                 if(mImageUri!=null) {
@@ -354,8 +358,10 @@ public class Blog extends AppCompatActivity {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                             Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                            DatabaseReference databaseReference=mDatabas.push();
+                            databaseReference.setValue(new BlogModel(id_val,desc_val, downloadUrl.toString(), name_val, photo_val,0,0,time_val,date_val,check_mail));
                             DatabaseReference newPost = mDatabase.push();
-                            newPost.setValue(new Blogmodel(id_val,desc_val, downloadUrl.toString(), name_val, photo_val,0,0,time_val,date_val));
+                           // newPost.setValue(new Blogmodel(id_val,desc_val, downloadUrl.toString(), name_val, photo_val,0,0,time_val,date_val));
                        /* newPost.child("title").setValue(title_val);
                         newPost.child("desc").setValue(desc_val);
                         newPost.child("image").setValue(downloadUrl.toString());
