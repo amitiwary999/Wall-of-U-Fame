@@ -10,13 +10,14 @@
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?android:attr/actionBarSize"
+        android:layout_marginTop="43dp">
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/mnotification_list"
             android:layout_below="@id/toolbar"
-            android:layout_marginBottom="?android:attr/actionBarSize"
             android:clipToPadding="false"
             android:scrollbars="vertical">
 
