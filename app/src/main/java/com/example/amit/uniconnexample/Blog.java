@@ -325,6 +325,7 @@ public class Blog extends AppCompatActivity {
     protected void onStop() {
      //   mGoogleApiClient.disconnect();
         super.onStop();
+        Log.e("Onstop","stop");
     }
 
     @Override
