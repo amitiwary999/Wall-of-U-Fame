@@ -55,7 +55,7 @@ public class Mainfrag extends Fragment {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity(),getChildFragmentManager());
         adapter.addFrag(new Detailfrag(), "My Campus");
         adapter.addFrag(new Globalfrag(), "Global");
-        adapter.addFrag(new Trending(), "Trending");
+        adapter.addFrag(new Trendfrag(), "Trending");
         viewPager.setAdapter(adapter);
     }
 

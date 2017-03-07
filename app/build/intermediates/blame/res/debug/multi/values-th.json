@@ -368,8 +368,654 @@
                     "startLine": 21,
                     "startColumn": 4,
                     "startOffset": 2019,
+                    "endColumn": 100,
+                    "endOffset": 2115
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 344,
+                        "endColumn": 100,
+                        "endOffset": 440
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2120,
+                    "endColumn": 90,
+                    "endOffset": 2206
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 445,
+                        "endColumn": 90,
+                        "endOffset": 531
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2211,
+                    "endColumn": 113,
+                    "endOffset": 2320
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 536,
+                        "endColumn": 113,
+                        "endOffset": 645
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2325,
+                    "endColumn": 92,
+                    "endOffset": 2413
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 650,
+                        "endColumn": 92,
+                        "endOffset": 738
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2418,
+                    "endColumn": 109,
+                    "endOffset": 2523
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 743,
+                        "endColumn": 109,
+                        "endOffset": 848
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2528,
+                    "endColumn": 101,
+                    "endOffset": 2625
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 853,
+                        "endColumn": 101,
+                        "endOffset": 950
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2630,
+                    "endColumn": 84,
+                    "endOffset": 2710
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 955,
+                        "endColumn": 84,
+                        "endOffset": 1035
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2715,
+                    "endColumn": 97,
+                    "endOffset": 2808
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1040,
+                        "endColumn": 97,
+                        "endOffset": 1133
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2813,
+                    "endColumn": 97,
+                    "endOffset": 2906
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1138,
+                        "endColumn": 97,
+                        "endOffset": 1231
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2911,
+                    "endColumn": 107,
+                    "endOffset": 3014
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1236,
+                        "endColumn": 107,
+                        "endOffset": 1339
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3019,
+                    "endColumn": 76,
+                    "endOffset": 3091
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1344,
+                        "endColumn": 76,
+                        "endOffset": 1416
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 3096,
+                    "endColumn": 138,
+                    "endOffset": 3230
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 333,
+                        "endColumn": 138,
+                        "endOffset": 467
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 3235,
+                    "endColumn": 139,
+                    "endOffset": 3370
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 472,
+                        "endColumn": 139,
+                        "endOffset": 607
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 3375,
+                    "endColumn": 105,
+                    "endOffset": 3476
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 612,
+                        "endColumn": 105,
+                        "endOffset": 713
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 3481,
+                    "endColumn": 81,
+                    "endOffset": 3558
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1421,
+                        "endColumn": 81,
+                        "endOffset": 1498
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 3563,
+                    "endColumn": 72,
+                    "endOffset": 3631
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1503,
+                        "endColumn": 72,
+                        "endOffset": 1571
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 3636,
+                    "endColumn": 77,
+                    "endOffset": 3709
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1576,
+                        "endColumn": 77,
+                        "endOffset": 1649
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3714,
+                    "endColumn": 90,
+                    "endOffset": 3800
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1654,
+                        "endColumn": 90,
+                        "endOffset": 1740
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 3805,
+                    "endColumn": 90,
+                    "endOffset": 3891
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1745,
+                        "endColumn": 90,
+                        "endOffset": 1831
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 3896,
+                    "endColumn": 98,
+                    "endOffset": 3990
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1836,
+                        "endColumn": 98,
+                        "endOffset": 1930
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 3995,
+                    "endColumn": 93,
+                    "endOffset": 4084
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1935,
+                        "endColumn": 93,
+                        "endOffset": 2024
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 4089,
+                    "endColumn": 96,
+                    "endOffset": 4181
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2029,
+                        "endColumn": 96,
+                        "endOffset": 2121
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 4186,
+                    "endColumn": 72,
+                    "endOffset": 4254
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 2126,
+                        "endColumn": 72,
+                        "endOffset": 2194
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 4259,
+                    "endColumn": 97,
+                    "endOffset": 4352
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 2199,
+                        "endColumn": 97,
+                        "endOffset": 2292
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 4357,
+                    "endColumn": 96,
+                    "endOffset": 4449
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 2297,
+                        "endColumn": 96,
+                        "endOffset": 2389
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 4454,
+                    "endColumn": 98,
+                    "endOffset": 4548
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 2394,
+                        "endColumn": 98,
+                        "endOffset": 2488
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 4553,
+                    "endColumn": 144,
+                    "endOffset": 4693
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 2493,
+                        "endColumn": 144,
+                        "endOffset": 2633
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 4698,
+                    "endColumn": 116,
+                    "endOffset": 4810
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2638,
+                        "endColumn": 116,
+                        "endOffset": 2750
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 4815,
+                    "endColumn": 117,
+                    "endOffset": 4928
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 2755,
+                        "endColumn": 117,
+                        "endOffset": 2868
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 4933,
+                    "endColumn": 115,
+                    "endOffset": 5044
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 2873,
+                        "endColumn": 115,
+                        "endOffset": 2984
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 5049,
+                    "endColumn": 95,
+                    "endOffset": 5140
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 2989,
+                        "endColumn": 95,
+                        "endOffset": 3080
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 5145,
+                    "endColumn": 92,
+                    "endOffset": 5233
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 3085,
+                        "endColumn": 92,
+                        "endOffset": 3173
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 5238,
+                    "endColumn": 103,
+                    "endOffset": 5337
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 3178,
+                        "endColumn": 103,
+                        "endOffset": 3277
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 5342,
+                    "endColumn": 79,
+                    "endOffset": 5417
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 3282,
+                        "endColumn": 79,
+                        "endOffset": 3357
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 5422,
                     "endColumn": 163,
-                    "endOffset": 2178
+                    "endOffset": 5581
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -384,11 +1030,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 2183,
+                    "startOffset": 5586,
                     "endColumn": 114,
-                    "endOffset": 2293
+                    "endOffset": 5696
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -403,11 +1049,11 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 2298,
+                    "startOffset": 5701,
                     "endColumn": 135,
-                    "endOffset": 2429
+                    "endOffset": 5832
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -422,11 +1068,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 2434,
+                    "startOffset": 5837,
                     "endColumn": 102,
-                    "endOffset": 2532
+                    "endOffset": 5935
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -441,11 +1087,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 2537,
+                    "startOffset": 5940,
                     "endColumn": 68,
-                    "endOffset": 2601
+                    "endOffset": 6004
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -460,11 +1106,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 2606,
+                    "startOffset": 6009,
                     "endColumn": 68,
-                    "endOffset": 2670
+                    "endOffset": 6073
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -479,11 +1125,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 2675,
+                    "startOffset": 6078,
                     "endColumn": 61,
-                    "endOffset": 2732
+                    "endOffset": 6135
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -498,11 +1144,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 62,
                     "startColumn": 4,
-                    "startOffset": 2737,
+                    "startOffset": 6140,
                     "endColumn": 71,
-                    "endOffset": 2804
+                    "endOffset": 6207
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -517,11 +1163,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 63,
                     "startColumn": 4,
-                    "startOffset": 2809,
+                    "startOffset": 6212,
                     "endColumn": 76,
-                    "endOffset": 2881
+                    "endOffset": 6284
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -536,11 +1182,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 64,
                     "startColumn": 4,
-                    "startOffset": 2886,
+                    "startOffset": 6289,
                     "endColumn": 94,
-                    "endOffset": 2976
+                    "endOffset": 6379
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -555,11 +1201,11 @@
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 65,
                     "startColumn": 4,
-                    "startOffset": 2981,
+                    "startOffset": 6384,
                     "endColumn": 76,
-                    "endOffset": 3053
+                    "endOffset": 6456
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -574,11 +1220,11 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 66,
                     "startColumn": 4,
-                    "startOffset": 3058,
+                    "startOffset": 6461,
                     "endColumn": 76,
-                    "endOffset": 3130
+                    "endOffset": 6533
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -593,11 +1239,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 67,
                     "startColumn": 4,
-                    "startOffset": 3135,
+                    "startOffset": 6538,
                     "endColumn": 87,
-                    "endOffset": 3218
+                    "endOffset": 6621
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -612,11 +1258,11 @@
             },
             {
                 "to": {
-                    "startLine": 34,
+                    "startLine": 68,
                     "startColumn": 4,
-                    "startOffset": 3223,
+                    "startOffset": 6626,
                     "endColumn": 102,
-                    "endOffset": 3321
+                    "endOffset": 6724
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -631,11 +1277,11 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 69,
                     "startColumn": 4,
-                    "startOffset": 3326,
+                    "startOffset": 6729,
                     "endColumn": 61,
-                    "endOffset": 3383
+                    "endOffset": 6786
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -650,11 +1296,11 @@
             },
             {
                 "to": {
-                    "startLine": 36,
+                    "startLine": 70,
                     "startColumn": 4,
-                    "startOffset": 3388,
+                    "startOffset": 6791,
                     "endColumn": 63,
-                    "endOffset": 3447
+                    "endOffset": 6850
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -669,11 +1315,11 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 71,
                     "startColumn": 4,
-                    "startOffset": 3452,
+                    "startOffset": 6855,
                     "endColumn": 120,
-                    "endOffset": 3568
+                    "endOffset": 6971
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -688,11 +1334,11 @@
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 72,
                     "startColumn": 4,
-                    "startOffset": 3573,
+                    "startOffset": 6976,
                     "endColumn": 107,
-                    "endOffset": 3676
+                    "endOffset": 7079
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -707,11 +1353,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 73,
                     "startColumn": 4,
-                    "startOffset": 3681,
+                    "startOffset": 7084,
                     "endColumn": 178,
-                    "endOffset": 3855
+                    "endOffset": 7258
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -726,11 +1372,11 @@
             },
             {
                 "to": {
-                    "startLine": 40,
+                    "startLine": 74,
                     "startColumn": 4,
-                    "startOffset": 3860,
+                    "startOffset": 7263,
                     "endColumn": 124,
-                    "endOffset": 3980
+                    "endOffset": 7383
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -745,11 +1391,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 75,
                     "startColumn": 4,
-                    "startOffset": 3985,
+                    "startOffset": 7388,
                     "endColumn": 126,
-                    "endOffset": 4107
+                    "endOffset": 7510
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -764,11 +1410,11 @@
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 76,
                     "startColumn": 4,
-                    "startOffset": 4112,
+                    "startOffset": 7515,
                     "endColumn": 201,
-                    "endOffset": 4309
+                    "endOffset": 7712
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -783,11 +1429,11 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 77,
                     "startColumn": 4,
-                    "startOffset": 4314,
+                    "startOffset": 7717,
                     "endColumn": 202,
-                    "endOffset": 4512
+                    "endOffset": 7915
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -802,11 +1448,11 @@
             },
             {
                 "to": {
-                    "startLine": 44,
+                    "startLine": 78,
                     "startColumn": 4,
-                    "startOffset": 4517,
+                    "startOffset": 7920,
                     "endColumn": 125,
-                    "endOffset": 4638
+                    "endOffset": 8041
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -821,11 +1467,11 @@
             },
             {
                 "to": {
-                    "startLine": 45,
+                    "startLine": 79,
                     "startColumn": 4,
-                    "startOffset": 4643,
+                    "startOffset": 8046,
                     "endColumn": 136,
-                    "endOffset": 4775
+                    "endOffset": 8178
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -840,11 +1486,11 @@
             },
             {
                 "to": {
-                    "startLine": 46,
+                    "startLine": 80,
                     "startColumn": 4,
-                    "startOffset": 4780,
+                    "startOffset": 8183,
                     "endColumn": 239,
-                    "endOffset": 5015
+                    "endOffset": 8418
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/res/values-th/values.xml",
@@ -859,11 +1505,11 @@
             },
             {
                 "to": {
-                    "startLine": 47,
+                    "startLine": 81,
                     "startColumn": 4,
-                    "startOffset": 5020,
+                    "startOffset": 8423,
                     "endColumn": 229,
-                    "endOffset": 5245
+                    "endOffset": 8648
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -878,11 +1524,11 @@
             },
             {
                 "to": {
-                    "startLine": 48,
+                    "startLine": 82,
                     "startColumn": 4,
-                    "startOffset": 5250,
+                    "startOffset": 8653,
                     "endColumn": 121,
-                    "endOffset": 5367
+                    "endOffset": 8770
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -897,11 +1543,11 @@
             },
             {
                 "to": {
-                    "startLine": 49,
+                    "startLine": 83,
                     "startColumn": 4,
-                    "startOffset": 5372,
+                    "startOffset": 8775,
                     "endColumn": 106,
-                    "endOffset": 5474
+                    "endOffset": 8877
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -916,11 +1562,11 @@
             },
             {
                 "to": {
-                    "startLine": 50,
+                    "startLine": 84,
                     "startColumn": 4,
-                    "startOffset": 5479,
+                    "startOffset": 8882,
                     "endColumn": 177,
-                    "endOffset": 5652
+                    "endOffset": 9055
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -935,11 +1581,11 @@
             },
             {
                 "to": {
-                    "startLine": 51,
+                    "startLine": 85,
                     "startColumn": 4,
-                    "startOffset": 5657,
+                    "startOffset": 9060,
                     "endColumn": 123,
-                    "endOffset": 5776
+                    "endOffset": 9179
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -954,11 +1600,11 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 86,
                     "startColumn": 4,
-                    "startOffset": 5781,
+                    "startOffset": 9184,
                     "endColumn": 198,
-                    "endOffset": 5975
+                    "endOffset": 9378
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -973,11 +1619,11 @@
             },
             {
                 "to": {
-                    "startLine": 53,
+                    "startLine": 87,
                     "startColumn": 4,
-                    "startOffset": 5980,
+                    "startOffset": 9383,
                     "endColumn": 130,
-                    "endOffset": 6106
+                    "endOffset": 9509
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -992,11 +1638,11 @@
             },
             {
                 "to": {
-                    "startLine": 54,
+                    "startLine": 88,
                     "startColumn": 4,
-                    "startOffset": 6111,
+                    "startOffset": 9514,
                     "endColumn": 180,
-                    "endOffset": 6287
+                    "endOffset": 9690
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -1011,11 +1657,11 @@
             },
             {
                 "to": {
-                    "startLine": 55,
+                    "startLine": 89,
                     "startColumn": 4,
-                    "startOffset": 6292,
+                    "startOffset": 9695,
                     "endColumn": 93,
-                    "endOffset": 6381
+                    "endOffset": 9784
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -1030,11 +1676,11 @@
             },
             {
                 "to": {
-                    "startLine": 56,
+                    "startLine": 90,
                     "startColumn": 4,
-                    "startOffset": 6386,
+                    "startOffset": 9789,
                     "endColumn": 97,
-                    "endOffset": 6479
+                    "endOffset": 9882
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -1049,11 +1695,11 @@
             },
             {
                 "to": {
-                    "startLine": 57,
+                    "startLine": 91,
                     "startColumn": 4,
-                    "startOffset": 6484,
+                    "startOffset": 9887,
                     "endColumn": 112,
-                    "endOffset": 6592
+                    "endOffset": 9995
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/values-th/values.xml",
@@ -1068,11 +1714,11 @@
             },
             {
                 "to": {
-                    "startLine": 58,
+                    "startLine": 92,
                     "startColumn": 4,
-                    "startOffset": 6597,
+                    "startOffset": 10000,
                     "endColumn": 58,
-                    "endOffset": 6651
+                    "endOffset": 10054
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-th/values-th.xml",
@@ -1087,11 +1733,258 @@
             },
             {
                 "to": {
-                    "startLine": 59,
+                    "startLine": 93,
                     "startColumn": 4,
-                    "startOffset": 6656,
+                    "startOffset": 10059,
+                    "endColumn": 105,
+                    "endOffset": 10160
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 278,
+                        "endColumn": 105,
+                        "endOffset": 379
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 94,
+                    "startColumn": 4,
+                    "startOffset": 10165,
+                    "endColumn": 109,
+                    "endOffset": 10270
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 384,
+                        "endColumn": 109,
+                        "endOffset": 489
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 95,
+                    "startColumn": 4,
+                    "startOffset": 10275,
+                    "endColumn": 106,
+                    "endOffset": 10377
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 494,
+                        "endColumn": 106,
+                        "endOffset": 596
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 96,
+                    "startColumn": 4,
+                    "startOffset": 10382,
+                    "endColumn": 112,
+                    "endOffset": 10490
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 601,
+                        "endColumn": 112,
+                        "endOffset": 709
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 97,
+                    "startColumn": 4,
+                    "startOffset": 10495,
+                    "endColumn": 113,
+                    "endOffset": 10604
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 714,
+                        "endColumn": 113,
+                        "endOffset": 823
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 98,
+                    "startColumn": 4,
+                    "startOffset": 10609,
+                    "endColumn": 102,
+                    "endOffset": 10707
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 828,
+                        "endColumn": 102,
+                        "endOffset": 926
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 99,
+                    "startColumn": 4,
+                    "startOffset": 10712,
+                    "endColumn": 93,
+                    "endOffset": 10801
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 931,
+                        "endColumn": 93,
+                        "endOffset": 1020
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 100,
+                    "startColumn": 4,
+                    "startOffset": 10806,
+                    "endColumn": 121,
+                    "endOffset": 10923
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1025,
+                        "endColumn": 121,
+                        "endOffset": 1142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 101,
+                    "startColumn": 4,
+                    "startOffset": 10928,
+                    "endColumn": 99,
+                    "endOffset": 11023
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1147,
+                        "endColumn": 99,
+                        "endOffset": 1242
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 102,
+                    "startColumn": 4,
+                    "startOffset": 11028,
+                    "endColumn": 83,
+                    "endOffset": 11107
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1247,
+                        "endColumn": 83,
+                        "endOffset": 1326
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 103,
+                    "startColumn": 4,
+                    "startOffset": 11112,
+                    "endColumn": 93,
+                    "endOffset": 11201
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/values-th/values-th.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1331,
+                        "endColumn": 93,
+                        "endOffset": 1420
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 104,
+                    "startColumn": 4,
+                    "startOffset": 11206,
+                    "endColumn": 102,
+                    "endOffset": 11304
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 281,
+                        "endColumn": 102,
+                        "endOffset": 379
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 105,
+                    "startColumn": 4,
+                    "startOffset": 11309,
+                    "endColumn": 94,
+                    "endOffset": 11399
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 384,
+                        "endColumn": 94,
+                        "endOffset": 474
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 106,
+                    "startColumn": 4,
+                    "startOffset": 11404,
                     "endColumn": 80,
-                    "endOffset": 6732
+                    "endOffset": 11480
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-th/values-th.xml",
@@ -1106,11 +1999,11 @@
             },
             {
                 "to": {
-                    "startLine": 60,
+                    "startLine": 107,
                     "startColumn": 4,
-                    "startOffset": 6737,
+                    "startOffset": 11485,
                     "endColumn": 100,
-                    "endOffset": 6833
+                    "endOffset": 11581
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-th/values-th.xml",
@@ -1120,6 +2013,25 @@
                         "startOffset": 2050,
                         "endColumn": 100,
                         "endOffset": 2146
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 108,
+                    "startColumn": 4,
+                    "startOffset": 11586,
+                    "endColumn": 103,
+                    "endOffset": 11685
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.4.0/res/values-th/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 288,
+                        "endColumn": 103,
+                        "endOffset": 387
                     }
                 }
             }

@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="366047012176970604" name="cast_casting_to_device">"%1$s ಗೆ ಬಿತ್ತರಿಸಲಾಗುತ್ತಿದೆ"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"ಮುಚ್ಚಿದ ಶೀರ್ಷಿಕೆಗಳು"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"ಮುಚ್ಚಲಾಗಿರುವ ಶೀರ್ಷಿಕೆಗಳು ಲಭ್ಯವಿಲ್ಲ"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸಿ"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"ಆಲ್ಬಮ್ ಕಲೆ"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."</string>
+    <string msgid="7884080323096468593" name="cast_forward">"ಫಾರ್ವರ್ಡ್"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"ಹತ್ತು ಸೆಕೆಂಡುಗಳಷ್ಟು ಫಾರ್ವರ್ಡ್ ಮಾಡು"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"ಮೂವತ್ತು ಸೆಕೆಂಡುಗಳಷ್ಟು ಫಾರ್ವರ್ಡ್ ಮಾಡು"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"ಮ್ಯೂಟ್"</string>
+    <string msgid="5319032370587661362" name="cast_notification_connected_message">"<ns1:g id="NAME">%1$s</ns1:g> ಗೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗಿದೆ"</string>
+    <string msgid="2758865089947797888" name="cast_notification_connecting_message">"<ns1:g id="NAME">%1$s</ns1:g> ಗೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗುತ್ತಿದೆ"</string>
+    <string msgid="5232008641593292969" name="cast_notification_disconnect">"ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸು"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"ವಿರಾಮ"</string>
+    <string msgid="5906987965619702702" name="cast_play">"ಪ್ಲೇ"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"ರಿವೈಂಡ್"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"ಹತ್ತು ಸೆಕೆಂಡುಗಳಷ್ಟು ರಿವೈಂಡ್ ಮಾಡು"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"ಮೂವತ್ತು ಸೆಕೆಂಡುಗಳಷ್ಟು ರಿವೈಂಡ್ ಮಾಡು"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"ಪ್ಲೇಬ್ಯಾಕ್‌ ಸೀಕ್ ನಿಯಂತ್ರಣ"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"ಮುಂದಿನ ಐಟಂಗೆ ಸ್ಕಿಪ್‌ ಮಾಡಿ"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"ಹಿಂದಿನ ಐಟಂಗೆ ಸ್ಕಿಪ್‌ ಮಾಡಿ"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"ನಿಲ್ಲಿಸು"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"ಲೈವ್ ಸ್ಟ್ರೀಮ್ ನಿಲ್ಲಿಸು"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"ಆಡಿಯೊ"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"ರದ್ದು ಮಾಡು"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"<ns1:g id="POSITION">%1$d</ns1:g> ಟ್ರ್ಯಾಕ್ ಮಾಡಿ"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"ಯಾವುದೇ ಆಡಿಯೋ ಟ್ರ್ಯಾಕ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"ಯಾವುದೇ ಪಠ್ಯ ಟ್ರ್ಯಾಕ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ"</string>
+    <string msgid="2332432312191219516" name="cast_tracks_chooser_dialog_no_tracks_available">"ಯಾವುದೇ ಟ್ರ್ಯಾಕ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"ಯಾವುದೂ ಅಲ್ಲ"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"ಸರಿ"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"ಉಪಶೀರ್ಷಿಕೆಗಳು"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"ಅನ್‌ಮ್ಯೂಟ್"</string>
     <string name="com_facebook_device_auth_instructions">ನಿಮ್ಮ ಸ್ಮಾರ್ಟ್‌ ಫೋನ್‌ ಅಥವಾ ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲಿ &lt;b>facebook.com/device&lt;/b>&lt;br /> ಗೆ ಭೇಟಿ ನೀಡಿ ಮತ್ತು ಈ ಕೋಡ್‌ ಅನ್ನು ನಮೂದಿಸಿ:</string>
     <string name="com_facebook_image_download_unknown_error">ಚಿತ್ರವನ್ನು ಡೌನ್‌ಲೋಡ್‌ ಮಾಡುವಾಗ ಅನಿರೀಕ್ಷಿತ ದೋಷ ಕಂಡುಬಂದಿದೆ.</string>
     <string name="com_facebook_internet_permission_error_message">WebView ಲಾಗಿನ್‌ಗೆ ಇಂಟರ್ನೆಟ್ ಅನುಮತಿಯ ಅಗತ್ಯವಿದೆ</string>
@@ -38,4 +72,7 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"ಸೈನ್ ಇನ್"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Google ಮೂಲಕ ಸೈನ್ ಇನ್ ಮಾಡಿ"</string>
     <string name="messenger_send_button_text">ಕಳುಹಿಸು</string>
+    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ"</string>
+    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"ಹುಡುಕು"</string>
+    <string msgid="363496807345461806" name="wallet_buy_button_place_holder">"Google ನಲ್ಲಿ ಖರೀದಿಸಿ"</string>
 </resources>

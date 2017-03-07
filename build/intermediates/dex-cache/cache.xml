@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-clearcut-9.4.0_7aa37372f4a54ba21ce9b8c4366a2b200f4840ed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -12,12 +21,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b6d9b70f93bbeb872d0948bc064ae3f3f2bcbac">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.4.0_f3d350154678b58c2ec3f23167906bd6028ba627/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="80c464dbd412168b4c540526f18843b5f9d42f0e">
+        sha1="0388c86d103783f72e90270ad6596561ecaa29e9">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_83a4dc6c9c7f3d880ffa9a5902f87e83f1bed7ed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7ea53c4458b80e8ea71f7fd6831fa184c501377b">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-api-9.4.0_35282eec76121623e4d486df1191f25efbbffd65/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b1acf13f1b7d8232af78a30833f9a966d1394c84">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-9.4.0_e1a9bf4a1f781125d03541d9471af8403d8a4c9f/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -36,6 +72,15 @@
         revision="25.0.0"
         sha1="d69f3a271ef0e7c771d700ff75a6df565278dc01">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.GrenderG-Toasty-1.1.2_884dcb5a371a08f47a48a3ec56575028ef788dcd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.4.0_1aacea43f682b3821c68e3490007d2047af2c824/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -66,12 +111,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="954697ee6ea7bdd596babf4f70e8b7a17ca7649e">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-9.4.0_90cb671fd0967e5cf7252f3cf89501f014fdf7ff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.0_84f4b250eba2b2ca898d326c29af33bb85e3e08a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5e8e535d15834e824817bdf5370556f62b4b2a5">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-9.4.0_2ca546f4ab290e62b20b77ee36d5a9bc74e9164f/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -99,6 +162,24 @@
         revision="25.0.0"
         sha1="d729037ff4a83220d1f706356ff0dbe4b85e0d73">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.firebaseui-firebase-ui-database-0.5.3_8e49f57b23452e11ac18aa9b1c60968667c5ea16/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.4.0_110a0a71e2e5d154421e019d18b1a1188bb18b54/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e6e2251f3d3abf4eecd6bf6919d41fc7af497852">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-9.4.0_0ed70a8bcd81443b35fdc731189d28a6e1fbf174/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,6 +219,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd51b31890731591729f046d7a09c4fe4e483ed1">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-9.4.0_399c3ff96e0c4dbf09b913c6cb217a928afca9a5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -153,6 +243,15 @@
         revision="25.0.0"
         sha1="c341a7ad32bc2eef9dcfab239262b77ac60788cc">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.pkmmte.view-circularimageview-1.1_85e74466707833b4dfb8658aec0e8835f0b11b5c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8ce5e7a4a146dddd1d9e66b09c714a6c149916d8">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-9.4.0_357d0116180f07d2635b16af6ff9e16849cc0d52/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -201,6 +300,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ad33eb600f3d80bdff5ce355c90d5533ade652a">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-9.4.0_e2a13c00bd3cdb3590cb8c33ba6ffd53129346ce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-23.0.0_f3475015dfe7885d08f83cb21f6930f031a11dca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -225,6 +342,15 @@
         revision="25.0.0"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_59f681689827b244dc67ccdf35883c6e578dc0b7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-9.4.0_c6022f388bcf0fd68fef25100e7f9f47c8fc91d6/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -261,6 +387,42 @@
         revision="25.0.0"
         sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.0_9ac00837baad94fa49387cd151d495a01b2da722/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d49118ba67a101c4895f0581f17142cba85b330b">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-9.4.0_dd9a1873b134fae3c1865b0f3fb949e4b51e69a6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-contextmanager/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="72eacac37fc64e95d53abd2a041bf81a952d8615">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-contextmanager-9.4.0_e523b9741085ed78b4a13effe87ce525a2445879/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7bc6ea2bcfd6de4b7085e0f3a01616c5c8e0e2ad">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-9.4.0_307d45c6a7a869cc88f8b820d024efe58a412cad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a432629397351d3ec7f27a23d258b229b81af08f">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-9.4.0_322d829debe4c28b226dc59cd19199937c604a2d/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -354,6 +516,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="670df81539ab71918d49b186598b7eff08ef6563">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.4.0_33980df416c1877379f6447dcd74c3650cd7df57/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c10df7344e31161852c20bb8143fc37319aa10ec">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-9.4.0_a30536e9a59c6ad9a79a423aba706e5822f70fd1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.3.1/4d53b7d6983247af02b8fe7e4228fff555a5e828/firebase-client-jvm-2.3.1.jar"
         jumboMode="true"
         optimize="true"
@@ -363,12 +543,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8197651ce1af4d89b47f4545cc720bc4f8611e7d">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-9.4.0_29c983bec4667413d83fb7451a944aca1e760278/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet/1.7.0/4fdcf1fc27c1a8f55d1109df986c923152f07759/javapoet-1.7.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="4fdcf1fc27c1a8f55d1109df986c923152f07759">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/javapoet-1.7.0_d5f9d1354787915518085f4cf1f2517ce1f84b4f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="461e4257888c25ec05abcd91e758fe7f4949230a">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-9.4.0_3547fa21e8d0e7efbd3b241dbc202d09dc1753cc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-9.4.0_74cf0864cb88e171ba2b6b83d5e959fd2072961f/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -412,7 +619,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="60dc542aa5bb4509ddcd49d1cc5e1216c24408d0">
+        sha1="b847e83a15b991eacadd23afc409383c02ff1053">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_15c388f90427f9a331ecb3e0865ab5d2b228a4db/classes.dex" />
     </item>
     <item
@@ -480,12 +687,57 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="03829a2618892d438a1f59c6286699ca1f476e93">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-9.4.0_bd8e3110121f131e63c3170d90aadbf97a77fa13/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0b060160e7daee343f5315b3da91b0ff2d7eed89">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.4.0_a538d6787cc028ccedc00dbf99e06c6dc14ef7d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/.gradle/caches/modules-2/files-2.1/commons-digester/commons-digester/1.8.1/3dec9b9c7ea9342d4dbe8c38560080d85b44a015/commons-digester-1.8.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="3dec9b9c7ea9342d4dbe8c38560080d85b44a015">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-digester-1.8.1_c8ab73893a2751f3052bf10bd1213889865427d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e04c0b3683ca45b343284d93e5594b5f9044551">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-9.4.0_28b9cacfe1327f9714d2e62d641093d88fa9d47e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="736d8893fb702f128a153c9d87c9c29724d37872">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-9.4.0_35bb3858a04ae22b74942ceb284ee348ad81c0b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ba47b210d36301e237ccfea860eaada04590f12a">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-9.4.0_a20a2b69d0121bb1e60ef321fefc430c65c9ddf3/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -504,6 +756,15 @@
         revision="25.0.0"
         sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.4.0_0721cb6be14544bfc37aeaf44b9297f5c424f0b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.4.0_f4913344bac0e37431ed751f885bd0172a9496d6/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -534,6 +795,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-9.4.0_1496b3569a165bae39502d10406de0c88234a792/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -549,6 +819,24 @@
         revision="25.0.0"
         sha1="d237f051940b80f6176360a40ce45ffd0830779e">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.tt-whorlviewlibrary-1.0.3_04f1fe0ed59b1c8f51ef2688c3d529298936e4fa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-9.4.0_d28f7ec170dc5e9b81927550c1b04fd5d93e1797/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.0_ec383bf413a248c1f1fa77e460f0b17a8cec2f35/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -612,6 +900,15 @@
         revision="25.0.0"
         sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
         <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.4.0_2fbf5da361534cfb1c8784e633a36358e1397308/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e35002351f2d415093a9b564652d4b56be6a0593">
+        <dex dex="/home/amit/Buildapk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-9.4.0_971b9ac1ba38b5dd332ace79f1300f6ca8800ff4/classes.dex" />
     </item>
     <item
         is-multidex="true"

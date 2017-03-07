@@ -334,7 +334,8 @@ public class Detailfrag extends Fragment {
                                                     lik = 0;
                                                 }
                                                 mDatabaselike.child(post_key).child(user.getUid()).removeValue();
-                                                mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate(),model.getEmailflag()));
+                                                mDatabase.child(post_key).child("like").setValue(lik);
+                                              //  mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate(),model.getEmailflag()));
                                                 //  mDatabaselike.child(post_key).child("like").setValue(lik);
                                            /* mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
@@ -374,7 +375,9 @@ public class Detailfrag extends Fragment {
                                                                 unlik = 0;
                                                             }
                                                             mDatabaseunlike.child(post_key).child(user.getUid()).removeValue();
-                                                            mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, unlik, model.getTime(), model.getDate(),model.getEmailflag()));
+                                                            mDatabase.child(post_key).child("like").setValue(lik);
+                                                            mDatabase.child(post_key).child("unlike").setValue(unlik);
+                                                          //  mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, unlik, model.getTime(), model.getDate(),model.getEmailflag()));
                                                           /* mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                @Override
                                                                public void onDataChange(DataSnapshot dataSnapshot) {
@@ -405,7 +408,8 @@ public class Detailfrag extends Fragment {
                                                 });
                                                 lik = model.getLike() + 1;
                                                 mDatabaselike.child(post_key).child(user.getUid()).setValue("Liked");
-                                                mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate(),model.getEmailflag()));
+                                                mDatabase.child(post_key).child("like").setValue(lik);
+                                            //    mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate(),model.getEmailflag()));
                                                 //  final int
 
                                                 //   processlike=true;
@@ -527,7 +531,8 @@ public class Detailfrag extends Fragment {
                                                     unlike = 0;
                                                 }
                                                 mDatabaseunlike.child(post_key).child(user.getUid()).removeValue();
-                                                mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), model.getLike(), unlike, model.getTime(), model.getDate(),model.getEmailflag()));
+                                                mDatabase.child(post_key).child("unlike").setValue(unlike);
+                                              //  mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), model.getLike(), unlike, model.getTime(), model.getDate(),model.getEmailflag()));
                                           /*  mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {
@@ -563,7 +568,9 @@ public class Detailfrag extends Fragment {
                                                                 lyk = 0;
                                                             }
                                                             mDatabaselike.child(post_key).child(user.getUid()).removeValue();
-                                                            mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lyk, unlike, model.getTime(), model.getDate(),model.getEmailflag()));
+                                                            mDatabase.child(post_key).child("like").setValue(lyk);
+                                                            mDatabase.child(post_key).child("unlike").setValue(unlike);
+                                                          //  mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lyk, unlike, model.getTime(), model.getDate(),model.getEmailflag()));
                                                       /*  mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                             @Override
                                                             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -600,7 +607,8 @@ public class Detailfrag extends Fragment {
                                                 mDatabaseunlike.child(post_key).child(user.getUid()).setValue("Unliked");
                                                 // final int
                                                 unlike = model.getUnlike() + 1;
-                                                mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), model.getLike(), unlike, model.getTime(), model.getDate(),model.getEmailflag()));
+                                                mDatabase.child(post_key).child("unlike").setValue(unlike);
+                                               // mDatabase.child(post_key).setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), model.getLike(), unlike, model.getTime(), model.getDate(),model.getEmailflag()));
                                            /* mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
                                                 public void onDataChange(DataSnapshot dataSnapshot) {

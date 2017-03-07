@@ -19,6 +19,40 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Dela med"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Dela med %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Komprimera"</string>
+    <string msgid="366047012176970604" name="cast_casting_to_device">"Castar till %1$s"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"Textning"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"Textning är inte tillgänglig"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"Koppla från"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"Skivomslag"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"Läser in …"</string>
+    <string msgid="7884080323096468593" name="cast_forward">"Framåt"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"Tio sekunder framåt"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"Trettio sekunder framåt"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"Stäng av ljudet"</string>
+    <string msgid="5319032370587661362" name="cast_notification_connected_message">"Ansluten till <ns1:g id="NAME">%1$s</ns1:g>"</string>
+    <string msgid="2758865089947797888" name="cast_notification_connecting_message">"Ansluter till <ns1:g id="NAME">%1$s</ns1:g>"</string>
+    <string msgid="5232008641593292969" name="cast_notification_disconnect">"Koppla från"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"Pausa"</string>
+    <string msgid="5906987965619702702" name="cast_play">"Spela upp"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"Spola tillbaka"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"Spola tillbaka tio sekunder"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"Spola tillbaka trettio sekunder"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"Sökreglage för uppspelning"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"Hoppa till nästa objekt"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"Hoppa till föregående objekt"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"Stoppa"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"Stoppa liveströmningen"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"Ljud"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"Avbryt"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"Spår <ns1:g id="POSITION">%1$d</ns1:g>"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"Det finns inga ljudspår"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"Det finns inga textspår"</string>
+    <string msgid="2332432312191219516" name="cast_tracks_chooser_dialog_no_tracks_available">"Det finns inga spår"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"Inga"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"Ok"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"Undertexter"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"Slå på ljudet"</string>
     <string name="com_facebook_device_auth_instructions">Besök &lt;b>facebook.com/device&lt;/b>&lt;br /> på din smartphone eller dator och ange den här koden:</string>
     <string name="com_facebook_image_download_unknown_error">Oväntat fel vid hämtning av en bild.</string>
     <string name="com_facebook_internet_permission_error_message">Webbinloggning kräver internetbehörighet</string>
@@ -57,6 +91,20 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"Logga in"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Logga in med Google"</string>
     <string name="messenger_send_button_text">Skicka</string>
+    <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Casta"</string>
+    <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Söker efter enheter ..."</string>
+    <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"Anslut till enhet"</string>
+    <string msgid="109793632378378069" name="mr_media_route_controller_disconnect">"Koppla från"</string>
+    <string msgid="3641544772007543920" name="mr_media_route_controller_no_info_available">"Det finns ingen information"</string>
+    <string msgid="8315773974194466049" name="mr_media_route_controller_pause">"Pausa"</string>
+    <string msgid="5214423499524760404" name="mr_media_route_controller_play">"Spela upp"</string>
+    <string msgid="379358765881274425" name="mr_media_route_controller_settings_description">"Inställningar för omdirigering"</string>
+    <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Sluta casta"</string>
+    <string msgid="5441529851481176817" name="mr_system_route_name">"System"</string>
+    <string msgid="7498112907524977311" name="mr_user_route_category_name">"Enheter"</string>
+    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Rensa sökning"</string>
+    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Söka"</string>
     <string msgid="146198913615257606" name="search_menu_title">"Sök"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
+    <string msgid="363496807345461806" name="wallet_buy_button_place_holder">"Köp med Google"</string>
 </resources>

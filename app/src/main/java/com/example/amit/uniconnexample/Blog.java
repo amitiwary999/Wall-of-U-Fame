@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -25,6 +26,7 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -49,8 +51,21 @@ import android.widget.Toast;
 import com.example.amit.uniconnexample.Model.BlogModel;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 //import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResult;
+import com.google.android.gms.location.LocationSettingsStates;
+import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -66,12 +81,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by amit on 31/10/16.
  */
 
-public class Blog extends AppCompatActivity {
+public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
     private FirebaseAuth auth;
     private Uri mImageUri = null;
     private StorageReference mStorage;
@@ -92,12 +109,75 @@ public class Blog extends AppCompatActivity {
     List<Address> addresses;
     double latitude,longitude;
     GoogleApiClient mGoogleApiClient;
+    PendingResult<LocationSettingsResult> result;
+    private LocationRequest mLocationRequest;
+    private boolean mRequestingLocationUpdates = false;
+    LocationSettingsRequest.Builder builder;
+    // Location updates intervals in sec
+    private static int UPDATE_INTERVAL = 10000; // 10 sec
+    private static int FATEST_INTERVAL = 5000; // 5 sec
+    private static int DISPLACEMENT = 10; // 10 meters
     private static final int GALLERY_REQUEST = 1;
+    private static final int LOCATION_SETTING_REQUEST = 1;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
         mProgress = new ProgressDialog(this);
+        if (checkPlayServices()) {
+
+            // Building the GoogleApi client
+            buildGoogleApiClient();
+            createLocationRequest();
+        }
+        builder = new LocationSettingsRequest.Builder()
+                .addLocationRequest(mLocationRequest);
+       /* result.setResultCallback(new ResultCallback<LocationSettingsResult>() {
+            @Override
+            public void onResult(@NonNull LocationSettingsResult locationSettingsResult) {
+                final Status status = locationSettingsResult.getStatus();
+                Toast.makeText(Blog.this,"Start",Toast.LENGTH_SHORT).show();
+                final LocationSettingsStates locationSettingsStates = locationSettingsResult.getLocationSettingsStates();
+                switch (status.getStatusCode()) {
+
+                    case LocationSettingsStatusCodes.SUCCESS:
+                        Toast.makeText(Blog.this,"Starst",Toast.LENGTH_SHORT).show();
+                        // All location settings are satisfied. The client can
+                        // initialize location requests here.
+                        break;
+                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
+                        Toast.makeText(Blog.this,"Startr",Toast.LENGTH_SHORT).show();
+                        // Location settings are not satisfied, but this can be fixed
+                        // by showing the user a dialog.
+                        try {
+                            // Show the dialog by calling startResolutionForResult(),
+                            // and check the result in onActivityResult().
+                            status.startResolutionForResult(
+                                    Blog.this,
+                                    LOCATION_SETTING_REQUEST);
+                        } catch (IntentSender.SendIntentException e) {
+                            // Ignore the error.
+                        }
+                        break;
+                    case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
+                        Toast.makeText(Blog.this,"Startu",Toast.LENGTH_SHORT).show();
+                        // Location settings are not satisfied. However, we have no way
+                        // to fix the settings so we won't show the dialog.
+                        break;
+                }
+            }
+        });*/
+
+
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(Blog.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(Blog.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(Blog.this,
+                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 12345);
+                return;
+            }
+        }
+        geocoder = new Geocoder(this, Locale.getDefault());
+
        /* gps = new TrackGPS(this);
         if(gps.canGetLocation()){
 
@@ -319,6 +399,14 @@ public class Blog extends AppCompatActivity {
     protected void onStart() {
 //        mGoogleApiClient.connect();
         super.onStart();
+        if (mGoogleApiClient != null) {
+            mGoogleApiClient.connect();
+        }
+        PendingResult<LocationSettingsResult> result1;
+        result1 = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
+                builder.build());
+        settingLocation(result1);
+        Log.e("Blog","Hi"+cityname);
     }
 
     @Override
@@ -326,12 +414,29 @@ public class Blog extends AppCompatActivity {
      //   mGoogleApiClient.disconnect();
         super.onStop();
         Log.e("Onstop","stop");
+        mGoogleApiClient.disconnect();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
      //   gps.stopUsingGPS();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        stopLocationUpdates();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        checkPlayServices();
+        if (mGoogleApiClient.isConnected() ) {
+            startLocationUpdates();
+        }
+      //  showLocation();
     }
 
 
@@ -349,6 +454,13 @@ public class Blog extends AppCompatActivity {
             final String time_val=time;
             final String date_val=date;
             final String check_mail=checkmail;
+            final String city_name;
+            if(cityname!=null) {
+                city_name = cityname.substring(0, cityname.indexOf(","));
+            }else{
+                city_name=null;
+            }
+
             // bl=new Blog(title_val,desc_val,mImageUri.toString());
          //   if ( !TextUtils.isEmpty(desc_val) && mImageUri != null) {
                 if(mImageUri!=null) {
@@ -360,7 +472,7 @@ public class Blog extends AppCompatActivity {
                             // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                             Uri downloadUrl = taskSnapshot.getDownloadUrl();
                             DatabaseReference databaseReference=mDatabas.push();
-                            databaseReference.setValue(new BlogModel(id_val,desc_val, downloadUrl.toString(), name_val, photo_val,0,0,time_val,date_val,check_mail));
+                            databaseReference.setValue(new BlogModel(id_val,desc_val, downloadUrl.toString(), name_val, photo_val,0,0,time_val,date_val,check_mail,city_name));
                             DatabaseReference newPost = mDatabase.push();
                            // newPost.setValue(new Blogmodel(id_val,desc_val, downloadUrl.toString(), name_val, photo_val,0,0,time_val,date_val));
                        /* newPost.child("title").setValue(title_val);
@@ -392,7 +504,7 @@ public class Blog extends AppCompatActivity {
 
                 }else if(desc_val.length()!=0){
                     DatabaseReference newPost=mDatabase.push();
-                    newPost.setValue(new Blogmodel(id_val,desc_val,null,name_val,photo_val,0,0,time_val,date_val));
+                    newPost.setValue(new BlogModel(id_val,desc_val,null,name_val,photo_val,0,0,time_val,date_val,check_mail,city_name));
                     mProgress.dismiss();
                     startActivity(new Intent(Blog.this, Tabs.class));
                     finish();
@@ -454,6 +566,31 @@ public class Blog extends AppCompatActivity {
                 imageView.setImageBitmap(bitmap);
             } catch (IOException e) {
                 e.printStackTrace();
+            }
+        }
+        else if(requestCode==LOCATION_SETTING_REQUEST){
+            Log.e("Blog","Location");
+            switch(resultCode){
+                case Activity.RESULT_OK:
+                    Log.e("Blog","Ok");
+                    Handler handler=new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                             showLocation();
+                        }
+                    },2000);
+
+                    break;
+                case RESULT_CANCELED:
+                    Log.e("Blog","Cancel");
+                    PendingResult<LocationSettingsResult> result;
+                    result = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
+                            builder.build());
+                    settingLocation(result);
+                    break;
+                default:
+                    break;
             }
         }
     }
@@ -630,6 +767,154 @@ public class Blog extends AppCompatActivity {
                 Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo() != null;
     }
+
+    private void showLocation(){
+        if(ContextCompat.checkSelfPermission(Blog.this, Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(Blog.this, Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED)  {
+            ActivityCompat.requestPermissions(Blog.this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},12345);
+            return;
+        }
+        try {
+            mLastLocation = LocationServices.FusedLocationApi
+                    .getLastLocation(mGoogleApiClient);
+            if (mLastLocation != null) {
+                latitude = mLastLocation.getLatitude();
+                longitude = mLastLocation.getLongitude();
+
+                addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                cityname = addresses.get(0).getAddressLine(2);
+                Toast.makeText(Blog.this,cityname,Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "ADDRESS NOT FOUND", Toast.LENGTH_SHORT).show();
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    protected void createLocationRequest() {
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(UPDATE_INTERVAL);
+        mLocationRequest.setFastestInterval(FATEST_INTERVAL);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setSmallestDisplacement(DISPLACEMENT);
+    }
+
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API).build();
+    }
+
+
+    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+    private boolean checkPlayServices() {
+        GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
+        int resultCode = apiAvailability.isGooglePlayServicesAvailable(this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (apiAvailability.isUserResolvableError(resultCode)) {
+                apiAvailability.getErrorDialog(this, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST)
+                        .show();
+            } else {
+                Log.i("Push Check play", "This device is not supported.");
+                finish();
+            }
+            return false;
+        }
+        return true;
+    }
+
+    protected void startLocationUpdates() {
+      if(ContextCompat.checkSelfPermission(Blog.this, Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(Blog.this, Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED)  {
+          ActivityCompat.requestPermissions(Blog.this,
+                  new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},12345);
+          return;
+      }
+        LocationServices.FusedLocationApi.requestLocationUpdates(
+                mGoogleApiClient, mLocationRequest, this);
+
+    }
+
+    /**
+     * Stopping location updates
+     */
+    protected void stopLocationUpdates() {
+        LocationServices.FusedLocationApi.removeLocationUpdates(
+                mGoogleApiClient, this);
+    }
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+          Toast.makeText(Blog.this,"Connection failed: ConnectionResult.getErrorCode() = "
+                  + connectionResult.getErrorCode(),Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        mLastLocation=location;
+    }
+    private void settingLocation( PendingResult<LocationSettingsResult> result1){
+        result1.setResultCallback(new ResultCallback<LocationSettingsResult>() {
+            @Override
+            public void onResult(@NonNull LocationSettingsResult locationSettingsResult) {
+                final Status status = locationSettingsResult.getStatus();
+                Toast.makeText(Blog.this,"Start",Toast.LENGTH_SHORT).show();
+                final LocationSettingsStates locationSettingsStates = locationSettingsResult.getLocationSettingsStates();
+                switch (status.getStatusCode()) {
+
+                    case LocationSettingsStatusCodes.SUCCESS:
+                        Toast.makeText(Blog.this,"Starst",Toast.LENGTH_SHORT).show();
+                        showLocation();
+                        // All location settings are satisfied. The client can
+                        // initialize location requests here.
+                        break;
+                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
+                        Toast.makeText(Blog.this,"Startr",Toast.LENGTH_SHORT).show();
+                        // Location settings are not satisfied, but this can be fixed
+                        // by showing the user a dialog.
+                        try {
+                            // Show the dialog by calling startResolutionForResult(),
+                            // and check the result in onActivityResult().
+                            status.startResolutionForResult(
+                                    Blog.this,
+                                    LOCATION_SETTING_REQUEST);
+                        } catch (IntentSender.SendIntentException e) {
+                            // Ignore the error.
+                        }
+                        break;
+                    case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
+                        Toast.makeText(Blog.this,"Startu",Toast.LENGTH_SHORT).show();
+                        // Location settings are not satisfied. However, we have no way
+                        // to fix the settings so we won't show the dialog.
+                        break;
+                }
+            }
+        });
+    }
+
+   /* @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //Log.d(TAG, "onActivityResult() called with: " + "requestCode = [" + requestCode + "], resultCode = [" + resultCode + "], data = [" + data + "]");
+        switch (requestCode) {
+            case Activity.RESULT_OK:
+                break;
+            case Activity.RESULT_CANCELED:
+                settingLocation();
+                Log.e("Blog", "RESULT_CANCELED");
+                break;
+            default:
+                break;
+        }
+    }*/
 
    /* @Override
     public void onLocationChanged(Location location) {

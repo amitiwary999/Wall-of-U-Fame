@@ -1,31 +1,44 @@
 package com.example.amit.uniconnexample;
 
+import android.*;
+import android.Manifest;
+import android.app.Activity;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.IdRes;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,6 +53,18 @@ import com.example.amit.uniconnexample.Fragment.Msgfrag;
 import com.example.amit.uniconnexample.Fragment.Notifrag;
 import com.example.amit.uniconnexample.Fragment.Profilefrag;
 import com.example.amit.uniconnexample.Fragment.Settingfrag;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResult;
+import com.google.android.gms.location.LocationSettingsStates;
+import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -51,8 +76,10 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.BottomBarTab;
 import com.roughike.bottombar.OnTabSelectListener;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import es.dmoral.toasty.Toasty;
 
@@ -60,7 +87,7 @@ import es.dmoral.toasty.Toasty;
  * Created by amit on 19/2/17.
  */
 
-public class NewTabActivity extends AppCompatActivity {
+public class NewTabActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener{
     ViewPager viewPager;
     Toolbar toolbar;
   //  BottomBarTab bottomBarTab,bottomBarTabmsg;
@@ -78,6 +105,22 @@ public class NewTabActivity extends AppCompatActivity {
     Boolean switchflag,switchvibrate;
     BottomBarTab bottomBarTab,bottomBarTabmsg;
     Uri alarmsound;
+    Location location=null,mLastLocation;
+    String cityname;
+    Geocoder geocoder;
+    List<Address> addresses;
+    double latitude,longitude;
+    GoogleApiClient mGoogleApiClient;
+    PendingResult<LocationSettingsResult> result;
+    private LocationRequest mLocationRequest;
+    private boolean mRequestingLocationUpdates = false;
+    LocationSettingsRequest.Builder builder;
+    // Location updates intervals in sec
+    private static int UPDATE_INTERVAL = 10000; // 10 sec
+    private static int FATEST_INTERVAL = 5000; // 5 sec
+    private static int DISPLACEMENT = 10; // 10 meters
+    private static final int GALLERY_REQUEST = 1;
+    private static final int LOCATION_SETTING_REQUEST = 1;
     boolean doubleBackToExitPressedOnce = false;
     int m=0,m1=500,count,flag=0;
     int msgcount=0;
@@ -85,6 +128,22 @@ public class NewTabActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_tab);
+        if (checkPlayServices()) {
+
+            // Building the GoogleApi client
+            buildGoogleApiClient();
+            createLocationRequest();
+        }
+        builder = new LocationSettingsRequest.Builder()
+                .addLocationRequest(mLocationRequest);
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(NewTabActivity.this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(NewTabActivity.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(NewTabActivity.this,
+                        new String[]{android.Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 12345);
+                return;
+            }
+        }
+        geocoder = new Geocoder(this, Locale.getDefault());
         title=(TextView)findViewById(R.id.title);
         img=(ImageView)findViewById(R.id.img);
         user= FirebaseAuth.getInstance().getCurrentUser();
@@ -173,6 +232,7 @@ public class NewTabActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        stopLocationUpdates();
         //Toast.makeText(Tabs.this, "checkpause", Toast.LENGTH_SHORT).show();
 
     }
@@ -180,6 +240,14 @@ public class NewTabActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        if (mGoogleApiClient != null) {
+            mGoogleApiClient.connect();
+        }
+        PendingResult<LocationSettingsResult> result1;
+        result1 = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
+                builder.build());
+        settingLocation(result1);
+        //Log.e("Blog","Hi"+cityname);
         if(isNetworkConnected()) {
             stopService(new Intent(NewTabActivity.this, Notificationservice.class));
         }
@@ -343,6 +411,7 @@ public class NewTabActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+        mGoogleApiClient.disconnect();
         // Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
         if(isNetworkConnected()) {
             newnotifchat.removeEventListener(valueEventListener);
@@ -452,6 +521,37 @@ public class NewTabActivity extends AppCompatActivity {
 
         ref.setValue(null);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==LOCATION_SETTING_REQUEST){
+            Log.e("Blog","Location");
+            switch(resultCode){
+                case Activity.RESULT_OK:
+                    Log.e("Blog","Ok");
+                    Handler handler=new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            showLocation();
+                        }
+                    },2000);
+
+                    break;
+                case RESULT_CANCELED:
+                    Log.e("Blog","Cancel");
+                    PendingResult<LocationSettingsResult> result;
+                    result = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
+                            builder.build());
+                    settingLocation(result);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
@@ -539,7 +639,12 @@ public class NewTabActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        checkPlayServices();
+        if (mGoogleApiClient.isConnected() ) {
+            startLocationUpdates();
+        }
     }
+
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new MainActivity(), "My Campus");
@@ -657,4 +762,138 @@ public class NewTabActivity extends AppCompatActivity {
     public void setTitle(String tooltitle){
         title.setText(tooltitle);
     }
+    private void showLocation(){
+        if(ContextCompat.checkSelfPermission(NewTabActivity.this, android.Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(NewTabActivity.this, android.Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED)  {
+            ActivityCompat.requestPermissions(NewTabActivity.this,
+                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.ACCESS_COARSE_LOCATION},12345);
+            return;
+        }
+        try {
+            mLastLocation = LocationServices.FusedLocationApi
+                    .getLastLocation(mGoogleApiClient);
+            if (mLastLocation != null) {
+                latitude = mLastLocation.getLatitude();
+                longitude = mLastLocation.getLongitude();
+
+                addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                cityname = addresses.get(0).getAddressLine(2);
+                App.putPref("cityname",cityname.substring(0,cityname.indexOf(",")),getApplicationContext());
+                Toast.makeText(NewTabActivity.this,cityname,Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "ADDRESS NOT FOUND", Toast.LENGTH_SHORT).show();
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    protected void createLocationRequest() {
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(UPDATE_INTERVAL);
+        mLocationRequest.setFastestInterval(FATEST_INTERVAL);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setSmallestDisplacement(DISPLACEMENT);
+    }
+
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API).build();
+    }
+
+
+    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+    private boolean checkPlayServices() {
+        GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
+        int resultCode = apiAvailability.isGooglePlayServicesAvailable(this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (apiAvailability.isUserResolvableError(resultCode)) {
+                apiAvailability.getErrorDialog(this, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST)
+                        .show();
+            } else {
+                Log.i("Push Check play", "This device is not supported.");
+                finish();
+            }
+            return false;
+        }
+        return true;
+    }
+
+    protected void startLocationUpdates() {
+        if(ContextCompat.checkSelfPermission(NewTabActivity.this, android.Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(NewTabActivity.this, android.Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED)  {
+            ActivityCompat.requestPermissions(NewTabActivity.this,
+                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.ACCESS_COARSE_LOCATION},12345);
+            return;
+        }
+        LocationServices.FusedLocationApi.requestLocationUpdates(
+                mGoogleApiClient, mLocationRequest, this);
+
+    }
+
+    /**
+     * Stopping location updates
+     */
+    protected void stopLocationUpdates() {
+        LocationServices.FusedLocationApi.removeLocationUpdates(
+                mGoogleApiClient, this);
+    }
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        Toast.makeText(NewTabActivity.this,"Connection failed: ConnectionResult.getErrorCode() = "
+                + connectionResult.getErrorCode(),Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        mLastLocation=location;
+    }
+    private void settingLocation( PendingResult<LocationSettingsResult> result1){
+        result1.setResultCallback(new ResultCallback<LocationSettingsResult>() {
+            @Override
+            public void onResult(@NonNull LocationSettingsResult locationSettingsResult) {
+                final Status status = locationSettingsResult.getStatus();
+                Toast.makeText(NewTabActivity.this,"Start",Toast.LENGTH_SHORT).show();
+                final LocationSettingsStates locationSettingsStates = locationSettingsResult.getLocationSettingsStates();
+                switch (status.getStatusCode()) {
+
+                    case LocationSettingsStatusCodes.SUCCESS:
+                        Toast.makeText(NewTabActivity.this,"Starst",Toast.LENGTH_SHORT).show();
+                        showLocation();
+                        // All location settings are satisfied. The client can
+                        // initialize location requests here.
+                        break;
+                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
+                        Toast.makeText(NewTabActivity.this,"Startr",Toast.LENGTH_SHORT).show();
+                        // Location settings are not satisfied, but this can be fixed
+                        // by showing the user a dialog.
+                        try {
+                            // Show the dialog by calling startResolutionForResult(),
+                            // and check the result in onActivityResult().
+                            status.startResolutionForResult(
+                                    NewTabActivity.this,
+                                    LOCATION_SETTING_REQUEST);
+                        } catch (IntentSender.SendIntentException e) {
+                            // Ignore the error.
+                        }
+                        break;
+                    case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
+                        Toast.makeText(NewTabActivity.this,"Startu",Toast.LENGTH_SHORT).show();
+                        // Location settings are not satisfied. However, we have no way
+                        // to fix the settings so we won't show the dialog.
+                        break;
+                }
+            }
+        });
+    }
+
 }

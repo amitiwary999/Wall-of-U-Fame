@@ -2102,9 +2102,28 @@
                     "startLine": 333,
                     "startColumn": 4,
                     "startOffset": 23839,
-                    "endLine": 335,
+                    "endColumn": 121,
+                    "endOffset": 23956
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/res/values-v21/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 219,
+                        "endColumn": 121,
+                        "endOffset": 336
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 334,
+                    "startColumn": 4,
+                    "startOffset": 23961,
+                    "endLine": 336,
                     "endColumn": 12,
-                    "endOffset": 24009
+                    "endOffset": 24131
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-v21/values-v21.xml",
@@ -2120,12 +2139,12 @@
             },
             {
                 "to": {
-                    "startLine": 336,
+                    "startLine": 337,
                     "startColumn": 4,
-                    "startOffset": 24014,
-                    "endLine": 340,
+                    "startOffset": 24136,
+                    "endLine": 341,
                     "endColumn": 12,
-                    "endOffset": 24350
+                    "endOffset": 24472
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-v21/values-v21.xml",
@@ -2141,12 +2160,12 @@
             },
             {
                 "to": {
-                    "startLine": 341,
+                    "startLine": 342,
                     "startColumn": 4,
-                    "startOffset": 24355,
-                    "endLine": 343,
+                    "startOffset": 24477,
+                    "endLine": 344,
                     "endColumn": 12,
-                    "endOffset": 24548
+                    "endOffset": 24670
                 },
                 "from": {
                     "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/values-v21/values-v21.xml",

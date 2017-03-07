@@ -16,9 +16,9 @@ import java.lang.Override;
 public class Profile_ViewBinding<T extends Profile> implements Unbinder {
   protected T target;
 
-  private View view2131755180;
+  private View view2131755245;
 
-  private View view2131755200;
+  private View view2131755265;
 
   public Profile_ViewBinding(final T target, Finder finder, Object source) {
     this.target = target;
@@ -31,7 +31,7 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
     target.clg = finder.findRequiredViewAsType(source, R.id.clg, "field 'clg'", EditText.class);
     view = finder.findRequiredView(source, R.id.photo, "field 'photo' and method 'pickPhoto'");
     target.photo = finder.castView(view, R.id.photo, "field 'photo'", ImageView.class);
-    view2131755180 = view;
+    view2131755245 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -40,7 +40,7 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
     });
     target.loading = finder.findRequiredViewAsType(source, R.id.loading, "field 'loading'", LinearLayout.class);
     view = finder.findRequiredView(source, R.id.save, "method 'save'");
-    view2131755200 = view;
+    view2131755265 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,10 +62,10 @@ public class Profile_ViewBinding<T extends Profile> implements Unbinder {
     target.photo = null;
     target.loading = null;
 
-    view2131755180.setOnClickListener(null);
-    view2131755180 = null;
-    view2131755200.setOnClickListener(null);
-    view2131755200 = null;
+    view2131755245.setOnClickListener(null);
+    view2131755245 = null;
+    view2131755265.setOnClickListener(null);
+    view2131755265 = null;
 
     this.target = null;
   }

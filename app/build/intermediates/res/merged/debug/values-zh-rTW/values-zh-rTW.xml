@@ -19,6 +19,40 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"選擇分享對象"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"與「%s」分享"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"收合"</string>
+    <string msgid="366047012176970604" name="cast_casting_to_device">"正在投放到 %s"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"隱藏式輔助字幕"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"無法使用隱藏式輔助字幕"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"中斷連線"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"專輯封面"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"載入中…"</string>
+    <string msgid="7884080323096468593" name="cast_forward">"快轉"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"快轉 10 秒"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"快轉 30 秒"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"靜音"</string>
+    <string msgid="5319032370587661362" name="cast_notification_connected_message">"已連線至「<ns1:g id="NAME">%1$s</ns1:g>」"</string>
+    <string msgid="2758865089947797888" name="cast_notification_connecting_message">"正在連線至「<ns1:g id="NAME">%1$s</ns1:g>」"</string>
+    <string msgid="5232008641593292969" name="cast_notification_disconnect">"中斷連線"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"暫停"</string>
+    <string msgid="5906987965619702702" name="cast_play">"播放"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"倒轉"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"倒轉 10 秒"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"倒轉 30 秒"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"播放搜尋控制介面"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"跳到下一個項目"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"跳到上一個項目"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"停止"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"停止即時串流"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"音訊"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"取消"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"第 <ns1:g id="POSITION">%1$d</ns1:g> 軌"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"沒有任何可用的音軌"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"沒有任何可用的文字軌"</string>
+    <string msgid="2332432312191219516" name="cast_tracks_chooser_dialog_no_tracks_available">"沒有任何可用的歌曲"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"無"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"確定"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"字幕"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"取消靜音"</string>
     <string name="com_facebook_device_auth_instructions">使用您的智慧型手機或電腦前往 &lt;b>facebook.com/device&lt;/b>&lt;br />，然後輸入此代碼：</string>
     <string name="com_facebook_image_download_unknown_error">下載圖像時發生非預期的錯誤。</string>
     <string name="com_facebook_internet_permission_error_message">WebView 登入需要「網際網路」授權</string>
@@ -57,6 +91,20 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"登入"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"使用 Google 帳戶登入"</string>
     <string name="messenger_send_button_text">傳送</string>
+    <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"投放"</string>
+    <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"正在搜尋裝置..."</string>
+    <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"連線至裝置"</string>
+    <string msgid="109793632378378069" name="mr_media_route_controller_disconnect">"中斷連線"</string>
+    <string msgid="3641544772007543920" name="mr_media_route_controller_no_info_available">"沒有可用的資訊"</string>
+    <string msgid="8315773974194466049" name="mr_media_route_controller_pause">"暫停"</string>
+    <string msgid="5214423499524760404" name="mr_media_route_controller_play">"播放"</string>
+    <string msgid="379358765881274425" name="mr_media_route_controller_settings_description">"路由設定"</string>
+    <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"停止投放"</string>
+    <string msgid="5441529851481176817" name="mr_system_route_name">"系統"</string>
+    <string msgid="7498112907524977311" name="mr_user_route_category_name">"裝置"</string>
+    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"清除搜尋"</string>
+    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"搜尋"</string>
     <string msgid="146198913615257606" name="search_menu_title">"搜尋"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="363496807345461806" name="wallet_buy_button_place_holder">"透過 Google 購物"</string>
 </resources>

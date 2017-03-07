@@ -19,6 +19,40 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Chia sẻ với"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Chia sẻ với %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Thu gọn"</string>
+    <string msgid="366047012176970604" name="cast_casting_to_device">"Đang truyền tới %1$s"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"Phụ đề chi tiết"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"Không có sẵn phụ đề chi tiết"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"Ngắt kết nối"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"Ảnh bìa album"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"Đang tải…"</string>
+    <string msgid="7884080323096468593" name="cast_forward">"Tua đi"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"Tua đi 10 giây"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"Tua đi 30 giây"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"Tắt tiếng"</string>
+    <string msgid="5319032370587661362" name="cast_notification_connected_message">"Đã kết nối với <ns1:g id="NAME">%1$s</ns1:g>"</string>
+    <string msgid="2758865089947797888" name="cast_notification_connecting_message">"Đang kết nối với <ns1:g id="NAME">%1$s</ns1:g>"</string>
+    <string msgid="5232008641593292969" name="cast_notification_disconnect">"Ngắt kết nối"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"Tạm dừng"</string>
+    <string msgid="5906987965619702702" name="cast_play">"Phát"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"Tua lại"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"Tua lại 10 giây"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"Tua lại 30 giây"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"Kiểm soát tìm kiếm phát lại"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"Chuyển đến mục tiếp theo"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"Chuyển đến mục trước"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"Dừng"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"Dừng luồng trực tiếp"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"Âm thanh"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"Hủy"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"Bản nhạc <ns1:g id="POSITION">%1$d</ns1:g>"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"Không có bản âm thanh nào"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"Không có văn bản nào"</string>
+    <string msgid="2332432312191219516" name="cast_tracks_chooser_dialog_no_tracks_available">"Không có bản nhạc nào"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"Không có gì"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"OK"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"Phụ đề"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"Bật tiếng"</string>
     <string name="com_facebook_device_auth_instructions">Truy cập &lt;b>facebook.com/device&lt;/b>&lt;br /> trên điện thoại thông minh hoặc máy tính và nhập mã sau:</string>
     <string name="com_facebook_image_download_unknown_error">Lỗi bất ngờ khi tải ảnh xuống.</string>
     <string name="com_facebook_internet_permission_error_message">Đăng nhập WebView yêu cầu INTERNET cho phép</string>
@@ -57,6 +91,20 @@
     <string msgid="3441753203274453993" name="common_signin_button_text">"Đăng nhập"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Đăng nhập bằng Google"</string>
     <string name="messenger_send_button_text">Gửi</string>
+    <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Truyền"</string>
+    <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Đang tìm kiếm thiết bị…"</string>
+    <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"Kết nối với thiết bị"</string>
+    <string msgid="109793632378378069" name="mr_media_route_controller_disconnect">"Ngắt kết nối"</string>
+    <string msgid="3641544772007543920" name="mr_media_route_controller_no_info_available">"Không có thông tin nào"</string>
+    <string msgid="8315773974194466049" name="mr_media_route_controller_pause">"Tạm dừng"</string>
+    <string msgid="5214423499524760404" name="mr_media_route_controller_play">"Phát"</string>
+    <string msgid="379358765881274425" name="mr_media_route_controller_settings_description">"Cài đặt tuyến đường"</string>
+    <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Ngừng truyền"</string>
+    <string msgid="5441529851481176817" name="mr_system_route_name">"Hệ thống"</string>
+    <string msgid="7498112907524977311" name="mr_user_route_category_name">"Thiết bị"</string>
+    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Xóa tìm kiếm"</string>
+    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Tìm kiếm"</string>
     <string msgid="146198913615257606" name="search_menu_title">"Tìm kiếm"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="363496807345461806" name="wallet_buy_button_place_holder">"Mua hàng bằng Google"</string>
 </resources>

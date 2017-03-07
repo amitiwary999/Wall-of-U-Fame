@@ -535,6 +535,25 @@
                         "endOffset": 13900
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 224,
+                    "startColumn": 4,
+                    "startOffset": 15965,
+                    "endColumn": 117,
+                    "endOffset": 16078
+                },
+                "from": {
+                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/res/values-v11/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 219,
+                        "endColumn": 117,
+                        "endOffset": 332
+                    }
+                }
             }
         ]
     }
