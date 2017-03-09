@@ -132,41 +132,6 @@ public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnCo
         }
         builder = new LocationSettingsRequest.Builder()
                 .addLocationRequest(mLocationRequest);
-       /* result.setResultCallback(new ResultCallback<LocationSettingsResult>() {
-            @Override
-            public void onResult(@NonNull LocationSettingsResult locationSettingsResult) {
-                final Status status = locationSettingsResult.getStatus();
-                Toast.makeText(Blog.this,"Start",Toast.LENGTH_SHORT).show();
-                final LocationSettingsStates locationSettingsStates = locationSettingsResult.getLocationSettingsStates();
-                switch (status.getStatusCode()) {
-
-                    case LocationSettingsStatusCodes.SUCCESS:
-                        Toast.makeText(Blog.this,"Starst",Toast.LENGTH_SHORT).show();
-                        // All location settings are satisfied. The client can
-                        // initialize location requests here.
-                        break;
-                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
-                        Toast.makeText(Blog.this,"Startr",Toast.LENGTH_SHORT).show();
-                        // Location settings are not satisfied, but this can be fixed
-                        // by showing the user a dialog.
-                        try {
-                            // Show the dialog by calling startResolutionForResult(),
-                            // and check the result in onActivityResult().
-                            status.startResolutionForResult(
-                                    Blog.this,
-                                    LOCATION_SETTING_REQUEST);
-                        } catch (IntentSender.SendIntentException e) {
-                            // Ignore the error.
-                        }
-                        break;
-                    case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
-                        Toast.makeText(Blog.this,"Startu",Toast.LENGTH_SHORT).show();
-                        // Location settings are not satisfied. However, we have no way
-                        // to fix the settings so we won't show the dialog.
-                        break;
-                }
-            }
-        });*/
 
 
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {

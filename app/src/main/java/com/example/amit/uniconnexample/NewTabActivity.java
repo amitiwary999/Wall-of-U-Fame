@@ -581,58 +581,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-      /*  Drawable drawable = item.getIcon();
-        if (drawable instanceof Animatable) {
-            ((Animatable) drawable).start();
-        }
-        if(item.getItemId()==R.id.signout){
-           /* FirebaseAuth.getInstance().signOut();
-            Toast.makeText(Tabs.this, "Logging out..", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(Tabs.this, Loginactivity.class));
-            finish();
-            AlertDialog.Builder d = new AlertDialog.Builder(this);
-            d.setMessage("Are you sure ?").
-                    setCancelable(false).
-                    setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            if(isNetworkConnected()) {
-                                stopService(new Intent(NewTabActivity.this, Notificationservice.class));
-                                newnotifchat.removeEventListener(valueEventListener);
-                                mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
-                                handler1.postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        FirebaseAuth.getInstance().signOut();
-                                        Toast.makeText(NewTabActivity.this, "Logging out..", Toast.LENGTH_SHORT).show();
-                                        // myPrefs.edit().clear().commit();
-                                        editor1.putBoolean("isLoggedin", false);
-                                        editor1.commit();
-                                        startActivity(new Intent(NewTabActivity.this, Loginactivity.class));
-                                        finish();
-                                    }
-                                }, 2000);
 
-                            }else{
-                                Toast.makeText(NewTabActivity.this,"No internet connection",Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    }).
-                    setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
-
-            AlertDialog alert = d.create();
-            alert.setTitle("Logout");
-            alert.show();
-            Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
-            nbutton.setTextColor(Color.BLACK);
-            Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
-            pbutton.setTextColor(Color.BLACK);
-        }*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -862,18 +811,18 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
             @Override
             public void onResult(@NonNull LocationSettingsResult locationSettingsResult) {
                 final Status status = locationSettingsResult.getStatus();
-                Toast.makeText(NewTabActivity.this,"Start",Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(NewTabActivity.this,"Start",Toast.LENGTH_SHORT).show();
                 final LocationSettingsStates locationSettingsStates = locationSettingsResult.getLocationSettingsStates();
                 switch (status.getStatusCode()) {
 
                     case LocationSettingsStatusCodes.SUCCESS:
-                        Toast.makeText(NewTabActivity.this,"Starst",Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(NewTabActivity.this,"Starst",Toast.LENGTH_SHORT).show();
                         showLocation();
                         // All location settings are satisfied. The client can
                         // initialize location requests here.
                         break;
                     case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
-                        Toast.makeText(NewTabActivity.this,"Startr",Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(NewTabActivity.this,"Startr",Toast.LENGTH_SHORT).show();
                         // Location settings are not satisfied, but this can be fixed
                         // by showing the user a dialog.
                         try {
@@ -887,7 +836,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                         }
                         break;
                     case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
-                        Toast.makeText(NewTabActivity.this,"Startu",Toast.LENGTH_SHORT).show();
+                     //   Toast.makeText(NewTabActivity.this,"Startu",Toast.LENGTH_SHORT).show();
                         // Location settings are not satisfied. However, we have no way
                         // to fix the settings so we won't show the dialog.
                         break;
