@@ -156,7 +156,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
         bottomBarTabmsg=bottomBar.getTabWithId(R.id.tab_message);
         mDatabasenotiflike= FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like");
         newnotifchat=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("chat").child(user.getUid());
-        mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like");
+        mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like").child(user.getUid());
         mDatanotiflike=FirebaseDatabase.getInstance().getReference().child("notificationdata").child("like").child(user.getUid());
         newnotifchat.keepSynced(true);
         mDatabasenotif.keepSynced(true);
@@ -188,7 +188,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                 else if(tabId==R.id.tab_notification){
                     if(isNetworkConnected()) {
                         newnotifchat.removeEventListener(valueEventListener);
-                        mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                        mDatabasenotif.removeEventListener(valueventlistener);
                        /*   mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
                               @Override
                               public void onDataChange(DataSnapshot dataSnapshot) {
@@ -211,7 +211,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                 else if(tabId==R.id.tab_message){
                     if(isNetworkConnected()) {
                         newnotifchat.removeEventListener(valueEventListener);
-                        mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                        mDatabasenotif.removeEventListener(valueventlistener);
                         bottomBarTabmsg.removeBadge();
                         msgcount = 0;
                     }
@@ -232,7 +232,9 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
     @Override
     protected void onPause() {
         super.onPause();
-        stopLocationUpdates();
+        if (mGoogleApiClient.isConnected() ) {
+            stopLocationUpdates();
+        }
         //Toast.makeText(Tabs.this, "checkpause", Toast.LENGTH_SHORT).show();
 
     }
@@ -281,7 +283,8 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
 
                 }
             };
-            newnotifchat.addValueEventListener(valueEventListener);
+            if(newnotifchat!=null){
+            newnotifchat.addValueEventListener(valueEventListener);}
                              /*  (new ValueEventListener() {
                                                                @Override
                                                                public void onDataChange(DataSnapshot dataSnapshot) {
@@ -336,7 +339,8 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
 
                 }
             };
-            mDatabasenotif.child(user.getUid()).addValueEventListener(valueventlistener);
+            if(mDatabasenotif!=null){
+            mDatabasenotif.addValueEventListener(valueventlistener);}
                        /* (new ValueEventListener() {
                                                   @Override
                                                   public void onDataChange(DataSnapshot dataSnapshot) {
@@ -415,7 +419,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
         // Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
         if(isNetworkConnected()) {
             newnotifchat.removeEventListener(valueEventListener);
-            mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+            mDatabasenotif.removeEventListener(valueventlistener);
         }
        /* newnotifchat.addValueEventListener(new ValueEventListener() {
             @Override
@@ -669,7 +673,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                         if(isNetworkConnected()) {
                             stopService(new Intent(NewTabActivity.this, Notificationservice.class));
                             newnotifchat.removeEventListener(valueEventListener);
-                            mDatabasenotif.child(user.getUid()).removeEventListener(valueventlistener);
+                            mDatabasenotif.removeEventListener(valueventlistener);
                             handler1.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
@@ -783,8 +787,9 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
      * Stopping location updates
      */
     protected void stopLocationUpdates() {
-        LocationServices.FusedLocationApi.removeLocationUpdates(
-                mGoogleApiClient, this);
+            LocationServices.FusedLocationApi.removeLocationUpdates(
+                    mGoogleApiClient, this);
+
     }
     @Override
     public void onConnected(@Nullable Bundle bundle) {

@@ -391,7 +391,9 @@ public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnCo
     @Override
     protected void onPause() {
         super.onPause();
-        stopLocationUpdates();
+        if (mGoogleApiClient.isConnected() ) {
+            stopLocationUpdates();
+        }
     }
 
     @Override

@@ -2,27 +2,27 @@
 <tabs>
     <tab
         id="@+id/tab_home"
-        icon="@drawable/h_home"
+        icon="@drawable/ic_home"
         barColorWhenSelected="@color/colorPrimary"
          />
     <tab
         id="@+id/tab_account"
-        icon="@drawable/h_account"
+        icon="@drawable/ic_account"
         barColorWhenSelected="@color/colorPrimary"
          />
     <tab
         id="@+id/tab_notification"
-        icon="@drawable/h_notifications"
+        icon="@drawable/ic_notifications"
         barColorWhenSelected="@color/colorPrimary"
          />
     <tab
         id="@+id/tab_message"
-        icon="@drawable/h_post_office"
+        icon="@drawable/ic_message"
         barColorWhenSelected="@color/colorPrimary"
          />
     <tab
         id="@+id/tab_setting"
-        icon="@drawable/h_settings"
+        icon="@drawable/ic_settings"
         barColorWhenSelected="@color/colorPrimary"
          />
 
