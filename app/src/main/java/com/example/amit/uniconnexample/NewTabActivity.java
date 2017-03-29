@@ -729,9 +729,12 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                 longitude = mLastLocation.getLongitude();
 
                 addresses = geocoder.getFromLocation(latitude, longitude, 1);
-                cityname = addresses.get(0).getAddressLine(2);
-                App.putPref("cityname",cityname.substring(0,cityname.indexOf(",")),getApplicationContext());
-                Toast.makeText(NewTabActivity.this,cityname,Toast.LENGTH_SHORT).show();
+                //cityname = addresses.get(0).getAddressLine(2);
+                //Toast.makeText(NewTabActivity.this,"hi"+addresses.get(0).getLocality(),Toast.LENGTH_LONG).show();
+               // App.putPref("cityname",cityname.substring(0,cityname.indexOf(",")),getApplicationContext());
+                cityname = addresses.get(0).getLocality();
+                App.putPref("cityname",cityname,getApplicationContext());
+               // Toast.makeText(NewTabActivity.this,cityname,Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "ADDRESS NOT FOUND", Toast.LENGTH_SHORT).show();
             }

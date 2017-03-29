@@ -423,7 +423,11 @@ public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnCo
             final String check_mail=checkmail;
             final String city_name;
             if(cityname!=null) {
-                city_name = cityname.substring(0, cityname.indexOf(","));
+               // city_name = cityname.substring(0, cityname.indexOf(","));
+                city_name = cityname;
+                if(App.getPref("cityname",getApplicationContext())==null) {
+                    App.putPref("cityname",cityname,getApplicationContext());
+                }
             }else{
                 city_name=null;
             }
@@ -749,7 +753,8 @@ public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnCo
                 longitude = mLastLocation.getLongitude();
 
                 addresses = geocoder.getFromLocation(latitude, longitude, 1);
-                cityname = addresses.get(0).getAddressLine(2);
+               // cityname = addresses.get(0).getAddressLine(2);
+                cityname = addresses.get(0).getLocality();
                 Toast.makeText(Blog.this,cityname,Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "ADDRESS NOT FOUND", Toast.LENGTH_SHORT).show();
