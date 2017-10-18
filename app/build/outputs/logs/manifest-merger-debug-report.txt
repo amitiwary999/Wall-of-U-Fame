@@ -132,12 +132,12 @@ MERGED from [com.android.support:support-compat:25.3.1] /home/meeera/.android/bu
 		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:14:9-43
 	android:name
 		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:12:9-59
-service#com.example.amit.uniconnexample.Notificationservice
+service#com.example.amit.uniconnexample.Others.Notificationservice
 ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:18:9-20:19
 	android:enabled
 		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:18:18-40
 	android:name
-		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:19:13-48
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:19:13-55
 activity#com.example.amit.uniconnexample.Activity.Loginactivity
 ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:21:9-29:20
 	android:windowSoftInputMode

@@ -51,7 +51,5 @@ public class Utils {
             }
         });
     }
-    public static void setupToolBarBackButton(final Fragment fragment,Toolbar toolbar){
-        //((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-    }
+
 }

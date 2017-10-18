@@ -1,13 +1,11 @@
 package com.example.amit.uniconnexample.Activity;
 
-import android.*;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -16,18 +14,14 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.location.Address;
-import android.location.Criteria;
 import android.location.Geocoder;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.media.ExifInterface;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -36,28 +30,22 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.text.format.DateFormat;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.amit.uniconnexample.App;
 import com.example.amit.uniconnexample.R;
 import com.example.amit.uniconnexample.Model.BlogModel;
 import com.example.amit.uniconnexample.Signupactivity;
-import com.example.amit.uniconnexample.TrackGPS;
-import com.example.amit.uniconnexample.UserData;
+import com.example.amit.uniconnexample.Others.UserData;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
@@ -66,7 +54,6 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-//import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStates;
@@ -86,8 +73,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * Created by amit on 31/10/16.
@@ -98,25 +83,18 @@ public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnCo
     private Uri mImageUri = null;
     private StorageReference mStorage;
     private DatabaseReference mDatabase,mDatabas;
-    EditText titlefield,mDesc;
+    EditText mDesc;
     Toolbar toolbar;
-    private TrackGPS gps;
-    SharedPreferences sprfnc;
     private ProgressDialog mProgress;
     byte[] bytearray;
-    String mal,check,name,photo,checkmail,bitimage,cityname=null,date=null,time=null;
+    String check,name,photo,checkmail,cityname=null,date=null,time=null;
     UserData userdata;
-    LocationManager locationManager;
-    int LOCATION_REFRESH_TIME=10;
-    int LOCATION_REFRESH_DISTANCE=1000;
-    Location location=null,mLastLocation;
+    Location mLastLocation;
     Geocoder geocoder;
     List<Address> addresses;
     double latitude,longitude;
     GoogleApiClient mGoogleApiClient;
-    PendingResult<LocationSettingsResult> result;
     private LocationRequest mLocationRequest;
-    private boolean mRequestingLocationUpdates = false;
     LocationSettingsRequest.Builder builder;
     // Location updates intervals in sec
     private static int UPDATE_INTERVAL = 10000; // 10 sec
@@ -151,11 +129,8 @@ public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnCo
         String n=auth.getCurrentUser().getEmail();
         check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
         checkmail=n.substring(n.indexOf("@")+1,n.lastIndexOf("."))+n.substring(n.lastIndexOf(".")+1);
-      //  titlefield = (EditText) findViewById(R.id.titleField);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         Utils.setUpToolbarBackButton(this, toolbar);
-       // title=(TextView)findViewById(R.id.title);
-       // image=(ImageView)findViewById(R.id.primage);
         date=getDate();
         time=getCurrentTime();
         mDesc = (EditText) findViewById(R.id.mdesc);
@@ -163,7 +138,6 @@ public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnCo
         mDatabase= FirebaseDatabase.getInstance().getReference().child(check);
         mDatabas=FirebaseDatabase.getInstance().getReference().child("Posts");
         userdata = getIntent().getExtras().getParcelable("user");
-       // byte[] decodestring= Base64.decode(userdata.photo,Base64.DEFAULT);
         name=userdata.name;
         photo=userdata.photo;
 
@@ -188,7 +162,6 @@ public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnCo
             buttondone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                  //  Toast.makeText(Blog.this,"right",Toast.LENGTH_LONG).show();
                     if(isNetworkConnected()) {
                         startPosting();
                     }else{
@@ -213,7 +186,6 @@ public class Blog extends AppCompatActivity implements ConnectionCallbacks, OnCo
         result1 = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
                 builder.build());
         settingLocation(result1);
-        Log.e("Blog","Hi"+cityname);
     }
 
     @Override

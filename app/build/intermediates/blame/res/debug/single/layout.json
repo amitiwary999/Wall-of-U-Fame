@@ -128,10 +128,6 @@
         "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/chatoolbar.xml"
     },
     {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_notification.xml",
-        "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_notification.xml"
-    },
-    {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_prediction.xml",
         "source": "/home/meeera/.android/build-cache/1178a56c2bc5aa093a6ddcd354f90aa8fb1a1da5/output/res/layout/place_autocomplete_item_prediction.xml"
     },
@@ -174,10 +170,6 @@
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/layout/abc_action_bar_up_container.xml"
-    },
-    {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_startchatitem.xml",
-        "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_startchatitem.xml"
     },
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_small.xml",
@@ -312,10 +304,6 @@
         "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_main.xml"
-    },
-    {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/md_listitem_multichoice.xml",
         "source": "/home/meeera/.android/build-cache/36e526860550d0f12a5be4694deb59f9a805ca08/output/res/layout/md_listitem_multichoice.xml"
     },
@@ -350,14 +338,6 @@
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_main_frag.xml",
         "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_main_frag.xml"
-    },
-    {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_chatitem.xml",
-        "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_chatitem.xml"
-    },
-    {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_setting.xml",
-        "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_setting.xml"
     },
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_round.xml",
@@ -396,20 +376,12 @@
         "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_profile.xml",
-        "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_profile.xml"
-    },
-    {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
         "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/layout/abc_search_view.xml"
     },
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
         "source": "/home/meeera/.android/build-cache/1178a56c2bc5aa093a6ddcd354f90aa8fb1a1da5/output/res/layout/place_autocomplete_item_powered_by_google.xml"
-    },
-    {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_chat.xml",
-        "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_chat.xml"
     },
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/fragment_firebase_login.xml",
@@ -422,10 +394,6 @@
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
         "source": "/home/meeera/.android/build-cache/271105389990939a5f783c4180665a2f0d3f1b0d/output/res/layout/design_navigation_item.xml"
-    },
-    {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_tabs.xml",
-        "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_tabs.xml"
     },
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
@@ -530,10 +498,6 @@
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/layout/abc_screen_toolbar.xml"
-    },
-    {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/activity_message.xml",
-        "source": "/home/meeera/Wall-of-U-Fame/app/src/main/res/layout/activity_message.xml"
     },
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_large.xml",

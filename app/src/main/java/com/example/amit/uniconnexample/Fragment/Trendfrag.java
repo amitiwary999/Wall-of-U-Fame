@@ -30,7 +30,7 @@ import com.example.amit.uniconnexample.Activity.Loginactivity;
 import com.example.amit.uniconnexample.Model.BlogModel;
 import com.example.amit.uniconnexample.Notificationmodel;
 import com.example.amit.uniconnexample.R;
-import com.example.amit.uniconnexample.UserData;
+import com.example.amit.uniconnexample.Others.UserData;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;

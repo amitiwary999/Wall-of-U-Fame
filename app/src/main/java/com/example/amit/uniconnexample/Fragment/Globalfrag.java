@@ -30,7 +30,7 @@ import com.example.amit.uniconnexample.Likemodel;
 import com.example.amit.uniconnexample.Activity.Loginactivity;
 import com.example.amit.uniconnexample.Notificationmodel;
 import com.example.amit.uniconnexample.R;
-import com.example.amit.uniconnexample.UserData;
+import com.example.amit.uniconnexample.Others.UserData;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -157,13 +157,6 @@ public class Globalfrag extends Fragment {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     whorlView.stop();
                     userdata = dataSnapshot.getValue(UserData.class);
-                    //  whorlView.stop();
-                    //  whorlView.setVisibility(View.GONE);
-                    //  mProgress.dismiss();
-                    //   Toast.makeText(MainActivity.this,userdata.name,Toast.LENGTH_LONG).show();
-                    //   mProgress.dismiss();
-                    // updateUI();
-                    // loading.setVisibility(View.GONE);
                 }
 
                 @Override
@@ -582,15 +575,6 @@ public class Globalfrag extends Fragment {
                             }
                         }
                     });
-                  /*  viewHolder.setDesc(model.getDesc());
-                    viewHolder.setName(model.getName());
-                    viewHolder.setImage(getActivity().getApplicationContext(), model.getImage());
-
-                //    Toast.makeText(MainActivity.this,"hi"+model.getName()+model.getDesc(),Toast.LENGTH_LONG).show();
-                    viewHolder.setPropic(model.getPropic());
-                    viewHolder.setLike(model.getLike());
-                    viewHolder.setUnlike(model.getUnlike());*/
-
                 }
               /*  @Override
                 public Blogmodel getItem(int position) {
@@ -620,13 +604,6 @@ public class Globalfrag extends Fragment {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     whorlView.stop();
                     userdata = dataSnapshot.getValue(UserData.class);
-                    //  whorlView.stop();
-                    //  whorlView.setVisibility(View.GONE);
-                    //  mProgress.dismiss();
-                    //   Toast.makeText(MainActivity.this,userdata.name,Toast.LENGTH_LONG).show();
-                    //   mProgress.dismiss();
-                    // updateUI();
-                    // loading.setVisibility(View.GONE);
                 }
 
                 @Override
@@ -1037,20 +1014,8 @@ public class Globalfrag extends Fragment {
                             }
                         }
                     });
-                  /*  viewHolder.setDesc(model.getDesc());
-                    viewHolder.setName(model.getName());
-                    viewHolder.setImage(getActivity().getApplicationContext(), model.getImage());
-
-                //    Toast.makeText(MainActivity.this,"hi"+model.getName()+model.getDesc(),Toast.LENGTH_LONG).show();
-                    viewHolder.setPropic(model.getPropic());
-                    viewHolder.setLike(model.getLike());
-                    viewHolder.setUnlike(model.getUnlike());*/
 
                 }
-              /*  @Override
-                public Blogmodel getItem(int position) {
-                    return super.getItem(getItemCount() - 1 - position);
-                }*/
             };
             mBlogList.setAdapter(firebaseRecyclerAdapter);
 
@@ -1058,9 +1023,6 @@ public class Globalfrag extends Fragment {
             loadLoginView();
         }
 
-        // }else {
-        //   Toast.makeText(getActivity(), "No Internet connection", Toast.LENGTH_LONG).show();
-        //}
     }
 
     public void writeblog(){

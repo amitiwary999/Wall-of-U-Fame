@@ -16,7 +16,7 @@
         android:supportsRtl="true"
       >
         <service android:enabled="true"
-            android:name=".Notificationservice">
+            android:name=".Others.Notificationservice">
         </service>
         <activity android:name=".Activity.Loginactivity"
             android:theme="@style/AppTheme.NoActionBar"

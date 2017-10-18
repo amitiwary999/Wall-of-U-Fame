@@ -1,7 +1,0 @@
-#Wed Oct 18 04:42:37 IST 2017
-base.0=/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e1fdc0dfa0219a9314a3ab0afe262f3c81c30c4d
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7ec8852ea50e6812311493247dc1c7e98363db59/classes.dex
-base.1=/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7ec8852ea50e6812311493247dc1c7e98363db59
-file.0=/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e1fdc0dfa0219a9314a3ab0afe262f3c81c30c4d/classes.dex

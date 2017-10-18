@@ -1,6 +1,5 @@
 package com.example.amit.uniconnexample.Activity;
 
-import android.*;
 import android.Manifest;
 import android.app.Activity;
 import android.app.NotificationManager;
@@ -12,8 +11,6 @@ import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.graphics.drawable.Animatable;
-import android.graphics.drawable.Drawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -49,7 +46,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.amit.uniconnexample.App;
-import com.example.amit.uniconnexample.Notificationservice;
+import com.example.amit.uniconnexample.Others.Notificationservice;
 import com.example.amit.uniconnexample.R;
 import com.example.amit.uniconnexample.Fragment.Mainfrag;
 import com.example.amit.uniconnexample.Fragment.Msgfrag;
@@ -600,53 +597,6 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
         }
     }
 
-    class ViewPagerAdapter extends FragmentPagerAdapter {
-        private final List<Fragment> mFragmentList = new ArrayList<>();
-        private final List<String> mFragmentTitleList = new ArrayList<>();
-
-        public ViewPagerAdapter(FragmentManager manager) {
-            super(manager);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-
-        public void addFrag(Fragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mFragmentTitleList.get(position);
-        }
-    }
-
-    private void setupTabIcons() {
-        TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.tabtext, null);
-        tabOne.setText("My Campus");
-        //  tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.myaccount, 0, 0);
-        tabLayout.getTabAt(0).setCustomView(tabOne);
-
-        TextView tabTwo = (TextView) LayoutInflater.from(this).inflate(R.layout.tabtext, null);
-        tabTwo.setText("Global");
-        // tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.notifications, 0, 0);
-        tabLayout.getTabAt(1).setCustomView(tabTwo);
-
-        TextView tabThree = (TextView) LayoutInflater.from(this).inflate(R.layout.tabtext, null);
-        tabThree.setText("Trending");
-        //tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.message, 0, 0);
-        tabLayout.getTabAt(2).setCustomView(tabThree);
-
-        //  bottomtab();
-    }
     public void attachFragment(Fragment fm){
         Fragment fragment=fm;
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();

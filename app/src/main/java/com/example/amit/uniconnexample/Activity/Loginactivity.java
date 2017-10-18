@@ -7,11 +7,8 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -21,20 +18,17 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.amit.uniconnexample.App;
-import com.example.amit.uniconnexample.Activity.NewTabActivity;
 import com.example.amit.uniconnexample.R;
 import com.example.amit.uniconnexample.Signupactivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.ProviderQueryResult;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -44,44 +38,26 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.apache.commons.validator.routines.EmailValidator;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import timber.log.Timber;
-
-import static com.example.amit.uniconnexample.R.drawable.user;
-import static com.facebook.internal.CallbackManagerImpl.RequestCodeOffset.Login;
-
 /**
  * Created by amit on 29/10/16.
  */
 
 public class Loginactivity extends AppCompatActivity{
 
-  //  @BindView(R.id.email)
     EditText email;
-    //@BindView(R.id.password)
     EditText password;
     TextView forgotpassword;
     private FirebaseAuth auth;
-    //@BindView(R.id.log_in)
     Button login;
-    //@BindView(R.id.signup)
     Button sign_up;
     ProgressDialog mProgress;
     SharedPreferences.Editor editor1;
-   // @BindView(R.id.login_progress)
-   // ProgressBar loginProgress;
-    FirebaseUser user;
-   private DatabaseReference mDatabasenotiflike;
-    private FirebaseAuth.AuthStateListener mAuthListener;
-    TextView signup;
-    String TAG = "TAG";
+    private DatabaseReference mDatabasenotiflike;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-       // ButterKnife.bind(this);
         setTitle("Login");
         email=(EditText)findViewById(R.id.email);
         password=(EditText)findViewById(R.id.password);
@@ -146,18 +122,6 @@ public class Loginactivity extends AppCompatActivity{
             });
             if(!((App)this.getApplication()).getLogincheck()) {
                 if (auth.getCurrentUser() != null) {
-             /*   signup = (TextView) findViewById(R.id.sign_up);
-                signup.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(Loginactivity.this, Signupactivity.class);
-                        startActivity(i);
-                        finish();
-                    }
-                });
-
-            }
-        else*/
                     startActivity(new Intent(Loginactivity.this, NewTabActivity.class));
                    // startActivity(new Intent(Loginactivity.this, Tabs.class));
                     finish();
@@ -272,16 +236,11 @@ public class Loginactivity extends AppCompatActivity{
     @Override
     public void onStart() {
         super.onStart();
-
-      //  auth.addAuthStateListener(mAuthListener);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-      //  if (mAuthListener != null) {
-       //     auth.removeAuthStateListener(mAuthListener);
-       // }
     }
 
     private boolean isNetworkConnected() {
