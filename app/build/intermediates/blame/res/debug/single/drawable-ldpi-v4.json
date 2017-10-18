@@ -1,26 +1,26 @@
 [
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_google.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_google.png"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
+        "source": "/home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/toast_frame.9.png",
+        "source": "/home/meeera/.android/build-cache/77235eed6f11768da6a97d5009902cd69bdbe354/output/res/drawable-ldpi-v4/toast_frame.9.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/toast_frame.9.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.GrenderG/Toasty/1.1.2/res/drawable-ldpi-v4/toast_frame.9.png"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_twitter.png",
+        "source": "/home/meeera/.android/build-cache/43de4b7f07abffbe66dd1ea69f11f75f7d249bdb/output/res/drawable-ldpi-v4/ic_twitter.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_twitter.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_twitter.png"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_google.png",
+        "source": "/home/meeera/.android/build-cache/43de4b7f07abffbe66dd1ea69f11f75f7d249bdb/output/res/drawable-ldpi-v4/ic_google.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/md_nav_back.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/drawable-ldpi-v4/md_nav_back.png"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/md_nav_back.png",
+        "source": "/home/meeera/.android/build-cache/36e526860550d0f12a5be4694deb59f9a805ca08/output/res/drawable-ldpi-v4/md_nav_back.png"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_facebook.png",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/res/drawable-ldpi-v4/ic_facebook.png"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_facebook.png",
+        "source": "/home/meeera/.android/build-cache/43de4b7f07abffbe66dd1ea69f11f75f7d249bdb/output/res/drawable-ldpi-v4/ic_facebook.png"
     }
 ]

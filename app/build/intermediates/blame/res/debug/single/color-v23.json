@@ -1,46 +1,46 @@
 [
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_seek_thumb.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_color_highlight_material.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/home/meeera/.android/build-cache/271105389990939a5f783c4180665a2f0d3f1b0d/output/res/color-v23/design_tint_password_toggle.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_btn_colored_text_material.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_edittext.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_tint_spinner.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_color_highlight_material.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_tint_edittext.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_switch_track.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_tint_default.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_btn_checkable.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_switch_thumb.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/color-v23/design_tint_password_toggle.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_spinner.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_tint_switch_track.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/color-v23/abc_tint_default.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/color-v23/abc_tint_switch_thumb.xml"
     }
 ]

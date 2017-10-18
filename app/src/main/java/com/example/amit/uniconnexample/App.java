@@ -14,7 +14,6 @@ import timber.log.Timber;
  */
 
 public class App extends Application {
-    Settings settings;
     Boolean flag,vib,logincheck;
     SharedPreferences myPrefs;
     @Override

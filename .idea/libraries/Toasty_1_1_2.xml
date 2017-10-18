@@ -1,10 +1,11 @@
 <component name="libraryTable">
   <library name="Toasty-1.1.2">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.GrenderG/Toasty/1.1.2/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.GrenderG/Toasty/1.1.2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/77235eed6f11768da6a97d5009902cd69bdbe354/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/77235eed6f11768da6a97d5009902cd69bdbe354/output/res" />
     </CLASSES>
     <JAVADOC />
+    <LIBRARY_FILE />
     <SOURCES />
   </library>
 </component>

@@ -13,8 +13,8 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
-import android.widget.Toast;
 
+import com.example.amit.uniconnexample.Fragment.Msgfrag;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -34,13 +34,11 @@ public class Notificationservice extends Service {
     FirebaseUser user;
     ValueEventListener valueEventListener,valueeventListener;
     Boolean switchflag,switchvibrate;
-    Settings settings;
     int m=0,flag=0,m1=2000;
     @Override
     public void onCreate() {
         super.onCreate();
         user= FirebaseAuth.getInstance().getCurrentUser();
-        settings=new Settings();
         switchflag=((App)this.getApplication()).getFlag();
         switchvibrate=((App)this.getApplication()).getVib();
         mDatabasenotif= FirebaseDatabase.getInstance().getReference().child("notification").child("like");
@@ -245,9 +243,9 @@ public class Notificationservice extends Service {
         if(switchvibrate){
             n.setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 });
         }
-        Intent intent=new Intent(this,Message.class);
+        Intent intent=new Intent(this, Msgfrag.class);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(Message.class);
+        stackBuilder.addParentStack(Msgfrag.class);
         stackBuilder.addNextIntent(intent);
         PendingIntent resultPendingIntent =
                 stackBuilder.getPendingIntent(

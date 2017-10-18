@@ -27,6 +27,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.amit.uniconnexample.Activity.Loginactivity;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -141,7 +142,7 @@ public class Signupactivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference();
         DatabaseReference myref=database.getReference();
         myRef.child("Userdetail").child(uid).setValue(userData);
-        myref.child(check+"chat").child(uid).setValue(new Chatusermodel(userData.name,userData.photo));
+        myref.child(check+"chat").child(uid).setValue(new com.example.amit.uniconnexample.Chatusermodel(userData.name,userData.photo));
     }
 
     @OnClick(R.id.iview)
@@ -278,15 +279,6 @@ public class Signupactivity extends AppCompatActivity {
                             Toast.makeText(Signupactivity.this, "Signup failed." + task.getException().getMessage(),
                                     Toast.LENGTH_SHORT).show();
                         }
-                       /* else{
-                            Toast.makeText(Signupactivity.this, "Successfully signed up", Toast.LENGTH_SHORT).show();
-                            writeUserData(user.getUid());
-                            mProgress.dismiss();
-                            startActivity(new Intent(Signupactivity.this, MainActivity.class)
-                                    .putExtra("user", userData));
-
-                            finish();
-                        }*/
                     }
                 });
     }

@@ -25,10 +25,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.example.amit.uniconnexample.NewTabActivity;
-import com.example.amit.uniconnexample.Profile;
+import com.example.amit.uniconnexample.Activity.NewTabActivity;
 import com.example.amit.uniconnexample.R;
-import com.example.amit.uniconnexample.Tabs;
 import com.example.amit.uniconnexample.UserData;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.google.firebase.auth.FirebaseAuth;

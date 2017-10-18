@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.amit.uniconnexample.Activity.Chatstart;
 import com.example.amit.uniconnexample.utils.Utils;
 
 import java.util.ArrayList;
@@ -20,9 +21,9 @@ import java.util.List;
  */
 
 public class Messageadapter extends RecyclerView.Adapter<Messageadapter.MyViewHolder>  {
-    private ArrayList<Message_model> dataset;
+    private ArrayList<com.example.amit.uniconnexample.Message_model> dataset;
      Context context;
-    public Messageadapter(ArrayList<Message_model> data) {
+    public Messageadapter(ArrayList<com.example.amit.uniconnexample.Message_model> data) {
         this.dataset=data;
     }
 

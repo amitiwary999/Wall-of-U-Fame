@@ -11,9 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.amit.uniconnexample.App;
-import com.example.amit.uniconnexample.NewTabActivity;
+import com.example.amit.uniconnexample.Activity.NewTabActivity;
 import com.example.amit.uniconnexample.R;
-import com.example.amit.uniconnexample.Settings;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.github.zagum.switchicon.SwitchIconView;
 
@@ -27,7 +26,6 @@ public class Settingfrag extends Fragment {
     Boolean flag,vib;
     private static SwitchIconView switchIconView1,switchIconView2;
     private View button1,button2;
-    public static Settings settings;
     public Settingfrag() {
     }
 
@@ -86,9 +84,6 @@ public class Settingfrag extends Fragment {
         ((NewTabActivity)getActivity()).setTitle("    Setting        ");
     }
 
-    public static Settings getInstance(){
-        return settings;
-    }
     public  void isEnabledswitch(Boolean flag){
         //  switchIconView1=(SwitchIconView)findViewById(R.id.switchsound);
         ((App)getActivity().getApplication()).setFlag(flag);

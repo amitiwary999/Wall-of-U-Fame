@@ -18,10 +18,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.amit.uniconnexample.Chatstart;
-import com.example.amit.uniconnexample.Message;
+import com.example.amit.uniconnexample.Activity.Chatstart;
 import com.example.amit.uniconnexample.Message_model;
-import com.example.amit.uniconnexample.NewTabActivity;
+import com.example.amit.uniconnexample.Activity.NewTabActivity;
 import com.example.amit.uniconnexample.R;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;

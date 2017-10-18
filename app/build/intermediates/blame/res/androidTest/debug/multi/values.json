@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/amit/Buildapk/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "outputFile": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/res/values/values.xml",
+                    "file": "/home/meeera/.android/build-cache/f000e217976faa75aab1a578256cb5052041b07e/output/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

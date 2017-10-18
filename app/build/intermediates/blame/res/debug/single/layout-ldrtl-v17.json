@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout-ldrtl-v17/md_listitem_multichoice.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout-ldrtl-v17/md_listitem_multichoice.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout-ldrtl-v17/md_listitem_singlechoice.xml",
+        "source": "/home/meeera/.android/build-cache/36e526860550d0f12a5be4694deb59f9a805ca08/output/res/layout-ldrtl-v17/md_listitem_singlechoice.xml"
     },
     {
-        "merged": "/home/amit/Buildapk/app/build/intermediates/res/merged/debug/layout-ldrtl-v17/md_listitem_singlechoice.xml",
-        "source": "/home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/res/layout-ldrtl-v17/md_listitem_singlechoice.xml"
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/layout-ldrtl-v17/md_listitem_multichoice.xml",
+        "source": "/home/meeera/.android/build-cache/36e526860550d0f12a5be4694deb59f9a805ca08/output/res/layout-ldrtl-v17/md_listitem_multichoice.xml"
     }
 ]

@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,11 +23,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.amit.uniconnexample.Blog;
+import com.example.amit.uniconnexample.Activity.Blog;
 import com.example.amit.uniconnexample.Blogmodel;
-import com.example.amit.uniconnexample.Chatstart;
+import com.example.amit.uniconnexample.Activity.Chatstart;
 import com.example.amit.uniconnexample.Likemodel;
-import com.example.amit.uniconnexample.Loginactivity;
+import com.example.amit.uniconnexample.Activity.Loginactivity;
 import com.example.amit.uniconnexample.Notificationmodel;
 import com.example.amit.uniconnexample.R;
 import com.example.amit.uniconnexample.UserData;
@@ -1114,7 +1115,11 @@ public class Globalfrag extends Fragment {
                 post_name.setText(model.getName());
                 nam=model.getName();
             }
-            pro_pic.setImageBitmap(Utils.decodeBase64(model.getPropic()));
+            if(model.getPropic()!=null) {
+                pro_pic.setImageBitmap(Utils.decodeBase64(model.getPropic()));
+            } else {
+                pro_pic.setImageDrawable(ContextCompat.getDrawable(mView.getContext(), R.drawable.user));
+            }
             photo=model.getPropic();
             String likE=Integer.toString(model.getLike());
             txtLike.setText(likE);
@@ -1238,30 +1243,6 @@ public class Globalfrag extends Fragment {
 
     }
 
-    /* @Override
-     public boolean onCreateOptionsMenu(Menu menu) {
-         getMenuInflater().inflate(R.menu.menu, menu);
-         return super.onCreateOptionsMenu(menu);
-     }
-
-     @Override
-     public boolean onOptionsItemSelected(MenuItem item) {
-         if (item.getItemId()==R.id.action_add){
-             startActivity(new Intent(MainActivity.this,Blog.class).putExtra("user",userdata));
-         }
-         if (item.getItemId()==R.id.profile){
-             startActivity(new Intent(MainActivity.this,Profile.class).putExtra("user",userdata));
-
-         }
-
-          if(item.getItemId()==R.id.signout){
-              FirebaseAuth.getInstance().signOut();
-              Toast.makeText(MainActivity.this, "Logging out..", Toast.LENGTH_SHORT).show();
-              startActivity(new Intent(MainActivity.this, Loginactivity.class));
-              finish();
-         }
-         return super.onOptionsItemSelected(item);
-     }*/
     private void loadLoginView() {
         Intent intent = new Intent(getActivity(), Loginactivity.class);
         startActivity(intent);
