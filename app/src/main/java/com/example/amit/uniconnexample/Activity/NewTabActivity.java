@@ -250,7 +250,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
         settingLocation(result1);
         //Log.e("Blog","Hi"+cityname);
         if(isNetworkConnected()) {
-            stopService(new Intent(NewTabActivity.this, Notificationservice.class));
+           // stopService(new Intent(NewTabActivity.this, Notificationservice.class));
         }
         //startService(new Intent(this,Notificationservice.class));
         switchflag=((App)this.getApplication()).getFlag();
@@ -273,7 +273,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         //  Toast.makeText(Tabs.this,"Tabs",Toast.LENGTH_LONG).show();
-                        notifiy(++m1, snapshot.getRef(), snapshot, switchflag, switchvibrate);
+                        //notifiy(++m1, snapshot.getRef(), snapshot, switchflag, switchvibrate);
                     }
                 }
 
@@ -318,7 +318,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                                                 Toast.makeText(Tabs.this, snapshot.getRef().getKey(),Toast.LENGTH_LONG).show();
                                             }
                                         }, 2000);*/
-                                    notification(++m, snapshot.getRef(), snapshot, switchflag, switchvibrate);
+                                    //notification(++m, snapshot.getRef(), snapshot, switchflag, switchvibrate);
                                 }
                             }
 
@@ -383,26 +383,14 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
 
                         );*/
 
-            handler1.postDelayed(new Runnable() {
+         /*   handler1.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                                                   /*  mDatabasenotiflike.child(user.getUid()).addValueEventListener(new ValueEventListener() {
-                                                         @Override
-                                                         public void onDataChange(DataSnapshot dataSnapshot) {
-                                                             int count=dataSnapshot.child("count").getValue(Integer.class);
-                                                             bottomBarTab.setBadgeCount(count);
-                                                         }
-
-                                                         @Override
-                                                         public void onCancelled(DatabaseError databaseError) {
-
-                                                         }
-                                                     });*/
                     bottomBarTab.setBadgeCount(flag);
                     bottomBarTabmsg.setBadgeCount(msgcount);
 
                 }
-            }, 1000);
+            }, 1000);*/
             // }
             //  }.start();
 
@@ -449,11 +437,11 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
         super.onDestroy();
         //    Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
         if(isNetworkConnected()) {
-            startService(new Intent(NewTabActivity.this, Notificationservice.class));
+            //startService(new Intent(NewTabActivity.this, Notificationservice.class));
         }
     }
 
-    public void notification(int m,DatabaseReference notify,DataSnapshot snapshot,Boolean switchflag,Boolean switchvibrate){
+  /*  public void notification(int m,DatabaseReference notify,DataSnapshot snapshot,Boolean switchflag,Boolean switchvibrate){
         //  song= MediaPlayer.create(this,R.raw.internetfriends0);
         //  song.start();
         //int m = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
@@ -470,13 +458,13 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
         }
         if(switchvibrate){
             n.setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 });
-        }
+        }*/
        /* android.app.Notification n= new android.app.Notification.Builder(this).setContentTitle("UniConn Notification")
                 .setContentText(snapshot.getValue(String.class)+" liked your post")
                 .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();*/
-        notificationManager.notify(m,n.build());
+      //  notificationManager.notify(m,n.build());
 
-        notify.setValue(null);
+      //  notify.setValue(null);
        /* song= MediaPlayer.create(getApplicationContext(),R.raw.internetfriends0);
         song.start();
         NotificationManager notificationManager = (NotificationManager)
@@ -486,8 +474,8 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                 .setSmallIcon(R.drawable.no).setAutoCancel(true).build();
 
         notificationManager.notify(0,n.build());*/
-    }
-    public void notifiy(int m,DatabaseReference ref,DataSnapshot snapshot,Boolean switchflag,Boolean switchvibrate){
+  //  }
+   /* public void notifiy(int m,DatabaseReference ref,DataSnapshot snapshot,Boolean switchflag,Boolean switchvibrate){
         ++msgcount;
         String name=snapshot.child("name").getValue(String.class);
         String text=snapshot.child("txt").getValue(String.class);
@@ -518,12 +506,12 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
        /* NotificationCompat.Builder n=new NotificationCompat.Builder(this).setContentTitle("Unread Message")
                 .setContentText(name+" : "+text)
                 .setSmallIcon(R.drawable.uniconn).setAutoCancel(true).build();*/
-        NotificationManager mNotificationManager =
+      /*  NotificationManager mNotificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(m,n.build());
 
         ref.setValue(null);
-    }
+    }*/
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -615,7 +603,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if(isNetworkConnected()) {
-                            stopService(new Intent(NewTabActivity.this, Notificationservice.class));
+                           // stopService(new Intent(NewTabActivity.this, Notificationservice.class));
                             newnotifchat.removeEventListener(valueEventListener);
                             mDatabasenotif.removeEventListener(valueventlistener);
                             handler1.postDelayed(new Runnable() {
