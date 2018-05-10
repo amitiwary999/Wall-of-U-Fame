@@ -192,6 +192,7 @@ ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:40:9-41:
 		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:40:19-58
 uses-sdk
 INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.0] /home/meeera/.android/build-cache/a4611dd8fac171a50fb5e89ba77c2393b0c72d67/output/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services:9.4.0] /home/meeera/.android/build-cache/953876c4063e71b0efc028e9613cf286eac0d3cb/output/AndroidManifest.xml:4:5-42
 MERGED from [com.google.android.gms:play-services-ads:9.4.0] /home/meeera/.android/build-cache/d30f7a128bd342e2d0c1e5870f74192d11786301/output/AndroidManifest.xml:19:5-42
 MERGED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:23:5-42

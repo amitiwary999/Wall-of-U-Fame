@@ -2,22 +2,1552 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/home/meeera/Wall-of-U-Fame/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/4f9c6586fa1646f6df66a1429ba04b3d46c27dd8/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="105154f0976f0f8affe6fcc024c9503550d59ad8">
-        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7ec8852ea50e6812311493247dc1c7e98363db59/classes.dex" />
+        sha1="98e97da89d4df8e2f6eba63498d3d46a587372f2">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_ac75dba514219dc4191cb6c667af40fa5e099069.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-compiler/8.2.1/66193507a52d5bb253b13850f191294ad767bb9/butterknife-compiler-8.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="066193507a52d5bb253b13850f191294ad767bb9">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/butterknife-compiler-8.2.1_1ea81bd83b794dbd205674b889046b7689bd654a.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/meeera/Wall-of-U-Fame/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        jar="/home/meeera/.android/build-cache/79de539c5ff31f43038e46c694d11c03f85951d8/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e1fdc0dfa0219a9314a3ab0afe262f3c81c30c4d/classes.dex" />
+        sha1="e5e8e535d15834e824817bdf5370556f62b4b2a5">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f9c976cd32b855734ffc0541d27736ab3aa22a8c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-compiler/8.2.1/66193507a52d5bb253b13850f191294ad767bb9/butterknife-compiler-8.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="066193507a52d5bb253b13850f191294ad767bb9">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-compiler-8.2.1_1ea81bd83b794dbd205674b889046b7689bd654a/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/commons-validator/commons-validator/1.5.1/86d05a46e8f064b300657f751b5a98c62807e2a0/commons-validator-1.5.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="86d05a46e8f064b300657f751b5a98c62807e2a0">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/commons-validator-1.5.1_26f11a818ec7362efdeaef70f3de5ee82a631477.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_929566be9657da7f50a094effa28fea85a75e044/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/4f9c6586fa1646f6df66a1429ba04b3d46c27dd8/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="98e97da89d4df8e2f6eba63498d3d46a587372f2">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ac75dba514219dc4191cb6c667af40fa5e099069/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/dd7f4e21f2b724fcabd44027a33b1d5ed6ceaf9c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ab3193b438e37f7b0a634cc2dfebbf92892ea90c">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8812ac8a3300c4601e71d7b70ca17c54dd8cd844/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/79de539c5ff31f43038e46c694d11c03f85951d8/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e5e8e535d15834e824817bdf5370556f62b4b2a5">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_f9c976cd32b855734ffc0541d27736ab3aa22a8c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/4244fe6dd44b927e2a311b70cecf7fd63c1960ca/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0ad33eb600f3d80bdff5ce355c90d5533ade652a">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a0ee8895c2d88d7590a74307f5c9cf78ed38dfb6/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/4244fe6dd44b927e2a311b70cecf7fd63c1960ca/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0ad33eb600f3d80bdff5ce355c90d5533ade652a">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_a0ee8895c2d88d7590a74307f5c9cf78ed38dfb6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/eafa00549a38bd6466660bce6ee0b4babbe735b5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1cf522b6ed00f1f2affb3e44f662a889d2db3b42/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/eafa00549a38bd6466660bce6ee0b4babbe735b5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_1cf522b6ed00f1f2affb3e44f662a889d2db3b42.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/602da563b69db73dac421a1be18f6add8212cbb0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c341a7ad32bc2eef9dcfab239262b77ac60788cc">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e68649c9a5812f1f56f4e0b8879936eb2c2c79e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/dd7f4e21f2b724fcabd44027a33b1d5ed6ceaf9c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ab3193b438e37f7b0a634cc2dfebbf92892ea90c">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_8812ac8a3300c4601e71d7b70ca17c54dd8cd844.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/f17dcc784960759de28c8fe2875ecc275949cf30/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e3fcc7701d6e469c34e23978de738c5759c2aeec/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/602da563b69db73dac421a1be18f6add8212cbb0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c341a7ad32bc2eef9dcfab239262b77ac60788cc">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_e68649c9a5812f1f56f4e0b8879936eb2c2c79e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/f17dcc784960759de28c8fe2875ecc275949cf30/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_e3fcc7701d6e469c34e23978de738c5759c2aeec.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/commons-validator/commons-validator/1.5.1/86d05a46e8f064b300657f751b5a98c62807e2a0/commons-validator-1.5.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="86d05a46e8f064b300657f751b5a98c62807e2a0">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-validator-1.5.1_26f11a818ec7362efdeaef70f3de5ee82a631477/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/06f7534f03c8764ac6df217c0b3864e9ab031c6e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b034fc34b6f13e95ccaaff6aa76819c34c6bce41">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f24f986470d61fae909bca58e92c3a20468a150b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-core-2.2.2_41d446453acb19e2993b52fa9e08ec9610d465e9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="03829a2618892d438a1f59c6286699ca1f476e93">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a8667943ecc59f5fd5d87838af528ffed2c14e44/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/commons-collections-3.2.2_b249e50a4860bef3ca52698547137aef8e9e8a60.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/f1df3c4d673387f57bba152deee4ab1a1e2941bf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7a9f96cd1cb1d653afe15ca9ee5e51db37d714c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/android-studio/gradle/m2repository/com/google/guava/guava/18.0/guava-18.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/guava-18.0_22c26c0978ca3eb28274bc3040a2f90b696fadde/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/06f7534f03c8764ac6df217c0b3864e9ab031c6e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b034fc34b6f13e95ccaaff6aa76819c34c6bce41">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_f24f986470d61fae909bca58e92c3a20468a150b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-collections-3.2.2_b249e50a4860bef3ca52698547137aef8e9e8a60/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_e685504cbd25298c1c2a4bb2e4c09b8bb575d842.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="03829a2618892d438a1f59c6286699ca1f476e93">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_a8667943ecc59f5fd5d87838af528ffed2c14e44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/e1043ff483009e76c50c94bbd8eacb51d2069e8b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="565f0eb14f70250a54baaeebf794b52cccc150e8">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_7d02bfc401391ca28696955367524104a1a94019.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e685504cbd25298c1c2a4bb2e4c09b8bb575d842/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4d1eef77feb4f5eb598bc3eed8b55c93f04f08e5">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ce2a4eb213170cbdd10ded64fefaa28dee4d2c94/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/d137d8139dba3d6f55993c53bf0e2447f5b923e9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dd51b31890731591729f046d7a09c4fe4e483ed1">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_dc1c71b038c09d4fcafdb431c8495e617800b3c5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/9afcce887a4d64387511ef4484eb82e6bccc095d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dc0b11136e3e53c088c903d1d9cf485dbaa54d7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/d137d8139dba3d6f55993c53bf0e2447f5b923e9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dd51b31890731591729f046d7a09c4fe4e483ed1">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dc1c71b038c09d4fcafdb431c8495e617800b3c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/cca22b393385cd7bd9da40442d0f70a41aeba699/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ca5e58104f56f918f0fb3a5b1b371ab599ae56b2">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7475f4b8e092bb75ee43e3f5e8bbfdd6e5aaaca8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/7c209cf262f5a99f3f20ec87bcbbf59db8a29529/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="954697ee6ea7bdd596babf4f70e8b7a17ca7649e">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_864f177670267bb2d2640cf7411489c8b36547c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/c6b2e4506d3a7cf22202d41a51860abacc7d323d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_844edfed94be21e59d1b6c4df54e1f49df7510c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/commons-digester/commons-digester/1.8.1/3dec9b9c7ea9342d4dbe8c38560080d85b44a015/commons-digester-1.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3dec9b9c7ea9342d4dbe8c38560080d85b44a015">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/commons-digester-1.8.1_8efc25f74c5ec800e8a64502d7025ffa7c774a8c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/7c209cf262f5a99f3f20ec87bcbbf59db8a29529/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="954697ee6ea7bdd596babf4f70e8b7a17ca7649e">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_864f177670267bb2d2640cf7411489c8b36547c1.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/commons-digester/commons-digester/1.8.1/3dec9b9c7ea9342d4dbe8c38560080d85b44a015/commons-digester-1.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3dec9b9c7ea9342d4dbe8c38560080d85b44a015">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-digester-1.8.1_8efc25f74c5ec800e8a64502d7025ffa7c774a8c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/f1df3c4d673387f57bba152deee4ab1a1e2941bf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_7a9f96cd1cb1d653afe15ca9ee5e51db37d714c3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/android-studio/gradle/m2repository/com/google/guava/guava/18.0/guava-18.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/guava-18.0_22c26c0978ca3eb28274bc3040a2f90b696fadde.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.3.1/4d53b7d6983247af02b8fe7e4228fff555a5e828/firebase-client-jvm-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4d53b7d6983247af02b8fe7e4228fff555a5e828">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.3.1_97bd3609fa39a86b1134b5ed3d31d25eb22477f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/9afcce887a4d64387511ef4484eb82e6bccc095d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_dc0b11136e3e53c088c903d1d9cf485dbaa54d7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/cca22b393385cd7bd9da40442d0f70a41aeba699/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ca5e58104f56f918f0fb3a5b1b371ab599ae56b2">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_7475f4b8e092bb75ee43e3f5e8bbfdd6e5aaaca8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.3.1/4d53b7d6983247af02b8fe7e4228fff555a5e828/firebase-client-jvm-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4d53b7d6983247af02b8fe7e4228fff555a5e828">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/firebase-client-jvm-2.3.1_97bd3609fa39a86b1134b5ed3d31d25eb22477f0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/c6b2e4506d3a7cf22202d41a51860abacc7d323d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_844edfed94be21e59d1b6c4df54e1f49df7510c0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/917bdbd8c3282656c9586ae7e52627708ee6c78e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="72eacac37fc64e95d53abd2a041bf81a952d8615">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1044201b4dbb8d47c36c0778524d2ae01ccf4417/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4348dd26d83b56c2058b768222c3271bce911724">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_2c2156a3fcaf77c12d168d71f14e5a13b428d44d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/474942547d4b3413cb4876e5e89f9fb57f488ff3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="670df81539ab71918d49b186598b7eff08ef6563">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_81c480f10be6c7d15a6318154b3935fa4ced5132/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7ea53c4458b80e8ea71f7fd6831fa184c501377b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4771a26e7ae46d4fd9707b0bc3d7efc2fb1167a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/ed7ba6fd23118d30e53b7ff97945d67abccad240/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e6e2251f3d3abf4eecd6bf6919d41fc7af497852">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_10f4368fc9bb74bc9970aaaa046c2ffa6c6bc5d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/a7372e0cede35fb62d691df98cf7b08f4ba7e91a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="042cf6b3b9ef0ea3baacd9b27e4901680769cbc8">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_38f5078ea47eb217e262510e1fd93ae4220d3e90/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/474942547d4b3413cb4876e5e89f9fb57f488ff3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="670df81539ab71918d49b186598b7eff08ef6563">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_81c480f10be6c7d15a6318154b3935fa4ced5132.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/917bdbd8c3282656c9586ae7e52627708ee6c78e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="72eacac37fc64e95d53abd2a041bf81a952d8615">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_1044201b4dbb8d47c36c0778524d2ae01ccf4417.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/ed7ba6fd23118d30e53b7ff97945d67abccad240/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e6e2251f3d3abf4eecd6bf6919d41fc7af497852">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_10f4368fc9bb74bc9970aaaa046c2ffa6c6bc5d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7ea53c4458b80e8ea71f7fd6831fa184c501377b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_4771a26e7ae46d4fd9707b0bc3d7efc2fb1167a8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/e50305a003dfb02181574ad7bf4454f7c7172c9e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="991f2ea1b0f8b8f82f4e8dfe657c013a9eeb76fc">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_922703cda0f8d2831a6acd6d28f731a806c87a4e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/cd4823e5090163b6a1c540182065f0b78ea480da/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="aba9abcfe7ce6d935add115f5ce20254b037d583">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d4ceb88f2b6bd81293d2aff1d5ebf540f6ccaaec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/f2742655af2f62d2bf687fd8b6d87d60aad99088/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8ce5e7a4a146dddd1d9e66b09c714a6c149916d8">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7aea634fce9762f34dc4fd4033a375db122b80d6/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.2/7a87d845ad3a155297e8f67d9008f4c1e5656b71/commons-beanutils-1.9.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7a87d845ad3a155297e8f67d9008f4c1e5656b71">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/commons-beanutils-1.9.2_2eb232f72f1ce7d847705423909b11dac1a9be6b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/a7372e0cede35fb62d691df98cf7b08f4ba7e91a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="042cf6b3b9ef0ea3baacd9b27e4901680769cbc8">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_38f5078ea47eb217e262510e1fd93ae4220d3e90.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/77235eed6f11768da6a97d5009902cd69bdbe354/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d69f3a271ef0e7c771d700ff75a6df565278dc01">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_33ccd6951dd790b05189de18cac958139c78c6ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/f2742655af2f62d2bf687fd8b6d87d60aad99088/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8ce5e7a4a146dddd1d9e66b09c714a6c149916d8">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_7aea634fce9762f34dc4fd4033a375db122b80d6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/3070dc13e9a298048e6680c3ab7aa051a18526cf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c8f5d56f8f8a287c95e02c542baade138a378048">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_72a93976ccafeb8da11b4fce8fa717465c34ce90/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/cd4823e5090163b6a1c540182065f0b78ea480da/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="aba9abcfe7ce6d935add115f5ce20254b037d583">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_d4ceb88f2b6bd81293d2aff1d5ebf540f6ccaaec.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4348dd26d83b56c2058b768222c3271bce911724">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2c2156a3fcaf77c12d168d71f14e5a13b428d44d/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/3070dc13e9a298048e6680c3ab7aa051a18526cf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c8f5d56f8f8a287c95e02c542baade138a378048">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_72a93976ccafeb8da11b4fce8fa717465c34ce90.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.2/7a87d845ad3a155297e8f67d9008f4c1e5656b71/commons-beanutils-1.9.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7a87d845ad3a155297e8f67d9008f4c1e5656b71">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-beanutils-1.9.2_2eb232f72f1ce7d847705423909b11dac1a9be6b/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/77235eed6f11768da6a97d5009902cd69bdbe354/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d69f3a271ef0e7c771d700ff75a6df565278dc01">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_33ccd6951dd790b05189de18cac958139c78c6ec.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/f6bd86956855b013b96ab8d87b0affb3843f51bf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d237f051940b80f6176360a40ce45ffd0830779e">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d6b0397bf1ef452b558b66fba30ad658726a5a26/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/f6bd86956855b013b96ab8d87b0affb3843f51bf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d237f051940b80f6176360a40ce45ffd0830779e">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_d6b0397bf1ef452b558b66fba30ad658726a5a26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/e50305a003dfb02181574ad7bf4454f7c7172c9e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="991f2ea1b0f8b8f82f4e8dfe657c013a9eeb76fc">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_922703cda0f8d2831a6acd6d28f731a806c87a4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/8b00e00333d3648903c66278fa82fce800078d20/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_e59c545f96db34d311956dd35f463295b8c0adde.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/da2956a9b266316a84b3f6aecf4ad3645e7da225/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="46fdd8edf5f7e8a7bd7323fd0df9598b73076c4f">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9e5e4429e991754d184fb7396be9675590ffe316/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_8fd060b798659dcf79b191d9e2ba60656b4d24a3.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/4839b23fc2e61c0eb7bda71bb832cd2307597886/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_12436fb7ebd0a83cdd24d973326306bfb731e835/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_7c9a5ba179c5213eab4403fe47ddf68e4fc5bfae.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-annotations-2.2.2_168a25f53486c8b188865431a28e161080dc562e/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/4839b23fc2e61c0eb7bda71bb832cd2307597886/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_12436fb7ebd0a83cdd24d973326306bfb731e835.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/tubesock-0.0.11_4cf6a457137af335980668c5d983c8b74fe1b83c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/8610471939850b6e1886f62e1e86522c8ff8197c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c10df7344e31161852c20bb8143fc37319aa10ec">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6154040fe217fc0b39002c7619fbba6c46be1def/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/43de4b7f07abffbe66dd1ea69f11f75f7d249bdb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="fbed8999711c2ea4a32aebfb9541e9873b5a83ca">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_0e59f7c2dd50ff6d167dd7170ca5fdd04699480b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/da2956a9b266316a84b3f6aecf4ad3645e7da225/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="46fdd8edf5f7e8a7bd7323fd0df9598b73076c4f">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_9e5e4429e991754d184fb7396be9675590ffe316.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2_168a25f53486c8b188865431a28e161080dc562e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/43de4b7f07abffbe66dd1ea69f11f75f7d249bdb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="fbed8999711c2ea4a32aebfb9541e9873b5a83ca">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0e59f7c2dd50ff6d167dd7170ca5fdd04699480b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/tubesock-0.0.11_4cf6a457137af335980668c5d983c8b74fe1b83c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_dcb444361fd8cd7229d97d87f240fd3711847a0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.3.1/be29b24233711c419ce935aa0a1b12ebc49d1c9a/firebase-client-android-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="be29b24233711c419ce935aa0a1b12ebc49d1c9a">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/firebase-client-android-2.3.1_8eb6b60c54df806bf781b961869e8c713cce469c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/112a32d4fc655bd48c92f70b983cda6010006f01/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="42a3ae86dd3ae2876d3e95c2e6e104ae57a50a65">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_fc3b3d998779b9f55bf7e0b5530b8e68e722be40.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dcb444361fd8cd7229d97d87f240fd3711847a0f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/a6812079bfc858614f64132b0935e1412d951d1a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_811b08b375bf3a415683032a8b51ff9171c8682a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.3.1/be29b24233711c419ce935aa0a1b12ebc49d1c9a/firebase-client-android-2.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="be29b24233711c419ce935aa0a1b12ebc49d1c9a">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/firebase-client-android-2.3.1_8eb6b60c54df806bf781b961869e8c713cce469c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/ccbb7a1d5bcb52b8e7979055add94c6e26b1cc71/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b1acf13f1b7d8232af78a30833f9a966d1394c84">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_acf289276747a18a97c8d2e290fa982241c3bc3a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/4ce1479e02ce5e4c9e1a4acde5aca88f5e05588c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_f36da5b601e001fbd0b45bc691b14a3d260301cf.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8fd060b798659dcf79b191d9e2ba60656b4d24a3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/ccbb7a1d5bcb52b8e7979055add94c6e26b1cc71/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b1acf13f1b7d8232af78a30833f9a966d1394c84">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_acf289276747a18a97c8d2e290fa982241c3bc3a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/4ce1479e02ce5e4c9e1a4acde5aca88f5e05588c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f36da5b601e001fbd0b45bc691b14a3d260301cf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/112a32d4fc655bd48c92f70b983cda6010006f01/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="42a3ae86dd3ae2876d3e95c2e6e104ae57a50a65">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fc3b3d998779b9f55bf7e0b5530b8e68e722be40/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7c9a5ba179c5213eab4403fe47ddf68e4fc5bfae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/f479e96d872ca733fb2beffba5573569cecde060/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_de4480557d5cdb882d8dd6ab1bb0c703a0338df2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="736d8893fb702f128a153c9d87c9c29724d37872">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ea76529f4e3b1c5b1eac0c32df3a5bac0a9f5a5e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/e9526fb90fb8db6c8769cc2fa75c4ca8e7398e73/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_793c600408164485525e7783fefd5c16f6cf7141/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.2.1/d6f54d76edfbe779a50a8636b10fd3f555d8f780/butterknife-annotations-8.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.2.1_0e8c26b3a41c7a693780eeeab9f03802f9469d5f/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.2.1/d6f54d76edfbe779a50a8636b10fd3f555d8f780/butterknife-annotations-8.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.2.1_0e8c26b3a41c7a693780eeeab9f03802f9469d5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/f479e96d872ca733fb2beffba5573569cecde060/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_de4480557d5cdb882d8dd6ab1bb0c703a0338df2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/e9526fb90fb8db6c8769cc2fa75c4ca8e7398e73/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_793c600408164485525e7783fefd5c16f6cf7141.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/c0852f511018b6c23f0e24475c60df4f01d3fa62/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4eb0eb6160f7cd0cd0fb37b456c6578fed083b35/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/8610471939850b6e1886f62e1e86522c8ff8197c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c10df7344e31161852c20bb8143fc37319aa10ec">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_6154040fe217fc0b39002c7619fbba6c46be1def.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/a6812079bfc858614f64132b0935e1412d951d1a/output/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.0_80dbf887dc7216d6140655109c08f5d6d7e47c01/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/2049d8f71a3d6bb53e3d02df1fba39b98e51f17e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_ab2a89240e1abae0607a102061280a7e14015c85.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/2049d8f71a3d6bb53e3d02df1fba39b98e51f17e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ab2a89240e1abae0607a102061280a7e14015c85/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="736d8893fb702f128a153c9d87c9c29724d37872">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_ea76529f4e3b1c5b1eac0c32df3a5bac0a9f5a5e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/a6812079bfc858614f64132b0935e1412d951d1a/output/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0_80dbf887dc7216d6140655109c08f5d6d7e47c01.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/8b00e00333d3648903c66278fa82fce800078d20/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e59c545f96db34d311956dd35f463295b8c0adde/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/c0852f511018b6c23f0e24475c60df4f01d3fa62/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_4eb0eb6160f7cd0cd0fb37b456c6578fed083b35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/c2ba4d56430526de9b7de2ce79f91c451acc7891/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_c87ea0a21cfff8bcbdd1dbbb0be063fe5fc1ed79.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/c2ba4d56430526de9b7de2ce79f91c451acc7891/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c87ea0a21cfff8bcbdd1dbbb0be063fe5fc1ed79/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/2e1d7bab2fc32d092c31acb1e6d17cb7774beb81/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_bdcd45da10a3f3c259ba41f63cad632ed28d0b64.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/1178a56c2bc5aa093a6ddcd354f90aa8fb1a1da5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e35002351f2d415093a9b564652d4b56be6a0593">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2455560c423b2cff756d9b5ac7ea9dbe31712aab/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.5.2/ecf534dba3a8446ce84cbb797d314763be212a68/glide-3.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.5.2_3cc3f1c8bde90df1f9126f9644144191f0d65b8f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_1de7a7404866cd043f13d1019c8c76e448216c5e/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.google.auto.service/auto-service/1.0-rc2/51033a5b8fcf7039159e35b6878f106ccd5fb35f/auto-service-1.0-rc2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="51033a5b8fcf7039159e35b6878f106ccd5fb35f">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/auto-service-1.0-rc2_aebbf5311d40fcd0a1d567283d2eeaef06315213.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b6d9b70f93bbeb872d0948bc064ae3f3f2bcbac">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ed183504048230f11e46daef0b3dfe233804b85/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/2e1d7bab2fc32d092c31acb1e6d17cb7774beb81/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bdcd45da10a3f3c259ba41f63cad632ed28d0b64/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/1178a56c2bc5aa093a6ddcd354f90aa8fb1a1da5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e35002351f2d415093a9b564652d4b56be6a0593">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_2455560c423b2cff756d9b5ac7ea9dbe31712aab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet/1.7.0/4fdcf1fc27c1a8f55d1109df986c923152f07759/javapoet-1.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4fdcf1fc27c1a8f55d1109df986c923152f07759">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/javapoet-1.7.0_d72f29f3f8825e60308c52d7a8cf552eef40d80d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4d1eef77feb4f5eb598bc3eed8b55c93f04f08e5">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_ce2a4eb213170cbdd10ded64fefaa28dee4d2c94.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/e1043ff483009e76c50c94bbd8eacb51d2069e8b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="565f0eb14f70250a54baaeebf794b52cccc150e8">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7d02bfc401391ca28696955367524104a1a94019/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.google.auto/auto-common/0.6/cf7212b0f8bfef12657b942df8f4f2cf032d3f41/auto-common-0.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cf7212b0f8bfef12657b942df8f4f2cf032d3f41">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/auto-common-0.6_6e80141bbe0bcffa51e784ac6ce0fb1a8e28bf9b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/d30f7a128bd342e2d0c1e5870f74192d11786301/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_76fb3795f8afc34c41ce12c7f86ad8acfe7f463a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.google.auto/auto-common/0.6/cf7212b0f8bfef12657b942df8f4f2cf032d3f41/auto-common-0.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cf7212b0f8bfef12657b942df8f4f2cf032d3f41">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/auto-common-0.6_6e80141bbe0bcffa51e784ac6ce0fb1a8e28bf9b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.google.auto.service/auto-service/1.0-rc2/51033a5b8fcf7039159e35b6878f106ccd5fb35f/auto-service-1.0-rc2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="51033a5b8fcf7039159e35b6878f106ccd5fb35f">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/auto-service-1.0-rc2_aebbf5311d40fcd0a1d567283d2eeaef06315213/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/d30f7a128bd342e2d0c1e5870f74192d11786301/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_76fb3795f8afc34c41ce12c7f86ad8acfe7f463a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b6d9b70f93bbeb872d0948bc064ae3f3f2bcbac">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_0ed183504048230f11e46daef0b3dfe233804b85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.5.2/ecf534dba3a8446ce84cbb797d314763be212a68/glide-3.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/glide-3.5.2_3cc3f1c8bde90df1f9126f9644144191f0d65b8f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/20658e3d594e1bc09fa8e40c5fd3053f950d4628/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5e04c0b3683ca45b343284d93e5594b5f9044551">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d60c8f057678a5a2195b361095ba474f1d03a50e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/ea0a43d00774c145701e01d845d1abd9e9e7447c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7bc6ea2bcfd6de4b7085e0f3a01616c5c8e0e2ad">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_511d530c66cfd4d0c65d3c0f23f4a9bb74d02446/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet/1.7.0/4fdcf1fc27c1a8f55d1109df986c923152f07759/javapoet-1.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4fdcf1fc27c1a8f55d1109df986c923152f07759">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/javapoet-1.7.0_d72f29f3f8825e60308c52d7a8cf552eef40d80d/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/39f1095fb1f4b6b86f8298b23f97322d4346decf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_76b4dcde6761c1ba515dabddf986d4073f777307.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2_c75dd1f1cb63a9d5175d16006dc4ec0ee9b87ab9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2_41d446453acb19e2993b52fa9e08ec9610d465e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/20658e3d594e1bc09fa8e40c5fd3053f950d4628/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5e04c0b3683ca45b343284d93e5594b5f9044551">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_d60c8f057678a5a2195b361095ba474f1d03a50e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/ea0a43d00774c145701e01d845d1abd9e9e7447c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7bc6ea2bcfd6de4b7085e0f3a01616c5c8e0e2ad">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_511d530c66cfd4d0c65d3c0f23f4a9bb74d02446.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/39f1095fb1f4b6b86f8298b23f97322d4346decf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_76b4dcde6761c1ba515dabddf986d4073f777307/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-databind-2.2.2_c75dd1f1cb63a9d5175d16006dc4ec0ee9b87ab9/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/5acc348ef5f6f445487591663de6afd8257f7c49/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="461e4257888c25ec05abcd91e758fe7f4949230a">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_735a3e02bd14bddf9993eab70e3f38ea4067cc2e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/36e526860550d0f12a5be4694deb59f9a805ca08/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5640136cf422060a7077e2c02d9a231d7c76f959">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_00d55b37707205f3a9960f6d6a33802110fc383b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/a4611dd8fac171a50fb5e89ba77c2393b0c72d67/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d7356b482680829783390f9957d5ee1882e4a084/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9d48baf96c7e187991a9befa833bebd181960a9">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_1776b353916bcaa8dc27bf11f643d87e63a23f15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/f51048585565071f522c2ae100a2dfcc2c43abac/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d729037ff4a83220d1f706356ff0dbe4b85e0d73">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_3dea3083dbbb419e8e71b9bc1ccbfdd471a5eaa0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/43708abe00a0931a3e6d12d29f73ab56083baebd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ba47b210d36301e237ccfea860eaada04590f12a">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_bb8e5daa3c22134b750d529f78ab80dfeaaa6f19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/1cfd54c5b5f00f6ee95e0d671cfcd7de8fa19c55/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_39bd3d6f71681d132cb58c6009f39c7f2ee4f6bd.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9d48baf96c7e187991a9befa833bebd181960a9">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1776b353916bcaa8dc27bf11f643d87e63a23f15/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/5acc348ef5f6f445487591663de6afd8257f7c49/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="461e4257888c25ec05abcd91e758fe7f4949230a">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_735a3e02bd14bddf9993eab70e3f38ea4067cc2e/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/0f763adc59085e0d493f90fc9ac2fa89a25e2757/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0b060160e7daee343f5315b3da91b0ff2d7eed89">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_eaa0a3c16a29b4e2861cc9d634bff1eaa1a77b89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/36e526860550d0f12a5be4694deb59f9a805ca08/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5640136cf422060a7077e2c02d9a231d7c76f959">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_00d55b37707205f3a9960f6d6a33802110fc383b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/3b2f7f5c8ae5028e6c0510bdd541359fa55f29b6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d49118ba67a101c4895f0581f17142cba85b330b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f25431bf1062f8d881afa7ff86337d50fb69bfc5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/a04bc906e536d8cfb726015a0ee2235eb3d2d83e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="58c9f5ee817fdb8b658fd7455fadfb74119f7ee9">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f6ce82f9771ebfb849cc2f183dfc53b788718f2/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/a04bc906e536d8cfb726015a0ee2235eb3d2d83e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="58c9f5ee817fdb8b658fd7455fadfb74119f7ee9">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_4f6ce82f9771ebfb849cc2f183dfc53b788718f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/a6812079bfc858614f64132b0935e1412d951d1a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_811b08b375bf3a415683032a8b51ff9171c8682a.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/0f763adc59085e0d493f90fc9ac2fa89a25e2757/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="0b060160e7daee343f5315b3da91b0ff2d7eed89">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eaa0a3c16a29b4e2861cc9d634bff1eaa1a77b89/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/43708abe00a0931a3e6d12d29f73ab56083baebd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ba47b210d36301e237ccfea860eaada04590f12a">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bb8e5daa3c22134b750d529f78ab80dfeaaa6f19/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/1cfd54c5b5f00f6ee95e0d671cfcd7de8fa19c55/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_39bd3d6f71681d132cb58c6009f39c7f2ee4f6bd/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/3b2f7f5c8ae5028e6c0510bdd541359fa55f29b6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d49118ba67a101c4895f0581f17142cba85b330b">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_f25431bf1062f8d881afa7ff86337d50fb69bfc5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/0a3643141e7388554e20d1806767b3ddc556e43d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8197651ce1af4d89b47f4545cc720bc4f8611e7d">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_abf2c1cc0f446a0dabbe489694b31dd263483d1e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/11d9f426ef9e1775175a51bc153c90eb629d5a33/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a432629397351d3ec7f27a23d258b229b81af08f">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_943aa9e6ef72392974143a6a1f3c77a55182fa85/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.android/build-cache/f51048585565071f522c2ae100a2dfcc2c43abac/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d729037ff4a83220d1f706356ff0dbe4b85e0d73">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3dea3083dbbb419e8e71b9bc1ccbfdd471a5eaa0/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/11d9f426ef9e1775175a51bc153c90eb629d5a33/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a432629397351d3ec7f27a23d258b229b81af08f">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_943aa9e6ef72392974143a6a1f3c77a55182fa85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meeera/.android/build-cache/0a3643141e7388554e20d1806767b3ddc556e43d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8197651ce1af4d89b47f4545cc720bc4f8611e7d">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/pre-dexed/debug/classes_abf2c1cc0f446a0dabbe489694b31dd263483d1e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/meeera/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/home/meeera/Wall-of-U-Fame/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_d27d20fb5bad7ab6273dc1254f616de4f5522a56/classes.dex" />
     </item>
 
 </items>

@@ -103,7 +103,6 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
     ValueEventListener valueEventListener,valueventlistener;
     Boolean switchflag,switchvibrate;
     BottomBarTab bottomBarTab,bottomBarTabmsg;
-    Uri alarmsound;
     Location location=null,mLastLocation;
     String cityname;
     Geocoder geocoder;
@@ -211,7 +210,7 @@ public class NewTabActivity extends AppCompatActivity implements GoogleApiClient
                     if(isNetworkConnected()) {
                         newnotifchat.removeEventListener(valueEventListener);
                         mDatabasenotif.removeEventListener(valueventlistener);
-                        bottomBarTabmsg.removeBadge();
+                        //bottomBarTabmsg.removeBadge();
                         msgcount = 0;
                     }
                   //  viewPager.setVisibility(View.GONE);
