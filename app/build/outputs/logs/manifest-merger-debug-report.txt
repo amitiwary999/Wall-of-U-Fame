@@ -1,683 +1,666 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:2:1-56:12
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-44:12
 	package
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:3:5-46
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:4:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:20:5-66
-MERGED from [com.google.android.gms:play-services-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.4.0/AndroidManifest.xml:21:5-67
-MERGED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:19:5-67
-MERGED from [com.google.android.gms:play-services-gcm:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.4.0/AndroidManifest.xml:21:5-67
-MERGED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:21:5-67
-MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/AndroidManifest.xml:21:5-66
-MERGED from [com.firebaseui:firebase-ui:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/AndroidManifest.xml:11:5-67
-MERGED from [com.firebaseui:firebase-ui-database:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-database/0.5.3/AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-crash:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:21:5-67
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics:9.4.0] /home/meeera/.android/build-cache/43708abe00a0931a3e6d12d29f73ab56083baebd/output/AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:19:5-67
+MERGED from [com.google.android.gms:play-services-gcm:9.4.0] /home/meeera/.android/build-cache/c0852f511018b6c23f0e24475c60df4f01d3fa62/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-iid:9.4.0] /home/meeera/.android/build-cache/4ce1479e02ce5e4c9e1a4acde5aca88f5e05588c/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/meeera/.android/build-cache/4244fe6dd44b927e2a311b70cecf7fd63c1960ca/output/AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/meeera/.android/build-cache/f17dcc784960759de28c8fe2875ecc275949cf30/output/AndroidManifest.xml:21:5-66
+MERGED from [com.firebaseui:firebase-ui:0.5.3] /home/meeera/.android/build-cache/43de4b7f07abffbe66dd1ea69f11f75f7d249bdb/output/AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-database:0.5.3] /home/meeera/.android/build-cache/f51048585565071f522c2ae100a2dfcc2c43abac/output/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-crash:9.4.0] /home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/meeera/.android/build-cache/eafa00549a38bd6466660bce6ee0b4babbe735b5/output/AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.CAMERA
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:5:5-64
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:5:5-64
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:5:22-62
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:5:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:6:5-80
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:6:5-80
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:6:22-77
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:6:22-77
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:7:5-80
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:7:5-80
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:7:22-78
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:7:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:8:5-78
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:8:5-78
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:8:22-76
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:9:5-71
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:9:5-71
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:9:22-68
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:9:22-68
 uses-feature#android.hardware.location.gps
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:10:5-65
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:10:5-65
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:10:19-63
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:10:19-63
 application
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:11:5-54:19
-MERGED from [com.google.android.gms:play-services:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/9.4.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:24:5-32:19
-MERGED from [com.google.android.gms:play-services-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.4.0/AndroidManifest.xml:27:5-20
-MERGED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:20:5-30:19
-MERGED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/AndroidManifest.xml:5:5-9:19
-MERGED from [com.google.android.gms:play-services-cast:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.android.support:mediarouter-v7:23.0.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-clearcut:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.firebase:firebase-config:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-contextmanager:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-contextmanager/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.firebase:firebase-messaging:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/AndroidManifest.xml:20:5-32:19
-MERGED from [com.google.android.gms:play-services-fitness:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-games:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-drive:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-gass:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-gcm:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.gms:play-services-appindexing:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.gms:play-services-location:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-nearby:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.4.0/AndroidManifest.xml:6:5-20
-MERGED from [com.google.android.gms:play-services-panorama:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-places:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-plus:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-safetynet:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.4.0/AndroidManifest.xml:27:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:24:5-38:19
-MERGED from [com.google.android.gms:play-services-vision:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.4.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-identity:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/AndroidManifest.xml:27:5-20
-MERGED from [com.google.android.gms:play-services-wearable:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.4.0/AndroidManifest.xml:19:5-20
-MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/me.himanshusoni.chatmessageview/chat-message-view/1.0.3/AndroidManifest.xml:11:5-14:19
-MERGED from [com.pkmmte.view:circularimageview:1.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.pkmmte.view/circularimageview/1.1/AndroidManifest.xml:11:5-20
-MERGED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:12:5-83:19
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/AndroidManifest.xml:28:5-37:19
-MERGED from [com.android.support:customtabs:23.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:24.2.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:20:5-32:19
-MERGED from [com.google.firebase:firebase-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.4.0/AndroidManifest.xml:20:5-21:19
-MERGED from [com.google.firebase:firebase-auth-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.4.0/AndroidManifest.xml:20:5-21:19
-MERGED from [com.google.firebase:firebase-crash:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/AndroidManifest.xml:24:5-32:19
-MERGED from [com.google.android.gms:play-services-base:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/AndroidManifest.xml:19:5-23:19
-MERGED from [com.jakewharton.timber:timber:4.1.2] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.jakewharton.timber/timber/4.1.2/AndroidManifest.xml:8:5-20
-MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/AndroidManifest.xml:13:5-20
-MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.tt/whorlviewlibrary/1.0.3/AndroidManifest.xml:11:5-14:19
-MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:design:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:transition:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.zagum/Android-SwitchIcon/1.3.2/AndroidManifest.xml:8:5-20
-MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.GrenderG/Toasty/1.1.2/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:appcompat-v7:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/AndroidManifest.xml:23:5-20
-MERGED from [com.google.firebase:firebase-core:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-core/9.4.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/AndroidManifest.xml:26:5-41:19
-MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:30:5-59:19
-MERGED from [com.google.firebase:firebase-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/AndroidManifest.xml:5:5-12:19
-MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/AndroidManifest.xml:25:5-20
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:11:5-42:19
+MERGED from [com.google.android.gms:play-services:9.4.0] /home/meeera/.android/build-cache/953876c4063e71b0efc028e9613cf286eac0d3cb/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.android.gms:play-services-analytics:9.4.0] /home/meeera/.android/build-cache/43708abe00a0931a3e6d12d29f73ab56083baebd/output/AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:20:5-30:19
+MERGED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/AndroidManifest.xml:5:5-9:19
+MERGED from [com.google.android.gms:play-services-cast:9.4.0] /home/meeera/.android/build-cache/11d9f426ef9e1775175a51bc153c90eb629d5a33/output/AndroidManifest.xml:19:5-20
+MERGED from [com.android.support:mediarouter-v7:23.0.0] /home/meeera/.android/build-cache/a6812079bfc858614f64132b0935e1412d951d1a/output/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:9.4.0] /home/meeera/.android/build-cache/9afcce887a4d64387511ef4484eb82e6bccc095d/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.firebase:firebase-config:9.4.0] /home/meeera/.android/build-cache/1cfd54c5b5f00f6ee95e0d671cfcd7de8fa19c55/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-contextmanager:9.4.0] /home/meeera/.android/build-cache/917bdbd8c3282656c9586ae7e52627708ee6c78e/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.firebase:firebase-messaging:9.4.0] /home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/AndroidManifest.xml:20:5-32:19
+MERGED from [com.google.android.gms:play-services-fitness:9.4.0] /home/meeera/.android/build-cache/0a3643141e7388554e20d1806767b3ddc556e43d/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-games:9.4.0] /home/meeera/.android/build-cache/ed7ba6fd23118d30e53b7ff97945d67abccad240/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-drive:9.4.0] /home/meeera/.android/build-cache/f2742655af2f62d2bf687fd8b6d87d60aad99088/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-gass:9.4.0] /home/meeera/.android/build-cache/39f1095fb1f4b6b86f8298b23f97322d4346decf/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-gcm:9.4.0] /home/meeera/.android/build-cache/c0852f511018b6c23f0e24475c60df4f01d3fa62/output/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:9.4.0] /home/meeera/.android/build-cache/8610471939850b6e1886f62e1e86522c8ff8197c/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-iid:9.4.0] /home/meeera/.android/build-cache/4ce1479e02ce5e4c9e1a4acde5aca88f5e05588c/output/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-location:9.4.0] /home/meeera/.android/build-cache/0f763adc59085e0d493f90fc9ac2fa89a25e2757/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-nearby:9.4.0] /home/meeera/.android/build-cache/5acc348ef5f6f445487591663de6afd8257f7c49/output/AndroidManifest.xml:6:5-20
+MERGED from [com.google.android.gms:play-services-panorama:9.4.0] /home/meeera/.android/build-cache/3b2f7f5c8ae5028e6c0510bdd541359fa55f29b6/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-places:9.4.0] /home/meeera/.android/build-cache/1178a56c2bc5aa093a6ddcd354f90aa8fb1a1da5/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-plus:9.4.0] /home/meeera/.android/build-cache/d137d8139dba3d6f55993c53bf0e2447f5b923e9/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:9.4.0] /home/meeera/.android/build-cache/ea0a43d00774c145701e01d845d1abd9e9e7447c/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/meeera/.android/build-cache/4244fe6dd44b927e2a311b70cecf7fd63c1960ca/output/AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:24:5-38:19
+MERGED from [com.google.android.gms:play-services-vision:9.4.0] /home/meeera/.android/build-cache/474942547d4b3413cb4876e5e89f9fb57f488ff3/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-identity:9.4.0] /home/meeera/.android/build-cache/20658e3d594e1bc09fa8e40c5fd3053f950d4628/output/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/meeera/.android/build-cache/f17dcc784960759de28c8fe2875ecc275949cf30/output/AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-wearable:9.4.0] /home/meeera/.android/build-cache/ccbb7a1d5bcb52b8e7979055add94c6e26b1cc71/output/AndroidManifest.xml:19:5-20
+MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meeera/.android/build-cache/e1043ff483009e76c50c94bbd8eacb51d2069e8b/output/AndroidManifest.xml:11:5-14:19
+MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meeera/.android/build-cache/602da563b69db73dac421a1be18f6add8212cbb0/output/AndroidManifest.xml:11:5-20
+MERGED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:12:5-83:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/meeera/.android/build-cache/112a32d4fc655bd48c92f70b983cda6010006f01/output/AndroidManifest.xml:28:5-37:19
+MERGED from [com.android.support:customtabs:23.4.0] /home/meeera/.android/build-cache/c2ba4d56430526de9b7de2ce79f91c451acc7891/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] /home/meeera/.android/build-cache/e7e12e50064e509a919a0df818238c1a2cd9fc8a/output/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:20:5-32:19
+MERGED from [com.google.firebase:firebase-auth:9.4.0] /home/meeera/.android/build-cache/f1df3c4d673387f57bba152deee4ab1a1e2941bf/output/AndroidManifest.xml:20:5-21:19
+MERGED from [com.google.firebase:firebase-auth-common:9.4.0] /home/meeera/.android/build-cache/2049d8f71a3d6bb53e3d02df1fba39b98e51f17e/output/AndroidManifest.xml:20:5-21:19
+MERGED from [com.google.firebase:firebase-crash:9.4.0] /home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.android.gms:play-services-base:9.4.0] /home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/AndroidManifest.xml:19:5-23:19
+MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meeera/.android/build-cache/cd4823e5090163b6a1c540182065f0b78ea480da/output/AndroidManifest.xml:8:5-20
+MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meeera/.android/build-cache/36e526860550d0f12a5be4694deb59f9a805ca08/output/AndroidManifest.xml:13:5-20
+MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meeera/.android/build-cache/f6bd86956855b013b96ab8d87b0affb3843f51bf/output/AndroidManifest.xml:11:5-14:19
+MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meeera/.android/build-cache/a7372e0cede35fb62d691df98cf7b08f4ba7e91a/output/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:design:25.3.1] /home/meeera/.android/build-cache/271105389990939a5f783c4180665a2f0d3f1b0d/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] /home/meeera/.android/build-cache/baee00b7ed380c5d27430daabe0b939138b6ecf5/output/AndroidManifest.xml:26:5-20
+MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meeera/.android/build-cache/e50305a003dfb02181574ad7bf4454f7c7172c9e/output/AndroidManifest.xml:8:5-20
+MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meeera/.android/build-cache/77235eed6f11768da6a97d5009902cd69bdbe354/output/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/meeera/.android/build-cache/e95be741a19c2071fe2be14af1f7c9929fbea4a5/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/meeera/.android/build-cache/94cbcb3ca613fb15833dd14d45d70484d694685c/output/AndroidManifest.xml:26:5-20
+MERGED from [com.google.firebase:firebase-core:9.4.0] /home/meeera/.android/build-cache/3e51565a86c62e9c3352a0171ba753aa3698465a/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/meeera/.android/build-cache/eafa00549a38bd6466660bce6ee0b4babbe735b5/output/AndroidManifest.xml:26:5-41:19
+MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-common:9.4.0] /home/meeera/.android/build-cache/4839b23fc2e61c0eb7bda71bb832cd2307597886/output/AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /home/meeera/.android/build-cache/e9526fb90fb8db6c8769cc2fa75c4ca8e7398e73/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /home/meeera/.android/build-cache/2e1d7bab2fc32d092c31acb1e6d17cb7774beb81/output/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:25.3.1] /home/meeera/.android/build-cache/d60df6626c807a7cd59aa54dafc3712cb05a2a6b/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/meeera/.android/build-cache/a27f4aecd1004a183a52d792308fd4c31dfd20fc/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/meeera/.android/build-cache/5d704d06c9b69cf87dd85c838a03d904a39f58ed/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/meeera/.android/build-cache/5a2b39d079ab5f5c3835445317cc00e7ebc7850e/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/meeera/.android/build-cache/f10749516240ccb1edd73920f5fa8146ac3da8c0/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/meeera/.android/build-cache/6fc3f8561a791738a5740cead66d3a0471893f39/output/AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:15:9-41
 	android:supportsRtl
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:16:9-35
 	android:allowBackup
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:13:9-35
 	android:icon
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:14:9-43
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:12:9-59
-service#com.example.amit.uniconnexample.Notificationservice
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:18:9-20:19
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:12:9-59
+service#com.example.amit.uniconnexample.Others.Notificationservice
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:18:9-20:19
 	android:enabled
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:18:18-40
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:18:18-40
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:19:13-48
-activity#com.example.amit.uniconnexample.Loginactivity
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:21:9-29:20
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:19:13-55
+activity#com.example.amit.uniconnexample.Activity.Loginactivity
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:21:9-29:20
 	android:windowSoftInputMode
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:23:13-67
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:23:13-67
 	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:22:13-56
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:22:13-56
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:21:19-48
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:21:19-57
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:24:13-28:29
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:25:17-69
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:25:25-66
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:27:17-77
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:27:27-74
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:27:27-74
 activity#com.example.amit.uniconnexample.Signupactivity
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:30:9-33:79
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:30:9-33:79
 	android:label
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:31:13-35
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:31:13-35
 	android:windowSoftInputMode
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:33:13-67
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:33:13-67
 	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:32:13-56
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:32:13-56
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:30:19-49
-activity#com.example.amit.uniconnexample.Blog
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:34:8-35:67
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:30:19-49
+activity#com.example.amit.uniconnexample.Activity.Blog
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:34:8-35:67
 	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:35:12-55
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:35:12-55
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:34:18-38
-activity#com.example.amit.uniconnexample.Tabs
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:36:9-37:56
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:34:18-47
+activity#com.example.amit.uniconnexample.Activity.Chatstart
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:36:9-37:68
 	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:37:13-44
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:37:13-56
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:36:19-39
-activity#com.example.amit.uniconnexample.Profile
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:38:9-39:68
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:36:19-53
+activity#com.example.amit.uniconnexample.Activity.Notifclick
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:38:9-39:68
 	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:39:13-56
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:39:13-56
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:38:19-42
-activity#com.example.amit.uniconnexample.Notification
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:40:9-41:69
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:38:19-54
+activity#com.example.amit.uniconnexample.Activity.NewTabActivity
+ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:40:9-41:68
 	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:41:13-56
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:41:13-56
 	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:40:19-47
-activity#com.example.amit.uniconnexample.Message
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:42:9-43:68
-	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:43:13-56
-	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:42:19-42
-activity#com.example.amit.uniconnexample.Chat
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:44:9-45:68
-	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:45:13-56
-	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:44:19-39
-activity#com.example.amit.uniconnexample.Chatstart
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:46:9-47:68
-	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:47:13-56
-	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:46:19-44
-activity#com.example.amit.uniconnexample.Settings
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:48:9-49:68
-	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:49:13-56
-	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:48:19-43
-activity#com.example.amit.uniconnexample.Notifclick
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:50:9-51:68
-	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:51:13-56
-	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:50:19-45
-activity#com.example.amit.uniconnexample.NewTabActivity
-ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:52:9-53:68
-	android:theme
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:53:13-56
-	android:name
-		ADDED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml:52:19-49
+		ADDED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:40:19-58
 uses-sdk
-INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.google.android.gms:play-services:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/9.4.0/AndroidManifest.xml:4:5-42
-MERGED from [com.google.android.gms:play-services-ads:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.4.0/AndroidManifest.xml:19:5-42
-MERGED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:23:5-42
-MERGED from [com.google.android.gms:play-services-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/AndroidManifest.xml:4:5-42
-MERGED from [com.google.android.gms:play-services-cast:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:mediarouter-v7:23.0.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-clearcut:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-config:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-contextmanager:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-contextmanager/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-messaging:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-fitness:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-games:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-drive:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-gass:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-gcm:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-appindexing:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-location:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-nearby:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.4.0/AndroidManifest.xml:4:5-42
-MERGED from [com.google.android.gms:play-services-panorama:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-places:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-plus:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-safetynet:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-tagmanager:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-vision:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.4.0/AndroidManifest.xml:4:5-42
-MERGED from [com.google.android.gms:play-services-wallet:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.4.0/AndroidManifest.xml:19:5-42
-MERGED from [com.google.android.gms:play-services-identity:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/AndroidManifest.xml:26:5-42
-MERGED from [com.google.android.gms:play-services-wearable:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/me.himanshusoni.chatmessageview/chat-message-view/1.0.3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.pkmmte.view:circularimageview:1.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.pkmmte.view/circularimageview/1.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.firebaseui:firebase-ui:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui/0.5.3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.firebaseui:firebase-ui-database:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-database/0.5.3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:8:5-10:41
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:customtabs:23.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.4.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:24.2.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-auth-base:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-database:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-database-connection:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.4.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.4.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-module:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.4.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-storage:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-storage-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-crash:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/AndroidManifest.xml:22:5-42
-MERGED from [com.google.android.gms:play-services-base:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.jakewharton:butterknife:8.2.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.2.1/AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton.timber:timber:4.1.2] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.jakewharton.timber/timber/4.1.2/AndroidManifest.xml:6:5-44
-MERGED from [com.github.jkwiecien:EasyImage:1.2.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jkwiecien/EasyImage/1.2.3/AndroidManifest.xml:8:5-10:41
-MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/AndroidManifest.xml:8:5-11:75
-MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/amit/Buildapk/app/build/intermediates/exploded-aar/me.zhanghai.android.materialprogressbar/library/1.1.6/AndroidManifest.xml:12:5-14:41
-MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.tt/whorlviewlibrary/1.0.3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.jd-alexander/LikeButton/0.2.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.roughike:bottom-bar:2.1.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.1.1/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:design:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:recyclerview-v7:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.zagum/Android-SwitchIcon/1.3.2/AndroidManifest.xml:6:5-44
-MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.github.GrenderG/Toasty/1.1.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/AndroidManifest.xml:21:5-43
-MERGED from [com.google.firebase:firebase-core:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-core/9.4.0/AndroidManifest.xml:4:5-42
-MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/AndroidManifest.xml:21:5-23:58
+INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.0] /home/meeera/.android/build-cache/a4611dd8fac171a50fb5e89ba77c2393b0c72d67/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services:9.4.0] /home/meeera/.android/build-cache/953876c4063e71b0efc028e9613cf286eac0d3cb/output/AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-ads:9.4.0] /home/meeera/.android/build-cache/d30f7a128bd342e2d0c1e5870f74192d11786301/output/AndroidManifest.xml:19:5-42
+MERGED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-analytics:9.4.0] /home/meeera/.android/build-cache/43708abe00a0931a3e6d12d29f73ab56083baebd/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-cast:9.4.0] /home/meeera/.android/build-cache/11d9f426ef9e1775175a51bc153c90eb629d5a33/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:mediarouter-v7:23.0.0] /home/meeera/.android/build-cache/a6812079bfc858614f64132b0935e1412d951d1a/output/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:9.4.0] /home/meeera/.android/build-cache/9afcce887a4d64387511ef4484eb82e6bccc095d/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-config:9.4.0] /home/meeera/.android/build-cache/1cfd54c5b5f00f6ee95e0d671cfcd7de8fa19c55/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-contextmanager:9.4.0] /home/meeera/.android/build-cache/917bdbd8c3282656c9586ae7e52627708ee6c78e/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-messaging:9.4.0] /home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-fitness:9.4.0] /home/meeera/.android/build-cache/0a3643141e7388554e20d1806767b3ddc556e43d/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-games:9.4.0] /home/meeera/.android/build-cache/ed7ba6fd23118d30e53b7ff97945d67abccad240/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-drive:9.4.0] /home/meeera/.android/build-cache/f2742655af2f62d2bf687fd8b6d87d60aad99088/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-gass:9.4.0] /home/meeera/.android/build-cache/39f1095fb1f4b6b86f8298b23f97322d4346decf/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-gcm:9.4.0] /home/meeera/.android/build-cache/c0852f511018b6c23f0e24475c60df4f01d3fa62/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-appindexing:9.4.0] /home/meeera/.android/build-cache/8610471939850b6e1886f62e1e86522c8ff8197c/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-iid:9.4.0] /home/meeera/.android/build-cache/4ce1479e02ce5e4c9e1a4acde5aca88f5e05588c/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-location:9.4.0] /home/meeera/.android/build-cache/0f763adc59085e0d493f90fc9ac2fa89a25e2757/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-nearby:9.4.0] /home/meeera/.android/build-cache/5acc348ef5f6f445487591663de6afd8257f7c49/output/AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-panorama:9.4.0] /home/meeera/.android/build-cache/3b2f7f5c8ae5028e6c0510bdd541359fa55f29b6/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-places:9.4.0] /home/meeera/.android/build-cache/1178a56c2bc5aa093a6ddcd354f90aa8fb1a1da5/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-plus:9.4.0] /home/meeera/.android/build-cache/d137d8139dba3d6f55993c53bf0e2447f5b923e9/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-safetynet:9.4.0] /home/meeera/.android/build-cache/ea0a43d00774c145701e01d845d1abd9e9e7447c/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-tagmanager:9.4.0] /home/meeera/.android/build-cache/79de539c5ff31f43038e46c694d11c03f85951d8/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/meeera/.android/build-cache/4244fe6dd44b927e2a311b70cecf7fd63c1960ca/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-vision:9.4.0] /home/meeera/.android/build-cache/474942547d4b3413cb4876e5e89f9fb57f488ff3/output/AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-wallet:9.4.0] /home/meeera/.android/build-cache/7c209cf262f5a99f3f20ec87bcbbf59db8a29529/output/AndroidManifest.xml:19:5-42
+MERGED from [com.google.android.gms:play-services-identity:9.4.0] /home/meeera/.android/build-cache/20658e3d594e1bc09fa8e40c5fd3053f950d4628/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/meeera/.android/build-cache/f17dcc784960759de28c8fe2875ecc275949cf30/output/AndroidManifest.xml:26:5-42
+MERGED from [com.google.android.gms:play-services-wearable:9.4.0] /home/meeera/.android/build-cache/ccbb7a1d5bcb52b8e7979055add94c6e26b1cc71/output/AndroidManifest.xml:18:5-42
+MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meeera/.android/build-cache/e1043ff483009e76c50c94bbd8eacb51d2069e8b/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meeera/.android/build-cache/602da563b69db73dac421a1be18f6add8212cbb0/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui:0.5.3] /home/meeera/.android/build-cache/43de4b7f07abffbe66dd1ea69f11f75f7d249bdb/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-database:0.5.3] /home/meeera/.android/build-cache/f51048585565071f522c2ae100a2dfcc2c43abac/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/meeera/.android/build-cache/112a32d4fc655bd48c92f70b983cda6010006f01/output/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:customtabs:23.4.0] /home/meeera/.android/build-cache/c2ba4d56430526de9b7de2ce79f91c451acc7891/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:25.3.1] /home/meeera/.android/build-cache/e7e12e50064e509a919a0df818238c1a2cd9fc8a/output/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:9.4.0] /home/meeera/.android/build-cache/a04bc906e536d8cfb726015a0ee2235eb3d2d83e/output/AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-database:9.4.0] /home/meeera/.android/build-cache/f479e96d872ca733fb2beffba5573569cecde060/output/AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-database-connection:9.4.0] /home/meeera/.android/build-cache/c6b2e4506d3a7cf22202d41a51860abacc7d323d/output/AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-auth:9.4.0] /home/meeera/.android/build-cache/f1df3c4d673387f57bba152deee4ab1a1e2941bf/output/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-common:9.4.0] /home/meeera/.android/build-cache/2049d8f71a3d6bb53e3d02df1fba39b98e51f17e/output/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-module:9.4.0] /home/meeera/.android/build-cache/8b00e00333d3648903c66278fa82fce800078d20/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-storage:9.4.0] /home/meeera/.android/build-cache/4f9c6586fa1646f6df66a1429ba04b3d46c27dd8/output/AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-storage-common:9.4.0] /home/meeera/.android/build-cache/3070dc13e9a298048e6680c3ab7aa051a18526cf/output/AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-crash:9.4.0] /home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/AndroidManifest.xml:22:5-42
+MERGED from [com.google.android.gms:play-services-base:9.4.0] /home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/AndroidManifest.xml:18:5-42
+MERGED from [com.jakewharton:butterknife:8.2.1] /home/meeera/.android/build-cache/cca22b393385cd7bd9da40442d0f70a41aeba699/output/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meeera/.android/build-cache/cd4823e5090163b6a1c540182065f0b78ea480da/output/AndroidManifest.xml:6:5-44
+MERGED from [com.github.jkwiecien:EasyImage:1.2.3] /home/meeera/.android/build-cache/da2956a9b266316a84b3f6aecf4ad3645e7da225/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meeera/.android/build-cache/36e526860550d0f12a5be4694deb59f9a805ca08/output/AndroidManifest.xml:8:5-11:75
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meeera/.android/build-cache/dd7f4e21f2b724fcabd44027a33b1d5ed6ceaf9c/output/AndroidManifest.xml:12:5-14:41
+MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meeera/.android/build-cache/f6bd86956855b013b96ab8d87b0affb3843f51bf/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meeera/.android/build-cache/a7372e0cede35fb62d691df98cf7b08f4ba7e91a/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.roughike:bottom-bar:2.1.1] /home/meeera/.android/build-cache/06f7534f03c8764ac6df217c0b3864e9ab031c6e/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:design:25.3.1] /home/meeera/.android/build-cache/271105389990939a5f783c4180665a2f0d3f1b0d/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/meeera/.android/build-cache/0114c9feda8cdd19750c1e28bb21b2ca425e2f33/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /home/meeera/.android/build-cache/baee00b7ed380c5d27430daabe0b939138b6ecf5/output/AndroidManifest.xml:20:5-44
+MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meeera/.android/build-cache/e50305a003dfb02181574ad7bf4454f7c7172c9e/output/AndroidManifest.xml:6:5-44
+MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meeera/.android/build-cache/77235eed6f11768da6a97d5009902cd69bdbe354/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/meeera/.android/build-cache/e95be741a19c2071fe2be14af1f7c9929fbea4a5/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/meeera/.android/build-cache/94cbcb3ca613fb15833dd14d45d70484d694685c/output/AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-core:9.4.0] /home/meeera/.android/build-cache/3e51565a86c62e9c3352a0171ba753aa3698465a/output/AndroidManifest.xml:4:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/meeera/.android/build-cache/eafa00549a38bd6466660bce6ee0b4babbe735b5/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.firebase:firebase-common:9.4.0] /home/meeera/.android/build-cache/4839b23fc2e61c0eb7bda71bb832cd2307597886/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /home/meeera/.android/build-cache/e9526fb90fb8db6c8769cc2fa75c4ca8e7398e73/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /home/meeera/.android/build-cache/2e1d7bab2fc32d092c31acb1e6d17cb7774beb81/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:25.3.1] /home/meeera/.android/build-cache/d60df6626c807a7cd59aa54dafc3712cb05a2a6b/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /home/meeera/.android/build-cache/a27f4aecd1004a183a52d792308fd4c31dfd20fc/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/meeera/.android/build-cache/5d704d06c9b69cf87dd85c838a03d904a39f58ed/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/meeera/.android/build-cache/5a2b39d079ab5f5c3835445317cc00e7ebc7850e/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/meeera/.android/build-cache/f10749516240ccb1edd73920f5fa8146ac3da8c0/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /home/meeera/.android/build-cache/6fc3f8561a791738a5740cead66d3a0471893f39/output/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/core/0.8.6.1/AndroidManifest.xml:11:9-72
+		ADDED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meeera/.android/build-cache/36e526860550d0f12a5be4694deb59f9a805ca08/output/AndroidManifest.xml:11:9-72
 	android:targetSdkVersion
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
-		INJECTED from /home/amit/Buildapk/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meeera/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:21:5-78
-MERGED from [com.google.android.gms:play-services-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.4.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-nearby:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.4.0/AndroidManifest.xml:5:5-79
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.4.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/AndroidManifest.xml:20:5-78
-MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:20:5-79
+ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics:9.4.0] /home/meeera/.android/build-cache/43708abe00a0931a3e6d12d29f73ab56083baebd/output/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-nearby:9.4.0] /home/meeera/.android/build-cache/5acc348ef5f6f445487591663de6afd8257f7c49/output/AndroidManifest.xml:5:5-79
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/meeera/.android/build-cache/4244fe6dd44b927e2a311b70cecf7fd63c1960ca/output/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/meeera/.android/build-cache/f17dcc784960759de28c8fe2875ecc275949cf30/output/AndroidManifest.xml:20:5-78
+MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/meeera/.android/build-cache/eafa00549a38bd6466660bce6ee0b4babbe735b5/output/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:20:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:21:22-76
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:21:22-76
 activity#com.google.android.gms.ads.AdActivity
-ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:26:9-29:64
+ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:26:9-29:64
 	android:configChanges
-		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:28:13-122
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:28:13-122
 	android:theme
-		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:29:13-61
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:29:13-61
 	android:name
-		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:27:13-65
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:27:13-65
 activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
-ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:30:9-31:52
+ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:30:9-31:52
 	android:theme
-		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:31:13-50
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:31:13-50
 	android:name
-		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/AndroidManifest.xml:30:19-91
+		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meeera/.android/build-cache/682fad98f32437203ed0508864c363af5cd9f196/output/AndroidManifest.xml:30:19-91
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.4.0/AndroidManifest.xml:25:5-67
-MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.4.0/AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:22:5-68
+ADDED from [com.google.android.gms:play-services-analytics:9.4.0] /home/meeera/.android/build-cache/43708abe00a0931a3e6d12d29f73ab56083baebd/output/AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:9.4.0] /home/meeera/.android/build-cache/4244fe6dd44b927e2a311b70cecf7fd63c1960ca/output/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/meeera/.android/build-cache/eafa00549a38bd6466660bce6ee0b4babbe735b5/output/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:22:5-68
 	android:name
-		ADDED from [com.google.android.gms:play-services-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.4.0/AndroidManifest.xml:25:22-65
+		ADDED from [com.google.android.gms:play-services-analytics:9.4.0] /home/meeera/.android/build-cache/43708abe00a0931a3e6d12d29f73ab56083baebd/output/AndroidManifest.xml:25:22-65
 activity#com.google.android.gms.appinvite.PreviewActivity
-ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:21:9-29:20
+ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:21:9-29:20
 	android:exported
-		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:23:17-40
+		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:23:17-40
 	android:theme
-		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:24:17-63
+		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:24:17-63
 	android:name
-		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:22:17-48
+		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:22:17-48
 intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
-ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:25:13-28:29
+ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:25:13-28:29
 action#com.google.android.gms.appinvite.ACTION_PREVIEW
-ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:26:17-89
+ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:26:17-89
 	android:name
-		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:26:25-87
+		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:26:25-87
 category#android.intent.category.DEFAULT
-ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:27:17-75
+ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:27:17-75
 	android:name
-		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/AndroidManifest.xml:27:27-73
+		ADDED from [com.google.android.gms:play-services-appinvite:9.4.0] /home/meeera/.android/build-cache/1c106929e9e8ed3782b1672527001549fede0f38/output/AndroidManifest.xml:27:27-73
 receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
-ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/AndroidManifest.xml:6:9-100
+ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/AndroidManifest.xml:6:9-100
 	android:name
-		ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/AndroidManifest.xml:6:19-97
+		ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/AndroidManifest.xml:6:19-97
 service#com.google.android.gms.cast.framework.media.MediaNotificationService
-ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/AndroidManifest.xml:7:9-104
+ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/AndroidManifest.xml:7:9-104
 	android:name
-		ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/AndroidManifest.xml:7:18-101
+		ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/AndroidManifest.xml:7:18-101
 service#com.google.android.gms.cast.framework.ReconnectionService
-ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/AndroidManifest.xml:8:9-92
+ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/AndroidManifest.xml:8:9-92
 	android:name
-		ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/AndroidManifest.xml:8:18-90
+		ADDED from [com.google.android.gms:play-services-cast-framework:9.4.0] /home/meeera/.android/build-cache/4b1d3b75930de0cd47e4796cb87dafd5d4f14c59/output/AndroidManifest.xml:8:18-90
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/AndroidManifest.xml:24:9-30:19
+ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/AndroidManifest.xml:24:9-30:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/AndroidManifest.xml:26:13-36
+		ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/AndroidManifest.xml:25:13-82
+		ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/AndroidManifest.xml:25:13-82
 intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/AndroidManifest.xml:27:13-29:29
+ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/AndroidManifest.xml:27:13-29:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/AndroidManifest.xml:27:28-51
+		ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/AndroidManifest.xml:27:28-51
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/AndroidManifest.xml:28:17-78
+ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/AndroidManifest.xml:28:17-78
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/AndroidManifest.xml:28:25-75
+		ADDED from [com.google.firebase:firebase-messaging:9.4.0] /home/meeera/.android/build-cache/727be9015d85655f8b3f3bc94cf98bd4b5e5931e/output/AndroidManifest.xml:28:25-75
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.android.gms:play-services-gcm:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/AndroidManifest.xml:21:5-82
-MERGED from [com.google.android.gms:play-services-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/AndroidManifest.xml:21:5-82
-MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:23:5-82
+ADDED from [com.google.android.gms:play-services-gcm:9.4.0] /home/meeera/.android/build-cache/c0852f511018b6c23f0e24475c60df4f01d3fa62/output/AndroidManifest.xml:21:5-82
+MERGED from [com.google.android.gms:play-services-iid:9.4.0] /home/meeera/.android/build-cache/4ce1479e02ce5e4c9e1a4acde5aca88f5e05588c/output/AndroidManifest.xml:21:5-82
+MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:23:5-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-gcm:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/AndroidManifest.xml:21:22-79
+		ADDED from [com.google.android.gms:play-services-gcm:9.4.0] /home/meeera/.android/build-cache/c0852f511018b6c23f0e24475c60df4f01d3fa62/output/AndroidManifest.xml:21:22-79
 service#com.google.android.gms.tagmanager.TagManagerService
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:25:9-27:42
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:25:9-27:42
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:27:17-39
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:27:17-39
 	android:exported
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:26:17-41
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:26:17-41
 	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:25:18-84
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:25:18-84
 activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:28:9-37:20
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:28:9-37:20
 	android:noHistory
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:30:13-37
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:29:13-87
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:29:13-87
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:31:13-36:29
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:31:13-36:29
 data
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:32:17-72
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:32:17-72
 	android:scheme
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:32:23-69
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:32:23-69
 action#android.intent.action.VIEW
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:33:17-69
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:33:25-66
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:33:25-66
 category#android.intent.category.BROWSABLE
-ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:35:17-77
+ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/AndroidManifest.xml:35:27-75
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:9.4.0] /home/meeera/.android/build-cache/d29c44973c5bb13c695d926c08f0db4102dc67e0/output/AndroidManifest.xml:35:27-75
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/AndroidManifest.xml:22:5-24:33
+ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/meeera/.android/build-cache/f17dcc784960759de28c8fe2875ecc275949cf30/output/AndroidManifest.xml:22:5-24:33
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/AndroidManifest.xml:23:8-40
+		ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/meeera/.android/build-cache/f17dcc784960759de28c8fe2875ecc275949cf30/output/AndroidManifest.xml:23:8-40
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/AndroidManifest.xml:24:8-31
+		ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/meeera/.android/build-cache/f17dcc784960759de28c8fe2875ecc275949cf30/output/AndroidManifest.xml:24:8-31
 meta-data#com.google.android.gms.version
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:13:9-15:69
-MERGED from [com.google.android.gms:play-services-basement:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/AndroidManifest.xml:21:9-23:69
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:13:9-15:69
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /home/meeera/.android/build-cache/2e1d7bab2fc32d092c31acb1e6d17cb7774beb81/output/AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:15:13-66
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:15:13-66
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:14:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:14:13-58
 activity#com.firebase.ui.auth.ui.email.ConfirmRecoverPasswordActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:17:9-20:56
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:17:9-20:56
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:19:13-76
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:19:13-76
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:20:13-53
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:20:13-53
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:18:13-88
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:18:13-88
 activity#com.firebase.ui.auth.ui.email.EmailHintContainerActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:21:9-24:61
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:21:9-24:61
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:23:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:23:13-58
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:24:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:24:13-58
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:22:13-84
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:22:13-84
 activity#com.firebase.ui.auth.ui.email.RecoverPasswordActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:25:9-28:49
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:25:9-28:49
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:27:13-68
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:27:13-68
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:28:13-46
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:28:13-46
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:26:13-81
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:26:13-81
 activity#com.firebase.ui.auth.ui.email.RegisterEmailActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:29:9-32:49
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:29:9-32:49
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:31:13-66
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:31:13-66
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:32:13-46
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:32:13-46
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:30:13-79
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:30:13-79
 activity#com.firebase.ui.auth.ui.email.SignInNoPasswordActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:33:9-36:49
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:33:9-36:49
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:35:13-71
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:35:13-71
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:36:13-46
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:36:13-46
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:34:13-82
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:34:13-82
 activity#com.firebase.ui.auth.ui.email.SignInActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:37:9-40:49
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:37:9-40:49
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:39:13-59
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:39:13-59
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:40:13-46
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:40:13-46
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:38:13-72
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:38:13-72
 activity#com.firebase.ui.auth.ui.account_link.SaveCredentialsActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:41:9-44:61
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:41:9-44:61
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:43:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:43:13-58
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:44:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:44:13-58
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:42:13-88
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:42:13-88
 activity#com.firebase.ui.auth.ui.account_link.WelcomeBackIDPPrompt
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:45:9-48:49
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:45:9-48:49
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:47:13-66
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:47:13-66
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:48:13-46
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:48:13-46
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:46:13-85
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:46:13-85
 activity#com.firebase.ui.auth.ui.account_link.WelcomeBackPasswordPrompt
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:49:9-52:49
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:49:9-52:49
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:51:13-71
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:51:13-71
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:52:13-46
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:52:13-46
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:50:13-90
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:50:13-90
 activity#com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:53:9-56:49
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:53:9-56:49
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:55:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:55:13-58
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:56:13-46
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:56:13-46
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:54:13-80
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:54:13-80
 activity#com.firebase.ui.auth.ui.idp.IDPSignInContainerActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:57:9-60:61
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:57:9-60:61
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:59:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:59:13-58
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:60:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:60:13-58
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:58:13-82
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:58:13-82
 activity#com.firebase.ui.auth.ui.ChooseAccountActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:61:9-64:61
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:61:9-64:61
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:63:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:63:13-58
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:64:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:64:13-58
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:62:13-73
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:62:13-73
 activity#com.facebook.FacebookActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:65:9-70:45
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/AndroidManifest.xml:29:9-32:75
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:65:9-70:45
+MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/meeera/.android/build-cache/112a32d4fc655bd48c92f70b983cda6010006f01/output/AndroidManifest.xml:29:9-32:75
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:68:13-45
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:68:13-45
 	android:configChanges
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:67:13-96
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:67:13-96
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:69:13-58
-		REJECTED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/AndroidManifest.xml:32:13-72
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:69:13-58
+		REJECTED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/meeera/.android/build-cache/112a32d4fc655bd48c92f70b983cda6010006f01/output/AndroidManifest.xml:32:13-72
 	tools:replace
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:70:13-42
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:70:13-42
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:66:13-57
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:66:13-57
 activity#com.facebook.CustomTabActivity
-ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:71:9-82:20
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/AndroidManifest.xml:33:9-36:20
+ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:71:9-82:20
+MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] /home/meeera/.android/build-cache/112a32d4fc655bd48c92f70b983cda6010006f01/output/AndroidManifest.xml:33:9-36:20
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:73:13-36
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:73:13-36
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/0.5.3/AndroidManifest.xml:72:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meeera/.android/build-cache/f9227ad3746381081120bea36ecae3f6a3f631f0/output/AndroidManifest.xml:72:13-58
+meta-data#android.support.VERSION
+ADDED from [com.android.support:cardview-v7:25.3.1] /home/meeera/.android/build-cache/e7e12e50064e509a919a0df818238c1a2cd9fc8a/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:design:25.3.1] /home/meeera/.android/build-cache/271105389990939a5f783c4180665a2f0d3f1b0d/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/meeera/.android/build-cache/0114c9feda8cdd19750c1e28bb21b2ca425e2f33/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /home/meeera/.android/build-cache/baee00b7ed380c5d27430daabe0b939138b6ecf5/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/meeera/.android/build-cache/e95be741a19c2071fe2be14af1f7c9929fbea4a5/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/meeera/.android/build-cache/94cbcb3ca613fb15833dd14d45d70484d694685c/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/meeera/.android/build-cache/d60df6626c807a7cd59aa54dafc3712cb05a2a6b/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/meeera/.android/build-cache/a27f4aecd1004a183a52d792308fd4c31dfd20fc/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/meeera/.android/build-cache/5d704d06c9b69cf87dd85c838a03d904a39f58ed/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/meeera/.android/build-cache/5a2b39d079ab5f5c3835445317cc00e7ebc7850e/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/meeera/.android/build-cache/f10749516240ccb1edd73920f5fa8146ac3da8c0/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/meeera/.android/build-cache/6fc3f8561a791738a5740cead66d3a0471893f39/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:cardview-v7:25.3.1] /home/meeera/.android/build-cache/e7e12e50064e509a919a0df818238c1a2cd9fc8a/output/AndroidManifest.xml:24:9-31
+	android:name
+		ADDED from [com.android.support:cardview-v7:25.3.1] /home/meeera/.android/build-cache/e7e12e50064e509a919a0df818238c1a2cd9fc8a/output/AndroidManifest.xml:23:9-47
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:21:9-24:46
+ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:21:9-24:46
 	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:23:19-52
+		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:23:19-52
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:24:19-43
+		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:24:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:22:19-78
+		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:22:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:21:19-68
+		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:21:19-68
 service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:28:9-31:110
+ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:28:9-31:110
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:30:13-36
+		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:30:13-36
 	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:31:13-107
+		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:31:13-107
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/AndroidManifest.xml:29:13-58
+		ADDED from [com.google.android.gms:play-services-auth:9.4.0] /home/meeera/.android/build-cache/8c785d3b4a74dd81551e04dd8c01f57ec116d198/output/AndroidManifest.xml:29:13-58
 service#com.google.firebase.crash.internal.service.FirebaseCrashReceiverService
-ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/AndroidManifest.xml:26:9-27:50
+ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/AndroidManifest.xml:26:9-27:50
 	android:process
-		ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/AndroidManifest.xml:27:13-48
+		ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/AndroidManifest.xml:27:13-48
 	android:name
-		ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/AndroidManifest.xml:26:18-79
+		ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/AndroidManifest.xml:26:18-79
 service#com.google.firebase.crash.internal.service.FirebaseCrashSenderService
-ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/AndroidManifest.xml:29:9-30:50
+ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/AndroidManifest.xml:29:9-30:50
 	android:process
-		ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/AndroidManifest.xml:30:13-48
+		ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/AndroidManifest.xml:30:13-48
 	android:name
-		ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/AndroidManifest.xml:29:18-77
+		ADDED from [com.google.firebase:firebase-crash:9.4.0] /home/meeera/.android/build-cache/33d328b9d0291a0b5fbce7d997b5b5fb893fd4d4/output/AndroidManifest.xml:29:18-77
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/AndroidManifest.xml:20:9-22:45
+ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/AndroidManifest.xml:22:19-43
+		ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/AndroidManifest.xml:22:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/AndroidManifest.xml:21:19-78
+		ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/AndroidManifest.xml:20:19-85
+		ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/AndroidManifest.xml:20:19-85
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:28:7-34:18
-MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/AndroidManifest.xml:28:7-34:18
+ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:28:7-34:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/meeera/.android/build-cache/eafa00549a38bd6466660bce6ee0b4babbe735b5/output/AndroidManifest.xml:28:7-34:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:30:11-33
+		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:30:11-33
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:29:11-83
+		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:29:11-83
 intent-filter#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:31:9-33:25
+ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:31:9-33:25
 action#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:32:11-77
+ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:32:11-77
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:32:19-75
+		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:32:19-75
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:36:7-39:37
-MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/AndroidManifest.xml:36:7-39:37
+ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:36:7-39:37
+MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/meeera/.android/build-cache/eafa00549a38bd6466660bce6ee0b4babbe735b5/output/AndroidManifest.xml:36:7-39:37
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:38:11-33
+		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:38:11-33
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:39:11-35
+		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:39:11-35
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/AndroidManifest.xml:37:11-82
+		ADDED from [com.google.firebase:firebase-analytics:9.4.0] /home/meeera/.android/build-cache/48a793551b3451911915c4e7e2fedbae1349dafc/output/AndroidManifest.xml:37:11-82
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:25:5-26:47
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:25:5-26:47
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:26:9-44
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:26:9-44
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:25:17-71
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:25:17-71
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:28:5-79
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:28:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:28:22-76
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:28:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:32:9-41:20
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:32:9-41:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:34:13-36
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:34:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:35:13-73
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:35:13-73
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:33:13-78
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:33:13-78
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:36:13-40:29
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:36:13-40:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:37:17-81
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:37:17-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:37:25-78
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:37:25-78
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:38:17-86
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:38:17-86
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:38:25-83
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:38:25-83
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:39:17-61
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:39:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:39:27-58
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:39:27-58
 receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:45:9-47:40
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:45:9-47:40
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:47:13-37
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:46:13-86
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:46:13-86
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:51:9-57:19
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:51:9-57:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:53:13-36
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:53:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:52:13-77
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:52:13-77
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:54:13-56:29
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:54:13-56:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:54:28-51
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:54:28-51
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:55:17-80
+ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:55:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/AndroidManifest.xml:55:25-77
+		ADDED from [com.google.firebase:firebase-iid:9.4.0] /home/meeera/.android/build-cache/3f35de5b4bbd7a8f440768c55cde1f3a0dad490b/output/AndroidManifest.xml:55:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/AndroidManifest.xml:7:9-11:39
+ADDED from [com.google.firebase:firebase-common:9.4.0] /home/meeera/.android/build-cache/4839b23fc2e61c0eb7bda71bb832cd2307597886/output/AndroidManifest.xml:7:9-11:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/AndroidManifest.xml:8:13-72
+		ADDED from [com.google.firebase:firebase-common:9.4.0] /home/meeera/.android/build-cache/4839b23fc2e61c0eb7bda71bb832cd2307597886/output/AndroidManifest.xml:8:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/AndroidManifest.xml:10:13-37
+		ADDED from [com.google.firebase:firebase-common:9.4.0] /home/meeera/.android/build-cache/4839b23fc2e61c0eb7bda71bb832cd2307597886/output/AndroidManifest.xml:10:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/AndroidManifest.xml:11:13-36
+		ADDED from [com.google.firebase:firebase-common:9.4.0] /home/meeera/.android/build-cache/4839b23fc2e61c0eb7bda71bb832cd2307597886/output/AndroidManifest.xml:11:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:9.4.0] /home/amit/Buildapk/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/AndroidManifest.xml:9:13-58
+		ADDED from [com.google.firebase:firebase-common:9.4.0] /home/meeera/.android/build-cache/4839b23fc2e61c0eb7bda71bb832cd2307597886/output/AndroidManifest.xml:9:13-58

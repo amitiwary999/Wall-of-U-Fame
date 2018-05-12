@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/amit/Buildapk/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+        "outputFile": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/home/amit/Buildapk/app/src/main/res/values-w820dp/dimens.xml",
+                    "file": "/home/meeera/Wall-of-U-Fame/app/src/main/res/values-w820dp/dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

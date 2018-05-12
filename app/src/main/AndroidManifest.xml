@@ -16,9 +16,9 @@
         android:supportsRtl="true"
       >
         <service android:enabled="true"
-            android:name=".Notificationservice">
+            android:name=".Others.Notificationservice">
         </service>
-        <activity android:name=".Loginactivity"
+        <activity android:name=".Activity.Loginactivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
@@ -31,25 +31,13 @@
             android:label="Signup"
             android:theme="@style/AppTheme.NoactionBar"
             android:windowSoftInputMode="stateHidden|adjustResize"></activity>
-       <activity android:name=".Blog"
+       <activity android:name=".Activity.Blog"
            android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".Tabs"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".Profile"
+        <activity android:name=".Activity.Chatstart"
             android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".Notification"
-            android:theme="@style/AppTheme.NoactionBar" ></activity>
-        <activity android:name=".Message"
+        <activity android:name=".Activity.Notifclick"
             android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".Chat"
-            android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".Chatstart"
-            android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".Settings"
-            android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".Notifclick"
-            android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".NewTabActivity"
+        <activity android:name=".Activity.NewTabActivity"
             android:theme="@style/AppTheme.NoactionBar"></activity>
     </application>
 

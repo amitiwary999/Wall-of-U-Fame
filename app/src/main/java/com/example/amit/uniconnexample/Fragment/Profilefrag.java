@@ -25,11 +25,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.example.amit.uniconnexample.NewTabActivity;
-import com.example.amit.uniconnexample.Profile;
+import com.example.amit.uniconnexample.Activity.NewTabActivity;
 import com.example.amit.uniconnexample.R;
-import com.example.amit.uniconnexample.Tabs;
-import com.example.amit.uniconnexample.UserData;
+import com.example.amit.uniconnexample.Others.UserData;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -41,7 +39,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.io.File;
 
-import butterknife.OnClick;
 import pl.aprilapps.easyphotopicker.DefaultCallback;
 import pl.aprilapps.easyphotopicker.EasyImage;
 import timber.log.Timber;
@@ -216,7 +213,6 @@ public class Profilefrag extends Fragment {
             Toast.makeText(getActivity(), "No Internet connection", Toast.LENGTH_LONG).show();
         }
 
-        // MainActivity.user = userData;
     }
 
     private void writeUserData(String uid) {

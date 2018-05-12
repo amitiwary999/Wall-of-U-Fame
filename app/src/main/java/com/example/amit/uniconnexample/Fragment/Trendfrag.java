@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,14 +23,14 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.amit.uniconnexample.App;
-import com.example.amit.uniconnexample.Blog;
-import com.example.amit.uniconnexample.Chatstart;
+import com.example.amit.uniconnexample.Activity.Blog;
+import com.example.amit.uniconnexample.Activity.Chatstart;
 import com.example.amit.uniconnexample.Likemodel;
-import com.example.amit.uniconnexample.Loginactivity;
+import com.example.amit.uniconnexample.Activity.Loginactivity;
 import com.example.amit.uniconnexample.Model.BlogModel;
 import com.example.amit.uniconnexample.Notificationmodel;
 import com.example.amit.uniconnexample.R;
-import com.example.amit.uniconnexample.UserData;
+import com.example.amit.uniconnexample.Others.UserData;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -512,7 +513,11 @@ public class Trendfrag extends Fragment {
                 post_name.setText(model.getName());
                 nam=model.getName();
             }
-            pro_pic.setImageBitmap(Utils.decodeBase64(model.getPropic()));
+            if(model.getPropic()!=null) {
+                pro_pic.setImageBitmap(Utils.decodeBase64(model.getPropic()));
+            }else {
+                pro_pic.setImageDrawable(ContextCompat.getDrawable(mView.getContext(), R.drawable.user));
+            }
             photo=model.getPropic();
             String likE=Integer.toString(model.getLike());
             txtLike.setText(likE);

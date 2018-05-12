@@ -11,13 +11,8 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.amit.uniconnexample.Global;
-import com.example.amit.uniconnexample.MainActivity;
-import com.example.amit.uniconnexample.NewTabActivity;
+import com.example.amit.uniconnexample.Activity.NewTabActivity;
 import com.example.amit.uniconnexample.R;
-import com.example.amit.uniconnexample.Tabs;
-import com.example.amit.uniconnexample.Trending;
 
 import java.util.ArrayList;
 import java.util.List;
