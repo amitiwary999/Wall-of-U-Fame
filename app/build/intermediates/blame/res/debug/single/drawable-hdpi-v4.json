@@ -4,12 +4,12 @@
         "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
-        "source": "/home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/res/drawable-hdpi-v4/common_google_signin_btn_icon_light_pressed.9.png"
-    },
-    {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
         "source": "/home/meeera/.android/build-cache/5f637aae9dbbf96987e429a5897e20b9e606450a/output/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "/home/meeera/.android/build-cache/8e4c4099131a415d743a6170b647ba9b376d67f9/output/res/drawable-hdpi-v4/common_google_signin_btn_icon_light_pressed.9.png"
     },
     {
         "merged": "/home/meeera/Wall-of-U-Fame/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_light_disabled.9.png",
