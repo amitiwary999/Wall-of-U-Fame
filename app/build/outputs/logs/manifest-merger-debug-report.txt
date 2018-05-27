@@ -78,7 +78,7 @@ MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/meeera/.
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/2365aba8e4b18cc568407d27c3a45076/AndroidManifest.xml:17:1-28:12
 MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meeera/.gradle/caches/transforms-1/files-1.1/chat-message-view-1.0.3.aar/b5bb5653abe1b7348f26ee70dfc5fcad/AndroidManifest.xml:2:1-16:12
 MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/circularimageview-1.1.aar/6597b1a4fc170126d1143b29319d9fdb/AndroidManifest.xml:2:1-13:12
-MERGED from [com.jakewharton:butterknife:8.2.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/butterknife-8.2.1.aar/a1259cb6efc2e0f0c6a9ba64d19e5ce6/AndroidManifest.xml:2:1-7:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/9f8c6dcc7c98b39a5150086d87588899/AndroidManifest.xml:2:1-7:12
 MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meeera/.gradle/caches/transforms-1/files-1.1/timber-4.1.2.aar/ccbf242ccb54915d044e2bb5e98835e0/AndroidManifest.xml:2:1-10:12
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meeera/.gradle/caches/transforms-1/files-1.1/whorlviewlibrary-1.0.3.aar/8ce4c29542b53efc2a5938c61e06089c/AndroidManifest.xml:2:1-16:12
 MERGED from [com.android.support:support-fragment:25.3.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/30b731f1562399d9c02c3fbcfb605073/AndroidManifest.xml:17:1-31:12
@@ -511,8 +511,8 @@ MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meee
 MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meeera/.gradle/caches/transforms-1/files-1.1/chat-message-view-1.0.3.aar/b5bb5653abe1b7348f26ee70dfc5fcad/AndroidManifest.xml:7:5-9:41
 MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/circularimageview-1.1.aar/6597b1a4fc170126d1143b29319d9fdb/AndroidManifest.xml:7:5-9:41
 MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/circularimageview-1.1.aar/6597b1a4fc170126d1143b29319d9fdb/AndroidManifest.xml:7:5-9:41
-MERGED from [com.jakewharton:butterknife:8.2.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/butterknife-8.2.1.aar/a1259cb6efc2e0f0c6a9ba64d19e5ce6/AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.2.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/butterknife-8.2.1.aar/a1259cb6efc2e0f0c6a9ba64d19e5ce6/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/9f8c6dcc7c98b39a5150086d87588899/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/meeera/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/9f8c6dcc7c98b39a5150086d87588899/AndroidManifest.xml:5:5-43
 MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meeera/.gradle/caches/transforms-1/files-1.1/timber-4.1.2.aar/ccbf242ccb54915d044e2bb5e98835e0/AndroidManifest.xml:6:5-44
 MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meeera/.gradle/caches/transforms-1/files-1.1/timber-4.1.2.aar/ccbf242ccb54915d044e2bb5e98835e0/AndroidManifest.xml:6:5-44
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meeera/.gradle/caches/transforms-1/files-1.1/whorlviewlibrary-1.0.3.aar/8ce4c29542b53efc2a5938c61e06089c/AndroidManifest.xml:7:5-9:41

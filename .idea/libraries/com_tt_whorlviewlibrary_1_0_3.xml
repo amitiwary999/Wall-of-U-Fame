@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.tt:whorlviewlibrary-1.0.3">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/f6bd86956855b013b96ab8d87b0affb3843f51bf/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/f6bd86956855b013b96ab8d87b0affb3843f51bf/output/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/whorlviewlibrary-1.0.3.aar/8ce4c29542b53efc2a5938c61e06089c/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/whorlviewlibrary-1.0.3.aar/8ce4c29542b53efc2a5938c61e06089c/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <LIBRARY_FILE />

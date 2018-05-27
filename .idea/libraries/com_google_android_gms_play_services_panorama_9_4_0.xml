@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.google.android.gms:play-services-panorama-9.4.0">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/3b2f7f5c8ae5028e6c0510bdd541359fa55f29b6/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/3b2f7f5c8ae5028e6c0510bdd541359fa55f29b6/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-panorama-9.4.0.aar/073e43de1c3fa06e5f844d239e5f6dc5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-panorama-9.4.0.aar/073e43de1c3fa06e5f844d239e5f6dc5/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <LIBRARY_FILE />

@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="me.himanshusoni.chatmessageview:chat-message-view-1.0.3">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/e1043ff483009e76c50c94bbd8eacb51d2069e8b/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/e1043ff483009e76c50c94bbd8eacb51d2069e8b/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/chat-message-view-1.0.3.aar/b5bb5653abe1b7348f26ee70dfc5fcad/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/chat-message-view-1.0.3.aar/b5bb5653abe1b7348f26ee70dfc5fcad/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <LIBRARY_FILE />

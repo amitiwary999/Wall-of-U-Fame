@@ -90,11 +90,10 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/multi-dex" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
@@ -108,10 +107,8 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="com.squareup:javapoet:1.7.0@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:exposed-instrumentation-api-publish-0.5" level="project" />
     <orderEntry type="library" name="com.github.jkwiecien:EasyImage-1.2.3" level="project" />
-    <orderEntry type="library" name="com.google.auto:auto-common:0.6@jar" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-9.4.0" level="project" />
     <orderEntry type="library" name="com.firebaseui:firebase-ui-auth-0.5.3" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-annotations:2.2.2@jar" level="project" />
@@ -127,6 +124,7 @@
     <orderEntry type="library" scope="TEST" name="com.google.code.findbugs:jsr305:2.0.1@jar" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-crash-9.4.0" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-vision-9.4.0" level="project" />
+    <orderEntry type="library" name="com.jakewharton:butterknife-annotations:8.8.1@jar" level="project" />
     <orderEntry type="library" name="com.github.jd-alexander:LikeButton-0.2.0" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-auth-common-9.4.0" level="project" />
     <orderEntry type="library" name="com.android.support:design-25.3.1" level="project" />
@@ -148,6 +146,7 @@
     <orderEntry type="library" name="com.pkmmte.view:circularimageview-1.1" level="project" />
     <orderEntry type="library" name="com.jakewharton.timber:timber-4.1.2" level="project" />
     <orderEntry type="library" name="com.android.support:support-fragment-25.3.1" level="project" />
+    <orderEntry type="library" name="com.jakewharton:butterknife-8.8.1" level="project" />
     <orderEntry type="library" name="com.android.support:animated-vector-drawable-25.3.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-location-9.4.0" level="project" />
     <orderEntry type="library" name="com.parse.bolts:bolts-android:1.4.0@jar" level="project" />
@@ -178,7 +177,6 @@
     <orderEntry type="library" name="com.google.android.gms:play-services-fitness-9.4.0" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-auth-9.4.0" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-core:2.2.2@jar" level="project" />
-    <orderEntry type="library" name="com.google.guava:guava:18.0@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-utils-25.3.1" level="project" />
     <orderEntry type="library" name="com.android.support:support-v4-25.3.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-base-9.4.0" level="project" />
@@ -209,18 +207,14 @@
     <orderEntry type="library" name="com.facebook.android:facebook-android-sdk-4.14.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-analytics-impl-9.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="junit:junit:4.12@jar" level="project" />
-    <orderEntry type="library" name="com.jakewharton:butterknife-annotations:8.2.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="javax.inject:javax.inject:1@jar" level="project" />
     <orderEntry type="library" name="com.github.bumptech.glide:glide:3.5.2@jar" level="project" />
-    <orderEntry type="library" name="com.google.auto.service:auto-service:1.0-rc2@jar" level="project" />
-    <orderEntry type="library" name="com.jakewharton:butterknife-compiler:8.2.1@jar" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-database-connection-9.4.0" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-iid-9.4.0" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-storage-9.4.0" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-impl-9.4.0" level="project" />
     <orderEntry type="library" name="me.zhanghai.android.materialprogressbar:library-1.1.6" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-nearby-9.4.0" level="project" />
-    <orderEntry type="library" name="com.jakewharton:butterknife-8.2.1" level="project" />
     <orderEntry type="library" name="com.roughike:bottom-bar-2.1.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-appinvite-9.4.0" level="project" />
     <orderEntry type="library" name="com.android.support:mediarouter-v7-23.0.0" level="project" />

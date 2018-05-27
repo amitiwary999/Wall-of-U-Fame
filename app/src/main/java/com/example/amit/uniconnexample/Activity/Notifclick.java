@@ -5,12 +5,14 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.amit.uniconnexample.Model.BlogModel;
 import com.example.amit.uniconnexample.R;
 import com.example.amit.uniconnexample.utils.Utils;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,7 +33,7 @@ public class Notifclick extends AppCompatActivity{
     ImageButton lk,unlk,chat;
     String check,desc,pic,nam,photo,time,date,key;
     int lke,unlke;
-    com.example.amit.uniconnexample.Blogmodel model;
+    BlogModel model;
     WhorlView whorlView;
     FirebaseAuth auth;
     FirebaseUser user;
@@ -62,8 +64,10 @@ public class Notifclick extends AppCompatActivity{
                 finish();
             }
         });
-        if(bundle.getString("postkey")!=null)
-            key=bundle.getString("postkey");
+        if(bundle.getString("postkey")!=null) {
+            key = bundle.getString("postkey");
+            Log.d("key ","key is "+key);
+        }
         post_desc=(TextView)findViewById(R.id.post_desc);
         post_image =(ImageView)findViewById(R.id.postimage);
         post_name=(TextView)findViewById(R.id.bname);
@@ -82,8 +86,9 @@ public class Notifclick extends AppCompatActivity{
         check=n.substring(n.indexOf("@")+1,n.lastIndexOf("."));
        // Toast.makeText(this,key,Toast.LENGTH_LONG).show();
 
-            mDatabase = FirebaseDatabase.getInstance().getReference().child(check).child(key);
-            model = new com.example.amit.uniconnexample.Blogmodel();
+            mDatabase = FirebaseDatabase.getInstance().getReference().child("Posts").child(key);
+            Log.d("check ", check+" "+key);
+            model = new BlogModel();
             mDatabaseLike = FirebaseDatabase.getInstance().getReference().child("like");
             mDatabaseunlike = FirebaseDatabase.getInstance().getReference().child("unlike");
 
@@ -104,7 +109,7 @@ public class Notifclick extends AppCompatActivity{
                                         lik = 0;
                                     }
                                     mDatabaseLike.child(key).child(user.getUid()).removeValue();
-                                    mDatabase.setValue(new com.example.amit.uniconnexample.Blogmodel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()));
+                                    mDatabase.setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate(), model.getEmailflag(),model.getCityname()));
 
                                     //   processlike=true;
                                     processlike = false;
@@ -124,7 +129,7 @@ public class Notifclick extends AppCompatActivity{
                                                     unlik = 0;
                                                 }
                                                 mDatabaseunlike.child(key).child(user.getUid()).removeValue();
-                                                mDatabase.setValue(new com.example.amit.uniconnexample.Blogmodel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, unlik, model.getTime(), model.getDate()));
+                                                mDatabase.setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, unlik, model.getTime(), model.getDate(), model.getEmailflag(), model.getCityname()));
 
 
                                             }
@@ -139,7 +144,7 @@ public class Notifclick extends AppCompatActivity{
                                     });
                                     lik = model.getLike() + 1;
                                     mDatabaseLike.child(key).child(user.getUid()).setValue("Liked");
-                                    mDatabase.setValue(new com.example.amit.uniconnexample.Blogmodel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate()));
+                                    mDatabase.setValue(new BlogModel(model.getKey(), model.getDesc(), model.getImage(), model.getName(), model.getPropic(), lik, model.getUnlike(), model.getTime(), model.getDate(), model.getEmailflag(), model.getCityname()));
                                     //  final int
 
                                     //   processlike=true;
@@ -174,7 +179,7 @@ public class Notifclick extends AppCompatActivity{
                                         unlike=0;
                                     }
                                     mDatabaseunlike.child(key).child(user.getUid()).removeValue();
-                                    mDatabase.setValue(new com.example.amit.uniconnexample.Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()));
+                                    mDatabase.setValue(new BlogModel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate(), model.getEmailflag(), model.getCityname()));
 
                                     processunlike=false;
                                 }else{
@@ -193,7 +198,7 @@ public class Notifclick extends AppCompatActivity{
                                                     lyk=0;
                                                 }
                                                 mDatabaseLike.child(key).child(user.getUid()).removeValue();
-                                                mDatabase.setValue(new com.example.amit.uniconnexample.Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lyk,unlike,model.getTime(),model.getDate()));
+                                                mDatabase.setValue(new BlogModel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),lyk,unlike,model.getTime(),model.getDate(), model.getEmailflag(), model.getCityname()));
 
                                             }
                                         }
@@ -206,7 +211,7 @@ public class Notifclick extends AppCompatActivity{
                                     mDatabaseunlike.child(key).child(user.getUid()).setValue("Unliked");
                                     // final int
                                     unlike=model.getUnlike()+1;
-                                     mDatabase.setValue(new com.example.amit.uniconnexample.Blogmodel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate()));
+                                     mDatabase.setValue(new BlogModel(model.getKey(),model.getDesc(),model.getImage(),model.getName(),model.getPropic(),model.getLike(),unlike,model.getTime(),model.getDate(), model.getEmailflag(), model.getCityname()));
 
 
                                     processunlike=false;
@@ -239,7 +244,8 @@ public class Notifclick extends AppCompatActivity{
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     setLiked(key);
                     setUnliked(key);
-                    model = dataSnapshot.getValue(com.example.amit.uniconnexample.Blogmodel.class);
+                    Log.d("flag ", "null "+dataSnapshot);
+                    model = dataSnapshot.getValue(BlogModel.class);
                     post_desc.setText(model.getDesc());
                     desc = model.getDesc();
                     if (model.getImage() == null) {
