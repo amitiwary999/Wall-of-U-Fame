@@ -17,7 +17,7 @@ import timber.log.Timber
 class App : Application() {
     internal var flag: Boolean? = null
     internal var vib: Boolean? = null
-    internal var logincheck: Boolean? = null
+    internal var logincheck: Boolean = false
     internal var myPrefs: SharedPreferences
     override fun onCreate() {
         super.onCreate()
@@ -47,7 +47,7 @@ class App : Application() {
         return myPrefs.getBoolean("isChecked2", true)
     }
 
-    fun getLogincheck(): Boolean? {
+    fun getLogincheck(): Boolean {
         return myPrefs.getBoolean("isLoggedin", false)
     }
 

@@ -36,6 +36,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_startchat.*
+import kotlinx.android.synthetic.main.chatoolbar.*
 
 import java.util.Calendar
 
@@ -49,15 +51,11 @@ class Chatstart : AppCompatActivity() {
     private var mDatabase: DatabaseReference? = null
     private var auth: FirebaseAuth? = null
     internal var user: FirebaseUser? = null
-    internal var msg: String
-    internal var name: String
-    internal var message: EditText
+    internal var msg: String  = ""
+    internal var name: String = ""
     internal var bundle: Bundle? = null
-    internal var text: TextView
-    internal var toolbar: Toolbar
-    internal var userData: UserData
+    lateinit var userData: UserData
     internal var actionbar: ActionBar? = null
-    internal var src: ImageView
     internal var song: MediaPlayer? = null
     private var newMessage: DatabaseReference? = null
     private var newMesage: DatabaseReference? = null
@@ -70,12 +68,9 @@ class Chatstart : AppCompatActivity() {
     private var newnotifChat: DatabaseReference? = null
     private var newnotifchat: DatabaseReference? = null
     private var mChat: RecyclerView? = null
-    internal var send: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_startchat)
-        src = findViewById<View>(R.id.src) as ImageView
-        text = findViewById<View>(R.id.text) as TextView
         auth = FirebaseAuth.getInstance()
         bundle = intent.extras
         val handler = Handler()
@@ -86,8 +81,6 @@ class Chatstart : AppCompatActivity() {
             key = bundle!!.getString("chat")
         title = ""
         mChat = findViewById<View>(R.id.rv_chat_feed) as RecyclerView
-        send = findViewById<View>(R.id.btnSend) as ImageButton
-        toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationOnClickListener {
@@ -95,8 +88,7 @@ class Chatstart : AppCompatActivity() {
             finish()
         }
         //Utils.setUpToolbarBackButton(this, toolbar);
-        message = findViewById<View>(R.id.et_message) as EditText
-        msg = message.text.toString()
+        msg = et_message.text.toString()
         newnotifChat = FirebaseDatabase.getInstance().reference.child("notificationdata").child("chat").child(key!!).child(auth!!.currentUser!!.uid)
         newnotifchat = FirebaseDatabase.getInstance().reference.child("notificationdata").child("chat").child(auth!!.currentUser!!.uid).child(key!!)
 
@@ -159,8 +151,8 @@ class Chatstart : AppCompatActivity() {
             }
         }
 
-        send.setOnClickListener {
-            val msge = message.text.toString()
+        btnSend.setOnClickListener {
+            val msge = et_message.text.toString()
             //  Toast.makeText(Chatstart.this,msge,Toast.LENGTH_LONG).show();
             if (msge.length != 0) {
                 val newMessage = mDatabase!!.child(auth!!.currentUser!!.uid).child(key!!).push()
@@ -169,11 +161,11 @@ class Chatstart : AppCompatActivity() {
                 val newMesage = mDatabase!!.child(key!!).child(auth!!.currentUser!!.uid).push()
                 newMesage.child("msg2").setValue(msge)
                 newMesage.child("time2").setValue(currentTime)
-                message.setText("")
+                et_message.setText("")
                 handler.postDelayed({
-                    newnotifChat!!.setValue(Notifmsgmodel(msge, userData.name))
-                    newSnd!!.setValue(Message_model(spic, msge, name, key))
-                    newrply!!.setValue(Message_model(userData.photo, msge, userData.name, auth!!.currentUser!!.uid))
+                    newnotifChat!!.setValue(Notifmsgmodel(msge, userData.name?:""))
+                    newSnd!!.setValue(Message_model(spic?:"", msge, name, key?:""))
+                    newrply!!.setValue(Message_model(userData.photo?:"", msge, userData.name?:"", auth!!.currentUser!!.uid))
                 }, 200)
 
                 computeothermessage()
@@ -227,11 +219,11 @@ class Chatstart : AppCompatActivity() {
                 //  viewHolder.bindData(model);
                 // if(model.getMsg1().length()!=0)
                 newnotifchat!!.setValue(null)
-                viewHolder.setMsg1(model.getMsg1())
-                viewHolder.setTime1(model.getTime1())
+                viewHolder.setMsg1(model.msg1)
+                viewHolder.setTime1(model.time1)
                 //   if(model.getMsg2().length()!=0)
-                viewHolder.setMsg2(model.getMsg2())
-                viewHolder.setTime2(model.getTime2())
+                viewHolder.setMsg2(model.msg2)
+                viewHolder.setTime2(model.time2)
             }
 
 
@@ -308,7 +300,7 @@ class Chatstart : AppCompatActivity() {
 
     companion object {
         var key: String? = null
-        var spic: String
+        var spic: String ?= null
         var txt: String? = null
         val currentTime: String
             get() {

@@ -22,31 +22,28 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.squareup.picasso.Picasso
 import com.tt.whorlviewlibrary.WhorlView
+import kotlinx.android.synthetic.main.activity_notificationclick.*
 
 /**
  * Created by amit on 28/1/17.
  */
 
 class Notifclick : AppCompatActivity() {
-    internal var lk: ImageButton
-    internal var unlk: ImageButton
-    internal var chat: ImageButton
-    internal var check: String
+    internal var check: String ?= null
     internal var desc: String? = null
     internal var pic: String? = null
     internal var nam: String? = null
     internal var photo: String? = null
-    internal var time: String
-    internal var date: String
+    internal var time: String ?= null
+    internal var date: String ?= null
     internal var key: String? = null
     internal var lke: Int = 0
     internal var unlke: Int = 0
-    internal var model: BlogModel
-    internal var whorlView: WhorlView
-    internal var auth: FirebaseAuth
+    lateinit var model: BlogModel
+    internal var whorlView: WhorlView ?= null
+    lateinit var auth: FirebaseAuth
     internal var user: FirebaseUser? = null
     internal var bundle: Bundle? = null
-    internal var toolbar: Toolbar
     internal var lik: Int = 0
     internal var unlike: Int = 0
     internal var count: Int = 0
@@ -56,24 +53,15 @@ class Notifclick : AppCompatActivity() {
     private var processunlike: Boolean? = false
     internal var handler = Handler()
     internal var rootview: View? = null
-    internal var mDatabase: DatabaseReference
-    internal var mDatabaseLike: DatabaseReference
-    internal var mDatabaseunlike: DatabaseReference
-    internal var post_desc: TextView
-    internal var post_name: TextView
-    internal var txtLike: TextView
-    internal var txtUnlike: TextView
-    internal var txtTime: TextView
-    internal var txtDate: TextView
-    internal var pro_pic: ImageView
-    internal var post_image: ImageView
+    lateinit var mDatabase: DatabaseReference
+    lateinit var mDatabaseLike: DatabaseReference
+    lateinit var mDatabaseunlike: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notificationclick)
 
         whorlView = findViewById<View>(R.id.whorl2) as WhorlView
         bundle = intent.extras
-        toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationOnClickListener {
@@ -84,18 +72,7 @@ class Notifclick : AppCompatActivity() {
             key = bundle!!.getString("postkey")
             Log.d("key ", "key is " + key!!)
         }
-        post_desc = findViewById<View>(R.id.post_desc) as TextView
-        post_image = findViewById<View>(R.id.postimage) as ImageView
-        post_name = findViewById<View>(R.id.bname) as TextView
-        pro_pic = findViewById<View>(R.id.pimage) as ImageView
-        txtLike = findViewById<View>(R.id.txtlike) as TextView
-        txtUnlike = findViewById<View>(R.id.txtunlike) as TextView
-        //  TextView txtPlace=(TextView)mView.findViewById(R.id.txtPlace);
-        txtTime = findViewById<View>(R.id.txtTime) as TextView
-        txtDate = findViewById<View>(R.id.txtDate) as TextView
-        lk = findViewById<View>(R.id.like) as ImageButton
-        unlk = findViewById<View>(R.id.unlike) as ImageButton
-        chat = findViewById<View>(R.id.chat) as ImageButton
+
         auth = FirebaseAuth.getInstance()
         user = auth.currentUser
         val n = auth.currentUser!!.email
@@ -108,7 +85,7 @@ class Notifclick : AppCompatActivity() {
         mDatabaseLike = FirebaseDatabase.getInstance().reference.child("like")
         mDatabaseunlike = FirebaseDatabase.getInstance().reference.child("unlike")
 
-        lk.setOnClickListener {
+        like.setOnClickListener {
             processlike = true
             mDatabaseLike.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -122,7 +99,7 @@ class Notifclick : AppCompatActivity() {
                                 lik = 0
                             }
                             mDatabaseLike.child(key!!).child(user!!.uid).removeValue()
-                            mDatabase.setValue(BlogModel(model.key, model.desc, model.image, model.name, model.propic, lik, model.unlike, model.time, model.date, model.emailflag, model.cityname))
+                            mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date, model.emailflag, model.cityname))
 
                             //   processlike=true;
                             processlike = false
@@ -141,7 +118,7 @@ class Notifclick : AppCompatActivity() {
                                             unlik = 0
                                         }
                                         mDatabaseunlike.child(key!!).child(user!!.uid).removeValue()
-                                        mDatabase.setValue(BlogModel(model.key, model.desc, model.image, model.name, model.propic, lik, unlik, model.time, model.date, model.emailflag, model.cityname))
+                                        mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, unlik, model.time, model.date, model.emailflag, model.cityname))
 
 
                                     }
@@ -155,7 +132,7 @@ class Notifclick : AppCompatActivity() {
                             })
                             lik = model.like + 1
                             mDatabaseLike.child(key!!).child(user!!.uid).setValue("Liked")
-                            mDatabase.setValue(BlogModel(model.key, model.desc, model.image, model.name, model.propic, lik, model.unlike, model.time, model.date, model.emailflag, model.cityname))
+                            mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date, model.emailflag, model.cityname))
                             //  final int
 
                             //   processlike=true;
@@ -171,7 +148,7 @@ class Notifclick : AppCompatActivity() {
                 }
             })
         }
-        unlk.setOnClickListener {
+        unlike_btn.setOnClickListener {
             processunlike = true
             //   unlike=model.getUnlike();
             mDatabaseunlike.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -186,7 +163,7 @@ class Notifclick : AppCompatActivity() {
                                 unlike = 0
                             }
                             mDatabaseunlike.child(key!!).child(user!!.uid).removeValue()
-                            mDatabase.setValue(BlogModel(model.key, model.desc, model.image, model.name, model.propic, model.like, unlike, model.time, model.date, model.emailflag, model.cityname))
+                            mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date, model.emailflag, model.cityname))
 
                             processunlike = false
                         } else {
@@ -204,7 +181,7 @@ class Notifclick : AppCompatActivity() {
                                             lyk = 0
                                         }
                                         mDatabaseLike.child(key!!).child(user!!.uid).removeValue()
-                                        mDatabase.setValue(BlogModel(model.key, model.desc, model.image, model.name, model.propic, lyk, unlike, model.time, model.date, model.emailflag, model.cityname))
+                                        mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lyk, unlike, model.time, model.date, model.emailflag, model.cityname))
 
                                     }
                                 }
@@ -216,7 +193,7 @@ class Notifclick : AppCompatActivity() {
                             mDatabaseunlike.child(key!!).child(user!!.uid).setValue("Unliked")
                             // final int
                             unlike = model.unlike + 1
-                            mDatabase.setValue(BlogModel(model.key, model.desc, model.image, model.name, model.propic, model.like, unlike, model.time, model.date, model.emailflag, model.cityname))
+                            mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date, model.emailflag, model.cityname))
 
 
                             processunlike = false
@@ -239,8 +216,8 @@ class Notifclick : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (key != null) {
-            whorlView.visibility = View.VISIBLE
-            whorlView.start()
+            whorlView?.visibility = View.VISIBLE
+            whorlView?.start()
             mDatabase.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     setLiked(key)
@@ -250,26 +227,26 @@ class Notifclick : AppCompatActivity() {
                     post_desc.text = model.desc
                     desc = model.desc
                     if (model.image == null) {
-                        post_image.visibility = View.GONE
+                        postimage.visibility = View.GONE
                         pic = model.image
                     } else {
-                        post_image.visibility = View.VISIBLE
-                        Picasso.with(baseContext).load(model.image).into(post_image)
+                        postimage.visibility = View.VISIBLE
+                        Picasso.with(baseContext).load(model.image).into(postimage)
                         pic = model.image
                     }
                     if (model.name == null) {
-                        post_name.text = "Anonyms"
+                        bname.text = "Anonyms"
                         nam = "Anonyms"
                     } else {
-                        post_name.text = model.name
+                        bname.text = model.name
                         nam = model.name
                     }
-                    pro_pic.setImageBitmap(Utils.decodeBase64(model.propic))
+                    pimage.setImageBitmap(Utils.decodeBase64(model.propic?:""))
                     photo = model.propic
                     val likE = Integer.toString(model.like)
-                    txtLike.text = likE
+                    txtlike.text = likE
                     val txtUnlik = Integer.toString(model.unlike)
-                    txtUnlike.text = txtUnlik
+                    txtunlike.text = txtUnlik
                     lke = model.like
                     unlke = model.unlike
                     //   txtPlace.setText(model.getCityname());
@@ -277,8 +254,8 @@ class Notifclick : AppCompatActivity() {
                     time = model.time
                     txtDate.text = model.date
                     date = model.date
-                    whorlView.stop()
-                    whorlView.visibility = View.GONE
+                    whorlView?.stop()
+                    whorlView?.visibility = View.GONE
 
 
                 }
@@ -294,11 +271,11 @@ class Notifclick : AppCompatActivity() {
         mDatabaseLike.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.child(post_liked!!).hasChild(auth.currentUser!!.uid)) {
-                    lk.setColorFilter(resources.getColor(R.color.Grenn))
+                    like.setColorFilter(resources.getColor(R.color.Grenn))
                     mDatabaseunlike.addListenerForSingleValueEvent(object : ValueEventListener {
                         override fun onDataChange(dataSnapshot: DataSnapshot) {
                             if (!dataSnapshot.child(post_liked).hasChild(auth.currentUser!!.uid)) {
-                                unlk.setColorFilter(resources.getColor(R.color.Black))
+                                unlike_btn.setColorFilter(resources.getColor(R.color.Black))
                             }
                         }
 
@@ -307,7 +284,7 @@ class Notifclick : AppCompatActivity() {
                         }
                     })
                 } else {
-                    lk.setColorFilter(resources.getColor(R.color.Black))
+                    like.setColorFilter(resources.getColor(R.color.Black))
                 }
             }
 
@@ -321,11 +298,11 @@ class Notifclick : AppCompatActivity() {
         mDatabaseunlike.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.child(post_key!!).hasChild(auth.currentUser!!.uid)) {
-                    unlk.setColorFilter(resources.getColor(R.color.Grenn))
+                    unlike_btn.setColorFilter(resources.getColor(R.color.Grenn))
                     mDatabaseLike.addListenerForSingleValueEvent(object : ValueEventListener {
                         override fun onDataChange(dataSnapshot: DataSnapshot) {
                             if (!dataSnapshot.child(post_key).hasChild(auth.currentUser!!.uid)) {
-                                lk.setColorFilter(resources.getColor(R.color.Black))
+                                like.setColorFilter(resources.getColor(R.color.Black))
                             }
                         }
 
@@ -335,7 +312,7 @@ class Notifclick : AppCompatActivity() {
                     })
                 } else {
 
-                    unlk.setColorFilter(resources.getColor(R.color.Black))
+                    unlike_btn.setColorFilter(resources.getColor(R.color.Black))
                 }
 
             }

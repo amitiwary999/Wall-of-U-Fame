@@ -33,6 +33,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_login.*
 
 import org.apache.commons.validator.routines.EmailValidator
 
@@ -41,15 +42,9 @@ import org.apache.commons.validator.routines.EmailValidator
  */
 
 class Loginactivity : AppCompatActivity() {
-
-    internal var email: EditText
-    internal var password: EditText
-    internal var forgotpassword: TextView
     private var auth: FirebaseAuth? = null
-    internal var login: Button
-    internal var sign_up: Button
-    internal var mProgress: ProgressDialog
-    internal var editor1: SharedPreferences.Editor
+    lateinit var mProgress: ProgressDialog
+    lateinit var editor1: SharedPreferences.Editor
     private var mDatabasenotiflike: DatabaseReference? = null
 
     private val isNetworkConnected: Boolean
@@ -63,16 +58,11 @@ class Loginactivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         title = "Login"
-        email = findViewById<View>(R.id.email) as EditText
-        password = findViewById<View>(R.id.password) as EditText
-        login = findViewById<View>(R.id.log_in) as Button
-        sign_up = findViewById<View>(R.id.signup) as Button
-        forgotpassword = findViewById<View>(R.id.forpass) as TextView
         auth = FirebaseAuth.getInstance()
 
         mProgress = ProgressDialog(this)
-        login.setOnClickListener { login() }
-        sign_up.setOnClickListener { signup() }
+        log_in.setOnClickListener { login() }
+        signup.setOnClickListener { signup() }
         editor1 = getSharedPreferences("com.example.amit.uniconnexample", Context.MODE_PRIVATE).edit()
         if ((this.application as App).getLogincheck()) {
             //  Intent i = new Intent(Loginactivity.this, Tabs.class);
@@ -81,7 +71,7 @@ class Loginactivity : AppCompatActivity() {
             finish()
         }
         if (isNetworkConnected) {
-            forgotpassword.setOnClickListener {
+            forpass.setOnClickListener {
                 MaterialDialog.Builder(this@Loginactivity)
                         .content("You will receive an email on your ID to reset the password:")
                         .input("Enter your email", null, false) { dialog, input ->
@@ -146,14 +136,14 @@ class Loginactivity : AppCompatActivity() {
         if (cemail.length != 0) {
             if (cpassword.length != 0) {
                 if (isNetworkConnected) {
-                    login.isEnabled = false
+                    log_in.isEnabled = false
                     //   loginProgress.setVisibility(View.VISIBLE);
                     //attemptLogin(cpassword, cemail);
                     try {
                         // Toast.makeText(Loginactivity.this,cemail,Toast.LENGTH_LONG).show();
                         auth!!.signInWithEmailAndPassword(cemail, cpassword).addOnCompleteListener(this@Loginactivity) { task ->
                             if (!task.isSuccessful) {
-                                login.isEnabled = true
+                                log_in.isEnabled = true
                                 val d = AlertDialog.Builder(this@Loginactivity)
                                 d.setMessage("Id and Password combination may be wrong").setCancelable(true)
                                 val alert = d.create()

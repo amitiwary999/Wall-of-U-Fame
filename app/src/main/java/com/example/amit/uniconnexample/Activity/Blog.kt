@@ -63,6 +63,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
+import kotlinx.android.synthetic.main.activity_blog.*
 
 import java.io.ByteArrayOutputStream
 import java.io.IOException
@@ -81,26 +82,24 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
     private var mStorage: StorageReference? = null
     private var mDatabase: DatabaseReference? = null
     private var mDatabas: DatabaseReference? = null
-    internal var mDesc: EditText
-    internal var toolbar: Toolbar
     private var mProgress: ProgressDialog? = null
-    internal var bytearray: ByteArray
-    internal var check: String
-    internal var name: String
-    internal var photo: String
-    internal var checkmail: String
+    var bytearray: ByteArray ?= null
+    internal var check: String ?= null
+    internal var name: String ?= null
+    internal var photo: String ?= null
+    internal var checkmail: String ?= null
     internal var cityname: String? = null
     internal var date: String? = null
     internal var time: String? = null
     internal var userdata: UserData? = null
     internal var mLastLocation: Location? = null
-    internal var geocoder: Geocoder
-    internal var addresses: List<Address>
+    internal var geocoder: Geocoder ?= null
+    internal var addresses: List<Address> ?= null
     internal var latitude: Double = 0.toDouble()
     internal var longitude: Double = 0.toDouble()
     internal var mGoogleApiClient: GoogleApiClient? = null
     private var mLocationRequest: LocationRequest? = null
-    internal var builder: LocationSettingsRequest.Builder
+    internal var builder: LocationSettingsRequest.Builder ?= null
     private val isNetworkConnected: Boolean
         get() {
             val cm = getSystemService(
@@ -134,11 +133,9 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
         val n = auth!!.currentUser!!.email
         check = n!!.substring(n.indexOf("@") + 1, n.lastIndexOf("."))
         checkmail = n.substring(n.indexOf("@") + 1, n.lastIndexOf(".")) + n.substring(n.lastIndexOf(".") + 1)
-        toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         Utils.setUpToolbarBackButton(this, toolbar)
         date = getDate()
         time = currentTime
-        mDesc = findViewById<View>(R.id.mdesc) as EditText
         val buttondone = findViewById<View>(R.id.buttondone) as Button
         mDatabase = FirebaseDatabase.getInstance().reference.child(check)
         mDatabas = FirebaseDatabase.getInstance().reference.child("Posts")
@@ -181,7 +178,7 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
         }
         val result1: PendingResult<LocationSettingsResult>
         result1 = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
-                builder.build())
+                builder?.build())
         settingLocation(result1)
     }
 
@@ -220,7 +217,7 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
             mProgress!!.show()
 
             //  final String title_val = titlefield.getText().toString().trim();
-            val desc_val = mDesc.text.toString().trim { it <= ' ' }
+            val desc_val = mdesc.text.toString().trim { it <= ' ' }
             val name_val = name
             val photo_val = photo
             val id_val = auth!!.currentUser!!.uid
@@ -233,7 +230,7 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
                 // city_name = cityname.substring(0, cityname.indexOf(","));
                 city_name = cityname
                 if (App.getPref("cityname", applicationContext) == null) {
-                    App.putPref("cityname", cityname, applicationContext)
+                    App.putPref("cityname", cityname?:"", applicationContext)
                 }
             } else {
                 city_name = null
@@ -241,14 +238,14 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
 
             // bl=new Blog(title_val,desc_val,mImageUri.toString());
             //   if ( !TextUtils.isEmpty(desc_val) && mImageUri != null) {
-            if (mImageUri != null) {
+            if (mImageUri != null && bytearray != null) {
                 val filepath = mStorage!!.child("Blog_Images").child(mImageUri!!.lastPathSegment!!)
-                val uploadTask = filepath.putBytes(bytearray)
+                val uploadTask = filepath.putBytes(bytearray!!)
                 uploadTask.addOnSuccessListener { taskSnapshot ->
                     // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                     val downloadUrl = taskSnapshot.downloadUrl
                     val databaseReference = mDatabas!!.push()
-                    databaseReference.setValue(BlogModel(id_val, desc_val, downloadUrl!!.toString(), name_val, photo_val, 0, 0, time_val, date_val, check_mail, city_name))
+                    databaseReference.setValue(BlogModel(id_val, desc_val, downloadUrl!!.toString(), name_val?:"user", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
                     val newPost = mDatabase!!.push()
                     mProgress!!.dismiss()
                     startActivity(Intent(this@Blog, NewTabActivity::class.java))
@@ -257,7 +254,7 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
 
             } else if (desc_val.length != 0) {
                 val newPost = mDatabase!!.push()
-                newPost.setValue(BlogModel(id_val, desc_val, null, name_val, photo_val, 0, 0, time_val, date_val, check_mail, city_name))
+                newPost.setValue(BlogModel(id_val, desc_val, "", name_val?:"", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
                 mProgress!!.dismiss()
                 startActivity(Intent(this@Blog, NewTabActivity::class.java))
                 finish()
@@ -299,7 +296,7 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
             }
 
             mImageUri = data.data
-            compressImage(mImageUri)
+            compressImage(mImageUri!!)
 
             try {
                 val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
@@ -322,7 +319,7 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
                     Log.e("Blog", "Cancel")
                     val result: PendingResult<LocationSettingsResult>
                     result = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
-                            builder.build())
+                            builder?.build())
                     settingLocation(result)
                 }
                 else -> {
@@ -492,9 +489,11 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
                 latitude = mLastLocation!!.latitude
                 longitude = mLastLocation!!.longitude
 
-                addresses = geocoder.getFromLocation(latitude, longitude, 1)
+                addresses = geocoder?.getFromLocation(latitude, longitude, 1)
                 // cityname = addresses.get(0).getAddressLine(2);
-                cityname = addresses[0].locality
+                cityname = addresses?.let {
+                    it[0].locality
+                }?:""
                 Toast.makeText(this@Blog, cityname, Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "ADDRESS NOT FOUND", Toast.LENGTH_SHORT).show()
