@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tt:whorlviewlibrary:1.0.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2c3cf2aa10583895aec85ddd351f583/whorlviewlibrary-1.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2c3cf2aa10583895aec85ddd351f583/whorlviewlibrary-1.0.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tt/whorlviewlibrary/1.0.3/b141fd0a986e41d682a061ca379082507e9333f9/whorlviewlibrary-1.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tt/whorlviewlibrary/1.0.3/40d73eb22460dcd5c78ae03ac878e091333e99ed/whorlviewlibrary-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

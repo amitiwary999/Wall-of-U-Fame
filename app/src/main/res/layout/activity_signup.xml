@@ -49,7 +49,7 @@
             android:layout_height="match_parent"
             android:background="#fff"/>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
         android:textColor="#ffffff"
         app:errorEnabled="true">
 
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username"
@@ -69,7 +69,7 @@
             android:shadowColor="#ffffff"
             android:maxLines="1"
             />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,7 +91,7 @@
                 android:layout_height="match_parent"
                 android:background="#fff"/>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                 android:textColor="#ffffff"
         app:errorEnabled="true">
 
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
@@ -110,7 +110,7 @@
             android:textColor="#ffffff"
             android:maxLines="1"
             />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                 android:layout_marginBottom="25dp"
                 android:layout_height="match_parent"
                 android:background="#fff"/>
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
         app:errorEnabled="true"
         >
 
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
@@ -153,7 +153,7 @@
             android:maxLines="1"
 
             />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -174,7 +174,7 @@
                 android:layout_marginBottom="25dp"
                 android:layout_height="match_parent"
                 android:background="#fff"/>
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/confirmpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -186,7 +186,7 @@
                 app:errorEnabled="true"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/confirm_password"
@@ -197,7 +197,7 @@
                     android:maxLines="1"
 
                     />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -219,7 +219,7 @@
                 android:layout_marginBottom="25dp"
                 android:layout_height="match_parent"
                 android:background="#fff"/>
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/clg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -228,7 +228,7 @@
                 android:textColor="#ffffff"
                 app:errorEnabled="true">
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="College"
@@ -238,7 +238,7 @@
                     android:textColor="#ffffff"
                     android:maxLines="1"
                     />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -259,7 +259,7 @@
                 android:layout_marginBottom="25dp"
                 android:layout_height="match_parent"
                 android:background="#fff"/>
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -270,7 +270,7 @@
         android:textColor="#ffffff"
         app:errorEnabled="true">
 
-    <android.support.design.widget.TextInputEditText
+    <com.google.android.material.textfield.TextInputEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/phone"
@@ -281,7 +281,7 @@
         android:textColor="#ffffff"
         android:maxLines="1"
         />
-   </android.support.design.widget.TextInputLayout>
+   </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     <Button
         android:id="@+id/sign_up"

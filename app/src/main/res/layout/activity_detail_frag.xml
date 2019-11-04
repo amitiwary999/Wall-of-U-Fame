@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:focusable="true">
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -16,8 +16,8 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
             <include layout="@layout/design_toolbar"></include>
-        </android.support.v7.widget.Toolbar>
-    <android.support.design.widget.TabLayout
+        </androidx.appcompat.widget.Toolbar>
+    <com.google.android.material.tabs.TabLayout
         android:background="@color/colorPrimary"
         android:id="@+id/tabLayout"
         style="@style/MyCustomTabLayout"
@@ -25,7 +25,7 @@
         android:layout_height="40dp"
         android:layout_below="@id/toolbar"
         android:layout_alignParentLeft="true">
-    </android.support.design.widget.TabLayout>
+    </com.google.android.material.tabs.TabLayout>
     <LinearLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
@@ -33,13 +33,13 @@
         android:layout_below="@id/tabLayout"
         >
 
-        <android.support.v4.view.ViewPager
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
 
-        </android.support.v4.view.ViewPager>
+        </androidx.viewpager.widget.ViewPager>
     </LinearLayout>
         </RelativeLayout>
 </RelativeLayout>
