@@ -25,20 +25,18 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_notif_frag.*
 
 /**
  * Created by amit on 18/2/17.
  */
 
 class Notifrag : Fragment() {
-    internal var auth: FirebaseAuth
+    lateinit var auth: FirebaseAuth
     internal var key: String? = null
-    internal var post_key: String
-    internal var tag: String
-    internal var refresh: SwipeRefreshLayout
+    var post_key: String ?= null
     private var mDatabasenotifdata: DatabaseReference? = null
     private var mDatanotiflike: DatabaseReference? = null
-    internal var notificationrecycle: RecyclerView
     private val isNetworkConnected: Boolean
         get() {
             val cm = activity!!.getSystemService(
@@ -48,12 +46,6 @@ class Notifrag : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.activity_notif_frag, container, false)
-        tag = this.javaClass.simpleName
-        notificationrecycle = view.findViewById<View>(R.id.mnotification_list) as RecyclerView
-        //  tablayoutbottom=(TabLayout)findViewById(R.id.tabLayoutbottom);
-        //  toolbar=(Toolbar)findViewById(R.id.toolbar);
-        refresh = view.findViewById<View>(R.id.refresh) as SwipeRefreshLayout
-        // FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         auth = FirebaseAuth.getInstance()
         mDatanotiflike = FirebaseDatabase.getInstance().reference.child("notificationdata").child("like").child(FirebaseAuth.getInstance().currentUser!!.uid)
         //  Toast.makeText(this,"check",Toast.LENGTH_LONG).show();
@@ -61,7 +53,7 @@ class Notifrag : Fragment() {
         mDatabasenotifdata = FirebaseDatabase.getInstance().reference.child("notificationdata").child("data").child(FirebaseAuth.getInstance().currentUser!!.uid)
         // Utils.setUpToolbarBackButton(Notification.this, toolbar);
         val lm = LinearLayoutManager(activity)
-        notificationrecycle.layoutManager = lm
+        mnotification_list.layoutManager = lm
         mDatanotiflike!!.keepSynced(true)
         mDatabasenotifdata!!.keepSynced(true)
         refresh.setOnRefreshListener { refresh() }
@@ -81,7 +73,7 @@ class Notifrag : Fragment() {
                     //  mDatanotiflike.child("count").setValue(0);
                 }
                 viewHolder.iview.setOnClickListener {
-                    val key = model.getKey()
+                    val key = model.key
                     if (key != auth.currentUser!!.uid) {
                         //   Toast.makeText(getActivity(), key, Toast.LENGTH_LONG).show();
                         val i = Intent(activity, Chatstart::class.java)
@@ -94,7 +86,7 @@ class Notifrag : Fragment() {
                 }
                 viewHolder.tname.setOnClickListener {
                     //   android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-                    post_key = model.getPost_key()
+                    post_key = model.post_key?:""
                     //  fragmentManager.beginTransaction().add(R.id.content_frame,new Notifclickfrag(),tag).commit();
                     //   Notifclickfrag notifclickfrag=new Notifclickfrag();
                     val i = Intent(activity, Notifclick::class.java)
@@ -105,7 +97,7 @@ class Notifrag : Fragment() {
 
             }
         }
-        notificationrecycle.adapter = firebaseRecyclerAdapter
+        mnotification_list.adapter = firebaseRecyclerAdapter
     }
 
     override fun onResume() {
@@ -128,9 +120,9 @@ class Notifrag : Fragment() {
         fun bindData(model: Notificationmodel) {
             // TextView tname=(TextView)view.findViewById(R.id.bname);
             // ImageView iview=(ImageView)view.findViewById(R.id.pimage);
-            tname.setText(model.getTxt())
-            if (model.getImg() != null) {
-                iview.setImageBitmap(Utils.decodeBase64(model.getImg()))
+            tname.setText(model.txt)
+            if (model.img != null) {
+                iview.setImageBitmap(Utils.decodeBase64(model.img?:""))
             } else {
                 iview.setImageResource(R.drawable.account)
             }
@@ -151,7 +143,7 @@ class Notifrag : Fragment() {
                     //  mDatanotiflike.child("count").setValue(0);
                 }
                 viewHolder.iview.setOnClickListener {
-                    val key = model.getKey()
+                    val key = model.key
                     if (key != auth.currentUser!!.uid) {
                         //   Toast.makeText(getActivity(), key, Toast.LENGTH_LONG).show();
                         val i = Intent(activity, Chatstart::class.java)
@@ -164,7 +156,7 @@ class Notifrag : Fragment() {
                 }
                 viewHolder.tname.setOnClickListener {
                     //   android.support.v4.app.FragmentManager fragmentManager = getChildFragmentManager();
-                    post_key = model.getPost_key()
+                    post_key = model.post_key?:""
                     //  fragmentManager.beginTransaction().add(R.id.content_frame,new Notifclickfrag(),tag).commit();
                     //   Notifclickfrag notifclickfrag=new Notifclickfrag();
                     val i = Intent(activity, Notifclick::class.java)
@@ -175,7 +167,7 @@ class Notifrag : Fragment() {
 
             }
         }
-        notificationrecycle.adapter = firebaseRecyclerAdapter
+        mnotification_list.adapter = firebaseRecyclerAdapter
         refreshcomplete()
     }
 

@@ -69,20 +69,15 @@ import java.io.IOException
 import java.util.Locale
 
 import es.dmoral.toasty.Toasty
+import kotlinx.android.synthetic.main.activity_new_tab.*
+import kotlinx.android.synthetic.main.design_toolbar.*
 
 /**
  * Created by amit on 19/2/17.
  */
 
 class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
-    internal var viewPager: ViewPager
-    internal var toolbar: Toolbar
-    //  BottomBarTab bottomBarTab,bottomBarTabmsg;
-    internal var bottomBar: BottomBar
-    internal var title: TextView
-    internal var img: ImageView
-    internal var tabLayout: TabLayout? = null
-    internal var editor1: SharedPreferences.Editor
+    lateinit var editor1: SharedPreferences.Editor
     internal var handler1 = Handler()
     internal var handler2 = Handler()
     private var mDatabasenotif: DatabaseReference? = null
@@ -90,24 +85,22 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
     private var newnotifchat: DatabaseReference? = null
     private var mDatabasenotiflike: DatabaseReference? = null
     internal var user: FirebaseUser? = null
-    internal var valueEventListener: ValueEventListener
-    internal var valueventlistener: ValueEventListener
+    var valueEventListener: ValueEventListener ?= null
+    var valueventlistener: ValueEventListener ?= null
     internal var switchflag: Boolean? = null
     internal var switchvibrate: Boolean? = null
-    internal var bottomBarTab: BottomBarTab
-    internal var bottomBarTabmsg: BottomBarTab
     internal var location: Location? = null
     internal var mLastLocation: Location? = null
-    internal var cityname: String
-    internal var geocoder: Geocoder
-    internal var addresses: List<Address>
+    internal var cityname: String ?= null
+    internal var geocoder: Geocoder ?= null
+    internal var addresses: List<Address> ?= null
     internal var latitude: Double = 0.toDouble()
     internal var longitude: Double = 0.toDouble()
     internal var mGoogleApiClient: GoogleApiClient? = null
     internal var result: PendingResult<LocationSettingsResult>? = null
     private var mLocationRequest: LocationRequest? = null
     private val mRequestingLocationUpdates = false
-    internal var builder: LocationSettingsRequest.Builder
+    internal var builder: LocationSettingsRequest.Builder ?= null
     internal var doubleBackToExitPressedOnce = false
     internal var m = 0
     internal var m1 = 500
@@ -140,16 +133,8 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
             }
         }
         geocoder = Geocoder(this, Locale.getDefault())
-        title = findViewById<View>(R.id.title) as TextView
-        img = findViewById<View>(R.id.img) as ImageView
         user = FirebaseAuth.getInstance().currentUser
         editor1 = getSharedPreferences("com.example.amit.uniconnexample", Context.MODE_PRIVATE).edit()
-        viewPager = findViewById<View>(R.id.viewPager) as ViewPager
-        toolbar = findViewById<View>(R.id.toolbar) as Toolbar
-        bottomBar = findViewById<View>(R.id.bottomtab) as BottomBar
-        //   tabLayout=(TabLayout)findViewById(R.id.tabLayout);
-        bottomBarTab = bottomBar.getTabWithId(R.id.tab_notification)
-        bottomBarTabmsg = bottomBar.getTabWithId(R.id.tab_message)
         mDatabasenotiflike = FirebaseDatabase.getInstance().reference.child("notificationdata").child("like")
         newnotifchat = FirebaseDatabase.getInstance().reference.child("notificationdata").child("chat").child(user!!.uid)
         mDatabasenotif = FirebaseDatabase.getInstance().reference.child("notification").child("like").child(user!!.uid)
@@ -163,14 +148,14 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
         setSupportActionBar(toolbar)
         //  setupTabIcons();
         img.setOnClickListener { v -> signout(v) }
-        bottomBar.setOnTabSelectListener { tabId ->
+        bottomtab.setOnTabSelectListener { tabId ->
             if (tabId == R.id.tab_home) {
-                title.text = "    Home        "
+                toolbar_title.text = "    Home        "
                 attachFragment(Mainfrag())
                 //  viewPager.setVisibility(View.VISIBLE);
             } else if (tabId == R.id.tab_account) {
                 //  viewPager.setVisibility(View.GONE);
-                title.text = "    Profile     "
+                toolbar_title.text = "    Profile     "
                 attachFragment(Profilefrag())
             } else if (tabId == R.id.tab_notification) {
                 if (isNetworkConnected) {
@@ -180,7 +165,7 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                 }
                 //    mDatanotiflike.setValue(new Likemodel(0));
                 //  viewPager.setVisibility(View.GONE);
-                title.text = "    Notification"
+                toolbar_title.text = "    Notification"
                 attachFragment(Notifrag())
             } else if (tabId == R.id.tab_message) {
                 if (isNetworkConnected) {
@@ -190,11 +175,11 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                     msgcount = 0
                 }
                 //  viewPager.setVisibility(View.GONE);
-                title.text = "    Message     "
+                toolbar_title.text = "    Message     "
                 attachFragment(Msgfrag())
             } else if (tabId == R.id.tab_setting) {
                 //  viewPager.setVisibility(View.GONE);
-                title.text = "    Setting     "
+                toolbar_title.text = "    Setting     "
                 attachFragment(Settingfrag())
             }
         }
@@ -217,7 +202,7 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
         }
         val result1: PendingResult<LocationSettingsResult>
         result1 = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
-                builder.build())
+                builder?.build())
         settingLocation(result1)
         //Log.e("Blog","Hi"+cityname);
         if (isNetworkConnected) {
@@ -310,7 +295,7 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                     Log.e("Blog", "Cancel")
                     val result: PendingResult<LocationSettingsResult>
                     result = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
-                            builder.build())
+                            builder?.build())
                     settingLocation(result)
                 }
                 else -> {
@@ -394,7 +379,7 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
     }
 
     fun setTitle(tooltitle: String) {
-        title.text = tooltitle
+        toolbar_title.text = tooltitle
     }
 
     private fun showLocation() {
@@ -410,12 +395,14 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                 latitude = mLastLocation!!.latitude
                 longitude = mLastLocation!!.longitude
 
-                addresses = geocoder.getFromLocation(latitude, longitude, 1)
+                addresses = geocoder?.getFromLocation(latitude, longitude, 1)
                 //cityname = addresses.get(0).getAddressLine(2);
                 //Toast.makeText(NewTabActivity.this,"hi"+addresses.get(0).getLocality(),Toast.LENGTH_LONG).show();
                 // App.putPref("cityname",cityname.substring(0,cityname.indexOf(",")),getApplicationContext());
-                cityname = addresses[0].locality
-                App.putPref("cityname", cityname, applicationContext)
+                cityname = addresses?.let {
+                    it[0].locality
+                }
+                App.putPref("cityname", cityname?:"", applicationContext)
                 // Toast.makeText(NewTabActivity.this,cityname,Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "ADDRESS NOT FOUND", Toast.LENGTH_SHORT).show()

@@ -251,7 +251,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
-                android:id="@+id/phn"
+                android:id="@+id/phn_icon"
                 android:src="@drawable/phn"/>
             <View
                 android:layout_width="2dp"

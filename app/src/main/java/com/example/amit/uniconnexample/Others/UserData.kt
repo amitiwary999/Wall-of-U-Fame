@@ -39,12 +39,12 @@ class UserData : Parcelable {
 
     companion object {
 
-        val CREATOR: Parcelable.Creator<UserData> = object : Parcelable.Creator<UserData> {
+        @JvmField val CREATOR: Parcelable.Creator<UserData> = object : Parcelable.Creator<UserData> {
             override fun createFromParcel(source: Parcel): UserData {
                 return UserData(source)
             }
 
-            override fun newArray(size: Int): Array<UserData> {
+            override fun newArray(size: Int): Array<UserData?> {
                 return arrayOfNulls(size)
             }
         }

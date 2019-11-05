@@ -4,24 +4,11 @@ package com.example.amit.uniconnexample
  * Created by amit on 23/12/16.
  */
 
-class Message_model {
-    var image: String? = null
-        internal set
-    var msg: String? = null
-        internal set
-    var name: String? = null
-        internal set
-    var key: String? = null
-        internal set
+data class Message_model(
+        var image: String? = null,
+        var msg: String? = null,
+        var name: String? = null,
+        var key: String? = null
+) {
 
-    constructor() {
-
-    }
-
-    constructor(image: String, msg: String, name: String, key: String) {
-        this.image = image
-        this.msg = msg
-        this.name = name
-        this.key = key
-    }
 }

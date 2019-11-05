@@ -29,14 +29,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_signup.*
 
 import org.apache.commons.validator.routines.EmailValidator
 
 import java.io.File
-
-import butterknife.BindView
-import butterknife.ButterKnife
-import butterknife.OnClick
 import pl.aprilapps.easyphotopicker.DefaultCallback
 import pl.aprilapps.easyphotopicker.EasyImage
 import timber.log.Timber
@@ -46,59 +43,30 @@ import timber.log.Timber
  */
 
 class Signupactivity : AppCompatActivity() {
-    @BindView(R.id.name)
-    internal var name: TextInputLayout? = null
-    @BindView(R.id.email)
-    internal var email: TextInputLayout? = null
-    @BindView(R.id.password)
-    internal var password: TextInputLayout? = null
-    @BindView(R.id.phone)
-    internal var phone: TextInputLayout? = null
-    @BindView(R.id.confirmpassword)
-    internal var confrmpassword: TextInputLayout? = null
-    @BindView(R.id.iview)
-    internal var iv: ImageView? = null
-    @BindView(R.id.clg)
-    internal var clg: TextInputLayout? = null
-    @BindView(R.id.sign_up)
-    internal var signup: Button? = null
-    @BindView(R.id.person)
-    internal var person: ImageView? = null
-    @BindView(R.id.msg)
-    internal var msg: ImageView? = null
-    @BindView(R.id.lock1)
-    internal var lock1: ImageView? = null
-    @BindView(R.id.lock2)
-    internal var lock2: ImageView? = null
-    @BindView(R.id.college)
-    internal var college: ImageView? = null
-    @BindView(R.id.phn)
-    internal var phonen: ImageView? = null
     internal var user: FirebaseUser? = null
     private var mProgress: ProgressDialog? = null
     private var mAuth: FirebaseAuth? = null
     private var mAuthListener: FirebaseAuth.AuthStateListener? = null
-    internal var userData: UserData
-    internal var mDatabasenotiflike: DatabaseReference
-    internal var mal: String
-    internal var pass: String
-    internal var confrmpass: String
-    internal var phn: String
-    internal var nam: String
-    internal var clgname: String
+    lateinit var userData: UserData
+    lateinit var mDatabasenotiflike: DatabaseReference
+    lateinit var mal: String
+    lateinit var pass: String
+    lateinit var confrmpass: String
+    lateinit var phn: String
+    lateinit var nam: String
+    lateinit var clgname: String
     internal var flag = 0
-    internal var check: String
+    var check: String ?= ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-        ButterKnife.bind(this)
         mProgress = ProgressDialog(this)
         userData = UserData()
         mDatabasenotiflike = FirebaseDatabase.getInstance().reference.child("notificationdata").child("like")
         phn = phone!!.editText!!.text.toString().trim { it <= ' ' }
         pass = password!!.editText!!.text.toString().trim { it <= ' ' }
-        confrmpass = confrmpassword!!.editText!!.text.toString().trim { it <= ' ' }
+        confrmpass = confirmpassword!!.editText!!.text.toString().trim { it <= ' ' }
         nam = name!!.editText!!.text.toString().trim { it <= ' ' }
         mal = email!!.editText!!.text.toString().trim { it <= ' ' }
         clgname = clg!!.editText!!.text.toString().trim { it <= ' ' }
@@ -109,7 +77,7 @@ class Signupactivity : AppCompatActivity() {
         lock1!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
         lock2!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
         college!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
-        phonen!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
+        phn_icon!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
         //    user=FirebaseAuth.getInstance().getCurrentUser();
         mAuthListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
             user = firebaseAuth.currentUser
@@ -127,6 +95,10 @@ class Signupactivity : AppCompatActivity() {
                 Timber.d("User is signed out")
             }
         }
+
+        iview.setOnClickListener { pickPhoto() }
+
+        sign_up.setOnClickListener{ sup() }
     }
 
     private fun writeUserData(uid: String) {
@@ -134,10 +106,9 @@ class Signupactivity : AppCompatActivity() {
         val myRef = database.reference
         val myref = database.reference
         myRef.child("Userdetail").child(uid).setValue(userData)
-        myref.child(check + "chat").child(uid).setValue(com.example.amit.uniconnexample.Chatusermodel(userData.name, userData.photo))
+        myref.child(check + "chat").child(uid).setValue(com.example.amit.uniconnexample.Chatusermodel(userData.name?:"", userData.photo?:""))
     }
 
-    @OnClick(R.id.iview)
     internal fun pickPhoto() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             EasyImage.openChooserWithGallery(this, "Pick profile image", 0)
@@ -152,14 +123,13 @@ class Signupactivity : AppCompatActivity() {
         }
     }
 
-    @OnClick(R.id.sign_up)
     internal fun sup() {
         val inputManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
         inputManager.hideSoftInputFromWindow(currentFocus!!.windowToken,
                 InputMethodManager.HIDE_NOT_ALWAYS)
         pass = password!!.editText!!.text.toString().trim { it <= ' ' }
-        confrmpass = confrmpassword!!.editText!!.text.toString().trim { it <= ' ' }
+        confrmpass = confirmpassword!!.editText!!.text.toString().trim { it <= ' ' }
         if (EmailValidator.getInstance(false).isValid(email!!.editText!!.text.toString().trim { it <= ' ' })) {
             email!!.error = null
             if (password!!.editText!!.text.toString().trim { it <= ' ' }.length >= 6) {
@@ -175,7 +145,7 @@ class Signupactivity : AppCompatActivity() {
                                 clg!!.error = "Enter college name"
                             }
                             attemptSignup(password!!.editText!!.text.toString().trim { it <= ' ' }, email!!.editText!!.text.toString().trim { it <= ' ' })
-                            signup!!.isEnabled = false
+                            sign_up!!.isEnabled = false
                         } else
                             phone!!.error = "Enter 10 digits"
                     } else
@@ -214,7 +184,7 @@ class Signupactivity : AppCompatActivity() {
                 var bitmap = BitmapFactory.decodeFile(imageFile.absolutePath, options)
                 bitmap = getResizedBitmap(bitmap, 100)
                 Timber.d("xxx" + bitmap.byteCount)
-                iv!!.setImageBitmap(bitmap)
+                iview!!.setImageBitmap(bitmap)
                 flag = 1
                 Timber.d("flag$flag")
                 userData.photo = com.example.amit.uniconnexample.utils.Utils.encodeToBase64(bitmap, Bitmap.CompressFormat.PNG, 100)
@@ -244,7 +214,7 @@ class Signupactivity : AppCompatActivity() {
         userData.phone = phone!!.editText!!.text.toString()
         userData.name = name!!.editText!!.text.toString()
         userData.email = email!!.editText!!.text.toString()
-        val n = userData.email
+        val n = userData.email?:""
         check = n.substring(n.indexOf("@") + 1, n.lastIndexOf("."))
         userData.clg = clg!!.editText!!.text.toString()
         val icon = BitmapFactory.decodeResource(resources,
@@ -259,7 +229,7 @@ class Signupactivity : AppCompatActivity() {
         mAuth!!.createUserWithEmailAndPassword(id, pass)
                 .addOnCompleteListener(this) { task ->
                     if (!task.isSuccessful) {
-                        signup!!.isEnabled = true
+                        sign_up!!.isEnabled = true
                         Toast.makeText(this@Signupactivity, "Signup failed." + task.exception!!.message,
                                 Toast.LENGTH_SHORT).show()
                     }

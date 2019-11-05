@@ -18,7 +18,7 @@ class App : Application() {
     internal var flag: Boolean? = null
     internal var vib: Boolean? = null
     internal var logincheck: Boolean = false
-    internal var myPrefs: SharedPreferences
+    lateinit var myPrefs: SharedPreferences
     override fun onCreate() {
         super.onCreate()
         FirebaseDatabase.getInstance().setPersistenceEnabled(true)

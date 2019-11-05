@@ -32,8 +32,8 @@ class Notificationservice : Service() {
     private var mDatabasenotif: DatabaseReference? = null
     private var newnotifchat: DatabaseReference? = null
     internal var user: FirebaseUser? = null
-    internal var valueEventListener: ValueEventListener
-    internal var valueeventListener: ValueEventListener
+    lateinit var valueEventListener: ValueEventListener
+    lateinit var valueeventListener: ValueEventListener
     internal var switchflag: Boolean? = null
     internal var switchvibrate: Boolean? = null
     internal var m = 0
@@ -50,47 +50,49 @@ class Notificationservice : Service() {
     }
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
+        Foreground.get()?.let {
+            if (!it.isForeground) {
+                valueEventListener = object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        for (snapshot in dataSnapshot.children) {
+                            notifiy(++m1, snapshot.ref, snapshot, switchflag!!, switchvibrate)
+                        }
+                    }
 
-        if (!Foreground.get().isForeground) {
-            valueEventListener = object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    for (snapshot in dataSnapshot.children) {
-                        notifiy(++m1, snapshot.ref, snapshot, switchflag!!, switchvibrate)
+                    override fun onCancelled(databaseError: DatabaseError) {
+
                     }
                 }
-
-                override fun onCancelled(databaseError: DatabaseError) {
-
-                }
-            }
-            valueeventListener = object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    for (snapshot in dataSnapshot.children) {
-                        // handler1.postDelayed(new Runnable() {
-                        //   @Override
-                        //   public void run() {
-                        snapshot.ref.addListenerForSingleValueEvent(object : ValueEventListener {
-                            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                                for (snapshot in dataSnapshot.children) {
-                                    notification(++m, snapshot.ref, snapshot, switchflag!!, switchvibrate)
+                valueeventListener = object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        for (snapshot in dataSnapshot.children) {
+                            // handler1.postDelayed(new Runnable() {
+                            //   @Override
+                            //   public void run() {
+                            snapshot.ref.addListenerForSingleValueEvent(object : ValueEventListener {
+                                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                                    for (snapshot in dataSnapshot.children) {
+                                        notification(++m, snapshot.ref, snapshot, switchflag!!, switchvibrate)
+                                    }
                                 }
-                            }
 
-                            override fun onCancelled(databaseError: DatabaseError) {
+                                override fun onCancelled(databaseError: DatabaseError) {
 
-                            }
-                        })
+                                }
+                            })
+
+                        }
+                    }
+
+                    override fun onCancelled(databaseError: DatabaseError) {
 
                     }
                 }
-
-                override fun onCancelled(databaseError: DatabaseError) {
-
-                }
+                newnotifchat!!.child(user!!.uid).addValueEventListener(valueEventListener)
+                mDatabasenotif!!.child(user!!.uid).addValueEventListener(valueeventListener)
             }
-            newnotifchat!!.child(user!!.uid).addValueEventListener(valueEventListener)
-            mDatabasenotif!!.child(user!!.uid).addValueEventListener(valueeventListener)
         }
+
         return Service.START_REDELIVER_INTENT
     }
 
@@ -104,7 +106,7 @@ class Notificationservice : Service() {
         //  song.start();
         //int m = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
 
-        val notificationManager = this.getSystemService(this.NOTIFICATION_SERVICE) as NotificationManager
+        val notificationManager = this.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         val n = NotificationCompat.Builder(this)
                 .setContentTitle("UniConn Notification")
                 .setContentText(snapshot.getValue(String::class.java) + " liked your post")

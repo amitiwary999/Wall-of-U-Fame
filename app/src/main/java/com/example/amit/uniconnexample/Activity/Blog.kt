@@ -245,7 +245,7 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
                     // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                     val downloadUrl = taskSnapshot.downloadUrl
                     val databaseReference = mDatabas!!.push()
-                    databaseReference.setValue(BlogModel(id_val, desc_val, downloadUrl!!.toString(), name_val?:"user", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
+                    databaseReference.setValue(BlogModel(desc_val, downloadUrl!!.toString(), name_val?:"user", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
                     val newPost = mDatabase!!.push()
                     mProgress!!.dismiss()
                     startActivity(Intent(this@Blog, NewTabActivity::class.java))
@@ -254,7 +254,7 @@ class Blog : AppCompatActivity(), ConnectionCallbacks, OnConnectionFailedListene
 
             } else if (desc_val.length != 0) {
                 val newPost = mDatabase!!.push()
-                newPost.setValue(BlogModel(id_val, desc_val, "", name_val?:"", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
+                newPost.setValue(BlogModel(desc_val, "", name_val?:"", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
                 mProgress!!.dismiss()
                 startActivity(Intent(this@Blog, NewTabActivity::class.java))
                 finish()

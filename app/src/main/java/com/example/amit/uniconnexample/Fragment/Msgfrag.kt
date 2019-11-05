@@ -24,15 +24,14 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_msg_frag.*
 
 /**
  * Created by amit on 18/2/17.
  */
 
 class Msgfrag : Fragment() {
-    internal var rview: RecyclerView
     private var newsnd: DatabaseReference? = null
-    internal var refresh: SwipeRefreshLayout
     private var auth: FirebaseAuth? = null
     private val isNetworkConnected: Boolean
         get() {
@@ -43,11 +42,8 @@ class Msgfrag : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.activity_msg_frag, container, false)
-        rview = view.findViewById<View>(R.id.mchat_list) as RecyclerView
-        refresh = view.findViewById<View>(R.id.refresh) as SwipeRefreshLayout
-        //  FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         auth = FirebaseAuth.getInstance()
-        rview.layoutManager = LinearLayoutManager(activity)
+        mchat_list.layoutManager = LinearLayoutManager(activity)
         newsnd = FirebaseDatabase.getInstance().reference.child("Smessage").child(auth!!.currentUser!!.uid)
         newsnd!!.keepSynced(true)
         refresh.setOnRefreshListener { refresh() }
@@ -75,7 +71,7 @@ class Msgfrag : Fragment() {
                 }
             }
         }
-        rview.adapter = firebaseRecyclerAdapter
+        mchat_list.adapter = firebaseRecyclerAdapter
         return view
     }
 
@@ -103,7 +99,7 @@ class Msgfrag : Fragment() {
                 }
             }
         }
-        rview.adapter = firebaseRecyclerAdapter
+        mchat_list.adapter = firebaseRecyclerAdapter
         refreshcomplete()
     }
 
@@ -125,10 +121,10 @@ class Msgfrag : Fragment() {
             val tmsg = view.findViewById<View>(R.id.txt) as TextView
             val tname = view.findViewById<View>(R.id.txtname) as TextView
             val iview = view.findViewById<View>(R.id.photo) as ImageView
-            tmsg.setText(model.getMsg())
-            tname.setText(model.getName())
-            if (model.getImage() != null)
-                iview.setImageBitmap(Utils.decodeBase64(model.getImage()))
+            tmsg.setText(model.msg)
+            tname.setText(model.name)
+            if (model.image != null)
+                iview.setImageBitmap(Utils.decodeBase64(model.image?:""))
             else {
             }
         }

@@ -99,7 +99,7 @@ class Notifclick : AppCompatActivity() {
                                 lik = 0
                             }
                             mDatabaseLike.child(key!!).child(user!!.uid).removeValue()
-                            mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date, model.emailflag, model.cityname))
+                            mDatabase.setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date, model.emailflag, model.cityname))
 
                             //   processlike=true;
                             processlike = false
@@ -118,7 +118,7 @@ class Notifclick : AppCompatActivity() {
                                             unlik = 0
                                         }
                                         mDatabaseunlike.child(key!!).child(user!!.uid).removeValue()
-                                        mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, unlik, model.time, model.date, model.emailflag, model.cityname))
+                                        mDatabase.setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, unlik, model.time, model.date, model.emailflag, model.cityname))
 
 
                                     }
@@ -132,7 +132,7 @@ class Notifclick : AppCompatActivity() {
                             })
                             lik = model.like + 1
                             mDatabaseLike.child(key!!).child(user!!.uid).setValue("Liked")
-                            mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date, model.emailflag, model.cityname))
+                            mDatabase.setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date, model.emailflag, model.cityname))
                             //  final int
 
                             //   processlike=true;
@@ -163,7 +163,7 @@ class Notifclick : AppCompatActivity() {
                                 unlike = 0
                             }
                             mDatabaseunlike.child(key!!).child(user!!.uid).removeValue()
-                            mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date, model.emailflag, model.cityname))
+                            mDatabase.setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date, model.emailflag, model.cityname))
 
                             processunlike = false
                         } else {
@@ -181,7 +181,7 @@ class Notifclick : AppCompatActivity() {
                                             lyk = 0
                                         }
                                         mDatabaseLike.child(key!!).child(user!!.uid).removeValue()
-                                        mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lyk, unlike, model.time, model.date, model.emailflag, model.cityname))
+                                        mDatabase.setValue(BlogModel( model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lyk, unlike, model.time, model.date, model.emailflag, model.cityname))
 
                                     }
                                 }
@@ -193,7 +193,7 @@ class Notifclick : AppCompatActivity() {
                             mDatabaseunlike.child(key!!).child(user!!.uid).setValue("Unliked")
                             // final int
                             unlike = model.unlike + 1
-                            mDatabase.setValue(BlogModel(model.key, model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date, model.emailflag, model.cityname))
+                            mDatabase.setValue(BlogModel( model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date, model.emailflag, model.cityname))
 
 
                             processunlike = false

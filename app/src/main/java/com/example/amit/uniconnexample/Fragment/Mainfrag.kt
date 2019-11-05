@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.amit.uniconnexample.Activity.NewTabActivity
 import com.example.amit.uniconnexample.R
+import kotlinx.android.synthetic.main.activity_detail_frag.*
 
 import java.util.ArrayList
 
@@ -20,13 +21,9 @@ import java.util.ArrayList
  */
 
 class Mainfrag : Fragment() {
-    internal var viewPager: ViewPager
-    internal var tabLayout: TabLayout
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.activity_detail_frag, container, false)
-        viewPager = view.findViewById<View>(R.id.viewPager) as ViewPager
-        tabLayout = view.findViewById<View>(R.id.tabLayout) as TabLayout
         setupViewPager(viewPager)
         tabLayout.setupWithViewPager(viewPager)
 
@@ -39,7 +36,7 @@ class Mainfrag : Fragment() {
     }
 
     private fun setupViewPager(viewPager: ViewPager) {
-        val adapter = ViewPagerAdapter(activity, childFragmentManager)
+        val adapter = ViewPagerAdapter(activity as Context, childFragmentManager)
         adapter.addFrag(Detailfrag(), "My Campus")
         adapter.addFrag(Globalfrag(), "Global")
         adapter.addFrag(Trendfrag(), "Trending")

@@ -35,6 +35,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_prof_frag.*
 
 import java.io.File
 
@@ -47,17 +48,10 @@ import timber.log.Timber
  */
 
 class Profilefrag : Fragment() {
-    internal var name: EditText
-    internal var email: EditText
-    internal var phn: EditText
-    internal var clg: EditText
-    internal var photo: ImageView
     internal var user: FirebaseUser? = null
-    internal var userData: UserData
-    internal var save: Button
-    internal var mDatabase: DatabaseReference
-    internal var refresh: SwipeRefreshLayout
-    internal var mProgress: ProgressDialog
+    lateinit var userData: UserData
+    lateinit var mDatabase: DatabaseReference
+    lateinit var mProgress: ProgressDialog
     private val isNetworkConnected: Boolean
         get() {
             val cm = activity!!.getSystemService(
@@ -67,14 +61,7 @@ class Profilefrag : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.activity_prof_frag, container, false)
-        name = view.findViewById<View>(R.id.name) as EditText
-        email = view.findViewById<View>(R.id.email) as EditText
-        phn = view.findViewById<View>(R.id.phone) as EditText
-        clg = view.findViewById<View>(R.id.clg) as EditText
-        photo = view.findViewById<View>(R.id.photo) as ImageView
-        save = view.findViewById<View>(R.id.save) as Button
         email.keyListener = null
-        refresh = view.findViewById<View>(R.id.refresh) as SwipeRefreshLayout
         mProgress = ProgressDialog(activity)
         mProgress.setMessage("***Loading***")
         mProgress.show()
@@ -124,13 +111,13 @@ class Profilefrag : Fragment() {
         val phot: String
         val mail: String
         val clgname: String
-        nam = userData.name
-        phon = userData.phone
-        phot = userData.photo
-        mail = userData.email
-        clgname = userData.clg
+        nam = userData.name?:""
+        phon = userData.phone?:""
+        phot = userData.photo?:""
+        mail = userData.email?:""
+        clgname = userData.clg?:""
         name.setText(nam)
-        phn.setText(phon)
+        phone.setText(phon)
         photo.setImageBitmap(Utils.decodeBase64(phot))
         email.setText(mail)
         clg.setText(clgname)
@@ -207,7 +194,7 @@ class Profilefrag : Fragment() {
                 .content("Saving..")
                 .show()
         userData.name = name.text.toString()
-        userData.phone = phn.text.toString()
+        userData.phone = phone.text.toString()
         userData.clg = clg.text.toString()
         val database = FirebaseDatabase.getInstance()
         val myRef = database.reference

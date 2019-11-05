@@ -42,6 +42,7 @@ import com.google.firebase.database.Query
 import com.google.firebase.database.ValueEventListener
 import com.squareup.picasso.Picasso
 import com.tt.whorlviewlibrary.WhorlView
+import kotlinx.android.synthetic.main.activity_trend_frag.*
 
 import java.util.ArrayList
 
@@ -52,7 +53,7 @@ import timber.log.Timber
  */
 
 class Trendfrag : Fragment() {
-    internal var flag: String
+    lateinit var flag: String
     private var mBlogList: RecyclerView? = null
     private var mDatabase: DatabaseReference? = null
     private var pdata: DatabaseReference? = null
@@ -65,13 +66,11 @@ class Trendfrag : Fragment() {
     private var mDatabasenotifdata: DatabaseReference? = null
     private var auth: FirebaseAuth? = null
     internal var user: FirebaseUser? = null
-    internal var likemodel: Likemodel
+    lateinit var likemodel: Likemodel
     internal var mal: String? = null
-    internal var check: String
-    internal var checkmail: String
-    internal var userdata: UserData
-    internal var whorlView: WhorlView
-    internal var fab: FloatingActionButton
+    lateinit var check: String
+    lateinit var checkmail: String
+    lateinit var userdata: UserData
     internal var lik: Int = 0
     internal var unlike: Int = 0
     internal var count: Int = 0
@@ -83,8 +82,7 @@ class Trendfrag : Fragment() {
     private var keysArray: ArrayList<String>? = null
     private var mProgress: ProgressDialog? = null
     internal var ref: Query? = null
-    internal var refresh: SwipeRefreshLayout
-    internal var query: Query
+    lateinit var query: Query
     private val isNetworkConnected: Boolean
         get() {
             val cm = activity!!.getSystemService(
@@ -94,10 +92,8 @@ class Trendfrag : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.activity_trend_frag, container, false)
-        flag = App.getPref("cityname", activity!!.applicationContext)
-        whorlView = view.findViewById<View>(R.id.whorl2) as WhorlView
+        flag = App.getPref("cityname", activity!!.applicationContext)?:""
         keysArray = ArrayList()
-        refresh = view.findViewById<View>(R.id.refresh) as SwipeRefreshLayout
         //  whorlView.setVisibility(View.VISIBLE);
         //  whorlView.start();
         likemodel = Likemodel()
@@ -109,7 +105,6 @@ class Trendfrag : Fragment() {
         //        Timber.d(user.name);
         //  mal=user.email;
         auth = FirebaseAuth.getInstance()
-        fab = view.findViewById<View>(R.id.fab) as FloatingActionButton
         val n = auth!!.currentUser!!.email
         check = n!!.substring(n.indexOf("@") + 1, n.lastIndexOf("."))
         checkmail = n.substring(n.indexOf("@") + 1, n.lastIndexOf(".")) + n.substring(n.lastIndexOf(".") + 1)
@@ -157,13 +152,13 @@ class Trendfrag : Fragment() {
     }
 
     fun refreshitem() {
-        whorlView.visibility = View.VISIBLE
-        whorlView.start()
+        whorl2.visibility = View.VISIBLE
+        whorl2.start()
 
         if (auth!!.currentUser != null) {
             pdata!!.child("Userdetail").child(user!!.uid).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    whorlView.stop()
+                    whorl2.stop()
                     userdata = dataSnapshot.getValue<UserData>(UserData::class.java)
 
                 }
@@ -187,7 +182,7 @@ class Trendfrag : Fragment() {
                         //  model=new Blogmodel();
                         //  viewHolder.setTitle(model.getTitle());
 
-                        whorlView.visibility = View.GONE
+                        whorl2.visibility = View.GONE
 
                         val post_key = getRef(position).key
                         viewHolder.bindData(model)
@@ -218,13 +213,13 @@ class Trendfrag : Fragment() {
     override fun onStart() {
         super.onStart()
         // if(isNetworkConnected()) {
-        whorlView.visibility = View.VISIBLE
-        whorlView.start()
+        whorl2.visibility = View.VISIBLE
+        whorl2.start()
 
         if (auth!!.currentUser != null) {
             pdata!!.child("Userdetail").child(user!!.uid).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    whorlView.stop()
+                    whorl2.stop()
                     userdata = dataSnapshot.getValue<UserData>(UserData::class.java)
                 }
 
@@ -247,7 +242,7 @@ class Trendfrag : Fragment() {
                         //  model=new Blogmodel();
                         //  viewHolder.setTitle(model.getTitle());
 
-                        whorlView.visibility = View.GONE
+                        whorl2.visibility = View.GONE
 
                         val post_key = getRef(position).key
                         viewHolder.bindData(model)
@@ -446,12 +441,12 @@ class Trendfrag : Fragment() {
         internal var mDatabaseLike: DatabaseReference
         internal var mDatabaseunlike: DatabaseReference
         var check: String? = null
-        var desc: String? = null
+        var descString: String? = null
         var pic: String? = null
         var nam: String? = null
         var photo: String? = null
-        var time: String
-        var date: String
+        var time: String ?= null
+        var date: String ?= null
         internal var lke: Int = 0
         internal var unlke: Int = 0
         internal var df: DatabaseReference? = null
@@ -479,7 +474,7 @@ class Trendfrag : Fragment() {
             val txtTime = mView.findViewById<View>(R.id.txtTime) as TextView
             val txtDate = mView.findViewById<View>(R.id.txtDate) as TextView
             post_desc.text = model.desc
-            desc = model.desc
+            descString = model.desc
             if (model.image == null) {
                 post_image.visibility = View.GONE
                 pic = model.image
@@ -496,7 +491,7 @@ class Trendfrag : Fragment() {
                 nam = model.name
             }
             if (model.propic != null) {
-                pro_pic.setImageBitmap(Utils.decodeBase64(model.propic))
+                pro_pic.setImageBitmap(Utils.decodeBase64(model.propic?:""))
             } else {
                 pro_pic.setImageDrawable(ContextCompat.getDrawable(mView.context, R.drawable.user))
             }

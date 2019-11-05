@@ -69,7 +69,7 @@ class Foreground : Application.ActivityLifecycleCallbacks {
         if (check != null)
             handler.removeCallbacks(check)
 
-        handler.postDelayed(check = Runnable {
+        check = Runnable {
             if (isForeground && paused) {
                 isForeground = false
                 Log.i(TAG, "went background")
@@ -84,7 +84,8 @@ class Foreground : Application.ActivityLifecycleCallbacks {
             } else {
                 Log.i(TAG, "still foreground")
             }
-        }, CHECK_DELAY)
+        }
+        handler.postDelayed(check, CHECK_DELAY)
     }
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle) {}
@@ -118,7 +119,7 @@ class Foreground : Application.ActivityLifecycleCallbacks {
                 instance = Foreground()
                 application.registerActivityLifecycleCallbacks(instance)
             }
-            return instance
+            return instance!!
         }
 
         operator fun get(application: Application): Foreground? {
@@ -128,7 +129,7 @@ class Foreground : Application.ActivityLifecycleCallbacks {
             return instance
         }
 
-        operator fun get(ctx: Context): Foreground {
+        operator fun get(ctx: Context): Foreground? {
             if (instance == null) {
                 val appCtx = ctx.applicationContext
                 if (appCtx is Application) {
@@ -140,7 +141,7 @@ class Foreground : Application.ActivityLifecycleCallbacks {
             return instance
         }
 
-        fun get(): Foreground {
+        fun get(): Foreground? {
             checkNotNull(instance) { "Foreground is not initialised - invoke " + "at least once with parameterised init/get" }
             return instance
         }
