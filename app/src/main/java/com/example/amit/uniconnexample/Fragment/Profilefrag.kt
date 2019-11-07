@@ -35,7 +35,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.activity_prof_frag.*
+import kotlinx.android.synthetic.main.activity_prof_frag.view.*
 
 import java.io.File
 
@@ -52,6 +52,7 @@ class Profilefrag : Fragment() {
     lateinit var userData: UserData
     lateinit var mDatabase: DatabaseReference
     lateinit var mProgress: ProgressDialog
+    lateinit var profileFragView: View
     private val isNetworkConnected: Boolean
         get() {
             val cm = activity!!.getSystemService(
@@ -60,15 +61,15 @@ class Profilefrag : Fragment() {
         }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.activity_prof_frag, container, false)
-        email.keyListener = null
+        profileFragView = inflater.inflate(R.layout.activity_prof_frag, container, false)
+        profileFragView.email.keyListener = null
         mProgress = ProgressDialog(activity)
         mProgress.setMessage("***Loading***")
         mProgress.show()
         //  FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         user = FirebaseAuth.getInstance().currentUser
         userData = UserData()
-        name.setOnClickListener { name.isCursorVisible = true }
+        profileFragView.name.setOnClickListener { profileFragView.name.isCursorVisible = true }
         //  DatabaseReference mDatabase;
         mDatabase = FirebaseDatabase.getInstance().reference.child("Userdetail").child(user!!.uid)
         mDatabase.keepSynced(true)
@@ -91,9 +92,9 @@ class Profilefrag : Fragment() {
             mProgress.dismiss()
             Toast.makeText(activity, "No internet connection", Toast.LENGTH_LONG).show()
         }
-        save.setOnClickListener { save() }
-        photo.setOnClickListener { pickPhoto() }
-        refresh.setOnRefreshListener { refresh() }
+        profileFragView.save.setOnClickListener { save() }
+        profileFragView.photo.setOnClickListener { pickPhoto() }
+        profileFragView.refresh.setOnRefreshListener { refresh() }
         return view
     }
 
@@ -116,11 +117,11 @@ class Profilefrag : Fragment() {
         phot = userData.photo?:""
         mail = userData.email?:""
         clgname = userData.clg?:""
-        name.setText(nam)
-        phone.setText(phon)
-        photo.setImageBitmap(Utils.decodeBase64(phot))
-        email.setText(mail)
-        clg.setText(clgname)
+        profileFragView.name.setText(nam)
+        profileFragView.phone.setText(phon)
+        profileFragView.photo.setImageBitmap(Utils.decodeBase64(phot))
+        profileFragView.email.setText(mail)
+        profileFragView.clg.setText(clgname)
     }
 
     //   @OnClick(R.id.photo)
@@ -157,7 +158,7 @@ class Profilefrag : Fragment() {
                 var bitmap = BitmapFactory.decodeFile(imageFile.absolutePath, options)
                 bitmap = getResizedBitmap(bitmap, 100)
                 Timber.d("xxx" + bitmap.byteCount)
-                photo.setImageBitmap(bitmap)
+                profileFragView.photo.setImageBitmap(bitmap)
                 userData.photo = Utils.encodeToBase64(bitmap, Bitmap.CompressFormat.PNG, 100)
             }
         })
@@ -193,9 +194,9 @@ class Profilefrag : Fragment() {
                 .progress(true, 100)
                 .content("Saving..")
                 .show()
-        userData.name = name.text.toString()
-        userData.phone = phone.text.toString()
-        userData.clg = clg.text.toString()
+        userData.name = profileFragView.name.text.toString()
+        userData.phone = profileFragView.phone.text.toString()
+        userData.clg = profileFragView.clg.text.toString()
         val database = FirebaseDatabase.getInstance()
         val myRef = database.reference
         myRef.child("Userdetail").child(uid).setValue(userData) { databaseError, databaseReference ->
@@ -231,7 +232,7 @@ class Profilefrag : Fragment() {
     }
 
     fun refreshcomplete() {
-        refresh.isRefreshing = false
+        profileFragView.refresh.isRefreshing = false
     }
 
 }

@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import com.example.amit.uniconnexample.Activity.NewTabActivity
 import com.example.amit.uniconnexample.R
 import kotlinx.android.synthetic.main.activity_detail_frag.*
+import kotlinx.android.synthetic.main.activity_detail_frag.view.*
 
 import java.util.ArrayList
 
@@ -24,8 +25,8 @@ class Mainfrag : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.activity_detail_frag, container, false)
-        setupViewPager(viewPager)
-        tabLayout.setupWithViewPager(viewPager)
+        setupViewPager(view.viewPager)
+        view.tabLayout.setupWithViewPager(view.viewPager)
 
         return view
     }

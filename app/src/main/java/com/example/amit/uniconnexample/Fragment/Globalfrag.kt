@@ -41,8 +41,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.Query
 import com.google.firebase.database.ValueEventListener
 import com.squareup.picasso.Picasso
-import com.tt.whorlviewlibrary.WhorlView
-import kotlinx.android.synthetic.main.activity_global_frag.*
+import kotlinx.android.synthetic.main.activity_global_frag.view.*
 
 import java.util.ArrayList
 
@@ -81,6 +80,7 @@ class Globalfrag : Fragment() {
     private var keysArray: ArrayList<String>? = null
     private var mProgress: ProgressDialog? = null
     internal var ref: Query? = null
+    lateinit var globalView: View
     private val isNetworkConnected: Boolean
         get() {
             val cm = activity!!.getSystemService(
@@ -89,7 +89,7 @@ class Globalfrag : Fragment() {
         }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.activity_global_frag, container, false)
+        globalView = inflater.inflate(R.layout.activity_global_frag, container, false)
         keysArray = ArrayList()
         //  whorlView.setVisibility(View.VISIBLE);
         //  whorlView.start();
@@ -118,37 +118,37 @@ class Globalfrag : Fragment() {
         mDatabaselike!!.keepSynced(true)
         mDatabaselike!!.keepSynced(true)
 
-        mBlogList = view.findViewById<View>(R.id.mblog_list) as RecyclerView
+        mBlogList = globalView.mblog_list
         mBlogList!!.setHasFixedSize(true)
         val lm = LinearLayoutManager(activity)
         //   lm.setReverseLayout(true);
         lm.stackFromEnd = true
         mBlogList!!.layoutManager = lm
-        refresh.setOnRefreshListener { refreshitem() }
+        globalView.refresh.setOnRefreshListener { refreshitem() }
         mBlogList!!.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                if (dy > 0 && fab.isShown)
-                    fab.hide()
-                if (dy < 0 && fab.isEnabled)
-                    fab.show()
+                if (dy > 0 && globalView.fab.isShown)
+                    globalView.fab.hide()
+                if (dy < 0 && globalView.fab.isEnabled)
+                    globalView.fab.show()
             }
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
             }
         })
-        fab.setOnClickListener { writeblog() }
-        return view
+        globalView.fab.setOnClickListener { writeblog() }
+        return globalView
     }
 
     fun refreshitem() {
-        whorl2.visibility = View.VISIBLE
-        whorl2.start()
+        globalView.whorl2.visibility = View.VISIBLE
+        globalView.whorl2.start()
 
         if (auth!!.currentUser != null) {
             pdata!!.child("Userdetail").child(user!!.uid).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    whorl2.stop()
+                    globalView.whorl2.stop()
                     userdata = dataSnapshot.getValue<UserData>(UserData::class.java)
                 }
 
@@ -170,7 +170,7 @@ class Globalfrag : Fragment() {
                     //  model=new Blogmodel();
                     //  viewHolder.setTitle(model.getTitle());
 
-                    whorl2.visibility = View.GONE
+                    globalView.whorl2.visibility = View.GONE
 
                     val post_key = getRef(position).key
                     viewHolder.bindData(model)
@@ -349,19 +349,19 @@ class Globalfrag : Fragment() {
     }
 
     fun refreshcomplete() {
-        refresh.isRefreshing = false
+        globalView.refresh.isRefreshing = false
     }
 
     override fun onStart() {
         super.onStart()
         // if(isNetworkConnected()) {
-        whorl2.visibility = View.VISIBLE
-        whorl2.start()
+        globalView.whorl2.visibility = View.VISIBLE
+        globalView.whorl2.start()
 
         if (auth!!.currentUser != null) {
             pdata!!.child("Userdetail").child(user!!.uid).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    whorl2.stop()
+                    globalView.whorl2.stop()
                     userdata = dataSnapshot.getValue<UserData>(UserData::class.java)
                 }
 
@@ -383,7 +383,7 @@ class Globalfrag : Fragment() {
                     //  model=new Blogmodel();
                     //  viewHolder.setTitle(model.getTitle());
 
-                    whorl2.visibility = View.GONE
+                    globalView.whorl2.visibility = View.GONE
 
                     val post_key = getRef(position).key
                     viewHolder.bindData(model)

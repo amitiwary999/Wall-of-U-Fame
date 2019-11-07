@@ -24,7 +24,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_msg_frag.*
+import kotlinx.android.synthetic.main.activity_msg_frag.view.*
 
 /**
  * Created by amit on 18/2/17.
@@ -33,6 +33,7 @@ import kotlinx.android.synthetic.main.activity_msg_frag.*
 class Msgfrag : Fragment() {
     private var newsnd: DatabaseReference? = null
     private var auth: FirebaseAuth? = null
+    lateinit var msgView: View
     private val isNetworkConnected: Boolean
         get() {
             val cm = activity!!.getSystemService(
@@ -41,12 +42,12 @@ class Msgfrag : Fragment() {
         }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.activity_msg_frag, container, false)
+        msgView = inflater.inflate(R.layout.activity_msg_frag, container, false)
         auth = FirebaseAuth.getInstance()
-        mchat_list.layoutManager = LinearLayoutManager(activity)
+        msgView.mchat_list.layoutManager = LinearLayoutManager(activity)
         newsnd = FirebaseDatabase.getInstance().reference.child("Smessage").child(auth!!.currentUser!!.uid)
         newsnd!!.keepSynced(true)
-        refresh.setOnRefreshListener { refresh() }
+        msgView.refresh.setOnRefreshListener { refresh() }
         // if(isNetworkConnected()) {
         val firebaseRecyclerAdapter = object : FirebaseRecyclerAdapter<Message_model, MessageViewHolder>(
                 Message_model::class.java,
@@ -71,7 +72,7 @@ class Msgfrag : Fragment() {
                 }
             }
         }
-        mchat_list.adapter = firebaseRecyclerAdapter
+        msgView.mchat_list.adapter = firebaseRecyclerAdapter
         return view
     }
 
@@ -99,12 +100,12 @@ class Msgfrag : Fragment() {
                 }
             }
         }
-        mchat_list.adapter = firebaseRecyclerAdapter
+        msgView.mchat_list.adapter = firebaseRecyclerAdapter
         refreshcomplete()
     }
 
     fun refreshcomplete() {
-        refresh.isRefreshing = false
+        msgView.refresh.isRefreshing = false
     }
 
     override fun onStart() {

@@ -25,7 +25,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_notif_frag.*
+import kotlinx.android.synthetic.main.activity_notif_frag.view.*
 
 /**
  * Created by amit on 18/2/17.
@@ -37,6 +37,7 @@ class Notifrag : Fragment() {
     var post_key: String ?= null
     private var mDatabasenotifdata: DatabaseReference? = null
     private var mDatanotiflike: DatabaseReference? = null
+    lateinit var notifFragView: View
     private val isNetworkConnected: Boolean
         get() {
             val cm = activity!!.getSystemService(
@@ -45,7 +46,7 @@ class Notifrag : Fragment() {
         }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.activity_notif_frag, container, false)
+        notifFragView = inflater.inflate(R.layout.activity_notif_frag, container, false)
         auth = FirebaseAuth.getInstance()
         mDatanotiflike = FirebaseDatabase.getInstance().reference.child("notificationdata").child("like").child(FirebaseAuth.getInstance().currentUser!!.uid)
         //  Toast.makeText(this,"check",Toast.LENGTH_LONG).show();
@@ -53,11 +54,11 @@ class Notifrag : Fragment() {
         mDatabasenotifdata = FirebaseDatabase.getInstance().reference.child("notificationdata").child("data").child(FirebaseAuth.getInstance().currentUser!!.uid)
         // Utils.setUpToolbarBackButton(Notification.this, toolbar);
         val lm = LinearLayoutManager(activity)
-        mnotification_list.layoutManager = lm
+        notifFragView.mnotification_list.layoutManager = lm
         mDatanotiflike!!.keepSynced(true)
         mDatabasenotifdata!!.keepSynced(true)
-        refresh.setOnRefreshListener { refresh() }
-        return view
+        notifFragView.refresh.setOnRefreshListener { refresh() }
+        return notifFragView
     }
 
     override fun onStart() {
@@ -97,7 +98,7 @@ class Notifrag : Fragment() {
 
             }
         }
-        mnotification_list.adapter = firebaseRecyclerAdapter
+        notifFragView.mnotification_list.adapter = firebaseRecyclerAdapter
     }
 
     override fun onResume() {
@@ -167,11 +168,11 @@ class Notifrag : Fragment() {
 
             }
         }
-        mnotification_list.adapter = firebaseRecyclerAdapter
+        notifFragView.mnotification_list.adapter = firebaseRecyclerAdapter
         refreshcomplete()
     }
 
     fun refreshcomplete() {
-        refresh.isRefreshing = false
+        notifFragView.refresh.isRefreshing = false
     }
 }

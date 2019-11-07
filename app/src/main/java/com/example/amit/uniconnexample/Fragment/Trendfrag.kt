@@ -41,8 +41,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.Query
 import com.google.firebase.database.ValueEventListener
 import com.squareup.picasso.Picasso
-import com.tt.whorlviewlibrary.WhorlView
-import kotlinx.android.synthetic.main.activity_trend_frag.*
+import kotlinx.android.synthetic.main.activity_trend_frag.view.*
 
 import java.util.ArrayList
 
@@ -83,6 +82,7 @@ class Trendfrag : Fragment() {
     private var mProgress: ProgressDialog? = null
     internal var ref: Query? = null
     lateinit var query: Query
+    lateinit var trendFragView: View
     private val isNetworkConnected: Boolean
         get() {
             val cm = activity!!.getSystemService(
@@ -91,7 +91,7 @@ class Trendfrag : Fragment() {
         }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.activity_trend_frag, container, false)
+        trendFragView = inflater.inflate(R.layout.activity_trend_frag, container, false)
         flag = App.getPref("cityname", activity!!.applicationContext)?:""
         keysArray = ArrayList()
         //  whorlView.setVisibility(View.VISIBLE);
@@ -123,19 +123,19 @@ class Trendfrag : Fragment() {
         mDatabaselike!!.keepSynced(true)
         mDatabaselike!!.keepSynced(true)
 
-        mBlogList = view.findViewById<View>(R.id.mblog_list) as RecyclerView
+        mBlogList = trendFragView.mblog_list
         mBlogList!!.setHasFixedSize(true)
         val lm = LinearLayoutManager(activity)
         //   lm.setReverseLayout(true);
         lm.stackFromEnd = true
         mBlogList!!.layoutManager = lm
-        refresh.setOnRefreshListener { refreshitem() }
+        trendFragView.refresh.setOnRefreshListener { refreshitem() }
         mBlogList!!.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                if (dy > 0 && fab.isShown)
-                    fab.hide()
-                if (dy < 0 && fab.isEnabled)
-                    fab.show()
+                if (dy > 0 && trendFragView.fab.isShown)
+                    trendFragView.fab.hide()
+                if (dy < 0 && trendFragView.fab.isEnabled)
+                    trendFragView.fab.show()
             }
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
@@ -146,19 +146,19 @@ class Trendfrag : Fragment() {
                 super.onScrollStateChanged(recyclerView, newState)
             }
         })
-        fab.setOnClickListener { writeblog() }
+        trendFragView.fab.setOnClickListener { writeblog() }
         return view
 
     }
 
     fun refreshitem() {
-        whorl2.visibility = View.VISIBLE
-        whorl2.start()
+        trendFragView.whorl2.visibility = View.VISIBLE
+        trendFragView.whorl2.start()
 
         if (auth!!.currentUser != null) {
             pdata!!.child("Userdetail").child(user!!.uid).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    whorl2.stop()
+                    trendFragView.whorl2.stop()
                     userdata = dataSnapshot.getValue<UserData>(UserData::class.java)
 
                 }
@@ -182,7 +182,7 @@ class Trendfrag : Fragment() {
                         //  model=new Blogmodel();
                         //  viewHolder.setTitle(model.getTitle());
 
-                        whorl2.visibility = View.GONE
+                        trendFragView.whorl2.visibility = View.GONE
 
                         val post_key = getRef(position).key
                         viewHolder.bindData(model)
@@ -207,19 +207,19 @@ class Trendfrag : Fragment() {
     }
 
     fun refreshcomplete() {
-        refresh.isRefreshing = false
+        trendFragView.refresh.isRefreshing = false
     }
 
     override fun onStart() {
         super.onStart()
         // if(isNetworkConnected()) {
-        whorl2.visibility = View.VISIBLE
-        whorl2.start()
+        trendFragView.whorl2.visibility = View.VISIBLE
+        trendFragView.whorl2.start()
 
         if (auth!!.currentUser != null) {
             pdata!!.child("Userdetail").child(user!!.uid).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    whorl2.stop()
+                    trendFragView.whorl2.stop()
                     userdata = dataSnapshot.getValue<UserData>(UserData::class.java)
                 }
 
@@ -242,7 +242,7 @@ class Trendfrag : Fragment() {
                         //  model=new Blogmodel();
                         //  viewHolder.setTitle(model.getTitle());
 
-                        whorl2.visibility = View.GONE
+                        trendFragView.whorl2.visibility = View.GONE
 
                         val post_key = getRef(position).key
                         viewHolder.bindData(model)
