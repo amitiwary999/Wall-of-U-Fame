@@ -29,7 +29,7 @@ class RetrofitClientBuilder() {
     }
 
     fun init(baseUrl: String) {
-        mRetrofit = mRetrofitBuilder!!.baseUrl(baseUrl).build()
+        mRetrofit = mRetrofitBuilder?.baseUrl(baseUrl)?.build()
         mNetworkRepository = createApi(NetworkRepository::class.java)
     }
 
