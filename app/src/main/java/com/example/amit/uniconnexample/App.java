@@ -17,9 +17,11 @@ import timber.log.Timber;
 public class App extends Application {
     Boolean flag,vib,logincheck;
     SharedPreferences myPrefs;
+    public static App instance;
     @Override
     public void onCreate() {
         super.onCreate();
+        instance = this;
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         myPrefs=getSharedPreferences("com.example.amit.uniconnexample",MODE_PRIVATE);
         flag=myPrefs.getBoolean("isChecked1",true);

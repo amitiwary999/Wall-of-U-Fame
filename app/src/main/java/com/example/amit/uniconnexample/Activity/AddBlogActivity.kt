@@ -33,8 +33,11 @@ import androidx.core.content.ContextCompat
 import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Model.BlogModel
 import com.example.amit.uniconnexample.Others.UserData
+import com.example.amit.uniconnexample.PostBlogModel
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Signupactivity
+import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
+import com.example.amit.uniconnexample.utils.UtilPostIdGenerator
 import com.example.amit.uniconnexample.utils.Utils
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
@@ -223,6 +226,10 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                 uploadTask.addOnSuccessListener { taskSnapshot ->
                     // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                     val downloadUrl = taskSnapshot.downloadUrl
+
+                    val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, downloadUrl.toString(), cityname, date )
+                    postBlog(blogModel)
+
                     val databaseReference = mDatabas!!.push()
                     databaseReference.setValue(BlogModel(desc_val, downloadUrl!!.toString(), name_val?:"user", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
                     val newPost = mDatabase!!.push()
@@ -232,6 +239,10 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                 }
 
             } else if (desc_val.length != 0) {
+
+                val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", cityname, date )
+                postBlog(blogModel)
+
                 val newPost = mDatabase!!.push()
                 newPost.setValue(BlogModel(desc_val, "", name_val?:"", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
                 mProgress!!.dismiss()
@@ -255,6 +266,14 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
         } else {
             Toast.makeText(this, "You are logged out...Please login ", Toast.LENGTH_LONG).show()
             loadLoginView()
+        }
+    }
+
+    fun postBlog(postBlogModel: PostBlogModel){
+        FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
+            if(it.isSuccessful){
+                RetrofitClientBuilder().getmNetworkRepository()?.sendPost("Bearer ${it.result?.token}", postBlogModel)
+            }
         }
     }
 

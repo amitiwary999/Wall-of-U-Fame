@@ -23,10 +23,10 @@ import android.widget.Toast
 
 import com.bumptech.glide.Glide
 import com.example.amit.uniconnexample.Activity.Blog
-import com.example.amit.uniconnexample.Blogmodel
 import com.example.amit.uniconnexample.Activity.Chatstart
 import com.example.amit.uniconnexample.Likemodel
 import com.example.amit.uniconnexample.Activity.Loginactivity
+import com.example.amit.uniconnexample.Model.BlogModel
 import com.example.amit.uniconnexample.Notificationmodel
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Others.UserData
@@ -158,15 +158,15 @@ class Globalfrag : Fragment() {
             })
             // new Thread(){
             // public void run(){
-            val firebaseRecyclerAdapter = object : FirebaseRecyclerAdapter<Blogmodel, BlogViewHolder>(
-                    Blogmodel::class.java,
+            val firebaseRecyclerAdapter = object : FirebaseRecyclerAdapter<BlogModel, BlogViewHolder>(
+                    BlogModel::class.java,
                     R.layout.blog_item,
                     BlogViewHolder::class.java,
                     mDatabase
 
             ) {
 
-                override fun populateViewHolder(viewHolder: BlogViewHolder, model: Blogmodel, position: Int) {
+                override fun populateViewHolder(viewHolder: BlogViewHolder, model: BlogModel, position: Int) {
                     //  model=new Blogmodel();
                     //  viewHolder.setTitle(model.getTitle());
 
@@ -221,7 +221,7 @@ class Globalfrag : Fragment() {
                                             }
                                             mDatabaselike!!.child(post_key).child(user!!.uid).removeValue()
                                             //  mDatabase.child(post_key).child("like").setValue(lik);
-                                            mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date))
+                                            mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date))
                                             processlike = false
 
                                         } else {
@@ -240,7 +240,7 @@ class Globalfrag : Fragment() {
                                                         mDatabaseunlike!!.child(post_key).child(user!!.uid).removeValue()
                                                         // mDatabase.child(post_key).child("like").setValue(lik);
                                                         //  mDatabase.child(post_key).child("unlike").setValue(unlik);
-                                                        mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, unlik, model.time, model.date))
+                                                        mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, unlik, model.time, model.date))
                                                     }
                                                 }
 
@@ -251,7 +251,7 @@ class Globalfrag : Fragment() {
                                             lik = model.like + 1
                                             mDatabaselike!!.child(post_key).child(user!!.uid).setValue("Liked")
                                             //mDatabase.child(post_key).child("like").setValue(lik);
-                                            mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date))
+                                            mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date))
                                             if (user!!.uid != model.key) {
                                                 mDatabasenotif!!.child(model.key).child(post_key).child(user!!.uid).setValue(userdata.name)
                                                 // Toast.makeText(getActivity(),model.getKey(),Toast.LENGTH_LONG).show();
@@ -290,7 +290,7 @@ class Globalfrag : Fragment() {
                                             }
                                             mDatabaseunlike!!.child(post_key).child(user!!.uid).removeValue()
                                             // mDatabase.child(post_key).child("unlike").setValue(unlike);
-                                            mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date))
+                                            mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date))
 
                                             processunlike = false
                                         } else {
@@ -310,7 +310,7 @@ class Globalfrag : Fragment() {
                                                         mDatabaselike!!.child(post_key).child(user!!.uid).removeValue()
                                                         //  mDatabase.child(post_key).child("like").setValue(lyk);
                                                         // mDatabase.child(post_key).child("unlike").setValue(unlike);
-                                                        mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lyk, unlike, model.time, model.date))
+                                                        mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lyk, unlike, model.time, model.date))
                                                     }
                                                 }
 
@@ -322,7 +322,7 @@ class Globalfrag : Fragment() {
                                             // final int
                                             unlike = model.unlike + 1
                                             // mDatabase.child(post_key).child("unlike").setValue(unlike);
-                                            mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date))
+                                            mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date))
                                             processunlike = false
                                         }
                                         processunlike = false
@@ -371,15 +371,15 @@ class Globalfrag : Fragment() {
             })
             // new Thread(){
             // public void run(){
-            val firebaseRecyclerAdapter = object : FirebaseRecyclerAdapter<Blogmodel, BlogViewHolder>(
-                    Blogmodel::class.java,
+            val firebaseRecyclerAdapter = object : FirebaseRecyclerAdapter<BlogModel, BlogViewHolder>(
+                    BlogModel::class.java,
                     R.layout.blog_item,
                     BlogViewHolder::class.java,
                     mDatabase
 
             ) {
 
-                override fun populateViewHolder(viewHolder: BlogViewHolder, model: Blogmodel, position: Int) {
+                override fun populateViewHolder(viewHolder: BlogViewHolder, model: BlogModel, position: Int) {
                     //  model=new Blogmodel();
                     //  viewHolder.setTitle(model.getTitle());
 
@@ -433,7 +433,7 @@ class Globalfrag : Fragment() {
                                                 lik = 0
                                             }
                                             mDatabaselike!!.child(post_key).child(user!!.uid).removeValue()
-                                            mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date))
+                                            mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date))
                                             processlike = false
 
                                         } else {
@@ -450,7 +450,7 @@ class Globalfrag : Fragment() {
                                                             unlik = 0
                                                         }
                                                         mDatabaseunlike!!.child(post_key).child(user!!.uid).removeValue()
-                                                        mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, unlik, model.time, model.date))
+                                                        mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, unlik, model.time, model.date))
                                                     }
                                                 }
 
@@ -460,7 +460,7 @@ class Globalfrag : Fragment() {
                                             })
                                             lik = model.like + 1
                                             mDatabaselike!!.child(post_key).child(user!!.uid).setValue("Liked")
-                                            mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date))
+                                            mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lik, model.unlike, model.time, model.date))
                                             if (user!!.uid != model.key) {
                                                 mDatabasenotif!!.child(model.key).child(post_key).child(user!!.uid).setValue(userdata.name)
                                                 // Toast.makeText(getActivity(),model.getKey(),Toast.LENGTH_LONG).show();
@@ -499,7 +499,7 @@ class Globalfrag : Fragment() {
                                                 unlike = 0
                                             }
                                             mDatabaseunlike!!.child(post_key).child(user!!.uid).removeValue()
-                                            mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date))
+                                            mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date))
                                             processunlike = false
                                         } else {
 
@@ -516,7 +516,7 @@ class Globalfrag : Fragment() {
                                                             lyk = 0
                                                         }
                                                         mDatabaselike!!.child(post_key).child(user!!.uid).removeValue()
-                                                        mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lyk, unlike, model.time, model.date))
+                                                        mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", lyk, unlike, model.time, model.date))
                                                     }
                                                 }
 
@@ -527,7 +527,7 @@ class Globalfrag : Fragment() {
                                             mDatabaseunlike!!.child(post_key).child(user!!.uid).setValue("Unliked")
                                             // final int
                                             unlike = model.unlike + 1
-                                            mDatabase!!.child(post_key).setValue(Blogmodel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date))
+                                            mDatabase!!.child(post_key).setValue(BlogModel(model.desc?:"", model.image?:"", model.name?:"", model.propic?:"", model.like, unlike, model.time, model.date))
                                             processunlike = false
                                         }
                                         processunlike = false
@@ -588,7 +588,7 @@ class Globalfrag : Fragment() {
             chat = mView.findViewById<View>(R.id.chat) as ImageButton
         }
 
-        fun bindData(model: Blogmodel) {
+        fun bindData(model: BlogModel) {
             val post_desc = mView.findViewById<View>(R.id.post_desc) as TextView
             val post_image = mView.findViewById<View>(R.id.postimage) as ImageView
             val post_name = mView.findViewById<View>(R.id.bname) as TextView

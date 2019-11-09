@@ -21,8 +21,10 @@ import android.widget.Toast
 
 import com.afollestad.materialdialogs.MaterialDialog
 import com.example.amit.uniconnexample.App
+import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Signupactivity
+import com.example.amit.uniconnexample.utils.PrefManager
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
@@ -152,27 +154,30 @@ class Loginactivity : AppCompatActivity() {
                                 //  email.setError("id may be wrong ");
                                 //  password.setError("password may be wrong");
                             } else {
-                                mDatabasenotiflike = FirebaseDatabase.getInstance().reference.child("notificationdata").child("like")
-                                mDatabasenotiflike!!.addValueEventListener(object : ValueEventListener {
-                                    override fun onDataChange(dataSnapshot: DataSnapshot) {
-                                        if (!dataSnapshot.hasChild(auth!!.currentUser!!.uid)) {
-                                            mDatabasenotiflike!!.child(auth!!.currentUser!!.uid).child("count").setValue(0)
+                                auth?.currentUser?.let {
+                                    mDatabasenotiflike = FirebaseDatabase.getInstance().reference.child("notificationdata").child("like")
+                                    mDatabasenotiflike!!.addValueEventListener(object : ValueEventListener {
+                                        override fun onDataChange(dataSnapshot: DataSnapshot) {
+                                            PrefManager.putString(CommonString.USER_ID, it.uid)
+                                            if (!dataSnapshot.hasChild(it.uid)) {
+                                                mDatabasenotiflike!!.child(it.uid).child("count").setValue(0)
+
+                                            }
+                                            // loginProgress.setVisibility(View.GONE);
+                                            editor1.putBoolean("isLoggedin", true)
+                                            editor1.commit()
+                                            mProgress.dismiss()
+                                            // Intent i = new Intent(Loginactivity.this, Tabs.class);
+                                            val i = Intent(this@Loginactivity, NewTabActivity::class.java)
+                                            startActivity(i)
+                                            finish()
+                                        }
+
+                                        override fun onCancelled(databaseError: DatabaseError) {
 
                                         }
-                                        // loginProgress.setVisibility(View.GONE);
-                                        editor1.putBoolean("isLoggedin", true)
-                                        editor1.commit()
-                                        mProgress.dismiss()
-                                        // Intent i = new Intent(Loginactivity.this, Tabs.class);
-                                        val i = Intent(this@Loginactivity, NewTabActivity::class.java)
-                                        startActivity(i)
-                                        finish()
-                                    }
-
-                                    override fun onCancelled(databaseError: DatabaseError) {
-
-                                    }
-                                })
+                                    })
+                                }
                             }
                         }
                     } catch (e: Exception) {
