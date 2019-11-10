@@ -50,6 +50,9 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_blog.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -230,12 +233,12 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                     val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, downloadUrl.toString(), cityname, date )
                     postBlog(blogModel)
 
-                    val databaseReference = mDatabas!!.push()
-                    databaseReference.setValue(BlogModel(desc_val, downloadUrl!!.toString(), name_val?:"user", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
-                    val newPost = mDatabase!!.push()
-                    mProgress!!.dismiss()
-                    startActivity(Intent(this, NewTabActivity::class.java))
-                    finish()
+//                    val databaseReference = mDatabas!!.push()
+//                    databaseReference.setValue(BlogModel(desc_val, downloadUrl!!.toString(), name_val?:"user", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
+//                    val newPost = mDatabase!!.push()
+//                    mProgress!!.dismiss()
+//                    startActivity(Intent(this, NewTabActivity::class.java))
+//                    finish()
                 }
 
             } else if (desc_val.length != 0) {
@@ -243,11 +246,11 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                 val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", cityname, date )
                 postBlog(blogModel)
 
-                val newPost = mDatabase!!.push()
-                newPost.setValue(BlogModel(desc_val, "", name_val?:"", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
-                mProgress!!.dismiss()
-                startActivity(Intent(this, NewTabActivity::class.java))
-                finish()
+//                val newPost = mDatabase!!.push()
+//                newPost.setValue(BlogModel(desc_val, "", name_val?:"", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
+//                mProgress!!.dismiss()
+//                startActivity(Intent(this, NewTabActivity::class.java))
+//                finish()
 
             } else {
                 mProgress!!.dismiss()
@@ -272,7 +275,17 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
     fun postBlog(postBlogModel: PostBlogModel){
         FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
             if(it.isSuccessful){
-                RetrofitClientBuilder().getmNetworkRepository()?.sendPost("Bearer ${it.result?.token}", postBlogModel)
+                RetrofitClientBuilder("https://uniconn-68432.firebaseapp.com/").getmNetworkRepository()?.sendPost("Bearer ${it.result?.token}", postBlogModel)
+                        ?.enqueue(object : Callback<String>{
+                            override fun onFailure(call: Call<String>, t: Throwable) {
+                                t.printStackTrace()
+                            }
+
+                            override fun onResponse(call: Call<String>, response: Response<String>) {
+                                if(response.isSuccessful)
+                                    Log.d("Add blog","success ${response.body()}")
+                            }
+                        })
             }
         }
     }
@@ -315,15 +328,15 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                 }
                 Activity.RESULT_CANCELED -> {
                     Log.e("Blog", "Cancel")
-                    val telephonyManager = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
-                    val cellLocation = telephonyManager.allCellInfo as GsmCellLocation
-
-                    val cellid= cellLocation.getCid();
-                    val celllac = cellLocation.getLac();
-                    cityname = celllac.toString()
-                    Log.d("CellLocation", cellLocation.toString());
-                    Log.d("GSM CELL ID",  cellid.toString());
-                    Log.d("GSM Location Code", celllac.toString())
+//                    val telephonyManager = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+//                    val cellLocation = telephonyManager.allCellInfo as GsmCellLocation
+//
+//                    val cellid= cellLocation.getCid();
+//                    val celllac = cellLocation.getLac();
+//                    cityname = celllac.toString()
+//                    Log.d("CellLocation", cellLocation.toString());
+//                    Log.d("GSM CELL ID",  cellid.toString());
+//                    Log.d("GSM Location Code", celllac.toString())
                 }
                 else -> {
                 }

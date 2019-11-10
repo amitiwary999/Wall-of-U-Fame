@@ -33,6 +33,8 @@
             android:windowSoftInputMode="stateHidden|adjustResize"></activity>
        <activity android:name=".Activity.Blog"
            android:theme="@style/AppTheme.NoactionBar"></activity>
+        <activity android:name=".Activity.AddBlogActivity"
+            android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Activity.Chatstart"
             android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Activity.Notifclick"

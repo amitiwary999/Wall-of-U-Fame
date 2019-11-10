@@ -22,6 +22,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 import com.bumptech.glide.Glide
+import com.example.amit.uniconnexample.Activity.AddBlogActivity
 import com.example.amit.uniconnexample.Activity.Loginactivity
 import com.example.amit.uniconnexample.Activity.Blog
 import com.example.amit.uniconnexample.Activity.Chatstart
@@ -128,18 +129,18 @@ class Detailfrag : Fragment() {
         lm.stackFromEnd = true
         mBlogList!!.layoutManager = lm
         fragView.refresh.setOnRefreshListener { refreshitem() }
-        mBlogList!!.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                if (dy > 0 && fragView.fab.isShown)
-                    fragView.fab.hide()
-                if (dy < 0 && fragView.fab.isEnabled)
-                    fragView.fab.show()
-            }
-
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-            }
-        })
+//        mBlogList!!.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+//            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+//                if (dy > 0 && fragView.fab.isShown)
+//                    fragView.fab.hide()
+//                if (dy < 0 && fragView.fab.isEnabled)
+//                    fragView.fab.show()
+//            }
+//
+//            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+//                super.onScrollStateChanged(recyclerView, newState)
+//            }
+//        })
         fragView.fab.setOnClickListener { writeblog() }
         return fragView
     }
@@ -400,7 +401,7 @@ class Detailfrag : Fragment() {
     }
 
     fun writeblog() {
-        startActivity(Intent(activity, Blog::class.java).putExtra("user", userdata))
+        startActivity(Intent(activity, AddBlogActivity::class.java).putExtra("user", userdata))
     }
 
     class BlogViewHolder(var mView: View) : RecyclerView.ViewHolder(mView) {

@@ -16,6 +16,8 @@ import android.net.ConnectivityManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.telephony.TelephonyManager
+import android.telephony.gsm.GsmCellLocation
 import androidx.annotation.IdRes
 import com.google.android.material.tabs.TabLayout
 import androidx.core.app.ActivityCompat
@@ -293,10 +295,6 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                 }
                 Activity.RESULT_CANCELED -> {
                     Log.e("Blog", "Cancel")
-                    val result: PendingResult<LocationSettingsResult>
-                    result = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
-                            builder?.build())
-                    settingLocation(result)
                 }
                 else -> {
                 }

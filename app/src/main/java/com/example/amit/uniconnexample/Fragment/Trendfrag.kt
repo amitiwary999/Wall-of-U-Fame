@@ -21,6 +21,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 import com.bumptech.glide.Glide
+import com.example.amit.uniconnexample.Activity.AddBlogActivity
 import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Activity.Blog
 import com.example.amit.uniconnexample.Activity.Chatstart
@@ -430,7 +431,7 @@ class Trendfrag : Fragment() {
     }
 
     fun writeblog() {
-        startActivity(Intent(activity, Blog::class.java).putExtra("user", userdata))
+        startActivity(Intent(activity, AddBlogActivity::class.java).putExtra("user", userdata))
     }
 
     class BlogViewHolder(var mView: View) : RecyclerView.ViewHolder(mView) {
