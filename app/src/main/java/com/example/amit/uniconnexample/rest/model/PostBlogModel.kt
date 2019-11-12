@@ -9,10 +9,10 @@ import java.io.UnsupportedEncodingException
  */
 
 class PostBlogModel(
-        val id: String,
+        val postId: String,
         var desc: String? = null,
-        var image: String? = null,
-        val cityname: String? = null,
+        var imageUrl: String? = null,
+        val cityName: String? = null,
         val date: String?=null
 ) {
 }

@@ -275,7 +275,7 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
     fun postBlog(postBlogModel: PostBlogModel){
         FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
             if(it.isSuccessful){
-                RetrofitClientBuilder("https://uniconn-68432.firebaseapp.com/").getmNetworkRepository()?.sendPost("Bearer ${it.result?.token}", postBlogModel)
+                RetrofitClientBuilder("https://tele-a36a5.firebaseapp.com/").getmNetworkRepository()?.sendPost("Bearer ${it.result?.token}", postBlogModel)
                         ?.enqueue(object : Callback<String>{
                             override fun onFailure(call: Call<String>, t: Throwable) {
                                 t.printStackTrace()

@@ -270,8 +270,8 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
         mGoogleApiClient!!.disconnect()
         // Toast.makeText(Tabs.this, "checkstop", Toast.LENGTH_SHORT).show();
         if (isNetworkConnected) {
-            newnotifchat!!.removeEventListener(valueEventListener)
-            mDatabasenotif!!.removeEventListener(valueventlistener)
+            newnotifchat?.removeEventListener(valueEventListener)
+            mDatabasenotif?.removeEventListener(valueventlistener)
         }
     }
 

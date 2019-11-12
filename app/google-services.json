@@ -1,52 +1,45 @@
 {
   "project_info": {
-    "project_number": "282148635291",
-    "firebase_url": "https://uniconn-68432.firebaseio.com",
-    "project_id": "uniconn-68432",
-    "storage_bucket": "uniconn-68432.appspot.com"
+    "project_number": "777699139600",
+    "firebase_url": "https://tele-a36a5.firebaseio.com",
+    "project_id": "tele-a36a5",
+    "storage_bucket": "tele-a36a5.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:282148635291:android:7ae3b96c5fc0f2f7",
+        "mobilesdk_app_id": "1:777699139600:android:e0f6217d279bd3f04a2a95",
         "android_client_info": {
           "package_name": "com.example.amit.uniconnexample"
         }
       },
       "oauth_client": [
         {
-          "client_id": "282148635291-08rmdgoakeukikgcrbour5nnodcvii40.apps.googleusercontent.com",
+          "client_id": "777699139600-lqmmno4isv0t8hfdmfuq7otig2ok8bvg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.amit.uniconnexample",
-            "certificate_hash": "9C844924893B5027E64DE1EA90517D7D05174E9C"
+            "certificate_hash": "4e4b5027e60949991456edeabb4c3802f610e131"
           }
         },
         {
-          "client_id": "282148635291-4gq3amksv5d7eqh9b31b4l94s9758kia.apps.googleusercontent.com",
+          "client_id": "777699139600-kn6k3m2qeplcheeqjb6f1aicqij3q6bb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDoUGjHzOc1plo5lOd_toDCAVymwHov6HU"
+          "current_key": "AIzaSyAckr8yF3xMiPaH5sXHQdyQMlAyg4Cx4zM"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "282148635291-4gq3amksv5d7eqh9b31b4l94s9758kia.apps.googleusercontent.com",
+              "client_id": "777699139600-kn6k3m2qeplcheeqjb6f1aicqij3q6bb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }
