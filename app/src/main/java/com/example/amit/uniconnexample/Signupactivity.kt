@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory
 import android.graphics.PorterDuff
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.textfield.TextInputLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -21,7 +22,13 @@ import android.widget.ImageView
 import android.widget.Toast
 
 import com.example.amit.uniconnexample.Activity.Loginactivity
+import com.example.amit.uniconnexample.Activity.NewTabActivity
+import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.Others.UserData
+import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
+import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
+import com.example.amit.uniconnexample.rest.model.UserDetailRequestModel
+import com.example.amit.uniconnexample.utils.PrefManager
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
@@ -36,6 +43,9 @@ import org.apache.commons.validator.routines.EmailValidator
 import java.io.File
 import pl.aprilapps.easyphotopicker.DefaultCallback
 import pl.aprilapps.easyphotopicker.EasyImage
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import timber.log.Timber
 
 /**
@@ -46,9 +56,7 @@ class Signupactivity : AppCompatActivity() {
     internal var user: FirebaseUser? = null
     private var mProgress: ProgressDialog? = null
     private var mAuth: FirebaseAuth? = null
-    private var mAuthListener: FirebaseAuth.AuthStateListener? = null
     lateinit var userData: UserData
-    lateinit var mDatabasenotiflike: DatabaseReference
     lateinit var mal: String
     lateinit var pass: String
     lateinit var confrmpass: String
@@ -63,50 +71,16 @@ class Signupactivity : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
         mProgress = ProgressDialog(this)
         userData = UserData()
-        mDatabasenotiflike = FirebaseDatabase.getInstance().reference.child("notificationdata").child("like")
-        phn = phone!!.editText!!.text.toString().trim { it <= ' ' }
-        pass = password!!.editText!!.text.toString().trim { it <= ' ' }
-        confrmpass = confirmpassword!!.editText!!.text.toString().trim { it <= ' ' }
-        nam = name!!.editText!!.text.toString().trim { it <= ' ' }
-        mal = email!!.editText!!.text.toString().trim { it <= ' ' }
-        clgname = clg!!.editText!!.text.toString().trim { it <= ' ' }
         mAuth = FirebaseAuth.getInstance()
         val tabIconColor = ContextCompat.getColor(baseContext, R.color.md_orange_600)
         person!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
         msg!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
         lock1!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
         lock2!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
-        college!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
-        phn_icon!!.setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN)
-        //    user=FirebaseAuth.getInstance().getCurrentUser();
-        mAuthListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
-            user = firebaseAuth.currentUser
-            if (user != null) {                    // User is signed in
-                Toast.makeText(this@Signupactivity, "Successfully signed up", Toast.LENGTH_SHORT).show()
-
-                writeUserData(user!!.uid)
-                //      mDatabasenotiflike.child(user.getUid()).setValue(new Likemodel(0));
-                val intent = Intent(this@Signupactivity, Loginactivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-                // .putExtra("user", userData));
-                //finish();
-            } else {                    // User is signed out
-                Timber.d("User is signed out")
-            }
-        }
 
         iview.setOnClickListener { pickPhoto() }
 
         sign_up.setOnClickListener{ sup() }
-    }
-
-    private fun writeUserData(uid: String) {
-        val database = FirebaseDatabase.getInstance()
-        val myRef = database.reference
-        val myref = database.reference
-        myRef.child("Userdetail").child(uid).setValue(userData)
-        myref.child(check + "chat").child(uid).setValue(com.example.amit.uniconnexample.Chatusermodel(userData.name?:"", userData.photo?:""))
     }
 
     internal fun pickPhoto() {
@@ -137,17 +111,9 @@ class Signupactivity : AppCompatActivity() {
                 if (confrmpass == pass) {
                     if (name!!.editText!!.text.toString().trim { it <= ' ' }.length >= 4) {
                         name!!.error = null
-                        if (phone!!.editText!!.text.toString().trim { it <= ' ' }.length == 10) {
-                            phone!!.error = null
-                            if (clg!!.editText!!.text.toString().trim { it <= ' ' }.length != 0) {
-                                clg!!.error = null
-                            } else {
-                                clg!!.error = "Enter college name"
-                            }
-                            attemptSignup(password!!.editText!!.text.toString().trim { it <= ' ' }, email!!.editText!!.text.toString().trim { it <= ' ' })
-                            sign_up!!.isEnabled = false
-                        } else
-                            phone!!.error = "Enter 10 digits"
+
+                        attemptSignup(pass, email?.editText?.text?.toString()?:"")
+                        sign_up?.isEnabled = false
                     } else
                         name!!.error = "Enter at least 4 characters"
                 } else {
@@ -209,43 +175,49 @@ class Signupactivity : AppCompatActivity() {
     }
 
     internal fun attemptSignup(pass: String, id: String) {
-        //  mProgress.setMessage("Loading....");
-        //   mProgress.show();
-        userData.phone = phone!!.editText!!.text.toString()
-        userData.name = name!!.editText!!.text.toString()
-        userData.email = email!!.editText!!.text.toString()
-        val n = userData.email?:""
-        check = n.substring(n.indexOf("@") + 1, n.lastIndexOf("."))
-        userData.clg = clg!!.editText!!.text.toString()
-        val icon = BitmapFactory.decodeResource(resources,
-                R.drawable.user)
-        if (flag != 1) {
-            userData.photo = com.example.amit.uniconnexample.utils.Utils.encodeToBase64(icon, Bitmap.CompressFormat.PNG, 100)
-        }
-        Timber.d(userData.photo)
-        Timber.d("flag$flag")
-        phn = phone!!.editText!!.text.toString().trim { it <= ' ' }
-
-        mAuth!!.createUserWithEmailAndPassword(id, pass)
-                .addOnCompleteListener(this) { task ->
+        Log.d("Sign up","attempt")
+        var userId = ""
+        mAuth?.createUserWithEmailAndPassword(id, pass)
+                ?.addOnCompleteListener(this) { task ->
                     if (!task.isSuccessful) {
                         sign_up!!.isEnabled = true
                         Toast.makeText(this@Signupactivity, "Signup failed." + task.exception!!.message,
                                 Toast.LENGTH_SHORT).show()
+                    }else{
+                        Log.d("Sign up","completed ${mAuth?.currentUser?.uid}")
+                        mAuth?.currentUser?.getToken(false)?.addOnCompleteListener {
+                            if(it.isSuccessful){
+                                userId = mAuth?.currentUser?.uid?:""
+                                val userDetailRequestModel = UserDetailRequestModel(name?.editText?.text?.toString()?:"", "", email?.editText?.text?.toString()?:"")
+                                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository()?.sendUser("Bearer ${it.result?.token}", userDetailRequestModel)
+                                        ?.enqueue(object : Callback<ModelResponseMessage>{
+                                            override fun onFailure(call: Call<ModelResponseMessage>, t: Throwable) {
+                                                t.printStackTrace()
+                                                sign_up?.isEnabled = true
+                                            }
+
+                                            override fun onResponse(call: Call<ModelResponseMessage>, response: Response<ModelResponseMessage>) {
+                                                PrefManager.putString(CommonString.USER_ID, userId)
+                                                val i = Intent(this@Signupactivity, NewTabActivity::class.java)
+                                                startActivity(i)
+                                                finish()
+                                            }
+                                        })
+                            }else{
+                                Log.d("sign up","auth failed")
+                            }
+
+                        }
                     }
                 }
     }
 
     public override fun onStart() {
         super.onStart()
-        mAuth!!.addAuthStateListener(mAuthListener!!)
     }
 
     public override fun onStop() {
         super.onStop()
-        if (mAuthListener != null) {
-            mAuth!!.removeAuthStateListener(mAuthListener!!)
-        }
     }
 
 }

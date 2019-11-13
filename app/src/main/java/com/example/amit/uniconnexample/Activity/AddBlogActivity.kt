@@ -32,11 +32,13 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Model.BlogModel
+import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.Others.UserData
 import com.example.amit.uniconnexample.PostBlogModel
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Signupactivity
 import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
+import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
 import com.example.amit.uniconnexample.utils.UtilPostIdGenerator
 import com.example.amit.uniconnexample.utils.Utils
 import com.google.android.gms.common.ConnectionResult
@@ -275,13 +277,13 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
     fun postBlog(postBlogModel: PostBlogModel){
         FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
             if(it.isSuccessful){
-                RetrofitClientBuilder("https://tele-a36a5.firebaseapp.com/").getmNetworkRepository()?.sendPost("Bearer ${it.result?.token}", postBlogModel)
-                        ?.enqueue(object : Callback<String>{
-                            override fun onFailure(call: Call<String>, t: Throwable) {
+                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository()?.sendPost("Bearer ${it.result?.token}", postBlogModel)
+                        ?.enqueue(object : Callback<ModelResponseMessage>{
+                            override fun onFailure(call: Call<ModelResponseMessage>, t: Throwable) {
                                 t.printStackTrace()
                             }
 
-                            override fun onResponse(call: Call<String>, response: Response<String>) {
+                            override fun onResponse(call: Call<ModelResponseMessage>, response: Response<ModelResponseMessage>) {
                                 if(response.isSuccessful)
                                     Log.d("Add blog","success ${response.body()}")
                             }

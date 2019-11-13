@@ -13,11 +13,11 @@
 
 
     <com.pkmmte.view.CircularImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:id="@+id/iview"
         android:adjustViewBounds="true"
-        android:layout_marginLeft="140dp"
+        android:layout_centerHorizontal="true"
         app:border="true"
         android:src="@drawable/user"
         app:border_color="#EEEEEE"
@@ -198,90 +198,6 @@
 
                     />
             </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginLeft="3dp"
-                android:id="@+id/college"
-                android:src="@drawable/ic_action_account_balance"/>
-            <View
-                android:layout_width="2dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="25dp"
-                android:layout_height="match_parent"
-                android:background="#fff"/>
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/clg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#ffffff"
-                android:shadowColor="#ffffff"
-                android:textColor="#ffffff"
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="College"
-                    android:inputType="textPersonName"
-                    android:textColorHint="#ffffff"
-                    android:shadowColor="#ffffff"
-                    android:textColor="#ffffff"
-                    android:maxLines="1"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginLeft="3dp"
-                android:id="@+id/phn_icon"
-                android:src="@drawable/phn"/>
-            <View
-                android:layout_width="2dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="25dp"
-                android:layout_height="match_parent"
-                android:background="#fff"/>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
-        android:textColorHint="#ffffff"
-        android:shadowColor="#ffffff"
-        android:textColor="#ffffff"
-        app:errorEnabled="true">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/phone"
-        android:maxLength="10"
-        android:inputType="number"
-        android:textColorHint="#ffffff"
-        android:shadowColor="#ffffff"
-        android:textColor="#ffffff"
-        android:maxLines="1"
-        />
-   </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     <Button
         android:id="@+id/sign_up"
