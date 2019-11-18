@@ -63,7 +63,7 @@ import java.util.*
 /**
  * Created by Meera on 09,November,2019
  */
-class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
+class AddBlogActivity: AppCompatActivity(){
     private var auth: FirebaseAuth? = null
     private var mImageUri: Uri? = null
     private var mStorage: StorageReference? = null
@@ -75,18 +75,9 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
     internal var name: String ?= null
     internal var photo: String ?= null
     internal var checkmail: String ?= null
-    internal var cityname: String? = null
     internal var date: String? = null
     internal var time: String? = null
     internal var userdata: UserData? = null
-    internal var mLastLocation: Location? = null
-    internal var geocoder: Geocoder?= null
-    internal var addresses: List<Address> ?= null
-    internal var latitude: Double = 0.toDouble()
-    internal var longitude: Double = 0.toDouble()
-    internal var mGoogleApiClient: GoogleApiClient? = null
-    private var mLocationRequest: LocationRequest? = null
-    internal var builder: LocationSettingsRequest.Builder ?= null
     private val isNetworkConnected: Boolean
         get() {
             val cm = getSystemService(
@@ -98,24 +89,7 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_blog)
         mProgress = ProgressDialog(this)
-        if (checkPlayServices()) {
 
-            // Building the GoogleApi client
-            buildGoogleApiClient()
-            createLocationRequest()
-        }
-        builder = LocationSettingsRequest.Builder()
-                .addLocationRequest(mLocationRequest)
-
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this,
-                        arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION), 12345)
-                return
-            }
-        }
-        geocoder = Geocoder(this, Locale.getDefault())
         auth = FirebaseAuth.getInstance()
         val n = auth!!.currentUser!!.email
         check = n!!.substring(n.indexOf("@") + 1, n.lastIndexOf("."))
@@ -158,43 +132,24 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
     }
 
     override fun onStart() {
-        //        mGoogleApiClient.connect();
         super.onStart()
-        if (mGoogleApiClient != null) {
-            mGoogleApiClient!!.connect()
-        }
-        val result1: PendingResult<LocationSettingsResult>
-        result1 = LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient,
-                builder?.build())
-        settingLocation(result1)
     }
 
     override fun onStop() {
-        //   mGoogleApiClient.disconnect();
         super.onStop()
         Log.e("Onstop", "stop")
-        mGoogleApiClient!!.disconnect()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        //   gps.stopUsingGPS();
     }
 
     override fun onPause() {
         super.onPause()
-        if (mGoogleApiClient!!.isConnected) {
-            stopLocationUpdates()
-        }
     }
 
     override fun onResume() {
         super.onResume()
-        checkPlayServices()
-        if (mGoogleApiClient!!.isConnected) {
-            startLocationUpdates()
-        }
-        //  showLocation();
     }
 
 
@@ -203,28 +158,7 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
             mProgress!!.setMessage("Posting to Blog....")
             mProgress!!.show()
 
-            //  final String title_val = titlefield.getText().toString().trim();
             val desc_val = mdesc.text.toString().trim { it <= ' ' }
-            val name_val = name
-            val photo_val = photo
-            val id_val = auth!!.currentUser!!.uid
-            //    final  String city_Name=cityname;
-            val time_val = time
-            val date_val = date
-            val check_mail = checkmail
-            val city_name: String?
-            if (cityname != null) {
-                // city_name = cityname.substring(0, cityname.indexOf(","));
-                city_name = cityname
-                if (App.getPref("cityname", applicationContext) == null) {
-                    App.putPref("cityname", cityname?:"", applicationContext)
-                }
-            } else {
-                city_name = null
-            }
-
-            // bl=new Blog(title_val,desc_val,mImageUri.toString());
-            //   if ( !TextUtils.isEmpty(desc_val) && mImageUri != null) {
             if (mImageUri != null && bytearray != null) {
                 val filepath = mStorage!!.child("Blog_Images").child(mImageUri!!.lastPathSegment!!)
                 val uploadTask = filepath.putBytes(bytearray!!)
@@ -232,28 +166,14 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                     // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                     val downloadUrl = taskSnapshot.downloadUrl
 
-                    val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, downloadUrl.toString(), cityname, date )
+                    val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, downloadUrl.toString(),  date )
                     postBlog(blogModel)
-
-//                    val databaseReference = mDatabas!!.push()
-//                    databaseReference.setValue(BlogModel(desc_val, downloadUrl!!.toString(), name_val?:"user", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
-//                    val newPost = mDatabase!!.push()
-//                    mProgress!!.dismiss()
-//                    startActivity(Intent(this, NewTabActivity::class.java))
-//                    finish()
                 }
 
             } else if (desc_val.length != 0) {
 
-                val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", cityname, date )
+                val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", date )
                 postBlog(blogModel)
-
-//                val newPost = mDatabase!!.push()
-//                newPost.setValue(BlogModel(desc_val, "", name_val?:"", photo_val?:"", 0, 0, time_val?:"", date_val?:"", check_mail?:"", city_name?:""))
-//                mProgress!!.dismiss()
-//                startActivity(Intent(this, NewTabActivity::class.java))
-//                finish()
-
             } else {
                 mProgress!!.dismiss()
                 // Toast.makeText(Blog.this,"Post can't be empty",Toast.LENGTH_LONG).show();
@@ -263,11 +183,6 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                 alert.setTitle("Alert...!")
                 alert.show()
             }
-            //  }else{
-            //   mProgress.dismiss();
-            //    Toast.makeText(Blog.this,"Please add a image",Toast.LENGTH_LONG).show();
-            //
-            // }
         } else {
             Toast.makeText(this, "You are logged out...Please login ", Toast.LENGTH_LONG).show()
             loadLoginView()
@@ -281,11 +196,16 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                         ?.enqueue(object : Callback<ModelResponseMessage>{
                             override fun onFailure(call: Call<ModelResponseMessage>, t: Throwable) {
                                 t.printStackTrace()
+                                mProgress?.dismiss()
                             }
 
                             override fun onResponse(call: Call<ModelResponseMessage>, response: Response<ModelResponseMessage>) {
                                 if(response.isSuccessful)
                                     Log.d("Add blog","success ${response.body()}")
+
+                                Toast.makeText(this@AddBlogActivity, "Your post is posted ", Toast.LENGTH_LONG).show()
+                                onBackPressed()
+                                mProgress?.dismiss()
                             }
                         })
             }
@@ -320,29 +240,6 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
                 e.printStackTrace()
             }
 
-        } else if (requestCode == LOCATION_SETTING_REQUEST) {
-            Log.e("Blog", "Location")
-            when (resultCode) {
-                Activity.RESULT_OK -> {
-                    Log.e("Blog", "Ok")
-                    val handler = Handler()
-                    handler.postDelayed({ showLocation() }, 2000)
-                }
-                Activity.RESULT_CANCELED -> {
-                    Log.e("Blog", "Cancel")
-//                    val telephonyManager = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
-//                    val cellLocation = telephonyManager.allCellInfo as GsmCellLocation
-//
-//                    val cellid= cellLocation.getCid();
-//                    val celllac = cellLocation.getLac();
-//                    cityname = celllac.toString()
-//                    Log.d("CellLocation", cellLocation.toString());
-//                    Log.d("GSM CELL ID",  cellid.toString());
-//                    Log.d("GSM Location Code", celllac.toString())
-                }
-                else -> {
-                }
-            }
         }
     }
 
@@ -492,135 +389,6 @@ class AddBlogActivity: AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
         }
 
         return inSampleSize
-    }
-
-    private fun showLocation() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION), 12345)
-            return
-        }
-        try {
-            mLastLocation = LocationServices.FusedLocationApi
-                    .getLastLocation(mGoogleApiClient)
-            if (mLastLocation != null) {
-                latitude = mLastLocation!!.latitude
-                longitude = mLastLocation!!.longitude
-
-                addresses = geocoder?.getFromLocation(latitude, longitude, 1)
-                // cityname = addresses.get(0).getAddressLine(2);
-                cityname = addresses?.let {
-                    it[0].locality
-                }?:""
-                Toast.makeText(this, cityname, Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "ADDRESS NOT FOUND", Toast.LENGTH_SHORT).show()
-            }
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-
-    }
-
-    protected fun createLocationRequest() {
-        mLocationRequest = LocationRequest()
-        mLocationRequest!!.interval = UPDATE_INTERVAL.toLong()
-        mLocationRequest!!.fastestInterval = FATEST_INTERVAL.toLong()
-        mLocationRequest!!.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        mLocationRequest!!.smallestDisplacement = DISPLACEMENT.toFloat()
-    }
-
-    @Synchronized
-    protected fun buildGoogleApiClient() {
-        mGoogleApiClient = GoogleApiClient.Builder(this)
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this)
-                .addApi(LocationServices.API).build()
-    }
-
-    private fun checkPlayServices(): Boolean {
-        val apiAvailability = GoogleApiAvailability.getInstance()
-        val resultCode = apiAvailability.isGooglePlayServicesAvailable(this)
-        if (resultCode != ConnectionResult.SUCCESS) {
-            if (apiAvailability.isUserResolvableError(resultCode)) {
-                apiAvailability.getErrorDialog(this, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST)
-                        .show()
-            } else {
-                Log.i("Push Check play", "This device is not supported.")
-                finish()
-            }
-            return false
-        }
-        return true
-    }
-
-    protected fun startLocationUpdates() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION), 12345)
-            return
-        }
-        LocationServices.FusedLocationApi.requestLocationUpdates(
-                mGoogleApiClient, mLocationRequest, this)
-
-    }
-
-    /**
-     * Stopping location updates
-     */
-    protected fun stopLocationUpdates() {
-        LocationServices.FusedLocationApi.removeLocationUpdates(
-                mGoogleApiClient, this)
-    }
-
-    override fun onConnected(bundle: Bundle?) {
-
-    }
-
-    override fun onConnectionSuspended(i: Int) {
-        mGoogleApiClient!!.connect()
-    }
-
-    override fun onConnectionFailed(connectionResult: ConnectionResult) {
-        Toast.makeText(this, "Connection failed: ConnectionResult.getErrorCode() = " + connectionResult.errorCode, Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onLocationChanged(location: Location) {
-        mLastLocation = location
-    }
-
-    private fun settingLocation(result1: PendingResult<LocationSettingsResult>) {
-        result1.setResultCallback { locationSettingsResult ->
-            val status = locationSettingsResult.status
-            Toast.makeText(this, "Start", Toast.LENGTH_SHORT).show()
-            val locationSettingsStates = locationSettingsResult.locationSettingsStates
-            when (status.statusCode) {
-
-                LocationSettingsStatusCodes.SUCCESS -> {
-                    Toast.makeText(this, "Starst", Toast.LENGTH_SHORT).show()
-                    showLocation()
-                }
-                LocationSettingsStatusCodes.RESOLUTION_REQUIRED -> {
-                    Toast.makeText(this, "Startr", Toast.LENGTH_SHORT).show()
-                    // Location settings are not satisfied, but this can be fixed
-                    // by showing the user a dialog.
-                    try {
-                        // Show the dialog by calling startResolutionForResult(),
-                        // and check the result in onActivityResult().
-                        status.startResolutionForResult(
-                                this,
-                                LOCATION_SETTING_REQUEST)
-                    } catch (e: IntentSender.SendIntentException) {
-                        // Ignore the error.
-                    }
-
-                }
-                LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE -> Toast.makeText(this, "Startu", Toast.LENGTH_SHORT).show()
-            }// All location settings are satisfied. The client can
-            // initialize location requests here.
-            // Location settings are not satisfied. However, we have no way
-            // to fix the settings so we won't show the dialog.
-        }
     }
 
     companion object {

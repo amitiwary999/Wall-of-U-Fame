@@ -38,9 +38,9 @@ class Mainfrag : Fragment() {
 
     private fun setupViewPager(viewPager: ViewPager) {
         val adapter = ViewPagerAdapter(activity as Context, childFragmentManager)
-        adapter.addFrag(Detailfrag(), "My Campus")
+       // adapter.addFrag(Detailfrag(), "My Campus")
         adapter.addFrag(Globalfrag(), "Global")
-        adapter.addFrag(Trendfrag(), "Trending")
+      //  adapter.addFrag(Trendfrag(), "Trending")
         viewPager.adapter = adapter
     }
 
