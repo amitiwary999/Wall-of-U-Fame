@@ -2,6 +2,7 @@ package com.example.amit.uniconnexample.rest
 
 import com.example.amit.uniconnexample.PostBlogModel
 import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
+import com.example.amit.uniconnexample.rest.model.PostModel
 import com.example.amit.uniconnexample.rest.model.UserDetailRequestModel
 import retrofit2.Call
 import retrofit2.http.Body
@@ -17,4 +18,7 @@ interface NetworkRepository {
 
     @POST("setUser")
     fun sendUser(@Header("Authorization") authToken:String, @Body userDetailRequestModel: UserDetailRequestModel) : Call<ModelResponseMessage>
+
+    @POST("")
+    fun getPostPAged(@Header("Authorization") authToken:String, @Body request: String): Call<List<PostModel>>
 }

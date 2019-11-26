@@ -67,7 +67,7 @@ class RetrofitClientBuilder() {
 
     }
 
-    fun getmNetworkRepository(): NetworkRepository? {
-        return mNetworkRepository
+    fun getmNetworkRepository(): NetworkRepository {
+        return mNetworkRepository!!
     }
 }
