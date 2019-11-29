@@ -23,7 +23,7 @@ class HomeAdapter : PagedListAdapter<PostModel, HomeAdapter.HomeAdapterViewHolde
     }
 
     override fun onBindViewHolder(holder: HomeAdapterViewHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        holder.setData(getItem(position))
     }
 
     class HomeAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -32,10 +32,11 @@ class HomeAdapter : PagedListAdapter<PostModel, HomeAdapter.HomeAdapterViewHolde
         var image: ImageView = itemView.findViewById(R.id.postimage)
         var postDesc: TextView = itemView.findViewById(R.id.post_desc)
 
-        fun setData(post: PostModel){
-            post.dat
-            post.desc
-            post.imageUrl
+        fun setData(post: PostModel?){
+            postDesc.text = post?.desc
+            post?.dat
+            post?.desc
+            post?.imageUrl
         }
     }
 

@@ -39,6 +39,7 @@ import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Signupactivity
 import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
 import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
+import com.example.amit.uniconnexample.utils.PrefManager
 import com.example.amit.uniconnexample.utils.UtilPostIdGenerator
 import com.example.amit.uniconnexample.utils.Utils
 import com.google.android.gms.common.ConnectionResult
@@ -159,6 +160,8 @@ class AddBlogActivity: AppCompatActivity(){
             mProgress!!.show()
 
             val desc_val = mdesc.text.toString().trim { it <= ' ' }
+            PrefManager.getString(CommonString.USER_NAME,"name")
+            PrefManager.getString(CommonString.USER_DP,"")
             if (mImageUri != null && bytearray != null) {
                 val filepath = mStorage!!.child("Blog_Images").child(mImageUri!!.lastPathSegment!!)
                 val uploadTask = filepath.putBytes(bytearray!!)
@@ -229,7 +232,7 @@ class AddBlogActivity: AppCompatActivity(){
             }
 
             mImageUri = data.data
-            compressImage(mImageUri!!)
+          //  compressImage(mImageUri!!)
 
             try {
                 val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)

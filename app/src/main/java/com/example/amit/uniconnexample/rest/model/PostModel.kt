@@ -9,6 +9,10 @@ data class PostModel(
         var desc: String,
         var imageUrl: String,
         var userId: String,
-        var postId: String
+        var postId: String,
+        var creatorDp :String,
+        var creatorName: String,
+        var like : Int,
+        var unlike: Int
 ) {
 }
