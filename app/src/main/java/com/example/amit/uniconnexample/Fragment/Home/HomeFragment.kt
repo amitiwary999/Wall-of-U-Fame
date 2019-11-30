@@ -35,6 +35,7 @@ class HomeFragment : Fragment() {
         mContext?.let {
             mblog_list.layoutManager = LinearLayoutManager(mContext)
             homeAdapter = HomeAdapter()
+            mblog_list.adapter = homeAdapter
             homeFragmentViewModel = ViewModelProviders.of(this).get(HomeFragmentViewModel::class.java)
             homeFragmentViewModel?.getListLivedata()?.observe(this, Observer {
                 homeAdapter?.submitList(it)

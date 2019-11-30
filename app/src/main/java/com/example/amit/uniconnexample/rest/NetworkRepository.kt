@@ -1,5 +1,6 @@
 package com.example.amit.uniconnexample.rest
 
+import com.example.amit.uniconnexample.Fragment.Home.GetPostRequestModel
 import com.example.amit.uniconnexample.PostBlogModel
 import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
 import com.example.amit.uniconnexample.rest.model.PostModel
@@ -19,6 +20,6 @@ interface NetworkRepository {
     @POST("setUser")
     fun sendUser(@Header("Authorization") authToken:String, @Body userDetailRequestModel: UserDetailRequestModel) : Call<ModelResponseMessage>
 
-    @POST("")
-    fun getPostPAged(@Header("Authorization") authToken:String, @Body request: String): Call<List<PostModel>>
+    @POST("getPosts")
+    fun getPostPAged(@Header("Authorization") authToken:String, @Body request: GetPostRequestModel): Call<List<PostModel>>
 }

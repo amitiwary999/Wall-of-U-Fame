@@ -34,7 +34,7 @@ class HomeAdapter : PagedListAdapter<PostModel, HomeAdapter.HomeAdapterViewHolde
 
         fun setData(post: PostModel?){
             postDesc.text = post?.desc
-            post?.dat
+            post?.date
             post?.desc
             post?.imageUrl
         }

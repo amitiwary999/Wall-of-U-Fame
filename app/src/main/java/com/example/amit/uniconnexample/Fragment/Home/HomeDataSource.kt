@@ -25,13 +25,15 @@ class HomeDataSource : PageKeyedDataSource<String, PostModel>() {
     override fun loadInitial(params: LoadInitialParams<String>, callback: LoadInitialCallback<String, PostModel>) {
         firebaseUser?.getToken(false)?.addOnCompleteListener {
             if(it.isSuccessful){
-                retrofitClientBuilder.getmNetworkRepository().getPostPAged("Bearer ${it.result?.token}", "")
+                val getPostRequestModel = GetPostRequestModel("", 10)
+                retrofitClientBuilder.getmNetworkRepository().getPostPAged("Bearer ${it.result?.token}", getPostRequestModel)
                         .enqueue(object : Callback<List<PostModel>> {
                             override fun onFailure(call: Call<List<PostModel>>, t: Throwable) {
                                 t.printStackTrace()
                             }
 
                             override fun onResponse(call: Call<List<PostModel>>, response: Response<List<PostModel>>) {
+                                Log.d("response retrofit","posts ${response.body()?.size}")
                                 if(response.isSuccessful && response.body() != null){
                                     val responseBody = response.body()!!
                                     val nextKey = response.body()!![response.body()!!.size - 1].postId
@@ -51,7 +53,8 @@ class HomeDataSource : PageKeyedDataSource<String, PostModel>() {
        Log.d("homedatasource","load after ${params.key}")
         firebaseUser?.getToken(false)?.addOnCompleteListener {
             if(it.isSuccessful){
-                retrofitClientBuilder.getmNetworkRepository().getPostPAged("Bearer ${it.result?.token}", params.key)
+                val getPostRequestModel = GetPostRequestModel(params.key, 10)
+                retrofitClientBuilder.getmNetworkRepository().getPostPAged("Bearer ${it.result?.token}", getPostRequestModel)
                         .enqueue(object : Callback<List<PostModel>> {
                             override fun onFailure(call: Call<List<PostModel>>, t: Throwable) {
                             }

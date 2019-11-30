@@ -38,6 +38,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 import com.example.amit.uniconnexample.App
+import com.example.amit.uniconnexample.Fragment.Home.HomeFragment
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Fragment.Mainfrag
 import com.example.amit.uniconnexample.Fragment.Msgfrag
@@ -149,11 +150,16 @@ class NewTabActivity : AppCompatActivity(), GoogleApiClient.ConnectionCallbacks,
         //  setupViewPager(viewPager);
         setSupportActionBar(toolbar)
         //  setupTabIcons();
+//        FirebaseAuth.getInstance().currentUser?.getToken(false)?.addOnCompleteListener {
+//            if(it.isSuccessful && it.result != null){
+//                Log.d("MainActivity ","token ${it.result?.token}")
+//            }
+//        }
         img.setOnClickListener { v -> signout(v) }
         bottomtab.setOnTabSelectListener { tabId ->
             if (tabId == R.id.tab_home) {
                 toolbar_title.text = "    Home        "
-                attachFragment(Mainfrag())
+                attachFragment(HomeFragment())
                 //  viewPager.setVisibility(View.VISIBLE);
             } else if (tabId == R.id.tab_account) {
                 //  viewPager.setVisibility(View.GONE);
