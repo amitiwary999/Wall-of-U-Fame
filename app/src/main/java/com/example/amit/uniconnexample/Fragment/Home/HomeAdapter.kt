@@ -3,6 +3,7 @@ package com.example.amit.uniconnexample.Fragment.Home
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.paging.PagedListAdapter
@@ -15,8 +16,7 @@ import kotlinx.android.synthetic.main.activity_global_frag.view.*
 /**
  * Created by Meera on 26,November,2019
  */
-class HomeAdapter : PagedListAdapter<PostModel, HomeAdapter.HomeAdapterViewHolder>(DIFF_CALLBACK) {
-
+class HomeAdapter(var itemOptionsClickListener: ItemOptionsClickListener) : PagedListAdapter<PostModel, HomeAdapter.HomeAdapterViewHolder>(DIFF_CALLBACK) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapterViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.blog_item, parent, false)
         return HomeAdapterViewHolder(view)
@@ -31,12 +31,18 @@ class HomeAdapter : PagedListAdapter<PostModel, HomeAdapter.HomeAdapterViewHolde
         var name: TextView = itemView.findViewById(R.id.bname)
         var image: ImageView = itemView.findViewById(R.id.postimage)
         var postDesc: TextView = itemView.findViewById(R.id.post_desc)
+        var likeButton: ImageButton = itemView.findViewById(R.id.like)
+        var unlikeButton: ImageButton = itemView.findViewById(R.id.unlike)
 
         fun setData(post: PostModel?){
             postDesc.text = post?.desc
             post?.date
             post?.desc
             post?.imageUrl
+
+            likeButton.setOnClickListener {
+
+            }
         }
     }
 

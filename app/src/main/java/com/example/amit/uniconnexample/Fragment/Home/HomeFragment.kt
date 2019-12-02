@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_global_frag.*
 /**
  * Created by Meera on 26,November,2019
  */
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), ItemOptionsClickListener {
     var homeAdapter: HomeAdapter ?= null
     var mContext: Context ?= null
     var homeFragmentViewModel: HomeFragmentViewModel ?= null
@@ -34,13 +34,25 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         mContext?.let {
             mblog_list.layoutManager = LinearLayoutManager(mContext)
-            homeAdapter = HomeAdapter()
+            homeAdapter = HomeAdapter(this)
             mblog_list.adapter = homeAdapter
             homeFragmentViewModel = ViewModelProviders.of(this).get(HomeFragmentViewModel::class.java)
             homeFragmentViewModel?.getListLivedata()?.observe(this, Observer {
                 homeAdapter?.submitList(it)
             })
         }
+
+    }
+
+    override fun onPostLike(postId: String) {
+
+    }
+
+    override fun onPostUnlike(postId: String) {
+
+    }
+
+    override fun onChatClick(userId: String) {
 
     }
 }

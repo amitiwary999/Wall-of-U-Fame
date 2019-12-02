@@ -3,6 +3,7 @@ package com.example.amit.uniconnexample.rest
 import com.example.amit.uniconnexample.Fragment.Home.GetPostRequestModel
 import com.example.amit.uniconnexample.PostBlogModel
 import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
+import com.example.amit.uniconnexample.rest.model.PostLikeModel
 import com.example.amit.uniconnexample.rest.model.PostModel
 import com.example.amit.uniconnexample.rest.model.UserDetailRequestModel
 import retrofit2.Call
@@ -22,4 +23,10 @@ interface NetworkRepository {
 
     @POST("getPosts")
     fun getPostPAged(@Header("Authorization") authToken:String, @Body request: GetPostRequestModel): Call<List<PostModel>>
+
+    @POST("likePost")
+    fun postLiked(@Header("Authorization") authToken:String, @Body request: PostLikeModel): Call<String>
+
+    @POST("unlikePost")
+    fun postUnlike(@Header("Authorization") authToken:String, @Body request: PostLikeModel): Call<String>
 }
