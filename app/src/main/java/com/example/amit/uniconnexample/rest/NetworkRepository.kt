@@ -26,7 +26,4 @@ interface NetworkRepository {
 
     @POST("likePost")
     fun postLiked(@Header("Authorization") authToken:String, @Body request: PostLikeModel): Call<String>
-
-    @POST("unlikePost")
-    fun postUnlike(@Header("Authorization") authToken:String, @Body request: PostLikeModel): Call<String>
 }
