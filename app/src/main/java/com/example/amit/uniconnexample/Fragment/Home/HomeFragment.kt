@@ -10,10 +10,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.amit.uniconnexample.Activity.MainViewModel
+import com.example.amit.uniconnexample.Activity.NewTabActivity
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
 import com.example.amit.uniconnexample.rest.model.PostLikeModel
+import com.example.amit.uniconnexample.utils.EndlessScrollListener
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_global_frag.*
 import org.jetbrains.anko.AnkoLogger
@@ -29,9 +33,18 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
     var homeAdapter: HomeAdapter ?= null
     var mContext: Context ?= null
     var homeFragmentViewModel: HomeFragmentViewModel ?= null
+    lateinit var scrollListener: EndlessScrollListener
+    var activity: NewTabActivity? = null
+    var mainViewModel: MainViewModel ?= null
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mContext = context
+        activity = context as NewTabActivity
+
+        getActivity()?.let {
+            mainViewModel = ViewModelProviders.of(it).get(MainViewModel::class.java)
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -42,12 +55,25 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mContext?.let {
+            val linearLayoutManager = LinearLayoutManager(it)
             mblog_list.layoutManager = LinearLayoutManager(mContext)
             homeAdapter = HomeAdapter(this)
             mblog_list.adapter = homeAdapter
             homeFragmentViewModel = ViewModelProviders.of(this).get(HomeFragmentViewModel::class.java)
             homeFragmentViewModel?.getListLivedata()?.observe(this, Observer {
                 homeAdapter?.submitList(it)
+            })
+
+            scrollListener = object : EndlessScrollListener(linearLayoutManager){
+                override fun onLoadMore(page: Int, totalItemsCount: Int, view: RecyclerView?) {
+
+                }
+            }
+
+            mblog_list.addOnScrollListener(scrollListener)
+
+            mainViewModel?.postLiveData?.observe(it as NewTabActivity, Observer {
+
             })
         }
 
