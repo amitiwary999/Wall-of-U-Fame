@@ -10,5 +10,7 @@ class CommonString {
         val base_url = "https://tele-a36a5.firebaseapp.com/"
         const val USER_NAME = "user_name"
         const val USER_DP = "user_dp"
+        const val PAYLOAD_ITEM_LIKE = "payload_item_like"
+        const val PAYLOAD_ITEM_UNLIKE = "payload_item_unlike"
     }
 }

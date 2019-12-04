@@ -30,7 +30,7 @@ import retrofit2.Response
  * Created by Meera on 26,November,2019
  */
 class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
-    var homeAdapter: HomeAdapter ?= null
+    var homeAdapter: HomeFragmentAdapter ?= null
     var mContext: Context ?= null
     var homeFragmentViewModel: HomeFragmentViewModel ?= null
     lateinit var scrollListener: EndlessScrollListener
@@ -41,7 +41,6 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
         super.onAttach(context)
         mContext = context
         activity = context as NewTabActivity
-
         getActivity()?.let {
             mainViewModel = ViewModelProviders.of(it).get(MainViewModel::class.java)
         }
@@ -56,71 +55,31 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
         super.onViewCreated(view, savedInstanceState)
         mContext?.let {
             val linearLayoutManager = LinearLayoutManager(it)
-            mblog_list.layoutManager = LinearLayoutManager(mContext)
-            homeAdapter = HomeAdapter(this)
+            mblog_list.layoutManager = linearLayoutManager
+            homeAdapter = HomeFragmentAdapter(this)
             mblog_list.adapter = homeAdapter
-            homeFragmentViewModel = ViewModelProviders.of(this).get(HomeFragmentViewModel::class.java)
-            homeFragmentViewModel?.getListLivedata()?.observe(this, Observer {
-                homeAdapter?.submitList(it)
-            })
 
             scrollListener = object : EndlessScrollListener(linearLayoutManager){
                 override fun onLoadMore(page: Int, totalItemsCount: Int, view: RecyclerView?) {
-
+                    mainViewModel?.getPagedPost()
                 }
             }
 
             mblog_list.addOnScrollListener(scrollListener)
 
             mainViewModel?.postLiveData?.observe(it as NewTabActivity, Observer {
-
+                homeAdapter?.setData(it)
             })
         }
 
     }
 
     override fun onPostLike(postId: String) {
-        FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
-            if(it.isSuccessful && it.result != null){
-                val postLikemodel = PostLikeModel(postId, 1)
-                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().postLiked("Bearer ${it.result?.token}", postLikemodel)
-                        .enqueue(object : Callback<String>{
-                            override fun onFailure(call: Call<String>, t: Throwable) {
-                                t.printStackTrace()
-                            }
-
-                            override fun onResponse(call: Call<String>, response: Response<String>) {
-                                if(response.isSuccessful && response.body() != null) {
-                                    info { "response like ${response.body()}" }
-                                }else{
-                                    info { "response like fail" }
-                                }
-                            }
-                        })
-            }
-        }
+        mainViewModel?.postLiked(postId)
     }
 
     override fun onPostUnlike(postId: String) {
-        FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
-            if(it.isSuccessful && it.result != null){
-                val postLikemodel = PostLikeModel(postId, 0)
-                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().postLiked("Bearer ${it.result?.token}", postLikemodel)
-                        .enqueue(object : Callback<String>{
-                            override fun onFailure(call: Call<String>, t: Throwable) {
-                                t.printStackTrace()
-                            }
-
-                            override fun onResponse(call: Call<String>, response: Response<String>) {
-                                if(response.isSuccessful && response.body() != null) {
-                                    info { "response ${response.body()}" }
-                                }else{
-                                    info { "response fail" }
-                                }
-                            }
-                        })
-            }
-        }
+        mainViewModel?.postUnlike(postId)
     }
 
     override fun onChatClick(userId: String) {
