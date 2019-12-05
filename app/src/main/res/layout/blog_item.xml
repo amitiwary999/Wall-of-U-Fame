@@ -87,8 +87,13 @@
             android:layout_height="30dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="2dp"
+            android:weightSum="3"
             android:orientation="horizontal">
-
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
         <ImageButton
             android:layout_width="20dp"
             android:layout_height="20dp"
@@ -105,23 +110,12 @@
                 android:id="@+id/txtlike"
                 android:layout_marginTop="2dp"
                 android:textSize="10dp"/>
-
-            <ImageButton
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:id="@+id/unlike"
-                android:adjustViewBounds="true"
-                android:layout_marginLeft="50dp"
-                android:backgroundTint="#ffffff"
-                android:src="@drawable/unlike"/>
-            <TextView
-                android:layout_width="25dp"
-                android:layout_height="20dp"
-                android:id="@+id/txtunlike"
-                android:layout_marginLeft="@dimen/pad_5dp"
-                android:layout_marginTop="2dp"
-                android:textSize="10dp"/>
-
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
             <ImageButton
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -130,6 +124,12 @@
                 android:layout_marginLeft="50dp"
                 android:background="#ffffff"
                 android:src="@drawable/chat"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
             <ImageButton
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -139,6 +139,7 @@
                 android:adjustViewBounds="true"
 
                 android:src="@drawable/bookmark"/>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

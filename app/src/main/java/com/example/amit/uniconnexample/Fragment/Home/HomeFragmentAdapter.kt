@@ -1,5 +1,6 @@
 package com.example.amit.uniconnexample.Fragment.Home
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
@@ -17,6 +19,7 @@ import com.example.amit.uniconnexample.rest.model.PostModel
  */
 class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener): RecyclerView.Adapter<HomeFragmentAdapter.HomeAdapterViewHolder>() {
      var postModels = ArrayList<PostModel>()
+    var context: Context ?= null
     fun setData(posts: List<PostModel>){
         val size = postModels.size
         postModels.addAll(posts)
@@ -25,7 +28,8 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapterViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.blog_item, parent, false)
-        return HomeAdapterViewHolder(view, itemOptionsClickListener)
+        context = parent.context
+        return HomeAdapterViewHolder(view, context)
     }
 
     override fun getItemCount(): Int {
@@ -56,20 +60,27 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         super.onBindViewHolder(holder, position, payloads)
     }
 
-    class HomeAdapterViewHolder(itemView: View, var itemOptionsClickListener: ItemOptionsClickListener) : RecyclerView.ViewHolder(itemView){
+    class HomeAdapterViewHolder(itemView: View, var context: Context?) : RecyclerView.ViewHolder(itemView){
         var pImage: ImageView = itemView.findViewById(R.id.pimage)
         var name: TextView = itemView.findViewById(R.id.bname)
         var image: ImageView = itemView.findViewById(R.id.postimage)
         var postDesc: TextView = itemView.findViewById(R.id.post_desc)
         var likeButton: ImageButton = itemView.findViewById(R.id.like)
-        var unlikeButton: ImageButton = itemView.findViewById(R.id.unlike)
 
         fun setData(post: PostModel?){
             post?.let {postModel ->
                 postDesc.text = postModel.desc
                 postModel.date
                 postModel.desc
-                postModel.imageUrl
+                context?.let {
+                    if(postModel.imageUrl.isNotEmpty()){
+                        Glide.with(it).load(postModel.imageUrl).into(image)
+                    }
+
+                    if(postModel.creatorDp.isNotEmpty()){
+                        Glide.with(it).load(postModel.creatorDp).into(pImage)
+                    }
+                }
             }
         }
 

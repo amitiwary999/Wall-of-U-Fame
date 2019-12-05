@@ -52,6 +52,7 @@
         android:id="@+id/fab"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        app:fabCustomSize="35dp"
         app:elevation="6dp"
         android:layout_gravity="bottom|end"
         app:backgroundTint="@color/colorAccent"

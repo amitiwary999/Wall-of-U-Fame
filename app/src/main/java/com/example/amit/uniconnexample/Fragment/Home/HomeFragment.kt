@@ -32,7 +32,6 @@ import retrofit2.Response
 class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
     var homeAdapter: HomeFragmentAdapter ?= null
     var mContext: Context ?= null
-    var homeFragmentViewModel: HomeFragmentViewModel ?= null
     lateinit var scrollListener: EndlessScrollListener
     var activity: NewTabActivity? = null
     var mainViewModel: MainViewModel ?= null
