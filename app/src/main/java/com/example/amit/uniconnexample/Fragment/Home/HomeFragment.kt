@@ -1,6 +1,7 @@
 package com.example.amit.uniconnexample.Fragment.Home
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.amit.uniconnexample.Activity.AddBlogActivity
 import com.example.amit.uniconnexample.Activity.MainViewModel
 import com.example.amit.uniconnexample.Activity.NewTabActivity
 import com.example.amit.uniconnexample.Others.CommonString
@@ -69,6 +71,11 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
             mainViewModel?.postLiveData?.observe(it as NewTabActivity, Observer {
                 homeAdapter?.setData(it)
             })
+
+            fab?.setOnClickListener {
+                val intent = Intent(mContext, AddBlogActivity::class.java)
+                startActivity(intent)
+            }
         }
 
     }

@@ -12,7 +12,6 @@ data class PostModel(
         var creatorDp :String,
         var creatorName: String,
         var like : Int,
-        var unlike: Int,
-        var liked: Int = 0
+        var isLiked: Int = 0
 ) {
 }

@@ -41,12 +41,12 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         holder.setData(postModel)
 
         holder.likeButton.setOnClickListener {
-            if(postModel.liked == 1){
-                postModel.liked = 0
+            if(postModel.isLiked == 1){
+                postModel.isLiked = 0
                 itemOptionsClickListener.onPostUnlike(postModel.postId)
                 notifyItemChanged(position, CommonString.PAYLOAD_ITEM_UNLIKE)
             }else{
-                postModel.liked = 1
+                postModel.isLiked = 1
                 itemOptionsClickListener.onPostLike(postModel.postId)
                 notifyItemChanged(position, CommonString.PAYLOAD_ITEM_LIKE)
             }
@@ -71,7 +71,6 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
             post?.let {postModel ->
                 postDesc.text = postModel.desc
                 postModel.date
-                postModel.desc
                 context?.let {
                     if(postModel.imageUrl.isNotEmpty()){
                         Glide.with(it).load(postModel.imageUrl).into(image)
