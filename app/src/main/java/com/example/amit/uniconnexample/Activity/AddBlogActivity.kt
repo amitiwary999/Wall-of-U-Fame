@@ -78,7 +78,6 @@ class AddBlogActivity: AppCompatActivity(){
     internal var checkmail: String ?= null
     internal var date: String? = null
     internal var time: String? = null
-    internal var userdata: UserData? = null
     private val isNetworkConnected: Boolean
         get() {
             val cm = getSystemService(
@@ -101,9 +100,8 @@ class AddBlogActivity: AppCompatActivity(){
         val buttondone = findViewById<View>(R.id.buttondone) as Button
         mDatabase = FirebaseDatabase.getInstance().reference.child(check)
         mDatabas = FirebaseDatabase.getInstance().reference.child("Posts")
-        userdata = intent.extras!!.getParcelable<UserData>("user")
-        name = userdata!!.name
-        photo = userdata!!.photo
+        name = PrefManager.getString(CommonString.USER_NAME, "")
+        photo = PrefManager.getString(CommonString.USER_DP, "")
 
         val mSelectImage = findViewById<View>(R.id.mSelectImage) as ImageView
         mStorage = FirebaseStorage.getInstance().reference
@@ -163,19 +161,21 @@ class AddBlogActivity: AppCompatActivity(){
             PrefManager.getString(CommonString.USER_NAME,"name")
             PrefManager.getString(CommonString.USER_DP,"")
             if (mImageUri != null && bytearray != null) {
-                val filepath = mStorage!!.child("Blog_Images").child(mImageUri!!.lastPathSegment!!)
-                val uploadTask = filepath.putBytes(bytearray!!)
-                uploadTask.addOnSuccessListener { taskSnapshot ->
-                    // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
-                    val downloadUrl = taskSnapshot.downloadUrl
+                val filepath = mStorage!!.child("User_Blog").child(mImageUri!!.lastPathSegment!!)
+                mImageUri?.let {
+                    val uploadTask = filepath.putFile(it)
+                    uploadTask.addOnSuccessListener { taskSnapshot ->
+                        // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
+                        val downloadUrl = taskSnapshot.downloadUrl
 
-                    val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, downloadUrl.toString(),  date )
-                    postBlog(blogModel)
+                        val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, downloadUrl.toString(),  date, name?:"", photo?:"" )
+                        postBlog(blogModel)
+                    }
                 }
 
             } else if (desc_val.length != 0) {
 
-                val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", date )
+                val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", date, name?:"", photo?:"" )
                 postBlog(blogModel)
             } else {
                 mProgress!!.dismiss()

@@ -24,9 +24,12 @@ import android.widget.ImageView
 import android.widget.Toast
 
 import com.afollestad.materialdialogs.MaterialDialog
+import com.bumptech.glide.Glide
 import com.example.amit.uniconnexample.Activity.NewTabActivity
+import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Others.UserData
+import com.example.amit.uniconnexample.utils.PrefManager
 import com.example.amit.uniconnexample.utils.Utils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -95,7 +98,7 @@ class Profilefrag : Fragment() {
         profileFragView.save.setOnClickListener { save() }
         profileFragView.photo.setOnClickListener { pickPhoto() }
         profileFragView.refresh.setOnRefreshListener { refresh() }
-        return view
+        return profileFragView
     }
 
     override fun onResume() {
@@ -108,20 +111,14 @@ class Profilefrag : Fragment() {
 
     internal fun updateUI() {
         val nam: String
-        val phon: String
-        val phot: String
         val mail: String
-        val clgname: String
         nam = userData.name?:""
-        phon = userData.phone?:""
-        phot = userData.photo?:""
         mail = userData.email?:""
-        clgname = userData.clg?:""
         profileFragView.name.setText(nam)
-        profileFragView.phone.setText(phon)
-        profileFragView.photo.setImageBitmap(Utils.decodeBase64(phot))
         profileFragView.email.setText(mail)
-        profileFragView.clg.setText(clgname)
+        context?.let {
+            Glide.with(it).load(PrefManager.getString(CommonString.USER_DP, "")).into(profileFragView.photo)
+        }
     }
 
     //   @OnClick(R.id.photo)
@@ -195,8 +192,6 @@ class Profilefrag : Fragment() {
                 .content("Saving..")
                 .show()
         userData.name = profileFragView.name.text.toString()
-        userData.phone = profileFragView.phone.text.toString()
-        userData.clg = profileFragView.clg.text.toString()
         val database = FirebaseDatabase.getInstance()
         val myRef = database.reference
         myRef.child("Userdetail").child(uid).setValue(userData) { databaseError, databaseReference ->

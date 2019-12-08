@@ -1,6 +1,7 @@
 package com.example.amit.uniconnexample
 
 import android.Manifest
+import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
@@ -8,9 +9,12 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.PorterDuff
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import com.google.android.material.textfield.TextInputLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -29,6 +33,7 @@ import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
 import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
 import com.example.amit.uniconnexample.rest.model.UserDetailRequestModel
 import com.example.amit.uniconnexample.utils.PrefManager
+import com.example.amit.uniconnexample.utils.UtilPostIdGenerator
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
@@ -36,6 +41,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_signup.*
 
 import org.apache.commons.validator.routines.EmailValidator
@@ -47,6 +53,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import timber.log.Timber
+import java.io.IOException
 
 /**
  * Created by amit on 29/10/16.
@@ -65,6 +72,11 @@ class Signupactivity : AppCompatActivity() {
     lateinit var clgname: String
     internal var flag = 0
     var check: String ?= ""
+    var mImageUri: Uri?= null
+
+    companion object{
+        private val GALLERY_REQUEST = 1
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,17 +96,16 @@ class Signupactivity : AppCompatActivity() {
     }
 
     internal fun pickPhoto() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            EasyImage.openChooserWithGallery(this, "Pick profile image", 0)
-            //  Toast.makeText(Profile.this, "Check", Toast.LENGTH_LONG).show();
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this@Signupactivity, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this@Signupactivity, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this@Signupactivity,
-                        arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA), 12345)
-                return
-            }
-            EasyImage.openChooserWithGallery(this, "Pick profile image", 0)
+
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 12345)
+            return
         }
+        val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        galleryIntent.type = "image/*"
+        galleryIntent.action = Intent.ACTION_GET_CONTENT
+        startActivityForResult(galleryIntent, GALLERY_REQUEST)
     }
 
     internal fun sup() {
@@ -133,45 +144,43 @@ class Signupactivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (ContextCompat.checkSelfPermission(this@Signupactivity, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this@Signupactivity, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this@Signupactivity,
-                    arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE, android.Manifest.permission.CAMERA), 12345)
-            return
+
+        if (requestCode == GALLERY_REQUEST && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
+            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this,
+                        arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 12345)
+                return
+            }
+
+            mImageUri = data.data
+
+            try {
+                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
+                iview.setImageBitmap(bitmap)
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+
         }
-        EasyImage.handleActivityResult(requestCode, resultCode, data, this, object : DefaultCallback() {
-            override fun onImagePickerError(e: Exception?, source: EasyImage.ImageSource?, type: Int) {
-                //Some error handling
-            }
-
-            override fun onImagePicked(imageFile: File, source: EasyImage.ImageSource, type: Int) {
-                //Handle the image
-                val options = BitmapFactory.Options()
-                options.inPreferredConfig = Bitmap.Config.ARGB_4444
-                var bitmap = BitmapFactory.decodeFile(imageFile.absolutePath, options)
-                bitmap = getResizedBitmap(bitmap, 100)
-                Timber.d("xxx" + bitmap.byteCount)
-                iview!!.setImageBitmap(bitmap)
-                flag = 1
-                Timber.d("flag$flag")
-                userData.photo = com.example.amit.uniconnexample.utils.Utils.encodeToBase64(bitmap, Bitmap.CompressFormat.PNG, 100)
-
-            }
-        })
     }
 
-    fun getResizedBitmap(image: Bitmap, maxSize: Int): Bitmap {
-        var width = image.width
-        var height = image.height
+    fun uploadProfile(){
+        if (mImageUri != null) {
+            val filepath =  FirebaseStorage.getInstance().reference.child("User_Image").child(mImageUri!!.lastPathSegment!!)
+            mImageUri?.let {
+                val uploadTask = filepath.putFile(it)
+                uploadTask.addOnSuccessListener {
+                    val downloadUrl = it.downloadUrl?.toString()?:""
+                    doSingUp(downloadUrl)
+                }
 
-        val bitmapRatio = width.toFloat() / height.toFloat()
-        if (bitmapRatio > 0) {
-            width = maxSize
-            height = (width / bitmapRatio).toInt()
-        } else {
-            height = maxSize
-            width = (height * bitmapRatio).toInt()
+                uploadTask.addOnFailureListener {
+                    doSingUp("")
+                }
+
+            }
+
         }
-        return Bitmap.createScaledBitmap(image, width, height, true)
     }
 
     internal fun attemptSignup(pass: String, id: String) {
@@ -187,22 +196,7 @@ class Signupactivity : AppCompatActivity() {
                         Log.d("Sign up","completed ${mAuth?.currentUser?.uid}")
                         mAuth?.currentUser?.getToken(false)?.addOnCompleteListener {
                             if(it.isSuccessful){
-                                userId = mAuth?.currentUser?.uid?:""
-                                val userDetailRequestModel = UserDetailRequestModel(name?.editText?.text?.toString()?:"", "", email?.editText?.text?.toString()?:"")
-                                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository()?.sendUser("Bearer ${it.result?.token}", userDetailRequestModel)
-                                        ?.enqueue(object : Callback<ModelResponseMessage>{
-                                            override fun onFailure(call: Call<ModelResponseMessage>, t: Throwable) {
-                                                t.printStackTrace()
-                                                sign_up?.isEnabled = true
-                                            }
-
-                                            override fun onResponse(call: Call<ModelResponseMessage>, response: Response<ModelResponseMessage>) {
-                                                PrefManager.putString(CommonString.USER_ID, userId)
-                                                val i = Intent(this@Signupactivity, NewTabActivity::class.java)
-                                                startActivity(i)
-                                                finish()
-                                            }
-                                        })
+                                uploadProfile()
                             }else{
                                 Log.d("sign up","auth failed")
                             }
@@ -210,6 +204,32 @@ class Signupactivity : AppCompatActivity() {
                         }
                     }
                 }
+    }
+
+    fun doSingUp(imageUrl: String){
+        FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
+            if(it.isSuccessful && it.result != null){
+                val userId = FirebaseAuth.getInstance()?.currentUser?.uid?:""
+                val userDetailRequestModel = UserDetailRequestModel(name?.editText?.text?.toString()?:"", imageUrl, email?.editText?.text?.toString()?:"")
+                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository()?.sendUser("Bearer ${it.result?.token}", userDetailRequestModel)
+                        ?.enqueue(object : Callback<ModelResponseMessage>{
+                            override fun onFailure(call: Call<ModelResponseMessage>, t: Throwable) {
+                                t.printStackTrace()
+                                sign_up?.isEnabled = true
+                            }
+
+                            override fun onResponse(call: Call<ModelResponseMessage>, response: Response<ModelResponseMessage>) {
+                                PrefManager.putString(CommonString.USER_ID, userId)
+                                PrefManager.putString(CommonString.USER_NAME, name?.editText?.text?.toString()?:"")
+                                PrefManager.putString(CommonString.USER_DP, imageUrl)
+                                PrefManager.putString(CommonString.USER_EMAIL, email?.editText?.text?.toString()?:"")
+                                val i = Intent(this@Signupactivity, NewTabActivity::class.java)
+                                startActivity(i)
+                                finish()
+                            }
+                        })
+            }
+        }
     }
 
     public override fun onStart() {

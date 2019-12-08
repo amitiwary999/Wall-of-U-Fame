@@ -12,6 +12,8 @@ class PostBlogModel(
         val postId: String,
         var desc: String? = null,
         var imageUrl: String? = null,
-        val date: String?=null
+        val date: String?=null,
+        val name: String,
+        val dp: String
 ) {
 }

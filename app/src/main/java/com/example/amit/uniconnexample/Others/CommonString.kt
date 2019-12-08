@@ -12,5 +12,6 @@ class CommonString {
         const val USER_DP = "user_dp"
         const val PAYLOAD_ITEM_LIKE = "payload_item_like"
         const val PAYLOAD_ITEM_UNLIKE = "payload_item_unlike"
+        const val USER_EMAIL = "user_email"
     }
 }
