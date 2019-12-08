@@ -3,7 +3,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.pkmmte.view.CircularImageView
+    <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/src"/>

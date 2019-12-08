@@ -14,9 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
- <com.pkmmte.view.CircularImageView
+ <ImageView
      android:layout_width="50dp"
-     android:layout_height="45dp"
+     android:layout_height="50dp"
      android:id="@+id/pimage"
      android:src="@drawable/user"
      android:layout_marginTop="8dp"

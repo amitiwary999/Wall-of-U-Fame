@@ -85,7 +85,6 @@ MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/meera/.gradle/c
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2a9cf6b2f404b9771591922cdfc31637/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/7bb5e185ec6cc99b47b236588ee11edd/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/53bcef29bf39040d2bc73d4fb2abd795/chat-message-view-1.0.3/AndroidManifest.xml:2:1-16:12
-MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/02405a088121480f84a4de4bc4b2037f/circularimageview-1.1/AndroidManifest.xml:2:1-13:12
 MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/56eec855e58aa36a13bd7b90259917bd/jetified-timber-4.1.2/AndroidManifest.xml:2:1-10:12
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/f2c3cf2aa10583895aec85ddd351f583/whorlviewlibrary-1.0.3/AndroidManifest.xml:2:1-16:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5cfa045f9972814109c54225e88e4a0b/lifecycle-extensions-2.1.0/AndroidManifest.xml:17:1-25:12
@@ -315,8 +314,6 @@ MERGED from [com.github.bumptech.glide:glide:4.10.0] /home/meera/.gradle/caches/
 MERGED from [com.github.bumptech.glide:glide:4.10.0] /home/meera/.gradle/caches/transforms-2/files-2.1/c16a85417753d0e794c47d6de0dc7ac9/glide-4.10.0/AndroidManifest.xml:10:5-20
 MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/53bcef29bf39040d2bc73d4fb2abd795/chat-message-view-1.0.3/AndroidManifest.xml:11:5-14:19
 MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/53bcef29bf39040d2bc73d4fb2abd795/chat-message-view-1.0.3/AndroidManifest.xml:11:5-14:19
-MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/02405a088121480f84a4de4bc4b2037f/circularimageview-1.1/AndroidManifest.xml:11:5-20
-MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/02405a088121480f84a4de4bc4b2037f/circularimageview-1.1/AndroidManifest.xml:11:5-20
 MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/56eec855e58aa36a13bd7b90259917bd/jetified-timber-4.1.2/AndroidManifest.xml:8:5-20
 MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/56eec855e58aa36a13bd7b90259917bd/jetified-timber-4.1.2/AndroidManifest.xml:8:5-20
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/f2c3cf2aa10583895aec85ddd351f583/whorlviewlibrary-1.0.3/AndroidManifest.xml:11:5-14:19
@@ -583,8 +580,6 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/meera/.gradle/c
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/7bb5e185ec6cc99b47b236588ee11edd/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/53bcef29bf39040d2bc73d4fb2abd795/chat-message-view-1.0.3/AndroidManifest.xml:7:5-9:41
 MERGED from [me.himanshusoni.chatmessageview:chat-message-view:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/53bcef29bf39040d2bc73d4fb2abd795/chat-message-view-1.0.3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/02405a088121480f84a4de4bc4b2037f/circularimageview-1.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.pkmmte.view:circularimageview:1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/02405a088121480f84a4de4bc4b2037f/circularimageview-1.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/56eec855e58aa36a13bd7b90259917bd/jetified-timber-4.1.2/AndroidManifest.xml:6:5-44
 MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/56eec855e58aa36a13bd7b90259917bd/jetified-timber-4.1.2/AndroidManifest.xml:6:5-44
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/f2c3cf2aa10583895aec85ddd351f583/whorlviewlibrary-1.0.3/AndroidManifest.xml:7:5-9:41

@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
@@ -44,10 +45,12 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         holder.likeButton.setOnClickListener {
             if(postModel.isLiked == 1){
                 postModel.isLiked = 0
+                postModel.like = postModel.like-1
                 itemOptionsClickListener.onPostUnlike(postModel.postId)
                 notifyItemChanged(position, CommonString.PAYLOAD_ITEM_UNLIKE)
             }else{
                 postModel.isLiked = 1
+                postModel.like = postModel.like+1
                 itemOptionsClickListener.onPostLike(postModel.postId)
                 notifyItemChanged(position, CommonString.PAYLOAD_ITEM_LIKE)
             }
@@ -87,17 +90,20 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
                     }
 
                     if(postModel.creatorDp.isNotEmpty()){
-                        Glide.with(it).load(postModel.creatorDp).into(pImage)
+                        Glide.with(it).setDefaultRequestOptions(RequestOptions().circleCrop()).load(postModel.creatorDp).into(pImage)
                     }
                 }
             }
         }
 
-        fun setData(post: PostModel?, payload: String){
+        fun setData(postModel: PostModel?, payload: String){
             if(payload == CommonString.PAYLOAD_ITEM_LIKE){
                 likeButton.setColorFilter(App.instance.resources.getColor(R.color.yellow))
             }else if(payload == CommonString.PAYLOAD_ITEM_UNLIKE){
                 likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
+            }
+            postModel?.let {
+                likeCount.text = it.like.toString()
             }
         }
     }
