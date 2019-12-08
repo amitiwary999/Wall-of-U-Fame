@@ -20,7 +20,7 @@ class UtilPostIdGenerator {
         }
 
         fun generatePostId():String{
-            return PrefManager.getString(CommonString.USER_ID, "user")+"_"+System.currentTimeMillis()+"_"+ getIncrement()
+            return ""+System.currentTimeMillis()+"_"+ getIncrement()+"_"+PrefManager.getString(CommonString.USER_ID, "user")
         }
     }
 }

@@ -53,6 +53,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_blog.*
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.info
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -64,7 +66,7 @@ import java.util.*
 /**
  * Created by Meera on 09,November,2019
  */
-class AddBlogActivity: AppCompatActivity(){
+class AddBlogActivity: AppCompatActivity(), AnkoLogger{
     private var auth: FirebaseAuth? = null
     private var mImageUri: Uri? = null
     private var mStorage: StorageReference? = null
@@ -160,14 +162,14 @@ class AddBlogActivity: AppCompatActivity(){
             val desc_val = mdesc.text.toString().trim { it <= ' ' }
             PrefManager.getString(CommonString.USER_NAME,"name")
             PrefManager.getString(CommonString.USER_DP,"")
-            if (mImageUri != null && bytearray != null) {
+            if (mImageUri != null) {
                 val filepath = mStorage!!.child("User_Blog").child(mImageUri!!.lastPathSegment!!)
                 mImageUri?.let {
                     val uploadTask = filepath.putFile(it)
                     uploadTask.addOnSuccessListener { taskSnapshot ->
                         // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                         val downloadUrl = taskSnapshot.downloadUrl
-
+                        info { "url firebase ${downloadUrl}" }
                         val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, downloadUrl.toString(),  date, name?:"", photo?:"" )
                         postBlog(blogModel)
                     }
@@ -232,6 +234,7 @@ class AddBlogActivity: AppCompatActivity(){
             }
 
             mImageUri = data.data
+            info { "picked image ${mImageUri}" }
           //  compressImage(mImageUri!!)
 
             try {

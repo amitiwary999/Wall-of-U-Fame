@@ -271,7 +271,7 @@ class Notifclick : AppCompatActivity() {
         mDatabaseLike.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.child(post_liked!!).hasChild(auth.currentUser!!.uid)) {
-                    like.setColorFilter(resources.getColor(R.color.Grenn))
+                    like.setColorFilter(resources.getColor(R.color.yellow))
                     mDatabaseunlike.addListenerForSingleValueEvent(object : ValueEventListener {
                         override fun onDataChange(dataSnapshot: DataSnapshot) {
                             if (!dataSnapshot.child(post_liked).hasChild(auth.currentUser!!.uid)) {
@@ -298,7 +298,7 @@ class Notifclick : AppCompatActivity() {
         mDatabaseunlike.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.child(post_key!!).hasChild(auth.currentUser!!.uid)) {
-                    unlike_btn.setColorFilter(resources.getColor(R.color.Grenn))
+                    unlike_btn.setColorFilter(resources.getColor(R.color.yellow))
                     mDatabaseLike.addListenerForSingleValueEvent(object : ValueEventListener {
                         override fun onDataChange(dataSnapshot: DataSnapshot) {
                             if (!dataSnapshot.child(post_key).hasChild(auth.currentUser!!.uid)) {

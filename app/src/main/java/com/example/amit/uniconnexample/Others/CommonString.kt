@@ -13,5 +13,6 @@ class CommonString {
         const val PAYLOAD_ITEM_LIKE = "payload_item_like"
         const val PAYLOAD_ITEM_UNLIKE = "payload_item_unlike"
         const val USER_EMAIL = "user_email"
+        const val DATE_FORMAT = "yyyy-MM-dd HH:mm:ss"
     }
 }

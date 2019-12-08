@@ -13,6 +13,7 @@ import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.rest.model.PostModel
+import com.example.amit.uniconnexample.utils.DateUtils
 
 /**
  * Created by Meera on 04,December,2019
@@ -66,11 +67,20 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         var image: ImageView = itemView.findViewById(R.id.postimage)
         var postDesc: TextView = itemView.findViewById(R.id.post_desc)
         var likeButton: ImageButton = itemView.findViewById(R.id.like)
+        var date: TextView = itemView.findViewById(R.id.txtDate)
+        var likeCount: TextView = itemView.findViewById(R.id.txtlike)
 
         fun setData(post: PostModel?){
             post?.let {postModel ->
                 postDesc.text = postModel.desc
-                postModel.date
+                name.text = postModel.creatorName
+                date.text = DateUtils.getDateFromUTCTimestamp(postModel.date, CommonString.DATE_FORMAT)
+                likeCount.text = postModel.like.toString()
+                if(postModel.isLiked == 1){
+                    likeButton.setColorFilter(App.instance.resources.getColor(R.color.yellow))
+                }else{
+                    likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
+                }
                 context?.let {
                     if(postModel.imageUrl.isNotEmpty()){
                         Glide.with(it).load(postModel.imageUrl).into(image)
@@ -85,7 +95,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
 
         fun setData(post: PostModel?, payload: String){
             if(payload == CommonString.PAYLOAD_ITEM_LIKE){
-                likeButton.setColorFilter(App.instance.resources.getColor(R.color.Grenn))
+                likeButton.setColorFilter(App.instance.resources.getColor(R.color.yellow))
             }else if(payload == CommonString.PAYLOAD_ITEM_UNLIKE){
                 likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
             }
