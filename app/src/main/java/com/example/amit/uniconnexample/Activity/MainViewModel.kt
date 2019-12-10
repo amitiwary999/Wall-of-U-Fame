@@ -22,6 +22,7 @@ class MainViewModel : ViewModel(), AnkoLogger {
     var nextKey: String = ""
     var postLiveData = MutableLiveData<List<PostModel>>()
     var firebaseUser = FirebaseAuth.getInstance().currentUser
+    var error = MutableLiveData<String>()
 
     init {
         getPagedPost()
@@ -34,6 +35,7 @@ class MainViewModel : ViewModel(), AnkoLogger {
                 RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().getPostPAged("Bearer ${it.result?.token}", getPostRequestModel)
                         .enqueue(object : Callback<List<PostModel>> {
                             override fun onFailure(call: Call<List<PostModel>>, t: Throwable) {
+                                error.postValue("failed")
                             }
 
                             override fun onResponse(call: Call<List<PostModel>>, response: Response<List<PostModel>>) {
@@ -42,12 +44,12 @@ class MainViewModel : ViewModel(), AnkoLogger {
                                     nextKey = responseBody[responseBody.size-1].postId
                                     postLiveData.postValue(responseBody)
                                 }else{
-
+                                    error.postValue("failed")
                                 }
                             }
                         })
             }else{
-
+                error.postValue("failed")
             }
         }
     }
@@ -94,5 +96,10 @@ class MainViewModel : ViewModel(), AnkoLogger {
                         })
             }
         }
+    }
+
+    fun refresh(){
+        nextKey = ""
+        getPagedPost()
     }
 }

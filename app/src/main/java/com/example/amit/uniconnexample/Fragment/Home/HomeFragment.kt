@@ -69,12 +69,25 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
             mblog_list.addOnScrollListener(scrollListener)
 
             mainViewModel?.postLiveData?.observe(it as NewTabActivity, Observer {
-                homeAdapter?.setData(it)
+                if(refresh.isRefreshing) {
+                    refresh.isRefreshing = false
+                }
+                    homeAdapter?.setData(it)
+            })
+
+            mainViewModel?.error?.observe(it as NewTabActivity, Observer {
+                if(refresh.isRefreshing) {
+                    refresh.isRefreshing = false
+                }
             })
 
             fab?.setOnClickListener {
                 val intent = Intent(mContext, AddBlogActivity::class.java)
                 startActivity(intent)
+            }
+
+            refresh?.setOnRefreshListener {
+                mainViewModel?.refresh()
             }
         }
 
