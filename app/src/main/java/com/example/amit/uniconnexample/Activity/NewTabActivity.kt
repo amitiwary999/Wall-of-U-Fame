@@ -79,27 +79,28 @@ class NewTabActivity : AppCompatActivity() {
                 //  viewPager.setVisibility(View.GONE);
                 toolbar_title.text = "    Profile     "
                 attachFragment(Profilefrag())
-            } else if (tabId == R.id.tab_notification) {
-                if (isNetworkConnected) {
-                    flag = 0
-                }
-                //    mDatanotiflike.setValue(new Likemodel(0));
-                //  viewPager.setVisibility(View.GONE);
-                toolbar_title.text = "    Notification"
-                attachFragment(Notifrag())
-            } else if (tabId == R.id.tab_message) {
-                if (isNetworkConnected) {
-                    //bottomBarTabmsg.removeBadge();
-                    msgcount = 0
-                }
-                //  viewPager.setVisibility(View.GONE);
-                toolbar_title.text = "    Message     "
-                attachFragment(Msgfrag())
-            } else if (tabId == R.id.tab_setting) {
-                //  viewPager.setVisibility(View.GONE);
-                toolbar_title.text = "    Setting     "
-                attachFragment(Settingfrag())
             }
+//            else if (tabId == R.id.tab_notification) {
+//                if (isNetworkConnected) {
+//                    flag = 0
+//                }
+//                //    mDatanotiflike.setValue(new Likemodel(0));
+//                //  viewPager.setVisibility(View.GONE);
+//                toolbar_title.text = "    Notification"
+//                attachFragment(Notifrag())
+//            } else if (tabId == R.id.tab_message) {
+//                if (isNetworkConnected) {
+//                    //bottomBarTabmsg.removeBadge();
+//                    msgcount = 0
+//                }
+//                //  viewPager.setVisibility(View.GONE);
+//                toolbar_title.text = "    Message     "
+//                attachFragment(Msgfrag())
+//            } else if (tabId == R.id.tab_setting) {
+//                //  viewPager.setVisibility(View.GONE);
+//                toolbar_title.text = "    Setting     "
+//                attachFragment(Settingfrag())
+//            }
         }
         //  bottomBarTab.se
     }

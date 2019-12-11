@@ -10,20 +10,20 @@
         icon="@drawable/ic_account"
         barColorWhenSelected="@color/colorPrimary"
          />
-    <tab
-        id="@+id/tab_notification"
-        icon="@drawable/ic_notifications"
-        barColorWhenSelected="@color/colorPrimary"
-         />
-    <tab
-        id="@+id/tab_message"
-        icon="@drawable/ic_message"
-        barColorWhenSelected="@color/colorPrimary"
-         />
-    <tab
-        id="@+id/tab_setting"
-        icon="@drawable/ic_settings"
-        barColorWhenSelected="@color/colorPrimary"
-         />
+<!--    <tab-->
+<!--        id="@+id/tab_notification"-->
+<!--        icon="@drawable/ic_notifications"-->
+<!--        barColorWhenSelected="@color/colorPrimary"-->
+<!--         />-->
+<!--    <tab-->
+<!--        id="@+id/tab_message"-->
+<!--        icon="@drawable/ic_message"-->
+<!--        barColorWhenSelected="@color/colorPrimary"-->
+<!--         />-->
+<!--    <tab-->
+<!--        id="@+id/tab_setting"-->
+<!--        icon="@drawable/ic_settings"-->
+<!--        barColorWhenSelected="@color/colorPrimary"-->
+<!--         />-->
 
 </tabs>

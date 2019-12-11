@@ -19,7 +19,7 @@ import com.example.amit.uniconnexample.utils.DateUtils
 /**
  * Created by Meera on 04,December,2019
  */
-class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener): RecyclerView.Adapter<HomeFragmentAdapter.HomeAdapterViewHolder>() {
+class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener, var itemHeight : Int): RecyclerView.Adapter<HomeFragmentAdapter.HomeAdapterViewHolder>() {
      var postModels = ArrayList<PostModel>()
     var context: Context ?= null
     fun setData(posts: List<PostModel>){
@@ -28,10 +28,18 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         notifyItemRangeInserted(size, posts.size)
     }
 
+    fun setRefreshedData(posts: List<PostModel>){
+        val size = postModels.size
+        notifyItemRangeRemoved(0, size)
+        postModels.clear()
+        postModels.addAll(posts)
+        notifyItemRangeInserted(0, posts.size)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapterViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.blog_item, parent, false)
         context = parent.context
-        return HomeAdapterViewHolder(view, context)
+        return HomeAdapterViewHolder(view, context, itemHeight)
     }
 
     override fun getItemCount(): Int {
@@ -64,7 +72,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         super.onBindViewHolder(holder, position, payloads)
     }
 
-    class HomeAdapterViewHolder(itemView: View, var context: Context?) : RecyclerView.ViewHolder(itemView){
+    class HomeAdapterViewHolder(itemView: View, var context: Context?,var itemHeight : Int) : RecyclerView.ViewHolder(itemView){
         var pImage: ImageView = itemView.findViewById(R.id.pimage)
         var name: TextView = itemView.findViewById(R.id.bname)
         var image: ImageView = itemView.findViewById(R.id.postimage)
@@ -86,7 +94,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
                 }
                 context?.let {
                     if(postModel.imageUrl.isNotEmpty()){
-                        Glide.with(it).load(postModel.imageUrl).into(image)
+                        Glide.with(it).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(itemHeight).into(image)
                     }
 
                     if(postModel.creatorDp.isNotEmpty()){

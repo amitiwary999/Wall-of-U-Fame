@@ -20,6 +20,7 @@ import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
 import com.example.amit.uniconnexample.rest.model.PostLikeModel
 import com.example.amit.uniconnexample.utils.EndlessScrollListener
+import com.example.amit.uniconnexample.utils.UtilDpToPixel
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_global_frag.*
 import org.jetbrains.anko.AnkoLogger
@@ -27,6 +28,7 @@ import org.jetbrains.anko.info
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlin.math.roundToInt
 
 /**
  * Created by Meera on 26,November,2019
@@ -55,9 +57,12 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mContext?.let {
+            val dm = resources.displayMetrics
+            val paddingFrame = UtilDpToPixel.convertDpToPixel(30f, it).roundToInt()
+            val frameWidth = dm.widthPixels - paddingFrame
             val linearLayoutManager = LinearLayoutManager(it)
             mblog_list.layoutManager = linearLayoutManager
-            homeAdapter = HomeFragmentAdapter(this)
+            homeAdapter = HomeFragmentAdapter(this, frameWidth)
             mblog_list.adapter = homeAdapter
 
             scrollListener = object : EndlessScrollListener(linearLayoutManager){
@@ -69,15 +74,28 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
             mblog_list.addOnScrollListener(scrollListener)
 
             mainViewModel?.postLiveData?.observe(it as NewTabActivity, Observer {
-                if(refresh.isRefreshing) {
-                    refresh.isRefreshing = false
+                refresh?.let {
+                    if(refresh.isRefreshing) {
+                        refresh.isRefreshing = false
+                    }
                 }
                     homeAdapter?.setData(it)
             })
 
+            mainViewModel?.refreshLiveData?.observe(it as NewTabActivity, Observer {
+                refresh?.let {
+                    if(refresh.isRefreshing) {
+                        refresh.isRefreshing = false
+                    }
+                }
+                homeAdapter?.setRefreshedData(it)
+            })
+
             mainViewModel?.error?.observe(it as NewTabActivity, Observer {
-                if(refresh.isRefreshing) {
-                    refresh.isRefreshing = false
+                refresh?.let {
+                    if(refresh.isRefreshing) {
+                        refresh.isRefreshing = false
+                    }
                 }
             })
 

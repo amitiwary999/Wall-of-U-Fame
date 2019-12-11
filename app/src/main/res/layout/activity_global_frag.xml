@@ -34,7 +34,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="35dp"
-        android:layout_height="29dp"
+        android:layout_height="35dp"
         android:layout_gravity="bottom|end"
         android:layout_marginRight="6dp"
         android:layout_marginBottom="20dp"

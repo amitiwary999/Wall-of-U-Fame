@@ -21,6 +21,7 @@ import retrofit2.Response
 class MainViewModel : ViewModel(), AnkoLogger {
     var nextKey: String = ""
     var postLiveData = MutableLiveData<List<PostModel>>()
+    var refreshLiveData = MutableLiveData<List<PostModel>>()
     var firebaseUser = FirebaseAuth.getInstance().currentUser
     var error = MutableLiveData<String>()
 
@@ -41,8 +42,12 @@ class MainViewModel : ViewModel(), AnkoLogger {
                             override fun onResponse(call: Call<List<PostModel>>, response: Response<List<PostModel>>) {
                                 if(response.isSuccessful && response.body() != null && response.body()!!.isNotEmpty()){
                                     val responseBody = response.body()!!
+                                    if(nextKey.isEmpty()){
+                                        refreshLiveData.postValue(responseBody)
+                                    }else{
+                                        postLiveData.postValue(responseBody)
+                                    }
                                     nextKey = responseBody[responseBody.size-1].postId
-                                    postLiveData.postValue(responseBody)
                                 }else{
                                     error.postValue("failed")
                                 }
