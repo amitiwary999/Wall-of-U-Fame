@@ -59,7 +59,7 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
         mContext?.let {
             val dm = resources.displayMetrics
             val paddingFrame = UtilDpToPixel.convertDpToPixel(30f, it).roundToInt()
-            val frameWidth = dm.widthPixels - paddingFrame
+            val frameWidth = dm.widthPixels
             val linearLayoutManager = LinearLayoutManager(it)
             mblog_list.layoutManager = linearLayoutManager
             homeAdapter = HomeFragmentAdapter(this, frameWidth)

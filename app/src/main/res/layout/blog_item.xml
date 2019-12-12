@@ -59,12 +59,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:layout_marginBottom="@dimen/pad_5dp"
             android:id="@+id/postimage"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-             />
+            android:adjustViewBounds="true" />
 
         <TextView
             android:layout_width="match_parent"
