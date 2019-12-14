@@ -7,6 +7,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.provider.MediaStore.Images
 import androidx.annotation.WorkerThread
+import androidx.lifecycle.MutableLiveData
 import com.example.amit.uniconnexample.Executor.Executor
 import java.io.File
 import java.util.*
@@ -22,8 +23,8 @@ class MediapickerRepository {
     /**
      * Retrieves a list of folders that contain media.
      */
-    fun getFolders(context: Context, callback: Callback<List<MediaFolder>>) {
-        Executor.BOUNDED.execute({ callback.onComplete(getFolders(context)) })
+    fun getFolders(context: Context, folders: MutableLiveData<List<MediaFolder>>) {
+        Executor.BOUNDED.execute({ folders.postValue(getFolders(context)) })
     }
 
     /**
