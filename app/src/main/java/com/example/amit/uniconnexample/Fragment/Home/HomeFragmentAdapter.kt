@@ -15,6 +15,8 @@ import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.rest.model.PostModel
 import com.example.amit.uniconnexample.utils.DateUtils
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.info
 
 /**
  * Created by Meera on 04,December,2019
@@ -72,7 +74,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         super.onBindViewHolder(holder, position, payloads)
     }
 
-    class HomeAdapterViewHolder(itemView: View, var context: Context?,var itemHeight : Int) : RecyclerView.ViewHolder(itemView){
+    class HomeAdapterViewHolder(itemView: View, var context: Context?,var itemHeight : Int) : RecyclerView.ViewHolder(itemView), AnkoLogger{
         var pImage: ImageView = itemView.findViewById(R.id.pimage)
         var name: TextView = itemView.findViewById(R.id.bname)
         var image: ImageView = itemView.findViewById(R.id.postimage)
@@ -83,6 +85,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
 
         fun setData(post: PostModel?){
             post?.let {postModel ->
+                info { "post model in set data ${postModel.imageUrl}" }
                 postDesc.text = postModel.desc
                 name.text = postModel.creatorName
                 date.text = DateUtils.getDateFromUTCTimestamp(postModel.date, CommonString.DATE_FORMAT)
@@ -94,7 +97,10 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
                 }
                 context?.let {
                     if(postModel.imageUrl.isNotEmpty()){
+                        image.visibility = View.VISIBLE
                         Glide.with(it).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(itemHeight).into(image)
+                    }else{
+                        image.visibility = View.GONE
                     }
 
                     if(postModel.creatorDp.isNotEmpty()){
