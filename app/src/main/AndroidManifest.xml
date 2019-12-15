@@ -41,6 +41,8 @@
             android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Activity.NewTabActivity"
             android:theme="@style/AppTheme.NoactionBar"></activity>
+        <activity android:name=".MediaPicker.MediaPickerActivity"
+            android:theme="@style/AppTheme.NoactionBar"></activity>
     </application>
 
 </manifest>

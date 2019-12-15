@@ -31,6 +31,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.amit.uniconnexample.App
+import com.example.amit.uniconnexample.MediaPicker.MediaPickerActivity
 import com.example.amit.uniconnexample.Model.BlogModel
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.Others.UserData
@@ -114,6 +115,9 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
                             arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 12345)
                     return@OnClickListener
                 }
+//                val intent = Intent(this, MediaPickerActivity::class.java)
+//                startActivity(intent)
+
                 val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                 galleryIntent.type = "image/*"
                 galleryIntent.action = Intent.ACTION_GET_CONTENT

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-46:12
+ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-48:12
 MERGED from [androidx.multidex:multidex:2.0.1] /home/meera/.gradle/caches/transforms-2/files-2.1/73ad7a1a0ba40e38954a7e2361a0f452/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.firebaseui:firebase-ui:0.5.3] /home/meera/.gradle/caches/transforms-2/files-2.1/6f7ec4bbe32f9d3f3aee7c36ed11183d/firebase-ui-0.5.3/AndroidManifest.xml:2:1-13:12
 MERGED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meera/.gradle/caches/transforms-2/files-2.1/2bf98143d1c9b7c04baa3d5dbeaad476/jetified-firebase-ui-auth-0.5.3/AndroidManifest.xml:2:1-85:12
@@ -129,20 +129,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] /home/meera/.gradle/caches/tr
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5ee1a30a1a265d2b1005cd78a473f1d0/lifecycle-livedata-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/7dbb3654ecf4f549e4c342c22eecff20/lifecycle-livedata-core-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/31f6e77f1f55b70fe9da4be6329c5b10/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-46:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-48:12
 	package
 		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
 		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-46:12
+		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-48:12
 		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-46:12
+		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-48:12
 		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:11-69
@@ -203,7 +203,7 @@ ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.x
 	android:name
 		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:10:19-63
 application
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:11:5-44:19
+ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:11:5-46:19
 MERGED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meera/.gradle/caches/transforms-2/files-2.1/2bf98143d1c9b7c04baa3d5dbeaad476/jetified-firebase-ui-auth-0.5.3/AndroidManifest.xml:12:5-83:19
 MERGED from [com.firebaseui:firebase-ui-auth:0.5.3] /home/meera/.gradle/caches/transforms-2/files-2.1/2bf98143d1c9b7c04baa3d5dbeaad476/jetified-firebase-ui-auth-0.5.3/AndroidManifest.xml:12:5-83:19
 MERGED from [com.google.android.material:material:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/14c32e9a85f68a2409eb4e8fcb2ea922/material-1.0.0/AndroidManifest.xml:22:5-20
@@ -414,6 +414,12 @@ ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.x
 		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:43:13-56
 	android:name
 		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:42:19-58
+activity#com.example.amit.uniconnexample.MediaPicker.MediaPickerActivity
+ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:44:9-45:68
+	android:theme
+		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:45:13-56
+	android:name
+		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:44:19-66
 uses-sdk
 INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
