@@ -12,7 +12,8 @@ data class Media(
         val date: Long=0,
         val width: Int=0,
         val height: Int=0,
-        val size: Long=0
+        val size: Long=0,
+        val bucketId: String
 
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
@@ -21,7 +22,8 @@ data class Media(
             parcel.readLong(),
             parcel.readInt(),
             parcel.readInt(),
-            parcel.readLong()) {
+            parcel.readLong(),
+            parcel.readString()) {
     }
 
     override fun writeToParcel(dest: Parcel?, flags: Int) {
@@ -31,6 +33,7 @@ data class Media(
         dest.writeInt(width)
         dest.writeInt(height)
         dest.writeLong(size)
+        dest.writeString(bucketId)
     }
 
     override fun describeContents(): Int {

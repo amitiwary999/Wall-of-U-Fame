@@ -177,7 +177,7 @@ class MediapickerRepository {
                 val width: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getWidthColumn(orientation)))
                 val height: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getHeightColumn(orientation)))
                 val size: Long = cursor.getLong(cursor.getColumnIndexOrThrow(Images.Media.SIZE))
-                media.add(Media(uri.toString(), mimetype, dateTaken, width, height, size))
+                media.add(Media(uri.toString(), mimetype, dateTaken, width, height, size, bucketId))
             }
         }
         return media
@@ -198,7 +198,7 @@ class MediapickerRepository {
         val height = media.height
         val size   = media.size
 
-        return Media(media.uri, media.mimeType, media.date, width, height, size)
+        return Media(media.uri, media.mimeType, media.date, width, height, size, media.bucketId)
     }
 
     fun getContentResolverPopulatedMedia(media : Media) : Media {
@@ -206,7 +206,7 @@ class MediapickerRepository {
         val  height = media.height
         val size   = media.size
 
-        return Media(media.uri, media.mimeType, media.date, width, height, size);
+        return Media(media.uri, media.mimeType, media.date, width, height, size, media.bucketId);
     }
 
     fun getPopulatedMedia(context: Context, media: List<Media>) : List<Media>{

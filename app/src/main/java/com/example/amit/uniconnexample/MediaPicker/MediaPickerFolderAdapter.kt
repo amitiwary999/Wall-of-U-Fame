@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -13,7 +14,7 @@ import com.example.amit.uniconnexample.R
 /**
  * Created by Meera on 15,December,2019
  */
-class MediaPickerFolderAdapter(var frameWidth : Int): RecyclerView.Adapter<MediaPickerFolderAdapter.ViewHolder>(){
+class MediaPickerFolderAdapter(var frameWidth : Int, var mediaFolderClicked: MediaFolderClicked): RecyclerView.Adapter<MediaPickerFolderAdapter.ViewHolder>(){
     var mediaFolders: List<MediaFolder> = ArrayList()
     fun setData(mediaFolder: List<MediaFolder>){
         mediaFolders = mediaFolder
@@ -30,17 +31,25 @@ class MediaPickerFolderAdapter(var frameWidth : Int): RecyclerView.Adapter<Media
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.setData(mediaFolders.get(position))
+        holder.parent.setOnClickListener{
+            mediaFolderClicked.onFolderClicked(mediaFolders[position].bucketId)
+        }
     }
 
     class ViewHolder(var view: View, var frameWidth : Int) : RecyclerView.ViewHolder(view){
         val imageView: ImageView = view.findViewById(R.id.folder_image)
         val folderTitle: TextView = view.findViewById(R.id.folder_title)
         val folderCount: TextView = view.findViewById(R.id.folder_item_count)
+        val parent: LinearLayout = view.findViewById(R.id.parent)
 
         fun setData(mediaFolder: MediaFolder){
             Glide.with(view).setDefaultRequestOptions(RequestOptions().centerCrop().error(R.drawable.ic_folder)).load(mediaFolder.thumbnailUri).override(frameWidth).into(imageView)
             folderTitle.text = mediaFolder.title
             folderCount.text = mediaFolder.itemCount.toString()
         }
+    }
+
+    interface MediaFolderClicked{
+        fun onFolderClicked(bucketId: String)
     }
 }

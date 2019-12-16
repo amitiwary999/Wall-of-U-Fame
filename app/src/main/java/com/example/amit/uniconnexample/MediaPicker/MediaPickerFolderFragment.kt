@@ -19,12 +19,12 @@ import kotlin.math.roundToInt
 /**
  * Created by Meera on 13,December,2019
  */
-class MediaPickerFolderFragment : Fragment(), AnkoLogger {
+class MediaPickerFolderFragment(var mediaFolderSelected: MediaFolderSelected) : Fragment(), AnkoLogger, MediaPickerFolderAdapter.MediaFolderClicked {
     var mediaPickerViewModel: MediaPickerViewModel ?= null
     val spanCount = 2
     companion object {
-        fun newInstance(): MediaPickerFolderFragment {
-            return MediaPickerFolderFragment()
+        fun newInstance(mediaFolderSelected: MediaFolderSelected): MediaPickerFolderFragment {
+            return MediaPickerFolderFragment(mediaFolderSelected)
         }
     }
     override fun onAttach(context: Context) {
@@ -51,12 +51,16 @@ class MediaPickerFolderFragment : Fragment(), AnkoLogger {
             val paddingFrame = UtilDpToPixel.convertDpToPixel(1f, it).roundToInt()
             val frameWidth = (dm.widthPixels - paddingFrame)/spanCount
 
-            val mediaPickerFolderAdapter = MediaPickerFolderAdapter(frameWidth)
+            val mediaPickerFolderAdapter = MediaPickerFolderAdapter(frameWidth, this)
             mediapicker_folder_list.layoutManager = gridLayoutManager
             mediapicker_folder_list.adapter = mediaPickerFolderAdapter
             mediaPickerViewModel?.getFolders(view.context)?.observe(this, Observer {
                 mediaPickerFolderAdapter.setData(it)
             })
         }
+    }
+
+    override fun onFolderClicked(bucketId: String) {
+        mediaFolderSelected.onMediaFolderSelected(bucketId)
     }
 }

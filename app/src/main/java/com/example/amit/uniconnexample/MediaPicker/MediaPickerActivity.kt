@@ -10,7 +10,7 @@ import org.jetbrains.anko.info
 /**
  * Created by Meera on 13,December,2019
  */
-class MediaPickerActivity : AppCompatActivity(),AnkoLogger {
+class MediaPickerActivity : AppCompatActivity(),AnkoLogger, MediaFolderSelected {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,5 +20,9 @@ class MediaPickerActivity : AppCompatActivity(),AnkoLogger {
         supportFragmentManager.beginTransaction()
                 .replace(R.id.mediasend_fragment_container, fragment)
                 .commit()
+    }
+
+    override fun onMediaFolderSelected(bucketId: String) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
