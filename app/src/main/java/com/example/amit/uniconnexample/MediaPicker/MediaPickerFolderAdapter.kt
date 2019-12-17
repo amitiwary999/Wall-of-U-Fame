@@ -32,7 +32,7 @@ class MediaPickerFolderAdapter(var frameWidth : Int, var mediaFolderClicked: Med
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.setData(mediaFolders.get(position))
         holder.parent.setOnClickListener{
-            mediaFolderClicked.onFolderClicked(mediaFolders[position].bucketId)
+            mediaFolderClicked.onFolderClicked(mediaFolders[position])
         }
     }
 
@@ -50,6 +50,6 @@ class MediaPickerFolderAdapter(var frameWidth : Int, var mediaFolderClicked: Med
     }
 
     interface MediaFolderClicked{
-        fun onFolderClicked(bucketId: String)
+        fun onFolderClicked(mediaFolder: MediaFolder)
     }
 }

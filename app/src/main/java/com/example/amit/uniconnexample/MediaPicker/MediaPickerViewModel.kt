@@ -10,24 +10,34 @@ import androidx.lifecycle.ViewModelProvider.NewInstanceFactory
 /**
  * Created by Meera on 13,December,2019
  */
-class MediaPickerViewModel(val application: Application, val mediapickerRepository: MediapickerRepository) : ViewModel() {
+class MediaPickerViewModel() : ViewModel() {
     var folders: MutableLiveData<List<MediaFolder>>
+    val selectedMedia: HashMap<String, Media> = HashMap()
+    var bucketMedia: MutableLiveData<List<Media>>
+    val mediapickerRepository = MediapickerRepository()
     init {
-      folders = MutableLiveData()
+        folders = MutableLiveData()
+        bucketMedia = MutableLiveData()
     }
     fun getFolders(context: Context): LiveData<List<MediaFolder>> {
         mediapickerRepository.getFolders(context, folders)
         return folders
     }
 
-    class Factory(private val application: Application, repository: MediapickerRepository) : NewInstanceFactory() {
-        private val repository: MediapickerRepository
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            return modelClass.cast(MediaPickerViewModel(application, repository))
+    fun setSelectedMedia(mediaSelected: Media){
+        mediaSelected.id?.let {
+            selectedMedia.put(it, mediaSelected)
         }
+    }
 
-        init {
-            this.repository = repository
+    fun removeSelectedMedia(media: Media){
+        media.id?.let {
+            selectedMedia.remove(it)
         }
+    }
+
+    fun getBucketMedia(context: Context, bucketId: String): LiveData<List<Media>>{
+        mediapickerRepository.getMediaInBucket(context, bucketId, bucketMedia)
+        return bucketMedia
     }
 }

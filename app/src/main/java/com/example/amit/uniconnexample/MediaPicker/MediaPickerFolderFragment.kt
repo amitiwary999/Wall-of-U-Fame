@@ -19,11 +19,11 @@ import kotlin.math.roundToInt
 /**
  * Created by Meera on 13,December,2019
  */
-class MediaPickerFolderFragment(var mediaFolderSelected: MediaFolderSelected) : Fragment(), AnkoLogger, MediaPickerFolderAdapter.MediaFolderClicked {
+class MediaPickerFolderFragment(var mediaFolderSelected: MediaSelected) : Fragment(), AnkoLogger, MediaPickerFolderAdapter.MediaFolderClicked {
     var mediaPickerViewModel: MediaPickerViewModel ?= null
     val spanCount = 2
     companion object {
-        fun newInstance(mediaFolderSelected: MediaFolderSelected): MediaPickerFolderFragment {
+        fun newInstance(mediaFolderSelected: MediaSelected): MediaPickerFolderFragment {
             return MediaPickerFolderFragment(mediaFolderSelected)
         }
     }
@@ -34,7 +34,7 @@ class MediaPickerFolderFragment(var mediaFolderSelected: MediaFolderSelected) : 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         info { "view create" }
-        mediaPickerViewModel = ViewModelProviders.of(this, MediaPickerViewModel.Factory(activity!!.application, MediapickerRepository())).get(MediaPickerViewModel::class.java)
+        mediaPickerViewModel = ViewModelProviders.of(this).get(MediaPickerViewModel::class.java)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -60,7 +60,7 @@ class MediaPickerFolderFragment(var mediaFolderSelected: MediaFolderSelected) : 
         }
     }
 
-    override fun onFolderClicked(bucketId: String) {
-        mediaFolderSelected.onMediaFolderSelected(bucketId)
+    override fun onFolderClicked(mediaFolder: MediaFolder) {
+        mediaFolderSelected.onMediaFolderSelected(mediaFolder)
     }
 }

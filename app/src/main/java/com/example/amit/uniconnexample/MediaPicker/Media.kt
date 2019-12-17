@@ -7,6 +7,7 @@ import android.os.Parcelable
  * Created by Meera on 14,December,2019
  */
 data class Media(
+        val id: String ?= null,
         val uri:String?=null,
         val mimeType: String?=null,
         val date: Long=0,
@@ -17,7 +18,8 @@ data class Media(
 
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
-            parcel.readString()!!,
+            parcel.readString(),
+            parcel.readString(),
             parcel.readString(),
             parcel.readLong(),
             parcel.readInt(),
@@ -27,13 +29,14 @@ data class Media(
     }
 
     override fun writeToParcel(dest: Parcel?, flags: Int) {
-        dest!!.writeString(uri)
-        dest.writeString(mimeType)
-        dest.writeLong(date)
-        dest.writeInt(width)
-        dest.writeInt(height)
-        dest.writeLong(size)
-        dest.writeString(bucketId)
+        dest?.writeString(id)
+        dest?.writeString(uri)
+        dest?.writeString(mimeType)
+        dest?.writeLong(date)
+        dest?.writeInt(width)
+        dest?.writeInt(height)
+        dest?.writeLong(size)
+        dest?.writeString(bucketId)
     }
 
     override fun describeContents(): Int {
@@ -48,5 +51,7 @@ data class Media(
         override fun newArray(size: Int): Array<Media?> {
             return arrayOfNulls<Media>(size)
         }
+
+        const val ALL_MEDIA_ID = "all_media"
     }
 }

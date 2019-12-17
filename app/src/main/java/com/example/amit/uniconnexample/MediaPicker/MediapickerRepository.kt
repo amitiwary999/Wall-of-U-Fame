@@ -24,14 +24,14 @@ class MediapickerRepository {
      * Retrieves a list of folders that contain media.
      */
     fun getFolders(context: Context, folders: MutableLiveData<List<MediaFolder>>) {
-        Executor.BOUNDED.execute({ folders.postValue(getFolders(context)) })
+        Executor.BOUNDED.execute{ folders.postValue(getFolders(context)) }
     }
 
     /**
      * Retrieves a list of media items (images and videos) that are present int he specified bucket.
      */
-    fun getMediaInBucket(context: Context, bucketId: String, callback: Callback<List<Media>>) {
-        Executor.BOUNDED.execute({ callback.onComplete(getMediaInBucket(context, bucketId)) })
+    fun getMediaInBucket(context: Context, bucketId: String, bucketMedia: MutableLiveData<List<Media>>) {
+        Executor.BOUNDED.execute{ bucketMedia.postValue(getMediaInBucket(context, bucketId)) }
     }
 
     /**
@@ -96,7 +96,7 @@ class MediapickerRepository {
             if(cameraFolder != null){
                 allMediaCount += cameraFolder.count
             }
-            mediaFolders.add(0, MediaFolder(allMediaThumbnail.toString(), "All Media", allMediaCount, "", MediaFolder.FolderType.NORMAL));
+            mediaFolders.add(0, MediaFolder(allMediaThumbnail.toString(), "All Media", allMediaCount, Media.ALL_MEDIA_ID, MediaFolder.FolderType.NORMAL));
         }
 
         if (cameraFolder != null) {
@@ -162,22 +162,27 @@ class MediapickerRepository {
         val sortBy = Images.Media.DATE_TAKEN + " DESC"
         val projection: Array<String>
         projection = if (hasOrientation) {
-            arrayOf(Images.Media.DATA, Images.Media.MIME_TYPE, Images.Media.DATE_TAKEN, Images.Media.ORIENTATION, Images.Media.WIDTH, Images.Media.HEIGHT, Images.Media.SIZE)
+            arrayOf(Images.Media._ID, Images.Media.DATA, Images.Media.MIME_TYPE, Images.Media.DATE_TAKEN, Images.Media.ORIENTATION, Images.Media.WIDTH, Images.Media.HEIGHT, Images.Media.SIZE)
         } else {
-            arrayOf(Images.Media.DATA, Images.Media.MIME_TYPE, Images.Media.DATE_TAKEN, Images.Media.WIDTH, Images.Media.HEIGHT, Images.Media.SIZE)
+            arrayOf(MediaStore.Video.Media._ID, Images.Media.DATA, Images.Media.MIME_TYPE, Images.Media.DATE_TAKEN, Images.Media.WIDTH, Images.Media.HEIGHT, Images.Media.SIZE)
         }
 
+        if (Media.ALL_MEDIA_ID.equals(bucketId)) {
+            selection = Images.Media.DATA + " NOT NULL"
+            selectionArgs = null
+        }
         context.getContentResolver().query(contentUri, projection, selection, selectionArgs, sortBy).use { cursor ->
             while (cursor != null && cursor.moveToNext()) {
                 val path: String = cursor.getString(cursor.getColumnIndexOrThrow(projection[0]))
                 val uri = Uri.fromFile(File(path))
+                val id = if(hasOrientation) cursor.getString(cursor.getColumnIndexOrThrow(Images.Media._ID)) else  cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Video.Media._ID))
                 val mimetype: String = cursor.getString(cursor.getColumnIndexOrThrow(Images.Media.MIME_TYPE))
                 val dateTaken: Long = cursor.getLong(cursor.getColumnIndexOrThrow(Images.Media.DATE_TAKEN))
                 val orientation = if (hasOrientation) cursor.getInt(cursor.getColumnIndexOrThrow(Images.Media.ORIENTATION)) else 0
                 val width: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getWidthColumn(orientation)))
                 val height: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getHeightColumn(orientation)))
                 val size: Long = cursor.getLong(cursor.getColumnIndexOrThrow(Images.Media.SIZE))
-                media.add(Media(uri.toString(), mimetype, dateTaken, width, height, size, bucketId))
+                media.add(Media(id, uri.toString(), mimetype, dateTaken, width, height, size, bucketId))
             }
         }
         return media
@@ -198,7 +203,7 @@ class MediapickerRepository {
         val height = media.height
         val size   = media.size
 
-        return Media(media.uri, media.mimeType, media.date, width, height, size, media.bucketId)
+        return Media(media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId)
     }
 
     fun getContentResolverPopulatedMedia(media : Media) : Media {
@@ -206,7 +211,7 @@ class MediapickerRepository {
         val  height = media.height
         val size   = media.size
 
-        return Media(media.uri, media.mimeType, media.date, width, height, size, media.bucketId);
+        return Media(media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId);
     }
 
     fun getPopulatedMedia(context: Context, media: List<Media>) : List<Media>{
