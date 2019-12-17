@@ -173,7 +173,7 @@ class MediapickerRepository {
         }
         context.getContentResolver().query(contentUri, projection, selection, selectionArgs, sortBy).use { cursor ->
             while (cursor != null && cursor.moveToNext()) {
-                val path: String = cursor.getString(cursor.getColumnIndexOrThrow(projection[0]))
+                val path: String = cursor.getString(cursor.getColumnIndexOrThrow(projection[1]))
                 val uri = Uri.fromFile(File(path))
                 val id = if(hasOrientation) cursor.getString(cursor.getColumnIndexOrThrow(Images.Media._ID)) else  cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Video.Media._ID))
                 val mimetype: String = cursor.getString(cursor.getColumnIndexOrThrow(Images.Media.MIME_TYPE))

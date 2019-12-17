@@ -23,10 +23,15 @@ class MediaPickerList(val mediaSelected: MediaSelected) : Fragment(), AnkoLogger
     var mediaPickerViewModel: MediaPickerViewModel ?= null
     var mediaPickerListAdapter: MediaPickerListAdapter ?= null
     val spanCount = 3
+    var bucketId = ""
 
     companion object {
-        fun newInstance(mediaSelected: MediaSelected): MediaPickerList{
-            return MediaPickerList(mediaSelected)
+        const val BUCKET_ID = "bucket_id"
+        fun newInstance(mediaSelected: MediaSelected, bundle: Bundle): MediaPickerList{
+            val args = Bundle(bundle)
+            val fragment = MediaPickerList(mediaSelected)
+            fragment.arguments = args
+            return fragment
         }
     }
 
@@ -36,6 +41,8 @@ class MediaPickerList(val mediaSelected: MediaSelected) : Fragment(), AnkoLogger
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val bundle = arguments
+        bucketId = bundle?.getString(BUCKET_ID, "")?:""
         mediaPickerViewModel = ViewModelProviders.of(this).get(MediaPickerViewModel::class.java)
     }
 
@@ -58,10 +65,10 @@ class MediaPickerList(val mediaSelected: MediaSelected) : Fragment(), AnkoLogger
             media_picker_list.adapter = mediaPickerListAdapter
 
             mediaPickerViewModel?.selectedMedia?.let {
-                mediaPickerListAdapter?.setSelectedMedia(it)
+                mediaPickerListAdapter?.setSelectedMedias(it)
             }
 
-            mediaPickerViewModel?.bucketMedia?.observe(this, Observer {
+            mediaPickerViewModel?.getBucketMedia(it, bucketId)?.observe(this, Observer {
                 mediaPickerListAdapter?.setData(it)
             })
         }

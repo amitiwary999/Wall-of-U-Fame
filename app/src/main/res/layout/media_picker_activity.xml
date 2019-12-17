@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/fragment_container_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/selected_items">
     <FrameLayout
         android:id="@+id/mediasend_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/selected_items"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/White"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/count_item_selected"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="send"
+            android:textColor="@color/Black"
+            android:textSize="16dp"
+            android:layout_weight="2"/>
+    </LinearLayout>
+</RelativeLayout>
