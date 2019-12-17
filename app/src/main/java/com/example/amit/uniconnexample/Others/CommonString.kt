@@ -16,5 +16,7 @@ class CommonString {
         const val DATE_FORMAT = "yyyy-MM-dd HH:mm:ss"
         const val MEDIA_SELECTED = "media_selected"
         const val MEDIA_UNSELECTED = "media_unselected"
+        const val MEDIA = "media"
+        const val MEDIA_PICKER_ACTIVITY = 123
     }
 }

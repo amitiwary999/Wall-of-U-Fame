@@ -1,15 +1,19 @@
 package com.example.amit.uniconnexample.MediaPicker
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
 import kotlinx.android.synthetic.main.media_picker_activity.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
+import java.util.ArrayList
 
 /**
  * Created by Meera on 13,December,2019
@@ -27,6 +31,16 @@ class MediaPickerActivity : AppCompatActivity(),AnkoLogger, MediaSelected {
                 .replace(R.id.mediasend_fragment_container, fragment)
                 .addToBackStack(MediaPickerFolderFragment.TAG)
                 .commit()
+
+        send_image.setOnClickListener {
+            mediaPickerViewModel?.selectedMedia?.let {
+                info { "medias send ${it.values}" }
+                val resultIntent = Intent()
+                resultIntent.putParcelableArrayListExtra(CommonString.MEDIA, ArrayList(it.values) as ArrayList<out Parcelable>)
+                setResult(CommonString.MEDIA_PICKER_ACTIVITY, resultIntent)
+                finish()
+            }
+        }
     }
 
     override fun onMediaFolderSelected(mediaFolder: MediaFolder) {

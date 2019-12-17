@@ -182,7 +182,7 @@ class MediapickerRepository {
                 val width: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getWidthColumn(orientation)))
                 val height: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getHeightColumn(orientation)))
                 val size: Long = cursor.getLong(cursor.getColumnIndexOrThrow(Images.Media.SIZE))
-                media.add(Media(id, uri.toString(), mimetype, dateTaken, width, height, size, bucketId))
+                media.add(Media(id, uri, mimetype, dateTaken, width, height, size, bucketId))
             }
         }
         return media

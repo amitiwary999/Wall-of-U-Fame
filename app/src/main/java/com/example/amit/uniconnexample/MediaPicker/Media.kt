@@ -1,5 +1,6 @@
 package com.example.amit.uniconnexample.MediaPicker
 
+import android.net.Uri
 import android.os.Parcel
 import android.os.Parcelable
 
@@ -8,7 +9,7 @@ import android.os.Parcelable
  */
 data class Media(
         val id: String ?= null,
-        val uri:String?=null,
+        val uri:Uri?=null,
         val mimeType: String?=null,
         val date: Long=0,
         val width: Int=0,
@@ -19,7 +20,7 @@ data class Media(
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readString(),
-            parcel.readString(),
+            parcel.readParcelable(Uri::class.java.classLoader),
             parcel.readString(),
             parcel.readLong(),
             parcel.readInt(),
@@ -30,7 +31,7 @@ data class Media(
 
     override fun writeToParcel(dest: Parcel?, flags: Int) {
         dest?.writeString(id)
-        dest?.writeString(uri)
+        dest?.writeParcelable(uri, flags)
         dest?.writeString(mimeType)
         dest?.writeLong(date)
         dest?.writeInt(width)

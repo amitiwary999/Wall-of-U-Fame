@@ -31,6 +31,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.amit.uniconnexample.App
+import com.example.amit.uniconnexample.MediaPicker.Media
 import com.example.amit.uniconnexample.MediaPicker.MediaPickerActivity
 import com.example.amit.uniconnexample.Model.BlogModel
 import com.example.amit.uniconnexample.Others.CommonString
@@ -55,6 +56,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_blog.*
 import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.db.NULL
 import org.jetbrains.anko.info
 import retrofit2.Call
 import retrofit2.Callback
@@ -116,7 +118,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
                     return@OnClickListener
                 }
                 val intent = Intent(this, MediaPickerActivity::class.java)
-                startActivity(intent)
+                startActivityForResult(intent, CommonString.MEDIA_PICKER_ACTIVITY)
 
 //                val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
 //                galleryIntent.type = "image/*"
@@ -229,7 +231,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
+        info { "request code ${requestCode} data ${data?.getParcelableArrayListExtra<Media>(CommonString.MEDIA)}" }
         if (requestCode == GALLERY_REQUEST && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
             if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this,
@@ -241,15 +243,22 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
             info { "picked image ${mImageUri}" }
           //  compressImage(mImageUri!!)
 
-            try {
-                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
+        }
 
-                val imageView = findViewById<View>(R.id.mSelectImage) as ImageView
-                imageView.setImageBitmap(bitmap)
-            } catch (e: IOException) {
-                e.printStackTrace()
+        if(requestCode == CommonString.MEDIA_PICKER_ACTIVITY && data != null){
+            val medias = data.getParcelableArrayListExtra<Media>(CommonString.MEDIA)
+            if(medias.size > 0){
+                mImageUri = medias.get(0).uri
             }
+        }
 
+        try {
+            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
+
+            val imageView = findViewById<View>(R.id.mSelectImage) as ImageView
+            imageView.setImageBitmap(bitmap)
+        } catch (e: IOException) {
+            e.printStackTrace()
         }
     }
 
