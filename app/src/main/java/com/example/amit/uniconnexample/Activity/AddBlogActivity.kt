@@ -115,13 +115,13 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
                             arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 12345)
                     return@OnClickListener
                 }
-//                val intent = Intent(this, MediaPickerActivity::class.java)
-//                startActivity(intent)
+                val intent = Intent(this, MediaPickerActivity::class.java)
+                startActivity(intent)
 
-                val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-                galleryIntent.type = "image/*"
-                galleryIntent.action = Intent.ACTION_GET_CONTENT
-                startActivityForResult(galleryIntent, GALLERY_REQUEST)
+//                val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+//                galleryIntent.type = "image/*"
+//                galleryIntent.action = Intent.ACTION_GET_CONTENT
+//                startActivityForResult(galleryIntent, GALLERY_REQUEST)
             })
             buttondone.setOnClickListener {
                 if (isNetworkConnected) {

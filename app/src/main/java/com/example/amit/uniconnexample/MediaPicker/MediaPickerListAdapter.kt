@@ -11,11 +11,13 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.info
 
 /**
  * Created by Meera on 16,December,2019
  */
-class MediaPickerListAdapter(var frameWidth: Int, var mediaSelected: MediaSelected) : RecyclerView.Adapter<MediaPickerListAdapter.MediaListViewHolder>() {
+class MediaPickerListAdapter(var frameWidth: Int, var mediaSelected: MediaSelected) : RecyclerView.Adapter<MediaPickerListAdapter.MediaListViewHolder>(),AnkoLogger {
     val mediaList: ArrayList<Media> = ArrayList()
     val selectedMediaFile: HashMap<String, Media> = HashMap()
 
@@ -25,6 +27,7 @@ class MediaPickerListAdapter(var frameWidth: Int, var mediaSelected: MediaSelect
     }
 
     fun setSelectedMedias(medias: HashMap<String, Media>){
+        info { "set selected medias ${medias.size}" }
         selectedMediaFile.putAll(medias)
     }
 

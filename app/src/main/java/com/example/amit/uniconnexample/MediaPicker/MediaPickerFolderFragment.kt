@@ -23,6 +23,7 @@ class MediaPickerFolderFragment(var mediaFolderSelected: MediaSelected) : Fragme
     var mediaPickerViewModel: MediaPickerViewModel ?= null
     val spanCount = 2
     companion object {
+        val TAG = "media_picker_folder_fragment"
         fun newInstance(mediaFolderSelected: MediaSelected): MediaPickerFolderFragment {
             return MediaPickerFolderFragment(mediaFolderSelected)
         }

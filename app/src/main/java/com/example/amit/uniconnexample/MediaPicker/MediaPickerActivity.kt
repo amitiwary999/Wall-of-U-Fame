@@ -25,6 +25,7 @@ class MediaPickerActivity : AppCompatActivity(),AnkoLogger, MediaSelected {
         val fragment: Fragment = MediaPickerFolderFragment.newInstance(this)
         supportFragmentManager.beginTransaction()
                 .replace(R.id.mediasend_fragment_container, fragment)
+                .addToBackStack(MediaPickerFolderFragment.TAG)
                 .commit()
     }
 
@@ -35,6 +36,7 @@ class MediaPickerActivity : AppCompatActivity(),AnkoLogger, MediaSelected {
         val fragment: Fragment = MediaPickerList.newInstance(this, b)
         supportFragmentManager.beginTransaction()
                 .replace(R.id.mediasend_fragment_container, fragment)
+                .addToBackStack(MediaPickerList.TAG)
                 .commit()
     }
 
@@ -61,6 +63,13 @@ class MediaPickerActivity : AppCompatActivity(),AnkoLogger, MediaSelected {
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
+        val backStackEntryCount = supportFragmentManager.backStackEntryCount
+        if(backStackEntryCount == 1){
+            finish()
+            super.onBackPressed()
+        }else{
+            supportFragmentManager.popBackStackImmediate()
+        }
+        info { "back stack entry count ${backStackEntryCount}" }
     }
 }
