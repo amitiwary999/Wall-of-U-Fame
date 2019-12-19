@@ -76,14 +76,17 @@ class MediaPickerListAdapter(var frameWidth: Int, var mediaSelected: MediaSelect
         val parent: LinearLayout = view.findViewById(R.id.cardView)
         val itemImage: ImageView = view.findViewById(R.id.imageView)
         val pickedImageFrame: FrameLayout = view.findViewById(R.id.picked_image_frame)
+        val pickedImageIcon: ImageView = view.findViewById(R.id.picked_media_sign)
 
         fun setData(media: Media, selectedMedia: HashMap<String, Media>){
             if(selectedMedia.get(media.id) != null){
                 //show selected
                 pickedImageFrame.visibility = View.VISIBLE
+                pickedImageIcon.visibility = View.VISIBLE
             }else{
                 //show not selected
                 pickedImageFrame.visibility = View.GONE
+                pickedImageIcon.visibility = View.GONE
             }
 
             Glide.with(view).setDefaultRequestOptions(RequestOptions().centerCrop().error(R.drawable.ic_folder)).load(media.uri).override(frameWidth).into(itemImage)

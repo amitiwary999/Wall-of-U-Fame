@@ -251,14 +251,15 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
                 mImageUri = medias.get(0).uri
             }
         }
+        mImageUri?.let {
+            try {
+                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
 
-        try {
-            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
-
-            val imageView = findViewById<View>(R.id.mSelectImage) as ImageView
-            imageView.setImageBitmap(bitmap)
-        } catch (e: IOException) {
-            e.printStackTrace()
+                val imageView = findViewById<View>(R.id.mSelectImage) as ImageView
+                imageView.setImageBitmap(bitmap)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
 
