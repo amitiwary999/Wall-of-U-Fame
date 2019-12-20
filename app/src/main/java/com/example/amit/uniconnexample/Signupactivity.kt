@@ -27,6 +27,8 @@ import android.widget.Toast
 
 import com.example.amit.uniconnexample.Activity.Loginactivity
 import com.example.amit.uniconnexample.Activity.NewTabActivity
+import com.example.amit.uniconnexample.MediaPicker.Media
+import com.example.amit.uniconnexample.MediaPicker.MediaPickerActivity
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.Others.UserData
 import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
@@ -102,10 +104,9 @@ class Signupactivity : AppCompatActivity() {
                     arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 12345)
             return
         }
-        val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-        galleryIntent.type = "image/*"
-        galleryIntent.action = Intent.ACTION_GET_CONTENT
-        startActivityForResult(galleryIntent, GALLERY_REQUEST)
+        val intent = Intent(this, MediaPickerActivity::class.java)
+        intent.putExtra(MediaPickerActivity.SINGLE_MEDIA_ALLOWED, 1)
+        startActivityForResult(intent, CommonString.MEDIA_PICKER_ACTIVITY)
     }
 
     internal fun sup() {
@@ -145,22 +146,20 @@ class Signupactivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == GALLERY_REQUEST && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
-            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this,
-                        arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 12345)
-                return
+        if(requestCode == CommonString.MEDIA_PICKER_ACTIVITY && data != null){
+            val medias = data.getParcelableArrayListExtra<Media>(CommonString.MEDIA)
+            if(medias.size > 0){
+                mImageUri = medias.get(0).uri
             }
+        }
 
-            mImageUri = data.data
-
+        mImageUri?.let {
             try {
-                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
+                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, it)
                 iview.setImageBitmap(bitmap)
             } catch (e: IOException) {
                 e.printStackTrace()
             }
-
         }
     }
 

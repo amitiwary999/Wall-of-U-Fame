@@ -24,13 +24,18 @@
         <TextView
             android:id="@+id/count_item_selected"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:padding="@dimen/pad_5dp"
+            android:layout_gravity="center_vertical"
             android:layout_weight="8"/>
         <TextView
             android:id="@+id/send_image"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="send"
+            android:padding="@dimen/pad_5dp"
+            android:layout_gravity="center"
             android:textColor="@color/Black"
             android:textSize="16dp"
             android:layout_weight="2"/>

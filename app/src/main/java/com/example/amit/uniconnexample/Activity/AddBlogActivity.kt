@@ -118,6 +118,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
                     return@OnClickListener
                 }
                 val intent = Intent(this, MediaPickerActivity::class.java)
+                intent.putExtra(MediaPickerActivity.SINGLE_MEDIA_ALLOWED, 1)
                 startActivityForResult(intent, CommonString.MEDIA_PICKER_ACTIVITY)
 
 //                val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)

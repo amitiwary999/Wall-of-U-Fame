@@ -20,11 +20,16 @@ import java.util.ArrayList
  */
 class MediaPickerActivity : AppCompatActivity(),AnkoLogger, MediaSelected {
     var mediaPickerViewModel: MediaPickerViewModel ?= null
+    var singleMediaAllowed: Int = 0
+    companion object{
+        const val SINGLE_MEDIA_ALLOWED = "single_media_allowed"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.media_picker_activity)
         info { "media picker activity" }
+        singleMediaAllowed = intent.extras?.getInt(SINGLE_MEDIA_ALLOWED, 0)?:0
         mediaPickerViewModel = ViewModelProviders.of(this).get(MediaPickerViewModel::class.java)
         val fragment: Fragment = MediaPickerFolderFragment.newInstance(this)
         supportFragmentManager.beginTransaction()
@@ -67,11 +72,18 @@ class MediaPickerActivity : AppCompatActivity(),AnkoLogger, MediaSelected {
 
     fun showSelectedCount(){
         mediaPickerViewModel?.selectedMedia?.let {
-            if(it.size > 0){
-                selected_items.visibility = View.VISIBLE
-                count_item_selected.text = it.size.toString()
+            if(singleMediaAllowed == 1){
+                val resultIntent = Intent()
+                resultIntent.putParcelableArrayListExtra(CommonString.MEDIA, ArrayList(it.values) as ArrayList<out Parcelable>)
+                setResult(CommonString.MEDIA_PICKER_ACTIVITY, resultIntent)
+                finish()
             }else{
-                selected_items.visibility = View.GONE
+                if(it.size > 0){
+                    selected_items.visibility = View.VISIBLE
+                    count_item_selected.text = it.size.toString()
+                }else{
+                    selected_items.visibility = View.GONE
+                }
             }
         }
     }
