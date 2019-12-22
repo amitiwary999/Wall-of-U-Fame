@@ -15,6 +15,7 @@ MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/c
 MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/34aeee6f582253e0caf7d47cfd0209c8/jetified-LikeButton-0.2.0/AndroidManifest.xml:2:1-17:12
 MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/2a3760f27d5bbb3dcef40f86900d6037/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:2:1-10:12
 MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/b3ce44ca00843a53cedfd12760d7373c/jetified-Toasty-1.1.2/AndroidManifest.xml:2:1-17:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/02539c8b944315cb12242113b7317339/constraintlayout-2.0.0-beta4/AndroidManifest.xml:2:1-11:12
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meera/.gradle/caches/transforms-2/files-2.1/7e3c47b96c2600773f1a71605f1df9a7/jetified-library-1.1.6/AndroidManifest.xml:6:1-16:12
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7b97a98e053a0326f7b67982fca1484b/anko-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7d483bc86a7a5df761ac902983c1039f/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:2:1-13:12
@@ -216,6 +217,8 @@ MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/cach
 MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/2a3760f27d5bbb3dcef40f86900d6037/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:8:5-20
 MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/b3ce44ca00843a53cedfd12760d7373c/jetified-Toasty-1.1.2/AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/b3ce44ca00843a53cedfd12760d7373c/jetified-Toasty-1.1.2/AndroidManifest.xml:11:5-15:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/02539c8b944315cb12242113b7317339/constraintlayout-2.0.0-beta4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/02539c8b944315cb12242113b7317339/constraintlayout-2.0.0-beta4/AndroidManifest.xml:9:5-20
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7b97a98e053a0326f7b67982fca1484b/anko-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7b97a98e053a0326f7b67982fca1484b/anko-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7d483bc86a7a5df761ac902983c1039f/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:11:5-20
@@ -446,6 +449,8 @@ MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/cach
 MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/2a3760f27d5bbb3dcef40f86900d6037/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:6:5-44
 MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/b3ce44ca00843a53cedfd12760d7373c/jetified-Toasty-1.1.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/b3ce44ca00843a53cedfd12760d7373c/jetified-Toasty-1.1.2/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/02539c8b944315cb12242113b7317339/constraintlayout-2.0.0-beta4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/02539c8b944315cb12242113b7317339/constraintlayout-2.0.0-beta4/AndroidManifest.xml:5:5-7:41
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meera/.gradle/caches/transforms-2/files-2.1/7e3c47b96c2600773f1a71605f1df9a7/jetified-library-1.1.6/AndroidManifest.xml:12:5-14:41
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meera/.gradle/caches/transforms-2/files-2.1/7e3c47b96c2600773f1a71605f1df9a7/jetified-library-1.1.6/AndroidManifest.xml:12:5-14:41
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7b97a98e053a0326f7b67982fca1484b/anko-0.10.8/AndroidManifest.xml:7:5-9:41
