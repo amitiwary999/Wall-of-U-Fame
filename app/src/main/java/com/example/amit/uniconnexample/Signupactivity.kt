@@ -1,33 +1,23 @@
 package com.example.amit.uniconnexample
 
-import android.Manifest
-import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.PorterDuff
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.View
-import com.google.android.material.textfield.TextInputLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.Toast
 
-import com.example.amit.uniconnexample.Activity.Loginactivity
 import com.example.amit.uniconnexample.Activity.NewTabActivity
-import com.example.amit.uniconnexample.MediaPicker.Media
+import com.example.amit.uniconnexample.MediaPicker.ChosenMediaFile
 import com.example.amit.uniconnexample.MediaPicker.MediaPickerActivity
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.Others.UserData
@@ -35,26 +25,16 @@ import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
 import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
 import com.example.amit.uniconnexample.rest.model.UserDetailRequestModel
 import com.example.amit.uniconnexample.utils.PrefManager
-import com.example.amit.uniconnexample.utils.UtilPostIdGenerator
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_signup.*
 
 import org.apache.commons.validator.routines.EmailValidator
 
-import java.io.File
-import pl.aprilapps.easyphotopicker.DefaultCallback
-import pl.aprilapps.easyphotopicker.EasyImage
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import timber.log.Timber
 import java.io.IOException
 
 /**
@@ -147,7 +127,7 @@ class Signupactivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if(requestCode == CommonString.MEDIA_PICKER_ACTIVITY && data != null){
-            val medias = data.getParcelableArrayListExtra<Media>(CommonString.MEDIA)
+            val medias = data.getParcelableArrayListExtra<ChosenMediaFile>(CommonString.MEDIA)
             if(medias.size > 0){
                 mImageUri = medias.get(0).uri
             }

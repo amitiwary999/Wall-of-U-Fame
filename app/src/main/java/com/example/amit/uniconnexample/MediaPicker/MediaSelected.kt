@@ -5,5 +5,5 @@ package com.example.amit.uniconnexample.MediaPicker
  */
 interface MediaSelected {
     fun onMediaFolderSelected(mediaFolder: MediaFolder)
-    fun onMediaSelected(media: Media)
+    fun onMediaSelected(media: ChosenMediaFile)
 }

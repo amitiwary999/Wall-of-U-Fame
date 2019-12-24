@@ -1,25 +1,16 @@
 package com.example.amit.uniconnexample.Activity
 
-import android.Manifest
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
-import android.content.IntentSender
 import android.content.pm.PackageManager
 import android.graphics.*
-import android.location.Address
-import android.location.Geocoder
-import android.location.Location
 import android.media.ExifInterface
 import android.net.ConnectivityManager
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
-import android.os.Handler
 import android.provider.MediaStore
-import android.telephony.TelephonyManager
-import android.telephony.gsm.GsmCellLocation
 import android.text.format.DateFormat
 import android.util.Log
 import android.view.View
@@ -30,12 +21,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.amit.uniconnexample.App
-import com.example.amit.uniconnexample.MediaPicker.Media
+import com.example.amit.uniconnexample.MediaPicker.ChosenMediaFile
 import com.example.amit.uniconnexample.MediaPicker.MediaPickerActivity
-import com.example.amit.uniconnexample.Model.BlogModel
 import com.example.amit.uniconnexample.Others.CommonString
-import com.example.amit.uniconnexample.Others.UserData
 import com.example.amit.uniconnexample.PostBlogModel
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Signupactivity
@@ -44,11 +32,6 @@ import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
 import com.example.amit.uniconnexample.utils.PrefManager
 import com.example.amit.uniconnexample.utils.UtilPostIdGenerator
 import com.example.amit.uniconnexample.utils.Utils
-import com.google.android.gms.common.ConnectionResult
-import com.google.android.gms.common.GoogleApiAvailability
-import com.google.android.gms.common.api.GoogleApiClient
-import com.google.android.gms.common.api.PendingResult
-import com.google.android.gms.location.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -56,7 +39,6 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_blog.*
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.db.NULL
 import org.jetbrains.anko.info
 import retrofit2.Call
 import retrofit2.Callback
@@ -232,7 +214,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        info { "request code ${requestCode} data ${data?.getParcelableArrayListExtra<Media>(CommonString.MEDIA)}" }
+        info { "request code ${requestCode} data ${data?.getParcelableArrayListExtra<ChosenMediaFile>(CommonString.MEDIA)}" }
         if (requestCode == GALLERY_REQUEST && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
             if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this,
@@ -247,7 +229,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
         }
 
         if(requestCode == CommonString.MEDIA_PICKER_ACTIVITY && data != null){
-            val medias = data.getParcelableArrayListExtra<Media>(CommonString.MEDIA)
+            val medias = data.getParcelableArrayListExtra<ChosenMediaFile>(CommonString.MEDIA)
             if(medias.size > 0){
                 mImageUri = medias.get(0).uri
             }

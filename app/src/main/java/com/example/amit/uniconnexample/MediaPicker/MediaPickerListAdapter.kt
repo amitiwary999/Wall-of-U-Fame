@@ -18,20 +18,20 @@ import org.jetbrains.anko.info
  * Created by Meera on 16,December,2019
  */
 class MediaPickerListAdapter(var frameWidth: Int, var mediaSelected: MediaSelected) : RecyclerView.Adapter<MediaPickerListAdapter.MediaListViewHolder>(),AnkoLogger {
-    val mediaList: ArrayList<Media> = ArrayList()
-    val selectedMediaFile: HashMap<String, Media> = HashMap()
+    val mediaList: ArrayList<ChosenMediaFile> = ArrayList()
+    val selectedMediaFile: HashMap<String, ChosenMediaFile> = HashMap()
 
-    fun setData(medias: List<Media>){
+    fun setData(medias: List<ChosenMediaFile>){
         mediaList.addAll(medias)
         notifyDataSetChanged()
     }
 
-    fun setSelectedMedias(medias: HashMap<String, Media>){
+    fun setSelectedMedias(medias: HashMap<String, ChosenMediaFile>){
         info { "set selected medias ${medias.size}" }
         selectedMediaFile.putAll(medias)
     }
 
-    fun setSelectedMedia(media: Media){
+    fun setSelectedMedia(media: ChosenMediaFile){
         if(selectedMediaFile.get(media.id) != null){
            selectedMediaFile.remove(media.id)
         }else{
@@ -78,7 +78,7 @@ class MediaPickerListAdapter(var frameWidth: Int, var mediaSelected: MediaSelect
         val pickedImageFrame: FrameLayout = view.findViewById(R.id.picked_image_frame)
         val pickedImageIcon: ImageView = view.findViewById(R.id.picked_media_sign)
 
-        fun setData(media: Media, selectedMedia: HashMap<String, Media>){
+        fun setData(media: ChosenMediaFile, selectedMedia: HashMap<String, ChosenMediaFile>){
             if(selectedMedia.get(media.id) != null){
                 //show selected
                 pickedImageFrame.visibility = View.VISIBLE
@@ -102,6 +102,6 @@ class MediaPickerListAdapter(var frameWidth: Int, var mediaSelected: MediaSelect
     }
 
     interface MediaSelected{
-        fun onMediaSelected(media: Media)
+        fun onMediaSelected(media: ChosenMediaFile)
     }
 }

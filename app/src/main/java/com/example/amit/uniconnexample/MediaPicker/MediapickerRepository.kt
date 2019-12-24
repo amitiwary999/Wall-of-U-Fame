@@ -30,7 +30,7 @@ class MediapickerRepository {
     /**
      * Retrieves a list of media items (images and videos) that are present int he specified bucket.
      */
-    fun getMediaInBucket(context: Context, bucketId: String, bucketMedia: MutableLiveData<List<Media>>) {
+    fun getMediaInBucket(context: Context, bucketId: String, bucketMedia: MutableLiveData<List<ChosenMediaFile>>) {
         Executor.BOUNDED.execute{ bucketMedia.postValue(getMediaInBucket(context, bucketId)) }
     }
 
@@ -38,7 +38,7 @@ class MediapickerRepository {
      * Given an existing list of {@link Media}, this will ensure that the media is populate with as
      * much data as we have, like width/height.
      */
-    fun getPopulatedMedia(context: Context, media: List<Media>, callback : Callback<List<Media>>) {
+    fun getPopulatedMedia(context: Context, media: List<ChosenMediaFile>, callback : Callback<List<ChosenMediaFile>>) {
         if(media.all { isPopulated(it) }){
             callback.onComplete(media)
             return
@@ -47,7 +47,7 @@ class MediapickerRepository {
         Executor.BOUNDED.execute{callback.onComplete(getPopulatedMedia(context, media))}
     }
 
-    fun getMostRecentItem(context: Context, callback: Callback<Media>) {
+    fun getMostRecentItem(context: Context, callback: Callback<ChosenMediaFile>) {
         Executor.BOUNDED.execute({ callback.onComplete(getMostRecentItem(context)) })
     }
 
@@ -96,7 +96,7 @@ class MediapickerRepository {
             if(cameraFolder != null){
                 allMediaCount += cameraFolder.count
             }
-            mediaFolders.add(0, MediaFolder(allMediaThumbnail.toString(), "All Media", allMediaCount, Media.ALL_MEDIA_ID, MediaFolder.FolderType.NORMAL));
+            mediaFolders.add(0, MediaFolder(allMediaThumbnail.toString(), "All Media", allMediaCount, ChosenMediaFile.ALL_MEDIA_ID, MediaFolder.FolderType.NORMAL));
         }
 
         if (cameraFolder != null) {
@@ -143,20 +143,20 @@ class MediapickerRepository {
     }
 
     @WorkerThread
-    private fun getMediaInBucket(context: Context, bucketId: String): List<Media> {
+    private fun getMediaInBucket(context: Context, bucketId: String): List<ChosenMediaFile> {
        //check permission
         val images = getMediaInBucket(context, bucketId, Images.Media.EXTERNAL_CONTENT_URI, true)
         val videos = getMediaInBucket(context, bucketId, MediaStore.Video.Media.EXTERNAL_CONTENT_URI, false)
-        val media: MutableList<Media> = ArrayList(images.size + videos.size)
+        val media: MutableList<ChosenMediaFile> = ArrayList(images.size + videos.size)
         media.addAll(images)
         media.addAll(videos)
-        media.sortedWith(compareBy(Media::date))
+        media.sortedWith(compareBy(ChosenMediaFile::date))
         return media
     }
 
     @WorkerThread
-    private fun getMediaInBucket(context: Context, bucketId: String, contentUri: Uri, hasOrientation: Boolean): List<Media> {
-        val media: MutableList<Media> = LinkedList()
+    private fun getMediaInBucket(context: Context, bucketId: String, contentUri: Uri, hasOrientation: Boolean): List<ChosenMediaFile> {
+        val media: MutableList<ChosenMediaFile> = LinkedList()
         var selection = Images.Media.BUCKET_ID + " = ? AND " + Images.Media.DATA + " NOT NULL"
         var selectionArgs: Array<String>? = arrayOf(bucketId)
         val sortBy = Images.Media.DATE_TAKEN + " DESC"
@@ -167,7 +167,7 @@ class MediapickerRepository {
             arrayOf(MediaStore.Video.Media._ID, Images.Media.DATA, Images.Media.MIME_TYPE, Images.Media.DATE_TAKEN, Images.Media.WIDTH, Images.Media.HEIGHT, Images.Media.SIZE)
         }
 
-        if (Media.ALL_MEDIA_ID.equals(bucketId)) {
+        if (ChosenMediaFile.ALL_MEDIA_ID.equals(bucketId)) {
             selection = Images.Media.DATA + " NOT NULL"
             selectionArgs = null
         }
@@ -182,7 +182,7 @@ class MediapickerRepository {
                 val width: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getWidthColumn(orientation)))
                 val height: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getHeightColumn(orientation)))
                 val size: Long = cursor.getLong(cursor.getColumnIndexOrThrow(Images.Media.SIZE))
-                media.add(Media(id, uri, mimetype, dateTaken, width, height, size, bucketId))
+                media.add(ChosenMediaFile(id, uri, mimetype, dateTaken, width, height, size, bucketId))
             }
         }
         return media
@@ -198,23 +198,23 @@ class MediapickerRepository {
         return if (orientation == 0 || orientation == 180) Images.Media.HEIGHT else Images.Media.WIDTH
     }
 
-    fun getLocallyPopulatedMedia(media: Media) : Media {
+    fun getLocallyPopulatedMedia(media: ChosenMediaFile) : ChosenMediaFile {
         val width  = media.width
         val height = media.height
         val size   = media.size
 
-        return Media(media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId)
+        return ChosenMediaFile(media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId)
     }
 
-    fun getContentResolverPopulatedMedia(media : Media) : Media {
+    fun getContentResolverPopulatedMedia(media : ChosenMediaFile) : ChosenMediaFile {
         val width  = media.width
         val  height = media.height
         val size   = media.size
 
-        return Media(media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId);
+        return ChosenMediaFile(media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId);
     }
 
-    fun getPopulatedMedia(context: Context, media: List<Media>) : List<Media>{
+    fun getPopulatedMedia(context: Context, media: List<ChosenMediaFile>) : List<ChosenMediaFile>{
         //check for permission
 
         return media.map {
@@ -226,12 +226,12 @@ class MediapickerRepository {
         }.toList()
     }
 
-    fun isPopulated(media : Media): Boolean {
+    fun isPopulated(media : ChosenMediaFile): Boolean {
         return media.width > 0 && media.height > 0 && media.size > 0
     }
 
     @WorkerThread
-    fun getMostRecentItem(context : Context) : Media {
+    fun getMostRecentItem(context : Context) : ChosenMediaFile {
 
         val media = getMediaInBucket(context, "", Images.Media.EXTERNAL_CONTENT_URI, true);
         return media.get(0)

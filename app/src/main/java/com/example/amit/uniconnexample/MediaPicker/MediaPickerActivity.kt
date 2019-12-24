@@ -6,7 +6,6 @@ import android.os.Parcelable
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
@@ -59,7 +58,7 @@ class MediaPickerActivity : AppCompatActivity(),AnkoLogger, MediaSelected {
                 .commit()
     }
 
-    override fun onMediaSelected(media: Media) {
+    override fun onMediaSelected(media: ChosenMediaFile) {
         mediaPickerViewModel?.selectedMedia?.let {
             if(it.get(media.id) != null){
                 mediaPickerViewModel?.removeSelectedMedia(media)

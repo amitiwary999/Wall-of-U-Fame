@@ -7,7 +7,7 @@ import android.os.Parcelable
 /**
  * Created by Meera on 14,December,2019
  */
-data class Media(
+data class ChosenMediaFile(
         val id: String ?= null,
         val uri:Uri?=null,
         val mimeType: String?=null,
@@ -44,13 +44,13 @@ data class Media(
         return 0
     }
 
-    companion object CREATOR: Parcelable.Creator<Media> {
-        override fun createFromParcel(source: Parcel): Media {
-            return Media(source)
+    companion object CREATOR: Parcelable.Creator<ChosenMediaFile> {
+        override fun createFromParcel(source: Parcel): ChosenMediaFile {
+            return ChosenMediaFile(source)
         }
 
-        override fun newArray(size: Int): Array<Media?> {
-            return arrayOfNulls<Media>(size)
+        override fun newArray(size: Int): Array<ChosenMediaFile?> {
+            return arrayOfNulls<ChosenMediaFile>(size)
         }
 
         const val ALL_MEDIA_ID = "all_media"

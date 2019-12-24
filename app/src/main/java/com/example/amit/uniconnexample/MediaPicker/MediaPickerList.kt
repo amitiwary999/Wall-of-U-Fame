@@ -2,7 +2,6 @@ package com.example.amit.uniconnexample.MediaPicker
 
 import android.content.Context
 import android.os.Bundle
-import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -77,7 +76,7 @@ class MediaPickerList(val mediaSelected: MediaSelected) : Fragment(), AnkoLogger
         }
     }
 
-    override fun onMediaSelected(media: Media) {
+    override fun onMediaSelected(media: ChosenMediaFile) {
         mediaSelected.onMediaSelected(media)
     }
 }
