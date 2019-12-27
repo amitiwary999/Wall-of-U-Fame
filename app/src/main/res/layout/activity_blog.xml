@@ -12,20 +12,27 @@
         appa:title="Post"
         appa:titleTextColor="#fff"/>
 
-
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_below="@id/toolbar"
+    android:id="@+id/selected_media"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_margin="10dp"
+    android:background="@drawable/click_me">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/toolbar"
         android:id="@+id/mSelectImage"
-        android:clickable="true"
-        android:src="@drawable/click_me"
-        android:adjustViewBounds="true"
-        android:layout_alignEnd="@+id/mdesc"
-        android:layout_alignStart="@+id/mdesc" />
-
-
+        android:visibility="gone"
+        android:adjustViewBounds="true" />
+    <com.example.amit.uniconnexample.View.VideoPlayerView
+        android:id="@+id/selected_video_player_view"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="150dp"/>
+</FrameLayout>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +40,7 @@
         android:inputType="textMultiLine"
         android:lines="3"
         android:id="@+id/mdesc"
-        android:layout_below="@id/mSelectImage"
+        android:layout_below="@id/selected_media"
         android:background="@drawable/input_outline"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"

@@ -92,6 +92,8 @@ MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /home/meera/.gradle/
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/79194027d302bf1abacc2de5641ec6ee/lifecycle-process-2.1.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/ec2601ff09738588f852e533708902b1/lifecycle-service-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2cce335d8ea7cc4e82cdf4446536c5f3/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/5a893bd82c0ba8cbd5460e90576c5126/exoplayer-2.9.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/c2a1c59a0134d163e6ff4166e10bd577/jetified-exoplayer-ui-2.9.6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media2:media2:1.0.0-alpha02] /home/meera/.gradle/caches/transforms-2/files-2.1/5f880878af10b378f1f6bd296092911d/media2-1.0.0-alpha02/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media:media:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/37f58a0737762897373d1dfe0a474e5b/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/4105de7243075cacd51fa2718273cf99/transition-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -121,6 +123,10 @@ MERGED from [org.jetbrains.anko:commons-base:0.10.8] /home/meera/.gradle/caches/
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/31ec515f2e9052a3fce5bbeda9c3d6f1/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/meera/.gradle/caches/transforms-2/files-2.1/6205905c654bf66a3dce39eb91c074cb/gifdecoder-4.10.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5f268707f7e5b993855229e6871148d5/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/fc4a5c8c29782c099a57c9393bddc276/jetified-exoplayer-dash-2.9.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/9b2f8805361eb33972e430045122a42a/jetified-exoplayer-hls-2.9.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/1a0b66dbee96d580548a5e176ce3cc38/jetified-exoplayer-smoothstreaming-2.9.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/082ad68ac106ca63d8fcd3c0e11d20ff/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fd6bdb4350f79e5956b9ac8e10fc2999/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.print:print:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/972234eb6fe148d9ff0b2ddbb148f45d/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/3ed7519138f42eacfba1d43cd456814e/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -603,6 +609,10 @@ MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /home/meera/.gradle/cac
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/ec2601ff09738588f852e533708902b1/lifecycle-service-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2cce335d8ea7cc4e82cdf4446536c5f3/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2cce335d8ea7cc4e82cdf4446536c5f3/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/5a893bd82c0ba8cbd5460e90576c5126/exoplayer-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/5a893bd82c0ba8cbd5460e90576c5126/exoplayer-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/c2a1c59a0134d163e6ff4166e10bd577/jetified-exoplayer-ui-2.9.6/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/c2a1c59a0134d163e6ff4166e10bd577/jetified-exoplayer-ui-2.9.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.media2:media2:1.0.0-alpha02] /home/meera/.gradle/caches/transforms-2/files-2.1/5f880878af10b378f1f6bd296092911d/media2-1.0.0-alpha02/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media2:media2:1.0.0-alpha02] /home/meera/.gradle/caches/transforms-2/files-2.1/5f880878af10b378f1f6bd296092911d/media2-1.0.0-alpha02/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/37f58a0737762897373d1dfe0a474e5b/media-1.0.0/AndroidManifest.xml:20:5-44
@@ -661,6 +671,14 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/meera/.gradle/ca
 MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/meera/.gradle/caches/transforms-2/files-2.1/6205905c654bf66a3dce39eb91c074cb/gifdecoder-4.10.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5f268707f7e5b993855229e6871148d5/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5f268707f7e5b993855229e6871148d5/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/fc4a5c8c29782c099a57c9393bddc276/jetified-exoplayer-dash-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/fc4a5c8c29782c099a57c9393bddc276/jetified-exoplayer-dash-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/9b2f8805361eb33972e430045122a42a/jetified-exoplayer-hls-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/9b2f8805361eb33972e430045122a42a/jetified-exoplayer-hls-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/1a0b66dbee96d580548a5e176ce3cc38/jetified-exoplayer-smoothstreaming-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/1a0b66dbee96d580548a5e176ce3cc38/jetified-exoplayer-smoothstreaming-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/082ad68ac106ca63d8fcd3c0e11d20ff/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/082ad68ac106ca63d8fcd3c0e11d20ff/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fd6bdb4350f79e5956b9ac8e10fc2999/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fd6bdb4350f79e5956b9ac8e10fc2999/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.print:print:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/972234eb6fe148d9ff0b2ddbb148f45d/print-1.0.0/AndroidManifest.xml:20:5-44
@@ -878,6 +896,8 @@ MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/meera/.gra
 MERGED from [com.google.firebase:firebase-analytics-impl:9.4.0] /home/meera/.gradle/caches/transforms-2/files-2.1/9c521c2fe7a1193ca15e2a5ad6e16b06/jetified-firebase-analytics-impl-9.4.0/AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/meera/.gradle/caches/transforms-2/files-2.1/33dae3f2c79e02dde75f3aab5358e4ac/jetified-firebase-iid-9.4.0/AndroidManifest.xml:20:5-79
 MERGED from [com.google.firebase:firebase-iid:9.4.0] /home/meera/.gradle/caches/transforms-2/files-2.1/33dae3f2c79e02dde75f3aab5358e4ac/jetified-firebase-iid-9.4.0/AndroidManifest.xml:20:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/082ad68ac106ca63d8fcd3c0e11d20ff/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/082ad68ac106ca63d8fcd3c0e11d20ff/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:24:5-79
 	android:name
 		ADDED from [com.google.android.gms:play-services-ads-lite:9.4.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0125288d119634fa2d639c2294463202/jetified-play-services-ads-lite-9.4.0/AndroidManifest.xml:21:22-76
 activity#com.google.android.gms.ads.AdActivity

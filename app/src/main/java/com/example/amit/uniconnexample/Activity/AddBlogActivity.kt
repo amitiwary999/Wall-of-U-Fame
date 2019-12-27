@@ -15,6 +15,7 @@ import android.text.format.DateFormat
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -32,6 +33,10 @@ import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
 import com.example.amit.uniconnexample.utils.PrefManager
 import com.example.amit.uniconnexample.utils.UtilPostIdGenerator
 import com.example.amit.uniconnexample.utils.Utils
+import com.google.android.exoplayer2.*
+import com.google.android.exoplayer2.source.TrackGroupArray
+import com.google.android.exoplayer2.trackselection.TrackSelectionArray
+import com.google.android.exoplayer2.upstream.DataSource
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -54,6 +59,7 @@ import java.util.*
 class AddBlogActivity: AppCompatActivity(), AnkoLogger{
     private var auth: FirebaseAuth? = null
     private var mImageUri: Uri? = null
+    private var mVideoUri: Uri ?= null
     private var mStorage: StorageReference? = null
     private var mDatabase: DatabaseReference? = null
     private var mDatabas: DatabaseReference? = null
@@ -71,6 +77,16 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
                     Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             return cm.activeNetworkInfo != null
         }
+
+    var simpleExoPlayer: SimpleExoPlayer? = null
+    var play: ImageButton? = null
+    var dataSourceFactory: DataSource.Factory? = null
+
+    var loadControl: LoadControl = DefaultLoadControl.Builder().setBufferDurationsMs(
+            15 * 1000,  // Min buffer size
+            30 * 1000,  // Max buffer size
+            500,  // Min playback time buffered before starting video
+            100).createDefaultLoadControl()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,7 +109,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
         val mSelectImage = findViewById<View>(R.id.mSelectImage) as ImageView
         mStorage = FirebaseStorage.getInstance().reference
         if (auth!!.currentUser != null) {
-            mSelectImage.setOnClickListener(View.OnClickListener {
+            selected_media.setOnClickListener(View.OnClickListener {
                 if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(this,
                             arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 12345)
@@ -231,10 +247,18 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
         if(requestCode == CommonString.MEDIA_PICKER_ACTIVITY && data != null){
             val medias = data.getParcelableArrayListExtra<ChosenMediaFile>(CommonString.MEDIA)
             if(medias.size > 0){
-                mImageUri = medias.get(0).uri
+                medias[0].mimeType?.let {
+                    if(it.contains(CommonString.MimeType.IMAGE)){
+                        mImageUri = medias.get(0).uri
+                    }else if(it.contains(CommonString.MimeType.VIDEO)){
+                        mVideoUri = medias.get(0).uri
+                    }
+                }
             }
         }
         mImageUri?.let {
+            mSelectImage.visibility = View.VISIBLE
+            selected_video_player_view.visibility = View.GONE
             try {
                 val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
 
@@ -243,6 +267,13 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
             } catch (e: Exception) {
                 e.printStackTrace()
             }
+        }
+
+        mVideoUri?.let {
+            mSelectImage.visibility = View.GONE
+            selected_video_player_view.visibility = View.VISIBLE
+            selected_video_player_view.init()
+            selected_video_player_view.setData(it, false)
         }
     }
 

@@ -5,6 +5,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
+
 import com.example.amit.uniconnexample.Others.Foreground;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -14,7 +17,7 @@ import timber.log.Timber;
  * Created by amit on 30/10/16.
  */
 
-public class App extends Application {
+public class App extends MultiDexApplication {
     Boolean flag,vib,logincheck;
     SharedPreferences myPrefs;
     public static App instance;
@@ -30,6 +33,8 @@ public class App extends Application {
         Foreground.init(this);
         Timber.plant(new Timber.DebugTree());
     }
+
+
 
     public static void putPref(String key, String value, Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -60,5 +65,11 @@ public class App extends Application {
 
     public Boolean getLogincheck() {
         return myPrefs.getBoolean("isLoggedin",false);
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 }

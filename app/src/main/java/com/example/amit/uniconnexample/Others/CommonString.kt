@@ -19,4 +19,13 @@ class CommonString {
         const val MEDIA = "media"
         const val MEDIA_PICKER_ACTIVITY = 123
     }
+
+
+    object MimeType{
+        const val NONE ="none"
+        const val IMAGE: String = "image"
+        const val VIDEO: String = "video"
+        const val AUDIO: String = "audio"
+        const val DOCS: String = "application"
+    }
 }
