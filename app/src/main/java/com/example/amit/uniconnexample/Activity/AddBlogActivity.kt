@@ -14,10 +14,8 @@ import android.provider.MediaStore
 import android.text.format.DateFormat
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.Toast
+import android.view.ViewGroup
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -28,9 +26,11 @@ import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.PostBlogModel
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Signupactivity
+import com.example.amit.uniconnexample.View.VideoPlayerView
 import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
 import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
 import com.example.amit.uniconnexample.utils.PrefManager
+import com.example.amit.uniconnexample.utils.UtilDpToPixel
 import com.example.amit.uniconnexample.utils.UtilPostIdGenerator
 import com.example.amit.uniconnexample.utils.Utils
 import com.google.android.exoplayer2.*
@@ -258,7 +258,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
         }
         mImageUri?.let {
             mSelectImage.visibility = View.VISIBLE
-            selected_video_player_view.visibility = View.GONE
+           // selected_video_player_view.visibility = View.GONE
             try {
                 val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
 
@@ -270,10 +270,17 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
         }
 
         mVideoUri?.let {
+            val height = UtilDpToPixel.convertDpToPixel(250f, this)
             mSelectImage.visibility = View.GONE
-            selected_video_player_view.visibility = View.VISIBLE
-            selected_video_player_view.init()
-            selected_video_player_view.setData(it, false)
+            val view = VideoPlayerView(this)
+            val layoutParam = (ViewGroup.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, height.toInt()))
+          //  layoutParam.setMargins(margin.toInt(), margin.toInt(), margin.toInt(), margin.toInt())
+            view.layoutParams = layoutParam
+            selected_media.addView(view)
+            view.setData(it, false)
+//            selected_video_player_view.visibility = View.VISIBLE
+//            selected_video_player_view.init()
+//            selected_video_player_view.setData(it, false)
         }
     }
 

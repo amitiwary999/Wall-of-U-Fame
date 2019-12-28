@@ -14,24 +14,18 @@
 
 <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
     android:layout_below="@id/toolbar"
     android:id="@+id/selected_media"
     android:focusable="true"
     android:clickable="true"
-    android:layout_margin="10dp"
-    android:background="@drawable/click_me">
+    android:layout_margin="10dp">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:id="@+id/mSelectImage"
-        android:visibility="gone"
+        android:src="@drawable/click_me"
         android:adjustViewBounds="true" />
-    <com.example.amit.uniconnexample.View.VideoPlayerView
-        android:id="@+id/selected_video_player_view"
-        android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="150dp"/>
 </FrameLayout>
     <EditText
         android:layout_width="match_parent"

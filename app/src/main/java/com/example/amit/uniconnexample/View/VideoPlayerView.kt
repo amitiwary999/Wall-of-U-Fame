@@ -40,25 +40,13 @@ class VideoPlayerView : FrameLayout,AnkoLogger {
         initialize()
     }
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0){
-        initialize()
+        //initialize()
     }
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        initialize()
+        //initialize()
     }
 
     private fun initialize(){
-//        inflate(context, R.layout.video_player_view, this)
-//        play = findViewById(R.id.exo_play)
-//        simpleExoPlayer = ExoPlayerFactory.newSimpleInstance(context, DefaultRenderersFactory(context), DefaultTrackSelector(), loadControl)
-//
-//        simpleExoPlayer!!.addListener(eventListener)
-//        player_view.player = simpleExoPlayer
-//        val bandwidthMeter: BandwidthMeter = DefaultBandwidthMeter()
-//        dataSourceFactory = DefaultDataSourceFactory(context, Util.getUserAgent(context, "mediaPlayerSample"), bandwidthMeter as TransferListener)
-    }
-
-    fun init(){
-        info { "init" }
         inflate(context, R.layout.video_player_view, this)
         play = findViewById(R.id.exo_play)
         simpleExoPlayer = ExoPlayerFactory.newSimpleInstance(context, DefaultRenderersFactory(context), DefaultTrackSelector(), loadControl)
@@ -67,28 +55,14 @@ class VideoPlayerView : FrameLayout,AnkoLogger {
         player_view.player = simpleExoPlayer
         val bandwidthMeter: BandwidthMeter = DefaultBandwidthMeter()
         dataSourceFactory = DefaultDataSourceFactory(context, Util.getUserAgent(context, "mediaPlayerSample"), bandwidthMeter as TransferListener)
-        info { "init2" }
     }
 
     fun setData(uri: Uri, autoPlay: Boolean?) {
-info { "init1" }
-
         simpleExoPlayer!!.playWhenReady = autoPlay!!
-        //
         val defaultExtractorsFactory = DefaultExtractorsFactory()
-        //        defaultExtractorsFactory.setTsExtractorFlags(DefaultTsPayloadReaderFactory.FLAG_DETECT_ACCESS_UNITS);
-//        defaultExtractorsFactory.setTsExtractorFlags(DefaultTsPayloadReaderFactory.FLAG_ALLOW_NON_IDR_KEYFRAMES);
         defaultExtractorsFactory.setFragmentedMp4ExtractorFlags(FragmentedMp4Extractor.FLAG_WORKAROUND_IGNORE_EDIT_LISTS)
-        //defaultExtractorsFactory.setMp4ExtractorFlags(Mp4Extractor.FLAG_WORKAROUND_IGNORE_EDIT_LISTS);
-// defaultExtractorsFactory.setTsExtractorFlags(DefaultTsPayloadReaderFactory.FLAG_ALLOW_NON_IDR_KEYFRAMES);
-//        String userAgent = Util.getUserAgent(getContext(), "fwc");
-//        MediaSource firstMediaSource = new ExtractorMediaSource(Uri.parse(uri), new DefaultDataSourceFactory(getContext(),
-//                userAgent), defaultExtractorsFactory, null, null);
-// ExtractorMediaSource mediaSource = new ExtractorMediaSource.Factory(dataSourceFactory).setExtractorsFactory(defaultExtractorsFactory).createMediaSource(Uri.parse(uri));
-// ExtractorMediaSource mediaSource = new ExtractorMediaSource.Factory(dataSourceFactory).setExtractorsFactory(defaultExtractorsFactory).createMediaSource(Uri.parse(uri));
         val mediaSource = ExtractorMediaSource.Factory(dataSourceFactory).createMediaSource(uri)
         simpleExoPlayer!!.prepare(mediaSource)
-        // simpleExoPlayer.setPlayWhenReady(true);
         play!!.setOnClickListener { view: View? -> simpleExoPlayer!!.playWhenReady = true }
     }
 
