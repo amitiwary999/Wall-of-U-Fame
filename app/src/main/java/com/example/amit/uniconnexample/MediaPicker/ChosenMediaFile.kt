@@ -8,6 +8,7 @@ import android.os.Parcelable
  * Created by Meera on 14,December,2019
  */
 data class ChosenMediaFile(
+        val name: String?=null,
         val id: String ?= null,
         val uri:Uri?=null,
         val mimeType: String?=null,
@@ -15,10 +16,12 @@ data class ChosenMediaFile(
         val width: Int=0,
         val height: Int=0,
         val size: Long=0,
-        val bucketId: String
+        val bucketId: String,
+        val extType: String
 
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+            parcel.readString(),
             parcel.readString(),
             parcel.readParcelable(Uri::class.java.classLoader),
             parcel.readString(),
@@ -26,10 +29,12 @@ data class ChosenMediaFile(
             parcel.readInt(),
             parcel.readInt(),
             parcel.readLong(),
+            parcel.readString(),
             parcel.readString()) {
     }
 
     override fun writeToParcel(dest: Parcel?, flags: Int) {
+        dest?.writeString(name)
         dest?.writeString(id)
         dest?.writeParcelable(uri, flags)
         dest?.writeString(mimeType)
@@ -38,6 +43,7 @@ data class ChosenMediaFile(
         dest?.writeInt(height)
         dest?.writeLong(size)
         dest?.writeString(bucketId)
+        dest?.writeString(extType)
     }
 
     override fun describeContents(): Int {

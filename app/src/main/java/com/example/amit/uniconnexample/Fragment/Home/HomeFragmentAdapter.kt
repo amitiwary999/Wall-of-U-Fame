@@ -1,9 +1,11 @@
 package com.example.amit.uniconnexample.Fragment.Home
 
 import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -13,6 +15,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
+import com.example.amit.uniconnexample.View.VideoPlayerView
 import com.example.amit.uniconnexample.rest.model.PostModel
 import com.example.amit.uniconnexample.utils.DateUtils
 import org.jetbrains.anko.AnkoLogger
@@ -82,6 +85,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         var likeButton: ImageButton = itemView.findViewById(R.id.like)
         var date: TextView = itemView.findViewById(R.id.txtDate)
         var likeCount: TextView = itemView.findViewById(R.id.txtlike)
+        var mediaFrame: FrameLayout = itemView.findViewById(R.id.media_frame)
 
         fun setData(post: PostModel?){
             post?.let {postModel ->
@@ -96,16 +100,28 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
                     likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
                 }
                 context?.let {
-                    if(postModel.imageUrl.isNotEmpty()){
-                        image.visibility = View.VISIBLE
-                        Glide.with(it).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(itemHeight).into(image)
-                    }else{
+                    if(postModel.mimeType.contains(CommonString.MimeType.IMAGE)){
+                        if(postModel.imageUrl.isNotEmpty()){
+                            image.visibility = View.VISIBLE
+                            Glide.with(it).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(itemHeight).into(image)
+                        }else{
+                            image.visibility = View.GONE
+                        }
+                    }else if(postModel.mimeType.contains(CommonString.MimeType.VIDEO) && postModel.imageUrl.isNotEmpty()){
                         image.visibility = View.GONE
+                        val view = VideoPlayerView(it)
+                        val layoutParam = (ViewGroup.LayoutParams(itemHeight, itemHeight))
+                        //  layoutParam.setMargins(margin.toInt(), margin.toInt(), margin.toInt(), margin.toInt())
+                        view.layoutParams = layoutParam
+                        mediaFrame.addView(view)
+                        view.setData(Uri.parse(postModel.imageUrl), false)
                     }
 
                     if(postModel.creatorDp.isNotEmpty()){
                         Glide.with(it).setDefaultRequestOptions(RequestOptions().circleCrop()).load(postModel.creatorDp).into(pImage)
                     }
+
+
                 }
             }
         }

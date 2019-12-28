@@ -55,15 +55,18 @@
             </LinearLayout>
         </LinearLayout>
         </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/media_frame"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/pad_5dp"
-            android:layout_marginBottom="@dimen/pad_5dp"
             android:id="@+id/postimage"
             android:adjustViewBounds="true" />
-
+        </FrameLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

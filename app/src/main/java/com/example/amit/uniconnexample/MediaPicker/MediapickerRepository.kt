@@ -162,9 +162,9 @@ class MediapickerRepository {
         val sortBy = Images.Media.DATE_TAKEN + " DESC"
         val projection: Array<String>
         projection = if (hasOrientation) {
-            arrayOf(Images.Media._ID, Images.Media.DATA, Images.Media.MIME_TYPE, Images.Media.DATE_TAKEN, Images.Media.ORIENTATION, Images.Media.WIDTH, Images.Media.HEIGHT, Images.Media.SIZE)
+            arrayOf(Images.Media._ID, Images.Media.DATA, Images.Media.DISPLAY_NAME, Images.Media.MIME_TYPE, Images.Media.DATE_TAKEN, Images.Media.ORIENTATION, Images.Media.WIDTH, Images.Media.HEIGHT, Images.Media.SIZE)
         } else {
-            arrayOf(MediaStore.Video.Media._ID, Images.Media.DATA, Images.Media.MIME_TYPE, Images.Media.DATE_TAKEN, Images.Media.WIDTH, Images.Media.HEIGHT, Images.Media.SIZE)
+            arrayOf(MediaStore.Video.Media._ID, Images.Media.DATA, MediaStore.Video.Media.DISPLAY_NAME, Images.Media.MIME_TYPE, Images.Media.DATE_TAKEN, Images.Media.WIDTH, Images.Media.HEIGHT, Images.Media.SIZE)
         }
 
         if (ChosenMediaFile.ALL_MEDIA_ID.equals(bucketId)) {
@@ -182,7 +182,8 @@ class MediapickerRepository {
                 val width: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getWidthColumn(orientation)))
                 val height: Int = cursor.getInt(cursor.getColumnIndexOrThrow(getHeightColumn(orientation)))
                 val size: Long = cursor.getLong(cursor.getColumnIndexOrThrow(Images.Media.SIZE))
-                media.add(ChosenMediaFile(id, uri, mimetype, dateTaken, width, height, size, bucketId))
+                val name: String = cursor.getString(cursor.getColumnIndexOrThrow(projection[2]))
+                media.add(ChosenMediaFile(name,id, uri, mimetype, dateTaken, width, height, size, bucketId, getFileExtension(name)))
             }
         }
         return media
@@ -203,7 +204,7 @@ class MediapickerRepository {
         val height = media.height
         val size   = media.size
 
-        return ChosenMediaFile(media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId)
+        return ChosenMediaFile(media.name, media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId, media.extType)
     }
 
     fun getContentResolverPopulatedMedia(media : ChosenMediaFile) : ChosenMediaFile {
@@ -211,7 +212,7 @@ class MediapickerRepository {
         val  height = media.height
         val size   = media.size
 
-        return ChosenMediaFile(media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId);
+        return ChosenMediaFile(media.name, media.id, media.uri, media.mimeType, media.date, width, height, size, media.bucketId, media.extType);
     }
 
     fun getPopulatedMedia(context: Context, media: List<ChosenMediaFile>) : List<ChosenMediaFile>{
@@ -253,5 +254,19 @@ class MediapickerRepository {
 
     interface Callback<E> {
         fun onComplete(result: E)
+    }
+
+    private fun getFileExtension(fileName: String?): String {
+
+        if (fileName != null) {
+
+            val lastIndexOf = fileName.lastIndexOf(".")
+            return if (lastIndexOf == -1) {
+                "" // empty extension
+            } else fileName.substring(lastIndexOf + 1)
+
+        } else {
+            return ""
+        }
     }
 }

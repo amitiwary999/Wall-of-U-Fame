@@ -14,6 +14,7 @@ class PostBlogModel(
         var imageUrl: String? = null,
         val date: String?=null,
         val name: String,
-        val dp: String
+        val dp: String,
+        var mimeType: String
 ) {
 }
