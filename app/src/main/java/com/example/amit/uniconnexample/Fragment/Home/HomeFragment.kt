@@ -17,6 +17,7 @@ import com.example.amit.uniconnexample.Activity.MainViewModel
 import com.example.amit.uniconnexample.Activity.NewTabActivity
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
+import com.example.amit.uniconnexample.View.VideoPlayerView
 import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
 import com.example.amit.uniconnexample.rest.model.PostLikeModel
 import com.example.amit.uniconnexample.utils.EndlessScrollListener
@@ -62,7 +63,11 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
             val frameWidth = dm.widthPixels
             val linearLayoutManager = LinearLayoutManager(it)
             mblog_list.layoutManager = linearLayoutManager
-            homeAdapter = HomeFragmentAdapter(this, frameWidth)
+            val view = VideoPlayerView(it)
+            val layoutParam = (ViewGroup.LayoutParams(frameWidth, frameWidth))
+            //  layoutParam.setMargins(margin.toInt(), margin.toInt(), margin.toInt(), margin.toInt())
+            view.layoutParams = layoutParam
+            homeAdapter = HomeFragmentAdapter(this, frameWidth, view)
             mblog_list.adapter = homeAdapter
 
             scrollListener = object : EndlessScrollListener(linearLayoutManager){

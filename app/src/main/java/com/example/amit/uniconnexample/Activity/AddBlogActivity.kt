@@ -192,7 +192,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
 
             } else if (desc_val.length != 0) {
 
-                val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", date, name?:"", photo?:"" ,"")
+                val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", date, name?:"", photo?:"" )
                 postBlog(blogModel)
             } else {
                 mProgress!!.dismiss()

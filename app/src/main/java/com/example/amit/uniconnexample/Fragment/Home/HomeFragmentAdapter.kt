@@ -24,7 +24,7 @@ import org.jetbrains.anko.info
 /**
  * Created by Meera on 04,December,2019
  */
-class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener, var itemHeight : Int): RecyclerView.Adapter<HomeFragmentAdapter.HomeAdapterViewHolder>() {
+class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener, var itemHeight : Int, var videoPlayerView: VideoPlayerView): RecyclerView.Adapter<HomeFragmentAdapter.HomeAdapterViewHolder>() {
      var postModels = ArrayList<PostModel>()
     var context: Context ?= null
     fun setData(posts: List<PostModel>){
@@ -44,7 +44,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapterViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.blog_item, parent, false)
         context = parent.context
-        return HomeAdapterViewHolder(view, context, itemHeight)
+        return HomeAdapterViewHolder(view, context, itemHeight, videoPlayerView)
     }
 
     override fun getItemCount(): Int {
@@ -77,7 +77,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         super.onBindViewHolder(holder, position, payloads)
     }
 
-    class HomeAdapterViewHolder(itemView: View, var context: Context?,var itemHeight : Int) : RecyclerView.ViewHolder(itemView), AnkoLogger{
+    class HomeAdapterViewHolder(itemView: View, var context: Context?,var itemHeight : Int, var view: VideoPlayerView) : RecyclerView.ViewHolder(itemView), AnkoLogger{
         var pImage: ImageView = itemView.findViewById(R.id.pimage)
         var name: TextView = itemView.findViewById(R.id.bname)
         var image: ImageView = itemView.findViewById(R.id.postimage)
@@ -90,6 +90,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         fun setData(post: PostModel?){
             post?.let {postModel ->
                 info { "post model in set data ${postModel.imageUrl}" }
+                mediaFrame.visibility = View.GONE
                 postDesc.text = postModel.desc
                 name.text = postModel.creatorName
                 date.text = DateUtils.getDateFromUTCTimestamp(postModel.date, CommonString.DATE_FORMAT)
@@ -100,21 +101,23 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
                     likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
                 }
                 context?.let {
-                    if(postModel.mimeType.contains(CommonString.MimeType.IMAGE)){
-                        if(postModel.imageUrl.isNotEmpty()){
-                            image.visibility = View.VISIBLE
-                            Glide.with(it).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(itemHeight).into(image)
-                        }else{
+                    postModel.mimeType?.let {mimeType ->
+                        mediaFrame.visibility = View.VISIBLE
+                        mediaFrame.removeView(view)
+                        if(mimeType.contains(CommonString.MimeType.IMAGE)){
+                            if(postModel.imageUrl.isNotEmpty()){
+                                image.visibility = View.VISIBLE
+                                Glide.with(it).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(itemHeight).into(image)
+                            }else{
+                                image.visibility = View.GONE
+                            }
+                        }else if(mimeType.contains(CommonString.MimeType.VIDEO) && postModel.imageUrl.isNotEmpty()){
                             image.visibility = View.GONE
+                            mediaFrame.addView(view)
+                            view.setData(Uri.parse(postModel.imageUrl), false)
+                        }else{
+                            //no other mimetype right now
                         }
-                    }else if(postModel.mimeType.contains(CommonString.MimeType.VIDEO) && postModel.imageUrl.isNotEmpty()){
-                        image.visibility = View.GONE
-                        val view = VideoPlayerView(it)
-                        val layoutParam = (ViewGroup.LayoutParams(itemHeight, itemHeight))
-                        //  layoutParam.setMargins(margin.toInt(), margin.toInt(), margin.toInt(), margin.toInt())
-                        view.layoutParams = layoutParam
-                        mediaFrame.addView(view)
-                        view.setData(Uri.parse(postModel.imageUrl), false)
                     }
 
                     if(postModel.creatorDp.isNotEmpty()){

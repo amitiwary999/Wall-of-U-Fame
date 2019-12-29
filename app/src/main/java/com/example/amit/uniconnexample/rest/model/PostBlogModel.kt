@@ -15,6 +15,6 @@ class PostBlogModel(
         val date: String?=null,
         val name: String,
         val dp: String,
-        var mimeType: String
+        var mimeType: String?=null
 ) {
 }
