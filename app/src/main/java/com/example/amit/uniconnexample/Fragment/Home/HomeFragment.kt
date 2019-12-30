@@ -64,6 +64,7 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
             val linearLayoutManager = LinearLayoutManager(it)
             mblog_list.layoutManager = linearLayoutManager
             val view = VideoPlayerView(it)
+            lifecycle.addObserver(view)
             val layoutParam = (ViewGroup.LayoutParams(frameWidth, frameWidth))
             //  layoutParam.setMargins(margin.toInt(), margin.toInt(), margin.toInt(), margin.toInt())
             view.layoutParams = layoutParam

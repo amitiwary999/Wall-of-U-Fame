@@ -285,6 +285,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
             val height = UtilDpToPixel.convertDpToPixel(250f, this)
             mSelectImage.visibility = View.GONE
             val view = VideoPlayerView(this)
+            lifecycle.addObserver(view)
             val layoutParam = (ViewGroup.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, height.toInt()))
           //  layoutParam.setMargins(margin.toInt(), margin.toInt(), margin.toInt(), margin.toInt())
             view.layoutParams = layoutParam

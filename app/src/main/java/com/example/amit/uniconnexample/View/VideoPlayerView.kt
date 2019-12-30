@@ -6,6 +6,9 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageButton
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
 import com.example.amit.uniconnexample.R
 import com.google.android.exoplayer2.*
 import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory
@@ -24,7 +27,7 @@ import org.jetbrains.anko.info
 /**
  * Created by Meera on 28,December,2019
  */
-class VideoPlayerView : FrameLayout,AnkoLogger {
+class VideoPlayerView : FrameLayout,AnkoLogger, LifecycleObserver {
     var simpleExoPlayer: SimpleExoPlayer? = null
     var play: ImageButton? = null
     var dataSourceFactory: DataSource.Factory? = null
@@ -79,6 +82,37 @@ class VideoPlayerView : FrameLayout,AnkoLogger {
             simpleExoPlayer!!.release()
         }
         //playerView.cleanup();
+    }
+
+    fun resume(){
+        if(simpleExoPlayer != null){
+            simpleExoPlayer!!.playWhenReady = true
+        }
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+    fun onPause(){
+        pause()
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
+    fun onStop(){
+        pause()
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    fun onResume(){
+        resume()
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    fun onStart(){
+        resume()
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+    fun onDestroy(){
+        cleanup()
     }
 
     var eventListener: Player.EventListener = object : Player.EventListener {
