@@ -56,7 +56,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
             return HomeAdapterImageViewHolder(view, itemHeight)
         }else if(viewType == VIDEO_VIEW){
             view=LayoutInflater.from(parent.context).inflate(R.layout.blog_video_item, parent, false)
-            return HomeAdapterVideoViewHolder(view, videoPlayerView)
+            return HomeAdapterVideoViewHolder(view, videoPlayerView, itemHeight)
         }else{
             view = LayoutInflater.from(parent.context).inflate(R.layout.blog_item, parent, false)
             return HomeAdapterTextViewHolder(view)
