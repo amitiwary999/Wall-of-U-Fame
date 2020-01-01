@@ -24,9 +24,15 @@ import org.jetbrains.anko.info
 /**
  * Created by Meera on 04,December,2019
  */
-class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener, var itemHeight : Int, var videoPlayerView: VideoPlayerView): RecyclerView.Adapter<HomeFragmentAdapter.HomeAdapterViewHolder>() {
+class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener, var itemHeight : Int, var videoPlayerView: VideoPlayerView, var imageView: com.example.amit.uniconnexample.View.ImageView): RecyclerView.Adapter<HomeAdapterCommonViewHolder>() {
      var postModels = ArrayList<PostModel>()
     var context: Context ?= null
+    companion object{
+        const val IMAGE_VIEW = 1
+        const val VIDEO_VIEW = 2
+        const val TEXT_VIEW = 0
+    }
+
     fun setData(posts: List<PostModel>){
         val size = postModels.size
         postModels.addAll(posts)
@@ -41,19 +47,28 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         notifyItemRangeInserted(0, posts.size)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapterViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.blog_item, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapterCommonViewHolder {
+        lateinit var view: View
         context = parent.context
-        return HomeAdapterViewHolder(view, context, itemHeight, videoPlayerView)
+        if(viewType == IMAGE_VIEW){
+            view = LayoutInflater.from(parent.context).inflate(R.layout.blog_image_item, parent, false)
+            return HomeAdapterImageViewHolder(view, itemHeight, imageView)
+        }else if(viewType == VIDEO_VIEW){
+            view=LayoutInflater.from(parent.context).inflate(R.layout.blog_video_item, parent, false)
+            return HomeAdapterVideoViewHolder(view, videoPlayerView)
+        }else{
+            view = LayoutInflater.from(parent.context).inflate(R.layout.blog_item, parent, false)
+            return HomeAdapterTextViewHolder(view)
+        }
     }
 
     override fun getItemCount(): Int {
         return postModels.size
     }
 
-    override fun onBindViewHolder(holder: HomeAdapterViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HomeAdapterCommonViewHolder, position: Int) {
         val postModel = postModels[position]
-        holder.setData(postModel)
+        holder.bindData(postModel)
 
         holder.likeButton.setOnClickListener {
             if(postModel.isLiked == 1){
@@ -70,74 +85,86 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         }
     }
 
-    override fun onBindViewHolder(holder: HomeAdapterViewHolder, position: Int, payloads: MutableList<Any>) {
+    override fun onBindViewHolder(holder: HomeAdapterCommonViewHolder, position: Int, payloads: MutableList<Any>) {
         if(payloads.isNotEmpty()){
             holder.setData(postModels[position], (payloads[0] as String))
         }
         super.onBindViewHolder(holder, position, payloads)
     }
 
-    class HomeAdapterViewHolder(itemView: View, var context: Context?,var itemHeight : Int, var view: VideoPlayerView) : RecyclerView.ViewHolder(itemView), AnkoLogger{
-        var pImage: ImageView = itemView.findViewById(R.id.pimage)
-        var name: TextView = itemView.findViewById(R.id.bname)
-        var image: ImageView = itemView.findViewById(R.id.postimage)
-        var postDesc: TextView = itemView.findViewById(R.id.post_desc)
-        var likeButton: ImageButton = itemView.findViewById(R.id.like)
-        var date: TextView = itemView.findViewById(R.id.txtDate)
-        var likeCount: TextView = itemView.findViewById(R.id.txtlike)
-        var mediaFrame: FrameLayout = itemView.findViewById(R.id.media_frame)
-
-        fun setData(post: PostModel?){
-            post?.let {postModel ->
-                info { "post model in set data ${postModel.imageUrl}" }
-                mediaFrame.visibility = View.GONE
-                postDesc.text = postModel.desc
-                name.text = postModel.creatorName
-                date.text = DateUtils.getDateFromUTCTimestamp(postModel.date, CommonString.DATE_FORMAT)
-                likeCount.text = postModel.like.toString()
-                if(postModel.isLiked == 1){
-                    likeButton.setColorFilter(App.instance.resources.getColor(R.color.yellow))
-                }else{
-                    likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
-                }
-                context?.let {
-                    postModel.mimeType?.let {mimeType ->
-                        mediaFrame.visibility = View.VISIBLE
-                        mediaFrame.removeView(view)
-                        if(mimeType.contains(CommonString.MimeType.IMAGE)){
-                            if(postModel.imageUrl.isNotEmpty()){
-                                image.visibility = View.VISIBLE
-                                Glide.with(it).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(itemHeight).into(image)
-                            }else{
-                                image.visibility = View.GONE
-                            }
-                        }else if(mimeType.contains(CommonString.MimeType.VIDEO) && postModel.imageUrl.isNotEmpty()){
-                            image.visibility = View.GONE
-                            mediaFrame.addView(view)
-                            view.setData(Uri.parse(postModel.imageUrl), false)
-                        }else{
-                            //no other mimetype right now
-                        }
-                    }
-
-                    if(postModel.creatorDp.isNotEmpty()){
-                        Glide.with(it).setDefaultRequestOptions(RequestOptions().circleCrop()).load(postModel.creatorDp).into(pImage)
-                    }
-
-
+    override fun getItemViewType(position: Int): Int {
+        val postModel = postModels[position]
+        if(postModel.mimeType == null){
+            return TEXT_VIEW
+        }else{
+            postModel.mimeType?.let{
+                if(it.contains(CommonString.MimeType.IMAGE)){
+                    return IMAGE_VIEW
+                }else if(it.contains(CommonString.MimeType.VIDEO)){
+                    return VIDEO_VIEW
                 }
             }
         }
-
-        fun setData(postModel: PostModel?, payload: String){
-            if(payload == CommonString.PAYLOAD_ITEM_LIKE){
-                likeButton.setColorFilter(App.instance.resources.getColor(R.color.yellow))
-            }else if(payload == CommonString.PAYLOAD_ITEM_UNLIKE){
-                likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
-            }
-            postModel?.let {
-                likeCount.text = it.like.toString()
-            }
-        }
+        return TEXT_VIEW
     }
+
+//    class HomeAdapterViewHolder(itemView: View, var context: Context?,var itemHeight : Int, var videoView: VideoPlayerView, var imageView: com.example.amit.uniconnexample.View.ImageView) : RecyclerView.ViewHolder(itemView), AnkoLogger{
+//        var pImage: ImageView = itemView.findViewById(R.id.pimage)
+//        var name: TextView = itemView.findViewById(R.id.bname)
+//        var postDesc: TextView = itemView.findViewById(R.id.post_desc)
+//        var likeButton: ImageButton = itemView.findViewById(R.id.like)
+//        var date: TextView = itemView.findViewById(R.id.txtDate)
+//        var likeCount: TextView = itemView.findViewById(R.id.txtlike)
+//        var mediaFrame: FrameLayout = itemView.findViewById(R.id.media_frame)
+//
+//        fun setData(post: PostModel?){
+//            post?.let {postModel ->
+//                info { "post model in set data ${postModel.imageUrl}" }
+//                mediaFrame.visibility = View.GONE
+//                postDesc.text = postModel.desc
+//                name.text = postModel.creatorName
+//                date.text = DateUtils.getDateFromUTCTimestamp(postModel.date, CommonString.DATE_FORMAT)
+//                likeCount.text = postModel.like.toString()
+//                if(postModel.isLiked == 1){
+//                    likeButton.setColorFilter(App.instance.resources.getColor(R.color.yellow))
+//                }else{
+//                    likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
+//                }
+//
+//
+//                context?.let {
+//                    postModel.mimeType?.let { mimeType ->
+//                        mediaFrame.visibility = View.VISIBLE
+//                        mediaFrame.removeAllViews()
+//                        if (mimeType.contains(CommonString.MimeType.IMAGE)) {
+//                            mediaFrame.addView(imageView)
+//                            imageView.setData(postModel.imageUrl, itemHeight)
+//                        } else if (mimeType.contains(CommonString.MimeType.VIDEO)) {
+//                            mediaFrame.addView(videoView)
+//                            videoView.setData(Uri.parse(postModel.imageUrl), false)
+//                        } else {
+//                            //no other mimetype right now
+//                        }
+//                    }
+//
+//                    if(postModel.creatorDp.isNotEmpty()){
+//                        Glide.with(it).setDefaultRequestOptions(RequestOptions().circleCrop()).load(postModel.creatorDp).into(pImage)
+//                    }
+//
+//
+//                }
+//            }
+//        }
+//
+//        fun setData(postModel: PostModel?, payload: String){
+//            if(payload == CommonString.PAYLOAD_ITEM_LIKE){
+//                likeButton.setColorFilter(App.instance.resources.getColor(R.color.yellow))
+//            }else if(payload == CommonString.PAYLOAD_ITEM_UNLIKE){
+//                likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
+//            }
+//            postModel?.let {
+//                likeCount.text = it.like.toString()
+//            }
+//        }
+//    }
 }
