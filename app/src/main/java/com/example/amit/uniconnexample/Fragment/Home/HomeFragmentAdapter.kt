@@ -16,6 +16,7 @@ import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Others.CommonString
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.View.VideoPlayerView
+import com.example.amit.uniconnexample.View.VideoPlayerViewRecycler
 import com.example.amit.uniconnexample.rest.model.PostModel
 import com.example.amit.uniconnexample.utils.DateUtils
 import org.jetbrains.anko.AnkoLogger
@@ -24,7 +25,7 @@ import org.jetbrains.anko.info
 /**
  * Created by Meera on 04,December,2019
  */
-class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener, var itemHeight : Int, var videoPlayerView: VideoPlayerView, var imageView: com.example.amit.uniconnexample.View.ImageView): RecyclerView.Adapter<HomeAdapterCommonViewHolder>() {
+class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener, var itemHeight : Int, var videoPlayerView: VideoPlayerViewRecycler): RecyclerView.Adapter<HomeAdapterCommonViewHolder>() {
      var postModels = ArrayList<PostModel>()
     var context: Context ?= null
     companion object{
@@ -52,7 +53,7 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         context = parent.context
         if(viewType == IMAGE_VIEW){
             view = LayoutInflater.from(parent.context).inflate(R.layout.blog_image_item, parent, false)
-            return HomeAdapterImageViewHolder(view, itemHeight, imageView)
+            return HomeAdapterImageViewHolder(view, itemHeight)
         }else if(viewType == VIDEO_VIEW){
             view=LayoutInflater.from(parent.context).inflate(R.layout.blog_video_item, parent, false)
             return HomeAdapterVideoViewHolder(view, videoPlayerView)

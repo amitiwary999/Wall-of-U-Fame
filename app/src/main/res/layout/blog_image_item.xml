@@ -64,7 +64,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/postimage"
+                android:id="@+id/image_view"
                 android:adjustViewBounds="true" />
         </FrameLayout>
         <TextView
