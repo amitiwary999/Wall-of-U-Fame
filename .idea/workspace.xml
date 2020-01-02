@@ -11,18 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9838ae0b-5ff4-4bac-be28-dc0f17febc74" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterVideoViewHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterVideoViewHolder.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeFragmentAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeFragmentAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/VideoPlayerViewRecycler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/VideoPlayerViewRecycler.kt" afterDir="false" />
     </list>
     <ignored path="Buildapk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+            <state relative-caret-position="309">
+              <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -99,20 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeFragmentAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="58" column="79" selection-start-line="58" selection-start-column="79" selection-end-line="58" selection-end-column="79" />
-              <folding>
-                <element signature="e#55#845#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterImageViewHolder.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+            <state relative-caret-position="231">
+              <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -127,25 +108,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/VideoPlayerViewRecycler.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterVideoViewHolder.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-              <folding>
-                <element signature="e#46#391#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterVideoViewHolder.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/VideoPlayerViewRecycler.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-              <folding>
-                <element signature="e#55#328#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -176,6 +151,7 @@
       <find>startA</find>
       <find>multi</find>
       <find>HomeAdapterViewHolder</find>
+      <find>HomeAdapterVideo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,13 +204,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterCommonViewHolder.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/blog_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/blog_video_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/VideoPlayerViewRecycler.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/ImageViewRecycler.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterImageViewHolder.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/blog_image_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeFragmentAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterVideoViewHolder.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterVideoViewHolder.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/VideoPlayerViewRecycler.kt" />
       </list>
     </option>
   </component>
@@ -249,18 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Wall-of-U-Fame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Wall-of-U-Fame" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -296,32 +260,19 @@
             </path>
             <path>
               <item name="Wall-of-U-Fame" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="uniconnexample" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Wall-of-U-Fame" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="uniconnexample" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Wall-of-U-Fame" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Wall-of-U-Fame" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Wall-of-U-Fame" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Wall-of-U-Fame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Wall-of-U-Fame" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -833,11 +784,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50249034" side_tool="true" weight="0.38660908" />
       <window_info anchor="bottom" id="Android Monitor" order="8" sideWeight="0.4969697" weight="0.006472492" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.4211663" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5107991" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32847896" />
       <window_info anchor="bottom" id="Android Profiler" order="12" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="13" sideWeight="0.4975097" visible="true" weight="0.49676025" />
-      <window_info anchor="bottom" id="Build" order="14" weight="0.5799136" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="13" sideWeight="0.4975097" visible="true" weight="0.7926566" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.43952483" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -927,17 +878,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.1.0/5411028b44e34d8adc95797fe7f6e05d322ebe83/lifecycle-livedata-core-2.1.0-sources.jar!/androidx/lifecycle/MutableLiveData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding>
-            <element signature="e#1283#1284#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/MediaPicker/MediaFolder.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1241,16 +1181,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/ImageViewRecycler.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="e#46#264#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/ImageViewRecycler.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/ImageView.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1274,13 +1205,32 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/VideoPlayerViewRecycler.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/blog_image_item.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
-          <folding>
-            <element signature="e#46#391#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="64" column="51" lean-forward="true" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterImageViewHolder.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.30/1093224407fb1a6f5b79358044a2836bb3d899fd/kotlin-stdlib-1.3.30-sources.jar!/kotlin/String.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1291,45 +1241,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterImageViewHolder.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/blog_image_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="64" column="51" lean-forward="true" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeFragmentAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="58" column="79" selection-start-line="58" selection-start-column="79" selection-end-line="58" selection-end-column="79" />
-          <folding>
-            <element signature="e#55#845#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+        <state relative-caret-position="231">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/Fragment/Home/HomeAdapterVideoViewHolder.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-          <folding>
-            <element signature="e#55#328#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/amit/uniconnexample/View/VideoPlayerViewRecycler.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
         </state>
       </provider>
     </entry>

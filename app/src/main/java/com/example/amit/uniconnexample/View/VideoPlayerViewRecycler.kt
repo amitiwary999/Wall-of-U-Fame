@@ -18,7 +18,7 @@ import com.google.android.exoplayer2.util.Util
 /**
  * Created by Meera on 01,January,2020
  */
-class VideoPlayerViewRecycler(context: Context): LifecycleObserver {
+class VideoPlayerViewRecycler(var context: Context): LifecycleObserver {
     var simpleExoPlayer: SimpleExoPlayer? = null
     var play: ImageButton? = null
     var dataSourceFactory: DataSource.Factory? = null
@@ -29,14 +29,14 @@ class VideoPlayerViewRecycler(context: Context): LifecycleObserver {
                 30 * 1000,  // Max buffer size
                 500,  // Min playback time buffered before starting video
                 100).createDefaultLoadControl()
+    }
+
+    fun setData(uri: Uri?, autoPlay: Boolean, playerView:PlayerView){
         simpleExoPlayer = ExoPlayerFactory.newSimpleInstance(context, DefaultRenderersFactory(context), DefaultTrackSelector(), loadControl)
         val bandwidthMeter: BandwidthMeter = DefaultBandwidthMeter()
         dataSourceFactory = DefaultDataSourceFactory(context, Util.getUserAgent(context, "mediaPlayerSample"), bandwidthMeter as TransferListener)
         val defaultExtractorsFactory = DefaultExtractorsFactory()
         defaultExtractorsFactory.setFragmentedMp4ExtractorFlags(FragmentedMp4Extractor.FLAG_WORKAROUND_IGNORE_EDIT_LISTS)
-    }
-
-    fun setData(uri: Uri?, autoPlay: Boolean, playerView:PlayerView){
         simpleExoPlayer!!.addListener(eventListener)
         playerView.player = simpleExoPlayer
         simpleExoPlayer!!.playWhenReady = autoPlay!!
