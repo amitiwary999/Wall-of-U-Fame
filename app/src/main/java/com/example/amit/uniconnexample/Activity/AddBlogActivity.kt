@@ -106,8 +106,6 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
         val buttondone = findViewById<View>(R.id.buttondone) as Button
         mDatabase = FirebaseDatabase.getInstance().reference.child(check)
         mDatabas = FirebaseDatabase.getInstance().reference.child("Posts")
-        name = PrefManager.getString(CommonString.USER_NAME, "")
-        photo = PrefManager.getString(CommonString.USER_DP, "")
 
         val mSelectImage = findViewById<View>(R.id.mSelectImage) as ImageView
         mStorage = FirebaseStorage.getInstance().reference
@@ -168,8 +166,8 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
             mProgress!!.show()
 
             val desc_val = mdesc.text.toString().trim { it <= ' ' }
-            PrefManager.getString(CommonString.USER_NAME,"name")
-            PrefManager.getString(CommonString.USER_DP,"")
+            name = PrefManager.getString(CommonString.USER_NAME,"name")
+            photo = PrefManager.getString(CommonString.USER_DP,"")
             val postId = UtilPostIdGenerator.generatePostId()
             val filepath = mStorage!!.child("User_Blog").child("$postId.$extType")
             if (mImageUri != null || mVideoUri != null) {
