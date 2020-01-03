@@ -24,4 +24,8 @@ class HomeAdapterImageViewHolder(itemView: View, var itemHeight : Int): HomeAdap
             Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(itemHeight).into(imageView)
         }
     }
+
+    override fun detachedView() {
+
+    }
 }

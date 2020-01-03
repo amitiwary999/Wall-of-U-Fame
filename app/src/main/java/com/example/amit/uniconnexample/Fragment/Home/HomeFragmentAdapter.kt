@@ -109,6 +109,10 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         return TEXT_VIEW
     }
 
+    override fun onViewDetachedFromWindow(holder: HomeAdapterCommonViewHolder) {
+        holder.detachedView()
+    }
+
 //    class HomeAdapterViewHolder(itemView: View, var context: Context?,var itemHeight : Int, var videoView: VideoPlayerView, var imageView: com.example.amit.uniconnexample.View.ImageView) : RecyclerView.ViewHolder(itemView), AnkoLogger{
 //        var pImage: ImageView = itemView.findViewById(R.id.pimage)
 //        var name: TextView = itemView.findViewById(R.id.bname)

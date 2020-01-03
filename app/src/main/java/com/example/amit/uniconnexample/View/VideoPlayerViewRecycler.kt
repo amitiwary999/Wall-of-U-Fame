@@ -44,6 +44,27 @@ class VideoPlayerViewRecycler(var context: Context): LifecycleObserver {
         simpleExoPlayer!!.prepare(mediaSource)
     }
 
+    fun pause() {
+        if (simpleExoPlayer != null) {
+            simpleExoPlayer!!.playWhenReady = false
+        }
+        //playerView.pause();
+    }
+
+    fun cleanup() {
+        if (simpleExoPlayer != null) {
+            simpleExoPlayer!!.release()
+        }
+        //playerView.cleanup();
+    }
+
+    fun resume(){
+        if(simpleExoPlayer != null){
+            simpleExoPlayer!!.playWhenReady = true
+        }
+    }
+
+
     var eventListener: Player.EventListener = object : Player.EventListener {
         override fun onTimelineChanged(timeline: Timeline, manifest: Any?, reason: Int) {}
         override fun onTracksChanged(trackGroups: TrackGroupArray, trackSelections: TrackSelectionArray) {}

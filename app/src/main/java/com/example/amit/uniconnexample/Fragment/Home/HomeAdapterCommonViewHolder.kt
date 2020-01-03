@@ -18,6 +18,7 @@ import com.example.amit.uniconnexample.utils.DateUtils
  */
 abstract class HomeAdapterCommonViewHolder(itemView :View): RecyclerView.ViewHolder(itemView) {
     abstract fun bindData(post: PostModel?)
+    abstract fun detachedView()
 
     var pImage: ImageView = itemView.findViewById(R.id.pimage)
     var name: TextView = itemView.findViewById(R.id.bname)

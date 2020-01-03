@@ -10,4 +10,8 @@ class HomeAdapterTextViewHolder(itemView: View): HomeAdapterCommonViewHolder(ite
     override fun bindData(post: PostModel?) {
         super.setData(post)
     }
+
+    override fun detachedView() {
+
+    }
 }
