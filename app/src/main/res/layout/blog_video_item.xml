@@ -73,8 +73,9 @@
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/play_btn"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/dr_circle_white"
                 app:srcCompat="@drawable/ic_play_black"
                 android:layout_gravity="center"/>
         </FrameLayout>
