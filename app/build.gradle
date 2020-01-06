@@ -52,8 +52,8 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('androidx.test.espresso:espresso-core:3.1.0', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation 'androidx.multidex:multidex:2.0.1'
@@ -64,17 +64,16 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
     implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0'
-    implementation 'com.google.android.gms:play-services:9.4.0'
     implementation 'me.himanshusoni.chatmessageview:chat-message-view:1.0.3'
     implementation 'com.squareup.picasso:picasso:2.5.2'
-    implementation 'com.firebaseui:firebase-ui:0.5.3'
-    implementation 'com.firebase:firebase-client-android:2.3.1'
-    implementation 'com.firebaseui:firebase-ui-database:0.5.3'
-    implementation 'com.firebaseui:firebase-ui-auth:0.5.3'
-    implementation 'com.google.firebase:firebase-database:9.2.1'
-    implementation 'com.google.firebase:firebase-auth:9.2.1'
-    implementation 'com.google.firebase:firebase-storage:9.4.0'
-    implementation 'com.google.firebase:firebase-crash:9.4.0'
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+
+    implementation 'com.google.firebase:firebase-perf:19.0.3'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    implementation 'com.google.firebase:firebase-config:16.0.1'
     implementation 'com.jakewharton.timber:timber:4.1.2'
     implementation 'com.github.jkwiecien:EasyImage:1.2.3'
     implementation 'commons-validator:commons-validator:1.5.1'

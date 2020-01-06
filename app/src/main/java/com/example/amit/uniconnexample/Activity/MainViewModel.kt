@@ -30,7 +30,7 @@ class MainViewModel : ViewModel(), AnkoLogger {
     }
 
     fun getPagedPost(){
-        firebaseUser?.getToken(false)?.addOnCompleteListener {
+        firebaseUser?.getIdToken(false)?.addOnCompleteListener {
             if(it.isSuccessful){
                 val getPostRequestModel = GetPostRequestModel(nextKey, 10)
                 RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().getPostPAged("Bearer ${it.result?.token}", getPostRequestModel)
@@ -60,7 +60,7 @@ class MainViewModel : ViewModel(), AnkoLogger {
     }
 
     fun postLiked(postId: String){
-        FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
+        FirebaseAuth.getInstance()?.currentUser?.getIdToken(false)?.addOnCompleteListener {
             if(it.isSuccessful && it.result != null){
                 val postLikemodel = PostLikeModel(postId, 1)
                 RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().postLiked("Bearer ${it.result?.token}", postLikemodel)
@@ -82,7 +82,7 @@ class MainViewModel : ViewModel(), AnkoLogger {
     }
 
     fun postUnlike(postId: String) {
-        FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
+        FirebaseAuth.getInstance()?.currentUser?.getIdToken(false)?.addOnCompleteListener {
             if(it.isSuccessful && it.result != null){
                 val postLikemodel = PostLikeModel(postId, 0)
                 RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().postLiked("Bearer ${it.result?.token}", postLikemodel)

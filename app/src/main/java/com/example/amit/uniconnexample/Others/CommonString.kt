@@ -7,7 +7,7 @@ class CommonString {
     companion object{
         val MESSAGE_ID_CONSTANT: String = "message_id_constant"
         val USER_ID = "user_id"
-        val base_url = "https://tele-a36a5.firebaseapp.com/"
+        val base_url = "https://expinf.firebaseapp.com/"
         const val USER_NAME = "user_name"
         const val USER_DP = "user_dp"
         const val PAYLOAD_ITEM_LIKE = "payload_item_like"
@@ -18,6 +18,7 @@ class CommonString {
         const val MEDIA_UNSELECTED = "media_unselected"
         const val MEDIA = "media"
         const val MEDIA_PICKER_ACTIVITY = 123
+        const val STORAGE_URL = "gs://expinf"
     }
 
 

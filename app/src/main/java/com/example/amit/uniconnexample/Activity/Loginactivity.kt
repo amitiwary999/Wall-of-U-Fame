@@ -29,7 +29,6 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ProviderQueryResult
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -78,13 +77,16 @@ class Loginactivity : AppCompatActivity() {
                         .content("You will receive an email on your ID to reset the password:")
                         .input("Enter your email", null, false) { dialog, input ->
                             val mail = dialog.inputEditText!!.text.toString()
-                            auth!!.fetchProvidersForEmail(mail).addOnCompleteListener { task ->
-                                if (task.isSuccessful) {
-                                    ///////// getProviders() will return size 1. if email ID is available.
-                                    if (task.result.providers!!.size == 0)
-                                        Toast.makeText(this@Loginactivity, "Email id is not registered", Toast.LENGTH_LONG).show()
+                            auth?.fetchSignInMethodsForEmail(mail)?.addOnCompleteListener {
+                                if(it.isSuccessful){
+                                    it.result?.signInMethods?.size?.let {
+                                        if(it==0){
+                                            Toast.makeText(this@Loginactivity, "Email id is not registered", Toast.LENGTH_LONG).show()
+                                        }
+                                    }
                                 }
                             }
+
                             if (EmailValidator.getInstance(false).isValid(mail)) {
                                 auth!!.sendPasswordResetEmail(mail)
                                 dialog.dismiss()

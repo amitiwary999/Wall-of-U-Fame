@@ -148,17 +148,24 @@ class Signupactivity : AppCompatActivity() {
             val filepath =  FirebaseStorage.getInstance().reference.child("User_Image").child(mImageUri!!.lastPathSegment!!)
             mImageUri?.let {
                 val uploadTask = filepath.putFile(it)
-                uploadTask.addOnSuccessListener {
-                    val downloadUrl = it.downloadUrl?.toString()?:""
-                    doSingUp(downloadUrl)
-                }
-
                 uploadTask.addOnFailureListener {
                     doSingUp("")
                 }
 
+                uploadTask.addOnSuccessListener{
+                    uploadTask.continueWithTask { task ->
+                        filepath.downloadUrl
+                    }.addOnCompleteListener {
+                        if(it.isSuccessful && it.result != null){
+                            doSingUp(it.result.toString())
+                        }else{
+                            doSingUp("")
+                        }
+                    }
+                }
             }
-
+        }else{
+            doSingUp("")
         }
     }
 
@@ -173,7 +180,7 @@ class Signupactivity : AppCompatActivity() {
                                 Toast.LENGTH_SHORT).show()
                     }else{
                         Log.d("Sign up","completed ${mAuth?.currentUser?.uid}")
-                        mAuth?.currentUser?.getToken(false)?.addOnCompleteListener {
+                        mAuth?.currentUser?.getIdToken(false)?.addOnCompleteListener {
                             if(it.isSuccessful){
                                 uploadProfile()
                             }else{
@@ -186,7 +193,7 @@ class Signupactivity : AppCompatActivity() {
     }
 
     fun doSingUp(imageUrl: String){
-        FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
+        FirebaseAuth.getInstance()?.currentUser?.getIdToken(false)?.addOnCompleteListener {
             if(it.isSuccessful && it.result != null){
                 val userId = FirebaseAuth.getInstance()?.currentUser?.uid?:""
                 val userDetailRequestModel = UserDetailRequestModel(name?.editText?.text?.toString()?:"", imageUrl, email?.editText?.text?.toString()?:"")

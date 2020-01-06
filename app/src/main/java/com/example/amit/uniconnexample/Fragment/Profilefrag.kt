@@ -52,7 +52,7 @@ import timber.log.Timber
 
 class Profilefrag : Fragment() {
     internal var user: FirebaseUser? = null
-    lateinit var userData: UserData
+    var userData: UserData ?= null
     lateinit var mDatabase: DatabaseReference
     lateinit var mProgress: ProgressDialog
     lateinit var profileFragView: View
@@ -112,8 +112,8 @@ class Profilefrag : Fragment() {
     internal fun updateUI() {
         val nam: String
         val mail: String
-        nam = userData.name?:""
-        mail = userData.email?:""
+        nam = userData?.name?:""
+        mail = userData?.email?:""
         profileFragView.name.setText(nam)
         profileFragView.email.setText(mail)
         context?.let {
@@ -156,7 +156,7 @@ class Profilefrag : Fragment() {
                 bitmap = getResizedBitmap(bitmap, 100)
                 Timber.d("xxx" + bitmap.byteCount)
                 profileFragView.photo.setImageBitmap(bitmap)
-                userData.photo = Utils.encodeToBase64(bitmap, Bitmap.CompressFormat.PNG, 100)
+                userData?.photo = Utils.encodeToBase64(bitmap, Bitmap.CompressFormat.PNG, 100)
             }
         })
     }
@@ -191,7 +191,7 @@ class Profilefrag : Fragment() {
                 .progress(true, 100)
                 .content("Saving..")
                 .show()
-        userData.name = profileFragView.name.text.toString()
+        userData?.name = profileFragView.name.text.toString()
         val database = FirebaseDatabase.getInstance()
         val myRef = database.reference
         myRef.child("Userdetail").child(uid).setValue(userData) { databaseError, databaseReference ->

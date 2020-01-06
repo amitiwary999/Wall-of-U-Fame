@@ -11,30 +11,16 @@ import android.os.Handler
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 
 import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Fragment.Home.HomeFragment
 import com.example.amit.uniconnexample.R
-import com.example.amit.uniconnexample.Fragment.Msgfrag
-import com.example.amit.uniconnexample.Fragment.Notifrag
 import com.example.amit.uniconnexample.Fragment.Profilefrag
-import com.example.amit.uniconnexample.Fragment.Settingfrag
-import com.google.android.gms.common.ConnectionResult
-import com.google.android.gms.common.GoogleApiAvailability
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 
-import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_new_tab.*
 import kotlinx.android.synthetic.main.design_toolbar.*
 

@@ -13,11 +13,8 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-      >
-        <service android:enabled="true"
-            android:name=".Others.Notificationservice">
-        </service>
+        android:supportsRtl="true">
+
         <activity android:name=".Activity.Loginactivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize">
@@ -31,13 +28,7 @@
             android:label="Signup"
             android:theme="@style/AppTheme.NoactionBar"
             android:windowSoftInputMode="stateHidden|adjustResize"></activity>
-       <activity android:name=".Activity.Blog"
-           android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Activity.AddBlogActivity"
-            android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".Activity.Chatstart"
-            android:theme="@style/AppTheme.NoactionBar"></activity>
-        <activity android:name=".Activity.Notifclick"
             android:theme="@style/AppTheme.NoactionBar"></activity>
         <activity android:name=".Activity.NewTabActivity"
             android:theme="@style/AppTheme.NoactionBar"></activity>

@@ -64,8 +64,6 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
     private var extType: String ?= null
     private var mimeType: String = ""
     private var mStorage: StorageReference? = null
-    private var mDatabase: DatabaseReference? = null
-    private var mDatabas: DatabaseReference? = null
     private var mProgress: ProgressDialog? = null
     var bytearray: ByteArray ?= null
     internal var check: String ?= null
@@ -104,8 +102,6 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
         date = getDate()
         time = currentTime
         val buttondone = findViewById<View>(R.id.buttondone) as Button
-        mDatabase = FirebaseDatabase.getInstance().reference.child(check)
-        mDatabas = FirebaseDatabase.getInstance().reference.child("Posts")
 
         val mSelectImage = findViewById<View>(R.id.mSelectImage) as ImageView
         mStorage = FirebaseStorage.getInstance().reference
@@ -169,25 +165,35 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
             name = PrefManager.getString(CommonString.USER_NAME,"name")
             photo = PrefManager.getString(CommonString.USER_DP,"")
             val postId = UtilPostIdGenerator.generatePostId()
-            val filepath = mStorage!!.child("User_Blog").child("$postId.$extType")
+            var filepath: StorageReference ?= FirebaseStorage.getInstance(CommonString.STORAGE_URL).reference.child("User_Blog").child("$postId.$extType")
             if (mImageUri != null || mVideoUri != null) {
                 var uploadTask: UploadTask ?= null
                 mImageUri?.let {
-                    uploadTask = filepath.putFile(it)
+                    uploadTask = filepath?.putFile(it)
                 }
 
                 mVideoUri?.let {
-                    uploadTask = filepath.putFile(it)
+                    uploadTask = filepath?.putFile(it)
                 }
 
-                uploadTask?.addOnSuccessListener { taskSnapshot ->
-                    // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
-                    val downloadUrl = taskSnapshot.downloadUrl
-                    info { "url firebase ${downloadUrl}" }
-                    val blogModel = PostBlogModel(postId,desc_val, downloadUrl.toString(),  date, name?:"", photo?:"", mimeType )
-                    postBlog(blogModel)
+                uploadTask?.addOnFailureListener {
+                    mProgress?.dismiss()
                 }
 
+                uploadTask?.addOnSuccessListener {
+                    uploadTask?.continueWithTask {
+                        filepath?.downloadUrl
+                    }?.addOnCompleteListener {
+                        if(it.isSuccessful && it.result != null){
+                            val downloadUrl = it.result?.toString()
+                            info { "url firebase ${downloadUrl}" }
+                            val blogModel = PostBlogModel(postId,desc_val, downloadUrl.toString(),  date, name?:"", photo?:"", mimeType )
+                            postBlog(blogModel)
+                        }else{
+                            mProgress?.dismiss()
+                        }
+                    }
+                }
             } else if (desc_val.length != 0) {
 
                 val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", date, name?:"", photo?:"" )
@@ -208,7 +214,7 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
     }
 
     fun postBlog(postBlogModel: PostBlogModel){
-        FirebaseAuth.getInstance()?.currentUser?.getToken(false)?.addOnCompleteListener {
+        FirebaseAuth.getInstance()?.currentUser?.getIdToken(false)?.addOnCompleteListener {
             if(it.isSuccessful){
                 RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository()?.sendPost("Bearer ${it.result?.token}", postBlogModel)
                         ?.enqueue(object : Callback<ModelResponseMessage>{
