@@ -5,13 +5,13 @@ package com.example.amit.uniconnexample.rest.model
  */
 data class PostModel(
         var date: String,
-        var desc: String,
-        var imageUrl: String,
+        var description: String,
+        var mediaUrl: String,
         var creatorId: String,
         var postId: String,
-        var creatorDp :String,
-        var creatorName: String,
-        var like : Int,
+        var userDp :String,
+        var userName: String,
+        var like : Int ?= 0,
         var isLiked: Int = 0,
         var mimeType: String?=null
 ) {

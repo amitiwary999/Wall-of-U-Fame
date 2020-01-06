@@ -21,7 +21,7 @@ class HomeAdapterImageViewHolder(itemView: View, var itemHeight : Int): HomeAdap
         super.setData(post)
         info { "set data image super" }
         post?.let { postModel->
-            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(itemHeight).into(imageView)
+            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.mediaUrl).override(itemHeight).into(imageView)
         }
     }
 

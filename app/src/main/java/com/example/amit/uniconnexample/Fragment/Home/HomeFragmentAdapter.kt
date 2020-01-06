@@ -74,12 +74,20 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         holder.likeButton.setOnClickListener {
             if(postModel.isLiked == 1){
                 postModel.isLiked = 0
-                postModel.like = postModel.like-1
+                postModel.like = if(postModel.like != null){
+                    0
+                }else{
+                    postModel.like!!-1
+                }
                 itemOptionsClickListener.onPostUnlike(postModel.postId)
                 notifyItemChanged(position, CommonString.PAYLOAD_ITEM_UNLIKE)
             }else{
                 postModel.isLiked = 1
-                postModel.like = postModel.like+1
+                postModel.like = if(postModel.like != null){
+                    0
+                }else{
+                    postModel.like!!+1
+                }
                 itemOptionsClickListener.onPostLike(postModel.postId)
                 notifyItemChanged(position, CommonString.PAYLOAD_ITEM_LIKE)
             }

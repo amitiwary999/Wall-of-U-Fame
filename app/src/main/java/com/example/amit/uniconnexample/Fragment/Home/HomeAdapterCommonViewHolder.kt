@@ -29,18 +29,18 @@ abstract class HomeAdapterCommonViewHolder(itemView :View): RecyclerView.ViewHol
 
     fun setData(post: PostModel?){
         post?.let { postModel ->
-            postDesc.text = postModel.desc
-            name.text = postModel.creatorName
+            postDesc.text = postModel.description
+            name.text = postModel.userName
             date.text = DateUtils.getDateFromUTCTimestamp(postModel.date, CommonString.DATE_FORMAT)
-            likeCount.text = postModel.like.toString()
+            likeCount.text = postModel.like?.toString()
             if(postModel.isLiked == 1){
                 likeButton.setColorFilter(App.instance.resources.getColor(R.color.yellow))
             }else{
                 likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
             }
 
-            if(postModel.creatorDp.isNotEmpty()){
-                Glide.with(itemView.context).setDefaultRequestOptions(RequestOptions().circleCrop()).load(postModel.creatorDp).into(pImage)
+            if(postModel.userDp.isNotEmpty()){
+                Glide.with(itemView.context).setDefaultRequestOptions(RequestOptions().circleCrop()).load(postModel.userDp).into(pImage)
             }
 
         }
@@ -53,7 +53,7 @@ abstract class HomeAdapterCommonViewHolder(itemView :View): RecyclerView.ViewHol
             likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
         }
         postModel?.let {
-            likeCount.text = it.like.toString()
+            likeCount.text = it.like?.toString()
         }
     }
 }

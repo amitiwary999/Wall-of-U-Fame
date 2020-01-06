@@ -34,14 +34,14 @@ class HomeAdapterVideoViewHolder(itemView: View, var videoView: VideoPlayerViewR
         post?.let{postModel ->
             imageView.visibility = View.VISIBLE
             playerIcon.visibility = View.VISIBLE
-            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.imageUrl).override(frameWidth).into(imageView)
+            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.mediaUrl).override(frameWidth).into(imageView)
             playerView.visibility = View.GONE
 
             mediaFrame.setOnClickListener {
                 playerView.visibility = View.VISIBLE
                 imageView.visibility = View.GONE
                 playerIcon.visibility = View.GONE
-                videoView.setData(Uri.parse(postModel.imageUrl), false, playerView)
+                videoView.setData(Uri.parse(postModel.mediaUrl), false, playerView)
             }
         }
     }
