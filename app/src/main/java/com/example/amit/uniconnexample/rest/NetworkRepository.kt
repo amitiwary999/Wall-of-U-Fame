@@ -24,6 +24,6 @@ interface NetworkRepository {
     @POST("getBlogSql")
     fun getPostPAged(@Header("Authorization") authToken:String, @Body request: GetPostRequestModel): Call<List<PostModel>>
 
-    @POST("postLike")
-    fun postLiked(@Header("Authorization") authToken:String, @Body request: PostLikeModel): Call<String>
+    @POST("setPostLikeSql")
+    fun postLikeUnlike(@Header("Authorization") authToken:String, @Body request: PostLikeModel): Call<String>
 }

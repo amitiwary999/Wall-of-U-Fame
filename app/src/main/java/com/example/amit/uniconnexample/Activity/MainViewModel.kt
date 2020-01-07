@@ -59,11 +59,11 @@ class MainViewModel : ViewModel(), AnkoLogger {
         }
     }
 
-    fun postLiked(postId: String){
+    fun postLikeUnLike(postId: String, incrVal: Int){
         FirebaseAuth.getInstance()?.currentUser?.getIdToken(false)?.addOnCompleteListener {
             if(it.isSuccessful && it.result != null){
-                val postLikemodel = PostLikeModel(postId, 1)
-                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().postLiked("Bearer ${it.result?.token}", postLikemodel)
+                val postLikemodel = PostLikeModel(postId, incrVal)
+                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().postLikeUnlike("Bearer ${it.result?.token}", postLikemodel)
                         .enqueue(object : Callback<String>{
                             override fun onFailure(call: Call<String>, t: Throwable) {
                                 t.printStackTrace()
@@ -74,28 +74,6 @@ class MainViewModel : ViewModel(), AnkoLogger {
                                     info { "response like ${response.body()}" }
                                 }else{
                                     info { "response like fail" }
-                                }
-                            }
-                        })
-            }
-        }
-    }
-
-    fun postUnlike(postId: String) {
-        FirebaseAuth.getInstance()?.currentUser?.getIdToken(false)?.addOnCompleteListener {
-            if(it.isSuccessful && it.result != null){
-                val postLikemodel = PostLikeModel(postId, 0)
-                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().postLiked("Bearer ${it.result?.token}", postLikemodel)
-                        .enqueue(object : Callback<String>{
-                            override fun onFailure(call: Call<String>, t: Throwable) {
-                                t.printStackTrace()
-                            }
-
-                            override fun onResponse(call: Call<String>, response: Response<String>) {
-                                if(response.isSuccessful && response.body() != null) {
-                                    info { "response ${response.body()}" }
-                                }else{
-                                    info { "response fail" }
                                 }
                             }
                         })

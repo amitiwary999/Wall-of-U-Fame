@@ -117,11 +117,11 @@ class HomeFragment : Fragment(), ItemOptionsClickListener,AnkoLogger {
     }
 
     override fun onPostLike(postId: String) {
-        mainViewModel?.postLiked(postId)
+        mainViewModel?.postLikeUnLike(postId, 1)
     }
 
     override fun onPostUnlike(postId: String) {
-        mainViewModel?.postUnlike(postId)
+        mainViewModel?.postLikeUnLike(postId, 0)
     }
 
     override fun onChatClick(userId: String) {
