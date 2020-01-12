@@ -19,6 +19,9 @@ class CommonString {
         const val MEDIA = "media"
         const val MEDIA_PICKER_ACTIVITY = 123
         const val STORAGE_URL = "gs://expinf"
+        const val THUMBNAIL_GENERATE = "thumbnail_generate"
+        const val ORIGINAL_GENERATE = "original_generate"
+        const val EXT_JPEG = "jpeg"
     }
 
 

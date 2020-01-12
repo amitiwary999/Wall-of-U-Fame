@@ -26,7 +26,7 @@ class HomeAdapterImageViewHolder(itemView: View, var itemHeight : Int): HomeAdap
             }else{
                 postModel.mediaUrl
             }
-            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(thumb).override(itemHeight).into(imageView)
+            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.mediaUrl).thumbnail(Glide.with(itemView).load(thumb)).override(itemHeight).into(imageView)
         }
     }
 

@@ -160,46 +160,21 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
             name = PrefManager.getString(CommonString.USER_NAME,"name")
             photo = PrefManager.getString(CommonString.USER_DP,"")
             val postId = UtilPostIdGenerator.generatePostId()
-            var thumbnail: String ?= null
-            var thumbnailBitmap: Bitmap ?= null
-            if(mimeType.contains(CommonString.MimeType.IMAGE) && mUri != null){
-                val exif = ExifInterface(mUri!!.path)
-                val imageData=exif.getThumbnail();
-                if(imageData == null){
-                    try{
-                        val bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mUri);
-                        thumbnailBitmap = ThumbnailUtils.extractThumbnail(bitmap,120,120);
-                    } catch (e: Exception){
-                        e.printStackTrace()
-                    }
-                }else{
-                    thumbnailBitmap= BitmapFactory.decodeByteArray(imageData,0,imageData.size)
-                }
-            }else if(mimeType.contains(CommonString.MimeType.VIDEO) && mUri != null){
-                val mMMR = MediaMetadataRetriever()
-                mMMR.setDataSource(this, mUri);
-                thumbnailBitmap = mMMR.getFrameAtTime();
-            }
+
             var thumbnailUrl = ""
             var originalUrl = ""
 
-            var uri: Uri ?= null
-            thumbnail?.let {
-                uri = Uri.parse(thumbnail)
-            }
-
-            info { "thumburi ${thumbnail} i ${thumbnailBitmap} mime ${mimeType} ${mUri}" }
 
             var filepath: StorageReference ?= FirebaseStorage.getInstance(CommonString.STORAGE_URL).reference.child("User_Blog").child("$postId.$extType")
             if (mUri != null) {
 
-                val disposable = MediaUploaderHelper.uploadMedia(uri, thumbnailBitmap, mimeType, "User_Blog_Thumb", postId, extType)
+                val disposable = MediaUploaderHelper.uploadMedia(mUri, mimeType, "User_Blog_Thumb", postId, extType,CommonString.THUMBNAIL_GENERATE)
                         .observeOn(Schedulers.io())
                         .map {
                             thumbnailUrl = it
                         }
                         .flatMap {
-                            MediaUploaderHelper.uploadMedia(mUri, null, mimeType, "User_Blog",postId, extType)
+                            MediaUploaderHelper.uploadMedia(mUri, mimeType, "User_Blog",postId, extType, CommonString.ORIGINAL_GENERATE)
                         }.observeOn(Schedulers.io())
                         .map {
                             originalUrl = it
