@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.*
 import android.media.ExifInterface
+import android.media.ThumbnailUtils
 import android.net.ConnectivityManager
 import android.net.Uri
 import android.os.Bundle
@@ -29,28 +30,22 @@ import com.example.amit.uniconnexample.Signupactivity
 import com.example.amit.uniconnexample.View.VideoPlayerView
 import com.example.amit.uniconnexample.rest.RetrofitClientBuilder
 import com.example.amit.uniconnexample.rest.model.ModelResponseMessage
-import com.example.amit.uniconnexample.utils.PrefManager
-import com.example.amit.uniconnexample.utils.UtilDpToPixel
-import com.example.amit.uniconnexample.utils.UtilPostIdGenerator
-import com.example.amit.uniconnexample.utils.Utils
+import com.example.amit.uniconnexample.utils.*
 import com.google.android.exoplayer2.*
-import com.google.android.exoplayer2.source.TrackGroupArray
-import com.google.android.exoplayer2.trackselection.TrackSelectionArray
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
+import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_blog.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.io.ByteArrayOutputStream
-import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -59,8 +54,7 @@ import java.util.*
  */
 class AddBlogActivity: AppCompatActivity(), AnkoLogger{
     private var auth: FirebaseAuth? = null
-    private var mImageUri: Uri? = null
-    private var mVideoUri: Uri ?= null
+    private var mUri: Uri? = null
     private var extType: String ?= null
     private var mimeType: String = ""
     private var mStorage: StorageReference? = null
@@ -165,35 +159,81 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
             name = PrefManager.getString(CommonString.USER_NAME,"name")
             photo = PrefManager.getString(CommonString.USER_DP,"")
             val postId = UtilPostIdGenerator.generatePostId()
+            var thumbnail: String ?= null
+            var thumbnailBitmap: Bitmap ?= null
+            if(mimeType.contains(CommonString.MimeType.IMAGE) && mUri != null){
+                val exif = ExifInterface(mUri!!.path)
+                val imageData=exif.getThumbnail();
+                thumbnailBitmap= BitmapFactory.decodeByteArray(imageData,0,imageData.size);
+            }else if(mimeType.contains(CommonString.MimeType.VIDEO) && mUri != null){
+                val filePathColumn = arrayOf(MediaStore.Images.Media.DATA)
+                val cursor = this.getContentResolver().query(mUri, filePathColumn, null, null, null);
+                if( cursor != null && cursor.getCount() > 0 ) {
+                    cursor.moveToFirst();
+                    val columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                    val picturePath = cursor.getString(columnIndex);
+                    cursor.close()
+
+                    thumbnailBitmap = ThumbnailUtils.createVideoThumbnail(picturePath, MediaStore.Video.Thumbnails.MICRO_KIND);
+                }
+            }
+            var thumbnailUrl = ""
+            var originalUrl = ""
+
+            var uri: Uri ?= null
+            thumbnail?.let {
+                uri = Uri.parse(thumbnail)
+            }
+
+            info { "thumburi ${thumbnail} i ${thumbnailBitmap} mime ${mimeType} ${mUri}" }
+
             var filepath: StorageReference ?= FirebaseStorage.getInstance(CommonString.STORAGE_URL).reference.child("User_Blog").child("$postId.$extType")
-            if (mImageUri != null || mVideoUri != null) {
-                var uploadTask: UploadTask ?= null
-                mImageUri?.let {
-                    uploadTask = filepath?.putFile(it)
-                }
+            if (mUri != null) {
 
-                mVideoUri?.let {
-                    uploadTask = filepath?.putFile(it)
-                }
-
-                uploadTask?.addOnFailureListener {
-                    mProgress?.dismiss()
-                }
-
-                uploadTask?.addOnSuccessListener {
-                    uploadTask?.continueWithTask {
-                        filepath?.downloadUrl
-                    }?.addOnCompleteListener {
-                        if(it.isSuccessful && it.result != null){
-                            val downloadUrl = it.result?.toString()
-                            info { "url firebase ${downloadUrl}" }
-                            val blogModel = PostBlogModel(postId,desc_val, downloadUrl.toString(),  date, name?:"", photo?:"", mimeType )
-                            postBlog(blogModel)
-                        }else{
-                            mProgress?.dismiss()
+                val disposable = MediaUploaderHelper.uploadMedia(uri, thumbnailBitmap, mimeType, "User_Blog_Thumb", postId, extType)
+                        .observeOn(Schedulers.io())
+                        .map {
+                            thumbnailUrl = it
                         }
-                    }
-                }
+                        .flatMap {
+                            MediaUploaderHelper.uploadMedia(mUri, null, mimeType, "User_Blog",postId, extType)
+                        }.observeOn(Schedulers.io())
+                        .map {
+                            originalUrl = it
+                        }
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe({
+                            info { "thumb and orig ${thumbnailUrl} ${originalUrl}" }
+                            val blogModel = PostBlogModel(postId,desc_val, originalUrl,  date, name?:"", photo?:"", mimeType )
+                            postBlog(blogModel)
+                        },{
+                            mProgress?.dismiss()
+                        })
+
+
+//                var uploadTask: UploadTask ?= null
+//                mUri?.let {
+//                    uploadTask = filepath?.putFile(it)
+//                }
+//
+//                uploadTask?.addOnFailureListener {
+//                    mProgress?.dismiss()
+//                }
+//
+//                uploadTask?.addOnSuccessListener {
+//                    uploadTask?.continueWithTask {
+//                        filepath?.downloadUrl
+//                    }?.addOnCompleteListener {
+//                        if(it.isSuccessful && it.result != null){
+//                            val downloadUrl = it.result?.toString()
+//                            info { "url firebase ${downloadUrl}" }
+//                            val blogModel = PostBlogModel(postId,desc_val, downloadUrl.toString(),  date, name?:"", photo?:"", mimeType )
+//                            postBlog(blogModel)
+//                        }else{
+//                            mProgress?.dismiss()
+//                        }
+//                    }
+//                }
             } else if (desc_val.length != 0) {
 
                 val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", date, name?:"", photo?:"" )
@@ -252,8 +292,8 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
                 return
             }
 
-            mImageUri = data.data
-            info { "picked image ${mImageUri}" }
+            mUri = data.data
+            info { "picked image ${mUri}" }
           //  compressImage(mImageUri!!)
 
         }
@@ -261,43 +301,36 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
         if(requestCode == CommonString.MEDIA_PICKER_ACTIVITY && data != null){
             val medias = data.getParcelableArrayListExtra<ChosenMediaFile>(CommonString.MEDIA)
             if(medias.size > 0){
-                medias[0].mimeType?.let {
+                medias[0].mimeType?.let {mime ->
                     extType = medias[0].extType
-                    mimeType = it
-                    if(it.contains(CommonString.MimeType.IMAGE)){
-                        mImageUri = medias.get(0).uri
-                    }else if(it.contains(CommonString.MimeType.VIDEO)){
-                        mVideoUri = medias.get(0).uri
+                    mimeType = mime
+                    mUri = medias.get(0).uri
+                    mUri?.let {
+                        if (mime.contains(CommonString.MimeType.IMAGE)) {
+                            mSelectImage.visibility = View.VISIBLE
+                            // selected_video_player_view.visibility = View.GONE
+                            try {
+                                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mUri)
+
+                                val imageView = findViewById<View>(R.id.mSelectImage) as ImageView
+                                imageView.setImageBitmap(bitmap)
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
+                        } else if (mime.contains(CommonString.MimeType.VIDEO)) {
+                            val height = UtilDpToPixel.convertDpToPixel(250f, this)
+                            mSelectImage.visibility = View.GONE
+                            val view = VideoPlayerView(this)
+                            lifecycle.addObserver(view)
+                            val layoutParam = (ViewGroup.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, height.toInt()))
+                            //  layoutParam.setMargins(margin.toInt(), margin.toInt(), margin.toInt(), margin.toInt())
+                            view.layoutParams = layoutParam
+                            selected_media.addView(view)
+                            view.setData(it, false)
+                        }
                     }
                 }
             }
-        }
-        mImageUri?.let {
-            mSelectImage.visibility = View.VISIBLE
-           // selected_video_player_view.visibility = View.GONE
-            try {
-                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, mImageUri)
-
-                val imageView = findViewById<View>(R.id.mSelectImage) as ImageView
-                imageView.setImageBitmap(bitmap)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
-
-        mVideoUri?.let {
-            val height = UtilDpToPixel.convertDpToPixel(250f, this)
-            mSelectImage.visibility = View.GONE
-            val view = VideoPlayerView(this)
-            lifecycle.addObserver(view)
-            val layoutParam = (ViewGroup.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, height.toInt()))
-          //  layoutParam.setMargins(margin.toInt(), margin.toInt(), margin.toInt(), margin.toInt())
-            view.layoutParams = layoutParam
-            selected_media.addView(view)
-            view.setData(it, false)
-//            selected_video_player_view.visibility = View.VISIBLE
-//            selected_video_player_view.init()
-//            selected_video_player_view.setData(it, false)
         }
     }
 

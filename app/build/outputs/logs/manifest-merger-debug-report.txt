@@ -83,6 +83,7 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/meera/.
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/7928b1bd59bdeab63176c3bf1f0d4838/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b117c51d8782d3afbbfb555fc6a61bbf/core-1.1.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e8d9f32125f52f1626eaa7b2365f2680/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/b83c4390f67d5cdbd92be19b756336cb/rxandroid-2.1.1/AndroidManifest.xml:15:1-20:12
 MERGED from [org.jetbrains.anko:anko-sqlite:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/d401ad313b53609fd7c64382a9c235aa/anko-sqlite-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-sdk27:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/2cd36a12d6e6f8066febc38dc4a1a467/anko-sdk27-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-sdk27-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/ea7c8515e77cb2a535743b9bd8aef885/anko-sdk27-coroutines-0.10.8/AndroidManifest.xml:2:1-13:12
@@ -510,6 +511,8 @@ MERGED from [androidx.core:core:1.1.0] /home/meera/.gradle/caches/transforms-2/f
 MERGED from [androidx.core:core:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b117c51d8782d3afbbfb555fc6a61bbf/core-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e8d9f32125f52f1626eaa7b2365f2680/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e8d9f32125f52f1626eaa7b2365f2680/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/b83c4390f67d5cdbd92be19b756336cb/rxandroid-2.1.1/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/b83c4390f67d5cdbd92be19b756336cb/rxandroid-2.1.1/AndroidManifest.xml:18:5-43
 MERGED from [org.jetbrains.anko:anko-sqlite:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/d401ad313b53609fd7c64382a9c235aa/anko-sqlite-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-sqlite:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/d401ad313b53609fd7c64382a9c235aa/anko-sqlite-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-sdk27:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/2cd36a12d6e6f8066febc38dc4a1a467/anko-sdk27-0.10.8/AndroidManifest.xml:7:5-9:41
