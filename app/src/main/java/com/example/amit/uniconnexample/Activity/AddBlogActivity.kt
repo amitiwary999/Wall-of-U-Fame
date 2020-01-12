@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.*
 import android.media.ExifInterface
+import android.media.MediaMetadataRetriever
 import android.media.ThumbnailUtils
 import android.net.ConnectivityManager
 import android.net.Uri
@@ -164,18 +165,20 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
             if(mimeType.contains(CommonString.MimeType.IMAGE) && mUri != null){
                 val exif = ExifInterface(mUri!!.path)
                 val imageData=exif.getThumbnail();
-                thumbnailBitmap= BitmapFactory.decodeByteArray(imageData,0,imageData.size);
-            }else if(mimeType.contains(CommonString.MimeType.VIDEO) && mUri != null){
-                val filePathColumn = arrayOf(MediaStore.Images.Media.DATA)
-                val cursor = this.getContentResolver().query(mUri, filePathColumn, null, null, null);
-                if( cursor != null && cursor.getCount() > 0 ) {
-                    cursor.moveToFirst();
-                    val columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                    val picturePath = cursor.getString(columnIndex);
-                    cursor.close()
-
-                    thumbnailBitmap = ThumbnailUtils.createVideoThumbnail(picturePath, MediaStore.Video.Thumbnails.MICRO_KIND);
+                if(imageData == null){
+                    try{
+                        val bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), mUri);
+                        thumbnailBitmap = ThumbnailUtils.extractThumbnail(bitmap,120,120);
+                    } catch (e: Exception){
+                        e.printStackTrace()
+                    }
+                }else{
+                    thumbnailBitmap= BitmapFactory.decodeByteArray(imageData,0,imageData.size)
                 }
+            }else if(mimeType.contains(CommonString.MimeType.VIDEO) && mUri != null){
+                val mMMR = MediaMetadataRetriever()
+                mMMR.setDataSource(this, mUri);
+                thumbnailBitmap = mMMR.getFrameAtTime();
             }
             var thumbnailUrl = ""
             var originalUrl = ""
@@ -204,39 +207,14 @@ class AddBlogActivity: AppCompatActivity(), AnkoLogger{
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe({
                             info { "thumb and orig ${thumbnailUrl} ${originalUrl}" }
-                            val blogModel = PostBlogModel(postId,desc_val, originalUrl,  date, name?:"", photo?:"", mimeType )
+                            val blogModel = PostBlogModel(postId,desc_val, originalUrl, thumbnailUrl, mimeType )
                             postBlog(blogModel)
                         },{
                             mProgress?.dismiss()
                         })
-
-
-//                var uploadTask: UploadTask ?= null
-//                mUri?.let {
-//                    uploadTask = filepath?.putFile(it)
-//                }
-//
-//                uploadTask?.addOnFailureListener {
-//                    mProgress?.dismiss()
-//                }
-//
-//                uploadTask?.addOnSuccessListener {
-//                    uploadTask?.continueWithTask {
-//                        filepath?.downloadUrl
-//                    }?.addOnCompleteListener {
-//                        if(it.isSuccessful && it.result != null){
-//                            val downloadUrl = it.result?.toString()
-//                            info { "url firebase ${downloadUrl}" }
-//                            val blogModel = PostBlogModel(postId,desc_val, downloadUrl.toString(),  date, name?:"", photo?:"", mimeType )
-//                            postBlog(blogModel)
-//                        }else{
-//                            mProgress?.dismiss()
-//                        }
-//                    }
-//                }
             } else if (desc_val.length != 0) {
 
-                val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "", date, name?:"", photo?:"" )
+                val blogModel = PostBlogModel(UtilPostIdGenerator.generatePostId(),desc_val, "","","" )
                 postBlog(blogModel)
             } else {
                 mProgress!!.dismiss()

@@ -38,11 +38,11 @@ abstract class HomeAdapterCommonViewHolder(itemView :View): RecyclerView.ViewHol
             }else{
                 likeButton.setColorFilter(App.instance.resources.getColor(R.color.Black))
             }
-
-            if(postModel.userDp.isNotEmpty()){
-                Glide.with(itemView.context).setDefaultRequestOptions(RequestOptions().circleCrop()).load(postModel.userDp).into(pImage)
+            postModel.userDp?.let {
+                if(it.isNotEmpty()){
+                    Glide.with(itemView.context).setDefaultRequestOptions(RequestOptions().circleCrop()).load(it).into(pImage)
+                }
             }
-
         }
     }
 

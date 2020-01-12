@@ -21,7 +21,12 @@ class HomeAdapterImageViewHolder(itemView: View, var itemHeight : Int): HomeAdap
         super.setData(post)
         info { "set data image super" }
         post?.let { postModel->
-            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.mediaUrl).override(itemHeight).into(imageView)
+            val thumb = if(postModel.mediaThumbUrl != null && postModel.mediaThumbUrl!!.isNotEmpty()){
+                postModel.mediaThumbUrl
+            }else{
+                postModel.mediaUrl
+            }
+            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(thumb).override(itemHeight).into(imageView)
         }
     }
 

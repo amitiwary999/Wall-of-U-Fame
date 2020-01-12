@@ -34,7 +34,12 @@ class HomeAdapterVideoViewHolder(itemView: View, var videoView: VideoPlayerViewR
         post?.let{postModel ->
             imageView.visibility = View.VISIBLE
             playerIcon.visibility = View.VISIBLE
-            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(postModel.mediaUrl).override(frameWidth).into(imageView)
+            val thumb = if(postModel.mediaThumbUrl != null && postModel.mediaThumbUrl!!.isNotEmpty()){
+                postModel.mediaThumbUrl
+            }else{
+                postModel.mediaUrl
+            }
+            Glide.with(itemView).setDefaultRequestOptions(RequestOptions().fitCenter()).load(thumb).override(frameWidth).into(imageView)
             playerView.visibility = View.GONE
 
             mediaFrame.setOnClickListener {

@@ -11,10 +11,8 @@ import java.io.UnsupportedEncodingException
 class PostBlogModel(
         val postId: String,
         var desc: String? = null,
-        var imageUrl: String? = null,
-        val date: String?=null,
-        val name: String,
-        val dp: String,
+        var mediaUrl: String? = null,
+        var mediaThumbUrl: String?=null,
         var mimeType: String?=null
 ) {
 }
