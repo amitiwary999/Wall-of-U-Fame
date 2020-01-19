@@ -20,12 +20,12 @@ abstract class HomeAdapterCommonViewHolder(itemView :View): RecyclerView.ViewHol
     abstract fun bindData(post: PostModel?)
     abstract fun detachedView()
 
-    var pImage: ImageView = itemView.findViewById(R.id.pimage)
-    var name: TextView = itemView.findViewById(R.id.bname)
-    var postDesc: TextView = itemView.findViewById(R.id.post_desc)
-    var likeButton: ImageButton = itemView.findViewById(R.id.like)
-    var date: TextView = itemView.findViewById(R.id.txtDate)
-    var likeCount: TextView = itemView.findViewById(R.id.txtlike)
+    var pImage: ImageView = itemView.findViewById(R.id.user_image)
+    var name: TextView = itemView.findViewById(R.id.user_name)
+    var postDesc: TextView = itemView.findViewById(R.id.post_description)
+    var likeButton: ImageView = itemView.findViewById(R.id.like_button)
+    var date: TextView = itemView.findViewById(R.id.post_date)
+    var likeCount: TextView = itemView.findViewById(R.id.like_count)
 
     fun setData(post: PostModel?){
         post?.let { postModel ->

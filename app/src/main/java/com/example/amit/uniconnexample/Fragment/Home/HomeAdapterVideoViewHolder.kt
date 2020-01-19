@@ -19,7 +19,7 @@ import org.jetbrains.anko.info
  * Created by Meera on 01,January,2020
  */
 class HomeAdapterVideoViewHolder(itemView: View, var videoView: VideoPlayerViewRecycler, var frameWidth: Int): HomeAdapterCommonViewHolder(itemView), AnkoLogger {
-    var mediaFrame: FrameLayout = itemView.findViewById(R.id.media_frame)
+    var mediaFrame: FrameLayout = itemView.findViewById(R.id.post_image)
     var playerView: PlayerView = itemView.findViewById(R.id.player_view)
     var imageView: ImageView = itemView.findViewById(R.id.image_view)
     var playerIcon: ImageView = itemView.findViewById(R.id.play_btn)

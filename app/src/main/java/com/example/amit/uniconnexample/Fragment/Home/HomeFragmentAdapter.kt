@@ -52,13 +52,13 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
         lateinit var view: View
         context = parent.context
         if(viewType == IMAGE_VIEW){
-            view = LayoutInflater.from(parent.context).inflate(R.layout.blog_image_item, parent, false)
+            view = LayoutInflater.from(parent.context).inflate(R.layout.blog_image_item_view, parent, false)
             return HomeAdapterImageViewHolder(view, itemHeight)
         }else if(viewType == VIDEO_VIEW){
-            view=LayoutInflater.from(parent.context).inflate(R.layout.blog_video_item, parent, false)
+            view=LayoutInflater.from(parent.context).inflate(R.layout.blog_video_item_view, parent, false)
             return HomeAdapterVideoViewHolder(view, videoPlayerView, itemHeight)
         }else{
-            view = LayoutInflater.from(parent.context).inflate(R.layout.blog_item, parent, false)
+            view = LayoutInflater.from(parent.context).inflate(R.layout.blog_text_item_view, parent, false)
             return HomeAdapterTextViewHolder(view)
         }
     }

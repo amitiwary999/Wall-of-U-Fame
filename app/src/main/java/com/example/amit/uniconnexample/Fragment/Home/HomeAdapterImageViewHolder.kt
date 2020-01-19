@@ -15,7 +15,7 @@ import org.jetbrains.anko.info
  * Created by Meera on 01,January,2020
  */
 class HomeAdapterImageViewHolder(itemView: View, var itemHeight : Int): HomeAdapterCommonViewHolder(itemView), AnkoLogger {
-    var imageView: ImageView = itemView.findViewById(R.id.image_view)
+    var imageView: ImageView = itemView.findViewById(R.id.post_image)
     override fun bindData(post: PostModel?) {
         info { "set data image" }
         super.setData(post)
