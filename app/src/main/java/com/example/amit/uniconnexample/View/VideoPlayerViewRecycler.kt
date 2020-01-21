@@ -11,6 +11,7 @@ import com.google.android.exoplayer2.source.ExtractorMediaSource
 import com.google.android.exoplayer2.source.TrackGroupArray
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray
+import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import com.google.android.exoplayer2.ui.PlayerView
 import com.google.android.exoplayer2.upstream.*
 import com.google.android.exoplayer2.util.Util
@@ -43,6 +44,9 @@ class VideoPlayerViewRecycler(var context: Context): LifecycleObserver {
         simpleExoPlayer!!.playWhenReady = autoPlay!!
         val mediaSource = ExtractorMediaSource.Factory(dataSourceFactory).createMediaSource(uri)
         simpleExoPlayer!!.prepare(mediaSource)
+
+        playerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FILL);
+        simpleExoPlayer?.setVideoScalingMode(C.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING);
     }
 
     fun pause() {
