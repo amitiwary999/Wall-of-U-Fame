@@ -1,0 +1,1 @@
+export const fetchPostUrl = 'https://expinf.firebaseapp.com/getBlogSql'
