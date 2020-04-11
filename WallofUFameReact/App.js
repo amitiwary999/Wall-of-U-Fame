@@ -18,6 +18,7 @@ import {
   FlatList
 } from 'react-native';
 import urls from 'src/Constants';
+import auth from '@react-native-firebase/auth';
 
 import {
   Header,
@@ -57,13 +58,18 @@ constructor(){
       throw new Error("bad response ")
     }
   })
+  .then(responseJson => {
+    if(responseJson !== undefined){
+      posts = responseJson
+    }
+  })
   .catch(error => {
     console.log(error);
   })
  }
 
    getToken = async () => {
-    let token = await firebase.auth().currentUser.getIdTokenResult();
+    let token = await auth().currentUser.getIdTokenResult();
     console.log('token got ' + token.token);
     return token.token;
   };
