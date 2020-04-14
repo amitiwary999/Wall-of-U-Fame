@@ -1,4 +1,4 @@
-package com.wallofufamereact;
+package com.example.amit.uniconnexample;
 
 import com.facebook.react.ReactActivity;
 

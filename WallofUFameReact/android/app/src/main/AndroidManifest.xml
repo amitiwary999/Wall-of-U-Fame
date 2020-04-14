@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.wallofufamereact">
+  package="com.example.amit.uniconnexample">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

@@ -1,4 +1,4 @@
-package com.wallofufamereact;
+package com.example.amit.uniconnexample;
 
 import android.app.Application;
 import android.content.Context;
