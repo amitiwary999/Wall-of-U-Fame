@@ -27,7 +27,7 @@ class LoginScreen extends Component {
 
   componentDidMount(){
     GoogleSignin.configure({
-      scopes: ['https://www.googleapis.com/auth/firebase.database'],
+      scopes: [],
       androidClientId:
         '538184241590-gelgo0d1492gns699pji45k02cc1psn7.apps.googleusercontent.com',
       webClientId:

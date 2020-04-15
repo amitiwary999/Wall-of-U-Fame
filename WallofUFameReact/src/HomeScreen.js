@@ -7,7 +7,8 @@ import {
   Text,
   Image,
   StatusBar,
-  FlatList
+  FlatList,
+ Dimensions,
 } from 'react-native';
 import * as urls from './Constants';
 import auth from '@react-native-firebase/auth';
@@ -21,6 +22,12 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 class HomeScreen extends React.Component {
+
+  static navigationOptions = ({navigation}) => {
+    return {
+      headerShown: false,
+    };
+  };
 
 constructor(){
   super()
@@ -62,6 +69,11 @@ componentDidMount(){
   })
   .then(responseJson => {
     console.log("response json "+responseJson)
+    if(responseJson != undefined){
+      for(let i=0; i<responseJson.length; i++){
+        console.log(responseJson[i].postId+" "+responseJson[i].userName)
+      }
+    }
     this.setState({posts: responseJson})
   })
   .catch(error => console.log("final error "+error))
@@ -88,18 +100,19 @@ componentDidMount(){
    <View style = {styles.container}>
      <FlatList 
      keyExtractor={item => item.postId}
+     contentContainerStyle={[{width: Dimensions.get('window').width}]}
      data = {this.state.posts}
-     renderItem = {({item}) => {
+     renderItem = {({item}) => 
       <View style = {styles.itemContainer}>
         <View style = {styles.authorDetailStyle}>
           <Image style = {styles.dpViewStyle}
-             source = {item.userDp}/>
+             source = {{uri:item.userDp}}/>
           <Text style = {styles.authorNameStyle}>
-              item.userName
+              {item.userName}
           </Text>
         </View>
       </View>
-     }
+     
    }
    />
    </View>
@@ -133,9 +146,18 @@ const styles = StyleSheet.create({
   },
   authorNameStyle: {
     height:24,
-    color: '#fff',
+    color: 'white',
     textAlign: 'center',
-  }
+  },
+  item: {
+    backgroundColor: '#f9c2ff',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+  },
+  title: {
+    fontSize: 32,
+  },
 });
 
 export default HomeScreen
