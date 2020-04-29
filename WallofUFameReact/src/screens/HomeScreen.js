@@ -1,5 +1,5 @@
 
-import React, { Component, useEffect } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import {
     StyleSheet,
     View,
@@ -8,15 +8,12 @@ import {
     FlatList,
     Dimensions,
 } from 'react-native';
-import {
-    GoogleSignin,
-    GoogleSigninButton,
-    statusCodes,
-} from 'react-native-google-signin';
+import * as urls from '../Constants';
 import auth from '@react-native-firebase/auth';
 
 const HomeScreen = ({navigation}) => {
 
+    const [posts, setPosts] = useState([])
     useEffect(() => {
         getPostData()
     })
@@ -55,7 +52,7 @@ const HomeScreen = ({navigation}) => {
                         console.log(responseJson[i].postId + " " + responseJson[i].userName)
                     }
                 }
-                this.setState({ posts: responseJson })
+                setPosts(responseJson)
             })
             .catch(error => console.log("final error " + error))
     }
@@ -67,9 +64,9 @@ const HomeScreen = ({navigation}) => {
     };
 
     getPostData = () => {
-        this.getToken()
+        getToken()
             .then(token => {
-                this.getData(token)
+                getData(token)
             })
             .catch(error => {
                 console.log(error)
@@ -81,7 +78,7 @@ const HomeScreen = ({navigation}) => {
             <FlatList
                 keyExtractor={item => item.postId}
                 contentContainerStyle={[{ width: Dimensions.get('window').width }]}
-                data={this.state.posts}
+                data={posts}
                 renderItem={({ item }) =>
                     <View style={styles.itemContainer}>
                         <View style={styles.authorDetailStyle}>
