@@ -10,68 +10,34 @@ import {
 } from 'react-native';
 import * as urls from '../Constants';
 import auth from '@react-native-firebase/auth';
+import {getPosts} from '../redux/actions';
+import {useSelector, shallowEqual, useDispatch} from 'react-redux';
 
 const HomeScreen = ({navigation}) => {
 
     const [posts, setPosts] = useState([])
+    const dispatch = useDispatch()
+
+    const {postData} =  useSelector(state => ({
+        postData: state.homeReducer.posts
+    }), shallowEqual)
+
     useEffect(() => {
-        getPostData()
-    })
+        async function getPost(){
+            if (auth().currentUser != null) {
+               let tokenResult = await auth().currentUser.getIdTokenResult();
+               let token = tokenResult.token
+               dispatch(getPosts(token))
+            }
+        }
+        getPost();
+    },[])
 
-    getData = (token) => {
-        fetch(urls.fetchPostUrl, {
-            method: 'POST',
-            headers: {
-                Authorization: 'Bearer ' + token,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                nextKey: '',
-                limit: 10
-            })
-        })
-            .catch(error => {
-                console.log("fetch error " + error)
-            })
-            .then(response => {
-                if (response.ok) {
-                    let responseJson = response.json()
-                    console.log("response " + JSON.stringify(responseJson))
-                    return responseJson
-                } else {
-                    throw new Error("bad response ")
-                }
-            })
-            .catch(error => {
-                console.log("response parse error " + error);
-            })
-            .then(responseJson => {
-                console.log("response json " + responseJson)
-                if (responseJson != undefined) {
-                    for (let i = 0; i < responseJson.length; i++) {
-                        console.log(responseJson[i].postId + " " + responseJson[i].userName)
-                    }
-                }
-                setPosts(responseJson)
-            })
-            .catch(error => console.log("final error " + error))
-    }
-
-    getToken = async () => {
-        let token = await auth().currentUser.getIdTokenResult();
-        console.log('token got ' + token.token);
-        return token.token;
-    };
-
-    getPostData = () => {
-        getToken()
-            .then(token => {
-                getData(token)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
+    useEffect(() => {
+        if (postData != []) {
+            setPosts(postData);
+        }
+    }, [postData])
 
     return (
         <View style={styles.container}>
