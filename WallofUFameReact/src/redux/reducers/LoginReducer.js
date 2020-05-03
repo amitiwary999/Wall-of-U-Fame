@@ -11,17 +11,26 @@ const LoginReducer = (state = initialState, action) => {
 
     switch(type){
         case Actions.LOGIN_PENDING:{
-            loginAndSendingData = true;
+            return{
+                ...state,
+                loginAndSendingData: true
+            }
         }
 
         case Actions.USER_DATA_UPLOAD_SUCCESS: {
-            loginAndSendingData = false
-            sendingDataSuccess = true
+            return{
+                ...state,
+                loginAndSendingData: false,
+                sendingDataSuccess: true
+            }
         }
 
         case Actions.USER_DATA_UPLOAD_FAILURE: {
-            loginAndSendingData = false
-            sendingDataFailure = true
+            return{
+                ...state,
+                loginAndSendingData: false,
+                sendingDataFailure: true
+            }
         }
 
         default: {

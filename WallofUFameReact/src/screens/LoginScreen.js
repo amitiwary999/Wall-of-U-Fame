@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import {
     StyleSheet,
     View,
@@ -19,7 +19,7 @@ import {
 } from 'react-native-google-signin';
 import auth from '@react-native-firebase/auth';
 import {useSelector, shallowEqual, useDispatch} from 'react-redux';
-import {uploadUserData} from '../redux/actions';
+import {uploadUserData, uploadDataPending} from '../redux/actions';
 
 const LoginScreen = ({navigation}) => {
 
@@ -28,13 +28,15 @@ const LoginScreen = ({navigation}) => {
     const { loginReducerState } = useSelector(state => ({
         loginReducerState: state.loginReducers,
     }), shallowEqual);
-
+    const [showIndicator, setShowIndicator] = useState(false)
     useEffect(() => {
         if(loginReducerState.sendingDataSuccess){
             navigation.navigate('HomeScreen')
         }else if(loginReducerState.sendingDataFailure){
 
         }
+        console.log("show ind "+loginReducerState.loginAndSendingData)
+        setShowIndicator(loginReducerState.loginAndSendingData);
     }, [loginReducerState])
 
     GoogleSignin.configure({
@@ -87,18 +89,23 @@ const LoginScreen = ({navigation}) => {
     }
 
     return (
-        <View style={styles.container}>
-            <StatusBar hidden />
-            <View style={styles.content}>
-                <GoogleSigninButton
-                    style={styles.googleButton}
-                    size={GoogleSigninButton.Size.Wide}
-                    color={GoogleSigninButton.Color.Light}
-                    onPress={signIn}
-                />
-            </View>
+      <View style={styles.container}>
+        <StatusBar hidden />
+        <View style={styles.content}>
+          <GoogleSigninButton
+            style={styles.googleButton}
+            size={GoogleSigninButton.Size.Wide}
+            color={GoogleSigninButton.Color.Light}
+            onPress={signIn}
+          />
         </View>
-    )
+        <View style={styles.indicatorStyle}>
+          {showIndicator ? (
+            <ActivityIndicator size="large" color="white" />
+          ) : null}
+        </View>
+      </View>
+    );
 }
 
 export default LoginScreen
@@ -120,4 +127,8 @@ const styles = StyleSheet.create({
         marginLeft: Dimensions.get('window').width * 0.021,
         marginRight: Dimensions.get('window').width * 0.021,
     },
+    indicatorStyle: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
 })

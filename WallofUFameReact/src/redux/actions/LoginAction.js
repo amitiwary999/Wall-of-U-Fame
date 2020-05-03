@@ -23,8 +23,11 @@ const uploadUserData = (token, data) => {
       }else{
           dispatch(uploadDataFailed())
       }
+    }).catch(error => {
+        console.log("error login "+error)
+        dispatch(uploadDataFailed());
     });
   };
 };
 
-export {uploadUserData}
+export {uploadUserData, uploadDataPending}
