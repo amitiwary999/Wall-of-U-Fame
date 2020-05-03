@@ -1,7 +1,7 @@
-import * as Actions from '../types'
+import * as Actions from '../type'
 
 const initialState = {
-    posts = []
+    posts : []
 }
 
 const homeScreenReducer = (state = initialState, action) => {
@@ -13,6 +13,9 @@ const homeScreenReducer = (state = initialState, action) => {
                 ...state,
                 posts: payload
             }
+
+        default:
+            return state;    
     }
 }
 

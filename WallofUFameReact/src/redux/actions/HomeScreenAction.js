@@ -1,5 +1,5 @@
 import {API, PATH} from '../../common/network';
-import * as Actions from '../types';
+import * as Actions from '../type';
 
 const dispatchGetPostAction = (posts) => {
     return{
@@ -8,9 +8,9 @@ const dispatchGetPostAction = (posts) => {
     }
 }
 
-const getPosts =(token) => {
+const getPosts =(token, data) => {
     return (dispatch) => {
-         API.post(PATH.getPost, null, token).then(res => {
+         API.post(PATH.getPost, data, token).then(res => {
              if(res != null && res != undefined){
                  dispatch(dispatchGetPostAction(res))
              }

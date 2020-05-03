@@ -7,6 +7,7 @@ import {
     Image,
     FlatList,
     Dimensions,
+    StatusBar,
 } from 'react-native';
 import * as urls from '../Constants';
 import auth from '@react-native-firebase/auth';
@@ -25,9 +26,10 @@ const HomeScreen = ({navigation}) => {
     useEffect(() => {
         async function getPost(){
             if (auth().currentUser != null) {
+                let data = JSON.stringify({limit: 10, nextKey: ''})
                let tokenResult = await auth().currentUser.getIdTokenResult();
                let token = tokenResult.token
-               dispatch(getPosts(token))
+               dispatch(getPosts(token, data))
             }
         }
         getPost();
@@ -41,6 +43,7 @@ const HomeScreen = ({navigation}) => {
 
     return (
         <View style={styles.container}>
+            <StatusBar hidden />
             <FlatList
                 keyExtractor={item => item.postId}
                 contentContainerStyle={[{ width: Dimensions.get('window').width }]}
