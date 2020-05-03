@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import {
     StyleSheet,
     View,
@@ -18,8 +18,24 @@ import {
     statusCodes,
 } from 'react-native-google-signin';
 import auth from '@react-native-firebase/auth';
+import {useSelector, shallowEqual, useDispatch} from 'react-redux';
+import {uploadUserData} from '../redux/actions';
 
 const LoginScreen = ({navigation}) => {
+
+    const dispatch = useDispatch();
+
+    const { loginReducerState } = useSelector(state => ({
+        loginReducerState: state.loginReducers,
+    }), shallowEqual);
+
+    useEffect(() => {
+        if(loginReducerState.sendingDataSuccess){
+            navigation.navigate('HomeScreen')
+        }else if(loginReducerState.sendingDataFailure){
+
+        }
+    }, [loginReducerState])
 
     GoogleSignin.configure({
         scopes: [],
@@ -31,6 +47,19 @@ const LoginScreen = ({navigation}) => {
 
     if (auth().currentUser) {
         navigation.navigate('HomeScreen')
+    }
+
+    const sendUserData = async() => {
+        let data = JSON.stringify({
+            name: auth().currentUser.displayName,
+            email: auth().currentUser.email, 
+            dp: auth().currentUser.photoURL
+        })
+
+        let tokenResult = await auth().currentUser.getIdTokenResult();
+        let token = tokenResult.token
+
+        dispatch(uploadUserData(token, data))
     }
 
     const signIn = async () => {
@@ -45,7 +74,7 @@ const LoginScreen = ({navigation}) => {
                         data.accessToken,
                     );
                     const firebaseUserCredential = await auth().signInWithCredential(credential);
-                    navigation.navigate('HomeScreen')
+                    sendUserData()
                 } catch (error) {
                     console.log(error)
                 }

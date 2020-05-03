@@ -1,1 +1,4 @@
 export const FETCH_POSTS = "FETCH_POSTS"
+export const LOGIN_PENDING = "login_pending"
+export const USER_DATA_UPLOAD_SUCCESS = "USER_DATA_UPLOAD_SUCCESS"
+export const USER_DATA_UPLOAD_FAILURE = "USER_DATA_UPLOAD_FAILURE"
