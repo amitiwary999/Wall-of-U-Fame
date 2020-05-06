@@ -13,6 +13,9 @@ import * as urls from '../Constants';
 import auth from '@react-native-firebase/auth';
 import {getPosts} from '../redux/actions';
 import {useSelector, shallowEqual, useDispatch} from 'react-redux';
+import {imageMime, videoMime} from '../common/constant'
+import video from 'react-native-video'
+import deviceWidth from '../common/utils'
 
 const HomeScreen = ({navigation}) => {
 
@@ -57,8 +60,20 @@ const HomeScreen = ({navigation}) => {
                                 {item.userName}
                             </Text>
                         </View>
+                        <View style={styles.mediaContainerStyle}>
+                            {
+                                (item.mimeType.includes(imageMime))?(
+                                    <Image style = {{flex: 1}}
+                                        source = {{uri: item.mediaUrl}}
+                                    />
+                                ):(
+                                    <Video 
+                                    source = {{uri: item.mediaUrl}}
+                                    />
+                                )
+                            }
+                        </View>
                     </View>
-
                 }
             />
         </View>
@@ -80,21 +95,26 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: 'rgba(12, 8, 16, 1)',
+        backgroundColor: 'grey',
     },
     authorDetailStyle: {
         flex: 1,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        padding: 8
     },
     dpViewStyle: {
         width: 48,
         height: 48,
-        borderRadius: 24
+        borderRadius: 24,
     },
     authorNameStyle: {
-        height: 24,
+        flex: 1,
+        fontSize: 14,
         color: 'white',
-        textAlign: 'center',
+        marginLeft: 8,
+        alignItems: 'center',
+        justifyContent: 'center', 
+        textAlignVertical: 'center'
     },
     item: {
         backgroundColor: '#f9c2ff',
@@ -105,4 +125,11 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 32,
     },
+
+    mediaContainerStyle: {
+        width: Dimensions.get('window').width - 16,
+        height: Dimensions.get('window').width - 16,
+        marginLeft: 8,
+        marginRight: 8
+    }
 });
