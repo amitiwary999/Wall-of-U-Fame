@@ -91,11 +91,12 @@ const styles = StyleSheet.create({
         margin: 8
     },
     itemContainer: {
-        flex: 1
+        flex: 1,
+        backgroundColor: 'white'
     },
     container: {
         flex: 1,
-        backgroundColor: 'grey',
+        backgroundColor: '#DFDFDF',
     },
     authorDetailStyle: {
         flex: 1,
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
     authorNameStyle: {
         flex: 1,
         fontSize: 14,
-        color: 'white',
+        color: 'black',
         marginLeft: 8,
         alignItems: 'center',
         justifyContent: 'center', 

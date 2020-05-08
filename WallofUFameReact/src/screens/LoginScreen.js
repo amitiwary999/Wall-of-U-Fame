@@ -31,7 +31,7 @@ const LoginScreen = ({navigation}) => {
     const [showIndicator, setShowIndicator] = useState(false)
     useEffect(() => {
         if(loginReducerState.sendingDataSuccess){
-            navigation.navigate('HomeScreen')
+            navigation.navigate('TabScreen')
         }else if(loginReducerState.sendingDataFailure){
 
         }
@@ -48,7 +48,7 @@ const LoginScreen = ({navigation}) => {
     });
 
     if (auth().currentUser) {
-        navigation.navigate('HomeScreen')
+        navigation.navigate('TabScreen')
     }
 
     const sendUserData = async() => {
