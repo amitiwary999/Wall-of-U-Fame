@@ -5,10 +5,12 @@ import {deviceWidth, deviceHeight} from '../common/utils'
 import ImagePicker from 'react-native-image-crop-picker';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { add } from 'react-native-reanimated';
+import { TextInput } from 'react-native-gesture-handler';
 
 const AddPost = ()=> {
    const [mediaPicked, setMediaPicked] = useState(false)
    const [mediaUri, setMediaUri] = useState('')
+   cosnt [postDesc, setPostDesc] = useState('')
     const options = {
         title: 'Select Media',
         storageOptions: {
@@ -33,6 +35,10 @@ const AddPost = ()=> {
         setMediaPicked(false)
     }
 
+    const addPost = ()=> {
+        
+    }
+
     return(
         <View style={styles.container}>
                 {mediaPicked &&( <View style = {styles.mediaParentStyle}>
@@ -47,6 +53,17 @@ const AddPost = ()=> {
                     } style={styles.addMediaButtonStyle}>
                     <Text style = {styles.addMediaButtonText}>Add media</Text>
                 </TouchableOpacity>)}
+                <TextInput 
+                style = {styles.textBoxStyle}
+                placeholder="Express your love"
+                placeholderTextColor="#FFFFFF"
+                onChangeText={postDesc => setPostDesc(postDesc)}
+                value={postDesc}/>
+                <TouchableOpacity 
+                onPress = {addPost}
+                style={styles.addMediaButtonStyle}>
+                <Text style={styles.addMediaButtonText}>Done</Text>
+                </TouchableOpacity>
         </View>
     )
 }
