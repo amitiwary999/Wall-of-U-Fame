@@ -3,7 +3,9 @@ import * as Actions from '../type'
 const initialState = {
     postAddResponseSuccess = false,
     postAddResponseFailure = false,
-    loading: false
+    loading: false,
+    loadingMedia: false,
+    mediaUrl: ''
 }
 
 const addPostReducer = (state = initialState, action) => {
@@ -30,6 +32,25 @@ const addPostReducer = (state = initialState, action) => {
                 loading: false,
                 postAddResponseFailure: true,
                 postAddResponseSuccess: false
+            } 
+            
+        case Actions.UPLOAD_MEDIA_PENDING:
+            return{
+                ...state,
+                loadingMedia: true
+            }
+            
+        case Actions.UPLOAD_MEDIA_FAILURE:
+            return{
+                ...state,
+                loadingMedia: false
+            }
+            
+        case Actions.UPLOAD_MEDIA_SUCCESS:
+            return{
+                ...state,
+                loadingMedia: false,
+                mediaUrl: payload
             }    
     }
 }
