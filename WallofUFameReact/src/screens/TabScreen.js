@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import ProfileScreen from './ProfileScreen'
 import HomeScreen from './HomeScreen'
 
-const TabScreen = () => {
+const TabScreen = (navigation) => {
     const [index, setIndex] = React.useState(0);
 
     const [routes] = React.useState([
@@ -18,6 +18,10 @@ const TabScreen = () => {
         first: HomeScreen,
         second: ProfileScreen,
     });
+
+    const openAddPostScreen= () => {
+      navigation.navigate('AddPost', { });
+    }
 
     return (
       <View style={{flex: 1}}>

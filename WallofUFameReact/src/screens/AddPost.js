@@ -6,11 +6,29 @@ import ImagePicker from 'react-native-image-crop-picker';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { add } from 'react-native-reanimated';
 import { TextInput } from 'react-native-gesture-handler';
+import {savePost} from '../redux/actions'
+import auth from '@react-native-firebase/auth';
+
+let uploadMediaUrl = ''
 
 const AddPost = ()=> {
    const [mediaPicked, setMediaPicked] = useState(false)
    const [mediaUri, setMediaUri] = useState('')
    cosnt [postDesc, setPostDesc] = useState('')
+   const [uploadingMediaProgress, setUploadingMediaProgress] = useState(false)
+   const [uploadingPost, setUploadingPost] = useState(false)
+   const dispatch = useDispatch()
+
+   const {mediaUrl, loading, loadingMedia} =  useSelector(state => ({
+       mediaUrl : state.addPostReducer.mediaUrl,
+       loading : state.addPostReducer.loading,
+       loadingMedia :state.addPostReducer.loadingMedia
+   }), shallowEqual)
+
+   useEffect(() => {
+       setUploadingPost(loading)
+   }, [loading])
+
     const options = {
         title: 'Select Media',
         storageOptions: {
@@ -36,7 +54,62 @@ const AddPost = ()=> {
     }
 
     const addPost = ()=> {
-        
+        if(mediaUri){
+            uploadMedia(mediaUri)
+        }
+    }
+
+    uploadMedia = async(uri) => {
+        let mediaUrl = ""
+        setUploadingMediaProgress(true)
+        try {
+            let storageRef = getStorageLocation()
+            await storageRef.putFile(uri)
+            console.log('upload done')
+            let uploadedOfferMediaUrl = await storageRef.getDownloadURL()
+            if (uploadedOfferMediaUrl != null && uploadedOfferMediaUrl != undefined) {
+                 uploadMediaUrl = uploadedOfferMediaUrl;
+            }
+            console.log("media url " + mediaUrl)
+            setUploadingMediaProgress(false)
+            sendPost()
+            } catch (error) {
+                setUploadingMediaProgress(false)
+            }
+    }
+
+    const sendPost = async() => {
+        let postId = generatePostId()
+        let tokenResult = await auth().currentUser.getIdTokenResult();
+        let token = tokenResult.token
+        let data = JSON.stringify({
+            description: '',
+            mediaUrl: uploadMediaUrl,
+            mediaThumbUrl: '',
+            postId: postId,
+            mimeType: mimeType
+        })
+        dispatch(savePost(token, data))
+    }
+
+    const generatePostId = async() => {
+        let currentTime = new Date().getTime();
+        let userId = auth().currentUser.uid;
+        let key = currentTime + "_" + userId
+        return key;
+    }
+
+    const getStorageLocation = () => {
+        let key = getFirebaseStorageUploadKey();
+        return storage().ref().child(key)
+    }
+    
+    const getFirebaseStorageUploadKey = () => {
+        console.log("storage location key")
+        let currentTime = new Date().getTime();
+        let userId = auth().currentUser.uid;
+        let key = currentTime + "_" + userId + ".mp4";
+        return key;
     }
 
     return(

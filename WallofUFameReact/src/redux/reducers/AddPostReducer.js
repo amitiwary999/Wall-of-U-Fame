@@ -1,8 +1,8 @@
 import * as Actions from '../type'
 
 const initialState = {
-    postAddResponseSuccess = false,
-    postAddResponseFailure = false,
+    postAddResponseSuccess: false,
+    postAddResponseFailure: false,
     loading: false,
     loadingMedia: false,
     mediaUrl: ''
@@ -54,3 +54,5 @@ const addPostReducer = (state = initialState, action) => {
             }    
     }
 }
+
+export default addPostReducer

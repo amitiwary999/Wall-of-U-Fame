@@ -15,7 +15,8 @@ const http = token =>
 
 const PATH = {
   getPost : 'getBlogSql',
-  setUserSql: 'setUserSql'
+  setUserSql: 'setUserSql',
+  setPostSql: 'setPostSql'
 };
 
 const API = {
