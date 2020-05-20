@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import { View, StyleSheet, TouchableOpacity, Image, Text} from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Image, Text, ActivityIndicator} from 'react-native';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { Card } from 'react-native-elements';
 import {deviceWidth, deviceHeight} from '../common/utils'
 import ImagePicker from 'react-native-image-crop-picker';
@@ -8,26 +9,40 @@ import { add } from 'react-native-reanimated';
 import { TextInput } from 'react-native-gesture-handler';
 import {savePost} from '../redux/actions'
 import auth from '@react-native-firebase/auth';
+import storage from '@react-native-firebase/storage';
 
 let uploadMediaUrl = ''
+let mimeType = ''
 
-const AddPost = ()=> {
+const AddPost = ({navigation})=> {
    const [mediaPicked, setMediaPicked] = useState(false)
    const [mediaUri, setMediaUri] = useState('')
-   cosnt [postDesc, setPostDesc] = useState('')
+   const [postDesc, setPostDesc] = useState('')
    const [uploadingMediaProgress, setUploadingMediaProgress] = useState(false)
    const [uploadingPost, setUploadingPost] = useState(false)
    const dispatch = useDispatch()
 
-   const {mediaUrl, loading, loadingMedia} =  useSelector(state => ({
+   const {mediaUrl, loading, loadingMedia, postAddResponseSuccess, postAddResponseFailure} =  useSelector(state => ({
        mediaUrl : state.addPostReducer.mediaUrl,
        loading : state.addPostReducer.loading,
-       loadingMedia :state.addPostReducer.loadingMedia
+       loadingMedia :state.addPostReducer.loadingMedia,
+       postAddResponseSuccess: state.addPostReducer.postAddResponseSuccess,
+       postAddResponseFailure: state.addPostReducer.postAddResponseFailure
    }), shallowEqual)
 
    useEffect(() => {
        setUploadingPost(loading)
    }, [loading])
+
+   useEffect(() => {
+       if(postAddResponseSuccess){
+           navigation.reset({
+               routes: [{ name: 'TabScreen' }]
+           });
+       }else if(postAddResponseFailure){
+           console.log("failed adding post")
+       }
+   },[postAddResponseSuccess, postAddResponseFailure])
 
     const options = {
         title: 'Select Media',
@@ -43,6 +58,7 @@ const AddPost = ()=> {
             mediaType: "video",
         }).then((video) => {
             console.log(video);
+            mimeType = video.mime;
             setMediaUri(video.path)
             setMediaPicked(true)
         });
@@ -74,6 +90,7 @@ const AddPost = ()=> {
             setUploadingMediaProgress(false)
             sendPost()
             } catch (error) {
+                console.log(error)
                 setUploadingMediaProgress(false)
             }
     }
@@ -126,6 +143,9 @@ const AddPost = ()=> {
                     } style={styles.addMediaButtonStyle}>
                     <Text style = {styles.addMediaButtonText}>Add media</Text>
                 </TouchableOpacity>)}
+                {uploadingPost && <View style={styles.indicatorStyle}>
+                    <ActivityIndicator size="large" color="#0000ff" />
+                </View>}
                 <TextInput 
                 style = {styles.textBoxStyle}
                 placeholder="Express your love"
@@ -208,6 +228,10 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-end',
         height: 36,
         width: 36
+    },
+    indicatorStyle: {
+        flex:1,
+        justifyContent: 'center'
     }
 })
 

@@ -5,8 +5,12 @@ import EntypoIcon from 'react-native-vector-icons/Entypo';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ProfileScreen from './ProfileScreen'
 import HomeScreen from './HomeScreen'
+import auth from '@react-native-firebase/auth';
 
-const TabScreen = (navigation) => {
+const TabScreen = ({navigation}) => {
+  if(auth().currentUser == null){
+    navigation.reset({ routes: [{ name: 'LoginScreen' }]})
+  }
     const [index, setIndex] = React.useState(0);
 
     const [routes] = React.useState([
@@ -24,18 +28,20 @@ const TabScreen = (navigation) => {
     }
 
     return (
-      <View style={{flex: 1}}>
-        <View style={styles.header}>
-          <View style={styles.plusIconView}>
-            <Icon name={'add'} size={24} color={'white'} />
+      auth().currentUser && (
+        <View style={{ flex: 1 }}>
+          <View style={styles.header}>
+            <View style={styles.plusIconView}>
+              <Icon name={'add'} size={24} color={'white'} onPress={openAddPostScreen} />
+            </View>
           </View>
+          <TabView
+            navigationState={{ index, routes }}
+            renderScene={renderScene}
+            onIndexChange={setIndex}
+          />
         </View>
-        <TabView
-          navigationState={{index, routes}}
-          renderScene={renderScene}
-          onIndexChange={setIndex}
-        />
-      </View>
+      )
     );
 }
 

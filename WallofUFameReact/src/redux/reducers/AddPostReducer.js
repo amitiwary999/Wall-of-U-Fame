@@ -51,7 +51,10 @@ const addPostReducer = (state = initialState, action) => {
                 ...state,
                 loadingMedia: false,
                 mediaUrl: payload
-            }    
+            }   
+            
+        default:
+            return state    
     }
 }
 
