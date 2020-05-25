@@ -14,7 +14,7 @@ import auth from '@react-native-firebase/auth';
 import {getPosts} from '../redux/actions';
 import {useSelector, shallowEqual, useDispatch} from 'react-redux';
 import {imageMime, videoMime} from '../common/constant'
-import video from 'react-native-video'
+import Video from 'react-native-video'
 import deviceWidth from '../common/utils'
 
 const HomeScreen = ({navigation}) => {
@@ -69,6 +69,8 @@ const HomeScreen = ({navigation}) => {
                                 ):(
                                     <Video 
                                     source = {{uri: item.mediaUrl}}
+                                    resizeMode = "cover"
+                                    style={StyleSheet.absoluteFill}
                                     />
                                 )
                             }

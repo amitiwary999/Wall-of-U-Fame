@@ -16,9 +16,9 @@ const ProfileScreen = ({navigation}) => {
 
     return (
       <View style={styles.container}>
-        <View style={styles.avatarContainer}>
-          <Avatar rounded source={{uri: auth().currentUser.photoURL}} />
-        </View>
+        <Avatar 
+          style={styles.avatarContainer}
+          rounded source={{uri: auth().currentUser.photoURL}} />
       </View>
     );
 }
@@ -28,9 +28,9 @@ const styles = StyleSheet.create({
         flex:1
     },
     avatarContainer: {
-        justifyContent: 'center',
-        height: 64,
-        width: 64
+      alignSelf: 'center',
+        height: 128,
+        width: 128
     }
 })
 
