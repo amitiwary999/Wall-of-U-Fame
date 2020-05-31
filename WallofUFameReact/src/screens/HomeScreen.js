@@ -1,5 +1,5 @@
 
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component, useEffect, useState, useRef } from 'react';
 import {
     StyleSheet,
     View,
@@ -20,6 +20,7 @@ import deviceWidth from '../common/utils'
 const HomeScreen = ({navigation}) => {
 
     const [posts, setPosts] = useState([])
+    const [viewIndex, setViewIndex] = useState(-1)
     const dispatch = useDispatch()
 
     const {postData} =  useSelector(state => ({
@@ -44,15 +45,29 @@ const HomeScreen = ({navigation}) => {
         }
     }, [postData])
 
+    const onViewRef = useRef((viewableItems)=> {
+        console.log("viewable "+JSON.stringify(viewableItems))
+        let items = viewableItems.viewableItems
+        if(items){
+            setViewIndex(items[0].index)
+        }
+        
+        // Use viewable items in state or as intended
+    })
+    const viewConfigRef = useRef({ viewAreaCoveragePercentThreshold: 50 })
+
     return (
         <View style={styles.container}>
             <StatusBar hidden />
             <FlatList
+            onViewableItemsChanged={onViewRef.current}
                 keyExtractor={item => item.postId}
+                viewabilityConfig={viewConfigRef.current}
                 contentContainerStyle={[{ width: Dimensions.get('window').width }]}
                 data={posts}
-                renderItem={({ item }) =>
+                renderItem={({ item, index }) =>
                     <View style={styles.itemContainer}>
+                        {console.log("index item "+index+" "+viewIndex)}
                         <View style={styles.authorDetailStyle}>
                             <Image style={styles.dpViewStyle}
                                 source={{ uri: item.userDp }} />
@@ -68,8 +83,10 @@ const HomeScreen = ({navigation}) => {
                                     />
                                 ):(
                                     <Video 
+                                    repeat
                                     source = {{uri: item.mediaUrl}}
                                     resizeMode = "cover"
+                                    paused={!(index == viewIndex)}
                                     style={StyleSheet.absoluteFill}
                                     />
                                 )
