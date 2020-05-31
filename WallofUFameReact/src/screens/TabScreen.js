@@ -2,7 +2,7 @@ import * as React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'native-base';
 import ProfileScreen from './ProfileScreen'
 import HomeScreen from './HomeScreen'
 import auth from '@react-native-firebase/auth';
@@ -42,7 +42,7 @@ const TabScreen = ({navigation}) => {
         <View style={{ flex: 1 }}>
           <View style={styles.header}>
             <View style={styles.plusIconView}>
-              <Icon name={'add'} size={24} color={'white'} onPress={openAddPostScreen} />
+              <Icon name={'add'} size={24} color={'white'} type="MaterialIcons" onPress={openAddPostScreen} />
             </View>
           </View>
           <TabView
