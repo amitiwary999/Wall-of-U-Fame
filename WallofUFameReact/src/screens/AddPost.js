@@ -4,7 +4,7 @@ import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { Card } from 'react-native-elements';
 import {deviceWidth, deviceHeight} from '../common/utils'
 import ImagePicker from 'react-native-image-crop-picker';
-import Icon from 'native-base';
+import {Icon} from 'native-base';
 import { add } from 'react-native-reanimated';
 import { TextInput } from 'react-native-gesture-handler';
 import {savePost} from '../redux/actions'
@@ -134,7 +134,7 @@ const AddPost = ({navigation})=> {
                 {mediaPicked &&( <View style = {styles.mediaParentStyle}>
                     <Image style={styles.selectedMediaStyle} source={{uri: mediaUri}} />
                     <View style={styles.closeMedia}>
-                    <Icon name={'cross'} color='white' size={24} type="Entypo" onPress={removeMedia} />
+                    <Icon name={'circle-with-cross'} color='white' size={24} type="Entypo" onPress={removeMedia} />
                     </View>
                 </View>)}
                 {!mediaPicked && (<TouchableOpacity onPress={ () =>{
@@ -226,8 +226,10 @@ const styles = StyleSheet.create({
     closeMedia: {
         position: 'absolute',
         alignSelf: 'flex-end',
-        height: 36,
-        width: 36
+        height: 28,
+        width: 28,
+        right:4,
+        top:4
     },
     indicatorStyle: {
         flex:1,

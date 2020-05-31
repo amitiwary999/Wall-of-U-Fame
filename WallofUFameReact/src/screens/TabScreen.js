@@ -2,7 +2,7 @@ import * as React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
-import Icon from 'native-base';
+import {Icon, Container, Header, Right} from 'native-base';
 import ProfileScreen from './ProfileScreen'
 import HomeScreen from './HomeScreen'
 import auth from '@react-native-firebase/auth';
@@ -39,19 +39,32 @@ const TabScreen = ({navigation}) => {
 
     return (
       auth().currentUser && (
-        <View style={{ flex: 1 }}>
-          <View style={styles.header}>
-            <View style={styles.plusIconView}>
-              <Icon name={'add'} size={24} color={'white'} type="MaterialIcons" onPress={openAddPostScreen} />
-            </View>
-          </View>
+        <Container style={{flex: 1}}>
+          <Header style={{backgroundColor:'black'}}>
+            <Right>
+            <Icon name="add" style={{color:'white', fontSize:36}} onPress={openAddPostScreen} />
+            </Right>
+          </Header>
           <TabView
             renderTabBar = {renderTabBar}
             navigationState={{ index, routes }}
             renderScene={renderScene}
             onIndexChange={setIndex}
           />
-        </View>
+        </Container>
+        // <View style={{ flex: 1 }}>
+        //   <View style={styles.header}>
+        //     <View style={styles.plusIconView}>
+        //       <Icon name={'add'} size={24} color={'white'} type="MaterialIcons" onPress={openAddPostScreen} />
+        //     </View>
+        //   </View>
+        //   <TabView
+        //     renderTabBar = {renderTabBar}
+        //     navigationState={{ index, routes }}
+        //     renderScene={renderScene}
+        //     onIndexChange={setIndex}
+        //   />
+        // </View>
       )
     );
 }
