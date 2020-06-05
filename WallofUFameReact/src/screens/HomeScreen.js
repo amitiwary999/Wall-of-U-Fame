@@ -8,6 +8,7 @@ import {
     FlatList,
     Dimensions,
     StatusBar,
+    AppState
 } from 'react-native';
 import * as urls from '../Constants';
 import auth from '@react-native-firebase/auth';
@@ -86,7 +87,22 @@ const HomeScreen = ({navigation}) => {
                                     repeat
                                     source = {{uri: item.mediaUrl}}
                                     resizeMode = "cover"
-                                    paused={!(index == viewIndex)}
+                                    onBuffer= {(data) => {
+                                        console.log("buffer "+JSON.stringify(data))
+                                    }}
+                                    onReadyForDisplay = {() => {
+                                        console.log("ready for display")
+                                    }}
+                                    onLoadStart = {
+                                        console.log("load start")
+                                    }
+                                    onLoad = {
+                                        console.log("on laod")
+                                    }
+                                    onProgress={(data) => {
+                                        console.log("progress "+JSON.stringify(data))
+                                    }}
+                                            paused={!(index == viewIndex) && !AppState.currentState.match(/inactive|background/)}
                                     style={StyleSheet.absoluteFill}
                                     />
                                 )
