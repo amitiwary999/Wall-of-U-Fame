@@ -102,7 +102,9 @@ const HomeScreen = ({navigation}) => {
                                     onProgress={(data) => {
                                         console.log("progress "+JSON.stringify(data))
                                     }}
-                                            paused={!(index == viewIndex) && !AppState.currentState.match(/inactive|background/)}
+                                    onPlaybackStalled = {console.log("palyback stalled")}
+                                    onPlaybackResume={console.log("play resume")}
+                                    paused={!(index == viewIndex) && !AppState.currentState.match(/inactive|background/)}
                                     style={StyleSheet.absoluteFill}
                                     />
                                 )
