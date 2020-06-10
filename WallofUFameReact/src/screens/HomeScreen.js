@@ -8,14 +8,16 @@ import {
     FlatList,
     Dimensions,
     StatusBar,
-    AppState
+    AppState,
+    TouchableOpacity
 } from 'react-native';
 import * as urls from '../Constants';
 import auth from '@react-native-firebase/auth';
-import {getPosts} from '../redux/actions';
+import {getPosts, likePost} from '../redux/actions';
 import {useSelector, shallowEqual, useDispatch} from 'react-redux';
 import {imageMime, videoMime} from '../common/constant'
 import Video from 'react-native-video'
+import {Icon} from 'native-base';
 import deviceWidth from '../common/utils'
 
 const HomeScreen = ({navigation}) => {
@@ -41,6 +43,7 @@ const HomeScreen = ({navigation}) => {
     },[])
 
     useEffect(() => {
+        console.log("post data story "+postData)
         if (postData != []) {
             setPosts(postData);
         }
@@ -57,6 +60,15 @@ const HomeScreen = ({navigation}) => {
     })
     const viewConfigRef = useRef({ viewAreaCoveragePercentThreshold: 50 })
 
+    const updateLike = async(pos, id) => {
+        if (auth().currentUser != null) {
+            let data = JSON.stringify({postId: id})
+               let tokenResult = await auth().currentUser.getIdTokenResult();
+               let token = tokenResult.token
+               dispatch(likePost(token, data, pos))
+        }
+    }
+
     return (
         <View style={styles.container}>
             <StatusBar hidden />
@@ -68,7 +80,7 @@ const HomeScreen = ({navigation}) => {
                 data={posts}
                 renderItem={({ item, index }) =>
                     <View style={styles.itemContainer}>
-                        {console.log("index item "+index+" "+viewIndex)}
+                        {console.log("index item "+index+" "+viewIndex+" "+item.isLiked)}
                         <View style={styles.authorDetailStyle}>
                             <Image style={styles.dpViewStyle}
                                 source={{ uri: item.userDp }} />
@@ -110,6 +122,20 @@ const HomeScreen = ({navigation}) => {
                                 )
                             }
                         </View>
+                        <View style={{flexDirection: 'row', justifyContent: 'space-between', backgroundColor: 'white', marginLeft: 8, marginRight: 8}}>
+                            <TouchableOpacity style={{flex:1}} onPress = {() => {
+                                // console.log("pressed like")
+                                updateLike(index, item.postId)
+                            }}>
+                                {item.isLiked?<Icon name="like1" style={{color: 'black', fontSize: 36}}/> :
+                                 <Icon name="like2" type ="AntDesign" style={{color: 'black', fontSize: 36}}/> } 
+                            </TouchableOpacity>
+
+                            <View style={{flex: 1}}>
+                                <Icon name="bookmark" type="Feather" style={{color: 'black', fontSize: 36}}/>
+                                {/* <Icon name="bookmark" type="FontAwesome" style={{color: 'white', fontSize: 36}}/> */}
+                            </View>        
+                        </View>    
                     </View>
                 }
             />

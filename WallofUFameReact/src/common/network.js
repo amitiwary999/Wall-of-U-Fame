@@ -16,7 +16,8 @@ const http = token =>
 const PATH = {
   getPost : 'getBlogSql',
   setUserSql: 'setUserSql',
-  setPostSql: 'setPostSql'
+  setPostSql: 'setPostSql',
+  updateLike: 'setPostLikeSql'
 };
 
 const API = {
@@ -29,7 +30,7 @@ const API = {
         return res.data;
       })
       .catch(error => {
-        console.log(error);
+        console.log(" API error "+error);
       });
   },
 };
