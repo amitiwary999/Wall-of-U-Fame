@@ -60,9 +60,9 @@ const HomeScreen = ({navigation}) => {
     })
     const viewConfigRef = useRef({ viewAreaCoveragePercentThreshold: 50 })
 
-    const updateLike = async(pos, id) => {
+    const updateLike = async(pos, id, increment) => {
         if (auth().currentUser != null) {
-            let data = JSON.stringify({postId: id})
+            let data = JSON.stringify({postId: id, increment: increment})
                let tokenResult = await auth().currentUser.getIdTokenResult();
                let token = tokenResult.token
                dispatch(likePost(token, data, pos))
@@ -125,7 +125,7 @@ const HomeScreen = ({navigation}) => {
                         <View style={{flexDirection: 'row', justifyContent: 'space-between', backgroundColor: 'white', marginLeft: 8, marginRight: 8}}>
                             <TouchableOpacity style={{flex:1}} onPress = {() => {
                                 // console.log("pressed like")
-                                updateLike(index, item.postId)
+                                updateLike(index, item.postId, item.isLiked == 1 ? 0 : 1)
                             }}>
                                 {item.isLiked?<Icon name="like1" style={{color: 'black', fontSize: 36}}/> :
                                  <Icon name="like2" type ="AntDesign" style={{color: 'black', fontSize: 36}}/> } 

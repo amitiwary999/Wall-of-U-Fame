@@ -30,7 +30,7 @@ const likePost = (token, data, pos) => {
     return (dispatch) => {
         dispatch(updateLike(pos))
         API.post(PATH.updateLike, data, token).then(res => {
-            console.log("like api response ")
+            console.log("like api response "+res)
             if(res != null && res != undefined){
                 
             }

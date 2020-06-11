@@ -26,7 +26,7 @@ const API = {
     return http(token)
       .post(url, data)
       .then(res => {
-        console.log(res.data);
+        console.log("response "+res);
         return res.data;
       })
       .catch(error => {
