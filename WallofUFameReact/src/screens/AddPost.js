@@ -10,6 +10,7 @@ import { TextInput } from 'react-native-gesture-handler';
 import {savePost} from '../redux/actions'
 import auth from '@react-native-firebase/auth';
 import storage from '@react-native-firebase/storage';
+import {SUCCESS, FAILURE, PENDING} from '../common'
 
 let uploadMediaUrl = ''
 let mimeType = ''
@@ -22,12 +23,11 @@ const AddPost = ({navigation})=> {
    const [uploadingPost, setUploadingPost] = useState(false)
    const dispatch = useDispatch()
 
-   const {mediaUrl, loading, loadingMedia, postAddResponseSuccess, postAddResponseFailure} =  useSelector(state => ({
+   const {mediaUrl, loading, loadingMedia, postAddStatus} =  useSelector(state => ({
        mediaUrl : state.addPostReducer.mediaUrl,
        loading : state.addPostReducer.loading,
        loadingMedia :state.addPostReducer.loadingMedia,
-       postAddResponseSuccess: state.addPostReducer.postAddResponseSuccess,
-       postAddResponseFailure: state.addPostReducer.postAddResponseFailure
+       postAddStatus: state.addPostReducer.postAddStatus
    }), shallowEqual)
 
    useEffect(() => {
@@ -35,14 +35,15 @@ const AddPost = ({navigation})=> {
    }, [loading])
 
    useEffect(() => {
-       if(postAddResponseSuccess){
+       if(postAddStatus == SUCCESS){
            navigation.reset({
                routes: [{ name: 'TabScreen' }]
            });
-       }else if(postAddResponseFailure){
+       }else if(postAddStatus == FAILURE){
            console.log("failed adding post")
+           setUploadingPost(false)
        }
-   },[postAddResponseSuccess, postAddResponseFailure])
+   },[postAddStatus])
 
     const options = {
         title: 'Select Media',
@@ -78,7 +79,6 @@ const AddPost = ({navigation})=> {
 
     uploadMedia = async(uri) => {
         let mediaUrl = ""
-        setUploadingMediaProgress(true)
         try {
             let storageRef = getStorageLocation()
             await storageRef.putFile(uri)
@@ -88,11 +88,10 @@ const AddPost = ({navigation})=> {
                  uploadMediaUrl = uploadedOfferMediaUrl;
             }
             console.log("media url " + mediaUrl)
-            setUploadingMediaProgress(false)
             sendPost()
             } catch (error) {
                 console.log(error)
-                setUploadingMediaProgress(false)
+                setUploadingPost(false)
             }
     }
 

@@ -1,9 +1,8 @@
 import * as Actions from '../type'
+import {SUCCESS, FAILURE, PENDING} from '../../common'
 
 const initialState = {
-    postAddResponseSuccess: false,
-    postAddResponseFailure: false,
-    loading: false,
+    postAddStatus: '',
     loadingMedia: false,
     mediaUrl: ''
 }
@@ -15,23 +14,21 @@ const addPostReducer = (state = initialState, action) => {
         case Actions.ADD_POST_PENDING:
             return {
                 ...state,
-                loading: true
+                postAddStatus: PENDING
             }
 
         case Actions.ADD_POST_SUCCESS:
             return {
                 ...state,
                 loading: false,
-                postAddResponse: true,
-                postAddResponseFailure: false
+                postAddStatus: SUCCESS
             }  
             
         case Actions.ADD_POST_FAILUE:
             return {
                 ...state,
                 loading: false,
-                postAddResponseFailure: true,
-                postAddResponseSuccess: false
+                postAddStatus: FAILURE
             } 
             
         case Actions.UPLOAD_MEDIA_PENDING:
