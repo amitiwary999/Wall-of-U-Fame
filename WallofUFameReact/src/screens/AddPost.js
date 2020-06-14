@@ -71,6 +71,7 @@ const AddPost = ({navigation})=> {
 
     const addPost = ()=> {
         if(mediaUri){
+            setUploadingPost(true)
             uploadMedia(mediaUri)
         }
     }
@@ -100,7 +101,7 @@ const AddPost = ({navigation})=> {
         let tokenResult = await auth().currentUser.getIdTokenResult();
         let token = tokenResult.token
         let data = JSON.stringify({
-            description: '',
+            desc: postDesc,
             mediaUrl: uploadMediaUrl,
             mediaThumbUrl: '',
             postId: postId,
@@ -109,10 +110,11 @@ const AddPost = ({navigation})=> {
         dispatch(savePost(token, data))
     }
 
-    const generatePostId = async() => {
+    const generatePostId = () => {
         let currentTime = new Date().getTime();
         let userId = auth().currentUser.uid;
         let key = currentTime + "_" + userId
+        // console.log("key "+key)
         return key;
     }
 
@@ -232,8 +234,10 @@ const styles = StyleSheet.create({
         top:4
     },
     indicatorStyle: {
-        flex:1,
-        justifyContent: 'center'
+        bottom:deviceHeight/2,
+        right:0,
+        left:0,
+        position: 'absolute'
     }
 })
 

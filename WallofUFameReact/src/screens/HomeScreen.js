@@ -17,8 +17,9 @@ import {getPosts, likePost} from '../redux/actions';
 import {useSelector, shallowEqual, useDispatch} from 'react-redux';
 import {imageMime, videoMime} from '../common/constant'
 import Video from 'react-native-video'
-import {Icon} from 'native-base';
+import {Icon, Spinner} from 'native-base';
 import deviceWidth from '../common/utils'
+import FastImage from 'react-native-fast-image'
 
 const HomeScreen = ({navigation}) => {
 
@@ -72,6 +73,7 @@ const HomeScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
             <StatusBar hidden />
+            {posts && posts.length>0 ?
             <FlatList
             onViewableItemsChanged={onViewRef.current}
                 keyExtractor={item => item.postId}
@@ -91,8 +93,9 @@ const HomeScreen = ({navigation}) => {
                         <View style={styles.mediaContainerStyle}>
                             {
                                 (item.mimeType.includes(imageMime))?(
-                                    <Image style = {{flex: 1}}
+                                    <FastImage style = {{flex: 1}}
                                         source = {{uri: item.mediaUrl}}
+                                        resizeMode={FastImage.resizeMode.contain}
                                     />
                                 ):(
                                     <Video 
@@ -127,7 +130,7 @@ const HomeScreen = ({navigation}) => {
                                 // console.log("pressed like")
                                 updateLike(index, item.postId, item.isLiked == 1 ? 0 : 1)
                             }}>
-                                {item.isLiked?<Icon name="like1" style={{color: 'black', fontSize: 36}}/> :
+                                {item.isLiked ? <Icon name="like1" type="AntDesign" style={{color: 'black', fontSize: 36}}/> :
                                  <Icon name="like2" type ="AntDesign" style={{color: 'black', fontSize: 36}}/> } 
                             </TouchableOpacity>
 
@@ -138,7 +141,13 @@ const HomeScreen = ({navigation}) => {
                         </View>    
                     </View>
                 }
-            />
+            /> : 
+                <Spinner
+                    color="black"
+                    size={40}
+                    animating={true}
+                />
+            }
         </View>
     )
 }
