@@ -7,7 +7,7 @@ import ImagePicker from 'react-native-image-crop-picker';
 import {Icon} from 'native-base';
 import { add } from 'react-native-reanimated';
 import { TextInput } from 'react-native-gesture-handler';
-import {savePost} from '../redux/actions'
+import {savePost, setVideoPlayPause} from '../redux/actions'
 import auth from '@react-native-firebase/auth';
 import storage from '@react-native-firebase/storage';
 import {SUCCESS, FAILURE, PENDING} from '../common'
@@ -23,12 +23,20 @@ const AddPost = ({navigation})=> {
    const [uploadingPost, setUploadingPost] = useState(false)
    const dispatch = useDispatch()
 
-   const {mediaUrl, loading, loadingMedia, postAddStatus} =  useSelector(state => ({
+   const {mediaUrl, loading, loadingMedia, postAddStatus, playAndPause} =  useSelector(state => ({
        mediaUrl : state.addPostReducer.mediaUrl,
        loading : state.addPostReducer.loading,
        loadingMedia :state.addPostReducer.loadingMedia,
-       postAddStatus: state.addPostReducer.postAddStatus
+       postAddStatus: state.addPostReducer.postAddStatus,
+       playAndPause: state.homeReducer.playPause
    }), shallowEqual)
+
+    React.useEffect(() => {
+        const unsubscribe = navigation.addListener('focus', (data) => {
+            dispatch(setVideoPlayPause(0))
+        });
+        return unsubscribe;
+    }, [navigation]);
 
    useEffect(() => {
        setUploadingPost(loading)

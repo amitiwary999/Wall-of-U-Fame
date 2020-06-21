@@ -62,4 +62,18 @@ const likePost = (token, data, pos) => {
     }
 }
 
-export { getPosts, likePost, addBookmark }
+const setVideoPlayPause = (playPause) => {
+    return {
+        type: Actions.MEDIA_PLAY_PAUSE,
+        payload: playPause
+    }
+}
+
+const setHomeScreenFocus = (homeFocus) => {
+    return{
+        type: Actions.HOME_SCREEN_FOCUS,
+        payload: homeFocus
+    }
+}
+
+export { getPosts, likePost, addBookmark, setVideoPlayPause, setHomeScreenFocus }

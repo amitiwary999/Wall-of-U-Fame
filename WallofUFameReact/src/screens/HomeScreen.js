@@ -27,8 +27,9 @@ const HomeScreen = ({navigation}) => {
     const [viewIndex, setViewIndex] = useState(-1)
     const dispatch = useDispatch()
 
-    const {postData} =  useSelector(state => ({
-        postData: state.homeReducer.posts
+    const {postData, playAndPause} =  useSelector(state => ({
+        postData: state.homeReducer.posts,
+        playAndPause: state.homeReducer.playPause
     }), shallowEqual)
 
     useEffect(() => {
@@ -81,6 +82,7 @@ const HomeScreen = ({navigation}) => {
 
     return (
         <View style={styles.container}>
+            {console.log("play and pause "+playAndPause)}
             <StatusBar hidden />
             {posts && posts.length>0 ?
             <FlatList
@@ -91,7 +93,6 @@ const HomeScreen = ({navigation}) => {
                 data={posts}
                 renderItem={({ item, index }) =>
                     <View style={styles.itemContainer}>
-                        {console.log("index item "+index+" "+viewIndex+" "+item.isLiked)}
                         <View style={styles.authorDetailStyle}>
                             <Image style={styles.dpViewStyle}
                                 source={{ uri: item.userDp }} />
@@ -111,24 +112,24 @@ const HomeScreen = ({navigation}) => {
                                     repeat
                                     source = {{uri: item.mediaUrl}}
                                     resizeMode = "cover"
-                                    onBuffer= {(data) => {
-                                        console.log("buffer "+JSON.stringify(data))
-                                    }}
-                                    onReadyForDisplay = {() => {
-                                        console.log("ready for display")
-                                    }}
-                                    onLoadStart = {
-                                        console.log("load start")
-                                    }
-                                    onLoad = {
-                                        console.log("on laod")
-                                    }
-                                    onProgress={(data) => {
-                                        console.log("progress "+JSON.stringify(data))
-                                    }}
-                                    onPlaybackStalled = {console.log("palyback stalled")}
-                                    onPlaybackResume={console.log("play resume")}
-                                    paused={!(index == viewIndex) && !AppState.currentState.match(/inactive|background/)}
+                                    // onBuffer= {(data) => {
+                                    //   //  console.log("buffer "+JSON.stringify(data))
+                                    // }}
+                                    // onReadyForDisplay = {() => {
+                                    //    // console.log("ready for display")
+                                    // }}
+                                    // onLoadStart = {
+                                    //    // console.log("load start")
+                                    // }
+                                    // onLoad = {
+                                    //   //  console.log("on laod")
+                                    // }
+                                    // onProgress={(data) => {
+                                    //     //console.log("progress "+JSON.stringify(data))
+                                    // }}
+                                    // onPlaybackStalled = {console.log("palyback stalled")}
+                                    // onPlaybackResume={console.log("play resume")}
+                                    paused={(!(index == viewIndex) && !AppState.currentState.match(/inactive|background/)) ||(!playAndPause)}
                                     style={StyleSheet.absoluteFill}
                                     />
                                 )

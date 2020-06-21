@@ -2,7 +2,9 @@ import * as Actions from '../type'
 import { Item } from 'native-base';
 
 const initialState = {
-    posts : []
+    posts : [],
+    playPause: 1,
+    homeScreenFocus: 1
 }
 
 const homeScreenReducer = (state = initialState, action) => {
@@ -26,7 +28,19 @@ const homeScreenReducer = (state = initialState, action) => {
             let updateItem = state.posts[payload]
             updateItem.isBookmarked = (updateItem.isBookmarked == 0 ? 1 : 0)
             let updatedPost = [...state.posts.slice(0, payload), updateItem, ...state.posts.slice(payload + 1)]
-            return { ...state, posts: updatedPost }    
+            return { ...state, posts: updatedPost }
+            
+        case Actions.MEDIA_PLAY_PAUSE:    
+             return{
+                 ...state,
+                 playPause: payload
+             }
+             
+        case Actions.HOME_SCREEN_FOCUS:
+            return {
+                ...state, 
+                homeScreenFocus: payload
+            }     
 
         default:
             return state;    
