@@ -26,6 +26,28 @@ const updateLike = (pos) => {
     }
 }
 
+const updateBookmark = (pos) => {
+    return {
+        type: Actions.UPDATE_BOOKMARK,
+        payload: pos
+    }
+}
+
+const addBookmark = (token, data, pos) => {
+    return (dispatch) => {
+        dispatch(updateBookmark(pos))
+        API.post(PATH.updateBookmark, data, token).then(res => {
+            if(res != null && res != undefined){
+
+            }else{
+
+            }
+        }).catch(error => {
+            console.log(error)
+        })
+    }
+}
+
 const likePost = (token, data, pos) => {
     return (dispatch) => {
         dispatch(updateLike(pos))
@@ -40,4 +62,4 @@ const likePost = (token, data, pos) => {
     }
 }
 
-export { getPosts, likePost }
+export { getPosts, likePost, addBookmark }

@@ -17,7 +17,8 @@ const PATH = {
   getPost : 'getBlogSql',
   setUserSql: 'setUserSql',
   setPostSql: 'setPostSql',
-  updateLike: 'setPostLikeSql'
+  updateLike: 'setPostLikeSql',
+  updateBookmark: 'setBookmarkSql'
 };
 
 const API = {

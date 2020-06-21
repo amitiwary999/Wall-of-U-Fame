@@ -1,5 +1,5 @@
 
-import React, { Component, useEffect, useState, useRef } from 'react';
+import React, { Component, useEffect, useState, useRef, useImperativeHandle } from 'react';
 import {
     StyleSheet,
     View,
@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import * as urls from '../Constants';
 import auth from '@react-native-firebase/auth';
-import {getPosts, likePost} from '../redux/actions';
+import {getPosts, likePost, addBookmark} from '../redux/actions';
 import {useSelector, shallowEqual, useDispatch} from 'react-redux';
 import {imageMime, videoMime} from '../common/constant'
 import Video from 'react-native-video'
@@ -67,6 +67,15 @@ const HomeScreen = ({navigation}) => {
                let tokenResult = await auth().currentUser.getIdTokenResult();
                let token = tokenResult.token
                dispatch(likePost(token, data, pos))
+        }
+    }
+
+    const updateBookmark = async(pos, id, addBookmarkOrNot) => {
+        if(auth().currentUser != null){
+            let data = JSON.stringify({ uid: useImperativeHandle, postId: id, addBookmark: addBookmarkOrNot })
+            let tokenResult = await auth().currentUser.getIdTokenResult();
+            let token = tokenResult.token
+            dispatch(addBookmark(token, data, pos))
         }
     }
 
@@ -134,10 +143,12 @@ const HomeScreen = ({navigation}) => {
                                  <Icon name="like2" type ="AntDesign" style={{color: 'black', fontSize: 36}}/> } 
                             </TouchableOpacity>
 
-                            <View style={{flex: 1}}>
-                                <Icon name="bookmark" type="Feather" style={{color: 'black', fontSize: 36}}/>
-                                {/* <Icon name="bookmark" type="FontAwesome" style={{color: 'white', fontSize: 36}}/> */}
-                            </View>        
+                            <TouchableOpacity style={{ flex: 1 }} onPress={() => {
+                                updateBookmark(index, item.postId, item.isBookmarked == 1 ? 0 : 1)
+                            }}>
+                                {item.isBookmarked ? <Icon name="bookmark" type="FontAwesome" style={{color: 'black', fontSize: 36}}/> : 
+                                 <Icon name="bookmark-o" type="FontAwesome" style={{color: 'black', fontSize: 36}}/> }
+                            </TouchableOpacity>        
                         </View>    
                     </View>
                 }

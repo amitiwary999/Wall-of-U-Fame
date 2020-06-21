@@ -21,13 +21,12 @@ const homeScreenReducer = (state = initialState, action) => {
             item.isLiked = (item.isLiked == 0?1:0)
             let newPost = [...state.posts.slice(0, payload), item, ...state.posts.slice(payload+1)]
             return {...state, posts: newPost}
-        //   let item = state.posts[payload]
-        //   item.isLiked = (item.isLiked== 0?1:0)
-        //   return {...state,
-        //       [...state.posts.slice(0, payload),
-        //       item,
-        //       ...state.posts.slice(payload+1)]
-        //   }  
+
+        case Actions.UPDATE_BOOKMARK:
+            let updateItem = state.posts[payload]
+            updateItem.isBookmarked = (updateItem.isBookmarked == 0 ? 1 : 0)
+            let updatedPost = [...state.posts.slice(0, payload), updateItem, ...state.posts.slice(payload + 1)]
+            return { ...state, posts: updatedPost }    
 
         default:
             return state;    
