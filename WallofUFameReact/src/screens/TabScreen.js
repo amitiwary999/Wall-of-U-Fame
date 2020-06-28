@@ -20,6 +20,7 @@ const TabScreen = ({navigation}) => {
     const [routes] = React.useState([
         {key: 'first', title: 'Home'},
         {key: 'second', title: 'Profile'},
+       // {key:'three', title: 'AddPost'}
     ]);
     
     const renderScene = SceneMap({
@@ -53,8 +54,26 @@ const TabScreen = ({navigation}) => {
       }
     },[index])
 
+  const getTabBarIcon = ({ route, focused }) => {
+    let iconName, iconType, iconColor="#ffffff";
+console.log("route in home "+JSON.stringify(route)+" "+route.title+" "+(route.title === 'Home'))
+    if (route.title === 'Home') {
+      iconType = 'MaterialCommunityIcons'
+      iconName = focused? 'home' : 'home-variant-outline';
+    } else if (route.title === 'Profile') {
+      iconType = 'MaterialCommunityIcons'
+      iconName = focused ? 'account' : 'account-outline';
+    } else if (route.title === 'AddPost') {
+      iconName = focused ? 'aadd-circle' : 'aadd-circle-outline';
+      iconType = 'MaterialIcons'
+    }
+    return <Icon name={iconName} size={24} type={iconType} style={{color: 'white'}} />;
+  }
+
   const renderTabBar = (props) => {
     return (<TabBar
+      renderIcon={getTabBarIcon}
+      renderLabel={() => null}
       style={{ backgroundColor: 'black', elevation: 0, borderColor: '#000000', borderBottomWidth: 1, height: 50 }}
       labelStyle={{ color: 'white', fontSize: 18, fontWeight: 'bold' }}
       {...props}
@@ -76,6 +95,8 @@ const TabScreen = ({navigation}) => {
             navigationState={{ index, routes }}
             renderScene={renderScene}
             onIndexChange={setIndex}
+            tabBarPosition='bottom'
+            swipeEnabled={false}
           />
         </Container>
         // <View style={{ flex: 1 }}>
