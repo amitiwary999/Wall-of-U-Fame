@@ -4,7 +4,7 @@ import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { Card } from 'react-native-elements';
 import {deviceWidth, deviceHeight} from '../common/utils'
 import ImagePicker from 'react-native-image-crop-picker';
-import {Icon} from 'native-base';
+import {Icon, Toast} from 'native-base';
 import { add } from 'react-native-reanimated';
 import { TextInput } from 'react-native-gesture-handler';
 import {savePost, setVideoPlayPause} from '../redux/actions'
@@ -31,25 +31,20 @@ const AddPost = ({navigation})=> {
        playAndPause: state.homeReducer.playPause
    }), shallowEqual)
 
-    React.useEffect(() => {
-        const unsubscribe = navigation.addListener('focus', (data) => {
-            dispatch(setVideoPlayPause(0))
-        });
-        return unsubscribe;
-    }, [navigation]);
-
    useEffect(() => {
        setUploadingPost(loading)
    }, [loading])
 
    useEffect(() => {
        if(postAddStatus == SUCCESS){
-           navigation.reset({
-               routes: [{ name: 'TabScreen' }]
-           });
+           setUploadingPost(false)
+           setMediaUri('')
+           setPostDesc('')
+           setMediaPicked(false)
        }else if(postAddStatus == FAILURE){
            console.log("failed adding post")
            setUploadingPost(false)
+           Toast.show({text: 'Oops! Something went wrong. Please try again'})
        }
    },[postAddStatus])
 

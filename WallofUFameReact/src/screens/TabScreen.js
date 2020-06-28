@@ -5,6 +5,7 @@ import EntypoIcon from 'react-native-vector-icons/Entypo';
 import {Icon, Container, Header, Right} from 'native-base';
 import ProfileScreen from './ProfileScreen'
 import HomeScreen from './HomeScreen'
+import AddPost from './AddPost'
 import auth from '@react-native-firebase/auth';
 import { setVideoPlayPause } from '../redux/actions';
 import { useDispatch } from 'react-redux';
@@ -20,12 +21,13 @@ const TabScreen = ({navigation}) => {
     const [routes] = React.useState([
         {key: 'first', title: 'Home'},
         {key: 'second', title: 'Profile'},
-       // {key:'three', title: 'AddPost'}
+        {key:'third', title: 'AddPost'}
     ]);
     
     const renderScene = SceneMap({
         first: HomeScreen,
         second: ProfileScreen,
+        third: AddPost
     });
 
     const openAddPostScreen= () => {
@@ -64,7 +66,7 @@ console.log("route in home "+JSON.stringify(route)+" "+route.title+" "+(route.ti
       iconType = 'MaterialCommunityIcons'
       iconName = focused ? 'account' : 'account-outline';
     } else if (route.title === 'AddPost') {
-      iconName = focused ? 'aadd-circle' : 'aadd-circle-outline';
+      iconName = focused ? 'add-circle' : 'add-circle-outline';
       iconType = 'MaterialIcons'
     }
     return <Icon name={iconName} size={24} type={iconType} style={{color: 'white'}} />;
@@ -85,11 +87,6 @@ console.log("route in home "+JSON.stringify(route)+" "+route.title+" "+(route.ti
     return (
       auth().currentUser && (
         <Container style={{flex: 1}}>
-          <Header style={{backgroundColor:'black'}}>
-            <Right>
-            <Icon name="add" style={{color:'white', fontSize:36}} onPress={openAddPostScreen} />
-            </Right>
-          </Header>
           <TabView
             renderTabBar = {renderTabBar}
             navigationState={{ index, routes }}
@@ -99,19 +96,6 @@ console.log("route in home "+JSON.stringify(route)+" "+route.title+" "+(route.ti
             swipeEnabled={false}
           />
         </Container>
-        // <View style={{ flex: 1 }}>
-        //   <View style={styles.header}>
-        //     <View style={styles.plusIconView}>
-        //       <Icon name={'add'} size={24} color={'white'} type="MaterialIcons" onPress={openAddPostScreen} />
-        //     </View>
-        //   </View>
-        //   <TabView
-        //     renderTabBar = {renderTabBar}
-        //     navigationState={{ index, routes }}
-        //     renderScene={renderScene}
-        //     onIndexChange={setIndex}
-        //   />
-        // </View>
       )
     );
 }
