@@ -18,7 +18,9 @@ const PATH = {
   setUserSql: 'setUserSql',
   setPostSql: 'setPostSql',
   updateLike: 'setPostLikeSql',
-  updateBookmark: 'setBookmarkSql'
+  updateBookmark: 'setBookmarkSql',
+  getLikedPost: 'getLikedPost',
+  getBookmarkedList: 'getBookmarkedList'
 };
 
 const API = {
