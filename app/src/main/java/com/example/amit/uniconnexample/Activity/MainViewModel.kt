@@ -1,5 +1,6 @@
 package com.example.amit.uniconnexample.Activity
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -30,33 +31,57 @@ class MainViewModel : ViewModel(), AnkoLogger {
     }
 
     fun getPagedPost(){
-        firebaseUser?.getIdToken(false)?.addOnCompleteListener {
-            if(it.isSuccessful){
-                val getPostRequestModel = GetPostRequestModel(nextKey, 10)
-                RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().getPostPAged("Bearer ${it.result?.token}", getPostRequestModel)
-                        .enqueue(object : Callback<List<PostModel>> {
-                            override fun onFailure(call: Call<List<PostModel>>, t: Throwable) {
+        Log.d("main view model ","get pos")
+        if(firebaseUser == null){
+            val getPostRequestModel = GetPostRequestModel(nextKey, 10)
+            RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().getPostPagedWithoutLogin( getPostRequestModel)
+                    .enqueue(object : Callback<List<PostModel>> {
+                        override fun onFailure(call: Call<List<PostModel>>, t: Throwable) {
+                            error.postValue("failed")
+                        }
+
+                        override fun onResponse(call: Call<List<PostModel>>, response: Response<List<PostModel>>) {
+                            if(response.isSuccessful && response.body() != null && response.body()!!.isNotEmpty()){
+                                val responseBody = response.body()!!
+                                if(nextKey.isEmpty()){
+                                    refreshLiveData.postValue(responseBody)
+                                }else{
+                                    postLiveData.postValue(responseBody)
+                                }
+                                nextKey = responseBody[responseBody.size-1].postId
+                            }else{
                                 error.postValue("failed")
                             }
-
-                            override fun onResponse(call: Call<List<PostModel>>, response: Response<List<PostModel>>) {
-                                if(response.isSuccessful && response.body() != null && response.body()!!.isNotEmpty()){
-                                    val responseBody = response.body()!!
-                                    if(nextKey.isEmpty()){
-                                        refreshLiveData.postValue(responseBody)
-                                    }else{
-                                        postLiveData.postValue(responseBody)
-                                    }
-                                    nextKey = responseBody[responseBody.size-1].postId
-                                }else{
+                        } })
+        }else{
+            firebaseUser?.getIdToken(false)?.addOnCompleteListener {
+                Log.d("view ","task "+it.result)
+                if(it.isSuccessful){
+                    val getPostRequestModel = GetPostRequestModel(nextKey, 10)
+                    RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().getPostPAged("Bearer ${it.result?.token}", getPostRequestModel)
+                            .enqueue(object : Callback<List<PostModel>> {
+                                override fun onFailure(call: Call<List<PostModel>>, t: Throwable) {
                                     error.postValue("failed")
                                 }
-                            }
-                        })
-            }else{
-                error.postValue("failed")
+
+                                override fun onResponse(call: Call<List<PostModel>>, response: Response<List<PostModel>>) {
+                                    if(response.isSuccessful && response.body() != null && response.body()!!.isNotEmpty()){
+                                        val responseBody = response.body()!!
+                                        if(nextKey.isEmpty()){
+                                            refreshLiveData.postValue(responseBody)
+                                        }else{
+                                            postLiveData.postValue(responseBody)
+                                        }
+                                        nextKey = responseBody[responseBody.size-1].postId
+                                    }else{
+                                        error.postValue("failed")
+                                    }
+                                }
+                            })
+                }
             }
         }
+
     }
 
     fun postLikeUnLike(postId: String, incrVal: Int){
