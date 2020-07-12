@@ -16,6 +16,7 @@ import android.widget.Toast
 
 import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Fragment.Home.HomeFragment
+import com.example.amit.uniconnexample.Fragment.Login.LoginFragment
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.Fragment.Profilefrag
 import com.google.firebase.auth.FirebaseAuth
@@ -63,8 +64,14 @@ class NewTabActivity : AppCompatActivity() {
                 //  viewPager.setVisibility(View.VISIBLE);
             } else if (tabId == R.id.tab_account) {
                 //  viewPager.setVisibility(View.GONE);
-                toolbar_title.text = "    Profile     "
-                attachFragment(Profilefrag())
+                val firebaseAuth = FirebaseAuth.getInstance().currentUser
+                if(firebaseAuth == null){
+                    LoginFragment().show(supportFragmentManager, "Login")
+                }else{
+                    toolbar_title.text = "    Profile     "
+                    attachFragment(Profilefrag())
+                }
+
             }
 //            else if (tabId == R.id.tab_notification) {
 //                if (isNetworkConnected) {
