@@ -1,5 +1,6 @@
 package com.example.amit.uniconnexample.Fragment.Login
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
+import com.example.amit.uniconnexample.Activity.MainViewModel
 import com.example.amit.uniconnexample.Activity.NewTabActivity
 import com.example.amit.uniconnexample.R
 import com.example.amit.uniconnexample.View.BaseBottomSheetDialog
@@ -28,7 +31,16 @@ class LoginFragment: BaseBottomSheetDialog(){
     private val RC_SIGN_IN = 1001
     var googleSignInClient: GoogleSignInClient? = null
     private var firebaseAuth: FirebaseAuth? = null
+    var mainViewModel: MainViewModel?= null
+    var activity: NewTabActivity? = null
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        activity = context as NewTabActivity
+        activity?.let {
+            mainViewModel = ViewModelProviders.of(it).get(MainViewModel::class.java)
+        }
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
@@ -86,6 +98,7 @@ class LoginFragment: BaseBottomSheetDialog(){
             Log.d("successful login ","val "+it)
             if(it.isSuccessful){
                 Log.d("successful login ","val "+it.isSuccessful)
+                mainViewModel?.getPagedPost()
                 dismiss()
             }else{
                 Toast.makeText(activity, "Oops! Something went wrong. Please try again", Toast.LENGTH_SHORT).show()

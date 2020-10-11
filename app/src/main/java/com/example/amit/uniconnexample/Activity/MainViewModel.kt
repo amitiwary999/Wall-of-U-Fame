@@ -31,7 +31,7 @@ class MainViewModel : ViewModel(), AnkoLogger {
     }
 
     fun getPagedPost(){
-        Log.d("main view model ","get pos")
+        Log.d("main view model ","get pos "+firebaseUser)
         if(firebaseUser == null){
             val getPostRequestModel = GetPostRequestModel(nextKey, 10)
             RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().getPostPagedWithoutLogin( getPostRequestModel)

@@ -1,28 +1,28 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-39:12
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:1-39:12
 MERGED from [androidx.multidex:multidex:2.0.1] /home/meera/.gradle/caches/transforms-2/files-2.1/a4abf947b2b497f80a3775b2139f0708/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.roughike:bottom-bar:2.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/04f18a6c71254419711a2359b25f08a0/jetified-bottom-bar-2.1.1/AndroidManifest.xml:2:1-12:12
+MERGED from [com.roughike:bottom-bar:2.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/49f5d30a058d7d179d4fb41c64287d7b/jetified-bottom-bar-2.1.1/AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.material:material:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/598cf86e1096ca5ed714bd2134acd7c4/material-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.jkwiecien:EasyImage:1.2.3] /home/meera/.gradle/caches/transforms-2/files-2.1/adaa7eacf4c1cfe53cec8ed17a98599b/jetified-EasyImage-1.2.3/AndroidManifest.xml:2:1-12:12
-MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/1ce5b2b38c06d40e06b87ccf0774f5dd/jetified-core-0.8.6.1/AndroidManifest.xml:2:1-15:12
-MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/4ee888bda02f6fda12059fdb66fe2587/jetified-LikeButton-0.2.0/AndroidManifest.xml:2:1-17:12
-MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/1a558db8ee942c35d4efbd59513f0f62/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:2:1-10:12
-MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/a733f9a0f4a7836a10cb87e1d72e8f21/jetified-Toasty-1.1.2/AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.jkwiecien:EasyImage:1.2.3] /home/meera/.gradle/caches/transforms-2/files-2.1/d21fb8215e927a3bcf6ae15e79912594/jetified-EasyImage-1.2.3/AndroidManifest.xml:2:1-12:12
+MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/c3a9996e5dd00d1f1838b99be480b4fa/jetified-core-0.8.6.1/AndroidManifest.xml:2:1-15:12
+MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/9763e3a5adb2d9080beff409dc92797e/jetified-LikeButton-0.2.0/AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/f423a44af2904ad7cf72da006793a321/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:2:1-10:12
+MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/ee566b61889b3b3114be6bdd45591825/jetified-Toasty-1.1.2/AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/a30cb7b3c0b648fd1396e8fcdba3a558/constraintlayout-2.0.0-beta4/AndroidManifest.xml:2:1-11:12
-MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meera/.gradle/caches/transforms-2/files-2.1/14e555e36dd0ba914fe234cb4afae2a3/jetified-library-1.1.6/AndroidManifest.xml:6:1-16:12
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meera/.gradle/caches/transforms-2/files-2.1/6f959cc28ee624f2781ba0601446cd32/jetified-library-1.1.6/AndroidManifest.xml:6:1-16:12
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/413d077d30927ab0f43b17b59561bf4a/anko-0.10.8/AndroidManifest.xml:2:1-13:12
-MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/be49c72864e769752ba69ab9927f8373/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:2:1-13:12
-MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/3f6f0a4ea9f8fac067546e68b2661cc3/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:2:1-13:12
+MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7b5907b3899301e5ba00e36d7019cefc/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:2:1-13:12
+MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/0e337df6dd566ed4be0fe71ba0ff8d6f/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/8ef9e7c57487339932531c49be0a33fa/anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml:2:1-13:12
-MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/301360f94cf20a8780f7c63889015f01/jetified-appcompatV7-base-0.10.8/AndroidManifest.xml:2:1-11:12
+MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/8a69449aefe57cb21ead772944b9b896/jetified-appcompatV7-base-0.10.8/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/1460859e8ddffda35e0fc6ffe70d47f3/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/caebe8325a5bc23283d2f2ed7888ebd1/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:2:1-13:12
+MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/bf911cdadfd9fde40a364c7895260b84/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-support-v4-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/fbb49d28966c8656889ea519953f2e80/anko-support-v4-commons-0.10.8/AndroidManifest.xml:2:1-13:12
-MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/acd10d4f4a5b4895619ca7b549a984d7/jetified-supportV4-base-0.10.8/AndroidManifest.xml:2:1-11:12
+MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/49d1b36f8b490209230c262d17256ac7/jetified-supportV4-base-0.10.8/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/66ec503d1bae58475dac4491f53a4dbd/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.paging:paging-runtime:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b5f84f25d3ca4178a29af150601e8d93/paging-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b2a764d0a42401f87eab7b391c0bac61/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -36,15 +36,18 @@ MERGED from [com.google.firebase:firebase-core:17.2.1] /home/meera/.gradle/cache
 MERGED from [com.google.firebase:firebase-database:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2b922e1b8df509b283d8de18df43b083/firebase-database-19.2.0/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-storage:19.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/648a120ae65e00a09bcbf81629c912cf/firebase-storage-19.1.0/AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/daec7d58b5a5165800602fbf57815e5e/firebase-auth-19.2.0/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/e40e912d021f395899175866809927f8/firebase-perf-19.0.3/AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.firebase:firebase-config:19.0.4] /home/meera/.gradle/caches/transforms-2/files-2.1/704114f113e9f0eeb570e68c225ecabd/firebase-config-19.0.4/AndroidManifest.xml:17:1-38:12
-MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/18bcd741c7b7dacb14f94ef69d01cda1/jetified-timber-4.1.2/AndroidManifest.xml:2:1-10:12
+MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/74d72a31d9e2836ba3725b564260f445/jetified-timber-4.1.2/AndroidManifest.xml:2:1-10:12
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/88ba334100b89c79f1fffc88e1b71ca6/whorlviewlibrary-1.0.3/AndroidManifest.xml:2:1-16:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/936bedc4f25a290348624dbc7b634ece/lifecycle-extensions-2.1.0/AndroidManifest.xml:17:1-25:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b13edbcf1782a7b327a9828973030940/lifecycle-process-2.1.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/3f964ec59cb2d6a087abbc90a5f1bb4f/lifecycle-service-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/7796c6f300b51aefee26d61b78967726/firebase-auth-interop-19.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/10a57040cc6b37a4f85e0dd5ef94b343/play-services-auth-api-phone-17.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/c87f3396020db640690b8200f39e80f7/play-services-auth-base-17.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0eeeee3c6cd2b3af910cfa0384f46dbd/play-services-clearcut-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/aa218ec865aeb325d7140af430717c98/play-services-phenotype-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-analytics:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/f4a5aad90136932d402b38633cbe7e76/firebase-analytics-17.2.1/AndroidManifest.xml:2:1-9:12
@@ -54,7 +57,7 @@ MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] /home/meera/.gradl
 MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e39cf7f3cd48d462d52cb40015d31795/play-services-base-17.1.0/AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/74a908e33b8132ac590f658350ce455b/firebase-datatransport-17.0.3/AndroidManifest.xml:15:1-34:12
 MERGED from [com.google.firebase:firebase-abt:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b87266c430745eb46e5e8c3717fed93e/firebase-abt-19.0.0/AndroidManifest.xml:2:1-19:12
-MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f1d392763bd5e7a722b9dccf89028dc3/play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/df3eed3cf3bc81cb9419958200fb4db8/firebase-measurement-connector-18.0.0/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-measurement:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/553b2f7eb595be44b8bad84158a70270/play-services-measurement-17.2.1/AndroidManifest.xml:17:1-55:12
@@ -64,16 +67,16 @@ MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/meera/.gra
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/e5b3e8f33a352f9dc6b1c7bed0df4907/play-services-measurement-sdk-api-17.2.1/AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.android.gms:play-services-measurement-base:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/a3bba73e7028a3518406a92a10727320/play-services-measurement-base-17.2.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0332639d9002db079e0102be451282c9/play-services-ads-identifier-17.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a95f7c8e0eca3c40de7ec55124037bcb/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/56139091820c1870c84b16a02e95c057/jetified-play-services-basement-17.1.1/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/70a7ceb0dde12ac6a8f54ec9b7801cd2/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/5add9c4b5aa73b3da4e25458fb71b336/exoplayer-2.9.2/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/37247ef46f4ffc2f30b681aa9c01bc4b/jetified-exoplayer-ui-2.9.6/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/42bb503559685df1281987573cbb7845/jetified-exoplayer-ui-2.9.6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/da2a81db612464404afd7d170c0755d4/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/8f024778cb840ac75de20ed92c091eb4/transition-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f166e3190221df8968a1e5789d63b9e9/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5ab07eb1922264feb105e22f8c8e5fbd/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f719827b6b3426ddb4fc8639f33ef1d4/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/11cdc3dedb1741c6beb0358e47152447/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5ab07eb1922264feb105e22f8c8e5fbd/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/212c93ed656ec8dd4c36357ad63b9dbb/activity-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/29e5efdd9e3c4eca550b0f1c0d414b6a/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/9633858ef12b2b56b16b16cb1469a4fe/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -91,48 +94,48 @@ MERGED from [org.jetbrains.anko:anko-commons:0.10.8] /home/meera/.gradle/caches/
 MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7f4e5daf9ca96a1cd43f2009803296fa/anko-coroutines-0.10.8/AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:sqlite-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/75f744854651953a4bd72ae6e5b93d0b/sqlite-base-0.10.8/AndroidManifest.xml:2:1-11:12
 MERGED from [org.jetbrains.anko:platform-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/1cf30e8696210e8c52878bb0776a38cc/platform-base-0.10.8/AndroidManifest.xml:2:1-11:12
-MERGED from [org.jetbrains.anko:commons-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/6c2ce5b59ecf6c1d76401a4b575f21ad/jetified-commons-base-0.10.8/AndroidManifest.xml:2:1-11:12
+MERGED from [org.jetbrains.anko:commons-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/fe440b217380cc26dcbeb265ed9f2c99/jetified-commons-base-0.10.8/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e8652823a9fb9574a55027be3a6021bc/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-components:16.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fa3140fd978c000c20c64a7bff6ea959/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/674d32169d6323612cf7237089dd1687/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/99e647762e23723a3d54e49e737aab9d/transport-backend-cct-2.2.0/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b07ad1d1a9d6fd4a0592d7cbe0c9af92/transport-runtime-2.2.0/AndroidManifest.xml:15:1-41:12
 MERGED from [com.google.firebase:firebase-encoders-json:16.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fd3e4c8d4b7fb82d13d18c595ca3c61c/firebase-encoders-json-16.0.0/AndroidManifest.xml:15:1-23:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/meera/.gradle/caches/transforms-2/files-2.1/cf5033c8e442f3858069d07dde3eff6e/gifdecoder-4.10.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f2241b172da970b4c7b1e859e2f159e9/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/31918fee5d35419952235eee4d96e5d6/jetified-exoplayer-dash-2.9.2/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/e4ca666e36f80a1976daedb05431d55f/jetified-exoplayer-hls-2.9.2/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/d3110bb1027c277f5434d021c393f4bf/jetified-exoplayer-smoothstreaming-2.9.2/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/17dbc2715c0b7d7d2dad89092b1ae808/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/7f9846cf511c497f554e092f625a3a0b/jetified-exoplayer-dash-2.9.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/8ee897d98345339fcc3d4f3ff86ff467/jetified-exoplayer-hls-2.9.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/7d5367ba65270defb9e9dbf5842bea25/jetified-exoplayer-smoothstreaming-2.9.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/b8fdfebc71714e137cbe0c3b956b4d0e/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e3675c639ef18f3b542c63caeda7f1ac/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.print:print:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/8ae4e11744ad98c334d6f8f0f7747118/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/34df91f74bf09c318cbe024bdb4e6806/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/113d3f505fcb099fa43b538ba1257039/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5a61b54a870d1aa6983c68dc88365a84/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/806f7b92286e569a5fa17840146575c1/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/d9c900a433976d3181fa161818059ea4/lifecycle-livedata-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0d48d37ff98c49cab95fd92659d2cd46/lifecycle-livedata-core-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/597afe348c610dd95567beef57ba6f1e/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/806f7b92286e569a5fa17840146575c1/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0a688eed6c64f9ca6b583da943622ae2/firebase-database-collection-17.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58d38950d99e93f3806fdb02c08f7ea0/transport-api-2.2.0/AndroidManifest.xml:15:1-22:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:1-39:12
 	package
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:3:5-46
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-39:12
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:1-39:12
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:1-39:12
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:1-39:12
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:4:5-67
 MERGED from [com.google.firebase:firebase-database:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2b922e1b8df509b283d8de18df43b083/firebase-database-19.2.0/AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2b922e1b8df509b283d8de18df43b083/firebase-database-19.2.0/AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-storage:19.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/648a120ae65e00a09bcbf81629c912cf/firebase-storage-19.1.0/AndroidManifest.xml:27:5-67
@@ -154,55 +157,55 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] /h
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/99e647762e23723a3d54e49e737aab9d/transport-backend-cct-2.2.0/AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/99e647762e23723a3d54e49e737aab9d/transport-backend-cct-2.2.0/AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.CAMERA
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:5:5-64
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:5:5-64
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:5:22-62
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:5:22-62
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:6:5-80
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:6:5-80
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:6:22-77
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:6:22-77
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:7:5-80
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:7:5-80
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:7:22-78
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:7:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:8:5-78
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:8:5-78
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:8:22-76
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:9:5-71
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:9:5-71
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:9:22-68
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:9:22-68
 uses-feature#android.hardware.location.gps
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:10:5-65
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:10:5-65
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:10:19-63
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:10:19-63
 application
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:11:5-37:19
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:11:5-37:19
 MERGED from [com.google.android.material:material:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/598cf86e1096ca5ed714bd2134acd7c4/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/598cf86e1096ca5ed714bd2134acd7c4/material-1.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/1ce5b2b38c06d40e06b87ccf0774f5dd/jetified-core-0.8.6.1/AndroidManifest.xml:13:5-20
-MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/1ce5b2b38c06d40e06b87ccf0774f5dd/jetified-core-0.8.6.1/AndroidManifest.xml:13:5-20
-MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/4ee888bda02f6fda12059fdb66fe2587/jetified-LikeButton-0.2.0/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/4ee888bda02f6fda12059fdb66fe2587/jetified-LikeButton-0.2.0/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/1a558db8ee942c35d4efbd59513f0f62/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:8:5-20
-MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/1a558db8ee942c35d4efbd59513f0f62/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:8:5-20
-MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/a733f9a0f4a7836a10cb87e1d72e8f21/jetified-Toasty-1.1.2/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/a733f9a0f4a7836a10cb87e1d72e8f21/jetified-Toasty-1.1.2/AndroidManifest.xml:11:5-15:19
+MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/c3a9996e5dd00d1f1838b99be480b4fa/jetified-core-0.8.6.1/AndroidManifest.xml:13:5-20
+MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/c3a9996e5dd00d1f1838b99be480b4fa/jetified-core-0.8.6.1/AndroidManifest.xml:13:5-20
+MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/9763e3a5adb2d9080beff409dc92797e/jetified-LikeButton-0.2.0/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/9763e3a5adb2d9080beff409dc92797e/jetified-LikeButton-0.2.0/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/f423a44af2904ad7cf72da006793a321/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:8:5-20
+MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/f423a44af2904ad7cf72da006793a321/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:8:5-20
+MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/ee566b61889b3b3114be6bdd45591825/jetified-Toasty-1.1.2/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/ee566b61889b3b3114be6bdd45591825/jetified-Toasty-1.1.2/AndroidManifest.xml:11:5-15:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/a30cb7b3c0b648fd1396e8fcdba3a558/constraintlayout-2.0.0-beta4/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/a30cb7b3c0b648fd1396e8fcdba3a558/constraintlayout-2.0.0-beta4/AndroidManifest.xml:9:5-20
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/413d077d30927ab0f43b17b59561bf4a/anko-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/413d077d30927ab0f43b17b59561bf4a/anko-0.10.8/AndroidManifest.xml:11:5-20
-MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/be49c72864e769752ba69ab9927f8373/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:11:5-20
-MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/be49c72864e769752ba69ab9927f8373/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:11:5-20
-MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/3f6f0a4ea9f8fac067546e68b2661cc3/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:11:5-20
-MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/3f6f0a4ea9f8fac067546e68b2661cc3/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:11:5-20
+MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7b5907b3899301e5ba00e36d7019cefc/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:11:5-20
+MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7b5907b3899301e5ba00e36d7019cefc/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:11:5-20
+MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/0e337df6dd566ed4be0fe71ba0ff8d6f/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:11:5-20
+MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/0e337df6dd566ed4be0fe71ba0ff8d6f/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/8ef9e7c57487339932531c49be0a33fa/anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/8ef9e7c57487339932531c49be0a33fa/anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml:11:5-20
-MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/caebe8325a5bc23283d2f2ed7888ebd1/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:11:5-20
-MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/caebe8325a5bc23283d2f2ed7888ebd1/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:11:5-20
+MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/bf911cdadfd9fde40a364c7895260b84/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:11:5-20
+MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/bf911cdadfd9fde40a364c7895260b84/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-support-v4-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/fbb49d28966c8656889ea519953f2e80/anko-support-v4-commons-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-support-v4-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/fbb49d28966c8656889ea519953f2e80/anko-support-v4-commons-0.10.8/AndroidManifest.xml:11:5-20
 MERGED from [com.github.bumptech.glide:glide:4.10.0] /home/meera/.gradle/caches/transforms-2/files-2.1/03c0ee88930f1eda78ebac844ff9efea/glide-4.10.0/AndroidManifest.xml:10:5-20
@@ -217,14 +220,16 @@ MERGED from [com.google.firebase:firebase-storage:19.1.0] /home/meera/.gradle/ca
 MERGED from [com.google.firebase:firebase-storage:19.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/648a120ae65e00a09bcbf81629c912cf/firebase-storage-19.1.0/AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/daec7d58b5a5165800602fbf57815e5e/firebase-auth-19.2.0/AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/daec7d58b5a5165800602fbf57815e5e/firebase-auth-19.2.0/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/e40e912d021f395899175866809927f8/firebase-perf-19.0.3/AndroidManifest.xml:24:5-38:19
 MERGED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/e40e912d021f395899175866809927f8/firebase-perf-19.0.3/AndroidManifest.xml:24:5-38:19
-MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:22:5-42:19
-MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:22:5-42:19
+MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:22:5-42:19
+MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:22:5-42:19
 MERGED from [com.google.firebase:firebase-config:19.0.4] /home/meera/.gradle/caches/transforms-2/files-2.1/704114f113e9f0eeb570e68c225ecabd/firebase-config-19.0.4/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-config:19.0.4] /home/meera/.gradle/caches/transforms-2/files-2.1/704114f113e9f0eeb570e68c225ecabd/firebase-config-19.0.4/AndroidManifest.xml:28:5-36:19
-MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/18bcd741c7b7dacb14f94ef69d01cda1/jetified-timber-4.1.2/AndroidManifest.xml:8:5-20
-MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/18bcd741c7b7dacb14f94ef69d01cda1/jetified-timber-4.1.2/AndroidManifest.xml:8:5-20
+MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/74d72a31d9e2836ba3725b564260f445/jetified-timber-4.1.2/AndroidManifest.xml:8:5-20
+MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/74d72a31d9e2836ba3725b564260f445/jetified-timber-4.1.2/AndroidManifest.xml:8:5-20
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/88ba334100b89c79f1fffc88e1b71ca6/whorlviewlibrary-1.0.3/AndroidManifest.xml:11:5-14:19
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/88ba334100b89c79f1fffc88e1b71ca6/whorlviewlibrary-1.0.3/AndroidManifest.xml:11:5-14:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/936bedc4f25a290348624dbc7b634ece/lifecycle-extensions-2.1.0/AndroidManifest.xml:22:5-23:19
@@ -251,8 +256,8 @@ MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /home/meera/.gra
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/74a908e33b8132ac590f658350ce455b/firebase-datatransport-17.0.3/AndroidManifest.xml:24:5-32:19
 MERGED from [com.google.firebase:firebase-abt:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b87266c430745eb46e5e8c3717fed93e/firebase-abt-19.0.0/AndroidManifest.xml:11:5-17:19
 MERGED from [com.google.firebase:firebase-abt:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b87266c430745eb46e5e8c3717fed93e/firebase-abt-19.0.0/AndroidManifest.xml:11:5-17:19
-MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
-MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f1d392763bd5e7a722b9dccf89028dc3/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f1d392763bd5e7a722b9dccf89028dc3/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/df3eed3cf3bc81cb9419958200fb4db8/firebase-measurement-connector-18.0.0/AndroidManifest.xml:22:5-23:19
@@ -269,8 +274,8 @@ MERGED from [com.google.android.gms:play-services-measurement-base:17.2.1] /home
 MERGED from [com.google.android.gms:play-services-measurement-base:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/a3bba73e7028a3518406a92a10727320/play-services-measurement-base-17.2.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0332639d9002db079e0102be451282c9/play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0332639d9002db079e0102be451282c9/play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a95f7c8e0eca3c40de7ec55124037bcb/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a95f7c8e0eca3c40de7ec55124037bcb/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/56139091820c1870c84b16a02e95c057/jetified-play-services-basement-17.1.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/56139091820c1870c84b16a02e95c057/jetified-play-services-basement-17.1.1/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b117c51d8782d3afbbfb555fc6a61bbf/core-1.1.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b117c51d8782d3afbbfb555fc6a61bbf/core-1.1.0/AndroidManifest.xml:24:5-89
 MERGED from [org.jetbrains.anko:anko-sqlite:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/d401ad313b53609fd7c64382a9c235aa/anko-sqlite-0.10.8/AndroidManifest.xml:11:5-20
@@ -294,103 +299,103 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/meera
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b117c51d8782d3afbbfb555fc6a61bbf/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:15:9-41
 	android:icon
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:13:9-35
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:12:9-59
-activity#com.example.amit.uniconnexample.Activity.Loginactivity
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:18:9-26:20
-	android:windowSoftInputMode
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:20:13-67
-	android:theme
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:19:13-56
-	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:18:19-57
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:21:13-25:29
-action#android.intent.action.MAIN
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:22:17-69
-	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:22:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:24:17-77
-	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:24:27-74
-activity#com.example.amit.uniconnexample.Signupactivity
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:27:9-30:79
-	android:label
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:28:13-35
-	android:windowSoftInputMode
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:30:13-67
-	android:theme
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:29:13-56
-	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:27:19-49
-activity#com.example.amit.uniconnexample.Activity.AddBlogActivity
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:31:9-32:68
-	android:theme
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:32:13-56
-	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:31:19-59
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:12:9-59
 activity#com.example.amit.uniconnexample.Activity.NewTabActivity
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:33:9-34:68
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:18:9-26:20
+	android:windowSoftInputMode
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:20:13-67
 	android:theme
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:34:13-56
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:19:13-56
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:33:19-58
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:18:19-58
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:21:13-25:29
+action#android.intent.action.MAIN
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:22:17-69
+	android:name
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:24:17-77
+	android:name
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:24:27-74
+activity#com.example.amit.uniconnexample.Signupactivity
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:27:9-30:79
+	android:label
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:28:13-35
+	android:windowSoftInputMode
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:30:13-67
+	android:theme
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:29:13-56
+	android:name
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:27:19-49
+activity#com.example.amit.uniconnexample.Activity.AddBlogActivity
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:31:9-32:68
+	android:theme
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:32:13-56
+	android:name
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:31:19-59
+activity#com.example.amit.uniconnexample.Activity.Loginactivity
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:33:9-34:68
+	android:theme
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:34:13-56
+	android:name
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:33:19-57
 activity#com.example.amit.uniconnexample.MediaPicker.MediaPickerActivity
-ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:35:9-36:68
+ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:35:9-36:68
 	android:theme
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:36:13-56
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:36:13-56
 	android:name
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml:35:19-66
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml:35:19-66
 uses-sdk
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
 MERGED from [androidx.multidex:multidex:2.0.1] /home/meera/.gradle/caches/transforms-2/files-2.1/a4abf947b2b497f80a3775b2139f0708/multidex-2.0.1/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.1] /home/meera/.gradle/caches/transforms-2/files-2.1/a4abf947b2b497f80a3775b2139f0708/multidex-2.0.1/AndroidManifest.xml:20:5-43
-MERGED from [com.roughike:bottom-bar:2.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/04f18a6c71254419711a2359b25f08a0/jetified-bottom-bar-2.1.1/AndroidManifest.xml:8:5-10:41
-MERGED from [com.roughike:bottom-bar:2.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/04f18a6c71254419711a2359b25f08a0/jetified-bottom-bar-2.1.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.roughike:bottom-bar:2.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/49f5d30a058d7d179d4fb41c64287d7b/jetified-bottom-bar-2.1.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.roughike:bottom-bar:2.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/49f5d30a058d7d179d4fb41c64287d7b/jetified-bottom-bar-2.1.1/AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.android.material:material:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/598cf86e1096ca5ed714bd2134acd7c4/material-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/598cf86e1096ca5ed714bd2134acd7c4/material-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.jkwiecien:EasyImage:1.2.3] /home/meera/.gradle/caches/transforms-2/files-2.1/adaa7eacf4c1cfe53cec8ed17a98599b/jetified-EasyImage-1.2.3/AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.jkwiecien:EasyImage:1.2.3] /home/meera/.gradle/caches/transforms-2/files-2.1/adaa7eacf4c1cfe53cec8ed17a98599b/jetified-EasyImage-1.2.3/AndroidManifest.xml:8:5-10:41
-MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/1ce5b2b38c06d40e06b87ccf0774f5dd/jetified-core-0.8.6.1/AndroidManifest.xml:8:5-11:75
-MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/1ce5b2b38c06d40e06b87ccf0774f5dd/jetified-core-0.8.6.1/AndroidManifest.xml:8:5-11:75
-MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/4ee888bda02f6fda12059fdb66fe2587/jetified-LikeButton-0.2.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/4ee888bda02f6fda12059fdb66fe2587/jetified-LikeButton-0.2.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/1a558db8ee942c35d4efbd59513f0f62/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:6:5-44
-MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/1a558db8ee942c35d4efbd59513f0f62/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:6:5-44
-MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/a733f9a0f4a7836a10cb87e1d72e8f21/jetified-Toasty-1.1.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/a733f9a0f4a7836a10cb87e1d72e8f21/jetified-Toasty-1.1.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.jkwiecien:EasyImage:1.2.3] /home/meera/.gradle/caches/transforms-2/files-2.1/d21fb8215e927a3bcf6ae15e79912594/jetified-EasyImage-1.2.3/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.jkwiecien:EasyImage:1.2.3] /home/meera/.gradle/caches/transforms-2/files-2.1/d21fb8215e927a3bcf6ae15e79912594/jetified-EasyImage-1.2.3/AndroidManifest.xml:8:5-10:41
+MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/c3a9996e5dd00d1f1838b99be480b4fa/jetified-core-0.8.6.1/AndroidManifest.xml:8:5-11:75
+MERGED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/c3a9996e5dd00d1f1838b99be480b4fa/jetified-core-0.8.6.1/AndroidManifest.xml:8:5-11:75
+MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/9763e3a5adb2d9080beff409dc92797e/jetified-LikeButton-0.2.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.jd-alexander:LikeButton:0.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/9763e3a5adb2d9080beff409dc92797e/jetified-LikeButton-0.2.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/f423a44af2904ad7cf72da006793a321/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:6:5-44
+MERGED from [com.github.zagum:Android-SwitchIcon:1.3.2] /home/meera/.gradle/caches/transforms-2/files-2.1/f423a44af2904ad7cf72da006793a321/jetified-Android-SwitchIcon-1.3.2/AndroidManifest.xml:6:5-44
+MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/ee566b61889b3b3114be6bdd45591825/jetified-Toasty-1.1.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.GrenderG:Toasty:1.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/ee566b61889b3b3114be6bdd45591825/jetified-Toasty-1.1.2/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/a30cb7b3c0b648fd1396e8fcdba3a558/constraintlayout-2.0.0-beta4/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta4] /home/meera/.gradle/caches/transforms-2/files-2.1/a30cb7b3c0b648fd1396e8fcdba3a558/constraintlayout-2.0.0-beta4/AndroidManifest.xml:5:5-7:41
-MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meera/.gradle/caches/transforms-2/files-2.1/14e555e36dd0ba914fe234cb4afae2a3/jetified-library-1.1.6/AndroidManifest.xml:12:5-14:41
-MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meera/.gradle/caches/transforms-2/files-2.1/14e555e36dd0ba914fe234cb4afae2a3/jetified-library-1.1.6/AndroidManifest.xml:12:5-14:41
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meera/.gradle/caches/transforms-2/files-2.1/6f959cc28ee624f2781ba0601446cd32/jetified-library-1.1.6/AndroidManifest.xml:12:5-14:41
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.1.6] /home/meera/.gradle/caches/transforms-2/files-2.1/6f959cc28ee624f2781ba0601446cd32/jetified-library-1.1.6/AndroidManifest.xml:12:5-14:41
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/413d077d30927ab0f43b17b59561bf4a/anko-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/413d077d30927ab0f43b17b59561bf4a/anko-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/be49c72864e769752ba69ab9927f8373/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/be49c72864e769752ba69ab9927f8373/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/3f6f0a4ea9f8fac067546e68b2661cc3/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/3f6f0a4ea9f8fac067546e68b2661cc3/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7b5907b3899301e5ba00e36d7019cefc/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/7b5907b3899301e5ba00e36d7019cefc/jetified-anko-appcompat-v7-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/0e337df6dd566ed4be0fe71ba0ff8d6f/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/0e337df6dd566ed4be0fe71ba0ff8d6f/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/8ef9e7c57487339932531c49be0a33fa/anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/8ef9e7c57487339932531c49be0a33fa/anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/301360f94cf20a8780f7c63889015f01/jetified-appcompatV7-base-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/301360f94cf20a8780f7c63889015f01/jetified-appcompatV7-base-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/8a69449aefe57cb21ead772944b9b896/jetified-appcompatV7-base-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/8a69449aefe57cb21ead772944b9b896/jetified-appcompatV7-base-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/1460859e8ddffda35e0fc6ffe70d47f3/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/1460859e8ddffda35e0fc6ffe70d47f3/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/caebe8325a5bc23283d2f2ed7888ebd1/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/caebe8325a5bc23283d2f2ed7888ebd1/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/bf911cdadfd9fde40a364c7895260b84/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:anko-support-v4:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/bf911cdadfd9fde40a364c7895260b84/jetified-anko-support-v4-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-support-v4-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/fbb49d28966c8656889ea519953f2e80/anko-support-v4-commons-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-support-v4-commons:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/fbb49d28966c8656889ea519953f2e80/anko-support-v4-commons-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/acd10d4f4a5b4895619ca7b549a984d7/jetified-supportV4-base-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/acd10d4f4a5b4895619ca7b549a984d7/jetified-supportV4-base-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/49d1b36f8b490209230c262d17256ac7/jetified-supportV4-base-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/49d1b36f8b490209230c262d17256ac7/jetified-supportV4-base-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/66ec503d1bae58475dac4491f53a4dbd/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/66ec503d1bae58475dac4491f53a4dbd/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.paging:paging-runtime:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b5f84f25d3ca4178a29af150601e8d93/paging-runtime-2.1.0/AndroidManifest.xml:20:5-44
@@ -417,14 +422,16 @@ MERGED from [com.google.firebase:firebase-storage:19.1.0] /home/meera/.gradle/ca
 MERGED from [com.google.firebase:firebase-storage:19.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/648a120ae65e00a09bcbf81629c912cf/firebase-storage-19.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/daec7d58b5a5165800602fbf57815e5e/firebase-auth-19.2.0/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/daec7d58b5a5165800602fbf57815e5e/firebase-auth-19.2.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/e40e912d021f395899175866809927f8/firebase-perf-19.0.3/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/e40e912d021f395899175866809927f8/firebase-perf-19.0.3/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-config:19.0.4] /home/meera/.gradle/caches/transforms-2/files-2.1/704114f113e9f0eeb570e68c225ecabd/firebase-config-19.0.4/AndroidManifest.xml:21:5-23:41
 MERGED from [com.google.firebase:firebase-config:19.0.4] /home/meera/.gradle/caches/transforms-2/files-2.1/704114f113e9f0eeb570e68c225ecabd/firebase-config-19.0.4/AndroidManifest.xml:21:5-23:41
-MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/18bcd741c7b7dacb14f94ef69d01cda1/jetified-timber-4.1.2/AndroidManifest.xml:6:5-44
-MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/18bcd741c7b7dacb14f94ef69d01cda1/jetified-timber-4.1.2/AndroidManifest.xml:6:5-44
+MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/74d72a31d9e2836ba3725b564260f445/jetified-timber-4.1.2/AndroidManifest.xml:6:5-44
+MERGED from [com.jakewharton.timber:timber:4.1.2] /home/meera/.gradle/caches/transforms-2/files-2.1/74d72a31d9e2836ba3725b564260f445/jetified-timber-4.1.2/AndroidManifest.xml:6:5-44
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/88ba334100b89c79f1fffc88e1b71ca6/whorlviewlibrary-1.0.3/AndroidManifest.xml:7:5-9:41
 MERGED from [com.tt:whorlviewlibrary:1.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/88ba334100b89c79f1fffc88e1b71ca6/whorlviewlibrary-1.0.3/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/936bedc4f25a290348624dbc7b634ece/lifecycle-extensions-2.1.0/AndroidManifest.xml:20:5-44
@@ -435,6 +442,10 @@ MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /home/meera/.gradle/cac
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/3f964ec59cb2d6a087abbc90a5f1bb4f/lifecycle-service-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/7796c6f300b51aefee26d61b78967726/firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/7796c6f300b51aefee26d61b78967726/firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/10a57040cc6b37a4f85e0dd5ef94b343/play-services-auth-api-phone-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/10a57040cc6b37a4f85e0dd5ef94b343/play-services-auth-api-phone-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/c87f3396020db640690b8200f39e80f7/play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/c87f3396020db640690b8200f39e80f7/play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0eeeee3c6cd2b3af910cfa0384f46dbd/play-services-clearcut-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0eeeee3c6cd2b3af910cfa0384f46dbd/play-services-clearcut-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/aa218ec865aeb325d7140af430717c98/play-services-phenotype-17.0.0/AndroidManifest.xml:20:5-44
@@ -453,8 +464,8 @@ MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /home/meera/.gra
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/74a908e33b8132ac590f658350ce455b/firebase-datatransport-17.0.3/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-abt:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b87266c430745eb46e5e8c3717fed93e/firebase-abt-19.0.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-abt:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b87266c430745eb46e5e8c3717fed93e/firebase-abt-19.0.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f1d392763bd5e7a722b9dccf89028dc3/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f1d392763bd5e7a722b9dccf89028dc3/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/df3eed3cf3bc81cb9419958200fb4db8/firebase-measurement-connector-18.0.0/AndroidManifest.xml:20:5-44
@@ -473,26 +484,26 @@ MERGED from [com.google.android.gms:play-services-measurement-base:17.2.1] /home
 MERGED from [com.google.android.gms:play-services-measurement-base:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/a3bba73e7028a3518406a92a10727320/play-services-measurement-base-17.2.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0332639d9002db079e0102be451282c9/play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0332639d9002db079e0102be451282c9/play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a95f7c8e0eca3c40de7ec55124037bcb/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a95f7c8e0eca3c40de7ec55124037bcb/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/56139091820c1870c84b16a02e95c057/jetified-play-services-basement-17.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/56139091820c1870c84b16a02e95c057/jetified-play-services-basement-17.1.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/70a7ceb0dde12ac6a8f54ec9b7801cd2/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/70a7ceb0dde12ac6a8f54ec9b7801cd2/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/5add9c4b5aa73b3da4e25458fb71b336/exoplayer-2.9.2/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/5add9c4b5aa73b3da4e25458fb71b336/exoplayer-2.9.2/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/37247ef46f4ffc2f30b681aa9c01bc4b/jetified-exoplayer-ui-2.9.6/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/37247ef46f4ffc2f30b681aa9c01bc4b/jetified-exoplayer-ui-2.9.6/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/42bb503559685df1281987573cbb7845/jetified-exoplayer-ui-2.9.6/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/42bb503559685df1281987573cbb7845/jetified-exoplayer-ui-2.9.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.media:media:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/da2a81db612464404afd7d170c0755d4/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/da2a81db612464404afd7d170c0755d4/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.transition:transition:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/8f024778cb840ac75de20ed92c091eb4/transition-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.transition:transition:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/8f024778cb840ac75de20ed92c091eb4/transition-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f166e3190221df8968a1e5789d63b9e9/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f166e3190221df8968a1e5789d63b9e9/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5ab07eb1922264feb105e22f8c8e5fbd/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5ab07eb1922264feb105e22f8c8e5fbd/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f719827b6b3426ddb4fc8639f33ef1d4/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f719827b6b3426ddb4fc8639f33ef1d4/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/11cdc3dedb1741c6beb0358e47152447/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/11cdc3dedb1741c6beb0358e47152447/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5ab07eb1922264feb105e22f8c8e5fbd/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5ab07eb1922264feb105e22f8c8e5fbd/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/212c93ed656ec8dd4c36357ad63b9dbb/activity-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/212c93ed656ec8dd4c36357ad63b9dbb/activity-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/29e5efdd9e3c4eca550b0f1c0d414b6a/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
@@ -527,12 +538,12 @@ MERGED from [org.jetbrains.anko:sqlite-base:0.10.8] /home/meera/.gradle/caches/t
 MERGED from [org.jetbrains.anko:sqlite-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/75f744854651953a4bd72ae6e5b93d0b/sqlite-base-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:platform-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/1cf30e8696210e8c52878bb0776a38cc/platform-base-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:platform-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/1cf30e8696210e8c52878bb0776a38cc/platform-base-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:commons-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/6c2ce5b59ecf6c1d76401a4b575f21ad/jetified-commons-base-0.10.8/AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:commons-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/6c2ce5b59ecf6c1d76401a4b575f21ad/jetified-commons-base-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:commons-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/fe440b217380cc26dcbeb265ed9f2c99/jetified-commons-base-0.10.8/AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:commons-base:0.10.8] /home/meera/.gradle/caches/transforms-2/files-2.1/fe440b217380cc26dcbeb265ed9f2c99/jetified-commons-base-0.10.8/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e8652823a9fb9574a55027be3a6021bc/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e8652823a9fb9574a55027be3a6021bc/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-components:16.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fa3140fd978c000c20c64a7bff6ea959/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-components:16.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fa3140fd978c000c20c64a7bff6ea959/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/674d32169d6323612cf7237089dd1687/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/674d32169d6323612cf7237089dd1687/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/99e647762e23723a3d54e49e737aab9d/transport-backend-cct-2.2.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/99e647762e23723a3d54e49e737aab9d/transport-backend-cct-2.2.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b07ad1d1a9d6fd4a0592d7cbe0c9af92/transport-runtime-2.2.0/AndroidManifest.xml:18:5-20:41
@@ -543,14 +554,14 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/meera/.gradle/ca
 MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] /home/meera/.gradle/caches/transforms-2/files-2.1/cf5033c8e442f3858069d07dde3eff6e/gifdecoder-4.10.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f2241b172da970b4c7b1e859e2f159e9/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/f2241b172da970b4c7b1e859e2f159e9/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/31918fee5d35419952235eee4d96e5d6/jetified-exoplayer-dash-2.9.2/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/31918fee5d35419952235eee4d96e5d6/jetified-exoplayer-dash-2.9.2/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/e4ca666e36f80a1976daedb05431d55f/jetified-exoplayer-hls-2.9.2/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/e4ca666e36f80a1976daedb05431d55f/jetified-exoplayer-hls-2.9.2/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/d3110bb1027c277f5434d021c393f4bf/jetified-exoplayer-smoothstreaming-2.9.2/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/d3110bb1027c277f5434d021c393f4bf/jetified-exoplayer-smoothstreaming-2.9.2/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/17dbc2715c0b7d7d2dad89092b1ae808/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/17dbc2715c0b7d7d2dad89092b1ae808/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/7f9846cf511c497f554e092f625a3a0b/jetified-exoplayer-dash-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/7f9846cf511c497f554e092f625a3a0b/jetified-exoplayer-dash-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/8ee897d98345339fcc3d4f3ff86ff467/jetified-exoplayer-hls-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/8ee897d98345339fcc3d4f3ff86ff467/jetified-exoplayer-hls-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/7d5367ba65270defb9e9dbf5842bea25/jetified-exoplayer-smoothstreaming-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.2] /home/meera/.gradle/caches/transforms-2/files-2.1/7d5367ba65270defb9e9dbf5842bea25/jetified-exoplayer-smoothstreaming-2.9.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/b8fdfebc71714e137cbe0c3b956b4d0e/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/b8fdfebc71714e137cbe0c3b956b4d0e/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e3675c639ef18f3b542c63caeda7f1ac/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/e3675c639ef18f3b542c63caeda7f1ac/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.print:print:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/8ae4e11744ad98c334d6f8f0f7747118/print-1.0.0/AndroidManifest.xml:20:5-44
@@ -561,30 +572,30 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/meera/.gradle/cache
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/113d3f505fcb099fa43b538ba1257039/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5a61b54a870d1aa6983c68dc88365a84/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/5a61b54a870d1aa6983c68dc88365a84/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/806f7b92286e569a5fa17840146575c1/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/806f7b92286e569a5fa17840146575c1/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/d9c900a433976d3181fa161818059ea4/lifecycle-livedata-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/d9c900a433976d3181fa161818059ea4/lifecycle-livedata-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0d48d37ff98c49cab95fd92659d2cd46/lifecycle-livedata-core-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0d48d37ff98c49cab95fd92659d2cd46/lifecycle-livedata-core-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/597afe348c610dd95567beef57ba6f1e/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/597afe348c610dd95567beef57ba6f1e/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/806f7b92286e569a5fa17840146575c1/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/806f7b92286e569a5fa17840146575c1/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0a688eed6c64f9ca6b583da943622ae2/firebase-database-collection-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/0a688eed6c64f9ca6b583da943622ae2/firebase-database-collection-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58d38950d99e93f3806fdb02c08f7ea0/transport-api-2.2.0/AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58d38950d99e93f3806fdb02c08f7ea0/transport-api-2.2.0/AndroidManifest.xml:18:5-20:41
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
+INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/1ce5b2b38c06d40e06b87ccf0774f5dd/jetified-core-0.8.6.1/AndroidManifest.xml:11:9-72
+		ADDED from [com.afollestad.material-dialogs:core:0.8.6.1] /home/meera/.gradle/caches/transforms-2/files-2.1/c3a9996e5dd00d1f1838b99be480b4fa/jetified-core-0.8.6.1/AndroidManifest.xml:11:9-72
 	android:targetSdkVersion
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-		ADDED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
-		INJECTED from /home/meera/Androidplay/Wall-of-U-Fame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
+		ADDED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/meera/WallofUFame/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-database:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2b922e1b8df509b283d8de18df43b083/firebase-database-19.2.0/AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-storage:19.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/648a120ae65e00a09bcbf81629c912cf/firebase-storage-19.1.0/AndroidManifest.xml:26:5-79
@@ -605,8 +616,8 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /home
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/99e647762e23723a3d54e49e737aab9d/transport-backend-cct-2.2.0/AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b07ad1d1a9d6fd4a0592d7cbe0c9af92/transport-runtime-2.2.0/AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b07ad1d1a9d6fd4a0592d7cbe0c9af92/transport-runtime-2.2.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/17dbc2715c0b7d7d2dad89092b1ae808/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/17dbc2715c0b7d7d2dad89092b1ae808/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/b8fdfebc71714e137cbe0c3b956b4d0e/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.6] /home/meera/.gradle/caches/transforms-2/files-2.1/b8fdfebc71714e137cbe0c3b956b4d0e/jetified-exoplayer-core-2.9.6/AndroidManifest.xml:24:5-79
 	android:name
 		ADDED from [com.google.firebase:firebase-database:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2b922e1b8df509b283d8de18df43b083/firebase-database-19.2.0/AndroidManifest.xml:25:22-76
 service#com.google.firebase.components.ComponentDiscoveryService
@@ -617,8 +628,8 @@ MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/cache
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/daec7d58b5a5165800602fbf57815e5e/firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
 MERGED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/e40e912d021f395899175866809927f8/firebase-perf-19.0.3/AndroidManifest.xml:31:9-37:19
 MERGED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/e40e912d021f395899175866809927f8/firebase-perf-19.0.3/AndroidManifest.xml:31:9-37:19
-MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:35:9-41:19
-MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:35:9-41:19
+MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:35:9-41:19
+MERGED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:35:9-41:19
 MERGED from [com.google.firebase:firebase-config:19.0.4] /home/meera/.gradle/caches/transforms-2/files-2.1/704114f113e9f0eeb570e68c225ecabd/firebase-config-19.0.4/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-config:19.0.4] /home/meera/.gradle/caches/transforms-2/files-2.1/704114f113e9f0eeb570e68c225ecabd/firebase-config-19.0.4/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/757deb4620db72d4ca00178281f867e4/play-services-measurement-api-17.2.1/AndroidManifest.xml:27:9-33:19
@@ -629,14 +640,14 @@ MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /home/meera/.gra
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/74a908e33b8132ac590f658350ce455b/firebase-datatransport-17.0.3/AndroidManifest.xml:25:9-31:19
 MERGED from [com.google.firebase:firebase-abt:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b87266c430745eb46e5e8c3717fed93e/firebase-abt-19.0.0/AndroidManifest.xml:12:9-16:19
 MERGED from [com.google.firebase:firebase-abt:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b87266c430745eb46e5e8c3717fed93e/firebase-abt-19.0.0/AndroidManifest.xml:12:9-16:19
-MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
-MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
 	android:exported
 		ADDED from [com.google.firebase:firebase-database:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2b922e1b8df509b283d8de18df43b083/firebase-database-19.2.0/AndroidManifest.xml:31:13-37
 	tools:targetApi
-		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:36:13-32
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:36:13-32
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
 	android:name
 		ADDED from [com.google.firebase:firebase-database:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/2b922e1b8df509b283d8de18df43b083/firebase-database-19.2.0/AndroidManifest.xml:30:13-84
 meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
@@ -673,6 +684,26 @@ ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/caches
 		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/daec7d58b5a5165800602fbf57815e5e/firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/daec7d58b5a5165800602fbf57815e5e/firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:18.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a7cb8df43f8cca89250bfddcead376e9/play-services-auth-18.1.0/AndroidManifest.xml:34:13-89
 provider#com.google.firebase.perf.provider.FirebasePerfProvider
 ADDED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/e40e912d021f395899175866809927f8/firebase-perf-19.0.3/AndroidManifest.xml:25:9-29:39
 	android:authorities
@@ -690,25 +721,25 @@ ADDED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches
 	android:name
 		ADDED from [com.google.firebase:firebase-perf:19.0.3] /home/meera/.gradle/caches/transforms-2/files-2.1/e40e912d021f395899175866809927f8/firebase-perf-19.0.3/AndroidManifest.xml:35:17-109
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:28:9-34:19
+ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:28:9-34:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:30:13-37
+		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:29:13-82
+		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:29:13-82
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:31:13-33:29
+ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:31:13-33:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:31:28-51
+		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:31:28-51
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:32:17-78
+ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:32:17-78
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:32:25-75
+		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:32:25-75
 meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar
-ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:38:13-40:85
+ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:38:13-40:85
 	android:value
-		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:40:17-82
+		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:40:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/97fb78a66da18c21929eea02e042d0ec/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:39:17-119
+		ADDED from [com.google.firebase:firebase-messaging:20.1.0] /home/meera/.gradle/caches/transforms-2/files-2.1/58509d6ec582ae3b8f87aa0f56c0ba84/jetified-firebase-messaging-20.1.0/AndroidManifest.xml:39:17-119
 meta-data#com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar
 ADDED from [com.google.firebase:firebase-config:19.0.4] /home/meera/.gradle/caches/transforms-2/files-2.1/704114f113e9f0eeb570e68c225ecabd/firebase-config-19.0.4/AndroidManifest.xml:32:13-34:85
 	android:value
@@ -788,15 +819,15 @@ ADDED from [com.google.firebase:firebase-abt:19.0.0] /home/meera/.gradle/caches/
 	android:name
 		ADDED from [com.google.firebase:firebase-abt:19.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b87266c430745eb46e5e8c3717fed93e/firebase-abt-19.0.0/AndroidManifest.xml:14:17-109
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/51cd2f089b8abb67bd2dbd7296f2eba4/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/meera/.gradle/caches/transforms-2/files-2.1/fc79d2d2f3ca76666f05b432a6ffe009/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
 ADDED from [com.google.android.gms:play-services-measurement:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/553b2f7eb595be44b8bad84158a70270/play-services-measurement-17.2.1/AndroidManifest.xml:26:5-110
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/05d06ceddb3b906eb88a22f3ab999bd0/play-services-measurement-impl-17.2.1/AndroidManifest.xml:26:5-110
@@ -848,11 +879,11 @@ ADDED from [com.google.android.gms:play-services-measurement:17.2.1] /home/meera
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement:17.2.1] /home/meera/.gradle/caches/transforms-2/files-2.1/553b2f7eb595be44b8bad84158a70270/play-services-measurement-17.2.1/AndroidManifest.xml:49:13-87
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a95f7c8e0eca3c40de7ec55124037bcb/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:17.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/56139091820c1870c84b16a02e95c057/jetified-play-services-basement-17.1.1/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a95f7c8e0eca3c40de7ec55124037bcb/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:17.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/56139091820c1870c84b16a02e95c057/jetified-play-services-basement-17.1.1/AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/meera/.gradle/caches/transforms-2/files-2.1/a95f7c8e0eca3c40de7ec55124037bcb/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:17.1.1] /home/meera/.gradle/caches/transforms-2/files-2.1/56139091820c1870c84b16a02e95c057/jetified-play-services-basement-17.1.1/AndroidManifest.xml:24:13-58
 service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
 ADDED from [com.google.android.datatransport:transport-backend-cct:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/99e647762e23723a3d54e49e737aab9d/transport-backend-cct-2.2.0/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] /home/meera/.gradle/caches/transforms-2/files-2.1/b07ad1d1a9d6fd4a0592d7cbe0c9af92/transport-runtime-2.2.0/AndroidManifest.xml:36:9-38:40

@@ -27,4 +27,6 @@
     <color name="susi_message_pressed_bg">#9DE1FE</color>
     <color name="black_transparent">#36000000</color>
     <color name="transparent">#20000000</color>
+    <color name="white_12">#fafafa</color>
+    <color name="background800">#424242</color>
 </resources>

@@ -9,7 +9,7 @@ android {
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.example.amit.uniconnexample"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -70,6 +70,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.2.0'
     implementation 'com.google.firebase:firebase-storage:19.1.0'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
 
     implementation 'com.google.firebase:firebase-perf:19.0.3'
     implementation 'com.google.firebase:firebase-messaging:20.1.0'

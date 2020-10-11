@@ -13,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
 
 import com.example.amit.uniconnexample.App
 import com.example.amit.uniconnexample.Fragment.Home.HomeFragment
@@ -47,13 +48,13 @@ class NewTabActivity : AppCompatActivity() {
                     Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             return cm.activeNetworkInfo != null
         }
+    var mainViewModel: MainViewModel ?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_tab)
         user = FirebaseAuth.getInstance().currentUser
-        editor1 = getSharedPreferences("com.example.amit.uniconnexample", Context.MODE_PRIVATE).edit()
-
+        mainViewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         setSupportActionBar(toolbar)
 
         img.setOnClickListener { v -> signout(v) }
@@ -124,11 +125,7 @@ class NewTabActivity : AppCompatActivity() {
                 handler1.postDelayed({
                     FirebaseAuth.getInstance().signOut()
                     Toast.makeText(this@NewTabActivity, "Logging out..", Toast.LENGTH_SHORT).show()
-                    // myPrefs.edit().clear().commit();
-                    editor1.putBoolean("isLoggedin", false)
-                    editor1.commit()
-                    startActivity(Intent(this@NewTabActivity, Loginactivity::class.java))
-                    finish()
+                    mainViewModel?.getPagedPost()
                 }, 2000)
 
             } else {
