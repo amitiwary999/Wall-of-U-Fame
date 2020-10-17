@@ -3,3 +3,15 @@
 app/google-services.json
 app/build/*
 app/app.iml
+WallofUFame.iml
+.gradle
+/local.properties
+.DS_Store
+/build
+/captures
+**/.idea/**
+**/*.iml
+local.properties
+gradlew
+gradlew.bat
+gradle/
