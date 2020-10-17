@@ -53,11 +53,19 @@ class NewTabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_tab)
+        val firebaseAuth = FirebaseAuth.getInstance().currentUser
         user = FirebaseAuth.getInstance().currentUser
         mainViewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         setSupportActionBar(toolbar)
-
-        img.setOnClickListener { v -> signout(v) }
+        if(firebaseAuth == null){
+            login_btn.visibility = View.VISIBLE
+            logout_btn.visibility = View.GONE
+            login_btn.setOnClickListener { LoginFragment().show(supportFragmentManager, "Login") }
+        }else{
+            logout_btn.visibility = View.VISIBLE
+            login_btn.visibility = View.GONE
+            logout_btn.setOnClickListener { v -> signout(v) }
+        }
         bottomtab.setOnTabSelectListener { tabId ->
             if (tabId == R.id.tab_home) {
                 toolbar_title.text = "    Home        "
@@ -65,7 +73,6 @@ class NewTabActivity : AppCompatActivity() {
                 //  viewPager.setVisibility(View.VISIBLE);
             } else if (tabId == R.id.tab_account) {
                 //  viewPager.setVisibility(View.GONE);
-                val firebaseAuth = FirebaseAuth.getInstance().currentUser
                 if(firebaseAuth == null){
                     LoginFragment().show(supportFragmentManager, "Login")
                 }else{
