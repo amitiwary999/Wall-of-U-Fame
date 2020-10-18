@@ -51,16 +51,8 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapterCommonViewHolder {
         lateinit var view: View
         context = parent.context
-        if(viewType == IMAGE_VIEW){
-            view = LayoutInflater.from(parent.context).inflate(R.layout.blog_image_item_view, parent, false)
-            return HomeAdapterImageViewHolder(view, itemHeight)
-        }else if(viewType == VIDEO_VIEW){
-            view=LayoutInflater.from(parent.context).inflate(R.layout.blog_video_item_view, parent, false)
-            return HomeAdapterVideoViewHolder(view, videoPlayerView, itemHeight)
-        }else{
-            view = LayoutInflater.from(parent.context).inflate(R.layout.blog_text_item_view, parent, false)
-            return HomeAdapterTextViewHolder(view)
-        }
+        view =  LayoutInflater.from(context).inflate(R.layout.famous_post_item, parent, false);
+        return HomeAdapterCommonViewHolder(view, videoPlayerView, itemHeight)
     }
 
     override fun getItemCount(): Int {
@@ -69,57 +61,107 @@ class HomeFragmentAdapter(var itemOptionsClickListener: ItemOptionsClickListener
 
     override fun onBindViewHolder(holder: HomeAdapterCommonViewHolder, position: Int) {
         val postModel = postModels[position]
-        holder.bindData(postModel)
+        val mediaUrl = postModel.mediaUrl
+        val mediaThumbUrl = postModel.mediaThumbUrl
+        val postId = postModel.postId
+        val date = postModel.date
+        val description = postModel.description
+        val mimeType = postModel.mimeType
+        val userName = postModel.userName
+        val userDp = postModel.userDp
+        val userId = postModel.creatorId
+        val isLikeds = postModel.isLiked
 
-        holder.likeButton.setOnClickListener {
-            if(postModel.isLiked == 1){
-                postModel.isLiked = 0
-//                postModel.like = if(postModel.like != null){
-//                    0
-//                }else{
-//                    postModel.like!!-1
-//                }
-                itemOptionsClickListener.onPostUnlike(postModel.postId)
-                notifyItemChanged(position, CommonString.PAYLOAD_ITEM_UNLIKE)
-            }else{
-                postModel.isLiked = 1
-                //TODO handle it when sql added properly for post like
-//                postModel.like = if(postModel.like != null){
-//                    0
-//                }else{
-//                    postModel.like!!+1
-//                }
-                itemOptionsClickListener.onPostLike(postModel.postId)
-                notifyItemChanged(position, CommonString.PAYLOAD_ITEM_LIKE)
+        val mediaUrls =  mediaUrl?.split(",")
+        val mediaThumbUrls = mediaThumbUrl?.split(",")
+        val postIds = postId.split(",")
+        val dates = date.split(",")
+        val descriptions = description.split(",")
+        val mimeTypes = mimeType?.split(",")
+        val isLiked = isLikeds.split(",")
+
+        var posts = ArrayList<PostModel>()
+
+        val length = descriptions.size
+        for(i in 0 until length){
+            var mediaUrl = ""
+            var mimeType: String ?= null
+            var date = ""
+            var mediaThumbUrl = ""
+            var postId = ""
+            var description = descriptions[i]
+            var isLikedPost = isLiked[i]
+            mediaUrls?.let {
+                mediaUrl = it[i]
             }
-        }
-    }
-
-    override fun onBindViewHolder(holder: HomeAdapterCommonViewHolder, position: Int, payloads: MutableList<Any>) {
-        if(payloads.isNotEmpty()){
-            holder.setData(postModels[position], (payloads[0] as String))
-        }
-        super.onBindViewHolder(holder, position, payloads)
-    }
-
-    override fun getItemViewType(position: Int): Int {
-        val postModel = postModels[position]
-        if(postModel.mimeType == null){
-            return TEXT_VIEW
-        }else{
-            postModel.mimeType?.let{
-                if(it.contains(CommonString.MimeType.IMAGE)){
-                    return IMAGE_VIEW
-                }else if(it.contains(CommonString.MimeType.VIDEO)){
-                    return VIDEO_VIEW
-                }
+            mediaThumbUrls?.let {
+                mediaThumbUrl = it[i]
             }
+
+            postIds.let {
+                postId = it[i]
+            }
+
+            dates.let {
+                date = it[i]
+            }
+            mimeTypes?.let {
+                mimeType = it[i]
+            }
+            val post = PostModel(date, description, mediaUrl, mediaThumbUrl, userId, postId, userDp, userName, isLikedPost, mimeType)
+            posts.add(post)
         }
-        return TEXT_VIEW
+
+        holder.setDatas(posts)
+
+//        holder.likeButton.setOnClickListener {
+//            if(postModel.isLiked == 1){
+//                postModel.isLiked = 0
+////                postModel.like = if(postModel.like != null){
+////                    0
+////                }else{
+////                    postModel.like!!-1
+////                }
+//                itemOptionsClickListener.onPostUnlike(postModel.postId)
+//                notifyItemChanged(position, CommonString.PAYLOAD_ITEM_UNLIKE)
+//            }else{
+//                postModel.isLiked = 1
+//                //TODO handle it when sql added properly for post like
+////                postModel.like = if(postModel.like != null){
+////                    0
+////                }else{
+////                    postModel.like!!+1
+////                }
+//                itemOptionsClickListener.onPostLike(postModel.postId)
+//                notifyItemChanged(position, CommonString.PAYLOAD_ITEM_LIKE)
+//            }
+//        }
     }
+
+//    override fun onBindViewHolder(holder: HomeAdapterCommonViewHolder, position: Int, payloads: MutableList<Any>) {
+//        if(payloads.isNotEmpty()){
+//            holder.setData(postModels[position], (payloads[0] as String))
+//        }
+//        super.onBindViewHolder(holder, position, payloads)
+//    }
+
+//    override fun getItemViewType(position: Int): Int {
+//        val postModel = postModels[position]
+//        if(postModel.mimeType == null){
+//            return TEXT_VIEW
+//        }else{
+//            postModel.mimeType?.let{
+//                if(it.contains(CommonString.MimeType.IMAGE)){
+//                    return IMAGE_VIEW
+//                }else if(it.contains(CommonString.MimeType.VIDEO)){
+//                    return VIDEO_VIEW
+//                }
+//            }
+//        }
+//        return TEXT_VIEW
+//    }
 
     override fun onViewDetachedFromWindow(holder: HomeAdapterCommonViewHolder) {
-        holder.detachedView()
     }
 
 //    class HomeAdapterViewHolder(itemView: View, var context: Context?,var itemHeight : Int, var videoView: VideoPlayerView, var imageView: com.example.amit.uniconnexample.View.ImageView) : RecyclerView.ViewHolder(itemView), AnkoLogger{

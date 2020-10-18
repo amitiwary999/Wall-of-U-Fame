@@ -61,10 +61,12 @@ class MainViewModel : ViewModel(), AnkoLogger {
                     RetrofitClientBuilder(CommonString.base_url).getmNetworkRepository().getPostPAged("Bearer ${it.result?.token}", getPostRequestModel)
                             .enqueue(object : Callback<List<PostModel>> {
                                 override fun onFailure(call: Call<List<PostModel>>, t: Throwable) {
+                                    Log.d("network res ", t.message)
                                     error.postValue("failed")
                                 }
 
                                 override fun onResponse(call: Call<List<PostModel>>, response: Response<List<PostModel>>) {
+                                    Log.d("network res success ", " "+response.isSuccessful+" "+response.body())
                                     if(response.isSuccessful && response.body() != null && response.body()!!.isNotEmpty()){
                                         val responseBody = response.body()!!
                                         if(nextKey.isEmpty()){

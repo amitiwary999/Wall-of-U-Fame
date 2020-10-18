@@ -12,8 +12,7 @@ data class PostModel(
         var postId: String,
         var userDp :String?,
         var userName: String?,
-        var like : Int ?= 0,
-        var isLiked: Int = 0,
+        var isLiked: String = "0",
         var mimeType: String?=null
 ) {
 }
